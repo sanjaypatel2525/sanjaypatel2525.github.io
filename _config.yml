@@ -51,3 +51,4 @@ plugins:
   - jekyll-redirect-from
 
 ampdir: /amp
+include: [.nojekyll, CNAME]

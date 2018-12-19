@@ -14,7 +14,11 @@ description: "Some description about Lorem Ipsum..."
         <section class="no-desc-page">
 
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-              <div class="center-content">
+              <div class="center-content addframe">
+                
+                <section class="share">
+                  {% include advertisements.html %}
+                </section>
                 <textarea id="contentBox" rows="20" spellcheck="false" style="width: 100%;max-width: 800px;line-height: 24px; font-size: 16px; transition: none 0s ease 0s; background: transparent !important;"></textarea><br />
                 <button onclick="jQuery('#contentBox').val(vkbeautify.xml(jQuery('#contentBox').val()));">Pretty XML</button> 
                 <button onclick="jQuery('#contentBox').val(vkbeautify.json(jQuery('#contentBox').val(),4));">Pretty JSON</button> 
