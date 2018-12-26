@@ -237,7 +237,7 @@ For more options visit.
 -javaagent:C:\dev\servers\jacoco-agent.jar=destfile=&lt; path to jacoco C:\lib&gt;jacoco.exec,append=true,includes=some.application.*</p>
 
 <p>This Java argument will attach the JaCoCo agent. Once you have enabled the JaCoCo agent you need to run tests manually or automated. This will create jacoco.exec on given location but dump data only on server stop. To avoid server interruption for the report you need to enable command interface using following option.
-output=<tcpserver>,address=*,<em>port=&lt;some port 6300&gt;</em></tcpserver></p>
+output=&lt;cpserver&gt;,address=*,<em>port=&lt;some port 6300&gt;</em></p>
 <h2 id="importing-reports-to-sonarqube">Importing reports to SonarQube</h2>
 <figure class="highlight"><pre><code class="language-properties" data-lang="properties"><span class="c"># Generate sonar issues report in html and console
 </span><span class="py">sonar.issuesReport.html.enable</span><span class="p">=</span><span class="s">true</span>

@@ -200,9 +200,8 @@ This blog we are going to discuss Git configuration with WCS build.</p>
 
 <h3 id="configure-git-username-and-password-inextract-gitprivateproperties"> Configure git username and password in extract-git.private.properties</h3>
 <h3 id="run-the-build-and-test-it-using-the-following-command">Run the build and test it using the following command.</h3>
-
-<p>git.password=<someusername><br>
-git.username=<somepassword></somepassword></someusername></p>
+<figure class="highlight"><pre><code class="language-properties" data-lang="properties"><span class="py">git.password</span><span class="p">=</span><span class="s">&lt;someusername&gt;</span>
+<span class="py">git.username</span><span class="p">=</span><span class="s">&lt;somepassword&gt;</span></code></pre></figure>
 <h3 id="update-theextract-gitxml-with-below-ant-code">Update the extract-git.xml with below ant code.</h3>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project</span> <span class="na">name=</span><span class="s">"extract-git"</span> <span class="na">default=</span><span class="s">"all"</span><span class="nt">&gt;</span>
 

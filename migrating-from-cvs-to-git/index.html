@@ -163,14 +163,14 @@ There are cases when we have a requirement to move our codebase from CVS to Git 
 <p>temp/cvs2svn-<strong>x.x.x
 </strong></p>
 <h3 id="run-the-following-command-from-the-command-prompt">Run the following command from the command prompt.</h3>
-<p>python.exe cvs2git –blobfile=git-blob.dat –dumpfile=git-dump.dat –use-external-blob-generator –username=cvs2git C:/temp/<Extracted CVSFolder=""><br />
-Once this command has completed successfully it will create two files, git-blob.dat and git-dump.dat. This command will fail if you have CVS client version installed.</Extracted></p>
+<p>python.exe cvs2git –blobfile=git-blob.dat –dumpfile=git-dump.dat –use-external-blob-generator –username=cvs2git C:/temp/&lt;Extracted CVSFolder&gt;<br />
+Once this command has completed successfully it will create two files, git-blob.dat and git-dump.dat. This command will fail if you have CVS client version installed.</p>
 
 <h3 id="initialize-an-empty-bare-repository-in-temp-folder">Initialize an empty bare repository in temp folder.</h3>
-<p>git init –bare <YourProrjectName>.git</YourProrjectName></p>
+<p>git init –bare &lt;YourProrjectName&gt;.git</p>
 
-<h3 id="navigate-togit">Navigate to <YourProrjectName>.git</YourProrjectName></h3>
-<p>cd <YourProrjectName>.git</YourProrjectName></p>
+<h3 id="navigate-toyourprorjectnamegit">Navigate to &lt;YourProrjectName&gt;.git</h3>
+<p>cd &lt;YourProrjectName&gt;.git</p>
 
 <h3 id="import-dat-files-in-repository">Import dat files in repository.</h3>
 <p>git fast-import –export-marks=../../cvs2svn-2.5.0/git-marks.dat &lt;../../cvs2svn-2.5.0/git-blob.dat<br />
@@ -186,17 +186,17 @@ It opens up the git history browser.</p>
 <h3 id="here-onwards-the-steps-are-for-pushing-the-codebase-to-a-common-remote-git-server">Here onwards, the steps are for pushing the codebase to a common remote Git server.</h3>
 
 <h3 id="clone-your-bare-repository-in-temp">Clone your bare repository in ‘temp’.</h3>
-<p>Navigate to temp and run this following command. The following command will create the folder named <YourProrjectName>.<br />
-git clone <YourProrjectName>.git</YourProrjectName></YourProrjectName></p>
+<p>Navigate to temp and run this following command. The following command will create the folder named &lt;YourProrjectName&gt;.<br />
+git clone &lt;YourProrjectName&gt;.git</p>
 
-<h3 id="navigate-to--and-add-remote-location">Navigate to <YourProrjectName> and add remote location.</YourProrjectName></h3>
+<h3 id="navigate-to-yourprorjectname-and-add-remote-location">Navigate to &lt;YourProrjectName&gt; and add remote location.</h3>
 <p>Remote location will be you common git server location which will be shared by your team.<br />
 git remote add origin remote repository URL</p>
 
 <h3 id="push-your-local-git-to-the-remote">Push your local git to the remote.</h3>
 <p>git push origin master</p>
 
-<h3 id="now-you-can-delete-your-bare-repository-tempgit">Now you can delete your bare repository ‘temp/<YourProrjectName>.git'</YourProrjectName></h3>
+<h3 id="now-you-can-delete-your-bare-repository-tempyourprorjectnamegit">Now you can delete your bare repository ‘temp/&lt;YourProrjectName&gt;.git’</h3>
 
 <p>That’s all about CVS to git codebase migration. Next topic we are going to update the ant build script and configure it will git setup.</p>
 
