@@ -2,352 +2,352 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/pages/2018-02-10-home-page/</loc>
+            <loc>http://localhost:4000/pages/2018-02-10-home-page/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/pages/2018-02-10-sample-page/</loc>
+            <loc>http://localhost:4000/pages/2018-02-10-sample-page/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/pretty-print/index.html</loc>
+            <loc>http://localhost:4000/pretty-print/index.html</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/sort-distinct/index.html</loc>
+            <loc>http://localhost:4000/sort-distinct/index.html</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/about/index.html</loc>
+            <loc>http://localhost:4000/about/index.html</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/css/</loc>
+            <loc>http://localhost:4000/category/css/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/dev/</loc>
+            <loc>http://localhost:4000/category/dev/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/feed.xml</loc>
+            <loc>http://localhost:4000/feed.xml</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/html/</loc>
+            <loc>http://localhost:4000/category/html/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/</loc>
+            <loc>http://localhost:4000/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/jekyll/</loc>
+            <loc>http://localhost:4000/category/jekyll/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/js/</loc>
+            <loc>http://localhost:4000/category/js/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/misc/</loc>
+            <loc>http://localhost:4000/category/misc/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/search.json</loc>
+            <loc>http://localhost:4000/search.json</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/series/index.html</loc>
+            <loc>http://localhost:4000/series/index.html</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/sitemap.xml</loc>
+            <loc>http://localhost:4000/sitemap.xml</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/category/svg/</loc>
+            <loc>http://localhost:4000/category/svg/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/tags/index.html</loc>
+            <loc>http://localhost:4000/tags/index.html</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/10/issue-with-cached-static-content/</loc>
+            <loc>http://localhost:4000/2018/02/10/issue-with-cached-static-content/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/10/issue-with-cached-static-content/amp/</loc>
+            <loc>http://localhost:4000/2018/02/10/issue-with-cached-static-content/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/16/setup-wordpress-blogging-google-cloud/</loc>
+            <loc>http://localhost:4000/2018/02/16/setup-wordpress-blogging-google-cloud/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/16/setup-wordpress-blogging-google-cloud/amp/</loc>
+            <loc>http://localhost:4000/2018/02/16/setup-wordpress-blogging-google-cloud/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
+            <loc>http://localhost:4000/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/amp/</loc>
+            <loc>http://localhost:4000/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/17/fine-tune-wordpress-google-f1-micro/</loc>
+            <loc>http://localhost:4000/2018/02/17/fine-tune-wordpress-google-f1-micro/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/17/fine-tune-wordpress-google-f1-micro/amp/</loc>
+            <loc>http://localhost:4000/2018/02/17/fine-tune-wordpress-google-f1-micro/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/22/code-quality-analysis-sonar/</loc>
+            <loc>http://localhost:4000/2018/02/22/code-quality-analysis-sonar/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/22/code-quality-analysis-sonar/amp/</loc>
+            <loc>http://localhost:4000/2018/02/22/code-quality-analysis-sonar/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/28/setup-write-selenium-scripts/</loc>
+            <loc>http://localhost:4000/2018/02/28/setup-write-selenium-scripts/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/02/28/setup-write-selenium-scripts/amp/</loc>
+            <loc>http://localhost:4000/2018/02/28/setup-write-selenium-scripts/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
+            <loc>http://localhost:4000/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/amp/</loc>
+            <loc>http://localhost:4000/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/03/04/jacoco-code-coverage-reports-sonarqube/</loc>
+            <loc>http://localhost:4000/2018/03/04/jacoco-code-coverage-reports-sonarqube/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/03/04/jacoco-code-coverage-reports-sonarqube/amp/</loc>
+            <loc>http://localhost:4000/2018/03/04/jacoco-code-coverage-reports-sonarqube/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-8-double-colon-operator/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-8-double-colon-operator/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-8-double-colon-operator/amp/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-8-double-colon-operator/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-lambda-functional-programming-part-2/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-lambda-procedural-programming/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-lambda-procedural-programming/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-lambda-procedural-programming/amp/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-lambda-procedural-programming/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/23/when-to-use-java-optional-class/</loc>
+            <loc>http://localhost:4000/2018/09/23/when-to-use-java-optional-class/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/23/when-to-use-java-optional-class/amp/</loc>
+            <loc>http://localhost:4000/2018/09/23/when-to-use-java-optional-class/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/23/understanding-java-predicate-interface/</loc>
+            <loc>http://localhost:4000/2018/09/23/understanding-java-predicate-interface/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/23/understanding-java-predicate-interface/amp/</loc>
+            <loc>http://localhost:4000/2018/09/23/understanding-java-predicate-interface/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-lambda-functional-programming-part-2/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
+            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/23/java-consumer-and-supplier-interfaces/</loc>
+            <loc>http://localhost:4000/2018/09/23/java-consumer-and-supplier-interfaces/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/09/23/java-consumer-and-supplier-interfaces/amp/</loc>
+            <loc>http://localhost:4000/2018/09/23/java-consumer-and-supplier-interfaces/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/12/11/migrating-from-cvs-to-git/</loc>
+            <loc>http://localhost:4000/2018/12/11/migrating-from-cvs-to-git/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/12/11/migrating-from-cvs-to-git/amp/</loc>
+            <loc>http://localhost:4000/2018/12/11/migrating-from-cvs-to-git/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/12/11/websphere-commerce-build-with-git/</loc>
+            <loc>http://localhost:4000/2018/12/11/websphere-commerce-build-with-git/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
+            <loc>http://localhost:4000/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/redirects.json</loc>
+            <loc>http://localhost:4000/redirects.json</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/issue-with-cached-static-content</loc>
+            <loc>http://localhost:4000/amp/issue-with-cached-static-content</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/setup-wordpress-blogging-google-cloud</loc>
+            <loc>http://localhost:4000/amp/setup-wordpress-blogging-google-cloud</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/setting-domain-name-wordpress-site-cloudflare-dns-provider</loc>
+            <loc>http://localhost:4000/amp/setting-domain-name-wordpress-site-cloudflare-dns-provider</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/fine-tune-wordpress-google-f1-micro</loc>
+            <loc>http://localhost:4000/amp/fine-tune-wordpress-google-f1-micro</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/code-quality-analysis-sonar</loc>
+            <loc>http://localhost:4000/amp/code-quality-analysis-sonar</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/setup-write-selenium-scripts</loc>
+            <loc>http://localhost:4000/amp/setup-write-selenium-scripts</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular</loc>
+            <loc>http://localhost:4000/amp/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/jacoco-code-coverage-reports-sonarqube</loc>
+            <loc>http://localhost:4000/amp/jacoco-code-coverage-reports-sonarqube</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/java-8-double-colon-operator</loc>
+            <loc>http://localhost:4000/amp/java-8-double-colon-operator</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/java-lambda-functional-programming-part-2</loc>
+            <loc>http://localhost:4000/amp/java-lambda-functional-programming-part-2</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/java-lambda-procedural-programming</loc>
+            <loc>http://localhost:4000/amp/java-lambda-procedural-programming</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/when-to-use-java-optional-class</loc>
+            <loc>http://localhost:4000/amp/when-to-use-java-optional-class</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/understanding-java-predicate-interface</loc>
+            <loc>http://localhost:4000/amp/understanding-java-predicate-interface</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/java-function-interface-is-the-java-functional-interface</loc>
+            <loc>http://localhost:4000/amp/java-function-interface-is-the-java-functional-interface</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/java-consumer-and-supplier-interfaces</loc>
+            <loc>http://localhost:4000/amp/java-consumer-and-supplier-interfaces</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/migrating-from-cvs-to-git</loc>
+            <loc>http://localhost:4000/amp/migrating-from-cvs-to-git</loc>
         </url>
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/amp/websphere-commerce-build-with-git</loc>
+            <loc>http://localhost:4000/amp/websphere-commerce-build-with-git</loc>
         </url>
     
     
         <url>
-            <loc>https://sanjaypatel2525.github.io/websphere-commerce-build-with-git/</loc>
+            <loc>http://localhost:4000/websphere-commerce-build-with-git/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/migrating-from-cvs-to-git/</loc>
+            <loc>http://localhost:4000/migrating-from-cvs-to-git/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/java-consumer-and-supplier-interfaces/</loc>
+            <loc>http://localhost:4000/java-consumer-and-supplier-interfaces/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/java-function-interface-is-the-java-functional-interface/</loc>
+            <loc>http://localhost:4000/java-function-interface-is-the-java-functional-interface/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/understanding-java-predicate-interface/</loc>
+            <loc>http://localhost:4000/understanding-java-predicate-interface/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/when-to-use-java-optional-class/</loc>
+            <loc>http://localhost:4000/when-to-use-java-optional-class/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/java-lambda-procedural-programming/</loc>
+            <loc>http://localhost:4000/java-lambda-procedural-programming/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/java-lambda-functional-programming-part-2/</loc>
+            <loc>http://localhost:4000/java-lambda-functional-programming-part-2/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/java-8-double-colon-operator/</loc>
+            <loc>http://localhost:4000/java-8-double-colon-operator/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/jacoco-code-coverage-reports-sonarqube/</loc>
+            <loc>http://localhost:4000/jacoco-code-coverage-reports-sonarqube/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
+            <loc>http://localhost:4000/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/setup-write-selenium-scripts/</loc>
+            <loc>http://localhost:4000/setup-write-selenium-scripts/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/code-quality-analysis-sonar/</loc>
+            <loc>http://localhost:4000/code-quality-analysis-sonar/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/fine-tune-wordpress-google-f1-micro/</loc>
+            <loc>http://localhost:4000/fine-tune-wordpress-google-f1-micro/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
+            <loc>http://localhost:4000/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/setup-wordpress-blogging-google-cloud/</loc>
+            <loc>http://localhost:4000/setup-wordpress-blogging-google-cloud/</loc>
         </url>
   
         <url>
-            <loc>https://sanjaypatel2525.github.io/issue-with-cached-static-content/</loc>
+            <loc>http://localhost:4000/issue-with-cached-static-content/</loc>
         </url>
   
 </urlset>

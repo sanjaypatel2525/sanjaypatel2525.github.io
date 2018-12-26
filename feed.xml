@@ -3,18 +3,18 @@
   <channel>
     <title>Sanjay Patel - Blogs</title>
     <description>A blog about lorem ipsum dolor sit amet</description>
-    <link>https://sanjaypatel2525.github.io/</link>
-    <atom:link href="https://sanjaypatel2525.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Dec 2018 21:40:23 -0500</pubDate>
-    <lastBuildDate>Tue, 18 Dec 2018 21:40:23 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 Dec 2018 22:47:25 -0500</pubDate>
+    <lastBuildDate>Tue, 25 Dec 2018 22:47:25 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Websphere Commerce build with Git</title>
         <description>&lt;p&gt;Websphere Commerce (WCS) is e-Commerce software platform. It supports multiple business models to support a wide range of customer requirements. WCS did not have Git support till version 8.  It has introduced Git support from version 9 onwards. Git is a free open source distributed source control management software. This blog we are going to discuss Git configuration with WCS build.&lt;/p&gt; &lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite:&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Git needs to be installed on the build system&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;copy2-the-template-file-from-wcbd-template-to-wcbdfolder-and-update-the-names-as-given-below&quot;&gt;Copy2 the template file from wcbd template to wcbd  folder and update the names as given below.&lt;/h3&gt; &lt;p&gt;&lt;img src=&quot;/assets/img_5c1021100f5c3.png&quot; alt=&quot;gras&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;extract-git.private.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.xml&lt;/li&gt; &lt;/ul&gt;...</description>
         <pubDate>Tue, 11 Dec 2018 21:16:05 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/websphere-commerce-build-with-git/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/websphere-commerce-build-with-git/</guid>
+        <link>http://localhost:4000/websphere-commerce-build-with-git/</link>
+        <guid isPermaLink="true">http://localhost:4000/websphere-commerce-build-with-git/</guid>
         
         
         <category>Websphere Commerce</category>
@@ -25,8 +25,8 @@
         <title>Migrating from CVS to Git.</title>
         <description>&lt;p&gt;In good old days, CVS used to be one of the most used SCM (source control management) tool. With the growing technology and the need of distributed systems, Git was born and with this CVS started rusting out. This is much of history for now. There are cases when we have a requirement to move our codebase from CVS to Git without losing commit histories. If we dontIn this blog, we are going to discuss the same.&lt;/p&gt; &lt;h3 id=&quot;basic-requirement&quot;&gt;Basic requirement.&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Need Python installed.&lt;/li&gt; &lt;li&gt;Access to CVS server for getting the full code base.&lt;/li&gt; &lt;li&gt;CVSNT server setup. (This is not required if...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/migrating-from-cvs-to-git/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/migrating-from-cvs-to-git/</guid>
+        <link>http://localhost:4000/migrating-from-cvs-to-git/</link>
+        <guid isPermaLink="true">http://localhost:4000/migrating-from-cvs-to-git/</guid>
         
         
       </item>
@@ -35,8 +35,8 @@
         <title>Java Consumer and Supplier Interfaces</title>
         <description>&lt;p&gt;In continuation of our discussion on &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;functional interfaces&lt;/a&gt;, Java 8 has provided many single method interfaces. Based on the abstract method’s signature Java has given them different names such as Consumer, Supplier, Function, BiFuction, Predicate etc. In this blog, we are going to discuss on Java Consumer and Supplier Interfaces.&lt;/p&gt; &lt;h2 id=&quot;1-consumer-functionalinterface&quot;&gt;1. Consumer functional interface.&lt;/h2&gt; &lt;p&gt;Consumer functional interface is an interface having only one abstract method that accepts a single parameter and returns nothing. Here is how the interface looks like.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;...</description>
         <pubDate>Sun, 23 Sep 2018 06:32:49 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/java-consumer-and-supplier-interfaces/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/java-consumer-and-supplier-interfaces/</guid>
+        <link>http://localhost:4000/java-consumer-and-supplier-interfaces/</link>
+        <guid isPermaLink="true">http://localhost:4000/java-consumer-and-supplier-interfaces/</guid>
         
         <category>Java</category>
         
@@ -51,8 +51,8 @@
         <title>Java Function Interface is the Java Functional interface</title>
         <description>&lt;p&gt;In this blog, we will be discussing Java functional interfaces and one specific interface Function interface. In the end, we will see, Java Function Interface is the Java Functional interface.&lt;/p&gt; &lt;h2 id=&quot;1-what-is-java-functional-interface&quot;&gt;1. What is Java functional Interface?&lt;/h2&gt; &lt;p&gt;The interface which has only one abstract method is called Java Functional interface. Why they are so important because they are small simple and moreover everywhere in Java 8 Stream API. Java functional interfaces are annotated with @FunctionalInterface. Which enforces the programmer to keep only one method for that interface and throws the compilation error.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Country&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span...</description>
         <pubDate>Sun, 23 Sep 2018 03:35:45 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/java-function-interface-is-the-java-functional-interface/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/java-function-interface-is-the-java-functional-interface/</guid>
+        <link>http://localhost:4000/java-function-interface-is-the-java-functional-interface/</link>
+        <guid isPermaLink="true">http://localhost:4000/java-function-interface-is-the-java-functional-interface/</guid>
         
         <category>Java</category>
         
@@ -67,8 +67,8 @@
         <title>Understanding Java Predicate Interface</title>
         <description>&lt;p&gt;Java 8 Streams API is very robust and feature-rich API. It provides multiple ways to write beautiful and fewer lines of code. In that series, there is an interface Predicate Interface. Let’s start understanding Java Predicate Interface.&lt;/p&gt; &lt;h2 id=&quot;1-what-is-java-8-predicate-and-understanding-java-predicate-interface&quot;&gt;1. What is Java 8 Predicate and Understanding Java Predicate Interface.&lt;/h2&gt; &lt;p&gt;Java 8 Predicate Interface is a functional interface, By functional interface you know it will have only one abstract method and the programmer writes the body for that one abstract method as part of &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;Lambda expression&lt;/a&gt;. Predicate is a type of functional interface which takes a parameter and return a boolean result. Let’s look...</description>
         <pubDate>Sun, 23 Sep 2018 02:28:16 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/understanding-java-predicate-interface/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/understanding-java-predicate-interface/</guid>
+        <link>http://localhost:4000/understanding-java-predicate-interface/</link>
+        <guid isPermaLink="true">http://localhost:4000/understanding-java-predicate-interface/</guid>
         
         
       </item>
@@ -77,8 +77,8 @@
         <title>When to use Java Optional Class</title>
         <description>&lt;p&gt;Java 8  has provided a very strong feature to write code in a better and cleaner way. This can be used to easily replace our null but should it be used everywhere? And with this, we get a question about When to use Java Optional Class.&lt;/p&gt; &lt;h2 id=&quot;1-whatisjava-optional-class&quot;&gt;1. What is Java Optional Class?&lt;/h2&gt; &lt;p&gt;Java optional is a generic class, It is a wrapper around another classes object and provides a set of methods.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt;...</description>
         <pubDate>Sun, 23 Sep 2018 01:29:34 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/when-to-use-java-optional-class/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/when-to-use-java-optional-class/</guid>
+        <link>http://localhost:4000/when-to-use-java-optional-class/</link>
+        <guid isPermaLink="true">http://localhost:4000/when-to-use-java-optional-class/</guid>
         
         <category>Java</category>
         
@@ -93,8 +93,8 @@
         <title>Java lambda and functional programming - Part 1</title>
         <description>&lt;p&gt;Seeing the history of Java we can easily say, Java had troubles adapting functional programming. Recently Oracle has made some efforts to bring functional programming pattern to Java. In this blog we are going to discuss about Java  lambda and functional programming.&lt;/p&gt; &lt;h2 id=&quot;what-is-functional-programming&quot;&gt;What is functional programming?&lt;/h2&gt; &lt;p&gt;Functional programming focused mainly on three points while function creation pure functions, avoid sharing state and immutable variables.&lt;br /&gt; In Java world methods were part of the class and they used to use instance state (object properties) and modify them. But pure function concept says method return should solely be based on method argument and it...</description>
         <pubDate>Sat, 15 Sep 2018 23:26:33 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/java-lambda-procedural-programming/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/java-lambda-procedural-programming/</guid>
+        <link>http://localhost:4000/java-lambda-procedural-programming/</link>
+        <guid isPermaLink="true">http://localhost:4000/java-lambda-procedural-programming/</guid>
         
         
       </item>
@@ -103,8 +103,8 @@
         <title>Java lambda and functional programming - Part 2</title>
         <description>&lt;h2 id=&quot;java-lambda-and-functional-programming&quot;&gt;Java lambda and functional programming&lt;/h2&gt; &lt;p&gt;Java lambda expressions are syntactical sugars, It is a way of reducing lines of coded.  In other words, trim down the code and increase readability. In this blog, we will be discussing Java lambda and functional programming.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;AddInt&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addFunc&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Lambda functions are used with functional interfaces in Java. There three important rules to write lambda.&lt;/p&gt; &lt;p&gt;The class/interface (1) should only one abstract method. The argument for the abstract method should match to lambda...</description>
         <pubDate>Sat, 15 Sep 2018 23:18:31 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/java-lambda-functional-programming-part-2/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/java-lambda-functional-programming-part-2/</guid>
+        <link>http://localhost:4000/java-lambda-functional-programming-part-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/java-lambda-functional-programming-part-2/</guid>
         
         <category>Java</category>
         
@@ -121,8 +121,8 @@
         <title>Java 8 double colon operator</title>
         <description>&lt;h2 id=&quot;lambda-for-method-reference-or-java-double-colon-operator&quot;&gt;Lambda for Method reference Or Java Double colon operator&lt;/h2&gt; &lt;p&gt;What is the Java 8 double colon operator ? You must have seen some shortcode like,&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;In order to understand better, you must know about functional interface. Please check blog &lt;a href=&quot;https://abyte.stream/2018/09/10/java-lambda-and-procedural-programming&quot;&gt;Java lambda and functional programming.&lt;/a&gt; Java 8  method (functional interface) are just like objects, They can be passed as parameters and can be returned from another method. So why not assign Java methods to a new another variable.  Something like javascript.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squareFunc1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span...</description>
         <pubDate>Sat, 15 Sep 2018 22:43:51 -0400</pubDate>
-        <link>https://sanjaypatel2525.github.io/java-8-double-colon-operator/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/java-8-double-colon-operator/</guid>
+        <link>http://localhost:4000/java-8-double-colon-operator/</link>
+        <guid isPermaLink="true">http://localhost:4000/java-8-double-colon-operator/</guid>
         
         <category>Java</category>
         
@@ -139,8 +139,8 @@
         <title>JaCoCo Code Coverage And Reports With Sonarqube</title>
         <description>&lt;p&gt;We have already covered how to do &lt;a href=&quot;http://abyte.stream/2018/02/22/code-quality-analysis-sonar/&quot;&gt;code quality check with Sonarqube&lt;/a&gt; in my previous blog. In this blog, we will be discussing how can we setup JaCoCo a code coverage tool and exports reports to SonarQube. Though report can be directly read but having reported at a single place is a good idea. So, let get into  ‘JaCoCo Code Coverage And Reports With Sonarqube’&lt;/p&gt; &lt;h2 id=&quot;what-this-blog-will-cover&quot;&gt;What this blog will cover.&lt;/h2&gt; &lt;p&gt;What is JaCoCo and why you need this? Setting up JaCoCo. Importing reports to SonarQube&lt;/p&gt; &lt;h2 id=&quot;what-is-jacoco-and-why-you-need-this&quot;&gt;What is JaCoCo and why you need this?&lt;/h2&gt; &lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-274...</description>
         <pubDate>Sun, 04 Mar 2018 03:06:05 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/jacoco-code-coverage-reports-sonarqube/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/jacoco-code-coverage-reports-sonarqube/</guid>
+        <link>http://localhost:4000/jacoco-code-coverage-reports-sonarqube/</link>
+        <guid isPermaLink="true">http://localhost:4000/jacoco-code-coverage-reports-sonarqube/</guid>
         
         
       </item>
@@ -149,8 +149,8 @@
         <title>E2E Browser Testing with Protractor</title>
         <description>&lt;p&gt;There are many ways to test our application but having a testing with end user feel is the always the important one. The protractor is JS framework built up Selenium JS web driver.  It provides ease of End to End (E2E) browser testing with protractor angular and non angular applications. It provides a JS wrapper around Selenium commands. The framework contains many intuitive functions which really speed up writing test cases.&lt;/p&gt; &lt;p&gt;** Protractor doesn’t require your site to be on the Angular framework, You can use it all kind of sites.&lt;/p&gt; &lt;h2 id=&quot;in-this-blog-we-are-going-to-cover-following-points&quot;&gt;In this blog, we are going to cover...</description>
         <pubDate>Fri, 02 Mar 2018 03:36:41 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</guid>
+        <link>http://localhost:4000/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</link>
+        <guid isPermaLink="true">http://localhost:4000/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</guid>
         
         
       </item>
@@ -159,8 +159,8 @@
         <title>Setup And Write Selenium Scripts.</title>
         <description>&lt;p&gt;Selenium is one of the most popular open source testing automation tool. The best thing about any tool can a big community support, Selenium has very vast community and it has multiple tools to ease your work.  In this blog, I am going to discuss about ‘Setup And Write Selenium Scripts’ . Here is the agenda.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Why should you use Selenium?&lt;/li&gt; &lt;li&gt;What are tools involved in Selenium and which tool is right for you?&lt;/li&gt; &lt;li&gt;How to use Selenium IDE to generate the selenium scripts?&lt;/li&gt; &lt;li&gt;Finally, writing code to cover test cases (Not really required if you selenium IDE).&lt;/li&gt; &lt;/ul&gt;...</description>
         <pubDate>Wed, 28 Feb 2018 15:42:18 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/setup-write-selenium-scripts/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/setup-write-selenium-scripts/</guid>
+        <link>http://localhost:4000/setup-write-selenium-scripts/</link>
+        <guid isPermaLink="true">http://localhost:4000/setup-write-selenium-scripts/</guid>
         
         
       </item>
@@ -169,8 +169,8 @@
         <title>Code Quality analysis with Sonar</title>
         <description>&lt;p&gt;Every software starts with a good documentation and good code. Whenever a team starts a project are there different minds working on the same thing and sometimes this leads to differences in coding standards. To overcome this problem there are many standalone tools, which can go through your code and depending on configured rules in that tool. It gives lines of code which under coding rules violation.&lt;/p&gt; &lt;p&gt;There are many code quality tools in java such as,&lt;/p&gt; &lt;ul&gt; &lt;li&gt;CheckStyle&lt;/li&gt; &lt;li&gt;Firebugs&lt;/li&gt; &lt;li&gt;PMD&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Actually, sonar is the combination of all these, That’s the reason I prefer Sonar over the individual tool....</description>
         <pubDate>Thu, 22 Feb 2018 19:16:58 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/code-quality-analysis-sonar/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/code-quality-analysis-sonar/</guid>
+        <link>http://localhost:4000/code-quality-analysis-sonar/</link>
+        <guid isPermaLink="true">http://localhost:4000/code-quality-analysis-sonar/</guid>
         
         
       </item>
@@ -179,8 +179,8 @@
         <title>Fine-tune WordPress for Google F1 Micro</title>
         <description>&lt;p&gt;In our previous blog, we have discussed &lt;a href=&quot;http://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/&quot;&gt;setting up domain for your Wordpress website&lt;/a&gt;. In continuation to that, in this blog, we will be discussing finetuning your WordPress Setup to run Google F1 Micro VM Instance.&lt;/p&gt; &lt;p&gt;Google F1 Micro instance gives 30 GB of disk space,  0.6 GB of Memory and 1 CPU, which is no doubt very small configuration. Wordpress has vast plugin library for plugins. In this blog, we are going to cover few must-have plugins for us to increase reduce our website load and load you website in seconds.&lt;/p&gt; &lt;p&gt;Here are the main things which we...</description>
         <pubDate>Sat, 17 Feb 2018 18:12:49 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/fine-tune-wordpress-google-f1-micro/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/fine-tune-wordpress-google-f1-micro/</guid>
+        <link>http://localhost:4000/fine-tune-wordpress-google-f1-micro/</link>
+        <guid isPermaLink="true">http://localhost:4000/fine-tune-wordpress-google-f1-micro/</guid>
         
         
       </item>
@@ -189,8 +189,8 @@
         <title>Setting Up Domain Name For Your WordPress Site and Cloudflare As DNS Provider</title>
         <description>&lt;p&gt;In my previous blog, we have covered how to setup WordPress website on Google Cloud for free. In this blog, we are going to discuss about how we can setup a domain name for our WordPress Site and compare two main domain name registrar. Also, we will cover adding up securing and speeding up your site with CloudFlare  &lt;/p&gt; &lt;h1 id=&quot;why-cloudflare&quot;&gt;Why CloudFlare&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;It is free&lt;/li&gt; &lt;li&gt;It blocks a DDoS attack, saves your site from meltdown.&lt;/li&gt; &lt;li&gt;It has its own caching, It reduces the load from your server.&lt;/li&gt; &lt;li&gt;Cached content is stored in CDN which means it serves your content...</description>
         <pubDate>Sat, 17 Feb 2018 00:12:18 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/setting-domain-name-wordpress-site-cloudflare-dns-provider/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/setting-domain-name-wordpress-site-cloudflare-dns-provider/</guid>
+        <link>http://localhost:4000/setting-domain-name-wordpress-site-cloudflare-dns-provider/</link>
+        <guid isPermaLink="true">http://localhost:4000/setting-domain-name-wordpress-site-cloudflare-dns-provider/</guid>
         
         
       </item>
@@ -199,8 +199,8 @@
         <title>How to Setup Your WordPress Blogging on Google Cloud</title>
         <description>&lt;p&gt;Setting up a website for your self is always exciting but just a thought of dealing with tech can be a mood off. We always want something simple and cost-effective.&lt;/p&gt; &lt;p&gt;Blogging can be a passion or can be a way of making some extra bucks. In this blog, I am going to talk about how easily you can setup your lightning fast blogging site up running within no time. Also, I will discuss on performance and cost of the site( It’s free).&lt;/p&gt; &lt;p&gt;Normally, to create a WordPress website , You will have to find out a web hosting service and...</description>
         <pubDate>Fri, 16 Feb 2018 23:01:04 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/setup-wordpress-blogging-google-cloud/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/setup-wordpress-blogging-google-cloud/</guid>
+        <link>http://localhost:4000/setup-wordpress-blogging-google-cloud/</link>
+        <guid isPermaLink="true">http://localhost:4000/setup-wordpress-blogging-google-cloud/</guid>
         
         
       </item>
@@ -209,8 +209,8 @@
         <title>Issue With Cached Static Content - Cache Buster</title>
         <description>&lt;p&gt;Many us moight have faced issue with cached static content - cache buster, Every deployment whenever there is change in static files it becomes a painful job to ask your end customer to clear the cache. In order to get rid of this problem, here are few ideas for cache buster.&lt;/p&gt; &lt;p&gt;Append version number in front of changed files references ( /path/file.js?v=1.1) Reduce cache expiry header Use grunt scripts to handle cache issue.&lt;/p&gt; &lt;h2 id=&quot;issue-with-cached-static-content---cache-buster&quot;&gt;Issue with cached static content - cache buster&lt;/h2&gt; &lt;p&gt;. Let’s dive into details.&lt;/p&gt; &lt;h3 id=&quot;1-appending-version-number-approach&quot;&gt;1. Appending version number approach&lt;/h3&gt; &lt;p&gt;This is the easiest approach to resolve...</description>
         <pubDate>Sat, 10 Feb 2018 17:08:05 -0500</pubDate>
-        <link>https://sanjaypatel2525.github.io/issue-with-cached-static-content/</link>
-        <guid isPermaLink="true">https://sanjaypatel2525.github.io/issue-with-cached-static-content/</guid>
+        <link>http://localhost:4000/issue-with-cached-static-content/</link>
+        <guid isPermaLink="true">http://localhost:4000/issue-with-cached-static-content/</guid>
         
         
         <category>Websphere Commerce</category>
