@@ -2,352 +2,352 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>http://localhost:4000/pages/2018-02-10-home-page/</loc>
+            <loc>https://abyte.stream/pages/2018-02-10-home-page/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/pages/2018-02-10-sample-page/</loc>
+            <loc>https://abyte.stream/pages/2018-02-10-sample-page/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/pretty-print/index.html</loc>
+            <loc>https://abyte.stream/pretty-print/index.html</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/sort-distinct/index.html</loc>
+            <loc>https://abyte.stream/sort-distinct/index.html</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/about/index.html</loc>
+            <loc>https://abyte.stream/about/index.html</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/css/</loc>
+            <loc>https://abyte.stream/category/css/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/dev/</loc>
+            <loc>https://abyte.stream/category/dev/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/feed.xml</loc>
+            <loc>https://abyte.stream/feed.xml</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/html/</loc>
+            <loc>https://abyte.stream/category/html/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/</loc>
+            <loc>https://abyte.stream/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/jekyll/</loc>
+            <loc>https://abyte.stream/category/jekyll/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/js/</loc>
+            <loc>https://abyte.stream/category/js/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/misc/</loc>
+            <loc>https://abyte.stream/category/misc/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/search.json</loc>
+            <loc>https://abyte.stream/search.json</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/series/index.html</loc>
+            <loc>https://abyte.stream/series/index.html</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/sitemap.xml</loc>
+            <loc>https://abyte.stream/sitemap.xml</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/svg/</loc>
+            <loc>https://abyte.stream/category/svg/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/tags/index.html</loc>
+            <loc>https://abyte.stream/tags/index.html</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/10/issue-with-cached-static-content/</loc>
+            <loc>https://abyte.stream/2018/02/10/issue-with-cached-static-content/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/10/issue-with-cached-static-content/amp/</loc>
+            <loc>https://abyte.stream/2018/02/10/issue-with-cached-static-content/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/16/setup-wordpress-blogging-google-cloud/</loc>
+            <loc>https://abyte.stream/2018/02/16/setup-wordpress-blogging-google-cloud/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/16/setup-wordpress-blogging-google-cloud/amp/</loc>
+            <loc>https://abyte.stream/2018/02/16/setup-wordpress-blogging-google-cloud/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
+            <loc>https://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/amp/</loc>
+            <loc>https://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/17/fine-tune-wordpress-google-f1-micro/</loc>
+            <loc>https://abyte.stream/2018/02/17/fine-tune-wordpress-google-f1-micro/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/17/fine-tune-wordpress-google-f1-micro/amp/</loc>
+            <loc>https://abyte.stream/2018/02/17/fine-tune-wordpress-google-f1-micro/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/22/code-quality-analysis-sonar/</loc>
+            <loc>https://abyte.stream/2018/02/22/code-quality-analysis-sonar/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/22/code-quality-analysis-sonar/amp/</loc>
+            <loc>https://abyte.stream/2018/02/22/code-quality-analysis-sonar/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/28/setup-write-selenium-scripts/</loc>
+            <loc>https://abyte.stream/2018/02/28/setup-write-selenium-scripts/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/02/28/setup-write-selenium-scripts/amp/</loc>
+            <loc>https://abyte.stream/2018/02/28/setup-write-selenium-scripts/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
+            <loc>https://abyte.stream/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/amp/</loc>
+            <loc>https://abyte.stream/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/03/04/jacoco-code-coverage-reports-sonarqube/</loc>
+            <loc>https://abyte.stream/2018/03/04/jacoco-code-coverage-reports-sonarqube/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/03/04/jacoco-code-coverage-reports-sonarqube/amp/</loc>
+            <loc>https://abyte.stream/2018/03/04/jacoco-code-coverage-reports-sonarqube/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-8-double-colon-operator/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-8-double-colon-operator/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-8-double-colon-operator/amp/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-8-double-colon-operator/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-lambda-procedural-programming/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-lambda-procedural-programming/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-lambda-procedural-programming/amp/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-lambda-procedural-programming/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/23/when-to-use-java-optional-class/</loc>
+            <loc>https://abyte.stream/2018/09/23/when-to-use-java-optional-class/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/23/when-to-use-java-optional-class/amp/</loc>
+            <loc>https://abyte.stream/2018/09/23/when-to-use-java-optional-class/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/23/understanding-java-predicate-interface/</loc>
+            <loc>https://abyte.stream/2018/09/23/understanding-java-predicate-interface/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/23/understanding-java-predicate-interface/amp/</loc>
+            <loc>https://abyte.stream/2018/09/23/understanding-java-predicate-interface/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
+            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/23/java-consumer-and-supplier-interfaces/</loc>
+            <loc>https://abyte.stream/2018/09/23/java-consumer-and-supplier-interfaces/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/09/23/java-consumer-and-supplier-interfaces/amp/</loc>
+            <loc>https://abyte.stream/2018/09/23/java-consumer-and-supplier-interfaces/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/12/11/migrating-from-cvs-to-git/</loc>
+            <loc>https://abyte.stream/2018/12/11/migrating-from-cvs-to-git/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/12/11/migrating-from-cvs-to-git/amp/</loc>
+            <loc>https://abyte.stream/2018/12/11/migrating-from-cvs-to-git/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/12/11/websphere-commerce-build-with-git/</loc>
+            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
+            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/redirects.json</loc>
+            <loc>https://abyte.stream/redirects.json</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/issue-with-cached-static-content</loc>
+            <loc>https://abyte.stream/amp/issue-with-cached-static-content</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/setup-wordpress-blogging-google-cloud</loc>
+            <loc>https://abyte.stream/amp/setup-wordpress-blogging-google-cloud</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/setting-domain-name-wordpress-site-cloudflare-dns-provider</loc>
+            <loc>https://abyte.stream/amp/setting-domain-name-wordpress-site-cloudflare-dns-provider</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/fine-tune-wordpress-google-f1-micro</loc>
+            <loc>https://abyte.stream/amp/fine-tune-wordpress-google-f1-micro</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/code-quality-analysis-sonar</loc>
+            <loc>https://abyte.stream/amp/code-quality-analysis-sonar</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/setup-write-selenium-scripts</loc>
+            <loc>https://abyte.stream/amp/setup-write-selenium-scripts</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular</loc>
+            <loc>https://abyte.stream/amp/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/jacoco-code-coverage-reports-sonarqube</loc>
+            <loc>https://abyte.stream/amp/jacoco-code-coverage-reports-sonarqube</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/java-8-double-colon-operator</loc>
+            <loc>https://abyte.stream/amp/java-8-double-colon-operator</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/java-lambda-functional-programming-part-2</loc>
+            <loc>https://abyte.stream/amp/java-lambda-functional-programming-part-2</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/java-lambda-procedural-programming</loc>
+            <loc>https://abyte.stream/amp/java-lambda-procedural-programming</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/when-to-use-java-optional-class</loc>
+            <loc>https://abyte.stream/amp/when-to-use-java-optional-class</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/understanding-java-predicate-interface</loc>
+            <loc>https://abyte.stream/amp/understanding-java-predicate-interface</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/java-function-interface-is-the-java-functional-interface</loc>
+            <loc>https://abyte.stream/amp/java-function-interface-is-the-java-functional-interface</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/java-consumer-and-supplier-interfaces</loc>
+            <loc>https://abyte.stream/amp/java-consumer-and-supplier-interfaces</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/migrating-from-cvs-to-git</loc>
+            <loc>https://abyte.stream/amp/migrating-from-cvs-to-git</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/amp/websphere-commerce-build-with-git</loc>
+            <loc>https://abyte.stream/amp/websphere-commerce-build-with-git</loc>
         </url>
     
     
         <url>
-            <loc>http://localhost:4000/websphere-commerce-build-with-git/</loc>
+            <loc>https://abyte.stream/websphere-commerce-build-with-git/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/migrating-from-cvs-to-git/</loc>
+            <loc>https://abyte.stream/migrating-from-cvs-to-git/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/java-consumer-and-supplier-interfaces/</loc>
+            <loc>https://abyte.stream/java-consumer-and-supplier-interfaces/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/java-function-interface-is-the-java-functional-interface/</loc>
+            <loc>https://abyte.stream/java-function-interface-is-the-java-functional-interface/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/understanding-java-predicate-interface/</loc>
+            <loc>https://abyte.stream/understanding-java-predicate-interface/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/when-to-use-java-optional-class/</loc>
+            <loc>https://abyte.stream/when-to-use-java-optional-class/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/java-lambda-procedural-programming/</loc>
+            <loc>https://abyte.stream/java-lambda-procedural-programming/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/java-lambda-functional-programming-part-2/</loc>
+            <loc>https://abyte.stream/java-lambda-functional-programming-part-2/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/java-8-double-colon-operator/</loc>
+            <loc>https://abyte.stream/java-8-double-colon-operator/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/jacoco-code-coverage-reports-sonarqube/</loc>
+            <loc>https://abyte.stream/jacoco-code-coverage-reports-sonarqube/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
+            <loc>https://abyte.stream/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/setup-write-selenium-scripts/</loc>
+            <loc>https://abyte.stream/setup-write-selenium-scripts/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/code-quality-analysis-sonar/</loc>
+            <loc>https://abyte.stream/code-quality-analysis-sonar/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/fine-tune-wordpress-google-f1-micro/</loc>
+            <loc>https://abyte.stream/fine-tune-wordpress-google-f1-micro/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
+            <loc>https://abyte.stream/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/setup-wordpress-blogging-google-cloud/</loc>
+            <loc>https://abyte.stream/setup-wordpress-blogging-google-cloud/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/issue-with-cached-static-content/</loc>
+            <loc>https://abyte.stream/issue-with-cached-static-content/</loc>
         </url>
   
 </urlset>
