@@ -59,14 +59,14 @@ Find out the CVSRoot and zip the parent folder.
 temp/cvs2svn-<strong>x.x.x
 </strong>
 ### Run the following command from the command prompt.
-python.exe cvs2git --blobfile=git-blob.dat --dumpfile=git-dump.dat --use-external-blob-generator --username=cvs2git C:/temp/<Extracted CVSFolder><br />
+python.exe cvs2git --blobfile=git-blob.dat --dumpfile=git-dump.dat --use-external-blob-generator --username=cvs2git C:/temp/&lt;Extracted CVSFolder&gt;<br />
 Once this command has completed successfully it will create two files, git-blob.dat and git-dump.dat. This command will fail if you have CVS client version installed.
 
 ### Initialize an empty bare repository in temp folder.
-git init --bare <YourProrjectName>.git
+git init --bare &lt;YourProrjectName&gt;.git
 
-### Navigate to <YourProrjectName>.git
-cd <YourProrjectName>.git
+### Navigate to &lt;YourProrjectName&gt;.git
+cd &lt;YourProrjectName&gt;.git
 
 ### Import dat files in repository.
 git fast-import --export-marks=../../cvs2svn-2.5.0/git-marks.dat <../../cvs2svn-2.5.0/git-blob.dat<br />
@@ -83,16 +83,16 @@ It opens up the git history browser.
 
 
 ### Clone your bare repository in 'temp'.
-Navigate to temp and run this following command. The following command will create the folder named <YourProrjectName>.<br />
-git clone <YourProrjectName>.git
+Navigate to temp and run this following command. The following command will create the folder named &lt;YourProrjectName&gt;.<br />
+git clone &lt;YourProrjectName&gt;.git
 
-### Navigate to <YourProrjectName> and add remote location.
+### Navigate to &lt;YourProrjectName&gt; and add remote location.
 Remote location will be you common git server location which will be shared by your team.<br />
 git remote add origin remote repository URL
 
 ### Push your local git to the remote.
 git push origin master
 
-### Now you can delete your bare repository 'temp/<YourProrjectName>.git'
+### Now you can delete your bare repository 'temp/&lt;YourProrjectName&gt;.git'
 
 That's all about CVS to git codebase migration. Next topic we are going to update the ant build script and configure it will git setup.

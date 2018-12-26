@@ -68,9 +68,10 @@ git.branchOrTag=development
 
 ###  Configure git username and password in extract-git.private.properties
 ### Run the build and test it using the following command.
-
-git.password=<someusername><br />
+{% highlight properties %}
+git.password=<someusername>
 git.username=<somepassword>
+{% endhighlight %}
 ### Update the extract-git.xml with below ant code.
 {% highlight xml %}
 <project name="extract-git" default="all">

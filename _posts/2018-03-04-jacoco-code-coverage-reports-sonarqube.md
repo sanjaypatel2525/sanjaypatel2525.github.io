@@ -124,7 +124,7 @@ Here are the commands you to attach JaCoCo to a running Java process.
 -javaagent:C:\dev\servers\jacoco-agent.jar=destfile=< path to jacoco C:\lib\>jacoco.exec,append=true,includes=some.application.*
 
 This Java argument will attach the JaCoCo agent. Once you have enabled the JaCoCo agent you need to run tests manually or automated. This will create jacoco.exec on given location but dump data only on server stop. To avoid server interruption for the report you need to enable command interface using following option.
-output=<tcpserver>,address=*,<em>port=<some port 6300></em>
+output=&lt;cpserver&gt;,address=*,<em>port=<some port 6300></em>
 ## Importing reports to SonarQube
 {% highlight properties %}# Generate sonar issues report in html and console
 sonar.issuesReport.html.enable=true
