@@ -1,0 +1,364 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring MVC Intro.</title>
+    <link rel="canonical" href="https://abyte.stream/Spring-MVC-Intro/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Spring MVC Intro.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>Spring has many modules to make cut short project devlopment lifecycle. One of the most commonaly used module is Spring MVC. 
+There have many differnt versions of Spring MVC. We are going to discuss about the most recent ones.</p>
+
+<h2 id="what-is-mvc">What is MVC.</h2>
+<p>MVS stands for model, view and controller. It is a design pattern mainly for web based projects. 
+<amp-img src="/assets/2019-05-17-Spring%20MVC%20Intro-1.JPG" alt="smiley" width="320" height="350" layout="responsive"><noscript><img src="/assets/2019-05-17-Spring%20MVC%20Intro-1.JPG" alt="smiley" width="320" height="350"></noscript></amp-img></p>
+<ul>
+  <li>Model stands for data (java data objects/ beans)</li>
+  <li>View is display to the user (It usage model to show dynamic data)</li>
+  <li>Controller takes request and update data/model and redirects to view.</li>
+</ul>
+
+<p>Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request maping to cantroller and resolving the view. Contoller and it’s method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the viewname and resolved the JSP or equivalent markup language to render the data. 
+<amp-img src="/assets/2019-05-17-Spring%20MVC%20Intro-2.JPG" alt="smiley" width="621" height="229" layout="responsive"><noscript><img src="/assets/2019-05-17-Spring%20MVC%20Intro-2.JPG" alt="smiley" width="621" height="229"></noscript></amp-img></p>
+
+<h2 id="configuring-disaptcher-serverl-in-webxml">Configuring Disaptcher serverl in Web.xml</h2>
+<p>This is not required when you are using spring boot with embeded web server.</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">    ...
+    <span class="nt">&lt;servlet&gt;</span>
+        <span class="nt">&lt;servlet-name&gt;</span>spring<span class="nt">&lt;/servlet-name&gt;</span>
+            <span class="nt">&lt;servlet-class&gt;</span>
+                org.springframework.web.servlet.DispatcherServlet
+            <span class="nt">&lt;/servlet-class&gt;</span>
+        <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+    <span class="nt">&lt;/servlet&gt;</span>
+ 
+    <span class="nt">&lt;servlet-mapping&gt;</span>
+        <span class="nt">&lt;servlet-name&gt;</span>spring<span class="nt">&lt;/servlet-name&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>/<span class="nt">&lt;/url-pattern&gt;</span>
+    <span class="nt">&lt;/servlet-mapping&gt;</span>
+    ...</code></pre></figure>
+
+<p>Add following to pom.xml</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>4.1.4.RELEASE<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h2 id="xml-based-basic-configuration">XML Based Basic Configuration</h2>
+<p>Configure componenet scan package and view resolver.</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
+    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span class="na">xmlns:context=</span><span class="s">"http://www.springframework.org/schema/context"</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context/
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd"</span><span class="nt">&gt;</span>
+ 
+    <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.somepackage.demo"</span> <span class="nt">/&gt;</span>
+ 
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"</span> <span class="nt">/&gt;</span>
+     
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"prefix"</span> <span class="na">value=</span><span class="s">"/WEB-INF/views/"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"suffix"</span> <span class="na">value=</span><span class="s">".jsp"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+ 
+<span class="nt">&lt;/beans&gt;</span></code></pre></figure>
+
+<h2 id="spring-boot-web-mvc-configuration">Spring Boot Web MVC configuration.</h2>
+<p>Add following in pom.xml</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">        <span class="nt">&lt;dependency&gt;</span>
+            <span class="c">&lt;!-- Import dependency management from Spring Boot --&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-dependencies<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>2.1.3.RELEASE<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;type&gt;</span>pom<span class="nt">&lt;/type&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>import<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+         <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>2.1.3.RELEASE<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h2 id="spring-boot-view-resolver">Spring Boot view resolver.</h2>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
+<span class="nd">@EnableWebMvc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MvcConfiguration</span> <span class="kd">extends</span> <span class="n">WebMvcConfigurerAdapter</span><span class="o">{</span>
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">ViewResolver</span> <span class="nf">getViewResolver</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">InternalResourceViewResolver</span> <span class="n">resolver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InternalResourceViewResolver</span><span class="o">();</span>
+        <span class="n">resolver</span><span class="o">.</span><span class="na">setPrefix</span><span class="o">(</span><span class="s">"/WEB-INF/"</span><span class="o">);</span>
+        <span class="n">resolver</span><span class="o">.</span><span class="na">setSuffix</span><span class="o">(</span><span class="s">".jsp"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">resolver</span><span class="o">;</span>
+    <span class="o">}</span>  
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="create-controller-and-create-get-resource">Create Controller and create get resource.</h2>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Controller</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/myresource"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyResource</span> <span class="o">{</span>
+
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/sayHi"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sayHi</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">"name"</span><span class="o">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">false</span><span class="o">,</span> <span class="n">defaultValue</span><span class="o">=</span><span class="s">"World"</span><span class="o">)</span> <span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span>
+        <span class="k">return</span> <span class="s">"viewPage"</span><span class="o">;</span> <span class="c1">// will resolve to WEB-INF/viewPage.jsp</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="run-spring-boot">Run Spring Boot.</h2>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Application</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">Application</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="spring-mvc-annotataions">Spring MVC annotataions.</h2>
+<p>Here we will see the Spring annotations briefly.</p>
+<ul>
+  <li>@Controller Or @RestController</li>
+  <li>@RequestMapping</li>
+  <li>@PathVariable</li>
+  <li>@RequestParam</li>
+  <li>@ModelAttribute</li>
+  <li>@RequestBody and @ResponseBody</li>
+  <li>@RequestHeader</li>
+</ul>
+
+<h3 id="controller-or-restcontroller">@Controller Or @RestController</h3>
+<p>Controller provide a URL to method mapping, Controller classes will be singleton and will automatically gets registered in Spring Dispatcher. RestController is specialy type of controller to serialize and transform(JSON,XML etc) the response object directly. If not you would have to use <strong>@ResponseBody</strong> to transform the objects.</p>
+
+<p><strong>RequestMapping</strong>, Request mapping is used define the URL path for that method or controller class.</p>
+
+<p><strong>@RequestBody</strong>, In case you want desrialize the request object to some class you can use @RequestBody. It transform JSON,XML to java object.</p>
+
+<p><strong>@RequestHeader</strong>, In case you want capture request headers in some variable.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"someresource"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ResourceRestController</span> <span class="o">{</span>
+     
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// PathVariable bind the URL path value to the method parameters</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@RequestParam</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// RequestParam bind the request parameter value to the method parameters, such as someurl?id=value1.</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/save"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">,</span> <span class="n">consumes</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="o">....</span>
+<span class="nd">@Controller</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"someresource"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ResourceRestController</span> <span class="o">{</span>
+     
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/save"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="n">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+     <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="err">@</span><span class="nd">@RequestHeader</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"User-Agent"</span><span class="o">)</span> <span class="n">String</span> <span class="n">userAgent</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+        <span class="k">if</span><span class="o">(</span><span class="n">userAgent</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"Mozilla"</span><span class="o">))</span> <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="model-modelmap-modelandview-modelattribute">Model, ModelMap, ModelAndView, ModelAttribute</h2>
+<p>Model is an interface and ModelMap is implmentation of that class you can use them interchangebly.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
+ <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/modelExample"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+        <span class="n">model</span><span class="o">.</span><span class="na">addAtttribute</span><span class="o">(</span><span class="s">"msg"</span><span class="o">,</span><span class="s">"Hello there"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="s">"viewName"</span><span class="o">;</span>
+ <span class="o">}</span>
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/modelExampleWithView"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">ModelAndView</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Modeland</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+        <span class="n">ModelAndView</span> <span class="n">modelAndView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ModelAndView</span><span class="o">(</span><span class="s">"viewPage"</span><span class="o">);</span>
+        <span class="n">modelAndView</span><span class="o">.</span><span class="na">addObject</span><span class="o">(</span><span class="s">"msg"</span><span class="o">,</span><span class="s">"Hello there"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">modelAndView</span><span class="o">;</span>
+ <span class="o">}</span></code></pre></figure>
+
+<p><strong>ModelAttribute</strong>, You can write a method which return some value and that value you want to store in model object.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
+<span class="nd">@ModelAttribute</span>  <span class="c1">// model.get("employee") will give the value returned from this method.</span>
+<span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="n">String</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">employeeDao</span><span class="o">.</span><span class="na">getEmployee</span><span class="o">(</span><span class="n">number</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

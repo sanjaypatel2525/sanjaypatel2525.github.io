@@ -278,12 +278,76 @@
         </url>
     
         <url>
+            <loc>https://abyte.stream/amp/Spring IoC and DI</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring IoC</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring Bean life cycle</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring Autowire</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring Java Based Configuration</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring Events and Listners</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring MVC Intro</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring Security Simple</loc>
+        </url>
+    
+        <url>
             <loc>https://abyte.stream/amp/websphere-commerce-build-with-git</loc>
         </url>
     
     
         <url>
             <loc>https://abyte.stream/websphere-commerce-build-with-git/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-Security-Simple/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-MVC-Intro/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-Events-and-Listners/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-Java-Based-Configuration/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-Autowire/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-Bean-life-cycle/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-IoC/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-IoC-and-DI/</loc>
         </url>
   
         <url>

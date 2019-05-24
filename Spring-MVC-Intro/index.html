@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" >
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Spring MVC Intro.</title>
+    <meta name="description" content="A blog about lorem ipsum dolor sit amet">
+
+    <!-- Google Authorship Markup -->
+    <link rel="author" href="https://plus.google.com/+?rel=author">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="Spring MVC Intro.">
+    <meta name="twitter:description" content="A blog about lorem ipsum dolor sit amet">
+    
+    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:url" content="https://abyte.stream/Spring-MVC-Intro/">
+    <meta property="og:title" content="Spring MVC Intro.">
+    
+    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    
+    <meta property="og:description" content="A blog about lorem ipsum dolor sit amet">
+    <meta property="og:site_name" content="Sanjay Patel - Blogs">
+
+    <!-- Social: Google+ / Schema.org  -->
+    <meta itemprop="name" content="Spring MVC Intro."/>
+    <meta itemprop="description" content="A blog about lorem ipsum dolor sit amet">
+    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
+
+    <!--amp page-->
+    
+        <link rel="amphtml" href="https://abyte.stream/amp/Spring MVC Intro.html">
+    
+    <!-- Windows 8 Tile Icons -->
+    <meta name="application-name" content="Sanjay Patel Blog">
+    <meta name="msapplication-TileColor" content="#0562DC">
+    <meta name="msapplication-square70x70logo" content="smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="widetile.png" />
+    <meta name="msapplication-square310x310logo" content="largetile.png" />
+    <!-- Android Lolipop Theme Color -->
+    <meta name="theme-color" content="">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://abyte.stream/Spring-MVC-Intro/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1067793-4');
+    </script>
+
+</head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-close" viewBox="0 0 805 1024"><path class="path1" d="M741.714 755.429q0 22.857-16 38.857l-77.714 77.714q-16 16-38.857 16t-38.857-16l-168-168-168 168q-16 16-38.857 16t-38.857-16l-77.714-77.714q-16-16-16-38.857t16-38.857l168-168-168-168q-16-16-16-38.857t16-38.857l77.714-77.714q16-16 38.857-16t38.857 16l168 168 168-168q16-16 38.857-16t38.857 16l77.714 77.714q16 16 16 38.857t-16 38.857l-168 168 168 168q16 16 16 38.857z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol></defs></svg>
+
+        <header class="bar-header">
+    <h1 class="logo">
+        <a href="/"></a>
+    </h1>
+</header>
+<div class="search-wrapper">
+    <div class="search-form">
+        <input type="text" class="search-field" placeholder="Search...">
+        <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
+        <ul class="search-results search-list"></ul>
+    </div>
+</div>
+
+<div id="fade" class="overlay"></div>
+<a id="slide" class="slideButton fade">
+    <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+    <svg id="close" class="icon-menu"><use xlink:href="#icon-close"></use></svg>
+</a>
+<aside id="sidebar">
+<nav id="navigation">
+  <h2>MENU</h2>
+  <ul>
+    
+      <li><a href="https://abyte.stream/">Home</a></li>
+    
+      <li><a href="https://abyte.stream/series">Series</a></li>
+    
+      <li><a href="https://abyte.stream/tags">Tags</a></li>
+    
+      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+    
+      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+    
+    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+  </ul>
+</nav>
+</aside>
+<a id="search" class="dosearch">
+    <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
+</a>
+
+<header class="header-post" role="banner">
+     <div class="content">
+        
+            <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018</time>
+        
+        <h1 class="post-title" itemprop="name">Spring MVC Intro.</h1>
+        <p itemprop="description" class="subtitle"></p>
+    </div>
+</header>
+        <section class="post">
+
+            <section class="share">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad Unit1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6254849299387322"
+     data-ad-slot="2070150131"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </section>
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                <p>Spring has many modules to make cut short project devlopment lifecycle. One of the most commonaly used module is Spring MVC. 
+There have many differnt versions of Spring MVC. We are going to discuss about the most recent ones.</p>
+
+<h2 id="what-is-mvc">What is MVC.</h2>
+<p>MVS stands for model, view and controller. It is a design pattern mainly for web based projects. 
+<img src="/assets/2019-05-17-Spring MVC Intro-1.JPG" alt="smiley" /></p>
+<ul>
+  <li>Model stands for data (java data objects/ beans)</li>
+  <li>View is display to the user (It usage model to show dynamic data)</li>
+  <li>Controller takes request and update data/model and redirects to view.</li>
+</ul>
+
+<p>Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request maping to cantroller and resolving the view. Contoller and it’s method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the viewname and resolved the JSP or equivalent markup language to render the data. 
+<img src="/assets/2019-05-17-Spring MVC Intro-2.JPG" alt="smiley" /></p>
+
+<h2 id="configuring-disaptcher-serverl-in-webxml">Configuring Disaptcher serverl in Web.xml</h2>
+<p>This is not required when you are using spring boot with embeded web server.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">    ...
+    <span class="nt">&lt;servlet&gt;</span>
+        <span class="nt">&lt;servlet-name&gt;</span>spring<span class="nt">&lt;/servlet-name&gt;</span>
+            <span class="nt">&lt;servlet-class&gt;</span>
+                org.springframework.web.servlet.DispatcherServlet
+            <span class="nt">&lt;/servlet-class&gt;</span>
+        <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+    <span class="nt">&lt;/servlet&gt;</span>
+ 
+    <span class="nt">&lt;servlet-mapping&gt;</span>
+        <span class="nt">&lt;servlet-name&gt;</span>spring<span class="nt">&lt;/servlet-name&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>/<span class="nt">&lt;/url-pattern&gt;</span>
+    <span class="nt">&lt;/servlet-mapping&gt;</span>
+    ...</code></pre></figure>
+
+<p>Add following to pom.xml</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>4.1.4.RELEASE<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h2 id="xml-based-basic-configuration">XML Based Basic Configuration</h2>
+<p>Configure componenet scan package and view resolver.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
+    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span class="na">xmlns:context=</span><span class="s">"http://www.springframework.org/schema/context"</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context/
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd"</span><span class="nt">&gt;</span>
+ 
+    <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.somepackage.demo"</span> <span class="nt">/&gt;</span>
+ 
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"</span> <span class="nt">/&gt;</span>
+     
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"prefix"</span> <span class="na">value=</span><span class="s">"/WEB-INF/views/"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"suffix"</span> <span class="na">value=</span><span class="s">".jsp"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+ 
+<span class="nt">&lt;/beans&gt;</span></code></pre></figure>
+
+<h2 id="spring-boot-web-mvc-configuration">Spring Boot Web MVC configuration.</h2>
+<p>Add following in pom.xml</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">        <span class="nt">&lt;dependency&gt;</span>
+            <span class="c">&lt;!-- Import dependency management from Spring Boot --&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-dependencies<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>2.1.3.RELEASE<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;type&gt;</span>pom<span class="nt">&lt;/type&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>import<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+         <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>2.1.3.RELEASE<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h2 id="spring-boot-view-resolver">Spring Boot view resolver.</h2>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
+<span class="nd">@EnableWebMvc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MvcConfiguration</span> <span class="kd">extends</span> <span class="n">WebMvcConfigurerAdapter</span><span class="o">{</span>
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">ViewResolver</span> <span class="nf">getViewResolver</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">InternalResourceViewResolver</span> <span class="n">resolver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InternalResourceViewResolver</span><span class="o">();</span>
+        <span class="n">resolver</span><span class="o">.</span><span class="na">setPrefix</span><span class="o">(</span><span class="s">"/WEB-INF/"</span><span class="o">);</span>
+        <span class="n">resolver</span><span class="o">.</span><span class="na">setSuffix</span><span class="o">(</span><span class="s">".jsp"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">resolver</span><span class="o">;</span>
+    <span class="o">}</span>  
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="create-controller-and-create-get-resource">Create Controller and create get resource.</h2>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Controller</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/myresource"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyResource</span> <span class="o">{</span>
+
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/sayHi"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sayHi</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">"name"</span><span class="o">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">false</span><span class="o">,</span> <span class="n">defaultValue</span><span class="o">=</span><span class="s">"World"</span><span class="o">)</span> <span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span>
+        <span class="k">return</span> <span class="s">"viewPage"</span><span class="o">;</span> <span class="c1">// will resolve to WEB-INF/viewPage.jsp</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="run-spring-boot">Run Spring Boot.</h2>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Application</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">Application</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="spring-mvc-annotataions">Spring MVC annotataions.</h2>
+<p>Here we will see the Spring annotations briefly.</p>
+<ul>
+  <li>@Controller Or @RestController</li>
+  <li>@RequestMapping</li>
+  <li>@PathVariable</li>
+  <li>@RequestParam</li>
+  <li>@ModelAttribute</li>
+  <li>@RequestBody and @ResponseBody</li>
+  <li>@RequestHeader</li>
+</ul>
+
+<h3 id="controller-or-restcontroller">@Controller Or @RestController</h3>
+<p>Controller provide a URL to method mapping, Controller classes will be singleton and will automatically gets registered in Spring Dispatcher. RestController is specialy type of controller to serialize and transform(JSON,XML etc) the response object directly. If not you would have to use <strong>@ResponseBody</strong> to transform the objects.</p>
+
+<p><strong>RequestMapping</strong>, Request mapping is used define the URL path for that method or controller class.</p>
+
+<p><strong>@RequestBody</strong>, In case you want desrialize the request object to some class you can use @RequestBody. It transform JSON,XML to java object.</p>
+
+<p><strong>@RequestHeader</strong>, In case you want capture request headers in some variable.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"someresource"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ResourceRestController</span> <span class="o">{</span>
+     
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// PathVariable bind the URL path value to the method parameters</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@RequestParam</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// RequestParam bind the request parameter value to the method parameters, such as someurl?id=value1.</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/save"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">,</span> <span class="n">consumes</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="o">....</span>
+<span class="nd">@Controller</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"someresource"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ResourceRestController</span> <span class="o">{</span>
+     
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/save"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="n">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+     <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">Book</span> <span class="nf">getResource</span><span class="o">(</span><span class="err">@</span><span class="nd">@RequestHeader</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"User-Agent"</span><span class="o">)</span> <span class="n">String</span> <span class="n">userAgent</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+        <span class="k">if</span><span class="o">(</span><span class="n">userAgent</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"Mozilla"</span><span class="o">))</span> <span class="k">return</span> <span class="n">resourceDao</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="model-modelmap-modelandview-modelattribute">Model, ModelMap, ModelAndView, ModelAttribute</h2>
+<p>Model is an interface and ModelMap is implmentation of that class you can use them interchangebly.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
+ <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/modelExample"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+        <span class="n">model</span><span class="o">.</span><span class="na">addAtttribute</span><span class="o">(</span><span class="s">"msg"</span><span class="o">,</span><span class="s">"Hello there"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="s">"viewName"</span><span class="o">;</span>
+ <span class="o">}</span>
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/modelExampleWithView"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">ModelAndView</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Modeland</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+        <span class="n">ModelAndView</span> <span class="n">modelAndView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ModelAndView</span><span class="o">(</span><span class="s">"viewPage"</span><span class="o">);</span>
+        <span class="n">modelAndView</span><span class="o">.</span><span class="na">addObject</span><span class="o">(</span><span class="s">"msg"</span><span class="o">,</span><span class="s">"Hello there"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">modelAndView</span><span class="o">;</span>
+ <span class="o">}</span></code></pre></figure>
+
+<p><strong>ModelAttribute</strong>, You can write a method which return some value and that value you want to store in model object.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
+<span class="nd">@ModelAttribute</span>  <span class="c1">// model.get("employee") will give the value returned from this method.</span>
+<span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="n">String</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">employeeDao</span><span class="o">.</span><span class="na">getEmployee</span><span class="o">(</span><span class="n">number</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+            </article>
+
+            <section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-MVC-Intro/%20via%20&#64;&hashtags="
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-MVC-Intro/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+        <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-MVC-Intro/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+        <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
+    </a>
+</section>
+            <section class="share">
+                <div class="fb-comments" data-href="https://abyte.stream/Spring-MVC-Intro/"></div>
+            </section>
+            <section class="author" itemprop="author">
+    <div class="details" itemscope itemtype="http://schema.org/Person">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="">
+        <p class="def">Author</p>
+        <h3 class="name">
+            <a itemprop="name" href="https://plus.google.com/+/posts">Sanjay Patel</a>
+        </h3>
+        <p class="desc">Developer at IBM</p>
+        <p><a itemprop="email" class="email" href="mailto:sanjaypatel2525@yahoo.com">sanjaypatel2525@yahoo.com</a></p>
+        <!--<p><a itemprop="github" class="github" href="https://github.com/">github.com/</a></p>-->
+    </div>
+</section>
+
+            <footer>
+    <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+<script src="/assets/js/main.js"></script>
+            <div id="fb-root"></div>
+        </section>
+    </body>
+    
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=207343132703435";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "facebook-jssdk"));</script>
+</html>

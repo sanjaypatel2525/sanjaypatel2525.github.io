@@ -5,8 +5,8 @@
     <description>A blog about lorem ipsum dolor sit amet</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Dec 2018 16:33:17 -0500</pubDate>
-    <lastBuildDate>Wed, 26 Dec 2018 16:33:17 -0500</lastBuildDate>
+    <pubDate>Fri, 24 May 2019 12:28:48 -0400</pubDate>
+    <lastBuildDate>Fri, 24 May 2019 12:28:48 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -18,6 +18,86 @@
         
         
         <category>Websphere Commerce</category>
+        
+      </item>
+    
+      <item>
+        <title>Spring Security Simple.</title>
+        <description>&lt;p&gt;This blog we are going to discuss a easiest approach to implement spring security, Spring Security Details is will more into customization points wrt to standard spring architecture.&lt;/p&gt; &lt;p&gt;Spring Security focuses on two main points.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Authentication : Verify/Identify the requester’s/user’s idenity.&lt;/li&gt; &lt;li&gt;Authorization: Allow/block resource access based on requester/user’s access level.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.&lt;/p&gt; &lt;h3 id=&quot;spring-xml-based-configuration&quot;&gt;Spring XML based Configuration.&lt;/h3&gt; &lt;h2 id=&quot;pom-needs-following-depedencies&quot;&gt;POM needs following depedencies.&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Security-Simple/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Security-Simple/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring MVC Intro.</title>
+        <description>&lt;p&gt;Spring has many modules to make cut short project devlopment lifecycle. One of the most commonaly used module is Spring MVC. There have many differnt versions of Spring MVC. We are going to discuss about the most recent ones.&lt;/p&gt; &lt;h2 id=&quot;what-is-mvc&quot;&gt;What is MVC.&lt;/h2&gt; &lt;p&gt;MVS stands for model, view and controller. It is a design pattern mainly for web based projects. &lt;img src=&quot;/assets/2019-05-17-Spring MVC Intro-1.JPG&quot; alt=&quot;smiley&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Model stands for data (java data objects/ beans)&lt;/li&gt; &lt;li&gt;View is display to the user (It usage model to show dynamic data)&lt;/li&gt; &lt;li&gt;Controller takes request and update data/model and redirects to view.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Spring...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-MVC-Intro/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-MVC-Intro/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring Events and Listners.</title>
+        <description>&lt;p&gt;Spring has inbuilt support for publishing and listing events. In layman term if you want to understand what is event and listenr is then, you can thik as somebody shouts your name and said hi and you listned to it and you want to give a reply or not it’s upto you. Here you become a listner listneing on your name event.&lt;/p&gt; &lt;p&gt;Spring provides following interfaces and equivalent annotations which you can implement to make event and listern classes.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;ApplicationEvent or //simply nothing any object can be published from Spring 4.2+&lt;/li&gt; &lt;li&gt;ApplicationEventPublisher&lt;/li&gt; &lt;li&gt;ApplicationListner or @EventListener&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There three parties...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Events-and-Listners/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Events-and-Listners/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring Java Based Configuration.</title>
+        <description>&lt;p&gt;Spring provides two types of configuration, XML based which came in market first and then Java based. Since we already know what are the basics behind Spring configuration, anything and everything is bean. So how does spring supports that.&lt;/p&gt; &lt;p&gt;Let’s see some code first.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeServiceImpl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Java-Based-Configuration/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Java-Based-Configuration/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring Autowire.</title>
+        <description>&lt;p&gt;Spring container has capbility of automatically injecting dependencies while intiating bean. There are 5 different modes.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;No Autowire - XML Based Default&lt;/li&gt; &lt;li&gt;Autowire by Type - Java Based Default&lt;/li&gt; &lt;li&gt;Autowire by Name&lt;/li&gt; &lt;li&gt;Autowire by Constructor&lt;/li&gt; &lt;li&gt;Autodetect - Deprecated&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can turn on autowire feature by using following code in your XML. With this you can start using @Autowire annotation in your Java file.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;context:annotation-config&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Or --&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.websystique.spring.domain.Application&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autowire=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;byName&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Application class has...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Autowire/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Autowire/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring Bean lifecycle.</title>
+        <description>&lt;p&gt;As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean intialization process throgh differenct ways .&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Java supported @PostConstruct and @PreDestroy annotations.&lt;/li&gt; &lt;li&gt;Implement BeanPostProcessor.&lt;/li&gt; &lt;li&gt;Mutliple different interfaces and overriding there methods.&lt;/li&gt; &lt;li&gt;init() and destroy() Or @Bean(initMethod=”init”,destroyMethod=”destroy”)&lt;/li&gt; &lt;li&gt;Spring evnt and listners&lt;/li&gt; &lt;li&gt;Spring Boot Runners&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Here is rough idea behind method that will be called.&lt;/p&gt; &lt;h2 id=&quot;bean-intialize&quot;&gt;Bean Intialize&lt;/h2&gt; &lt;p&gt;&lt;img src=&quot;/assets/2019-05-12-Spring Bean life cycle-1.JPG&quot; alt=&quot;smiley&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;bean-destory&quot;&gt;Bean Destory&lt;/h2&gt; &lt;p&gt;&lt;img src=&quot;/assets/2019-05-12-Spring Bean life cycle-2.JPG&quot; alt=&quot;smiley&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;java-supported-postconstruct-and-predestroy&quot;&gt;Java supported @PostConstruct and @PreDestroy&lt;/h2&gt; &lt;p&gt;This is the very simple one, you just...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Bean-life-cycle/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Bean-life-cycle/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring Containers.</title>
+        <description>&lt;p&gt;Spring IoC container is heart of the spring framework. It is container to hold the spring objects and maintaince the spring objects lifecycle.&lt;/p&gt; &lt;p&gt;Spring provide two different type if containers.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bean Factory Container&lt;/li&gt; &lt;li&gt;ApplicationContext Container&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;beanfactory-container&quot;&gt;BeanFactory Container&lt;/h1&gt; &lt;p&gt;Here is how to create a bean and use it in java class.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;beans.xml&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeanFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XmlBeanFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-IoC/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-IoC/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring IoC and DI.</title>
+        <description>&lt;p&gt;Normally objects are intialized and bound in code itself. Inversion of control is a approach to bind object at runtime using a binder program.&lt;/p&gt; &lt;p&gt;IoC is design patter to give control to components, while it usage Dependecy Injection DI to achieve that. DI is helps us giving framework to bind the object at runtime. Example of IoC are,&lt;/p&gt; &lt;ul&gt; &lt;li&gt;DI&lt;/li&gt; &lt;li&gt;Factory pattern&lt;/li&gt; &lt;li&gt;Service locator framework&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;bean-creation-in-spring-xml&quot;&gt;Bean creation in Spring XML&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Constuctor&lt;/li&gt; &lt;/ul&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;someBean&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;ul&gt; &lt;li&gt;Static Factory method&lt;/li&gt; &lt;/ul&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;someBean&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;factory-method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;getSingeltonObject&quot;&lt;/span&gt;&lt;span...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-IoC-and-DI/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-IoC-and-DI/</guid>
+        
         
       </item>
     

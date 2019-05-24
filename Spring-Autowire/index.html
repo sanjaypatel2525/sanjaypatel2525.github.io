@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Java 8 double colon operator</title>
+    <title>Spring Autowire.</title>
     <meta name="description" content="A blog about lorem ipsum dolor sit amet">
 
     <!-- Google Authorship Markup -->
@@ -13,15 +13,15 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@">
-    <meta name="twitter:title" content="Java 8 double colon operator">
+    <meta name="twitter:title" content="Spring Autowire.">
     <meta name="twitter:description" content="A blog about lorem ipsum dolor sit amet">
     
     <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/java-8-double-colon-operator/">
-    <meta property="og:title" content="Java 8 double colon operator">
+    <meta property="og:url" content="https://abyte.stream/Spring-Autowire/">
+    <meta property="og:title" content="Spring Autowire.">
     
     <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
     
@@ -29,7 +29,7 @@
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="Java 8 double colon operator"/>
+    <meta itemprop="name" content="Spring Autowire."/>
     <meta itemprop="description" content="A blog about lorem ipsum dolor sit amet">
     <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
 
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/java-8-double-colon-operator.html">
+        <link rel="amphtml" href="https://abyte.stream/amp/Spring Autowire.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,7 +61,7 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/java-8-double-colon-operator/">
+    <link rel="canonical" href="https://abyte.stream/Spring-Autowire/">
     <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
@@ -122,9 +122,9 @@
 <header class="header-post" role="banner">
      <div class="content">
         
-            <time itemprop="datePublished" datetime="2018-09-15T22:43:51-04:00" class="date">15 Sep 2018</time>
+            <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018</time>
         
-        <h1 class="post-title" itemprop="name">Java 8 double colon operator</h1>
+        <h1 class="post-title" itemprop="name">Spring Autowire.</h1>
         <p itemprop="description" class="subtitle"></p>
     </div>
 </header>
@@ -144,105 +144,64 @@
 </script>
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <h2 id="lambda-for-method-reference-or-java-double-colon-operator">Lambda for Method reference Or Java Double colon operator</h2>
-<p>What is the Java 8 double colon operator ? You must have seen some shortcode like,</p>
+                <p>Spring container has capbility of automatically injecting dependencies while intiating bean. There are 5 different modes.</p>
+<ul>
+  <li>No Autowire - XML Based Default</li>
+  <li>Autowire by Type - Java Based Default</li>
+  <li>Autowire by Name</li>
+  <li>Autowire by Constructor</li>
+  <li>Autodetect - Deprecated</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span></code></pre></figure>
+<p>You can turn on autowire feature by using following code in your XML. With this you can start using @Autowire annotation in your Java file.</p>
 
-<p>In order to understand better, you must know about functional interface. Please check blog <a href="https://abyte.stream/2018/09/10/java-lambda-and-procedural-programming">Java lambda and functional programming.</a>
-Java 8  method (functional interface) are just like objects, They can be passed as parameters and can be returned from another method. So why not assign Java methods to a new another variable.  Something like javascript.</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;context:annotation-config</span> <span class="nt">/&gt;</span>
+<span class="c">&lt;!-- Or --&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">class =</span><span class="s">"org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"</span><span class="nt">/&gt;</span>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">var</span> <span class="n">squareFunc1</span> <span class="o">=</span> <span class="n">function</span><span class="o">(</span><span class="kt">var</span> <span class="n">x</span><span class="o">){</span>
-<span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">;</span>
-<span class="o">}</span>
-<span class="kt">var</span> <span class="n">squareFunc2</span> <span class="o">=</span> <span class="n">squareFunc1</span> <span class="o">;</span></code></pre></figure>
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"application"</span> <span class="na">class=</span><span class="s">"com.websystique.spring.domain.Application"</span> <span class="na">autowire=</span><span class="s">"byName"</span><span class="nt">/&gt;</span> 
+ <span class="c">&lt;!-- Application class has a applicationUser property and it will be autowired by name as there is one applicationUser Object is defined below --&gt;</span>
 
-<p>Here is how we can do the same in Java.</p>
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"applicationUser"</span> <span class="na">class=</span><span class="s">"com.websystique.spring.domain.ApplicationUser"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">value=</span><span class="s">"superUser"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/bean&gt;</span>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Utility</span><span class="o">{</span>
- <span class="kt">int</span> <span class="nf">biggerNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span><span class="kt">int</span> <span class="n">y</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="n">Utility</span> <span class="n">utility</span> <span class="o">=</span> <span class="nl">Math:</span><span class="o">:</span><span class="n">max</span><span class="o">;</span> <span class="c1">//Assign method defination to antoher signature matching method.</span>
+<span class="c">&lt;!-- Second object ApplicationUser--&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"applicationUser2"</span> <span class="na">class=</span><span class="s">"com.websystique.spring.domain.ApplicationUser"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">value=</span><span class="s">"superUser"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/bean&gt;</span></code></pre></figure>
 
-<span class="n">utility</span><span class="o">.</span><span class="na">biggerNumber</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">8</span><span class="o">)</span> <span class="c1">// returns 8</span></code></pre></figure>
+<p>You can autowire class properties directly even if they are private, you can autowire fields by constructor paramters or setters parameter. What if you have two ApplicationUser object in container which one application object will use, In XML based you can just give objectname but in Java class you will have to use  @Qualifier(“applicationUser2”) to identify which one to pick.</p>
 
-<p>So above you can see, We have created an interface with only one abstract method having signature same as the signature of Math.max method. Later we have assigned the definition of Math.max to Utility. Which mean the definition is assigned is to Utility .biggerNumber. Now we can call the method as shown in the last line.
-There are different ways to where we can use double operator lambda operator</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Autowired</span>
+<span class="nd">@Qualifier</span> <span class="o">(</span><span class="s">"applicationUser2"</span><span class="o">)</span>
+<span class="kd">private</span> <span class="n">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>
 
-<h3 id="static-method-reference">Static method reference</h3>
-<p>Assign static method to a matching functional interface. as shown in line 9</p>
+<p>What if container doesn’t find the matching object? It will throw error, you can suppress this by using @Autowired (required=false)</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">StringSearch</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">search</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">find</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">){</span>
-        <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="n">s2</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-<span class="n">StringSearch</span> <span class="n">search</span> <span class="o">=</span> <span class="nl">MyClass:</span><span class="o">:</span><span class="n">find</span><span class="o">;</span> <span class="c1">// Line 9.</span></code></pre></figure>
-
-<h3 id="parameter-method-reference">Parameter method reference</h3>
-<p>Here functional interface with two parameters gets the definition from a method having only one parameter. Stange !!.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">StringSearch</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">search</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">);</span>
-<span class="o">}</span>
-
-<span class="n">str1</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="c1">// line 4</span>
-
-<span class="n">StringSearch</span> <span class="n">search</span><span class="o">=</span> <span class="nl">String:</span><span class="o">:</span><span class="n">indexOf</span><span class="o">;</span></code></pre></figure>
-
-<p>Not so strange, The object type on which method is called and method parameters are matched to the functional interface. In this StringSearch.search take two param and params are matched to str1 and str2 from line 4.
-Instance method reference<br />
-This one is the same as the static method reference.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">StringSearch</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">search</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">find</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">){</span>
-        <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="n">s2</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-<span class="n">MyClass</span> <span class="n">myClass</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyClass</span><span class="o">();</span>
-<span class="n">StringSearch</span> <span class="n">search</span> <span class="o">=</span> <span class="nl">myClass:</span><span class="o">:</span><span class="n">find</span><span class="o">;</span> <span class="c1">// Line 9.</span></code></pre></figure>
-
-<h3 id="constructor-reference">Constructor reference.</h3>
-<p>This is the one, It can be very handy in factory patterns.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">StringFactory</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">create</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">val</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="n">StringFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="nl">String:</span><span class="o">:</span><span class="k">new</span><span class="o">;</span></code></pre></figure>
-
-<p>These were the few examples of how we can use Java lambda to reduce code length and make it more readable. Since these expressions represent function declaration hence these Java 8 double colon operator can be used in place of Java 8 arrow function. For example.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Utility</span><span class="err"> </span><span class="n">utility</span><span class="err"> </span><span class="o">=</span> <span class="nl">Math:</span><span class="o">:</span><span class="n">max</span>
-<span class="n">Or</span> 
-<span class="n">Utility</span><span class="err"> </span><span class="n">utility</span><span class="err"> </span><span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">)</span> <span class="o">-&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="k">return</span> <span class="n">x</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">y</span> <span class="o">?</span> <span class="nl">x:</span> <span class="n">y</span><span class="o">;</span></code></pre></figure>
-
-<p> </p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Autowired</span><span class="o">(</span><span class="n">required</span><span class="o">=</span><span class="kc">false</span><span class="o">)</span>
+<span class="nd">@Qualifier</span> <span class="o">(</span><span class="s">"applicationUser2"</span><span class="o">)</span>
+<span class="kd">private</span> <span class="n">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/java-8-double-colon-operator/%20via%20&#64;&hashtags=Java,Java8,Lambda,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Autowire/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/java-8-double-colon-operator/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Autowire/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/java-8-double-colon-operator/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Autowire/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/java-8-double-colon-operator/"></div>
+                <div class="fb-comments" data-href="https://abyte.stream/Spring-Autowire/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

@@ -1,0 +1,283 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Events and Listners.</title>
+    <link rel="canonical" href="https://abyte.stream/Spring-Events-and-Listners/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Spring Events and Listners.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>Spring has inbuilt support for publishing and listing events. 
+In layman term if you want to understand what is event and listenr is then, 
+you can thik as somebody shouts your name and said hi and you listned to it and 
+you want to give a reply or not it’s upto you. Here you become a listner listneing on your name event.</p>
+
+<p>Spring provides following interfaces and equivalent annotations which you can implement to make event and listern classes.</p>
+<ul>
+  <li>ApplicationEvent or //simply nothing any object can be published from Spring 4.2+</li>
+  <li>ApplicationEventPublisher</li>
+  <li>ApplicationListner or @EventListener</li>
+</ul>
+
+<p>There three parties classes in Event and listern mechanism. SomeEvent, SomeEventListner, SomeEventData</p>
+
+<h3 id="old-way">Old way</h3>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">SomeEventData</span><span class="o">{</span>
+    <span class="o">...</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">data</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">dataLength</span><span class="o">;</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">SomeEvent</span> <span class="kd">implements</span> <span class="n">ApplicationEvent</span><span class="o">{</span>
+    <span class="kd">private</span> <span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">SomeEventData</span><span class="o">(</span><span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span> <span class="o">=</span> <span class="n">someEventData</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">SomeEventData</span> <span class="nf">getSomeEventData</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">SomeEventListner</span> <span class="kd">implements</span> <span class="n">ApplicationListner</span><span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onApplicationEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
+    <span class="nd">@Autowire</span>
+    <span class="n">ApplicationEventPublisher</span> <span class="n">applicationEventPublisher</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+        <span class="o">...</span>
+        <span class="n">applicationEventPublisher</span><span class="o">..</span><span class="na">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEventData</span><span class="o">()));</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="new-way">new way</h3>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">SomeEventData</span><span class="o">{</span>
+    <span class="o">...</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">data</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">dataLength</span><span class="o">;</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+<span class="c1">// No need to implement ApplicationEvent interface</span>
+<span class="kd">class</span> <span class="nc">SomeEvent</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">SomeEventData</span><span class="o">(</span><span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span> <span class="o">=</span> <span class="n">someEventData</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">SomeEventData</span> <span class="nf">getSomeEventData</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// No need implement   ApplicationListner</span>
+<span class="kd">class</span> <span class="nc">SomeEventListner</span><span class="o">{</span>
+    <span class="nd">@EventListener</span>   <span class="c1">//1</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="c1">// or even publish a new event  --2</span>
+    <span class="nd">@EventListener</span>
+    <span class="kd">public</span> <span class="n">SomeOtherEvent</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
+        <span class="k">return</span> <span class="nf">SomeOtherEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeOtherEventDate</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Execute handleEvent in non blocking way  --3</span>
+    <span class="nd">@Async</span> 
+    <span class="nd">@EventListener</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Or use Spring expression language based condition  --4</span>
+    <span class="nd">@EventListener</span><span class="o">(</span><span class="n">condition</span> <span class="o">=</span> <span class="s">"#someEvent.getDataLength()&gt;10"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
+    <span class="nd">@Autowire</span>
+    <span class="n">ApplicationEventPublisher</span> <span class="n">applicationEventPublisher</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+        <span class="o">...</span>
+        <span class="n">applicationEventPublisher</span><span class="o">..</span><span class="na">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEventData</span><span class="o">()));</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listerns.
+Whenever a event is published all registered event are notified and based on matching type of Event class they are executed.</p>
+
+<p>In the new example we have some points.</p>
+<ol>
+  <li>@EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listerns.</li>
+  <li>@EventListener methods can return other event object and they will be automatically published.</li>
+  <li>@Asyn runs the method in a new thread in a nonblocking way.</li>
+  <li>Condition uses SPel with this method will be called only when the inner condition setisfies.</li>
+</ol>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

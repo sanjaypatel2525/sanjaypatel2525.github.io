@@ -1,0 +1,276 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Bean lifecycle.</title>
+    <link rel="canonical" href="https://abyte.stream/Spring-Bean-life-cycle/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Spring Bean lifecycle.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean intialization process throgh differenct ways .</p>
+
+<ul>
+  <li>Java supported @PostConstruct and @PreDestroy annotations.</li>
+  <li>Implement BeanPostProcessor.</li>
+  <li>Mutliple different interfaces and overriding there methods.</li>
+  <li>init() and destroy() Or @Bean(initMethod=”init”,destroyMethod=”destroy”)</li>
+  <li>Spring evnt and listners</li>
+  <li>Spring Boot Runners</li>
+</ul>
+
+<p>Here is rough idea behind method that will be called.</p>
+<h2 id="bean-intialize">Bean Intialize</h2>
+<p><amp-img src="/assets/2019-05-12-Spring%20Bean%20life%20cycle-1.JPG" alt="smiley" width="731" height="333" layout="responsive"><noscript><img src="/assets/2019-05-12-Spring%20Bean%20life%20cycle-1.JPG" alt="smiley" width="731" height="333"></noscript></amp-img></p>
+
+<h2 id="bean-destory">Bean Destory</h2>
+<p><amp-img src="/assets/2019-05-12-Spring%20Bean%20life%20cycle-2.JPG" alt="smiley" width="562" height="74" layout="responsive"><noscript><img src="/assets/2019-05-12-Spring%20Bean%20life%20cycle-2.JPG" alt="smiley" width="562" height="74"></noscript></amp-img></p>
+
+<h2 id="java-supported-postconstruct-and-predestroy">Java supported @PostConstruct and @PreDestroy</h2>
+<p>This is the very simple one, you just need to annotate any method inside you Bean class with these annotations and spring will take care of calling it. @PostConstruct is called once bean is intialized an ready for use. @PreDestroy is called once conatiner tries to remove the bean.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">MyClass</span><span class="o">{</span>
+
+<span class="nd">@PostConstruct</span>
+<span class="kt">void</span> <span class="nf">someMethodPostConstruct</span><span class="o">(){...}</span>
+
+<span class="nd">@PreDestroy</span>
+<span class="kt">void</span> <span class="nf">someMethodPreDestroy</span><span class="o">(){...}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="implement-beanpostprocessor">Implement BeanPostProcessor</h2>
+
+<p>BeanPostProcessor is spring interfaces which allows you to write your own implementations of org.springframework.beans.factory.config.BeanPostProcessor.BeanPostProcessor, there can be n number of BeanPostProcessor in your application and the org.springframework.core.Orderedorder is defined by getOrder method from Ordered interface.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">org.springframework.beans.BeansException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.config.BeanPostProcessor</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.core.Ordered</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomBeanPostProcessor</span> <span class="kd">implements</span> <span class="n">BeanPostProcessor</span><span class="o">,</span> <span class="n">Ordered</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">CustomBeanPostProcessor</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">order</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">CustomBeanPostProcessor</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Created CustomBeanPostProcessor instance"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">postProcessBeforeInitialization</span><span class="o">(</span><span class="n">Object</span> <span class="n">bean</span><span class="o">,</span> <span class="n">String</span> <span class="n">beanName</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">BeansException</span> <span class="o">{</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"postProcessBeforeInitialization method invoked"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">bean</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">postProcessAfterInitialization</span><span class="o">(</span><span class="n">Object</span> <span class="n">bean</span><span class="o">,</span> <span class="n">String</span> <span class="n">beanName</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">BeansException</span> <span class="o">{</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"postProcessAfterInitialization method invoked"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">bean</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="o">(</span><span class="kt">int</span> <span class="n">order</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">order</span> <span class="o">=</span> <span class="n">order</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getOrder</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">order</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="mutliple-different-interfaces-and-overriding-there-methods">Mutliple different interfaces and overriding there methods.</h2>
+<p>There are many differnt interface *Aware interfaces and two InitializingBean  DisposableBean interfaces. They provide some methods which has special role spring. Each Aware interface are called after some specific events. We will not discuss this in detals since there are many. It can be covered in another topic.</p>
+
+<h2 id="init-and-destroy-or-beaninitmethodinitdestroymethoddestroy">init() and destroy() Or @Bean(initMethod=”init”,destroyMethod=”destroy”)</h2>
+<p>init() and destroy()are part of Spring XML based configuration and @Bean(initMethod=”init”,destroyMethod=”destroy”)are part of Spring annotation based configuration, but they both do the same thing. Here is how to use them.
+XML Based.</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"customerService"</span> <span class="na">class=</span><span class="s">"com.somepackage.CustomerService"</span> <span class="na">init-method=</span><span class="s">"init"</span> <span class="na">destroy-method=</span><span class="s">"destroy"</span><span class="nt">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Annotation</span> <span class="n">Based</span>
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppConfig</span> <span class="o">{</span>
+   <span class="nd">@Bean</span><span class="o">(</span><span class="n">initMethod</span><span class="o">=</span><span class="s">"init"</span><span class="o">,</span><span class="n">destroyMethod</span><span class="o">=</span><span class="s">"destroy"</span><span class="o">)</span>
+   <span class="kd">public</span> <span class="n">MyCustomClass</span> <span class="nf">getCustomClassBean</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">MyCustomClass</span><span class="o">();</span> <span class="c1">// This bean will have init and destroy method in it.</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="spring-event-and--listners">Spring event and  Listners</h2>
+<p>Spring emits many application events and you register listerns to them, to do that you just need implement ApplicationListener specific type of event such as below example. Here once ContextRefreshedEvent is raised by spring this listner will be called and intern it will call contextInit method of MyBean.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContextRefreshListener</span> <span class="kd">implements</span> <span class="n">ApplicationListener</span><span class="o">&lt;</span><span class="n">ContextRefreshedEvent</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onApplicationEvent</span><span class="o">(</span><span class="n">ContextRefreshedEvent</span> <span class="n">contextRefreshedEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">contextRefreshedEvent</span><span class="o">.</span><span class="na">getApplicationContext</span><span class="o">().</span><span class="na">getBean</span><span class="o">(</span><span class="n">MyBean</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">contextInit</span><span class="o">();</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>  </code></pre></figure>
+
+<h2 id="spring-boot-runners">Spring Boot Runners</h2>
+<p>Spring comes with two Runner interfaces CommandLineRunner and ApplicationRunner and they are called after application is intialized.  Here is an example.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
+<span class="kd">class</span> <span class="nc">Configuration</span><span class="o">{</span>
+  <span class="o">...</span>
+  <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">CommandLineRunner</span> <span class="nf">getRunner</span><span class="o">(</span><span class="n">ApplicationContext</span> <span class="n">ctx</span><span class="o">){</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">args</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="n">SomeClass</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">runnerInit</span><span class="o">();</span>
+        <span class="o">};</span>
+    <span class="o">}</span>
+  <span class="o">...</span>
+<span class="o">}</span></code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>
