@@ -46,9 +46,10 @@ links:
 exclude: ['package.json', 'src', 'node_modules']
 
 plugins:
-  - jekyll-admin
+#  - jekyll-admin
   - amp-jekyll
   - jekyll-redirect-from
 
 ampdir: /amp
+randomImage: https://picsum.photos/id/
 include: [.nojekyll, CNAME]

@@ -1,7 +1,7 @@
 ---
 title: Websphere Commerce build with Git
 layout: post
-date: '2018-12-11 21:16:05 -0500'
+date: '2017-12-11 21:16:05 -0500'
 type: post
 published: true
 status: publish

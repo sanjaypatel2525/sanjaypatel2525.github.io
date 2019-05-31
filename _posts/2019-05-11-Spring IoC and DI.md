@@ -9,7 +9,7 @@ password: ''
 status: publish
 categories: []
 tags: []
-cardImage: Untitled.jpg
+randomImage: '3'
 meta:
   _edit_last: '1'
 author:
