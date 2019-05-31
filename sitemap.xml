@@ -74,6 +74,14 @@
         </url>
     
         <url>
+            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
+        </url>
+    
+        <url>
             <loc>https://abyte.stream/2018/02/10/issue-with-cached-static-content/</loc>
         </url>
     
@@ -202,15 +210,11 @@
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/</loc>
-        </url>
-    
-        <url>
-            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
-        </url>
-    
-        <url>
             <loc>https://abyte.stream/redirects.json</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/websphere-commerce-build-with-git</loc>
         </url>
     
         <url>
@@ -310,12 +314,12 @@
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/websphere-commerce-build-with-git</loc>
+            <loc>https://abyte.stream/amp/Spring Security Architecture</loc>
         </url>
     
     
         <url>
-            <loc>https://abyte.stream/websphere-commerce-build-with-git/</loc>
+            <loc>https://abyte.stream/Spring-Security-Architecture/</loc>
         </url>
   
         <url>
@@ -412,6 +416,10 @@
   
         <url>
             <loc>https://abyte.stream/issue-with-cached-static-content/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/websphere-commerce-build-with-git/</loc>
         </url>
   
 </urlset>

@@ -5,25 +5,23 @@
     <description>A blog about lorem ipsum dolor sit amet</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 May 2019 12:28:48 -0400</pubDate>
-    <lastBuildDate>Fri, 24 May 2019 12:28:48 -0400</lastBuildDate>
+    <pubDate>Fri, 31 May 2019 15:21:42 -0400</pubDate>
+    <lastBuildDate>Fri, 31 May 2019 15:21:42 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Websphere Commerce build with Git</title>
-        <description>&lt;p&gt;Websphere Commerce (WCS) is e-Commerce software platform. It supports multiple business models to support a wide range of customer requirements. WCS did not have Git support till version 8.  It has introduced Git support from version 9 onwards. Git is a free open source distributed source control management software. This blog we are going to discuss Git configuration with WCS build.&lt;/p&gt; &lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite:&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Git needs to be installed on the build system&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;copy2-the-template-file-from-wcbd-template-to-wcbdfolder-and-update-the-names-as-given-below&quot;&gt;Copy2 the template file from wcbd template to wcbd  folder and update the names as given below.&lt;/h3&gt; &lt;p&gt;&lt;img src=&quot;/assets/img_5c1021100f5c3.png&quot; alt=&quot;gras&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;extract-git.private.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.xml&lt;/li&gt; &lt;/ul&gt;...</description>
-        <pubDate>Tue, 11 Dec 2018 21:16:05 -0500</pubDate>
-        <link>https://abyte.stream/websphere-commerce-build-with-git/</link>
-        <guid isPermaLink="true">https://abyte.stream/websphere-commerce-build-with-git/</guid>
+        <title>Spring Security Architecture.</title>
+        <description>&lt;p&gt;In case you are looking for basic spring security understaing refer to the previous blog of this series &lt;a href=&quot;/Spring-MVC-Intro/&quot; title=&quot;Spring Security basic&quot;&gt;Spring Security basic&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;The blog we will discussing breifly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. &lt;img src=&quot;/assets/2019-05-31-Spring Security Architecture-1.png&quot; alt=&quot;gras&quot; /&gt;&lt;br /&gt; Here are few pointer from above images.&lt;/p&gt;...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Security-Architecture/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Security-Architecture/</guid>
         
-        
-        <category>Websphere Commerce</category>
         
       </item>
     
       <item>
         <title>Spring Security Simple.</title>
-        <description>&lt;p&gt;This blog we are going to discuss a easiest approach to implement spring security, Spring Security Details is will more into customization points wrt to standard spring architecture.&lt;/p&gt; &lt;p&gt;Spring Security focuses on two main points.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Authentication : Verify/Identify the requester’s/user’s idenity.&lt;/li&gt; &lt;li&gt;Authorization: Allow/block resource access based on requester/user’s access level.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.&lt;/p&gt; &lt;h3 id=&quot;spring-xml-based-configuration&quot;&gt;Spring XML based Configuration.&lt;/h3&gt; &lt;h2 id=&quot;pom-needs-following-depedencies&quot;&gt;POM needs following depedencies.&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;...</description>
+        <description>&lt;p&gt;This blog we are going to discuss a easiest approach to implement spring security, Spring Security Details is will more into customization points wrt to standard spring architecture.&lt;/p&gt; &lt;p&gt;Spring Security focuses on two main points.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Authentication : Verify/Identify the requester’s/user’s idenity.&lt;/li&gt; &lt;li&gt;Authorization: Allow/block resource access based on requester/user’s access level.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.&lt;/p&gt; &lt;h2 id=&quot;spring-xml-based-configuration&quot;&gt;Spring XML based Configuration.&lt;/h2&gt; &lt;h3 id=&quot;pom-needs-following-depedencies&quot;&gt;POM needs following depedencies.&lt;/h3&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/Spring-Security-Simple/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Security-Simple/</guid>
@@ -291,6 +289,18 @@
         <pubDate>Sat, 10 Feb 2018 17:08:05 -0500</pubDate>
         <link>https://abyte.stream/issue-with-cached-static-content/</link>
         <guid isPermaLink="true">https://abyte.stream/issue-with-cached-static-content/</guid>
+        
+        
+        <category>Websphere Commerce</category>
+        
+      </item>
+    
+      <item>
+        <title>Websphere Commerce build with Git</title>
+        <description>&lt;p&gt;Websphere Commerce (WCS) is e-Commerce software platform. It supports multiple business models to support a wide range of customer requirements. WCS did not have Git support till version 8.  It has introduced Git support from version 9 onwards. Git is a free open source distributed source control management software. This blog we are going to discuss Git configuration with WCS build.&lt;/p&gt; &lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite:&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Git needs to be installed on the build system&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;copy2-the-template-file-from-wcbd-template-to-wcbdfolder-and-update-the-names-as-given-below&quot;&gt;Copy2 the template file from wcbd template to wcbd  folder and update the names as given below.&lt;/h3&gt; &lt;p&gt;&lt;img src=&quot;/assets/img_5c1021100f5c3.png&quot; alt=&quot;gras&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;extract-git.private.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.xml&lt;/li&gt; &lt;/ul&gt;...</description>
+        <pubDate>Mon, 11 Dec 2017 21:16:05 -0500</pubDate>
+        <link>https://abyte.stream/websphere-commerce-build-with-git/</link>
+        <guid isPermaLink="true">https://abyte.stream/websphere-commerce-build-with-git/</guid>
         
         
         <category>Websphere Commerce</category>

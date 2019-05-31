@@ -1,10 +1,10 @@
 [
   
     {
-      "title"    : "Websphere Commerce build with Git",
+      "title"    : "Spring Security Architecture.",
       "tags"     : "",
       "categories"     : "",
-      "url"      : "/websphere-commerce-build-with-git/",
+      "url"      : "/Spring-Security-Architecture/",
       "date"     : "11 Dec 2018"
     } ,
   
@@ -198,6 +198,14 @@
       "categories"     : "",
       "url"      : "/issue-with-cached-static-content/",
       "date"     : "10 Feb 2018"
+    } ,
+  
+    {
+      "title"    : "Websphere Commerce build with Git",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/websphere-commerce-build-with-git/",
+      "date"     : "11 Dec 2017"
     } 
   
 ]

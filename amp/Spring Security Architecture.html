@@ -1,0 +1,207 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Security Architecture.</title>
+    <link rel="canonical" href="https://abyte.stream/Spring-Security-Architecture/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Spring Security Architecture.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>In case you are looking for basic spring security understaing refer to the previous blog of this series <a href="/Spring-MVC-Intro/" title="Spring Security basic">Spring Security basic</a>.</p>
+
+<p>The blog we will discussing breifly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. 
+<amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" width="691" height="329" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" width="691" height="329"></noscript></amp-img><br>
+Here are few pointer from above images.</p>
+<ul>
+  <li>AuthenticationManager is an interface with only one method authenticate.</li>
+  <li>ProviderManager is most used implementaion of AuthenticationManager.</li>
+  <li>ProviderManager can have multiple AuthenticationProvider, You can configure different AuthenticationProvider for different authentication mechanism. Each of them will be called in chain.</li>
+</ul>
+
+<p><amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-2.png" alt="gras" width="1190" height="839" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-2.png" alt="gras" width="1190" height="839"></noscript></amp-img>
+Source: https://spring.io/guides/topicals/spring-security-architecture<br>
+Here are few pointer from above images</p>
+<ul>
+  <li>There can be n number of ProviderManager in one application, for different URL path you can assign different provider managers such ‘apiv1/<em>, apiv2/</em>’.</li>
+</ul>
+
+<h2 id="authenticationmanagerbuilder">AuthenticationManagerBuilder</h2>
+<p>AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right starategy (inmemory, jdbc, datasource etc).</p>
+
+<h2 id="authorizationaccess-control">Authorization/Access control</h2>
+<p>There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implmentation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
+<amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" width="757" height="267" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" width="757" height="267"></noscript></amp-img><br>
+For example, AffirmativeBased implmentation run all the AccessDecisionVoter and if any of them throws exception it denies the access othewise access is granted.</p>
+
+<h3 id="acess-user-object">Acess User object.</h3>
+<p>In case you need to access the User the logged in user object.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"> 
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/foo"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">foo</span><span class="o">(</span><span class="nd">@AuthenticationPrincipal</span> <span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
+  <span class="o">...</span> <span class="c1">// do stuff with user</span>
+<span class="o">}</span>
+<span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/foo"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">foo</span><span class="o">(</span><span class="n">Principal</span> <span class="n">principal</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">Authentication</span> <span class="n">authentication</span> <span class="o">=</span> <span class="o">(</span><span class="n">Authentication</span><span class="o">)</span> <span class="n">principal</span><span class="o">;</span>
+  <span class="n">User</span> <span class="o">=</span> <span class="o">(</span><span class="n">User</span><span class="o">)</span> <span class="n">authentication</span><span class="o">.</span><span class="na">getPrincipal</span><span class="o">();</span>
+  <span class="o">...</span> <span class="c1">// do stuff with user</span>
+<span class="o">}</span></code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>
