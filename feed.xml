@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sanjay Patel - Blogs</title>
-    <description>A blog about lorem ipsum dolor sit amet</description>
+    <description>Technical blogs.</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Jun 2019 14:32:37 -0400</pubDate>
-    <lastBuildDate>Tue, 11 Jun 2019 14:32:37 -0400</lastBuildDate>
+    <pubDate>Tue, 11 Jun 2019 14:38:59 -0400</pubDate>
+    <lastBuildDate>Tue, 11 Jun 2019 14:38:59 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
