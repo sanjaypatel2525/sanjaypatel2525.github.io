@@ -5,9 +5,39 @@
     <description>A blog about lorem ipsum dolor sit amet</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Jun 2019 16:00:08 -0400</pubDate>
-    <lastBuildDate>Mon, 03 Jun 2019 16:00:08 -0400</lastBuildDate>
+    <pubDate>Tue, 11 Jun 2019 14:32:37 -0400</pubDate>
+    <lastBuildDate>Tue, 11 Jun 2019 14:32:37 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Spring JDBC in Short</title>
+        <description>&lt;p&gt;First of what all flavours you have from Spring to connect and query DB,&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Spring JDBC&lt;/li&gt; &lt;li&gt;Spring Data JDBC&lt;/li&gt; &lt;li&gt;Spring Data JPA&lt;br /&gt; Spring Data JDBC use Spring JDBC and Spring Data JPA(Relational DB) use Spring Data JDBC internally. They all different libraries provided by Spring. &lt;strong&gt;Spring JDBC&lt;/strong&gt; provides you helper classes and utilites to query database and transform it to java object or other way around. &lt;strong&gt;Spring Data JDBC&lt;/strong&gt; is another abstraction over Spring JDBC but with CrudRepostiroy faciltiy, with this you don’t need to write crud query for your entieis. &lt;strong&gt;Spring Data JPA&lt;/strong&gt; is another abstraction over...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-JDBC-in-Short/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-JDBC-in-Short/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring Data in Short</title>
+        <description>&lt;p&gt;There are many different data storage system in the market currently and in order to connect and query differnt system you might have to use differnt query syntax. Spring Data is one of the advance module and has many submodule to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.&lt;/p&gt; &lt;p&gt;For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries resectively. &lt;br...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Data-in-Short/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Data-in-Short/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hibernate in Short</title>
+        <description>&lt;p&gt;Hibernate, hibernate-jpa, Spring ORM, Spring data JPA and many more. All this seems to be confusing but they all are just jars which are automatically added when you add the below line you pom.xml.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-jpa&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Basically, Spring boot gives a starter project for your data acces layer which is based on ORM concept and by default usage hibernate as persistant api. This blog we are not going to discuss about how spring encapsulated hibernate under it but we are going to discuss about Hibernate basics and there...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Hibernate-in-Short/</link>
+        <guid isPermaLink="true">https://abyte.stream/Hibernate-in-Short/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Spring Security Architecture.</title>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" >
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Spring Data in Short</title>
+    <meta name="description" content="A blog about lorem ipsum dolor sit amet">
+
+    <!-- Google Authorship Markup -->
+    <link rel="author" href="https://plus.google.com/+?rel=author">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="Spring Data in Short">
+    <meta name="twitter:description" content="A blog about lorem ipsum dolor sit amet">
+    
+    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:url" content="https://abyte.stream/Spring-Data-in-Short/">
+    <meta property="og:title" content="Spring Data in Short">
+    
+    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    
+    <meta property="og:description" content="A blog about lorem ipsum dolor sit amet">
+    <meta property="og:site_name" content="Sanjay Patel - Blogs">
+
+    <!-- Social: Google+ / Schema.org  -->
+    <meta itemprop="name" content="Spring Data in Short"/>
+    <meta itemprop="description" content="A blog about lorem ipsum dolor sit amet">
+    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
+
+    <!--amp page-->
+    
+        <link rel="amphtml" href="https://abyte.stream/amp/Spring Data in Short.html">
+    
+    <!-- Windows 8 Tile Icons -->
+    <meta name="application-name" content="Sanjay Patel Blog">
+    <meta name="msapplication-TileColor" content="#0562DC">
+    <meta name="msapplication-square70x70logo" content="smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="widetile.png" />
+    <meta name="msapplication-square310x310logo" content="largetile.png" />
+    <!-- Android Lolipop Theme Color -->
+    <meta name="theme-color" content="">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://abyte.stream/Spring-Data-in-Short/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1067793-4');
+    </script>
+
+</head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-close" viewBox="0 0 805 1024"><path class="path1" d="M741.714 755.429q0 22.857-16 38.857l-77.714 77.714q-16 16-38.857 16t-38.857-16l-168-168-168 168q-16 16-38.857 16t-38.857-16l-77.714-77.714q-16-16-16-38.857t16-38.857l168-168-168-168q-16-16-16-38.857t16-38.857l77.714-77.714q16-16 38.857-16t38.857 16l168 168 168-168q16-16 38.857-16t38.857 16l77.714 77.714q16 16 16 38.857t-16 38.857l-168 168 168 168q16 16 16 38.857z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol></defs></svg>
+
+        <header class="bar-header">
+    <h1 class="logo">
+        <a href="/"></a>
+    </h1>
+</header>
+<div class="search-wrapper">
+    <div class="search-form">
+        <input type="text" class="search-field" placeholder="Search...">
+        <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
+        <ul class="search-results search-list"></ul>
+    </div>
+</div>
+
+<div id="fade" class="overlay"></div>
+<a id="slide" class="slideButton fade">
+    <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+    <svg id="close" class="icon-menu"><use xlink:href="#icon-close"></use></svg>
+</a>
+<aside id="sidebar">
+<nav id="navigation">
+  <h2>MENU</h2>
+  <ul>
+    
+      <li><a href="https://abyte.stream/">Home</a></li>
+    
+      <li><a href="https://abyte.stream/series">Series</a></li>
+    
+      <li><a href="https://abyte.stream/tags">Tags</a></li>
+    
+      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+    
+      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+    
+    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+  </ul>
+</nav>
+</aside>
+<a id="search" class="dosearch">
+    <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
+</a>
+
+<header class="header-post" role="banner">
+     <div class="content">
+        
+            <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018</time>
+        
+        <h1 class="post-title" itemprop="name">Spring Data in Short</h1>
+        <p itemprop="description" class="subtitle"></p>
+    </div>
+</header>
+        <section class="post">
+
+            <section class="share">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad Unit1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6254849299387322"
+     data-ad-slot="2070150131"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </section>
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                <p>There are many different data storage system in the market currently and in order to connect and query differnt system you might have to use differnt query syntax. Spring Data is one of the advance module and has many submodule to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.</p>
+
+<p>For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries resectively. <br />
+select * from Employee where id = 5;<br />
+db.employee.find( { _id: 5 } );<br />
+But with spring data you just need to define one method and Spring data takes care of forming internal queries.<br />
+Employee findById(int id);</p>
+
+<h2 id="configuring-repository">Configuring repository.</h2>
+<p>Add Spring data in POM configuration.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+   <span class="nt">&lt;groupId&gt;</span>org.springframework.data<span class="nt">&lt;/groupId&gt;</span>
+   <span class="nt">&lt;artifactId&gt;</span>spring-data-jpa<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h3 id="enable-reporsitory-package-scan">Enable reporsitory package scan.</h3>
+<p>Enable package scan by @EnableJpaRepositories(basePackages = “com.mycompany.repository”) or with @SpringBootApplication.</p>
+
+<h3 id="create-repository-interface">Create repository interface.</h3>
+<p>Implement any of the repository interface.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+<span class="c1">// Create Employee entity class.</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Document</span> <span class="c1">// incase of nosql DB</span>
+<span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
+  <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
+  <span class="n">String</span> <span class="n">firstname</span><span class="o">;</span>
+  <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>There are three different repostories Spring Data Supports.</p>
+<ul>
+  <li>CrudRepository</li>
+  <li>PagingAndSortingRepository</li>
+  <li>JpaRepository</li>
+</ul>
+
+<h3 id="crudrepository">CrudRepository</h3>
+<p>CrudRepository supports basic crud operation such as create, reade, update delete.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CrudRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span>
+  <span class="kd">extends</span> <span class="n">Repository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
+ 
+    <span class="o">&lt;</span><span class="n">S</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">S</span> <span class="nf">save</span><span class="o">(</span><span class="n">S</span> <span class="n">entity</span><span class="o">);</span>
+ 
+    <span class="n">T</span> <span class="nf">findOne</span><span class="o">(</span><span class="n">ID</span> <span class="n">primaryKey</span><span class="o">);</span>
+ 
+    <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">();</span>
+ 
+    <span class="n">Long</span> <span class="nf">count</span><span class="o">();</span>
+ 
+    <span class="kt">void</span> <span class="nf">delete</span><span class="o">(</span><span class="n">T</span> <span class="n">entity</span><span class="o">);</span>
+ 
+    <span class="kt">boolean</span> <span class="nf">exists</span><span class="o">(</span><span class="n">ID</span> <span class="n">primaryKey</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">//Example</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+
+<span class="o">....</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">findOne</span><span class="o">(</span><span class="n">id</span><span class="o">);</span> <span class="c1">// select * from Employee where id=:id</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span> <span class="c1">// delete from Employee where id=:employee.id</span></code></pre></figure>
+
+<h3 id="pagingandsortingrepository">PagingAndSortingRepository</h3>
+<p>PagingAndSortingRepository implments CrudRepository so you get all the perks of CrudRepository and something extra.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PagingAndSortingRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span> 
+  <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
+ 
+    <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">(</span><span class="n">Sort</span> <span class="n">sort</span><span class="o">);</span>
+ 
+    <span class="n">Page</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">(</span><span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="o">.....</span>
+<span class="c1">//Examples</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+<span class="o">......</span>
+<span class="n">Sort</span> <span class="n">sort</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sort</span><span class="o">(</span><span class="k">new</span> <span class="n">Sort</span><span class="o">.</span><span class="na">Order</span><span class="o">(</span><span class="n">Direction</span><span class="o">.</span><span class="na">DESC</span><span class="o">,</span> <span class="s">"lastName"</span><span class="o">));</span>
+<span class="n">Pageable</span> <span class="n">pageable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageRequest</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">15</span><span class="o">,</span> <span class="n">sort</span><span class="o">);</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">findByLastName</span><span class="o">(</span><span class="s">"Jack"</span><span class="o">,</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname and rownum&gt;0 and rownum&lt;15  order by lastName desc;</span></code></pre></figure>
+
+<p>PagingAndSortingRepository gives you feature to getch records in pages and sort the results.</p>
+
+<h3 id="jparepository">JpaRepository</h3>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JpaRepository</span> <span class="n">implments</span> <span class="n">PagingAndSortingRepository</span> <span class="n">and</span> <span class="n">gives</span> <span class="n">you</span> <span class="n">some</span> <span class="n">persitant</span> <span class="n">level</span> <span class="n">feature</span><span class="o">.</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span> <span class="kd">extends</span>
+  <span class="n">PagingAndSortingRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
+ 
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">();</span>
+ 
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">(</span><span class="n">Sort</span> <span class="n">sort</span><span class="o">);</span>
+ 
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">save</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">entities</span><span class="o">);</span>
+ 
+    <span class="kt">void</span> <span class="nf">flush</span><span class="o">();</span>
+ 
+    <span class="n">T</span> <span class="nf">saveAndFlush</span><span class="o">(</span><span class="n">T</span> <span class="n">entity</span><span class="o">);</span>
+ 
+    <span class="kt">void</span> <span class="nf">deleteInBatch</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">entities</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="spring-data-features">Spring Data features.</h2>
+<p>Let us see some benigits of having spring data.</p>
+<h3 id="no-dao-intercaces">No DAO intercaces.</h3>
+<p>You dont need to write your DAO interface if you can manage with basic crud features such as insert, delete, update, read etc.</p>
+<h3 id="support-custom-queries">Support custom queries.</h3>
+<p>In case you need to cocnifgure custom query which are not supported by Crud interface, then you can define your custom implmentation class where you can use custome queries.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//Examples</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepositoryCustom</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">runComplexQuery</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;,</span><span class="n">EmployeeRepositoryCustom</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeRepositoryCustomImpl</span> <span class="n">impleents</span> <span class="n">EmployeeRepositoryCustom</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">runComplexQuery</span><span class="o">(){</span>
+     <span class="o">....</span>
+     <span class="c1">// Use any kind of query generation classes or just right plain query and use jdbctemplate.</span>
+   <span class="o">};</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="query-based-on-method-name">Query based on method name.</h3>
+<p>Based on method names spring tries to create query for them, for exmaple.
+Employee findByFirstNameAndLastName(String firstname, String lastName); // where firstname=:firstname and lastnmae= : lastname
+Employee findByAgeGreaterThanOrderByFirstnameDesc(int age); // where age&gt;:age order by firstname desc</p>
+
+<h3 id="query-annotation">@Query annotation.</h3>
+<p>You can use @Query annotation to query by native sql queries or JPQL. For example.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Query</span><span class="o">(</span><span class="s">"from Employee where lastName=:lastName"</span><span class="o">)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">)</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">)</span>
+<span class="c1">//or</span>
+<span class="nd">@Query</span><span class="o">(</span><span class="s">"from Employee where lastName=?1"</span><span class="o">)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">)</span>
+<span class="c1">// Or</span>
+<span class="nd">@Query</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span><span class="s">"select * from EMPLOYEE_TABLE where lastName=:lastName"</span><span class="o">,</span> <span class="n">nativeQuery</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">)</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">)</span>
+
+<span class="c1">//insert or update queries has to be marked as @modified</span>
+ <span class="nd">@Query</span><span class="o">(</span><span class="s">"UPDATE Employee SET firstName = :firstName "</span><span class="o">)</span>
+<span class="nd">@Modifying</span>
+<span class="kt">void</span> <span class="nf">setFirstName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">)</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">);</span></code></pre></figure>
+
+            </article>
+
+            <section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Data-in-Short/%20via%20&#64;&hashtags="
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Data-in-Short/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+        <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Data-in-Short/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+        <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
+    </a>
+</section>
+            <section class="share">
+                <div class="fb-comments" data-href="https://abyte.stream/Spring-Data-in-Short/"></div>
+            </section>
+            <section class="author" itemprop="author">
+    <div class="details" itemscope itemtype="http://schema.org/Person">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="">
+        <p class="def">Author</p>
+        <h3 class="name">
+            <a itemprop="name" href="https://plus.google.com/+/posts">Sanjay Patel</a>
+        </h3>
+        <p class="desc">Developer at IBM</p>
+        <p><a itemprop="email" class="email" href="mailto:sanjaypatel2525@yahoo.com">sanjaypatel2525@yahoo.com</a></p>
+        <!--<p><a itemprop="github" class="github" href="https://github.com/">github.com/</a></p>-->
+    </div>
+</section>
+
+            <footer>
+    <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+<script src="/assets/js/main.js"></script>
+            <div id="fb-root"></div>
+        </section>
+    </body>
+    
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=207343132703435";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "facebook-jssdk"));</script>
+</html>

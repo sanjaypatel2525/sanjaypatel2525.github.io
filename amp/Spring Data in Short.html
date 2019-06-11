@@ -1,0 +1,313 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Data in Short</title>
+    <link rel="canonical" href="https://abyte.stream/Spring-Data-in-Short/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Spring Data in Short</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>There are many different data storage system in the market currently and in order to connect and query differnt system you might have to use differnt query syntax. Spring Data is one of the advance module and has many submodule to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.</p>
+
+<p>For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries resectively. <br>
+select * from Employee where id = 5;<br>
+db.employee.find( { _id: 5 } );<br>
+But with spring data you just need to define one method and Spring data takes care of forming internal queries.<br>
+Employee findById(int id);</p>
+
+<h2 id="configuring-repository">Configuring repository.</h2>
+<p>Add Spring data in POM configuration.</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+   <span class="nt">&lt;groupId&gt;</span>org.springframework.data<span class="nt">&lt;/groupId&gt;</span>
+   <span class="nt">&lt;artifactId&gt;</span>spring-data-jpa<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+<h3 id="enable-reporsitory-package-scan">Enable reporsitory package scan.</h3>
+<p>Enable package scan by @EnableJpaRepositories(basePackages = “com.mycompany.repository”) or with @SpringBootApplication.</p>
+
+<h3 id="create-repository-interface">Create repository interface.</h3>
+<p>Implement any of the repository interface.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+<span class="c1">// Create Employee entity class.</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Document</span> <span class="c1">// incase of nosql DB</span>
+<span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
+  <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
+  <span class="n">String</span> <span class="n">firstname</span><span class="o">;</span>
+  <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>There are three different repostories Spring Data Supports.</p>
+<ul>
+  <li>CrudRepository</li>
+  <li>PagingAndSortingRepository</li>
+  <li>JpaRepository</li>
+</ul>
+
+<h3 id="crudrepository">CrudRepository</h3>
+<p>CrudRepository supports basic crud operation such as create, reade, update delete.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CrudRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span>
+  <span class="kd">extends</span> <span class="n">Repository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
+ 
+    <span class="o">&lt;</span><span class="n">S</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">S</span> <span class="nf">save</span><span class="o">(</span><span class="n">S</span> <span class="n">entity</span><span class="o">);</span>
+ 
+    <span class="n">T</span> <span class="nf">findOne</span><span class="o">(</span><span class="n">ID</span> <span class="n">primaryKey</span><span class="o">);</span>
+ 
+    <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">();</span>
+ 
+    <span class="n">Long</span> <span class="nf">count</span><span class="o">();</span>
+ 
+    <span class="kt">void</span> <span class="nf">delete</span><span class="o">(</span><span class="n">T</span> <span class="n">entity</span><span class="o">);</span>
+ 
+    <span class="kt">boolean</span> <span class="nf">exists</span><span class="o">(</span><span class="n">ID</span> <span class="n">primaryKey</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">//Example</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+
+<span class="o">....</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">findOne</span><span class="o">(</span><span class="n">id</span><span class="o">);</span> <span class="c1">// select * from Employee where id=:id</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span> <span class="c1">// delete from Employee where id=:employee.id</span></code></pre></figure>
+
+<h3 id="pagingandsortingrepository">PagingAndSortingRepository</h3>
+<p>PagingAndSortingRepository implments CrudRepository so you get all the perks of CrudRepository and something extra.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PagingAndSortingRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span> 
+  <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
+ 
+    <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">(</span><span class="n">Sort</span> <span class="n">sort</span><span class="o">);</span>
+ 
+    <span class="n">Page</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">(</span><span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="o">.....</span>
+<span class="c1">//Examples</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+<span class="o">......</span>
+<span class="n">Sort</span> <span class="n">sort</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sort</span><span class="o">(</span><span class="k">new</span> <span class="n">Sort</span><span class="o">.</span><span class="na">Order</span><span class="o">(</span><span class="n">Direction</span><span class="o">.</span><span class="na">DESC</span><span class="o">,</span> <span class="s">"lastName"</span><span class="o">));</span>
+<span class="n">Pageable</span> <span class="n">pageable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageRequest</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">15</span><span class="o">,</span> <span class="n">sort</span><span class="o">);</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">findByLastName</span><span class="o">(</span><span class="s">"Jack"</span><span class="o">,</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname and rownum&gt;0 and rownum&lt;15  order by lastName desc;</span></code></pre></figure>
+<p>PagingAndSortingRepository gives you feature to getch records in pages and sort the results.</p>
+
+<h3 id="jparepository">JpaRepository</h3>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JpaRepository</span> <span class="n">implments</span> <span class="n">PagingAndSortingRepository</span> <span class="n">and</span> <span class="n">gives</span> <span class="n">you</span> <span class="n">some</span> <span class="n">persitant</span> <span class="n">level</span> <span class="n">feature</span><span class="o">.</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span> <span class="kd">extends</span>
+  <span class="n">PagingAndSortingRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
+ 
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">();</span>
+ 
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">(</span><span class="n">Sort</span> <span class="n">sort</span><span class="o">);</span>
+ 
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">save</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">entities</span><span class="o">);</span>
+ 
+    <span class="kt">void</span> <span class="nf">flush</span><span class="o">();</span>
+ 
+    <span class="n">T</span> <span class="nf">saveAndFlush</span><span class="o">(</span><span class="n">T</span> <span class="n">entity</span><span class="o">);</span>
+ 
+    <span class="kt">void</span> <span class="nf">deleteInBatch</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">entities</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="spring-data-features">Spring Data features.</h2>
+<p>Let us see some benigits of having spring data.</p>
+<h3 id="no-dao-intercaces">No DAO intercaces.</h3>
+<p>You dont need to write your DAO interface if you can manage with basic crud features such as insert, delete, update, read etc.</p>
+<h3 id="support-custom-queries">Support custom queries.</h3>
+<p>In case you need to cocnifgure custom query which are not supported by Crud interface, then you can define your custom implmentation class where you can use custome queries.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//Examples</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepositoryCustom</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">runComplexQuery</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;,</span><span class="n">EmployeeRepositoryCustom</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeRepositoryCustomImpl</span> <span class="n">impleents</span> <span class="n">EmployeeRepositoryCustom</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">runComplexQuery</span><span class="o">(){</span>
+     <span class="o">....</span>
+     <span class="c1">// Use any kind of query generation classes or just right plain query and use jdbctemplate.</span>
+   <span class="o">};</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="query-based-on-method-name">Query based on method name.</h3>
+<p>Based on method names spring tries to create query for them, for exmaple.
+Employee findByFirstNameAndLastName(String firstname, String lastName); // where firstname=:firstname and lastnmae= : lastname
+Employee findByAgeGreaterThanOrderByFirstnameDesc(int age); // where age&gt;:age order by firstname desc</p>
+
+<h3 id="query-annotation">@Query annotation.</h3>
+<p>You can use @Query annotation to query by native sql queries or JPQL. For example.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Query</span><span class="o">(</span><span class="s">"from Employee where lastName=:lastName"</span><span class="o">)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">)</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">)</span>
+<span class="c1">//or</span>
+<span class="nd">@Query</span><span class="o">(</span><span class="s">"from Employee where lastName=?1"</span><span class="o">)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">)</span>
+<span class="c1">// Or</span>
+<span class="nd">@Query</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span><span class="s">"select * from EMPLOYEE_TABLE where lastName=:lastName"</span><span class="o">,</span> <span class="n">nativeQuery</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">)</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">)</span>
+
+<span class="c1">//insert or update queries has to be marked as @modified</span>
+ <span class="nd">@Query</span><span class="o">(</span><span class="s">"UPDATE Employee SET firstName = :firstName "</span><span class="o">)</span>
+<span class="nd">@Modifying</span>
+<span class="kt">void</span> <span class="nf">setFirstName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">)</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">);</span></code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

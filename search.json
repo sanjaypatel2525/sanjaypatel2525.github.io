@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "Spring JDBC in Short",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Spring-JDBC-in-Short/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Spring Data in Short",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Spring-Data-in-Short/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Hibernate in Short",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Hibernate-in-Short/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Spring Security Architecture.",
       "tags"     : "",
       "categories"     : "",

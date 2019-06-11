@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" >
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hibernate in Short</title>
+    <meta name="description" content="A blog about lorem ipsum dolor sit amet">
+
+    <!-- Google Authorship Markup -->
+    <link rel="author" href="https://plus.google.com/+?rel=author">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="Hibernate in Short">
+    <meta name="twitter:description" content="A blog about lorem ipsum dolor sit amet">
+    
+    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:url" content="https://abyte.stream/Hibernate-in-Short/">
+    <meta property="og:title" content="Hibernate in Short">
+    
+    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    
+    <meta property="og:description" content="A blog about lorem ipsum dolor sit amet">
+    <meta property="og:site_name" content="Sanjay Patel - Blogs">
+
+    <!-- Social: Google+ / Schema.org  -->
+    <meta itemprop="name" content="Hibernate in Short"/>
+    <meta itemprop="description" content="A blog about lorem ipsum dolor sit amet">
+    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
+
+    <!--amp page-->
+    
+        <link rel="amphtml" href="https://abyte.stream/amp/Hibernate in Short.html">
+    
+    <!-- Windows 8 Tile Icons -->
+    <meta name="application-name" content="Sanjay Patel Blog">
+    <meta name="msapplication-TileColor" content="#0562DC">
+    <meta name="msapplication-square70x70logo" content="smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="widetile.png" />
+    <meta name="msapplication-square310x310logo" content="largetile.png" />
+    <!-- Android Lolipop Theme Color -->
+    <meta name="theme-color" content="">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://abyte.stream/Hibernate-in-Short/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1067793-4');
+    </script>
+
+</head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-close" viewBox="0 0 805 1024"><path class="path1" d="M741.714 755.429q0 22.857-16 38.857l-77.714 77.714q-16 16-38.857 16t-38.857-16l-168-168-168 168q-16 16-38.857 16t-38.857-16l-77.714-77.714q-16-16-16-38.857t16-38.857l168-168-168-168q-16-16-16-38.857t16-38.857l77.714-77.714q16-16 38.857-16t38.857 16l168 168 168-168q16-16 38.857-16t38.857 16l77.714 77.714q16 16 16 38.857t-16 38.857l-168 168 168 168q16 16 16 38.857z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol></defs></svg>
+
+        <header class="bar-header">
+    <h1 class="logo">
+        <a href="/"></a>
+    </h1>
+</header>
+<div class="search-wrapper">
+    <div class="search-form">
+        <input type="text" class="search-field" placeholder="Search...">
+        <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
+        <ul class="search-results search-list"></ul>
+    </div>
+</div>
+
+<div id="fade" class="overlay"></div>
+<a id="slide" class="slideButton fade">
+    <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+    <svg id="close" class="icon-menu"><use xlink:href="#icon-close"></use></svg>
+</a>
+<aside id="sidebar">
+<nav id="navigation">
+  <h2>MENU</h2>
+  <ul>
+    
+      <li><a href="https://abyte.stream/">Home</a></li>
+    
+      <li><a href="https://abyte.stream/series">Series</a></li>
+    
+      <li><a href="https://abyte.stream/tags">Tags</a></li>
+    
+      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+    
+      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+    
+    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+  </ul>
+</nav>
+</aside>
+<a id="search" class="dosearch">
+    <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
+</a>
+
+<header class="header-post" role="banner">
+     <div class="content">
+        
+            <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018</time>
+        
+        <h1 class="post-title" itemprop="name">Hibernate in Short</h1>
+        <p itemprop="description" class="subtitle"></p>
+    </div>
+</header>
+        <section class="post">
+
+            <section class="share">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad Unit1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6254849299387322"
+     data-ad-slot="2070150131"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </section>
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                <p>Hibernate, hibernate-jpa, Spring ORM, Spring data JPA and many more. All this seems to be confusing but they all are just jars which are  automatically added when you add the below line you pom.xml.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-jpa<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span> </code></pre></figure>
+
+<p>Basically, Spring boot gives a starter project for your data acces layer which is based on ORM concept and by default usage hibernate as persistant api. This blog we are not going to discuss about how spring encapsulated hibernate under it but we are going to discuss about Hibernate basics and there Spring alternative way of writing code. 
+<img src="/assets/2019-06-04-Hibernate in Short.png" alt="gras" /></p>
+<h3 id="hibernate-in-action-with-jpa">Hibernate in action with JPA.</h3>
+<ul>
+  <li>Create Entity class</li>
+  <li>Create Repository interface</li>
+  <li>Use repository.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"company"</span><span class="o">)</span> <span class="c1">// Optional as it take class name</span>
+<span class="nd">@Document</span> <span class="c1">// incase of nosql DB</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
+  
+  <span class="nd">@Id</span>
+  <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span> <span class="c1">// Optional asit take field name</span>
+  <span class="nd">@GeneratedValue</span> <span class="c1">// Automatically generated values, kind of autoincrement in table.</span>
+  <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
+  <span class="n">String</span> <span class="n">firstname</span><span class="o">;</span>
+  <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">....</span>
+<span class="nd">@Repository</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="o">}</span>
+
+<span class="o">....</span>
+<span class="c1">// Using repository.</span>
+<span class="n">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">emps</span> <span class="o">=</span> <span class="n">employeeRepository</span><span class="o">.</span><span class="na">findByLastName</span><span class="o">(</span><span class="s">"Clark"</span><span class="o">);</span>
+<span class="n">employeeRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span></code></pre></figure>
+
+<h3 id="pros-and-cons-of-hibernate-over-plain-jdbc">Pros and Cons of Hibernate over Plain JDBC.</h3>
+<p>Hibernate is a ORM <strong>Object-relational mapping</strong>, It maps the entity classes to database tables. Sometime it easy to map one to one entity to table but sometime it really gets complex when you have inheritance, different kind of table relationships such as one to one, one to many and  manay to many. Also it really gets messy if you don’t handle the fetch and cascade paramters properly. But over all it has many advantages over its disadvantages. That why it is so popular.</p>
+<ul>
+  <li>Reduces and reusage code.<br />
+You dont need write query again and again for insert update or anything.</li>
+  <li>Independent of database.
+You can use any underlying database without modifying your code. You just need change dialect and pom entry to update driver of the database. <br />
+<em>spring.jpa.properties.hibernate.dialect =  org.hibernate.dialect.DB2Dialect</em></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">com</span><span class="o">.</span><span class="na">ibm</span><span class="o">.</span><span class="na">db2</span><span class="o">.</span><span class="na">jcc</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">db2jcc4</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span></code></pre></figure>
+
+<ul>
+  <li>Lazy loading.<br />
+Hibernate you can set the property to lazy load the related table data and hibernate takes care of fetching the data when the data is required.</li>
+  <li>Transaction management.<br />
+Hibernate maintains the transaction and revert all the changes in case if there is any exception.</li>
+  <li>Caching.<br />
+In memory is always faster then the reaching out to DB for the data. Hibernate has inmemory caching option it keeps data in memory which is faster to access and is very smart when to commit and when not to.</li>
+  <li>Connection Pooling.<br />
+Inbuilt support of connection pooling. It create pool of connection which is faster then creating a new connection and terminating it.</li>
+  <li>Supports HQL(superset of JPQL).<br />
+HQL is a query language supported in Hibernates, In queries you can direclty use classname and it autmatically genrates the database queries.</li>
+  <li>Automatic versioning.<br />
+Maintains different version of data and saves the headach of missing the data.</li>
+  <li>Perfomance<br />
+The query generated here will be highly optimized in most of the cases.</li>
+</ul>
+
+<h3 id="setting-up-datasource">Setting up Datasource.</h3>
+<p>If you start with starter-jpa datasource and started inmemory DB jar such as h2database etc, you don’t need to define the datasource but you can define and override the default ones. Here is Java way of defining it.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="n">DataSource</span> <span class="nf">dataSource</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">DriverManagerDataSource</span> <span class="n">dataSource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DriverManagerDataSource</span><span class="o">();</span>
+ 
+    <span class="n">dataSource</span><span class="o">.</span><span class="na">setDriverClassName</span><span class="o">(</span><span class="s">"com.mysql.cj.jdbc.Driver"</span><span class="o">);</span>
+    <span class="n">dataSource</span><span class="o">.</span><span class="na">setUsername</span><span class="o">(</span><span class="s">"admin"</span><span class="o">);</span>
+    <span class="n">dataSource</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">"password"</span><span class="o">);</span>
+    <span class="n">dataSource</span><span class="o">.</span><span class="na">setUrl</span><span class="o">(</span>
+      <span class="s">"jdbc:mysql://localhost:3306/testDB?createDatabaseIfNotExist=true"</span><span class="o">);</span> 
+     
+    <span class="k">return</span> <span class="n">dataSource</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Here is defining the datasource by just property files. Make sure you use exact keys.</p>
+
+<figure class="highlight"><pre><code class="language-property" data-lang="property">spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=admin
+spring.datasource.password=password
+spring.datasource.url=jdbc:mysql://localhost:3306/testDB?createDatabaseIfNotExist=true</code></pre></figure>
+
+<h3 id="object-states-in-hibernate">Object States in Hibernate</h3>
+<ul>
+  <li>Transient<br />
+Object just created but not attached to hibernate session and not connected to database.</li>
+  <li>Persistent<br />
+Object attached hibernate session and connected to database, any update to this will be relected in database.</li>
+  <li>Detached<br />
+Object detached from session. It happend when session is closed or you can manually detach it.</li>
+</ul>
+
+<h3 id="session-sessionfactory-and-transaction">Session, SessionFactory and Transaction.</h3>
+<p>SessionFactory provide you the session class which can be used to attach, detach, save, query etc. Session supports transaction as well.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+<span class="n">Transaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+<span class="k">try</span> <span class="o">{</span>
+   <span class="n">tx</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
+   <span class="c1">// do some work</span>
+   <span class="o">...</span>
+  <span class="n">session</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+   <span class="o">...</span>
+   <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">tx</span><span class="o">!=</span><span class="kc">null</span><span class="o">)</span> <span class="n">tx</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span>
+   <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span> 
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+   <span class="n">session</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="annotations-used-class-table-mapping">Annotations used class table mapping.</h3>
+<p><strong>@Entity</strong> - Makes the class available for Table mapping.<br />
+<strong>@Table</strong> - It is optional. Used with @Entity, in case you want different name of the table.<br />
+<strong>@Column</strong> - It is optional, in case you want different name of the field.<br />
+<strong>@Id</strong> - Makes field primary key, you will have to use @GeneratedValue if you want generated values of id.<br />
+<strong>@GeneratedValue</strong> - To generate field value. There four type of it. Auto(Unique value accorss database), identity(Unique accors class hierarchy), sequence(custome sequence ex:start:100, increment- 10), Table.<br />
+<strong>@Version</strong> - For versioning and concurrency you can keep a field which defines a version.<br />
+<strong>@Transient</strong> - In case you dont want a field to be part of database mapping.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Employee_Custome_Table_Name"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">;</span> <span class="c1">// column name defaults to first_name</span>
+  
+  <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"custom_last_name"</span><span class="o">)</span> <span class="c1">// column name is specified,  custom_last_name</span>
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span> 
+
+  <span class="nd">@Version</span>
+  <span class="kd">private</span> <span class="n">Date</span> <span class="n">lastUpdate</span><span class="o">;</span>
+
+  <span class="nd">@Transient</span>
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">sessionId</span><span class="o">;</span> <span class="c1">// will not be stored in db</span>
+<span class="o">}</span></code></pre></figure>
+
+<h2 id="mapping-tables">Mapping Tables.</h2>
+<p><strong>@OnetoOne</strong> - When there is one to one relation, but again it has four different types.<br />
+<strong>@PrimaryKeyJoinColumn</strong> - When two table share same primary key. Such as Employee and EmployeeDetails.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+   
+  <span class="nd">@Id</span>
+  <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+   
+  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">MERGE</span><span class="o">)</span>
+  <span class="nd">@PrimaryKeyJoinColumn</span>
+  <span class="kd">private</span> <span class="n">EmployeeDetail</span> <span class="n">employeeDetail</span><span class="o">;</span>
+   
+  <span class="o">...</span>
+<span class="o">}</span>
+ 
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_detail"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeDetail</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+ 
+  <span class="nd">@Id</span>
+  <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+   
+  <span class="o">...</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>@MapsId</strong> - When tables joined by foreign and primary key of two tables and both class cotains object of each other. Such Employee and EmployeeBadge.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+ 
+  <span class="nd">@Id</span>
+  <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+   
+  <span class="nd">@OneToOne</span>
+  <span class="nd">@MapsId</span>
+  <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_badge_id"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">EmployeeBadge</span> <span class="n">employeeBadge</span><span class="o">;</span>
+   
+  <span class="o">...</span>
+<span class="o">}</span>
+ 
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_badge"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeBadge</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+ 
+  <span class="nd">@Id</span>
+  <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"ID"</span><span class="o">)</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">private</span> <span class="n">Integer</span> <span class="n">id</span><span class="o">;</span>
+ 
+  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">,</span> <span class="n">cascade</span> <span class="o">=</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">Employee</span> <span class="n">employee</span><span class="o">;</span>
+ 
+  <span class="o">....</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>@OneToMany &amp; @ManyToOne</strong> - Both are represent same logical thing. A Project can have many employeed which is one to many. Many employee can be mapped a single project which is many to one. It depends how you organize your java class.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// One to Many example. </span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"project"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Project</span><span class="o">{</span>
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">public</span> <span class="n">Long</span> <span class="n">projectId</span><span class="o">;</span>
+
+  <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"project"</span><span class="o">)</span>
+  <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"projectId"</span><span class="o">)</span>
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">;</span>
+  <span class="o">....</span>
+<span class="o">}</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">public</span> <span class="n">Long</span> <span class="n">employeeId</span><span class="o">;</span>
+  <span class="o">....</span>
+<span class="o">}</span>
+
+<span class="c1">// Many to one example</span>
+
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"project"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Project</span><span class="o">{</span>
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">public</span> <span class="n">Long</span> <span class="n">projectId</span><span class="o">;</span>
+  <span class="o">....</span>
+<span class="o">}</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
+  <span class="nd">@ManyToOne</span>
+  <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"projectId"</span><span class="o">)</span> <span class="c1">// if this annotaition not present it defaults to table relation @JoinTable(name = "project_employee")</span>
+  <span class="n">Project</span> <span class="n">project</span><span class="o">;</span>
+  <span class="o">.....</span>
+<span class="o">}</span>
+
+<span class="c1">// all of the above was unidirectional relation using a foreign key in Employee as projectid. We can do the same relation with third relation table.</span></code></pre></figure>
+
+<p><strong>@ManyToMany</strong> - Many to many relation always needs a third table. For example employee can work on many tasks and a task can have multiple employees working on it.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"task"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span><span class="o">{</span>
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">public</span> <span class="n">Long</span> <span class="n">taskId</span><span class="o">;</span>
+
+  <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"tasks"</span><span class="o">)</span>
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">employees</span>
+  <span class="o">....</span>
+<span class="o">}</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
+  <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="o">{</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">ALL</span> <span class="o">})</span>
+  <span class="nd">@JoinTable</span><span class="o">(</span>
+      <span class="n">name</span> <span class="o">=</span> <span class="s">"Employee_Project"</span><span class="o">,</span> 
+      <span class="n">joinColumns</span> <span class="o">=</span> <span class="o">{</span> <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_id"</span><span class="o">)</span> <span class="o">},</span> 
+      <span class="n">inverseJoinColumns</span> <span class="o">=</span> <span class="o">{</span> <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"task_id"</span><span class="o">)</span> <span class="o">}</span>
+  <span class="o">)</span>
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span> <span class="n">tasks</span><span class="o">;</span>
+
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">public</span> <span class="n">Long</span> <span class="n">employeeId</span><span class="o">;</span>
+  <span class="o">.....</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="hql-query">HQL Query.</h3>
+<p>Hibernates provides many way to query you table. Native, HQL, criteria etc. HQL is extension of SQL almost same as SQL standards but it usage class name in place of table name. Also, binging a value is very easy. You can retrieve query object from session and Query interface has following methods.</p>
+<ul>
+  <li>public int executeUpdate()</li>
+  <li>public List list()</li>
+  <li>public Query setFirstResult(int rowno) //For pagination set the first row num</li>
+  <li>public Query setMaxResult(int rowno) // Page count</li>
+  <li>public Query setParameter(int position, Object value)</li>
+  <li>public Query setParameter(String name, Object value)</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">hql</span> <span class="o">=</span> <span class="s">"FROM Employee E WHERE E.id = :employee_id"</span><span class="o">;</span>
+<span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="n">hql</span><span class="o">);</span>
+<span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"employee_id"</span><span class="o">,</span><span class="mi">1000</span><span class="o">);</span>
+<span class="n">List</span> <span class="n">results</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">list</span><span class="o">();</span>
+
+<span class="o">....</span>
+
+<span class="n">String</span> <span class="n">hql</span> <span class="o">=</span> <span class="s">"UPDATE Employee set age = :age "</span>  <span class="o">+</span> 
+             <span class="s">"WHERE id = :empId"</span><span class="o">;</span>
+<span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="n">hql</span><span class="o">);</span>
+<span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"age"</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
+<span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"empId"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Rows affected: "</span> <span class="o">+</span> <span class="n">count</span><span class="o">);</span></code></pre></figure>
+
+<h3 id="criteria-api">Criteria API.</h3>
+<p>Criteria api helps you to ommit sqls or HQL where you have to pass the query as string. Criteria API provides you set of classes and utilities with which you can form queries. You can create Criteria object form session.</p>
+
+<p>Criteria ct = session.createCriteria(Employee.class);
+List<Employee> results = ct.list();</Employee></p>
+
+<p><strong>Using Restriction</strong> - Restriction class with and, or, eq, ne, gt, lt, ge, le, like,ilike, between, in, conjuction, disjunction, isNull, isNotNull, sqlRestriction(String sql, Object value, Type type) etc.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Restrictions</span><span class="o">.</span><span class="na">lt</span><span class="o">(</span><span class="s">"age"</span><span class="o">,</span><span class="mi">20</span><span class="o">));</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Restrictions</span><span class="o">.</span><span class="na">sqlRestriction</span><span class="o">(</span><span class="s">"{alias}.firstname like 'San%'"</span><span class="o">));</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">setFirstResult</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">setMaxResults</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">addOrder</span><span class="o">(</span><span class="n">Order</span><span class="o">.</span><span class="na">desc</span><span class="o">(</span><span class="s">"age"</span><span class="o">));</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">()</span></code></pre></figure>
+
+<p><strong>Using Projection to get selecte Columns</strong></p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ProjectionList</span> <span class="n">projList</span> <span class="o">=</span> <span class="n">Projections</span><span class="o">.</span><span class="na">projectionList</span><span class="o">();</span>
+<span class="n">projList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Projections</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">));</span>
+<span class="n">projList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Projections</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">"lastName"</span><span class="o">));</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">setProjection</span><span class="o">(</span><span class="n">projList</span><span class="o">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">[]&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span>
+
+<span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">setProjection</span><span class="o">(</span><span class="n">Projections</span><span class="o">.</span><span class="na">rowCount</span><span class="o">());</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
+
+<ul>
+  <li>avg(String propertyName)</li>
+  <li>count(String propertyName)</li>
+  <li>countDistinct(String propertyName</li>
+  <li>max(String propertyName)</li>
+  <li>min(String propertyName)</li>
+  <li>sum(String propertyName)</li>
+</ul>
+
+<p><strong>Using query by example</strong>
+Query by example usage a filter object. Let’s say you want filter a employee based on salary and age. Create a filter object with salary and age set.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Employee</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Employee</span><span class="o">();</span>
+<span class="n">e</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
+<span class="n">e</span><span class="o">.</span><span class="na">setSalary</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>
+<span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Example</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
+
+<h3 id="native-queries">Native queries.</h3>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT * FROM EMPLOYEE WHERE id = :employee_id"</span><span class="o">;</span>
+<span class="n">SQLQuery</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createSQLQuery</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+<span class="n">query</span><span class="o">.</span><span class="na">addEntity</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"employee_id"</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
+
+<h2 id="caching-in-hibernate">Caching in Hibernate.</h2>
+<p>Hibernates has two level level of cache. Firstlevel is by default there and maintained by session container. You can’t change first level cache. Second level cache is left for developer where he can defined his own caching strategies at each class level. Such as Employee class secondary cache can use any of the below strategies.<br />
+<strong>Transactional</strong> - Cached data will be retained only in transaction.<br />
+<strong>Read-write</strong> - It create read write lock on table and updates if the data has been updated.<br />
+<strong>Nonstrict-read-write</strong> - When data rarely changes and you don’t bother about stale data.
+<strong>Read-only</strong> - When data never changes.</p>
+
+            </article>
+
+            <section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Hibernate-in-Short/%20via%20&#64;&hashtags="
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Hibernate-in-Short/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+        <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Hibernate-in-Short/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+        <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
+    </a>
+</section>
+            <section class="share">
+                <div class="fb-comments" data-href="https://abyte.stream/Hibernate-in-Short/"></div>
+            </section>
+            <section class="author" itemprop="author">
+    <div class="details" itemscope itemtype="http://schema.org/Person">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="">
+        <p class="def">Author</p>
+        <h3 class="name">
+            <a itemprop="name" href="https://plus.google.com/+/posts">Sanjay Patel</a>
+        </h3>
+        <p class="desc">Developer at IBM</p>
+        <p><a itemprop="email" class="email" href="mailto:sanjaypatel2525@yahoo.com">sanjaypatel2525@yahoo.com</a></p>
+        <!--<p><a itemprop="github" class="github" href="https://github.com/">github.com/</a></p>-->
+    </div>
+</section>
+
+            <footer>
+    <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+<script src="/assets/js/main.js"></script>
+            <div id="fb-root"></div>
+        </section>
+    </body>
+    
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=207343132703435";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "facebook-jssdk"));</script>
+</html>
