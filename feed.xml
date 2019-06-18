@@ -5,9 +5,39 @@
     <description>Technical blogs.</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Jun 2019 14:38:59 -0400</pubDate>
-    <lastBuildDate>Tue, 11 Jun 2019 14:38:59 -0400</lastBuildDate>
+    <pubDate>Tue, 18 Jun 2019 15:04:59 -0400</pubDate>
+    <lastBuildDate>Tue, 18 Jun 2019 15:04:59 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Spring Boot JUnit with Mockito.</title>
+        <description>&lt;p&gt;There are cases when you want to write test cases for your method, but the method itslef usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up.&lt;/p&gt; &lt;p&gt;Mockito is very famous mocking api. With this you can mock any object and just focus on testing of your method only.&lt;/p&gt; &lt;p&gt;Let’s quickly jump into Spring boot JUnit configuration. Add following lines in pom.xml&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt; &lt;span...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-Boot-JUnit-with-Mockito/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-Boot-JUnit-with-Mockito/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>JUnit Basics with JUnit 5.</title>
+        <description>&lt;p&gt;First of all, what is JUnit? JUnit is Java provided library to autmate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method.&lt;/p&gt; &lt;p&gt;Let’s quickly jump into JUnit configuration. Add following lines in pom.xml&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.junit.jupiter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;junit-jupiter-engine&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;${junit.jupiter.version}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;h2 id=&quot;basics-of-junit&quot;&gt;Basics of JUnit.&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-JUnit-Basics/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-JUnit-Basics/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spring AOP and AspectJ.</title>
+        <description>&lt;p&gt;Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as loggin, security etc), without modifying your exisiting. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Aspect - Aspect is modularization of the code which defines the concerns of class, in simpler term it contains pointcuts(rule identifies places in class) and advice (the code which will be executed on joinpoint).&lt;/li&gt; &lt;li&gt;PointCuts - It defines rule which determines joinpoints(places in class) where advice will be executed. Such as “execution(* com.xyz.bo.&lt;em&gt;BO.&lt;/em&gt;(..))”, defines...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Spring-AOP-and-AspectJ/</link>
+        <guid isPermaLink="true">https://abyte.stream/Spring-AOP-and-AspectJ/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Spring JDBC in Short</title>
@@ -310,30 +340,6 @@
         <link>https://abyte.stream/setup-wordpress-blogging-google-cloud/</link>
         <guid isPermaLink="true">https://abyte.stream/setup-wordpress-blogging-google-cloud/</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Issue With Cached Static Content - Cache Buster</title>
-        <description>&lt;p&gt;Many us moight have faced issue with cached static content - cache buster, Every deployment whenever there is change in static files it becomes a painful job to ask your end customer to clear the cache. In order to get rid of this problem, here are few ideas for cache buster.&lt;/p&gt; &lt;p&gt;Append version number in front of changed files references ( /path/file.js?v=1.1) Reduce cache expiry header Use grunt scripts to handle cache issue.&lt;/p&gt; &lt;h2 id=&quot;issue-with-cached-static-content---cache-buster&quot;&gt;Issue with cached static content - cache buster&lt;/h2&gt; &lt;p&gt;. Let’s dive into details.&lt;/p&gt; &lt;h3 id=&quot;1-appending-version-number-approach&quot;&gt;1. Appending version number approach&lt;/h3&gt; &lt;p&gt;This is the easiest approach to resolve...</description>
-        <pubDate>Sat, 10 Feb 2018 17:08:05 -0500</pubDate>
-        <link>https://abyte.stream/issue-with-cached-static-content/</link>
-        <guid isPermaLink="true">https://abyte.stream/issue-with-cached-static-content/</guid>
-        
-        
-        <category>Websphere Commerce</category>
-        
-      </item>
-    
-      <item>
-        <title>Websphere Commerce build with Git</title>
-        <description>&lt;p&gt;Websphere Commerce (WCS) is e-Commerce software platform. It supports multiple business models to support a wide range of customer requirements. WCS did not have Git support till version 8.  It has introduced Git support from version 9 onwards. Git is a free open source distributed source control management software. This blog we are going to discuss Git configuration with WCS build.&lt;/p&gt; &lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite:&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Git needs to be installed on the build system&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;copy2-the-template-file-from-wcbd-template-to-wcbdfolder-and-update-the-names-as-given-below&quot;&gt;Copy2 the template file from wcbd template to wcbd  folder and update the names as given below.&lt;/h3&gt; &lt;p&gt;&lt;img src=&quot;/assets/img_5c1021100f5c3.png&quot; alt=&quot;gras&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;extract-git.private.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.properties&lt;br /&gt;&lt;/li&gt; &lt;li&gt;extract-git.xml&lt;/li&gt; &lt;/ul&gt;...</description>
-        <pubDate>Mon, 11 Dec 2017 21:16:05 -0500</pubDate>
-        <link>https://abyte.stream/websphere-commerce-build-with-git/</link>
-        <guid isPermaLink="true">https://abyte.stream/websphere-commerce-build-with-git/</guid>
-        
-        
-        <category>Websphere Commerce</category>
         
       </item>
     

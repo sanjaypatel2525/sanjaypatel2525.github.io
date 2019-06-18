@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "Spring Boot JUnit with Mockito.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Spring-Boot-JUnit-with-Mockito/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "JUnit Basics with JUnit 5.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Spring-JUnit-Basics/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Spring AOP and AspectJ.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Spring-AOP-and-AspectJ/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Spring JDBC in Short",
       "tags"     : "",
       "categories"     : "",

@@ -1,0 +1,308 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JUnit Basics with JUnit 5.</title>
+    <link rel="canonical" href="https://abyte.stream/Spring-JUnit-Basics/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">JUnit Basics with JUnit 5.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>First of all, what is JUnit? JUnit is Java provided library to autmate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method.</p>
+
+<p>Let’s quickly jump into JUnit configuration. Add following lines in pom.xml</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+	<span class="nt">&lt;groupId&gt;</span>org.junit.jupiter<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>junit-jupiter-engine<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;version&gt;</span>${junit.jupiter.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h2 id="basics-of-junit">Basics of JUnit.</h2>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.junit.jupiter<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>junit-jupiter-engine<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.junit.platform<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>junit-platform-runner<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">org.junit.jupiter.api.AfterAll</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.AfterEach</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Assertions</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.BeforeAll</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.BeforeEach</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Disabled</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Tag</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">com.xyz.junit5.XYZBOImpl</span><span class="o">;</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">XYZBOImplTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">XYZBOImpl</span> <span class="n">impl</span><span class="o">;</span>
+    <span class="nd">@BeforeAll</span>
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setup</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeAll will be executed only once when this XYZBOImplTest first test method is called"</span><span class="o">);</span>
+        <span class="n">XYZBOImpl</span> <span class="n">impl</span> <span class="o">=</span> <span class="n">XYZBOImpl</span><span class="o">();</span>
+    <span class="o">}</span>
+     
+    <span class="nd">@BeforeEach</span>
+    <span class="kt">void</span> <span class="nf">callBeforEachMethod</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeEach will be executed before each testmethods in XYZBOImplTest"</span><span class="o">);</span>
+    <span class="o">}</span>
+     
+    <span class="nd">@Tag</span><span class="o">(</span><span class="s">"dev"</span><span class="o">)</span>
+    <span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">tesXYZBOImplMethod1</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Testing Method 1 of XYZBOImpl"</span><span class="o">);</span>
+        <span class="n">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method1</span><span class="o">());</span>
+    <span class="o">}</span>
+     
+    <span class="nd">@Tag</span><span class="o">(</span><span class="s">"prod"</span><span class="o">)</span>
+    <span class="nd">@Disabled</span>
+    <span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">tesXYZBOImplMethod2</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Tesing Method 2 of XYZBOImpl"</span><span class="o">));</span>
+        <span class="n">Assertions</span><span class="o">.</span><span class="na">assertThrows</span><span class="o">(</span><span class="n">Exception</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method2</span><span class="o">()));</span>
+        <span class="o">});</span>
+        
+    <span class="o">}</span>
+     
+    <span class="nd">@AfterEach</span>
+    <span class="kt">void</span> <span class="nf">callAfterEachMethod</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterEach is execute after each test methods in XYZBOImplTest"</span><span class="o">);</span>
+    <span class="o">}</span>
+     
+    <span class="nd">@AfterAll</span>
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">destroy</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterAll will be executed only once when this XYZBOImplTest last test method is called"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//Example test only selected packages</span>
+<span class="nd">@RunWith</span><span class="o">(</span><span class="n">JUnitPlatform</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@SelectPackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2"</span><span class="o">)</span>
+<span class="nd">@IncludePackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2.includeMe"</span><span class="o">)</span>
+<span class="nd">@ExcludePackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2.excludeMe"</span><span class="o">)</span>
+<span class="nd">@ExcludeTags</span><span class="o">(</span><span class="s">"PROD"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JUnit5TestSuiteExample1</span>
+<span class="o">{</span>
+<span class="o">}</span>
+
+<span class="c1">// Example two test only selected classes.</span>
+<span class="nd">@RunWith</span><span class="o">(</span><span class="n">JUnitPlatform</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@SelectPackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JUnit5TestSuiteExample1</span>
+<span class="o">{</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="common-annotations">Common annotations.</h3>
+<p><strong>@Test</strong> - Used to decorate method which will considered a test case. <br>
+<strong>@ParameterizedTest</strong> - Run a test method multipel times with different parameter.
+@ParameterizedTest
+@ValueSource(strings = { “racecar”, “radar”, “ssoss” })
+void palindromes(String candidate) {
+    assertTrue(StringUtils.isPalindrome(candidate));
+}
+<strong>@TestMethodOrder and @Order(n)</strong> - TestMethodOrder is class decorator and makes the class test run in a order, @Order is a method decorator and tell the order of the method by numeric values.
+<strong>@BeforeEach and @AfterEach</strong> - Methods decorator, makes methods to be called before and after of each method.<br>
+<strong>@BeforeAll and @AfterAll</strong> - Methods decorator, makes methods to be called before and after of each test class.
+<strong>@Tag</strong> - Helps to tag method and later helps to filter the test methods with the use of runner. You can see the example above.
+<strong>@Disabled</strong> - Disable the class or method in the test runner.</p>
+
+<h3 id="assertions">Assertions</h3>
+<p>Assertion checks the conditions and thorws assert exception which in the end fails the Junit test case. If none of the asserts in the test case throws assert exception that test case will be marked pass.</p>
+<ul>
+  <li>assertSame(expected, actual,”fail msg”) // evaluate expected!=actual</li>
+  <li>assertNotSame(expected, actual,”fail msg”) //evaluate expected==actual</li>
+  <li>assertEquals(expected, actual,”fail msg”) // evaluate expected.equals(actual)</li>
+  <li>assertArrayEquals([‘a’,’b’,’c’],[‘a’,’b’,’c’],”fail msg”)</li>
+  <li>assertTrue(method1(),”fail msg”)  // will pass if method return true.</li>
+  <li>assertFalse(method1(),”fail msg”)  // will pass if method return false.</li>
+  <li>assertNull(obj,”fail msg”)  // will pass if obj is null</li>
+  <li>assertNotNull(obj,”fail msg”)  // will pass if obj is not null</li>
+  <li>fail(“fail msg”)  // Throw assert error with msg.</li>
+</ul>
+
+<p>JUnit 5 has “fail msg” as last parmater, It accepts a supplier interface as well for lazy intialization.</p>
+<ul>
+  <li>AssertAll // for grouping mulitple asserts and combinding message.</li>
+  <li>assertIterableEquals //Will match each record of two iterable(ArrayList, linkedlist etc)</li>
+</ul>
+
+<h3 id="assumption">Assumption</h3>
+<p>Assumption helps in writing conditional Junit test case. Test cases can be skipped if assumption is not matched. If test case assumption is not met, test case will be aborted and skipped.</p>
+<ul>
+  <li>Assumptions.assumeTrue(“DEV”.equals(System.getProperty(“ENV”)),”msg”)</li>
+  <li>Assumptions.assumeTrue(“DEV”.equals(System.getProperty(“ENV”)),”msg”)</li>
+</ul>
+
+<p>JUnit 5 comprises of three modules.</p>
+<ul>
+  <li>JUnit Platform</li>
+  <li>JUnit Jupiter</li>
+  <li>JUnit Vintage</li>
+</ul>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

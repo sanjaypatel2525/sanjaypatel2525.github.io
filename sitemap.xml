@@ -329,7 +329,31 @@
             <loc>https://abyte.stream/amp/Spring JDBC in Short</loc>
         </url>
     
+        <url>
+            <loc>https://abyte.stream/amp/Spring AOP and AspectJ</loc>
+        </url>
     
+        <url>
+            <loc>https://abyte.stream/amp/Spring JUnit Basics</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Spring Boot JUnit with Mockito</loc>
+        </url>
+    
+    
+        <url>
+            <loc>https://abyte.stream/Spring-Boot-JUnit-with-Mockito/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-JUnit-Basics/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Spring-AOP-and-AspectJ/</loc>
+        </url>
+  
         <url>
             <loc>https://abyte.stream/Spring-JDBC-in-Short/</loc>
         </url>
