@@ -1,0 +1,210 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Services in Java world.</title>
+    <link rel="canonical" href="http://localhost:4000/Web-Service-in-Java-world/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Web Services in Java world.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>The journey of communication in Java has many stops. RPC, RMI, CORBA, WebServices (SOAP, RESTful), EJB Standards, ORM and JPA, JDBC etc. Let’s understand all in one liner statement.</p>
+<ul>
+  <li>
+<strong>RPC</strong> - Calling a remote method of a server directly is done via RPC standards. No language barrier.</li>
+  <li>
+<strong>RMI</strong> - RMI is mapping remote object to proxied local object and call method via proxied object. It is part of Java and deals with object.</li>
+  <li>
+<strong>Webservice</strong> - Webservice is comparable to RPC but it has more sophisticated structure of communicating message. There are two type of Webservice SOAP(Defines and works on WSDL) and Restful(works over entity).</li>
+  <li>
+<strong>EJB</strong> - A common standard, set of services provided by Application servers such connection pooling, caching etc. You don’t need to write code for some standard requirement some enterprise level server have inbuilt support for these services, just use them. EJB Work on top of RMI and available only for Java.</li>
+  <li>
+<strong>ORM</strong> - Technique to map data between different system such as database to java objects. Hibernate is an implementation of ORM.</li>
+  <li>
+<strong>JPA</strong> - A standard and set of specification defined to communicate with different relational database. Hides low level details and provides programmer a standard way to talk to relational database.</li>
+  <li>
+<strong>JDBC</strong> - A set of java jars provided by different database vendors to support java to database communication.<br>
+There are many others but it gives a idea where are we going. First three are for application to application communication while last 4 mainly deals with a application and database, 4th from last EJB has bit bigger scope then database access. Let’s go back to web services topic.</li>
+</ul>
+
+<p>Webservice can be defines as way of communication between two different application (can be in different language) over the network or same system using a specific type document (Can be XML, JSON etc). There are mainly two type of webservice <strong>SOAP</strong>(Simple Object Access Protocol)  and <strong>RESTful</strong>. SOAP again has two flavours <strong>RPC style</strong> and <strong>document based</strong>. In java world SOAP is <strong>JAX-WS</strong> and RESTful is <strong>JAX-RS</strong>.</p>
+
+<h3 id="here-are-some-important-points">Here are some important points.</h3>
+<ul>
+  <li>SOAP is protocol (Set of rules) and REST is a design/architecture.</li>
+  <li>REST (Representational state transfer) is a design and has set of principles.
+    <ul>
+      <li>Should be stateless</li>
+      <li>Interface based - Should have resources and method on resources.</li>
+      <li>Independent Client server - Client server can change with no dependency on each other.</li>
+      <li>Cacheable - Resource must declare them cacheable.</li>
+      <li>Layered system - Server can have many layers inside it, such authentication, business logic, storage. Client need not to anything about it.</li>
+    </ul>
+  </li>
+  <li>SOAP usage service to expose business logic, Rest usage URIs.</li>
+  <li>SOAP is strict and defines the standards in WSDL.</li>
+  <li>SOAP WSDL has place for extra security. REST you will have to define yourself.</li>
+  <li>SOAP deals only with XML, REST can work with other datatype as well.</li>
+  <li>SOAP and REST both can work over different communication protocol such as SMTP, FTP, HTTP, custom.</li>
+  <li>REST has good support on HTTP but can work on other protocol as well.</li>
+</ul>
+
+<p>More on <a href="/SOAP-in-Java-world/" title="SOAP">SOAP</a> and <a href="/REST-in-Java-world/" title="REST">REST</a>. Please follow the links.</p>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

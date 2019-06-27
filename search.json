@@ -1,10 +1,50 @@
 [
   
     {
+      "title"    : "10 Minutes JMS.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/10-minutes-JMS/",
+      "date"     : "13 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Web Services in Java world.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Web-Service-in-Java-world/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Spring Boot JUnit with Mockito.",
       "tags"     : "",
       "categories"     : "",
       "url"      : "/Spring-Boot-JUnit-with-Mockito/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "SOAP Services in Java world.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/SOAP-in-Java-world/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "REST Services in Java world.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/REST-in-Java-world/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "EJB in Java.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/EJB-in-Java/",
       "date"     : "11 Dec 2018"
     } ,
   

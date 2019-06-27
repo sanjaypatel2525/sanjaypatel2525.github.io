@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Java 8 double colon operator</title>
-    <link rel="canonical" href="https://abyte.stream/java-8-double-colon-operator/" />
+    <link rel="canonical" href="http://localhost:4000/java-8-double-colon-operator/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -161,7 +161,7 @@
         </div>
 </header>
 <h2 id="lambda-for-method-reference-or-java-double-colon-operator">Lambda for Method reference Or Java Double colon operator</h2>
-<p>What is the Java 8 double colon operator ? You must have seen some shortcode like,</p>
+<p>What is the Java 8 double colon operator ? You must have seen some short code like,</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span></code></pre></figure>
 <p>In order to understand better, you must know about functional interface. Please check blog <a href="https://abyte.stream/2018/09/10/java-lambda-and-procedural-programming">Java lambda and functional programming.</a>
 Java 8  method (functional interface) are just like objects, They can be passed as parameters and can be returned from another method. So why not assign Java methods to a new another variable.  Something like javascript.</p>
@@ -173,7 +173,7 @@ Java 8  method (functional interface) are just like objects, They can be passe
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Utility</span><span class="o">{</span>
  <span class="kt">int</span> <span class="nf">biggerNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span><span class="kt">int</span> <span class="n">y</span><span class="o">);</span>
 <span class="o">}</span>
-<span class="n">Utility</span> <span class="n">utility</span> <span class="o">=</span> <span class="nl">Math:</span><span class="o">:</span><span class="n">max</span><span class="o">;</span> <span class="c1">//Assign method defination to antoher signature matching method.</span>
+<span class="n">Utility</span> <span class="n">utility</span> <span class="o">=</span> <span class="nl">Math:</span><span class="o">:</span><span class="n">max</span><span class="o">;</span> <span class="c1">//Assign method definition to another signature matching method.</span>
 
 <span class="n">utility</span><span class="o">.</span><span class="na">biggerNumber</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">8</span><span class="o">)</span> <span class="c1">// returns 8</span></code></pre></figure>
 <p>So above you can see, We have created an interface with only one abstract method having signature same as the signature of Math.max method. Later we have assigned the definition of Math.max to Utility. Which mean the definition is assigned is to Utility .biggerNumber. Now we can call the method as shown in the last line.

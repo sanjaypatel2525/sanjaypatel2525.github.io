@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring Data in Short">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-Data-in-Short/">
+    <meta property="og:url" content="http://localhost:4000/Spring-Data-in-Short/">
     <meta property="og:title" content="Spring Data in Short">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring Data in Short"/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring Data in Short.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring Data in Short.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-Data-in-Short/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Data-in-Short/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -144,9 +144,9 @@
 </script>
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <p>There are many different data storage system in the market currently and in order to connect and query differnt system you might have to use differnt query syntax. Spring Data is one of the advance module and has many submodule to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.</p>
+                <p>There are many different data storage system in the market currently and in order to connect and query different system you might have to use different query syntax. Spring Data is one of the advance module and has many sub-module to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.</p>
 
-<p>For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries resectively. <br />
+<p>For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries respectively. <br />
 select * from Employee where id = 5;<br />
 db.employee.find( { _id: 5 } );<br />
 But with spring data you just need to define one method and Spring data takes care of forming internal queries.<br />
@@ -166,7 +166,8 @@ Employee findById(int id);</p>
 <h3 id="create-repository-interface">Create repository interface.</h3>
 <p>Implement any of the repository interface.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Repository</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
 <span class="o">}</span>
 <span class="c1">// Create Employee entity class.</span>
@@ -178,7 +179,7 @@ Employee findById(int id);</p>
   <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>There are three different repostories Spring Data Supports.</p>
+<p>There are three different repositories Spring Data Supports.</p>
 <ul>
   <li>CrudRepository</li>
   <li>PagingAndSortingRepository</li>
@@ -214,7 +215,7 @@ Employee findById(int id);</p>
 <span class="n">employeeRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span> <span class="c1">// delete from Employee where id=:employee.id</span></code></pre></figure>
 
 <h3 id="pagingandsortingrepository">PagingAndSortingRepository</h3>
-<p>PagingAndSortingRepository implments CrudRepository so you get all the perks of CrudRepository and something extra.</p>
+<p>PagingAndSortingRepository implements CrudRepository so you get all the perks of CrudRepository and something extra.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PagingAndSortingRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span> 
   <span class="kd">extends</span> <span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
@@ -233,11 +234,11 @@ Employee findById(int id);</p>
 <span class="n">Pageable</span> <span class="n">pageable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageRequest</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">15</span><span class="o">,</span> <span class="n">sort</span><span class="o">);</span>
 <span class="n">employeeRepository</span><span class="o">.</span><span class="na">findByLastName</span><span class="o">(</span><span class="s">"Jack"</span><span class="o">,</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname and rownum&gt;0 and rownum&lt;15  order by lastName desc;</span></code></pre></figure>
 
-<p>PagingAndSortingRepository gives you feature to getch records in pages and sort the results.</p>
+<p>PagingAndSortingRepository gives you feature to get records in pages and sort the results.</p>
 
 <h3 id="jparepository">JpaRepository</h3>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JpaRepository</span> <span class="n">implments</span> <span class="n">PagingAndSortingRepository</span> <span class="n">and</span> <span class="n">gives</span> <span class="n">you</span> <span class="n">some</span> <span class="n">persitant</span> <span class="n">level</span> <span class="n">feature</span><span class="o">.</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JpaRepository</span> <span class="kd">implements</span> <span class="n">PagingAndSortingRepository</span> <span class="n">and</span> <span class="n">gives</span> <span class="n">you</span> <span class="n">some</span> <span class="n">persistent</span> <span class="n">level</span> <span class="n">feature</span><span class="o">.</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span> <span class="kd">extends</span> <span class="n">Serializable</span><span class="o">&gt;</span> <span class="kd">extends</span>
   <span class="n">PagingAndSortingRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">ID</span><span class="o">&gt;</span> <span class="o">{</span>
  
@@ -255,11 +256,11 @@ Employee findById(int id);</p>
 <span class="o">}</span></code></pre></figure>
 
 <h2 id="spring-data-features">Spring Data features.</h2>
-<p>Let us see some benigits of having spring data.</p>
-<h3 id="no-dao-intercaces">No DAO intercaces.</h3>
-<p>You dont need to write your DAO interface if you can manage with basic crud features such as insert, delete, update, read etc.</p>
+<p>Let us see some benefits of having spring data.</p>
+<h3 id="no-dao-interfaces">No DAO interfaces.</h3>
+<p>You don’t need to write your DAO interface if you can manage with basic crud features such as insert, delete, update, read etc.</p>
 <h3 id="support-custom-queries">Support custom queries.</h3>
-<p>In case you need to cocnifgure custom query which are not supported by Crud interface, then you can define your custom implmentation class where you can use custome queries.</p>
+<p>In case you need to cocnifgure custom query which are not supported by Crud interface, then you can define your custom implementation class where you can use custom queries.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//Examples</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepositoryCustom</span><span class="o">{</span>
@@ -270,7 +271,7 @@ Employee findById(int id);</p>
     <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">,</span> <span class="n">Pageable</span> <span class="n">pageable</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeRepositoryCustomImpl</span> <span class="n">impleents</span> <span class="n">EmployeeRepositoryCustom</span><span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeRepositoryCustomImpl</span> <span class="kd">implements</span> <span class="n">EmployeeRepositoryCustom</span><span class="o">{</span>
    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">runComplexQuery</span><span class="o">(){</span>
      <span class="o">....</span>
      <span class="c1">// Use any kind of query generation classes or just right plain query and use jdbctemplate.</span>
@@ -278,7 +279,7 @@ Employee findById(int id);</p>
 <span class="o">}</span></code></pre></figure>
 
 <h3 id="query-based-on-method-name">Query based on method name.</h3>
-<p>Based on method names spring tries to create query for them, for exmaple.
+<p>Based on method names spring tries to create query for them, for example.
 Employee findByFirstNameAndLastName(String firstname, String lastName); // where firstname=:firstname and lastnmae= : lastname
 Employee findByAgeGreaterThanOrderByFirstnameDesc(int age); // where age&gt;:age order by firstname desc</p>
 
@@ -303,21 +304,21 @@ Employee findByAgeGreaterThanOrderByFirstnameDesc(int age); // where age&gt;:age
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Data-in-Short/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-Data-in-Short/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Data-in-Short/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-Data-in-Short/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Data-in-Short/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-Data-in-Short/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-Data-in-Short/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-Data-in-Short/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring MVC Intro.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-MVC-Intro/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-MVC-Intro/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,8 +160,8 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>Spring has many modules to make cut short project devlopment lifecycle. One of the most commonaly used module is Spring MVC. 
-There have many differnt versions of Spring MVC. We are going to discuss about the most recent ones.</p>
+<p>Spring has many modules to make cut short project development lifecycle. One of the most commonalty used module is Spring MVC. 
+There have many different versions of Spring MVC. We are going to discuss about the most recent ones.</p>
 
 <h2 id="what-is-mvc">What is MVC.</h2>
 <p>MVS stands for model, view and controller. It is a design pattern mainly for web based projects. 
@@ -172,7 +172,7 @@ There have many differnt versions of Spring MVC. We are going to discuss about t
   <li>Controller takes request and update data/model and redirects to view.</li>
 </ul>
 
-<p>Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request maping to cantroller and resolving the view. Contoller and it’s method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the viewname and resolved the JSP or equivalent markup language to render the data. 
+<p>Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request mapping to controller and resolving the view. Controller and it’s method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the view name and resolved the JSP or equivalent markup language to render the data. 
 <amp-img src="/assets/2019-05-17-Spring%20MVC%20Intro-2.JPG" alt="smiley" width="621" height="229" layout="responsive"><noscript><img src="/assets/2019-05-17-Spring%20MVC%20Intro-2.JPG" alt="smiley" width="621" height="229"></noscript></amp-img></p>
 
 <h2 id="configuring-disaptcher-serverl-in-webxml">Configuring Disaptcher serverl in Web.xml</h2>
@@ -200,7 +200,7 @@ There have many differnt versions of Spring MVC. We are going to discuss about t
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
 <h2 id="xml-based-basic-configuration">XML Based Basic Configuration</h2>
-<p>Configure componenet scan package and view resolver.</p>
+<p>Configure component scan package and view resolver.</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
     <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
     <span class="na">xmlns:context=</span><span class="s">"http://www.springframework.org/schema/context"</span>
@@ -274,7 +274,7 @@ There have many differnt versions of Spring MVC. We are going to discuss about t
 
 <span class="o">}</span></code></pre></figure>
 
-<h2 id="spring-mvc-annotataions">Spring MVC annotataions.</h2>
+<h2 id="spring-mvc-annotations">Spring MVC annotations.</h2>
 <p>Here we will see the Spring annotations briefly.</p>
 <ul>
   <li>@Controller Or @RestController</li>
@@ -287,11 +287,11 @@ There have many differnt versions of Spring MVC. We are going to discuss about t
 </ul>
 
 <h3 id="controller-or-restcontroller">@Controller Or @RestController</h3>
-<p>Controller provide a URL to method mapping, Controller classes will be singleton and will automatically gets registered in Spring Dispatcher. RestController is specialy type of controller to serialize and transform(JSON,XML etc) the response object directly. If not you would have to use <strong>@ResponseBody</strong> to transform the objects.</p>
+<p>Controller provide a URL to method mapping, Controller classes will be singleton and will automatically gets registered in Spring Dispatcher. RestController is specials type of controller to serialize and transform(JSON,XML etc) the response object directly. If not you would have to use <strong>@ResponseBody</strong> to transform the objects.</p>
 
 <p><strong>RequestMapping</strong>, Request mapping is used define the URL path for that method or controller class.</p>
 
-<p><strong>@RequestBody</strong>, In case you want desrialize the request object to some class you can use @RequestBody. It transform JSON,XML to java object.</p>
+<p><strong>@RequestBody</strong>, In case you want deserialize the request object to some class you can use @RequestBody. It transform JSON,XML to java object.</p>
 
 <p><strong>@RequestHeader</strong>, In case you want capture request headers in some variable.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RestController</span>
@@ -336,7 +336,7 @@ There have many differnt versions of Spring MVC. We are going to discuss about t
 <span class="o">}</span></code></pre></figure>
 
 <h2 id="model-modelmap-modelandview-modelattribute">Model, ModelMap, ModelAndView, ModelAttribute</h2>
-<p>Model is an interface and ModelMap is implmentation of that class you can use them interchangebly.</p>
+<p>Model is an interface and ModelMap is implementation of that class you can use them interchangeably.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
  <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/modelExample"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
@@ -344,7 +344,7 @@ There have many differnt versions of Spring MVC. We are going to discuss about t
         <span class="k">return</span> <span class="s">"viewName"</span><span class="o">;</span>
  <span class="o">}</span>
     <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/modelExampleWithView"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">ModelAndView</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Modeland</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
+    <span class="kd">public</span> <span class="n">ModelAndView</span> <span class="nf">getResource</span><span class="o">(</span><span class="n">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//Request header </span>
         <span class="n">ModelAndView</span> <span class="n">modelAndView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ModelAndView</span><span class="o">(</span><span class="s">"viewPage"</span><span class="o">);</span>
         <span class="n">modelAndView</span><span class="o">.</span><span class="na">addObject</span><span class="o">(</span><span class="s">"msg"</span><span class="o">,</span><span class="s">"Hello there"</span><span class="o">);</span>
         <span class="k">return</span> <span class="n">modelAndView</span><span class="o">;</span>

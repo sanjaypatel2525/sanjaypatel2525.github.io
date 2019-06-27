@@ -1,0 +1,309 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EJB in Java.</title>
+    <link rel="canonical" href="http://localhost:4000/EJB-in-Java/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">EJB in Java.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>EJB are wrapper around any kind of component, if you need data access, directory, resources, services, JMS, RMI, SOA etc. EJB Provides a standard way to wrap these thing under common umbrella which has many features. It can be compared to POJO but with lot of advance feature which you dont need write.</p>
+<ul>
+  <li>Reusing the code.</li>
+  <li>Scalability and reliability, Do pooling, limit connection and access easily, deploy on cluster environment.</li>
+  <li>Concurrency management, Easily configure concurrency using small annotation over methods such @Lock(READ), @Lock(WRITE).</li>
+  <li>Transaction handling, You don’t need to do any changes transaction is handled easily in EJB just annotate with @TransactionAttribute(modes), it covers JDBC, JPA, JCA and JMS easily.</li>
+  <li>Dependency injection. EJB gives easy dependency injection mechanism, such JNDI stored, JDBC connection, JMS, JCA, JTA, JPA, EJB itself.</li>
+</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Stateless</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyAccountsBean</span> <span class="o">{</span>
+
+    <span class="nd">@EJB</span> <span class="n">SomeOtherBeanClass</span> <span class="n">someOtherBean</span><span class="o">;</span>
+    <span class="nd">@Resource</span> <span class="n">UserTransaction</span> <span class="n">jtaTx</span><span class="o">;</span>
+    <span class="nd">@PersistenceContext</span><span class="o">(</span><span class="n">unitName</span><span class="o">=</span><span class="s">"AccountsPU"</span><span class="o">)</span> <span class="n">EntityManager</span> <span class="n">em</span><span class="o">;</span>
+    <span class="nd">@Resource</span> <span class="n">QueueConnectionFactory</span> <span class="n">accountsJMSfactory</span><span class="o">;</span>
+    <span class="nd">@Resource</span> <span class="n">Queue</span> <span class="n">accountPaymentDestinationQueue</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span> <span class="nf">processAccounts</span><span class="o">(</span><span class="n">DepartmentId</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Use all of above instance variables with no additional setup.</span>
+        <span class="c1">// They automatically partake in a (server coordinated) JTA transaction</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="nd">@EJB</span> <span class="n">MyAccountsBean</span> <span class="n">accountsBean</span><span class="o">;</span>    </code></pre></figure>
+
+<ul>
+  <li>Smart interaction, Easy transition with JPA, if entity is stateless it will create new transaction and isolate the JPA changes. In case of sharing Make is @Stateful and extend the scope by @PersistentContent(unitName=”AccountsPU, type=EXTENDED). So it caches the value from JPA and serve the same across multiple calls on same transaction.</li>
+  <li>Lifecycle hooks, it provides lifecycle hooks to inject code for initializing, destroying and cleaning activity.</li>
+  <li>Security based access, With simple annotation methods and classes can be secured. It provides user and roles access to methods in case they are required RBAC(Role based access control).</li>
+  <li>Standardization and portability</li>
+</ul>
+
+<p>EJB sounds very nice starting from EJB 3.0, EJB 2.0 Entity bean has moved to separate Java EE specification JPA entities. EJB mainly had 3 type of bean.</p>
+<ul>
+  <li>Session bean - Contains business logic and have two type Stateful and stateless.</li>
+  <li>Message Driven Bean - It encapsulate onMessage methods and get invoked whenever there is a message received from queue or topic.</li>
+  <li>Entity Bean - It was used to persist the state of object but it has moved to JPA now. EJB 3.0 supports JPA it has removed the entity bean concept. It had two type CMP and BMP, CMP container provides many inbuilt function such persist, connect, transaction etc, while BMP programmer has to write that.</li>
+</ul>
+
+<h3 id="stateless">Stateless</h3>
+<p>It has following methods</p>
+<ul>
+  <li>@Stateless</li>
+  <li>@PostConstruct</li>
+  <li>@PreDestroy
+Example of Stateful using JNDI.</li>
+</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.ejb.Remote</span><span class="o">;</span>  
+  
+<span class="nd">@Remote</span>  
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AdderImplRemote</span> <span class="o">{</span>  
+<span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span><span class="kt">int</span> <span class="n">b</span><span class="o">);</span>  
+<span class="o">}</span>  
+
+<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.ejb.Stateless</span><span class="o">;</span>  
+  
+<span class="nd">@Stateless</span><span class="o">(</span><span class="n">mappedName</span><span class="o">=</span><span class="s">"st1"</span><span class="o">)</span>  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdderImpl</span> <span class="kd">implements</span> <span class="n">AdderImplRemote</span> <span class="o">{</span>  
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span><span class="kt">int</span> <span class="n">b</span><span class="o">){</span>  
+      <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>  
+  <span class="o">}</span>  
+<span class="o">}</span>  
+
+<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.naming.Context</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.naming.InitialContext</span><span class="o">;</span>  
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>  
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span><span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>  
+    <span class="n">Context</span> <span class="n">context</span><span class="o">=</span><span class="k">new</span> <span class="n">InitialContext</span><span class="o">();</span>  
+    <span class="n">AdderImplRemote</span> <span class="n">remote</span><span class="o">=(</span><span class="n">AdderImplRemote</span><span class="o">)</span><span class="n">context</span><span class="o">.</span><span class="na">lookup</span><span class="o">(</span><span class="s">"st1"</span><span class="o">);</span>  
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">remote</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">32</span><span class="o">,</span><span class="mi">32</span><span class="o">));</span>  
+<span class="o">}</span>  
+<span class="o">}</span>  </code></pre></figure>
+
+<h3 id="stateful">Stateful</h3>
+<p>It has following methods.</p>
+<ul>
+  <li>@Stateful</li>
+  <li>@PostConstruct</li>
+  <li>@PreDestroy</li>
+  <li>@PrePassivate</li>
+  <li>@PostActivate</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.ejb.Remote</span><span class="o">;</span>  
+<span class="nd">@Remote</span>  
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">BankRemote</span> <span class="o">{</span>  
+    <span class="kt">boolean</span> <span class="nf">withdraw</span><span class="o">(</span><span class="kt">int</span> <span class="n">amount</span><span class="o">);</span>  
+    <span class="kt">void</span> <span class="nf">deposit</span><span class="o">(</span><span class="kt">int</span> <span class="n">amount</span><span class="o">);</span>  
+    <span class="kt">int</span> <span class="nf">getBalance</span><span class="o">();</span>  
+<span class="o">}</span>  
+
+<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.ejb.Stateful</span><span class="o">;</span>  
+<span class="nd">@Stateful</span><span class="o">(</span><span class="n">mappedName</span> <span class="o">=</span> <span class="s">"stateful123"</span><span class="o">)</span>  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bank</span> <span class="kd">implements</span> <span class="n">BankRemote</span> <span class="o">{</span>  
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">amount</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>  
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">withdraw</span><span class="o">(</span><span class="kt">int</span> <span class="n">amount</span><span class="o">){</span>  
+        <span class="k">if</span><span class="o">(</span><span class="n">amount</span><span class="o">&lt;=</span><span class="k">this</span><span class="o">.</span><span class="na">amount</span><span class="o">){</span>  
+            <span class="k">this</span><span class="o">.</span><span class="na">amount</span><span class="o">-=</span><span class="n">amount</span><span class="o">;</span>  
+            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>  
+        <span class="o">}</span><span class="k">else</span><span class="o">{</span>  
+            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>  
+        <span class="o">}</span>  
+    <span class="o">}</span>  
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deposit</span><span class="o">(</span><span class="kt">int</span> <span class="n">amount</span><span class="o">){</span>  
+        <span class="k">this</span><span class="o">.</span><span class="na">amount</span><span class="o">+=</span><span class="n">amount</span><span class="o">;</span>  
+    <span class="o">}</span>  
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getBalance</span><span class="o">(){</span>  
+        <span class="k">return</span> <span class="n">amount</span><span class="o">;</span>  
+    <span class="o">}</span>  
+<span class="o">}</span>  
+
+<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.ejb.EJB</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.naming.InitialContext</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.servlet.annotation.WebServlet</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServlet</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>  
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>  
+<span class="nd">@WebServlet</span><span class="o">(</span><span class="s">"/OpenAccount"</span><span class="o">)</span>  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OpenAccount</span> <span class="kd">extends</span> <span class="n">HttpServlet</span> <span class="o">{</span>  
+    <span class="c1">//@EJB(mappedName="stateful123")  </span>
+    <span class="c1">//BankRemote b;  </span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span>  
+                <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>  
+        <span class="k">try</span><span class="o">{</span>  
+            <span class="n">InitialContext</span> <span class="n">context</span><span class="o">=</span><span class="k">new</span> <span class="n">InitialContext</span><span class="o">();</span>  
+            <span class="n">BankRemote</span> <span class="n">b</span><span class="o">=(</span><span class="n">BankRemote</span><span class="o">)</span><span class="n">context</span><span class="o">.</span><span class="na">lookup</span><span class="o">(</span><span class="s">"stateful123"</span><span class="o">);</span>  
+              
+            <span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">().</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"remote"</span><span class="o">,</span><span class="n">b</span><span class="o">);</span>  
+            <span class="n">request</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">"/operation.jsp"</span><span class="o">).</span><span class="na">forward</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>  
+          
+        <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);}</span>  
+    <span class="o">}</span>  
+<span class="o">}</span>  </code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

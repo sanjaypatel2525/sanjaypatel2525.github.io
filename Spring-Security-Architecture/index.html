@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring Security Architecture.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-Security-Architecture/">
+    <meta property="og:url" content="http://localhost:4000/Spring-Security-Architecture/">
     <meta property="og:title" content="Spring Security Architecture.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring Security Architecture."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring Security Architecture.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring Security Architecture.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-Security-Architecture/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Security-Architecture/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -144,14 +144,14 @@
 </script>
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <p>In case you are looking for basic spring security understaing refer to the previous blog of this series <a href="/Spring-MVC-Intro/" title="Spring Security basic">Spring Security basic</a>.</p>
+                <p>In case you are looking for basic spring security understating refer to the previous blog of this series <a href="/Spring-MVC-Intro/" title="Spring Security basic">Spring Security basic</a>.</p>
 
-<p>The blog we will discussing breifly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. 
+<p>The blog we will discussing briefly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. 
 <img src="/assets/2019-05-31-Spring Security Architecture-1.png" alt="gras" /><br />
 Here are few pointer from above images.</p>
 <ul>
   <li>AuthenticationManager is an interface with only one method authenticate.</li>
-  <li>ProviderManager is most used implementaion of AuthenticationManager.</li>
+  <li>ProviderManager is most used implementation of AuthenticationManager.</li>
   <li>ProviderManager can have multiple AuthenticationProvider, You can configure different AuthenticationProvider for different authentication mechanism. Each of them will be called in chain.</li>
 </ul>
 
@@ -163,14 +163,14 @@ Here are few pointer from above images</p>
 </ul>
 
 <h2 id="authenticationmanagerbuilder">AuthenticationManagerBuilder</h2>
-<p>AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right starategy (inmemory, jdbc, datasource etc).</p>
+<p>AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right strategy (inmemory, jdbc, datasource etc).</p>
 
 <h2 id="authorizationaccess-control">Authorization/Access control</h2>
-<p>There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implmentation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
+<p>There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implementation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
 <img src="/assets/2019-05-31-Spring Security Architecture-3.png" alt="gras" /><br />
-For example, AffirmativeBased implmentation run all the AccessDecisionVoter and if any of them throws exception it denies the access othewise access is granted.</p>
+For example, AffirmativeBased implementation run all the AccessDecisionVoter and if any of them throws exception it denies the access otherwise access is granted.</p>
 
-<h3 id="acess-user-object">Acess User object.</h3>
+<h3 id="access-user-object">Access User object.</h3>
 <p>In case you need to access the User the logged in user object.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"> 
@@ -189,21 +189,21 @@ For example, AffirmativeBased implmentation run all the AccessDecisionVoter and 
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Security-Architecture/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-Security-Architecture/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Security-Architecture/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-Security-Architecture/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Security-Architecture/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-Security-Architecture/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-Security-Architecture/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-Security-Architecture/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

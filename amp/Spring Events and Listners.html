@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring Events and Listners.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-Events-and-Listners/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Events-and-Listners/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -161,18 +161,18 @@
         </div>
 </header>
 <p>Spring has inbuilt support for publishing and listing events. 
-In layman term if you want to understand what is event and listenr is then, 
-you can thik as somebody shouts your name and said hi and you listned to it and 
-you want to give a reply or not it’s upto you. Here you become a listner listneing on your name event.</p>
+In layman term if you want to understand what is event and listener is then, 
+you can think as somebody shouts your name and said hi and you listener to it and 
+you want to give a reply or not it’s upto you. Here you become a listener listening on your name event.</p>
 
-<p>Spring provides following interfaces and equivalent annotations which you can implement to make event and listern classes.</p>
+<p>Spring provides following interfaces and equivalent annotations which you can implement to make event and listener classes.</p>
 <ul>
   <li>ApplicationEvent or //simply nothing any object can be published from Spring 4.2+</li>
   <li>ApplicationEventPublisher</li>
   <li>ApplicationListner or @EventListener</li>
 </ul>
 
-<p>There three parties classes in Event and listern mechanism. SomeEvent, SomeEventListner, SomeEventData</p>
+<p>There three parties classes in Event and listener mechanism. SomeEvent, SomeEventListner, SomeEventData</p>
 
 <h3 id="old-way">Old way</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">SomeEventData</span><span class="o">{</span>
@@ -265,15 +265,15 @@ you want to give a reply or not it’s upto you. Here you become a listner listn
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listerns.
+<p>You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listeners.
 Whenever a event is published all registered event are notified and based on matching type of Event class they are executed.</p>
 
 <p>In the new example we have some points.</p>
 <ol>
-  <li>@EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listerns.</li>
+  <li>@EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listeners.</li>
   <li>@EventListener methods can return other event object and they will be automatically published.</li>
   <li>@Asyn runs the method in a new thread in a nonblocking way.</li>
-  <li>Condition uses SPel with this method will be called only when the inner condition setisfies.</li>
+  <li>Condition uses SPel with this method will be called only when the inner condition satisfies.</li>
 </ol>
 
 <footer>

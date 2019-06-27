@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring Autowire.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-Autowire/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Autowire/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,7 +160,7 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>Spring container has capbility of automatically injecting dependencies while intiating bean. There are 5 different modes.</p>
+<p>Spring container has capability of automatically injecting dependencies while initiating bean. There are 5 different modes.</p>
 <ul>
   <li>No Autowire - XML Based Default</li>
   <li>Autowire by Type - Java Based Default</li>
@@ -186,7 +186,7 @@
     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">value=</span><span class="s">"superUser"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/bean&gt;</span></code></pre></figure>
 
-<p>You can autowire class properties directly even if they are private, you can autowire fields by constructor paramters or setters parameter. What if you have two ApplicationUser object in container which one application object will use, In XML based you can just give objectname but in Java class you will have to use  @Qualifier(“applicationUser2”) to identify which one to pick.</p>
+<p>You can autowire class properties directly even if they are private, you can autowire fields by constructor parameters or setters parameter. What if you have two ApplicationUser object in container which one application object will use, In XML based you can just give object name but in Java class you will have to use  @Qualifier(“applicationUser2”) to identify which one to pick.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Autowired</span>
 <span class="nd">@Qualifier</span> <span class="o">(</span><span class="s">"applicationUser2"</span><span class="o">)</span>
 <span class="kd">private</span> <span class="n">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>

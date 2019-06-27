@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring Bean lifecycle.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-Bean-life-cycle/">
+    <meta property="og:url" content="http://localhost:4000/Spring-Bean-life-cycle/">
     <meta property="og:title" content="Spring Bean lifecycle.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring Bean lifecycle."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring Bean life cycle.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring Bean life cycle.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-Bean-life-cycle/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Bean-life-cycle/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -144,22 +144,22 @@
 </script>
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <p>As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean intialization process throgh differenct ways .</p>
+                <p>As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean initialization process through different ways .</p>
 
 <ul>
   <li>Java supported @PostConstruct and @PreDestroy annotations.</li>
   <li>Implement BeanPostProcessor.</li>
-  <li>Mutliple different interfaces and overriding there methods.</li>
+  <li>Multiple different interfaces and overriding there methods.</li>
   <li>init() and destroy() Or @Bean(initMethod=”init”,destroyMethod=”destroy”)</li>
-  <li>Spring evnt and listners</li>
+  <li>Spring event and listeners</li>
   <li>Spring Boot Runners</li>
 </ul>
 
 <p>Here is rough idea behind method that will be called.</p>
-<h2 id="bean-intialize">Bean Intialize</h2>
+<h2 id="bean-initialize">Bean Initialize</h2>
 <p><img src="/assets/2019-05-12-Spring Bean life cycle-1.JPG" alt="smiley" /></p>
 
-<h2 id="bean-destory">Bean Destory</h2>
+<h2 id="bean-destroy">Bean Destroy</h2>
 <p><img src="/assets/2019-05-12-Spring Bean life cycle-2.JPG" alt="smiley" /></p>
 
 <h2 id="java-supported-postconstruct-and-predestroy">Java supported @PostConstruct and @PreDestroy</h2>
@@ -214,8 +214,8 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<h2 id="mutliple-different-interfaces-and-overriding-there-methods">Mutliple different interfaces and overriding there methods.</h2>
-<p>There are many differnt interface *Aware interfaces and two InitializingBean  DisposableBean interfaces. They provide some methods which has special role spring. Each Aware interface are called after some specific events. We will not discuss this in detals since there are many. It can be covered in another topic.</p>
+<h2 id="multiple-different-interfaces-and-overriding-there-methods">Multiple different interfaces and overriding there methods.</h2>
+<p>There are many different interface *Aware interfaces and two InitializingBean  DisposableBean interfaces. They provide some methods which has special role spring. Each Aware interface are called after some specific events. We will not discuss this in details since there are many. It can be covered in another topic.</p>
 
 <h2 id="init-and-destroy-or-beaninitmethodinitdestroymethoddestroy">init() and destroy() Or @Bean(initMethod=”init”,destroyMethod=”destroy”)</h2>
 <p>init() and destroy()are part of Spring XML based configuration and @Bean(initMethod=”init”,destroyMethod=”destroy”)are part of Spring annotation based configuration, but they both do the same thing. Here is how to use them.
@@ -232,8 +232,8 @@ XML Based.</p>
    <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<h2 id="spring-event-and--listners">Spring event and  Listners</h2>
-<p>Spring emits many application events and you register listerns to them, to do that you just need implement ApplicationListener specific type of event such as below example. Here once ContextRefreshedEvent is raised by spring this listner will be called and intern it will call contextInit method of MyBean.</p>
+<h2 id="spring-event-and--listeners">Spring event and  Listeners</h2>
+<p>Spring emits many application events and you register listeners to them, to do that you just need implement ApplicationListener specific type of event such as below example. Here once ContextRefreshedEvent is raised by spring this listener will be called and intern it will call contextInit method of MyBean.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContextRefreshListener</span> <span class="kd">implements</span> <span class="n">ApplicationListener</span><span class="o">&lt;</span><span class="n">ContextRefreshedEvent</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="nd">@Override</span>
@@ -244,7 +244,7 @@ XML Based.</p>
 <span class="o">}</span>  </code></pre></figure>
 
 <h2 id="spring-boot-runners">Spring Boot Runners</h2>
-<p>Spring comes with two Runner interfaces CommandLineRunner and ApplicationRunner and they are called after application is intialized.  Here is an example.</p>
+<p>Spring comes with two Runner interfaces CommandLineRunner and ApplicationRunner and they are called after application is initialized.  Here is an example.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
 <span class="kd">class</span> <span class="nc">Configuration</span><span class="o">{</span>
@@ -262,21 +262,21 @@ XML Based.</p>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Bean-life-cycle/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-Bean-life-cycle/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Bean-life-cycle/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-Bean-life-cycle/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Bean-life-cycle/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-Bean-life-cycle/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-Bean-life-cycle/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-Bean-life-cycle/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

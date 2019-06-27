@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring Security Architecture.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-Security-Architecture/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Security-Architecture/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,14 +160,14 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>In case you are looking for basic spring security understaing refer to the previous blog of this series <a href="/Spring-MVC-Intro/" title="Spring Security basic">Spring Security basic</a>.</p>
+<p>In case you are looking for basic spring security understating refer to the previous blog of this series <a href="/Spring-MVC-Intro/" title="Spring Security basic">Spring Security basic</a>.</p>
 
-<p>The blog we will discussing breifly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. 
+<p>The blog we will discussing briefly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. 
 <amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" width="691" height="329" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" width="691" height="329"></noscript></amp-img><br>
 Here are few pointer from above images.</p>
 <ul>
   <li>AuthenticationManager is an interface with only one method authenticate.</li>
-  <li>ProviderManager is most used implementaion of AuthenticationManager.</li>
+  <li>ProviderManager is most used implementation of AuthenticationManager.</li>
   <li>ProviderManager can have multiple AuthenticationProvider, You can configure different AuthenticationProvider for different authentication mechanism. Each of them will be called in chain.</li>
 </ul>
 
@@ -179,14 +179,14 @@ Here are few pointer from above images</p>
 </ul>
 
 <h2 id="authenticationmanagerbuilder">AuthenticationManagerBuilder</h2>
-<p>AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right starategy (inmemory, jdbc, datasource etc).</p>
+<p>AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right strategy (inmemory, jdbc, datasource etc).</p>
 
 <h2 id="authorizationaccess-control">Authorization/Access control</h2>
-<p>There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implmentation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
+<p>There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implementation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
 <amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" width="757" height="267" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" width="757" height="267"></noscript></amp-img><br>
-For example, AffirmativeBased implmentation run all the AccessDecisionVoter and if any of them throws exception it denies the access othewise access is granted.</p>
+For example, AffirmativeBased implementation run all the AccessDecisionVoter and if any of them throws exception it denies the access otherwise access is granted.</p>
 
-<h3 id="acess-user-object">Acess User object.</h3>
+<h3 id="access-user-object">Access User object.</h3>
 <p>In case you need to access the User the logged in user object.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"> 
 <span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/foo"</span><span class="o">)</span>

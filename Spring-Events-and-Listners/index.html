@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring Events and Listners.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-Events-and-Listners/">
+    <meta property="og:url" content="http://localhost:4000/Spring-Events-and-Listners/">
     <meta property="og:title" content="Spring Events and Listners.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring Events and Listners."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring Events and Listners.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring Events and Listners.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-Events-and-Listners/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Events-and-Listners/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -145,18 +145,18 @@
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
                 <p>Spring has inbuilt support for publishing and listing events. 
-In layman term if you want to understand what is event and listenr is then, 
-you can thik as somebody shouts your name and said hi and you listned to it and 
-you want to give a reply or not it’s upto you. Here you become a listner listneing on your name event.</p>
+In layman term if you want to understand what is event and listener is then, 
+you can think as somebody shouts your name and said hi and you listener to it and 
+you want to give a reply or not it’s upto you. Here you become a listener listening on your name event.</p>
 
-<p>Spring provides following interfaces and equivalent annotations which you can implement to make event and listern classes.</p>
+<p>Spring provides following interfaces and equivalent annotations which you can implement to make event and listener classes.</p>
 <ul>
   <li>ApplicationEvent or //simply nothing any object can be published from Spring 4.2+</li>
   <li>ApplicationEventPublisher</li>
   <li>ApplicationListner or @EventListener</li>
 </ul>
 
-<p>There three parties classes in Event and listern mechanism. SomeEvent, SomeEventListner, SomeEventData</p>
+<p>There three parties classes in Event and listener mechanism. SomeEvent, SomeEventListner, SomeEventData</p>
 
 <h3 id="old-way">Old way</h3>
 
@@ -251,36 +251,36 @@ you want to give a reply or not it’s upto you. Here you become a listner listn
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listerns.
+<p>You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listeners.
 Whenever a event is published all registered event are notified and based on matching type of Event class they are executed.</p>
 
 <p>In the new example we have some points.</p>
 <ol>
-  <li>@EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listerns.</li>
+  <li>@EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listeners.</li>
   <li>@EventListener methods can return other event object and they will be automatically published.</li>
   <li>@Asyn runs the method in a new thread in a nonblocking way.</li>
-  <li>Condition uses SPel with this method will be called only when the inner condition setisfies.</li>
+  <li>Condition uses SPel with this method will be called only when the inner condition satisfies.</li>
 </ol>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Events-and-Listners/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-Events-and-Listners/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Events-and-Listners/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-Events-and-Listners/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Events-and-Listners/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-Events-and-Listners/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-Events-and-Listners/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-Events-and-Listners/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

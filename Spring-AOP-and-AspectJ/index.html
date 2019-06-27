@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring AOP and AspectJ.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-AOP-and-AspectJ/">
+    <meta property="og:url" content="http://localhost:4000/Spring-AOP-and-AspectJ/">
     <meta property="og:title" content="Spring AOP and AspectJ.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring AOP and AspectJ."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring AOP and AspectJ.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring AOP and AspectJ.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-AOP-and-AspectJ/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-AOP-and-AspectJ/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -144,21 +144,21 @@
 </script>
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <p>Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as loggin, security etc), without modifying your exisiting. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms.</p>
+                <p>Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as logging, security etc), without modifying your existing. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms.</p>
 <ul>
   <li>Aspect - Aspect is modularization of the code which defines the concerns of class, in simpler term it contains pointcuts(rule identifies places in class) and advice (the code which will be executed on joinpoint).</li>
   <li>PointCuts - It defines rule which determines joinpoints(places in class) where advice will be executed. Such as “execution(* com.xyz.bo.<em>BO.</em>(..))”, defines all the methods in interface ending with BO under package “com.xyz.bo”.</li>
-  <li>Joinpoints - Joinpoints are candidate where advice can injected and they are matched to pointcuts rules. Fro example mthod call, method before, method after, method around, constructor call, constructor before, constructor after, object initialization, Field reference, Field assignment, Handler execution, Advice execution	 etc.</li>
+  <li>Joinpoints - Joinpoints are candidate where advice can injected and they are matched to pointcuts rules. Fro example method call, method before, method after, method around, constructor call, constructor before, constructor after, object initialization, Field reference, Field assignment, Handler execution, Advice execution	 etc.</li>
   <li>Aspect -  Aspect are the piece of code which has to are call ed at matching joinpoints and pointcuts.</li>
-  <li>Weaving - Weaving is process of attaching the injectable code. It can be at runtime or compiletime. Spring does it at runtime and AspectJ does it at compiletime.</li>
+  <li>Weaving - Weaving is process of attaching the injectable code. It can be at runtime or compile time. Spring does it at runtime and AspectJ does it at compile time.</li>
 </ul>
 
 <p>In this blog we are going to discuss on both approached Spring AOP and ApspectJ. AspectJ has set the ground for AOP programing while Spring AOP has extended the concept and made it simpler for there use. With Spring you can either go with Spring AOP or AspectJ both. In recent release Spring AOP has adapted the AspectJ annotation with that you will not have difficulty in switching from one to another. Here are some key differences between Spring AOP and Aspect J.</p>
 <ul>
   <li>Spring AOP is runtime weaved while AspectJ Weaved at compile time. We have three different option at compile time. <strong>Compile time, Post Compile and Load time</strong>.</li>
   <li>Spring AOP is basically straight forward and has less learning curve. AspectJ is more versatile and has more feature and join point support.</li>
-  <li>Spring AOP has limitation, it work only when you use the spring contianer.</li>
-  <li>AspectJ requires a utiltiy to be run in order to modify the end compiled package or it can be configured in maven goals.</li>
+  <li>Spring AOP has limitation, it work only when you use the spring container.</li>
+  <li>AspectJ requires a utility to be run in order to modify the end compiled package or it can be configured in maven goals.</li>
   <li>AspectJ has some performance advantage over Spring AOP as AspectJ is weaved at compile time.</li>
 </ul>
 
@@ -230,7 +230,7 @@
 <span class="nt">&lt;/bean&gt;</span></code></pre></figure>
 
 <h3 id="enabling-spring-with-aspectj">Enabling Spring with AspectJ</h3>
-<p>pom.xml will have following dependecies.</p>
+<p>pom.xml will have following dependencies.</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
@@ -262,21 +262,21 @@
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-AOP-and-AspectJ/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-AOP-and-AspectJ/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-AOP-and-AspectJ/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-AOP-and-AspectJ/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-AOP-and-AspectJ/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-AOP-and-AspectJ/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-AOP-and-AspectJ/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-AOP-and-AspectJ/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

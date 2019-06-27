@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>JUnit Basics with JUnit 5.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-JUnit-Basics/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-JUnit-Basics/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,7 +160,7 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>First of all, what is JUnit? JUnit is Java provided library to autmate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method.</p>
+<p>First of all, what is JUnit? JUnit is Java provided library to automate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method.</p>
 
 <p>Let’s quickly jump into JUnit configuration. Add following lines in pom.xml</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
@@ -202,7 +202,7 @@
      
     <span class="nd">@BeforeEach</span>
     <span class="kt">void</span> <span class="nf">callBeforEachMethod</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeEach will be executed before each testmethods in XYZBOImplTest"</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeEach will be executed before each test methods in XYZBOImplTest"</span><span class="o">);</span>
     <span class="o">}</span>
      
     <span class="nd">@Tag</span><span class="o">(</span><span class="s">"dev"</span><span class="o">)</span>
@@ -218,7 +218,7 @@
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">tesXYZBOImplMethod2</span><span class="o">()</span>
     <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Tesing Method 2 of XYZBOImpl"</span><span class="o">));</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Testing Method 2 of XYZBOImpl"</span><span class="o">));</span>
         <span class="n">Assertions</span><span class="o">.</span><span class="na">assertThrows</span><span class="o">(</span><span class="n">Exception</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
             <span class="n">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method2</span><span class="o">()));</span>
         <span class="o">});</span>
@@ -255,7 +255,7 @@
 
 <h3 id="common-annotations">Common annotations.</h3>
 <p><strong>@Test</strong> - Used to decorate method which will considered a test case. <br>
-<strong>@ParameterizedTest</strong> - Run a test method multipel times with different parameter.
+<strong>@ParameterizedTest</strong> - Run a test method multiple times with different parameter.
 @ParameterizedTest
 @ValueSource(strings = { “racecar”, “radar”, “ssoss” })
 void palindromes(String candidate) {
@@ -268,7 +268,7 @@ void palindromes(String candidate) {
 <strong>@Disabled</strong> - Disable the class or method in the test runner.</p>
 
 <h3 id="assertions">Assertions</h3>
-<p>Assertion checks the conditions and thorws assert exception which in the end fails the Junit test case. If none of the asserts in the test case throws assert exception that test case will be marked pass.</p>
+<p>Assertion checks the conditions and throws assert exception which in the end fails the Junit test case. If none of the asserts in the test case throws assert exception that test case will be marked pass.</p>
 <ul>
   <li>assertSame(expected, actual,”fail msg”) // evaluate expected!=actual</li>
   <li>assertNotSame(expected, actual,”fail msg”) //evaluate expected==actual</li>
@@ -281,10 +281,10 @@ void palindromes(String candidate) {
   <li>fail(“fail msg”)  // Throw assert error with msg.</li>
 </ul>
 
-<p>JUnit 5 has “fail msg” as last parmater, It accepts a supplier interface as well for lazy intialization.</p>
+<p>JUnit 5 has “fail msg” as last parameter, It accepts a supplier interface as well for lazy initialization.</p>
 <ul>
-  <li>AssertAll // for grouping mulitple asserts and combinding message.</li>
-  <li>assertIterableEquals //Will match each record of two iterable(ArrayList, linkedlist etc)</li>
+  <li>AssertAll // for grouping multiple asserts and combining message.</li>
+  <li>assertIterableEquals //Will match each record of two iterable(ArrayList, linked list etc)</li>
 </ul>
 
 <h3 id="assumption">Assumption</h3>

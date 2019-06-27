@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring Security Simple.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-Security-Simple/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Security-Simple/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -164,14 +164,14 @@
 
 <p>Spring Security focuses on two main points.</p>
 <ul>
-  <li>Authentication : Verify/Identify the requester’s/user’s idenity.</li>
+  <li>Authentication : Verify/Identify the requesters/user’s identity.</li>
   <li>Authorization: Allow/block resource access based on requester/user’s access level.</li>
 </ul>
 
 <p>There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.</p>
 
 <h2 id="spring-xml-based-configuration">Spring XML based Configuration.</h2>
-<h3 id="pom-needs-following-depedencies">POM needs following depedencies.</h3>
+<h3 id="pom-needs-following-dependencies">POM needs following dependencies.</h3>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>spring-webmvc<span class="nt">&lt;/artifactId&gt;</span>
@@ -233,7 +233,7 @@
     <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-security<span class="nt">&lt;/artifactId&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
-<p>If add following dependency, authetnication is by default enabled, in case you want disable auto configuration use @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) at main class.</p>
+<p>If add following dependency, authentication is by default enabled, in case you want disable auto configuration use @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) at main class.</p>
 
 <h3 id="create-configuration-class">Create configuration class.</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
@@ -265,7 +265,7 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Using the above code you have implmeneted basic spring security with inmemeory hardcoded username and passwords. In case you want to use database for user name and password. We will not be discussing user registration here. Following are the important component of database base user authentication.</p>
+<p>Using the above code you have implemented basic spring security with inmemeory hardcoded username and passwords. In case you want to use database for user name and password. We will not be discussing user registration here. Following are the important component of database base user authentication.</p>
 <ul>
   <li>Database connection</li>
   <li>PasswordEncoder - Helps to encode password before saving to DB and matching at the time of authentication.</li>
@@ -393,7 +393,7 @@
 <h3 id="user-roles">User Roles</h3>
 <p>User roles is crucial part when it comes to authorization of resources based on user authority. You can have any custom role defined in role table and assign those roles to user. On Controllers or services you can access the user roles and write your logic based on roles. There are many ways to check roles.</p>
 <ol>
-  <li>Inject HttpServletRequest arugument and use function request.isUserInRole(“ROLE_<customrole>").</customrole>
+  <li>Inject HttpServletRequest argument and use function request.isUserInRole(“ROLE_<customrole>").</customrole>
 </li>
   <li>Inject SecurityContextHolderAwareRequestWrapper arugument and use function request.isUserInRole(“ROLE_<customrole>").</customrole>
 </li>
@@ -429,7 +429,7 @@
 
 <ol>
   <li>Use @Secured (This one is old compared to preauthorize )
-Preauthorize is comparativley new and supports SpEL such as below.</li>
+Preauthorize is comparatively new and supports SpEL such as below.</li>
 </ol>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">......</span>
 <span class="c1">// usage of SpEL</span>
@@ -441,7 +441,7 @@ Preauthorize is comparativley new and supports SpEL such as below.</li>
 <span class="nd">@Secured</span><span class="o">({</span> <span class="s">"ROLE_ADMIN"</span><span class="o">,</span> <span class="s">"ROLE_USER"</span> <span class="o">})</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">(</span><span class="n">Address</span> <span class="n">address</span><span class="o">)</span></code></pre></figure>
 <ol>
-  <li>@Use RolesAllowed (This is same as secured annotaion but it is as per Java standard )</li>
+  <li>@Use RolesAllowed (This is same as secured annotation but it is as per Java standard )</li>
 </ol>
 
 <footer>

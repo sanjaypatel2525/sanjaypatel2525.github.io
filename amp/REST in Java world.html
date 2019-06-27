@@ -1,0 +1,304 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>REST Services in Java world.</title>
+    <link rel="canonical" href="http://localhost:4000/REST-in-Java-world/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">REST Services in Java world.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>JAX-RS define specification for REST webservice. REST principal goes very well with HTTP protocol that’s the reason people normally interpret REST as REST over HTTP service. There are many libraries are there in market which helps in creating REST services Spring Rest, JAX-RS Jersey, Apache CXF, RestEasy. All are quite a bit same and have matching syntax. In this we will discuss mainly about JAX-RS standard and Jersey implementation of JAX-RS, later little bit on Spring REST.</p>
+
+<h2 id="spring-with-jersey">Spring with Jersey</h2>
+<p>Spring has it’s own rest framework and with different annotations but let’s look at JAX-RS standard J2EE JAX-RS annotation with Spring in action.</p>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-jersey<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JerseyConfig</span> <span class="kd">extends</span> <span class="n">ResourceConfig</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">JerseyConfig</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">register</span><span class="o">(</span><span class="n">EmployeeController</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nd">@Service</span>
+<span class="nd">@Path</span><span class="o">(</span><span class="s">"/employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeController</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="nd">@GET</span>
+    <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+    <span class="nd">@Path</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@POST</span>
+    <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">saveEmployee</span><span class="o">(</span><span class="n">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Form custom response object, use context, use formparam.</span>
+    <span class="nd">@POST</span>
+    <span class="kd">public</span> <span class="n">Response</span> <span class="nf">updateManager</span><span class="o">(</span><span class="nd">@FormParam</span><span class="o">(</span><span class="s">"managerID"</span><span class="o">)</span> <span class="n">managerID</span><span class="o">,</span> <span class="nd">@Context</span> <span class="n">UriInfo</span> <span class="n">uriInfo</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">emp</span> <span class="o">=</span> <span class="n">emp</span><span class="o">.</span><span class="na">setManagerId</span><span class="o">(</span><span class="n">managerID</span><span class="o">)</span>
+        <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">urlPath</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s/%s"</span><span class="o">,</span><span class="n">uriInfo</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span> <span class="c1">// printing url path just to showcase.</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">status</span><span class="o">(</span><span class="n">Response</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">CREATED</span><span class="o">.</span><span class="na">getStatusCode</span><span class="o">())</span>
+          <span class="o">.</span><span class="na">header</span><span class="o">(</span>
+            <span class="s">"Location"</span><span class="o">,</span> 
+            <span class="n">urlPath</span><span class="o">,</span> 
+            <span class="n">employee</span><span class="o">.</span><span class="na">getId</span><span class="o">())).</span><span class="na">build</span><span class="o">();</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Application</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">Application</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="jax-rs-annotation">JAX-RS annotation</h3>
+<p>Check example above to see the annotation usage.<br>
+<strong>@GET</strong> - Method decorator and handle HTTP get request.<br>
+<strong>@Produces &amp; @Consumes</strong> - Defines datatype accepted/produced by method for ex text/xml, text/JSON etc.<br>
+<strong>@Path</strong> - Bind method or class to a URL path and calls it when the path is matched.<br>
+<strong>@PathParam</strong> - Bind the URL matching value to method argument.<br>
+<strong>@QueryParam</strong> - Binds the URL parameter to method argument, Maps GET parameters.<br>
+<strong>@FormParam</strong> - Binds the POST parameters to method arguments.<br>
+<strong>@HeaderParam</strong> - Binds header value to method parameters.<br>
+<strong>@POST</strong> - Binds the complete post parameter to a object in method argument. It usage Java serialization and de-serialization to create Java object.<br>
+<strong>@PUT &amp; @DELETE</strong> - Put is same as post but there is slight difference in logic. DELETE is also same as POST but logically the code inside should do some deletion.<br>
+<strong>@Context</strong> - Getting URI related information.</p>
+
+<h2 id="spring-rest-framework">Spring Rest framework.</h2>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/employee"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeController</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/{id}"</span><span class="o">,</span><span class="n">method</span> <span class="o">=</span> <span class="n">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span><span class="n">produces</span><span class="o">=</span><span class="s">"application/json"</span><span class="o">)</span>
+    <span class="c1">// or @GetMapping</span>
+    <span class="c1">// optional @ResponseStatus(HttpStatus.OK)</span>
+    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/{id}"</span><span class="o">,</span><span class="n">method</span> <span class="o">=</span> <span class="n">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span><span class="n">produces</span><span class="o">=</span><span class="s">"application/json"</span><span class="o">)</span>
+    <span class="c1">// or @PostMapping</span>
+    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">saveEmployee</span><span class="o">(</span><span class="n">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Form custom response object, header information, use requesparam.</span>
+    <span class="nd">@POST</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">updateManager</span><span class="o">(</span> <span class="nd">@RequestParam</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"managerId"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="o">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">"123"</span><span class="o">)</span>  <span class="n">managerID</span><span class="o">,</span> <span class="nd">@RequestHeader</span><span class="o">(</span><span class="s">"Accept-Encoding"</span><span class="o">)</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">,</span> <span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//in case you need request and response variables. </span>
+        
+        <span class="o">...</span>
+        <span class="n">emp</span> <span class="o">=</span> <span class="n">emp</span><span class="o">.</span><span class="na">setManagerId</span><span class="o">(</span><span class="n">managerID</span><span class="o">)</span>
+        <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">encoding</span><span class="o">)</span> <span class="c1">// printing encoding path just to showcase.</span>
+        <span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+        <span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Custom-Header"</span><span class="o">,</span> <span class="s">"foo"</span><span class="o">);</span>
+            
+        <span class="k">return</span> <span class="k">new</span> <span class="n">ResponseEntity</span><span class="o">&lt;&gt;(</span>
+          <span class="n">emp</span><span class="o">,</span> <span class="n">headers</span><span class="o">,</span> <span class="n">HttpStatus</span><span class="o">.</span><span class="na">OK</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+<h3 id="spring-mvc-rest-related-annotations-">Spring MVC rest related annotations .</h3>
+<p><strong>@RestController</strong> - @ResponseBody + @Controller is @RestController, It adds filter to serialize the response.<br>
+<strong>@RequestMapping</strong> - Maps the URL path to class and methods, also specifies the content type of request and response.  Has these fields - method, header, name, value, produces, consumes.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="s">"/somePath1"</span><span class="o">,</span><span class="s">"/somePath2"</span><span class="o">},</span> 
+    <span class="n">method</span> <span class="o">=</span> <span class="o">{</span><span class="n">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span><span class="n">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">},</span>
+    <span class="n">consumes</span> <span class="o">=</span> <span class="o">{</span><span class="s">"application/json"</span><span class="o">,</span><span class="s">"application/xml"</span><span class="o">},</span>
+    <span class="n">produces</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"application/json"</span><span class="o">},</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="o">{</span><span class="s">"application/json"</span><span class="o">})</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">someMethodForTwoPaths</span><span class="o">()</span> <span class="o">{...}</span></code></pre></figure>
+<p><strong>@RequestParam</strong> - @RequestParam maps the get post value to method argument. You can take default values as well.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/somepath"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">somepath</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="o">..</span> <span class="o">}</span></code></pre></figure>
+<p><strong>@PathVariable</strong> - Path variable used to map URL path value to a method argument.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/employee/{id}"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
+<p><strong>@SessionAttribute</strong> - Map session values to method argument.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/getSessionValue"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">getSessionValue</span><span class="o">(</span><span class="nd">@SessionAttribute</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"sessionId"</span><span class="o">)</span> <span class="n">String</span> <span class="n">sessionId</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
+<p><strong>@CookieValue</strong> - Map cookie value to method argument.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/getCookieValue"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">getCookieValue</span><span class="o">(</span><span class="nd">@SessionAttribute</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"var1"</span><span class="o">)</span> <span class="n">String</span> <span class="n">var1</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring Security Simple.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-Security-Simple/">
+    <meta property="og:url" content="http://localhost:4000/Spring-Security-Simple/">
     <meta property="og:title" content="Spring Security Simple.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring Security Simple."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring Security Simple.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring Security Simple.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-Security-Simple/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Security-Simple/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -148,14 +148,14 @@
 
 <p>Spring Security focuses on two main points.</p>
 <ul>
-  <li>Authentication : Verify/Identify the requester’s/user’s idenity.</li>
+  <li>Authentication : Verify/Identify the requesters/user’s identity.</li>
   <li>Authorization: Allow/block resource access based on requester/user’s access level.</li>
 </ul>
 
 <p>There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.</p>
 
 <h2 id="spring-xml-based-configuration">Spring XML based Configuration.</h2>
-<h3 id="pom-needs-following-depedencies">POM needs following depedencies.</h3>
+<h3 id="pom-needs-following-dependencies">POM needs following dependencies.</h3>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
@@ -222,7 +222,7 @@
     <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-security<span class="nt">&lt;/artifactId&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
-<p>If add following dependency, authetnication is by default enabled, in case you want disable auto configuration use @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) at main class.</p>
+<p>If add following dependency, authentication is by default enabled, in case you want disable auto configuration use @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) at main class.</p>
 
 <h3 id="create-configuration-class">Create configuration class.</h3>
 
@@ -255,7 +255,7 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Using the above code you have implmeneted basic spring security with inmemeory hardcoded username and passwords. In case you want to use database for user name and password. We will not be discussing user registration here. Following are the important component of database base user authentication.</p>
+<p>Using the above code you have implemented basic spring security with inmemeory hardcoded username and passwords. In case you want to use database for user name and password. We will not be discussing user registration here. Following are the important component of database base user authentication.</p>
 <ul>
   <li>Database connection</li>
   <li>PasswordEncoder - Helps to encode password before saving to DB and matching at the time of authentication.</li>
@@ -385,7 +385,7 @@
 <h3 id="user-roles">User Roles</h3>
 <p>User roles is crucial part when it comes to authorization of resources based on user authority. You can have any custom role defined in role table and assign those roles to user. On Controllers or services you can access the user roles and write your logic based on roles. There are many ways to check roles.</p>
 <ol>
-  <li>Inject HttpServletRequest arugument and use function request.isUserInRole(“ROLE_<CustomRole>").</CustomRole></li>
+  <li>Inject HttpServletRequest argument and use function request.isUserInRole(“ROLE_<CustomRole>").</CustomRole></li>
   <li>Inject SecurityContextHolderAwareRequestWrapper arugument and use function request.isUserInRole(“ROLE_<CustomRole>").</CustomRole></li>
   <li>Read it from context.</li>
 </ol>
@@ -422,7 +422,7 @@
 
 <ol>
   <li>Use @Secured (This one is old compared to preauthorize )
-Preauthorize is comparativley new and supports SpEL such as below.</li>
+Preauthorize is comparatively new and supports SpEL such as below.</li>
 </ol>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">......</span>
@@ -436,28 +436,28 @@ Preauthorize is comparativley new and supports SpEL such as below.</li>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">(</span><span class="n">Address</span> <span class="n">address</span><span class="o">)</span></code></pre></figure>
 
 <ol>
-  <li>@Use RolesAllowed (This is same as secured annotaion but it is as per Java standard )</li>
+  <li>@Use RolesAllowed (This is same as secured annotation but it is as per Java standard )</li>
 </ol>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Security-Simple/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-Security-Simple/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Security-Simple/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-Security-Simple/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Security-Simple/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-Security-Simple/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-Security-Simple/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-Security-Simple/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

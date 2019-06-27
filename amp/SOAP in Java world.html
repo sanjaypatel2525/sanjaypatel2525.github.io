@@ -1,0 +1,312 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SOAP Services in Java world.</title>
+    <link rel="canonical" href="http://localhost:4000/SOAP-in-Java-world/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11 18:57:06 -0500" class="date">2018-12-11 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">SOAP Services in Java world.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>SOAP(Simple Object Access Protocol) is one of the popular way of inter application communication, application can be on different system or same system using network, can on different languages. SOAP can work with many protocol such http, SMTP etc. SOAP has two flavour RPC Style and Document based. SOAP has strict contract defined in form of WSDL. You can start creating Java class and later define WSDL based on class(bottom up approach) or define WSDL and generate Java class(top down approach). Defining WSDL can be tedious sometime for complex services so top down can be tedious compared bottom up approach.</p>
+
+<h3 id="what-is-wsdl">What is WSDL.</h3>
+<p>WSDL is contract definition written in form of single XML. It contains message type of request and response, endpoints etc. Here is the detailed list of WSDL component.</p>
+<ul>
+  <li>
+<strong>Definition</strong> - It’s root element contains all the required tags to define web service.</li>
+  <li>
+<strong>Types</strong> - To define complex types which is formed out of basic types.</li>
+  <li>
+<strong>PortType</strong> - It holds set of operations.</li>
+  <li>
+<strong>Operations</strong> - Define a service abstract input and output.</li>
+  <li>
+<strong>Binding</strong> - Binding prototype to specific protocol RPC or Document based and also defines transport http or smpt or anything else.</li>
+  <li>
+<strong>Service</strong> - Defines the service endpoint URL and provide a little bit of writeup about service. Only for information purpose.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;definitions</span> <span class="na">name =</span> <span class="s">"EmployeeService"</span>
+   <span class="na">targetNamespace =</span> <span class="s">"http://www.examples.com/wsdl/EmployeeService.wsdl"</span>
+   <span class="na">xmlns =</span> <span class="s">"http://schemas.xmlsoap.org/wsdl/"</span>
+   <span class="na">xmlns:soap =</span> <span class="s">"http://schemas.xmlsoap.org/wsdl/soap/"</span>
+   <span class="na">xmlns:tns =</span> <span class="s">"http://www.examples.com/wsdl/EmployeeService.wsdl"</span>
+   <span class="na">xmlns:xsd =</span> <span class="s">"http://www.w3.org/2001/XMLSchema"</span><span class="nt">&gt;</span>
+ 
+   <span class="nt">&lt;types&gt;</span>
+      to define complex types if there are any........
+   <span class="nt">&lt;/types&gt;</span>
+   <span class="nt">&lt;message</span> <span class="na">name =</span> <span class="s">"GetEmployeeRequest"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;part</span> <span class="na">name =</span> <span class="s">"id"</span> <span class="na">type =</span> <span class="s">"xsd:string"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/message&gt;</span>
+	
+   <span class="nt">&lt;message</span> <span class="na">name =</span> <span class="s">"GetEmployeeResponse"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;part</span> <span class="na">name =</span> <span class="s">"name"</span> <span class="na">type =</span> <span class="s">"xsd:string"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/message&gt;</span>
+
+   <span class="nt">&lt;portType</span> <span class="na">name =</span> <span class="s">"Employee_PortType"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;operation</span> <span class="na">name =</span> <span class="s">"getEmployee"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;input</span> <span class="na">message =</span> <span class="s">"tns:GetEmployeeRequest"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;output</span> <span class="na">message =</span> <span class="s">"tns:GetEmployeeResponse"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/operation&gt;</span>
+   <span class="nt">&lt;/portType&gt;</span>
+
+   <span class="nt">&lt;binding</span> <span class="na">name =</span> <span class="s">"Employee_Binding"</span> <span class="na">type =</span> <span class="s">"tns:Employee_PortType"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;soap:binding</span> <span class="na">style =</span> <span class="s">"rpc"</span>
+         <span class="na">transport =</span> <span class="s">"http://schemas.xmlsoap.org/soap/http"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;operation</span> <span class="na">name =</span> <span class="s">"getEmployee"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;soap:operation</span> <span class="na">soapAction =</span> <span class="s">"getEmployee"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;input&gt;</span>
+            <span class="nt">&lt;soap:body</span>
+               <span class="na">encodingStyle =</span> <span class="s">"http://schemas.xmlsoap.org/soap/encoding/"</span>
+               <span class="na">namespace =</span> <span class="s">"urn:examples:employeeservice"</span>
+               <span class="na">use =</span> <span class="s">"encoded"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;/input&gt;</span>
+         <span class="nt">&lt;output&gt;</span>
+            <span class="nt">&lt;soap:body</span>
+               <span class="na">encodingStyle =</span> <span class="s">"http://schemas.xmlsoap.org/soap/encoding/"</span>
+               <span class="na">namespace =</span> <span class="s">"urn:examples:employeeservice"</span>
+               <span class="na">use =</span> <span class="s">"encoded"</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;/output&gt;</span>
+      <span class="nt">&lt;/operation&gt;</span>
+   <span class="nt">&lt;/binding&gt;</span>
+
+   <span class="nt">&lt;service</span> <span class="na">name =</span> <span class="s">"EmployeeService"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;documentation&gt;</span>WSDL File for EmployeeService<span class="nt">&lt;/documentation&gt;</span>
+      <span class="nt">&lt;port</span> <span class="na">binding =</span> <span class="s">"tns:Employee_Binding"</span> <span class="na">name =</span> <span class="s">"Employee_Port"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;soap:address</span>
+            <span class="na">location =</span> <span class="s">"http://www.examples.com/GetEmployee/"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/port&gt;</span>
+   <span class="nt">&lt;/service&gt;</span>
+<span class="nt">&lt;/definitions&gt;</span></code></pre></figure>
+
+<h3 id="rpc-vs-document-based">RPC vs Document Based.</h3>
+<p>These two are type of message formate. Document based is full fledged complex message which can have multiple for itself while RPC is straight forward input output parameter for a method. You can say Document follows Object based approach and easy to map to and from a Java object while, RPC based is just a simple input output parameter based on that specific method.</p>
+
+<h2 id="top-down-approach">Top down approach.</h2>
+<h3 id="java-command-line-tool">Java command line tool</h3>
+<p>Java provides a small tool to generate Java classes based on defined WSDL. It can create a server side classes as well as client side also.  <em>wsimport -s . -p com.xyz.jaxws.server.topdown employeeservice.wsdl</em><br>
+  It will creates three classes EmployeeService.java, EmployeeService_Service.java and ObjectFactory.java</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@WebService</span><span class="o">(</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s">"EmployeeService"</span><span class="o">,</span> 
+  <span class="n">targetNamespace</span> <span class="o">=</span> <span class="s">"******"</span><span class="o">)</span>
+<span class="nd">@SOAPBinding</span><span class="o">(</span><span class="n">style</span><span class="o">=</span><span class="n">Style</span><span class="o">.</span><span class="na">RPC</span><span class="o">,</span> <span class="n">use</span><span class="o">=</span><span class="n">Use</span><span class="o">.</span><span class="na">ENCODED</span><span class="o">)</span>
+<span class="nd">@XmlSeeAlso</span><span class="o">({</span>
+    <span class="n">ObjectFactory</span><span class="o">.</span><span class="na">class</span>
+<span class="o">})</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeService</span> <span class="o">{</span>
+    <span class="nd">@WebMethod</span><span class="o">(</span>
+      <span class="n">action</span> <span class="o">=</span> <span class="s">"*******"</span>
+      <span class="o">+</span> <span class="s">"EmployeeService/getEmployee"</span><span class="o">)</span>
+    <span class="nd">@WebResult</span><span class="o">(</span>
+      <span class="n">name</span> <span class="o">=</span> <span class="s">"GetEmployeeResponse"</span><span class="o">,</span> 
+      <span class="n">targetNamespace</span> <span class="o">=</span> <span class="s">"********"</span><span class="o">,</span> 
+      <span class="n">partName</span> <span class="o">=</span> <span class="s">"name"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="nd">@WebService</span><span class="o">(</span><span class="n">endpointInterface</span><span class="o">=</span><span class="s">"com.xyz.EmployeeService"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeServiceImpl</span> <span class="kd">implements</span>  <span class="n">EmployeeService</span><span class="o">{</span>
+  <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">){</span>
+      <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+<h3 id="eclipse-web-service-generator-">Eclipse Web service generator .</h3>
+<p>Even eclipse provide support to create the classes automatically based on WSDL. 
+<amp-img src="/assets/2019-06-12-SOAP%20in%20Java%20world_1.jpg" alt="eclipse" width="801" height="390" layout="responsive"><noscript><img src="/assets/2019-06-12-SOAP%20in%20Java%20world_1.jpg" alt="eclipse" width="801" height="390"></noscript></amp-img></p>
+
+<h2 id="bottom-up-approach">Bottom up Approach</h2>
+<p>In bottom up we create a class with some methods and then create service out of it.</p>
+
+<h3 id="java-approach">Java approach.</h3>
+<p>Use @WebService, @WebMethod and @WebResult annotation to annotate the class and methods. It will somewhat same as generated class file from java or eclipse tool. Once you publish the service wsdl will be available on the URL.<br>
+<em>http://localhost/EmployeeService?wsdl</em></p>
+
+<h3 id="eclipse-approach">Eclipse approach.</h3>
+<p>Create a simple bean with methods which needs to be expose. Then in eclipse select bottom up approach and select the bean. It will create helper classes and WSDL automatically. 
+<amp-img src="/assets/2019-06-12-SOAP%20in%20Java%20world_1.jpg" alt="eclipse" width="801" height="390" layout="responsive"><noscript><img src="/assets/2019-06-12-SOAP%20in%20Java%20world_1.jpg" alt="eclipse" width="801" height="390"></noscript></amp-img></p>
+
+<h2 id="creating-client">Creating client.</h2>
+<p><strong>Eclipse tool</strong> - In both the top down and bottom up approach you have option to create client as well. It creats separate project and creates client classes.
+<strong>Java command line tool</strong> - Use following class to create client classes automatically.
+<em>wsimport -keep -p com.xyz.jaxws.client http://localhost/employeeService?wsdl</em></p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeServiceClient</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"http://localhost/employeeService?wsdl"</span><span class="o">);</span>
+ 
+        <span class="n">EmployeeService</span> <span class="n">employeeService</span> 
+          <span class="o">=</span> <span class="k">new</span> <span class="n">EmployeeService</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+        <span class="n">EmployeeService</span> <span class="n">employeeServiceProxy</span> 
+          <span class="o">=</span> <span class="n">employeeService</span><span class="o">.</span><span class="na">getEmployeeServiceImplPort</span><span class="o">();</span>
+ 
+        <span class="n">String</span> <span class="n">name</span> 
+          <span class="o">=</span> <span class="n">employeeServiceProxy</span><span class="o">.</span><span class="na">getEmployees</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="publishing-webservice">Publishing WebService</h3>
+<p>In the end you would need to publish the web service and make it available.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Endpoint</span><span class="o">.</span><span class="na">publish</span><span class="o">(</span>
+          <span class="s">"http://localhost:8080/employeeService"</span><span class="o">,</span> 
+           <span class="k">new</span> <span class="nf">EmployeeServiceImpl</span><span class="o">());</span></code></pre></figure>
+
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

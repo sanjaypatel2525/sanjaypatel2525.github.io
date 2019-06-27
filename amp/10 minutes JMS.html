@@ -1,0 +1,317 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>10 Minutes JMS.</title>
+    <link rel="canonical" href="http://localhost:4000/10-minutes-JMS/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-13 18:57:06 -0500" class="date">2018-12-13 18:57:06 -0500 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">10 Minutes JMS.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>JMS (Java messaging Service) is a standard defined in Java EE to address the producer consumer problem. It standardizes the way of message exchange between two or more system. JMS can be vaguely related to Webservice as they both do the same tasks sending and receiving message. But the main difference lies is Webservice are Synchronous and JMS is asynchronous. Also, we can relate JMS and messaging queues provided different vendor such as WebSphere MQ, ActiveMQ, RabbitMQ etc. AMQP and Microsoft messaging queue does not implement JMS. You can bind <strong>JMS inside a EJB</strong> same as other locale remote network access using java interfaces, webservices etc. Loos coupling, reliability and asynchronous are main characteristics. 
+Here are JMS component.</p>
+<ul>
+  <li>JMS Provider - A system which has implemented JMS specification such as Websphere MQ, RabbitMQ etc.</li>
+  <li>JMS Client - Application or client which produced/receives message.</li>
+  <li>JMS producer/publisher - Application or client which produces message.</li>
+  <li>JMS consumer/subscriber - Application or client which produces message.</li>
+  <li>JMS Message - A message containing data.</li>
+  <li>JMS Queue - Queue is provided by providers they maintains the message until the are delivered to destination application.</li>
+  <li>JMS Topic - Queue is point to point while topic is point to multi point, publish and subscribe model.</li>
+</ul>
+
+<h3 id="you-will-need-a-jms-provider-server">You will need a JMS provider server.</h3>
+<p>You can use Active MQ, Rabbit MQ, Websphere MQ etc, which ever you like and configure few queues in that and get the URL, username password, queue name etc.</p>
+
+<h3 id="different-options-to-configure-jms">Different options to configure JMS</h3>
+<p><strong>Using Application Server</strong> : Since JMS is a specification this is supported by many enterprise level application server for ex IBM Websphere, Weblogic etc. You can configure the JMS URL, queue name, id password etc at Application server level and get it working.</p>
+
+<p><strong>Using Spring Framework</strong> : Overall spring tries to reduce the Job for Application server, Spring provides very light option to support Java specification implementation and one of them is JMS. You can choose to use spring framework to configure JMS client and use JMSTemplate to receive or send the message.</p>
+
+<h2 id="spring-approach">Spring Approach.</h2>
+<p>Add following dependency to your pom.xml.</p>
+<h3 id="for-active-mq">For Active MQ</h3>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>spring-jms<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.apache.activemq<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>activemq-broker<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="c">&lt;!-- Or just starter --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-activemq<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.4.0.RELEASE<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h3 id="for-websphere-mq">For Websphere MQ</h3>
+<!-- https://mvnrepository.com/artifact/com.ibm.mq/mq-jms-spring-boot-starter -->
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>spring-jms<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.ibm.mq<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>mq-jms-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>2.1.2<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<h3 id="sending-message-to-active-mq">Sending Message to Active MQ.</h3>
+<p>Sending requires, spring jmsTemplate, Spring CachingConnectionFactory and Provider provided connection factory.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">xyz</span><span class="o">.</span><span class="na">jms</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.apache.activemq.ActiveMQConnectionFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jms.connection.CachingConnectionFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jms.core.JmsTemplate</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JMSSenderConfiguratipn</span> <span class="o">{</span>
+
+  <span class="nd">@Value</span><span class="o">(</span><span class="s">"${activemq.brokerUrl}"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">brokerUrl</span><span class="o">;</span>
+
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="n">ActiveMQConnectionFactory</span> <span class="nf">createActiveMQConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span>
+        <span class="k">new</span> <span class="nf">ActiveMQConnectionFactory</span><span class="o">();</span>
+    <span class="n">factory</span><span class="o">.</span><span class="na">setBrokerURL</span><span class="o">(</span><span class="n">brokerUrl</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="n">factory</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="n">CachingConnectionFactory</span> <span class="nf">creachCachingConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">CachingConnectionFactory</span><span class="o">(</span>
+        <span class="n">createActiveMQConnectionFactory</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="n">JmsTemplate</span> <span class="nf">jmsTemplate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JmsTemplate</span><span class="o">(</span><span class="n">creachCachingConnectionFactory</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Send message.</span>
+<span class="nd">@Autowired</span>
+<span class="kd">private</span> <span class="n">JmsTemplate</span> <span class="n">jmsTemplate</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="n">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">jmsTemplate</span><span class="o">.</span><span class="na">convertAndSend</span><span class="o">(</span><span class="s">"senderQueuename"</span><span class="o">,</span> <span class="n">msg</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="recieving-message-from-active-mq">Recieving Message from Active MQ.</h3>
+<p>Receiving requires @EnableJms, Spring DefaultJmsListenerContainerFactory  and Provider provided connection.
+package com.xyz.jms;</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">org.apache.activemq.ActiveMQConnectionFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jms.config.DefaultJmsListenerContainerFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jms.core.JmsTemplate</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="nd">@EnableJms</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JMSRecieverConfiguratipn</span> <span class="o">{</span>
+
+  <span class="nd">@Value</span><span class="o">(</span><span class="s">"${activemq.brokerUrl}"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">brokerUrl</span><span class="o">;</span>
+
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="n">ActiveMQConnectionFactory</span> <span class="nf">createActiveMQConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span>
+        <span class="k">new</span> <span class="nf">ActiveMQConnectionFactory</span><span class="o">();</span>
+    <span class="n">factory</span><span class="o">.</span><span class="na">setBrokerURL</span><span class="o">(</span><span class="n">brokerUrl</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="n">factory</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="n">DefaultJmsListenerContainerFactory</span>  <span class="nf">creachCachingConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">DefaultJmsListenerContainerFactory</span> <span class="o">(</span>
+        <span class="n">createActiveMQConnectionFactory</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//receive message</span>
+<span class="nd">@JmsListener</span><span class="o">(</span><span class="n">destination</span> <span class="o">=</span> <span class="s">"recieverQueuename"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">receive</span><span class="o">(</span><span class="n">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// use msg.  // It is asynchronusly invoked</span>
+<span class="o">}</span>
+<span class="c1">// Or </span>
+<span class="nd">@Autowired</span>
+<span class="kd">private</span> <span class="n">JmsTemplate</span> <span class="n">jmsTemplate</span><span class="o">;</span>
+<span class="o">.....</span>
+<span class="n">jmsTemplate</span><span class="o">.</span><span class="na">receiveAndConvert</span><span class="o">(</span><span class="s">"DEV.QUEUE.1"</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span> <span class="c1">// It blocks the flow. </span></code></pre></figure>
+
+<h3 id="send--recive-message-to-websphere-mq">Send &amp; Recive message to Websphere MQ.</h3>
+<p>Since we are using Spring JMS Websphere MQ started jar, the jmsTemplate is already created which you can use anywhere in your code. 
+Add @EnableJMS to your configuration class and add the following key value pair in property file.</p>
+<figure class="highlight"><pre><code class="language-property" data-lang="property">ibm.mq.queueManager=QM1
+ibm.mq.channel=DEV.ADMIN.SVRCONN
+ibm.mq.connName=localhost(1414)
+ibm.mq.user=username
+ibm.mq.password=password</code></pre></figure>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

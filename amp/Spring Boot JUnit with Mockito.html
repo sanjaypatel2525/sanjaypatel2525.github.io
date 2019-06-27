@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring Boot JUnit with Mockito.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-Boot-JUnit-with-Mockito/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Boot-JUnit-with-Mockito/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,7 +160,7 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>There are cases when you want to write test cases for your method, but the method itslef usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up.</p>
+<p>There are cases when you want to write test cases for your method, but the method itself usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up.</p>
 
 <p>Mockito is very famous mocking api. With this you can mock any object and just focus on testing of your method only.</p>
 
@@ -174,7 +174,7 @@
 	<span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
 	<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
-<p>Once you add boot starter, it will automatically add following dependenies to your project.</p>
+<p>Once you add boot starter, it will automatically add following dependencies to your project.</p>
 <ul>
   <li>Basic JUnit.</li>
   <li>Spring unit test framework</li>
@@ -224,7 +224,7 @@
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">afterClass</span><span class="o">()...</span>
     <span class="o">...</span>
 
-    <span class="c1">//this method will faile with null pointer exception as employeeDao is not defined for this object.</span>
+    <span class="c1">//this method will fails with null pointer exception as employeeDao is not defined for this object.</span>
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">testEmployeeBad</span><span class="o">(){</span>
         <span class="n">employeeBOImpl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EmployeeBOImpl</span><span class="o">();</span>
@@ -250,13 +250,13 @@
   <li>Init Mockito first – MockitoAnnotations.initMocks(this)</li>
   <li>Or use Mockito runner – @RunWith(MockitoJUnitRunner.class)
     <h3 id="doreturnwhen">doReturn+when</h3>
-    <p>Eaerlier we have sued when with then return, ‘when+thenReturn’ has some limitation such it can’t work void method also, if you don’t use mocked object in ‘when’ it might call function on actual object and throw some errors. While doreturn+when handles both the scenrios well. It doesn’t call actuall method of object but it mockt the function call.<br>
+    <p>Earlier we have sued when with then return, ‘when+thenReturn’ has some limitation such it can’t work void method also, if you don’t use mocked object in ‘when’ it might call function on actual object and throw some errors. While doreturn+when handles both the scenarios well. It doesn’t call actually method of object but it mocks the function call.<br>
 <em>doReturn(emp).when(emp).getEmployee(anyInt());</em></p>
     <h3 id="dothrowwhen">doThrow+when</h3>
     <p>Same as doRetrun, doThrow can throw a exception on specific method of the object.
 <em>doThrow(NullPointerException.class).when(emp).getEmployee(anyInt());</em></p>
     <h3 id="add-a-spy">Add a Spy</h3>
-    <p>Mockito provide a utility a object which keeps an eye on the target object. It tracks the intractions on target object.</p>
+    <p>Mockito provide a utility a object which keeps an eye on the target object. It tracks the interactions on target object.</p>
   </li>
 </ul>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">spy</span><span class="o">(</span><span class="k">new</span> <span class="n">Employee</span><span class="o">());</span>
@@ -270,18 +270,18 @@
 <p>Inject mock takes a mock object and inserts into another object just like autowiring.</p>
 
 <h3 id="mock-vs-spy">Mock vs Spy.</h3>
-<p>Spy is a wrapper around actual instance and tracks the activity on instance while mock is barebone mocked instance created for the class. Use spy when you want to track activity on object it works on actuall object, use mock when you just want barebone object of the class. 
+<p>Spy is a wrapper around actual instance and tracks the activity on instance while mock is bare-bone mocked instance created for the class. Use spy when you want to track activity on object it works on actually object, use mock when you just want bare-bone object of the class. 
 EmployeeDao employeeDao = mock(EmployeeDao.class); // create a mocked object of the class
 EmployeeDao employeeDao = spy(new EmployeeDao()));  //creates new actual object and wraps a spy</p>
 
 <h3 id="argumentmatcher">ArgumentMatcher</h3>
-<p>You might have seen <em>anyInt(), anyString()</em> passed in argument of method when using ‘when’ or doReturn feature of mockito. These are ArgumentMatcher, you dont need to pass actual values but can match with a argument type or so. For custome class you can use <em>any(CustomClass.class)</em>. There is option to create customer matcher as well.</p>
+<p>You might have seen <em>anyInt(), anyString()</em> passed in argument of method when using ‘when’ or doReturn feature of mockito. These are ArgumentMatcher, you don’t need to pass actual values but can match with a argument type or so. For custom class you can use <em>any(CustomClass.class)</em>. There is option to create customer matcher as well.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomMatcher</span> <span class="kd">implements</span> <span class="n">ArgumentMatcher</span><span class="o">&lt;</span><span class="n">CustomClass</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">CustomClass</span> <span class="n">customClass</span><span class="o">;</span>
     <span class="c1">// constructors</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">matches</span><span class="o">(</span><span class="n">customClass</span> <span class="n">customClass</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// do something and retun if matches.</span>
+        <span class="c1">// do something and return if matches.</span>
     <span class="o">}</span>
 <span class="o">}</span> </code></pre></figure>
 

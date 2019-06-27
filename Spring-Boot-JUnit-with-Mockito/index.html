@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Spring Boot JUnit with Mockito.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="http://localhost:4000/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Spring-Boot-JUnit-with-Mockito/">
+    <meta property="og:url" content="http://localhost:4000/Spring-Boot-JUnit-with-Mockito/">
     <meta property="og:title" content="Spring Boot JUnit with Mockito.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="http://localhost:4000/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Spring Boot JUnit with Mockito."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="http://localhost:4000/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Spring Boot JUnit with Mockito.html">
+        <link rel="amphtml" href="http://localhost:4000/amp/Spring Boot JUnit with Mockito.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -61,8 +61,8 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Spring-Boot-JUnit-with-Mockito/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/Spring-Boot-JUnit-with-Mockito/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="http://localhost:4000/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
@@ -101,17 +101,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="http://localhost:4000/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="http://localhost:4000/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="http://localhost:4000/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="http://localhost:4000/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="http://localhost:4000/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="http://localhost:4000/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -144,7 +144,7 @@
 </script>
             </section>
             <article role="article" id="post" class="post-content" itemprop="articleBody">
-                <p>There are cases when you want to write test cases for your method, but the method itslef usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up.</p>
+                <p>There are cases when you want to write test cases for your method, but the method itself usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up.</p>
 
 <p>Mockito is very famous mocking api. With this you can mock any object and just focus on testing of your method only.</p>
 
@@ -160,7 +160,7 @@
 	<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
-<p>Once you add boot starter, it will automatically add following dependenies to your project.</p>
+<p>Once you add boot starter, it will automatically add following dependencies to your project.</p>
 <ul>
   <li>Basic JUnit.</li>
   <li>Spring unit test framework</li>
@@ -211,7 +211,7 @@
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">afterClass</span><span class="o">()...</span>
     <span class="o">...</span>
 
-    <span class="c1">//this method will faile with null pointer exception as employeeDao is not defined for this object.</span>
+    <span class="c1">//this method will fails with null pointer exception as employeeDao is not defined for this object.</span>
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">testEmployeeBad</span><span class="o">(){</span>
         <span class="n">employeeBOImpl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EmployeeBOImpl</span><span class="o">();</span>
@@ -238,13 +238,13 @@
   <li>Init Mockito first – MockitoAnnotations.initMocks(this)</li>
   <li>Or use Mockito runner – @RunWith(MockitoJUnitRunner.class)
     <h3 id="doreturnwhen">doReturn+when</h3>
-    <p>Eaerlier we have sued when with then return, ‘when+thenReturn’ has some limitation such it can’t work void method also, if you don’t use mocked object in ‘when’ it might call function on actual object and throw some errors. While doreturn+when handles both the scenrios well. It doesn’t call actuall method of object but it mockt the function call.<br />
+    <p>Earlier we have sued when with then return, ‘when+thenReturn’ has some limitation such it can’t work void method also, if you don’t use mocked object in ‘when’ it might call function on actual object and throw some errors. While doreturn+when handles both the scenarios well. It doesn’t call actually method of object but it mocks the function call.<br />
 <em>doReturn(emp).when(emp).getEmployee(anyInt());</em></p>
     <h3 id="dothrowwhen">doThrow+when</h3>
     <p>Same as doRetrun, doThrow can throw a exception on specific method of the object.
 <em>doThrow(NullPointerException.class).when(emp).getEmployee(anyInt());</em></p>
     <h3 id="add-a-spy">Add a Spy</h3>
-    <p>Mockito provide a utility a object which keeps an eye on the target object. It tracks the intractions on target object.</p>
+    <p>Mockito provide a utility a object which keeps an eye on the target object. It tracks the interactions on target object.</p>
   </li>
 </ul>
 
@@ -260,19 +260,19 @@
 <p>Inject mock takes a mock object and inserts into another object just like autowiring.</p>
 
 <h3 id="mock-vs-spy">Mock vs Spy.</h3>
-<p>Spy is a wrapper around actual instance and tracks the activity on instance while mock is barebone mocked instance created for the class. Use spy when you want to track activity on object it works on actuall object, use mock when you just want barebone object of the class. 
+<p>Spy is a wrapper around actual instance and tracks the activity on instance while mock is bare-bone mocked instance created for the class. Use spy when you want to track activity on object it works on actually object, use mock when you just want bare-bone object of the class. 
 EmployeeDao employeeDao = mock(EmployeeDao.class); // create a mocked object of the class
 EmployeeDao employeeDao = spy(new EmployeeDao()));  //creates new actual object and wraps a spy</p>
 
 <h3 id="argumentmatcher">ArgumentMatcher</h3>
-<p>You might have seen <em>anyInt(), anyString()</em> passed in argument of method when using ‘when’ or doReturn feature of mockito. These are ArgumentMatcher, you dont need to pass actual values but can match with a argument type or so. For custome class you can use <em>any(CustomClass.class)</em>. There is option to create customer matcher as well.</p>
+<p>You might have seen <em>anyInt(), anyString()</em> passed in argument of method when using ‘when’ or doReturn feature of mockito. These are ArgumentMatcher, you don’t need to pass actual values but can match with a argument type or so. For custom class you can use <em>any(CustomClass.class)</em>. There is option to create customer matcher as well.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomMatcher</span> <span class="kd">implements</span> <span class="n">ArgumentMatcher</span><span class="o">&lt;</span><span class="n">CustomClass</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">CustomClass</span> <span class="n">customClass</span><span class="o">;</span>
     <span class="c1">// constructors</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">matches</span><span class="o">(</span><span class="n">customClass</span> <span class="n">customClass</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// do something and retun if matches.</span>
+        <span class="c1">// do something and return if matches.</span>
     <span class="o">}</span>
 <span class="o">}</span> </code></pre></figure>
 
@@ -281,21 +281,21 @@ EmployeeDao employeeDao = spy(new EmployeeDao()));  //creates new actual object 
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Spring-Boot-JUnit-with-Mockito/%20via%20&#64;&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Spring-Boot-JUnit-with-Mockito/%20via%20&#64;&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Spring-Boot-JUnit-with-Mockito/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Spring-Boot-JUnit-with-Mockito/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Spring-Boot-JUnit-with-Mockito/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Spring-Boot-JUnit-with-Mockito/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Spring-Boot-JUnit-with-Mockito/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Spring-Boot-JUnit-with-Mockito/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">

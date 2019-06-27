@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Spring AOP and AspectJ.</title>
-    <link rel="canonical" href="https://abyte.stream/Spring-AOP-and-AspectJ/" />
+    <link rel="canonical" href="http://localhost:4000/Spring-AOP-and-AspectJ/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,21 +160,21 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as loggin, security etc), without modifying your exisiting. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms.</p>
+<p>Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as logging, security etc), without modifying your existing. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms.</p>
 <ul>
   <li>Aspect - Aspect is modularization of the code which defines the concerns of class, in simpler term it contains pointcuts(rule identifies places in class) and advice (the code which will be executed on joinpoint).</li>
   <li>PointCuts - It defines rule which determines joinpoints(places in class) where advice will be executed. Such as “execution(* com.xyz.bo.<em>BO.</em>(..))”, defines all the methods in interface ending with BO under package “com.xyz.bo”.</li>
-  <li>Joinpoints - Joinpoints are candidate where advice can injected and they are matched to pointcuts rules. Fro example mthod call, method before, method after, method around, constructor call, constructor before, constructor after, object initialization, Field reference, Field assignment, Handler execution, Advice execution	 etc.</li>
+  <li>Joinpoints - Joinpoints are candidate where advice can injected and they are matched to pointcuts rules. Fro example method call, method before, method after, method around, constructor call, constructor before, constructor after, object initialization, Field reference, Field assignment, Handler execution, Advice execution	 etc.</li>
   <li>Aspect -  Aspect are the piece of code which has to are call ed at matching joinpoints and pointcuts.</li>
-  <li>Weaving - Weaving is process of attaching the injectable code. It can be at runtime or compiletime. Spring does it at runtime and AspectJ does it at compiletime.</li>
+  <li>Weaving - Weaving is process of attaching the injectable code. It can be at runtime or compile time. Spring does it at runtime and AspectJ does it at compile time.</li>
 </ul>
 
 <p>In this blog we are going to discuss on both approached Spring AOP and ApspectJ. AspectJ has set the ground for AOP programing while Spring AOP has extended the concept and made it simpler for there use. With Spring you can either go with Spring AOP or AspectJ both. In recent release Spring AOP has adapted the AspectJ annotation with that you will not have difficulty in switching from one to another. Here are some key differences between Spring AOP and Aspect J.</p>
 <ul>
   <li>Spring AOP is runtime weaved while AspectJ Weaved at compile time. We have three different option at compile time. <strong>Compile time, Post Compile and Load time</strong>.</li>
   <li>Spring AOP is basically straight forward and has less learning curve. AspectJ is more versatile and has more feature and join point support.</li>
-  <li>Spring AOP has limitation, it work only when you use the spring contianer.</li>
-  <li>AspectJ requires a utiltiy to be run in order to modify the end compiled package or it can be configured in maven goals.</li>
+  <li>Spring AOP has limitation, it work only when you use the spring container.</li>
+  <li>AspectJ requires a utility to be run in order to modify the end compiled package or it can be configured in maven goals.</li>
   <li>AspectJ has some performance advantage over Spring AOP as AspectJ is weaved at compile time.</li>
 </ul>
 
@@ -244,7 +244,7 @@
 <span class="nt">&lt;/bean&gt;</span></code></pre></figure>
 
 <h3 id="enabling-spring-with-aspectj">Enabling Spring with AspectJ</h3>
-<p>pom.xml will have following dependecies.</p>
+<p>pom.xml will have following dependencies.</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>spring-aop<span class="nt">&lt;/artifactId&gt;</span>
