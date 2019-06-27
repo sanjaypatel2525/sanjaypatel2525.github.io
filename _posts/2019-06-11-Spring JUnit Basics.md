@@ -9,7 +9,7 @@ password: ''
 status: publish
 categories: []
 tags: []
-randomImage: '13'
+randomImage: '16'
 meta:
   _edit_last: '1'
 author:
@@ -19,7 +19,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-First of all, what is JUnit? JUnit is Java provided library to autmate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method. 
+First of all, what is JUnit? JUnit is Java provided library to automate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method. 
 
 Let's quickly jump into JUnit configuration. Add following lines in pom.xml
 {% highlight XML %}
@@ -66,7 +66,7 @@ public class XYZBOImplTest {
      
     @BeforeEach
     void callBeforEachMethod(){
-        System.out.println("@BeforeEach will be executed before each testmethods in XYZBOImplTest");
+        System.out.println("@BeforeEach will be executed before each test methods in XYZBOImplTest");
     }
      
     @Tag("dev")
@@ -82,7 +82,7 @@ public class XYZBOImplTest {
     @Test
     void tesXYZBOImplMethod2()
     {
-        System.out.println("Tesing Method 2 of XYZBOImpl"));
+        System.out.println("Testing Method 2 of XYZBOImpl"));
         Assertions.assertThrows(Exception.class, () -> {
             Assertions.assertEquals( "some return value" , impl.method2()));
         });
@@ -120,7 +120,7 @@ public class JUnit5TestSuiteExample1
 
 ### Common annotations.
 **@Test** - Used to decorate method which will considered a test case.   
-**@ParameterizedTest** - Run a test method multipel times with different parameter.
+**@ParameterizedTest** - Run a test method multiple times with different parameter.
 @ParameterizedTest
 @ValueSource(strings = { "racecar", "radar", "ssoss" })
 void palindromes(String candidate) {
@@ -133,7 +133,7 @@ void palindromes(String candidate) {
 **@Disabled** - Disable the class or method in the test runner.
 
 ### Assertions
-Assertion checks the conditions and thorws assert exception which in the end fails the Junit test case. If none of the asserts in the test case throws assert exception that test case will be marked pass.
+Assertion checks the conditions and throws assert exception which in the end fails the Junit test case. If none of the asserts in the test case throws assert exception that test case will be marked pass.
 * assertSame(expected, actual,"fail msg") // evaluate expected!=actual
 * assertNotSame(expected, actual,"fail msg") //evaluate expected==actual
 * assertEquals(expected, actual,"fail msg") // evaluate expected.equals(actual)
@@ -144,9 +144,9 @@ Assertion checks the conditions and thorws assert exception which in the end fai
 * assertNotNull(obj,"fail msg")  // will pass if obj is not null
 * fail("fail msg")  // Throw assert error with msg.
 
-JUnit 5 has "fail msg" as last parmater, It accepts a supplier interface as well for lazy intialization. 
-* AssertAll // for grouping mulitple asserts and combinding message.
-* assertIterableEquals //Will match each record of two iterable(ArrayList, linkedlist etc)
+JUnit 5 has "fail msg" as last parameter, It accepts a supplier interface as well for lazy initialization. 
+* AssertAll // for grouping multiple asserts and combining message.
+* assertIterableEquals //Will match each record of two iterable(ArrayList, linked list etc)
 
 ### Assumption
 Assumption helps in writing conditional Junit test case. Test cases can be skipped if assumption is not matched. If test case assumption is not met, test case will be aborted and skipped.

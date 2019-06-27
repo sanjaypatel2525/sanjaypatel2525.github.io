@@ -9,7 +9,7 @@ password: ''
 status: publish
 categories: []
 tags: []
-randomImage: '13'
+randomImage: '17'
 meta:
   _edit_last: '1'
 author:
@@ -19,18 +19,18 @@ author:
   first_name: ''
   last_name: ''
 ---
-Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as loggin, security etc), without modifying your exisiting. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms. 
+Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as logging, security etc), without modifying your existing. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms. 
 * Aspect - Aspect is modularization of the code which defines the concerns of class, in simpler term it contains pointcuts(rule identifies places in class) and advice (the code which will be executed on joinpoint).
 * PointCuts - It defines rule which determines joinpoints(places in class) where advice will be executed. Such as "execution(* com.xyz.bo.*BO.*(..))", defines all the methods in interface ending with BO under package "com.xyz.bo".
-* Joinpoints - Joinpoints are candidate where advice can injected and they are matched to pointcuts rules. Fro example mthod call, method before, method after, method around, constructor call, constructor before, constructor after, object initialization, Field reference, Field assignment, Handler execution, Advice execution	 etc.
+* Joinpoints - Joinpoints are candidate where advice can injected and they are matched to pointcuts rules. Fro example method call, method before, method after, method around, constructor call, constructor before, constructor after, object initialization, Field reference, Field assignment, Handler execution, Advice execution	 etc.
 * Aspect -  Aspect are the piece of code which has to are call ed at matching joinpoints and pointcuts. 
-* Weaving - Weaving is process of attaching the injectable code. It can be at runtime or compiletime. Spring does it at runtime and AspectJ does it at compiletime.
+* Weaving - Weaving is process of attaching the injectable code. It can be at runtime or compile time. Spring does it at runtime and AspectJ does it at compile time.
 
 In this blog we are going to discuss on both approached Spring AOP and ApspectJ. AspectJ has set the ground for AOP programing while Spring AOP has extended the concept and made it simpler for there use. With Spring you can either go with Spring AOP or AspectJ both. In recent release Spring AOP has adapted the AspectJ annotation with that you will not have difficulty in switching from one to another. Here are some key differences between Spring AOP and Aspect J. 
 * Spring AOP is runtime weaved while AspectJ Weaved at compile time. We have three different option at compile time. **Compile time, Post Compile and Load time**.
 * Spring AOP is basically straight forward and has less learning curve. AspectJ is more versatile and has more feature and join point support. 
-* Spring AOP has limitation, it work only when you use the spring contianer. 
-* AspectJ requires a utiltiy to be run in order to modify the end compiled package or it can be configured in maven goals.
+* Spring AOP has limitation, it work only when you use the spring container. 
+* AspectJ requires a utility to be run in order to modify the end compiled package or it can be configured in maven goals.
 * AspectJ has some performance advantage over Spring AOP as AspectJ is weaved at compile time. 
 
 Here is an example.
@@ -105,7 +105,7 @@ public class BeforeAdvisor implements MethodBeforeAdvice{
 {% endhighlight %}
 
 ### Enabling Spring with AspectJ
-pom.xml will have following dependecies.
+pom.xml will have following dependencies.
 {% highlight XML %}
 <dependency>
   <groupId>org.springframework</groupId>

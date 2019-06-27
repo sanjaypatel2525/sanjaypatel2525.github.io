@@ -19,9 +19,9 @@ author:
   first_name: ''
   last_name: ''
 ---
-Normally objects are intialized and bound in code itself. Inversion of control is a approach to bind object at runtime using a binder program. 
+Normally objects are initialized and bound in code itself. Inversion of control is a approach to bind object at runtime using a binder program. 
 
-IoC is design patter to give control to components, while it usage Dependecy Injection DI to achieve that. DI is helps us giving framework to bind the object at runtime. Example of IoC are,
+IoC is design patter to give control to components, while it usage Dependency Injection DI to achieve that. DI is helps us giving framework to bind the object at runtime. Example of IoC are,
 * DI
 * Factory pattern
 * Service locator framework
@@ -41,11 +41,11 @@ IoC is design patter to give control to components, while it usage Dependecy Inj
 {% endhighlight %}
 
 # Bean scope
-* Singleton - Will have only one thorught application.
-* Prototype - Can have mutiple objects. 
-* Request - Will store variable on a request and recreta on new request.
-* session - Will create and keep been on sessio. 
-* global-session - consider it as applation scope. Rarely chaneges.
+* Singleton - Will have only one thorough application.
+* Prototype - Can have multiple objects. 
+* Request - Will store variable on a request and recreate on new request.
+* session - Will create and keep been on session. 
+* global-session - consider it as application scope. Rarely changes.
 
 {% highlight xml %}
  <bean id="someBean" class="com.packahe.DemoBean" scope="session" />

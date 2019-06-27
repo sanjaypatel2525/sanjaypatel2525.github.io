@@ -19,7 +19,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-Spring container has capbility of automatically injecting dependencies while intiating bean. There are 5 different modes. 
+Spring container has capability of automatically injecting dependencies while initiating bean. There are 5 different modes. 
 * No Autowire - XML Based Default
 * Autowire by Type - Java Based Default
 * Autowire by Name
@@ -45,7 +45,7 @@ You can turn on autowire feature by using following code in your XML. With this 
 </bean>
 {% endhighlight %}
 
-You can autowire class properties directly even if they are private, you can autowire fields by constructor paramters or setters parameter. What if you have two ApplicationUser object in container which one application object will use, In XML based you can just give objectname but in Java class you will have to use  @Qualifier("applicationUser2") to identify which one to pick.
+You can autowire class properties directly even if they are private, you can autowire fields by constructor parameters or setters parameter. What if you have two ApplicationUser object in container which one application object will use, In XML based you can just give object name but in Java class you will have to use  @Qualifier("applicationUser2") to identify which one to pick.
 {% highlight JAVA %}
 @Autowired
 @Qualifier ("applicationUser2")

@@ -19,8 +19,8 @@ author:
   first_name: ''
   last_name: ''
 ---
-Spring has many modules to make cut short project devlopment lifecycle. One of the most commonaly used module is Spring MVC. 
-There have many differnt versions of Spring MVC. We are going to discuss about the most recent ones.
+Spring has many modules to make cut short project development lifecycle. One of the most commonalty used module is Spring MVC. 
+There have many different versions of Spring MVC. We are going to discuss about the most recent ones.
 
 ## What is MVC. 
 MVS stands for model, view and controller. It is a design pattern mainly for web based projects. 
@@ -29,7 +29,7 @@ MVS stands for model, view and controller. It is a design pattern mainly for web
 * View is display to the user (It usage model to show dynamic data)
 * Controller takes request and update data/model and redirects to view.
 
-Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request maping to cantroller and resolving the view. Contoller and it's method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the viewname and resolved the JSP or equivalent markup language to render the data. 
+Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request mapping to controller and resolving the view. Controller and it's method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the view name and resolved the JSP or equivalent markup language to render the data. 
 ![smiley](/assets/2019-05-17-Spring MVC Intro-2.JPG)
 
 ## Configuring Disaptcher serverl in Web.xml 
@@ -61,7 +61,7 @@ Add following to pom.xml
 {% endhighlight %}
 
 ## XML Based Basic Configuration 
-Configure componenet scan package and view resolver.
+Configure component scan package and view resolver.
 {% highlight XML %}
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -146,7 +146,7 @@ public class Application {
 {% endhighlight %}
 
 
-## Spring MVC annotataions.
+## Spring MVC annotations.
 Here we will see the Spring annotations briefly. 
 * @Controller Or @RestController
 * @RequestMapping
@@ -157,11 +157,11 @@ Here we will see the Spring annotations briefly.
 * @RequestHeader
 
 ### @Controller Or @RestController
-Controller provide a URL to method mapping, Controller classes will be singleton and will automatically gets registered in Spring Dispatcher. RestController is specialy type of controller to serialize and transform(JSON,XML etc) the response object directly. If not you would have to use **@ResponseBody** to transform the objects.
+Controller provide a URL to method mapping, Controller classes will be singleton and will automatically gets registered in Spring Dispatcher. RestController is specials type of controller to serialize and transform(JSON,XML etc) the response object directly. If not you would have to use **@ResponseBody** to transform the objects.
 
 **RequestMapping**, Request mapping is used define the URL path for that method or controller class.
 
-**@RequestBody**, In case you want desrialize the request object to some class you can use @RequestBody. It transform JSON,XML to java object. 
+**@RequestBody**, In case you want deserialize the request object to some class you can use @RequestBody. It transform JSON,XML to java object. 
 
 **@RequestHeader**, In case you want capture request headers in some variable. 
 {% highlight JAVA %}
@@ -208,7 +208,7 @@ public class ResourceRestController {
 {% endhighlight %}
 
 ## Model, ModelMap, ModelAndView, ModelAttribute
-Model is an interface and ModelMap is implmentation of that class you can use them interchangebly.
+Model is an interface and ModelMap is implementation of that class you can use them interchangeably.
 {% highlight JAVA %}
 ...
  @GetMapping("/modelExample", produces = "application/json")
@@ -217,7 +217,7 @@ Model is an interface and ModelMap is implmentation of that class you can use th
         return "viewName";
  }
     @GetMapping("/modelExampleWithView", produces = "application/json")
-    public ModelAndView getResource(Modeland model) { //Request header 
+    public ModelAndView getResource(Model model) { //Request header 
         ModelAndView modelAndView = new ModelAndView("viewPage");
         modelAndView.addObject("msg","Hello there");
         return modelAndView;

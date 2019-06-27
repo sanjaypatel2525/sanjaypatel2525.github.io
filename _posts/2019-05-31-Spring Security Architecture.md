@@ -19,13 +19,13 @@ author:
   first_name: ''
   last_name: ''
 ---
-In case you are looking for basic spring security understaing refer to the previous blog of this series [Spring Security basic](/Spring-MVC-Intro/ "Spring Security basic").
+In case you are looking for basic spring security understating refer to the previous blog of this series [Spring Security basic](/Spring-MVC-Intro/ "Spring Security basic").
 
-The blog we will discussing breifly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let's look into below diagrams and then we will have detailed discussion on this. 
+The blog we will discussing briefly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let's look into below diagrams and then we will have detailed discussion on this. 
 ![gras](/assets/2019-05-31-Spring Security Architecture-1.png)  
 Here are few pointer from above images. 
 * AuthenticationManager is an interface with only one method authenticate.
-* ProviderManager is most used implementaion of AuthenticationManager.
+* ProviderManager is most used implementation of AuthenticationManager.
 * ProviderManager can have multiple AuthenticationProvider, You can configure different AuthenticationProvider for different authentication mechanism. Each of them will be called in chain.
 
 ![gras](/assets/2019-05-31-Spring Security Architecture-2.png)
@@ -35,14 +35,14 @@ Here are few pointer from above images
 
 
 ## AuthenticationManagerBuilder
-AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right starategy (inmemory, jdbc, datasource etc).
+AuthenticationManagerBuilder is utility helps us configuring the AuthenticationManager, such as picking the right strategy (inmemory, jdbc, datasource etc).
 
 ## Authorization/Access control
-There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implmentation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
+There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implementation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
 ![gras](/assets/2019-05-31-Spring Security Architecture-3.png)  
-For example, AffirmativeBased implmentation run all the AccessDecisionVoter and if any of them throws exception it denies the access othewise access is granted. 
+For example, AffirmativeBased implementation run all the AccessDecisionVoter and if any of them throws exception it denies the access otherwise access is granted. 
 
-### Acess User object.
+### Access User object.
 In case you need to access the User the logged in user object.
 {% highlight JAVA %} 
 @RequestMapping("/foo")

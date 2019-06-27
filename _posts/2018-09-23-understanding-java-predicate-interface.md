@@ -5,6 +5,7 @@ date: 2018-09-23 02:28:16.000000000 -04:00
 type: post
 parent_id: '0'
 published: true
+randomImage: '26'
 password: ''
 status: publish
 redirect_from:

@@ -4,6 +4,7 @@ title: When to use Java Optional Class
 date: 2018-09-23 01:29:34.000000000 -04:00
 type: post
 parent_id: '0'
+randomImage: '27'
 published: true
 password: ''
 status: publish

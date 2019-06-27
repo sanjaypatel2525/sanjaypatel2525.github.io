@@ -9,7 +9,7 @@ password: ''
 status: publish
 categories: []
 tags: []
-randomImage: '13'
+randomImage: '15'
 meta:
   _edit_last: '1'
 author:
@@ -19,7 +19,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-There are cases when you want to write test cases for your method, but the method itslef usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up. 
+There are cases when you want to write test cases for your method, but the method itself usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up. 
 
 Mockito is very famous mocking api. With this you can mock any object and just focus on testing of your method only. 
 
@@ -35,7 +35,7 @@ Let's quickly jump into Spring boot JUnit configuration. Add following lines in 
 	<scope>test</scope>
 </dependency>
 {% endhighlight  %}
-Once you add boot starter, it will automatically add following dependenies to your project.
+Once you add boot starter, it will automatically add following dependencies to your project.
 * Basic JUnit. 
 * Spring unit test framework
 * Asserts - AssertJ, Hamcrest Assert, JSONAssert, Java assert
@@ -84,7 +84,7 @@ public class EmployeeBOImplTest{
 	public static void afterClass()...
     ...
 
-    //this method will faile with null pointer exception as employeeDao is not defined for this object.
+    //this method will fails with null pointer exception as employeeDao is not defined for this object.
     @Test
     void testEmployeeBad(){
         employeeBOImpl = new EmployeeBOImpl();
@@ -111,13 +111,13 @@ public class EmployeeBOImplTest{
 * Init Mockito first -- MockitoAnnotations.initMocks(this)
 * Or use Mockito runner -- @RunWith(MockitoJUnitRunner.class)  
 ### doReturn+when 
-Eaerlier we have sued when with then return, 'when+thenReturn' has some limitation such it can't work void method also, if you don't use mocked object in 'when' it might call function on actual object and throw some errors. While doreturn+when handles both the scenrios well. It doesn't call actuall method of object but it mockt the function call.  
+Earlier we have sued when with then return, 'when+thenReturn' has some limitation such it can't work void method also, if you don't use mocked object in 'when' it might call function on actual object and throw some errors. While doreturn+when handles both the scenarios well. It doesn't call actually method of object but it mocks the function call.  
 *doReturn(emp).when(emp).getEmployee(anyInt());*  
 ### doThrow+when
 Same as doRetrun, doThrow can throw a exception on specific method of the object.
 *doThrow(NullPointerException.class).when(emp).getEmployee(anyInt());*  
 ### Add a Spy
-Mockito provide a utility a object which keeps an eye on the target object. It tracks the intractions on target object.
+Mockito provide a utility a object which keeps an eye on the target object. It tracks the interactions on target object.
 {% highlight JAVA %}
 Employee emp = spy(new Employee());
 emp.setRole("MANAGER");  // the real setRole method is called. 
@@ -131,19 +131,19 @@ when(emp.getRole()).thenReturn("MANAGER"); // real method will called here and c
  Inject mock takes a mock object and inserts into another object just like autowiring.
 
 ### Mock vs Spy.
-Spy is a wrapper around actual instance and tracks the activity on instance while mock is barebone mocked instance created for the class. Use spy when you want to track activity on object it works on actuall object, use mock when you just want barebone object of the class. 
+Spy is a wrapper around actual instance and tracks the activity on instance while mock is bare-bone mocked instance created for the class. Use spy when you want to track activity on object it works on actually object, use mock when you just want bare-bone object of the class. 
 EmployeeDao employeeDao = mock(EmployeeDao.class); // create a mocked object of the class
 EmployeeDao employeeDao = spy(new EmployeeDao()));  //creates new actual object and wraps a spy
 
 ### ArgumentMatcher
-You might have seen *anyInt(), anyString()* passed in argument of method when using 'when' or doReturn feature of mockito. These are ArgumentMatcher, you dont need to pass actual values but can match with a argument type or so. For custome class you can use *any(CustomClass.class)*. There is option to create customer matcher as well. 
+You might have seen *anyInt(), anyString()* passed in argument of method when using 'when' or doReturn feature of mockito. These are ArgumentMatcher, you don't need to pass actual values but can match with a argument type or so. For custom class you can use *any(CustomClass.class)*. There is option to create customer matcher as well. 
 {% highlight Java %}
 public class CustomMatcher implements ArgumentMatcher<CustomClass> {
     private CustomClass customClass;
     // constructors
     @Override
     public boolean matches(customClass customClass) {
-        // do something and retun if matches.
+        // do something and return if matches.
     }
 } 
 {% endhighlight  %}

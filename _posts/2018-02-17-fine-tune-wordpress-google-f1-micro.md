@@ -31,7 +31,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-In our previous blog, we have discussed <a href="http://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/">setting up domain for your Wordpress website</a>. In continuation to that, in this blog, we will be discussing finetuning your WordPress Setup to run Google F1 Micro VM Instance.
+In our previous blog, we have discussed <a href="http://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/">setting up domain for your Wordpress website</a>. In continuation to that, in this blog, we will be discussing fine tuning your WordPress Setup to run Google F1 Micro VM Instance.
 
 Google F1 Micro instance gives 30 GB of disk space,  0.6 GB of Memory and 1 CPU, which is no doubt very small configuration.
 Wordpress has vast plugin library for plugins. In this blog, we are going to cover few must-have plugins for us to increase reduce our website load and load you website in seconds.

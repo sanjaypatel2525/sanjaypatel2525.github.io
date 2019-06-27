@@ -4,6 +4,7 @@ title: Java 8 double colon operator
 date: 2018-09-15 22:43:51.000000000 -04:00
 type: post
 parent_id: '0'
+randomImage: '29'
 published: true
 password: ''
 status: publish
@@ -42,7 +43,7 @@ author:
   last_name: ''
 ---
 ## Lambda for Method reference Or Java Double colon operator
-What is the Java 8 double colon operator ? You must have seen some shortcode like,
+What is the Java 8 double colon operator ? You must have seen some short code like,
 {% highlight java %}System.out::println
 
 {% endhighlight %}
@@ -56,7 +57,7 @@ Here is how we can do the same in Java.
 {% highlight java %}interface Utility{
  int biggerNumber(int x,int y);
 }
-Utility utility = Math::max; //Assign method defination to antoher signature matching method.
+Utility utility = Math::max; //Assign method definition to another signature matching method.
 
 utility.biggerNumber(3,8) // returns 8
 {% endhighlight %}

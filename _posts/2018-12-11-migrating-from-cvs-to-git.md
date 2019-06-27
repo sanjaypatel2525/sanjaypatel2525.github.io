@@ -33,7 +33,7 @@ author:
   last_name: ''
 ---
 In good old days, CVS used to be one of the most used SCM (source control management) tool. With the growing technology and the need of distributed systems, Git was born and with this CVS started rusting out. This is much of history for now.
-There are cases when we have a requirement to move our codebase from CVS to Git without losing commit histories. If we dontIn this blog, we are going to discuss the same.
+There are cases when we have a requirement to move our codebase from CVS to Git without losing commit histories. If we don't In this blog, we are going to discuss the same.
 ### Basic requirement.
 
 * Need Python installed.

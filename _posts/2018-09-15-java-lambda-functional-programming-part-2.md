@@ -5,6 +5,7 @@ date: 2018-09-15 23:18:31.000000000 -04:00
 type: post
 parent_id: '0'
 published: true
+randomImage: '24'
 password: ''
 status: publish
 redirect_from:
@@ -77,7 +78,7 @@ squareFunc.square(3);  // return 9{% endhighlight %}
 
 
 ### Multiple parameters.
-Multiple parameters are enclosed in parenthesis.  Funcation interface having method which accepts two parameters and returns one value are often called Two-Arity Functions. Here are the Java-defined interfaces for these kinds of methods.<br />
+Multiple parameters are enclosed in parenthesis.  Function interface having method which accepts two parameters and returns one value are often called Two-Arity Functions. Here are the Java-defined interfaces for these kinds of methods.<br />
 ToIntBiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction
 {% highlight java %}interface AddInt{ 
     int add(int a, int b);

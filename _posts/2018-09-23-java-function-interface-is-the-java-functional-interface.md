@@ -7,6 +7,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
+randomImage: '25'
 redirect_from:
   - /2018/09/15/java-lambda-functional-programming-part-2/
   - /2018/09/15/java-lambda-functional-programming-part-2/amp/
@@ -96,5 +97,5 @@ finalString.apply("3"); // print 2,1,3,{% endhighlight %}
 ## 4. Java Function Interface is the Java Functional interface
 By now you must have figured out Function Interface is actually an interface which is annotated by @funcationInterface and has an only single method to do small function based logic.
 ## 5. Conclusion
-In this blog, we have discussed the Java function interface and what is are funcational interfaces. Also, how Function interface can be chained easily.
+In this blog, we have discussed the Java function interface and what is are functional interfaces. Also, how Function interface can be chained easily.
 &nbsp;

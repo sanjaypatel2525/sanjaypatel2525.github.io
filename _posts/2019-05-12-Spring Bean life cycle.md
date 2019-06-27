@@ -19,20 +19,20 @@ author:
   first_name: ''
   last_name: ''
 ---
-As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean intialization process throgh differenct ways .
+As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean initialization process through different ways .
 
 * Java supported @PostConstruct and @PreDestroy annotations.
 * Implement BeanPostProcessor.
-* Mutliple different interfaces and overriding there methods.
+* Multiple different interfaces and overriding there methods.
 * init() and destroy() Or @Bean(initMethod="init",destroyMethod="destroy")
-* Spring evnt and listners
+* Spring event and listeners
 * Spring Boot Runners
 
 Here is rough idea behind method that will be called.
-## Bean Intialize
+## Bean Initialize
 ![smiley](/assets/2019-05-12-Spring Bean life cycle-1.JPG)
 
-## Bean Destory
+## Bean Destroy
 ![smiley](/assets/2019-05-12-Spring Bean life cycle-2.JPG)
 
 
@@ -92,8 +92,8 @@ public class CustomBeanPostProcessor implements BeanPostProcessor, Ordered {
 }
 {% endhighlight %}
 
-## Mutliple different interfaces and overriding there methods.
-There are many differnt interface *Aware interfaces and two InitializingBean  DisposableBean interfaces. They provide some methods which has special role spring. Each Aware interface are called after some specific events. We will not discuss this in detals since there are many. It can be covered in another topic.
+## Multiple different interfaces and overriding there methods.
+There are many different interface *Aware interfaces and two InitializingBean  DisposableBean interfaces. They provide some methods which has special role spring. Each Aware interface are called after some specific events. We will not discuss this in details since there are many. It can be covered in another topic.
 
 ##  init() and destroy() Or @Bean(initMethod="init",destroyMethod="destroy")
 init() and destroy()are part of Spring XML based configuration and @Bean(initMethod="init",destroyMethod="destroy")are part of Spring annotation based configuration, but they both do the same thing. Here is how to use them.
@@ -112,8 +112,8 @@ public class AppConfig {
 }
 {% endhighlight %}
 
-## Spring event and  Listners
-Spring emits many application events and you register listerns to them, to do that you just need implement ApplicationListener specific type of event such as below example. Here once ContextRefreshedEvent is raised by spring this listner will be called and intern it will call contextInit method of MyBean.
+## Spring event and  Listeners
+Spring emits many application events and you register listeners to them, to do that you just need implement ApplicationListener specific type of event such as below example. Here once ContextRefreshedEvent is raised by spring this listener will be called and intern it will call contextInit method of MyBean.
 {% highlight JAVA %}
 public class ContextRefreshListener implements ApplicationListener<ContextRefreshedEvent> {
     @Override
@@ -125,7 +125,7 @@ public class ContextRefreshListener implements ApplicationListener<ContextRefres
 {% endhighlight %}
 
 ## Spring Boot Runners
-Spring comes with two Runner interfaces CommandLineRunner and ApplicationRunner and they are called after application is intialized.  Here is an example.
+Spring comes with two Runner interfaces CommandLineRunner and ApplicationRunner and they are called after application is initialized.  Here is an example.
 {% highlight JAVA %}
 @Configuration
 class Configuration{

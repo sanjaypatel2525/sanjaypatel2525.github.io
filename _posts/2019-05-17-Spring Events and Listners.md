@@ -20,16 +20,16 @@ author:
   last_name: ''
 ---
 Spring has inbuilt support for publishing and listing events. 
-In layman term if you want to understand what is event and listenr is then, 
-you can thik as somebody shouts your name and said hi and you listned to it and 
-you want to give a reply or not it's upto you. Here you become a listner listneing on your name event.
+In layman term if you want to understand what is event and listener is then, 
+you can think as somebody shouts your name and said hi and you listener to it and 
+you want to give a reply or not it's upto you. Here you become a listener listening on your name event.
 
-Spring provides following interfaces and equivalent annotations which you can implement to make event and listern classes.
+Spring provides following interfaces and equivalent annotations which you can implement to make event and listener classes.
 * ApplicationEvent or //simply nothing any object can be published from Spring 4.2+
 * ApplicationEventPublisher
 * ApplicationListner or @EventListener
 
-There three parties classes in Event and listern mechanism. SomeEvent, SomeEventListner, SomeEventData
+There three parties classes in Event and listener mechanism. SomeEvent, SomeEventListner, SomeEventData
 
 ### Old way
 {% highlight JAVA %}
@@ -128,11 +128,11 @@ class Main{
 
 {% endhighlight %}
 
-You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listerns.
+You can see above we have two way of defining Event and listeners. There can be n number of events and n number of listeners.
 Whenever a event is published all registered event are notified and based on matching type of Event class they are executed. 
 
 In the new example we have some points.
-1. @EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listerns.
+1. @EventListener replaces the ApplicationListner way of implementation, here within single class you can have n number of listeners.
 2. @EventListener methods can return other event object and they will be automatically published. 
 3. @Asyn runs the method in a new thread in a nonblocking way.
-4. Condition uses SPel with this method will be called only when the inner condition setisfies. 
+4. Condition uses SPel with this method will be called only when the inner condition satisfies. 

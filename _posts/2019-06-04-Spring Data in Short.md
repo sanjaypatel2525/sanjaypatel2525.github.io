@@ -19,9 +19,9 @@ author:
   first_name: ''
   last_name: ''
 ---
-There are many different data storage system in the market currently and in order to connect and query differnt system you might have to use differnt query syntax. Spring Data is one of the advance module and has many submodule to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.
+There are many different data storage system in the market currently and in order to connect and query different system you might have to use different query syntax. Spring Data is one of the advance module and has many sub-module to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.
 
-For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries resectively.   
+For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries respectively.   
 select * from Employee where id = 5;  
 db.employee.find( { _id: 5 } );  
 But with spring data you just need to define one method and Spring data takes care of forming internal queries.  
@@ -41,6 +41,7 @@ Enable package scan by @EnableJpaRepositories(basePackages = "com.mycompany.repo
 ### Create repository interface.
 Implement any of the repository interface. 
 {% highlight JAVA %}
+@Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     public List<Employee> findByLastName(String lastName); // select * from Employee where lastname=:lastname
 }
@@ -54,7 +55,7 @@ class Employee{
 }
 {% endhighlight %}
 
-There are three different repostories Spring Data Supports. 
+There are three different repositories Spring Data Supports. 
 * CrudRepository
 * PagingAndSortingRepository
 * JpaRepository
@@ -90,7 +91,7 @@ employeeRepository.delete(employee); // delete from Employee where id=:employee.
 {% endhighlight %}  
 
 ### PagingAndSortingRepository
-PagingAndSortingRepository implments CrudRepository so you get all the perks of CrudRepository and something extra. 
+PagingAndSortingRepository implements CrudRepository so you get all the perks of CrudRepository and something extra. 
 {% highlight JAVA %}
 public interface PagingAndSortingRepository<T, ID extends Serializable> 
   extends CrudRepository<T, ID> {
@@ -109,11 +110,11 @@ Sort sort = new Sort(new Sort.Order(Direction.DESC, "lastName"));
 Pageable pageable = new PageRequest(0, 15, sort);
 employeeRepository.findByLastName("Jack", pageable); // select * from Employee where lastname=:lastname and rownum>0 and rownum<15  order by lastName desc;
 {% endhighlight %}  
-PagingAndSortingRepository gives you feature to getch records in pages and sort the results. 
+PagingAndSortingRepository gives you feature to get records in pages and sort the results. 
 
 ### JpaRepository
 {% highlight JAVA %}
-JpaRepository implments PagingAndSortingRepository and gives you some persitant level feature.
+JpaRepository implements PagingAndSortingRepository and gives you some persistent level feature.
 public interface JpaRepository<T, ID extends Serializable> extends
   PagingAndSortingRepository<T, ID> {
  
@@ -132,11 +133,11 @@ public interface JpaRepository<T, ID extends Serializable> extends
 {% endhighlight %}
 
 ## Spring Data features. 
-Let us see some benigits of having spring data. 
-### No DAO intercaces. 
-You dont need to write your DAO interface if you can manage with basic crud features such as insert, delete, update, read etc.
+Let us see some benefits of having spring data. 
+### No DAO interfaces. 
+You don't need to write your DAO interface if you can manage with basic crud features such as insert, delete, update, read etc.
 ### Support custom queries.
-In case you need to cocnifgure custom query which are not supported by Crud interface, then you can define your custom implmentation class where you can use custome queries. 
+In case you need to cocnifgure custom query which are not supported by Crud interface, then you can define your custom implementation class where you can use custom queries. 
 {% highlight JAVA %}
 //Examples
 public interface EmployeeRepositoryCustom{
@@ -147,7 +148,7 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long>,Emplo
     public List<Employee> findByLastName(String lastName, Pageable pageable); // select * from Employee where lastname=:lastname
 }
 
-public class EmployeeRepositoryCustomImpl impleents EmployeeRepositoryCustom{
+public class EmployeeRepositoryCustomImpl implements EmployeeRepositoryCustom{
    public List<Employee> runComplexQuery(){
      ....
      // Use any kind of query generation classes or just right plain query and use jdbctemplate.
@@ -157,7 +158,7 @@ public class EmployeeRepositoryCustomImpl impleents EmployeeRepositoryCustom{
 {% endhighlight %}
 
 ### Query based on method name.
-Based on method names spring tries to create query for them, for exmaple.
+Based on method names spring tries to create query for them, for example.
 Employee findByFirstNameAndLastName(String firstname, String lastName); // where firstname=:firstname and lastnmae= : lastname
 Employee findByAgeGreaterThanOrderByFirstnameDesc(int age); // where age>:age order by firstname desc
 

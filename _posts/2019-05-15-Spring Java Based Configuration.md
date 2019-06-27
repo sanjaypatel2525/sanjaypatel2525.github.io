@@ -57,7 +57,7 @@ public class AppConfig {
 This can be related to a XML file, not exactly though but it defines a class annotation with @Configuration will mainly be used to configured spring bean. Even a configuration class will have a singleton instance in spring container.
 
 ## @Bean
-@Bean mostly used over getter methods which returns a object of a class. This you can relate to <bean/> tag of XML based configuration.  Bean attribute with name property will override the object name and later you can '@Autowire' it with '@qualifier(name=). initMethodName and destroyMethodName provies the feature what we use to have in Spring XML based configuraiton init-method and destroy-method.
+@Bean mostly used over getter methods which returns a object of a class. This you can relate to <bean/> tag of XML based configuration.  Bean attribute with name property will override the object name and later you can '@Autowire' it with '@qualifier(name=). initMethodName and destroyMethodName provides the feature what we use to have in Spring XML based configuration init-method and destroy-method.
 
 ## @Scope
 Scope attribute helps us to define the scope of the bean which have learnt in previous blog singleton, prototype, request, session, global and global session.
@@ -68,5 +68,5 @@ Scope attribute helps us to define the scope of the bean which have learnt in pr
 
 ## Pros of XML Based Configuration. 
 * Centralized configuration, you don't need to search your code for a bean you can find everything in XML.
-* You can Hot patch XML file easily, as these wouldn't get's convereted to class file.
+* You can Hot patch XML file easily, as these wouldn't get's converted to class file.
 * You can define explicit name of bean and wire them.

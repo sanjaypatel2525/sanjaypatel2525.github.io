@@ -6,6 +6,7 @@ type: post
 parent_id: '0'
 published: true
 password: ''
+randomImage: '23'
 status: publish
 redirect_from:
   - /2018/09/23/java-consumer-and-supplier-interfaces/

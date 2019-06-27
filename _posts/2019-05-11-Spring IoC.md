@@ -19,7 +19,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-Spring IoC container is heart of the spring framework. It is container to hold the spring objects and maintaince the spring objects lifecycle. 
+Spring IoC container is heart of the spring framework. It is container to hold the spring objects and maintenance the spring objects lifecycle. 
 
 Spring provide two different type if containers.
 * Bean Factory Container
@@ -46,7 +46,7 @@ MyClass obj = (MyClass) factory.getBean("myClassObj");
 * String[] getAliases(String)
 
 # ApplicationContext container
-This is more towards enterprise implementations, It has many extensible feature like AOP, Databases, logging, etc. It contains all the funcationality of BeanFactory as well. It's an interface "org.springframework.context.ApplicationContext";
+This is more towards enterprise implementations, It has many extensible feature like AOP, Databases, logging, etc. It contains all the functionality of BeanFactory as well. It's an interface "org.springframework.context.ApplicationContext";
 
 
 ## Common implementation are,

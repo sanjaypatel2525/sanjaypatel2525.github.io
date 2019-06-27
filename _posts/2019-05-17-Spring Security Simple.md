@@ -22,13 +22,13 @@ author:
 This blog we are going to discuss a easiest approach to implement spring security, Spring Security Details is will more into customization points wrt to standard spring architecture. 
 
 Spring Security focuses on two main points.
-* Authentication : Verify/Identify the requester's/user's idenity.
+* Authentication : Verify/Identify the requesters/user's identity.
 * Authorization: Allow/block resource access based on requester/user's access level.
 
 There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.
 
 ## Spring XML based Configuration. 
-### POM needs following depedencies. 
+### POM needs following dependencies. 
 {% highlight XML %}
 <dependency>
     <groupId>org.springframework</groupId>
@@ -98,7 +98,7 @@ Basic HTTP authentication.
     <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 {% endhighlight %}
-If add following dependency, authetnication is by default enabled, in case you want disable auto configuration use @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) at main class.
+If add following dependency, authentication is by default enabled, in case you want disable auto configuration use @SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) at main class.
 
 ### Create configuration class.
 {% highlight JAVA %}
@@ -132,7 +132,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
 }
 {% endhighlight %}
 
-Using the above code you have implmeneted basic spring security with inmemeory hardcoded username and passwords. In case you want to use database for user name and password. We will not be discussing user registration here. Following are the important component of database base user authentication.
+Using the above code you have implemented basic spring security with inmemeory hardcoded username and passwords. In case you want to use database for user name and password. We will not be discussing user registration here. Following are the important component of database base user authentication.
 * Database connection
 * PasswordEncoder - Helps to encode password before saving to DB and matching at the time of authentication.
 * User from DB (jdbcAuthentication and DaoAuthenticationProvider/UserDetailService)
@@ -263,7 +263,7 @@ public class Role {
 
 ### User Roles
 User roles is crucial part when it comes to authorization of resources based on user authority. You can have any custom role defined in role table and assign those roles to user. On Controllers or services you can access the user roles and write your logic based on roles. There are many ways to check roles. 
-1. Inject HttpServletRequest arugument and use function request.isUserInRole("ROLE_<CustomRole>").
+1. Inject HttpServletRequest argument and use function request.isUserInRole("ROLE_<CustomRole>").
 2. Inject SecurityContextHolderAwareRequestWrapper arugument and use function request.isUserInRole("ROLE_<CustomRole>").
 3. Read it from context.
 {% highlight JAVA %}
@@ -297,7 +297,7 @@ public class CustomService {
 {% endhighlight %}
 
 5. Use @Secured (This one is old compared to preauthorize )
-Preauthorize is comparativley new and supports SpEL such as below.  
+Preauthorize is comparatively new and supports SpEL such as below.  
 {% highlight JAVA %}
 ......
 // usage of SpEL
@@ -309,4 +309,4 @@ public void someMethod(Address address)
 @Secured({ "ROLE_ADMIN", "ROLE_USER" })
 public void someMethod(Address address)
 {% endhighlight %}
-6. @Use RolesAllowed (This is same as secured annotaion but it is as per Java standard )
+6. @Use RolesAllowed (This is same as secured annotation but it is as per Java standard )

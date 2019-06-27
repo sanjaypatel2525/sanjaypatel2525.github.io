@@ -26,7 +26,7 @@ Hibernate, hibernate-jpa, Spring ORM, Spring data JPA and many more. All this se
   <artifactId>spring-boot-starter-jpa</artifactId>
 </dependency> 
 {% endhighlight %}
-Basically, Spring boot gives a starter project for your data acces layer which is based on ORM concept and by default usage hibernate as persistant api. This blog we are not going to discuss about how spring encapsulated hibernate under it but we are going to discuss about Hibernate basics and there Spring alternative way of writing code. 
+Basically, Spring boot gives a starter project for your data access layer which is based on ORM concept and by default usage hibernate as persistent api. This blog we are not going to discuss about how spring encapsulated hibernate under it but we are going to discuss about Hibernate basics and there Spring alternative way of writing code. 
 ![gras](/assets/2019-06-04-Hibernate in Short.png)
 ### Hibernate in action with JPA.
 * Create Entity class
@@ -62,9 +62,9 @@ employeeRepository.delete(emp);
 
 
 ### Pros and Cons of Hibernate over Plain JDBC.
-Hibernate is a ORM **Object-relational mapping**, It maps the entity classes to database tables. Sometime it easy to map one to one entity to table but sometime it really gets complex when you have inheritance, different kind of table relationships such as one to one, one to many and  manay to many. Also it really gets messy if you don't handle the fetch and cascade paramters properly. But over all it has many advantages over its disadvantages. That why it is so popular.
+Hibernate is a ORM **Object-relational mapping**, It maps the entity classes to database tables. Sometime it easy to map one to one entity to table but sometime it really gets complex when you have inheritance, different kind of table relationships such as one to one, one to many and  many to many. Also it really gets messy if you don't handle the fetch and cascade parameters properly. But over all it has many advantages over its disadvantages. That why it is so popular.
 * Reduces and reusage code.  
-You dont need write query again and again for insert update or anything. 
+You don't need write query again and again for insert update or anything. 
 * Independent of database.
 You can use any underlying database without modifying your code. You just need change dialect and pom entry to update driver of the database.   
 *spring.jpa.properties.hibernate.dialect =  org.hibernate.dialect.DB2Dialect*
@@ -83,10 +83,10 @@ In memory is always faster then the reaching out to DB for the data. Hibernate h
 * Connection Pooling.  
 Inbuilt support of connection pooling. It create pool of connection which is faster then creating a new connection and terminating it. 
 * Supports HQL(superset of JPQL).  
-HQL is a query language supported in Hibernates, In queries you can direclty use classname and it autmatically genrates the database queries. 
+HQL is a query language supported in Hibernates, In queries you can directly use classname and it automatically generates the database queries. 
 * Automatic versioning.  
 Maintains different version of data and saves the headach of missing the data. 
-* Perfomance  
+* Performance  
 The query generated here will be highly optimized in most of the cases. 
 
 
@@ -118,9 +118,9 @@ spring.datasource.url=jdbc:mysql://localhost:3306/testDB?createDatabaseIfNotExis
 * Transient  
 Object just created but not attached to hibernate session and not connected to database. 
 * Persistent  
-Object attached hibernate session and connected to database, any update to this will be relected in database. 
+Object attached hibernate session and connected to database, any update to this will be reflected in database. 
 * Detached  
-Object detached from session. It happend when session is closed or you can manually detach it.
+Object detached from session. It happened when session is closed or you can manually detach it.
 
 ### Session, SessionFactory and Transaction. 
 SessionFactory provide you the session class which can be used to attach, detach, save, query etc. Session supports transaction as well.
@@ -150,13 +150,13 @@ catch (Exception e) {
 **@Table** - It is optional. Used with @Entity, in case you want different name of the table.  
 **@Column** - It is optional, in case you want different name of the field.  
 **@Id** - Makes field primary key, you will have to use @GeneratedValue if you want generated values of id.  
-**@GeneratedValue** - To generate field value. There four type of it. Auto(Unique value accorss database), identity(Unique accors class hierarchy), sequence(custome sequence ex:start:100, increment- 10), Table.  
+**@GeneratedValue** - To generate field value. There four type of it. Auto(Unique value across database), identity(Unique across class hierarchy), sequence(custom sequence ex:start:100, increment- 10), Table.  
 **@Version** - For versioning and concurrency you can keep a field which defines a version.  
-**@Transient** - In case you dont want a field to be part of database mapping.  
+**@Transient** - In case you don't want a field to be part of database mapping.  
 
 {% highlight JAVA %}
 @Entity
-@Table(name = "Employee_Custome_Table_Name")
+@Table(name = "Employee_Custom_Table_Name")
 public class Employee implements Serializable {
   @Id
   @GeneratedValue
@@ -243,7 +243,7 @@ public class EmployeeBadge implements Serializable {
 }
 {% endhighlight  %}
 
-**@OneToMany & @ManyToOne** - Both are represent same logical thing. A Project can have many employeed which is one to many. Many employee can be mapped a single project which is many to one. It depends how you organize your java class. 
+**@OneToMany & @ManyToOne** - Both are represent same logical thing. A Project can have many employees which is one to many. Many employee can be mapped a single project which is many to one. It depends how you organize your java class. 
 {% highlight JAVA %}
 // One to Many example. 
 @Entity
@@ -281,7 +281,7 @@ public class Project{
 @Table(name = "employee")
 public class Employee{
   @ManyToOne
-  @JoinColumn(name = "projectId") // if this annotaition not present it defaults to table relation @JoinTable(name = "project_employee")
+  @JoinColumn(name = "projectId") // if this annotation not present it defaults to table relation @JoinTable(name = "project_employee")
   Project project;
   .....
 }
@@ -348,12 +348,12 @@ System.out.println("Rows affected: " + count);
 {% endhighlight %}
 
 ### Criteria API.
-Criteria api helps you to ommit sqls or HQL where you have to pass the query as string. Criteria API provides you set of classes and utilities with which you can form queries. You can create Criteria object form session.
+Criteria api helps you to omit sqls or HQL where you have to pass the query as string. Criteria API provides you set of classes and utilities with which you can form queries. You can create Criteria object form session.
 
 Criteria ct = session.createCriteria(Employee.class);
 List<Employee> results = ct.list();
 
-**Using Restriction** - Restriction class with and, or, eq, ne, gt, lt, ge, le, like,ilike, between, in, conjuction, disjunction, isNull, isNotNull, sqlRestriction(String sql, Object value, Type type) etc. 
+**Using Restriction** - Restriction class with and, or, eq, ne, gt, lt, ge, le, like,ilike, between, in, conjunction, disjunction, isNull, isNotNull, sqlRestriction(String sql, Object value, Type type) etc. 
 
 {% highlight JAVA %}
 Criteria ct = session.createCriteria(Employee.class);
@@ -408,7 +408,7 @@ List<Employee> results = query.list();
 {% endhighlight  %}
 
 ## Caching in Hibernate.
-Hibernates has two level level of cache. Firstlevel is by default there and maintained by session container. You can't change first level cache. Second level cache is left for developer where he can defined his own caching strategies at each class level. Such as Employee class secondary cache can use any of the below strategies.  
+Hibernates has two level level of cache. First level is by default there and maintained by session container. You can't change first level cache. Second level cache is left for developer where he can defined his own caching strategies at each class level. Such as Employee class secondary cache can use any of the below strategies.  
 **Transactional** - Cached data will be retained only in transaction.  
 **Read-write** - It create read write lock on table and updates if the data has been updated.  
 **Nonstrict-read-write** - When data rarely changes and you don't bother about stale data.
