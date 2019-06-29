@@ -5,8 +5,8 @@
     <description>Technical blogs.</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Jun 2019 16:33:05 -0400</pubDate>
-    <lastBuildDate>Thu, 27 Jun 2019 16:33:05 -0400</lastBuildDate>
+    <pubDate>Fri, 28 Jun 2019 21:24:00 -0400</pubDate>
+    <lastBuildDate>Fri, 28 Jun 2019 21:24:00 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -155,6 +155,16 @@
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/Spring-Events-and-Listners/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Events-and-Listners/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Javascript Object Oriented Function Prototype  Gotcha</title>
+        <description>&lt;p&gt;Ok, when you come from a Object Oriented based background you will always have curiosity about Javascript. Here are few points which I want to lay down before we see some code.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Javascript has two main concepts function and object which are derived directly from Function and Object prototype.&lt;/li&gt; &lt;li&gt;‘Function’ and ‘Object’ are prototype defined in Javascript same as above.&lt;/li&gt; &lt;li&gt;The objects are first class citizen in Javascript, there are no classes.&lt;/li&gt; &lt;li&gt;The functions themselves are objects but they are callable, they are made from ‘Function’ Prototype.&lt;/li&gt; &lt;li&gt;The function will have both the properties &lt;strong&gt;proto&lt;/strong&gt; and Prototype, while object...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</link>
+        <guid isPermaLink="true">https://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</guid>
         
         
       </item>
@@ -329,16 +339,6 @@
         <pubDate>Sun, 04 Mar 2018 03:06:05 -0500</pubDate>
         <link>https://abyte.stream/jacoco-code-coverage-reports-sonarqube/</link>
         <guid isPermaLink="true">https://abyte.stream/jacoco-code-coverage-reports-sonarqube/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>E2E Browser Testing with Protractor</title>
-        <description>&lt;p&gt;There are many ways to test our application but having a testing with end user feel is the always the important one. The protractor is JS framework built up Selenium JS web driver.  It provides ease of End to End (E2E) browser testing with protractor angular and non angular applications. It provides a JS wrapper around Selenium commands. The framework contains many intuitive functions which really speed up writing test cases.&lt;/p&gt; &lt;p&gt;** Protractor doesn’t require your site to be on the Angular framework, You can use it all kind of sites.&lt;/p&gt; &lt;h2 id=&quot;in-this-blog-we-are-going-to-cover-following-points&quot;&gt;In this blog, we are going to cover...</description>
-        <pubDate>Fri, 02 Mar 2018 03:36:41 -0500</pubDate>
-        <link>https://abyte.stream/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</link>
-        <guid isPermaLink="true">https://abyte.stream/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</guid>
         
         
       </item>
