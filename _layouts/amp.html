@@ -157,7 +157,7 @@ layout: amp
 <header class="header-post" role="banner">
         <div class="content" style="transform: translateY(0px); opacity: 1;">
             
-                <time itemprop="datePublished" datetime="{{ page.date }}" class="date">{{ page.date }} - {{ page.author.display_name }}</time>
+                <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema  }}" class="date">{{ page.date | date: "%-d %b %Y"}} - {{ page.author.display_name }}</time>
             
             <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
             <p itemprop="description" class="subtitle"></p>
