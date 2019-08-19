@@ -7,7 +7,7 @@ parent_id: '0'
 published: true
 password: ''
 status: unpublished
-categories: []
+categories: [J2EE]
 tags: []
 randomImage: '18'
 meta:

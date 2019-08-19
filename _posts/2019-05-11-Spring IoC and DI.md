@@ -7,7 +7,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories: []
+categories: [Spring]
 tags: []
 randomImage: '3'
 meta:
