@@ -1,0 +1,461 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Machine Learning Basic Maths</title>
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-Basic-Maths/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-15T18:57:06-05:00" class="date">15 Dec 2018 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Machine Learning Basic Maths</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<p>This blog covers basic mathematics required for Machine learnig. There are many terms which we need to know before we can jump into Machine learning.</p>
+
+<p>#Statistics in Mathematics
+<strong>Data &amp; Frequency</strong>: <strong>Data</strong> be anything given as input, for ex, let’s say set of alphabets, <strong>frequency</strong> is defined as how many time each alphabets has appeared in the set. Percentage is defined as <script type="math/tex">\frac{frequency}{total\,items\,in\,set}</script></p>
+
+<p><strong>Mean or Average or Population Mean</strong> - Is defined as sum of all elements divided by count of the elements. 
+<script type="math/tex">\bar x = \frac{\sum X_i}{n}</script></p>
+
+<p><strong>Sample Mean</strong> - Mean of the sample from whole population. It is represeted by <script type="math/tex">\\\bar x</script>, while population mean is represented by <script type="math/tex">\\\mu</script>.  It is used for symmetric dataset.
+<strong>Median</strong> - Put all the number in ascending order and the element at half distnace is Median. Used for skewed dataset, doesn’t matter if few value are outlier. <br>
+For ex:  Median or M or <script type="math/tex">\\\widetilde x</script> of 1,3,4,5,6,7,100,200 would be 5.5. Either middle or mean of middles.</p>
+
+<p><strong>Mode</strong> - Is most frequent number. For example 1,1,1,2,100,101,103,100 is 1. As the 1 has occured maximum number of times.</p>
+
+<p><strong>Quartile</strong> - The set is put in ascending order and devided into 4 quarter of equal width. For ex.
+1,3,4,24,29,101,103  has first quartile as 3.5, second quartile/Median as 24 and third quartile as 115.</p>
+
+<p><strong>Variance</strong> - Measure of being different then other. THere are three variance 1)Population variance 2) Sample variance 3)Alternate formula to calculate variance</p>
+
+<p><strong>Population variance or just variance</strong> - Is formulated as average  of the square distance from mean. <script type="math/tex">\sigma ^2 = \frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script>.</p>
+
+<p><strong>Standard deviation</strong> - Root of population variance is standard deviation. It gives normalized result against dataset. <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script></p>
+
+<h3 id="permutation--combination">Permutation &amp; Combination</h3>
+<p>Permutation is the count of number of ways which one particular Set can be arranged. The count should <strong>consider the order</strong>. For ex. S = {1,2,3} ca be arranged as {321,312,231,213,132,123}. So total number can be arranged as <script type="math/tex">3\times2\times 1\\n\times (n-1)\times(n-2)...\\n!</script></p>
+
+<p>But what if number can be repeated.<br>
+<script type="math/tex">3\times3\times 3\\n\times n\times n...\\n^n</script></p>
+
+<p>What if the set is {1,2,3,4}, It will be <script type="math/tex">4!</script> and what if we need to pick only 2 out 4. n=4, r=2, n-r=2. The possible combination would be,<br>
+<script type="math/tex">4\times3</script> = <script type="math/tex">4\times3\times\frac{2\times1}{2\times1}</script> 
+<script type="math/tex">n\times(n-1)\times...(n-r)</script> = <script type="math/tex">n\times(n-1)\times...\frac{(n-r)\times(n-r-1)\times...1}{(n-r)\times(n-r-1)\times...1}</script> 
+<script type="math/tex">P_r^n = \frac{n!}{(n-r!)}\\
+\mathbf{If\,p_1,p_2..p_n\,are\,of\,same\,type}\\
+P_r^n = \frac{n!}{(n-r!)p_1!p_2!..p_n!}\</script></p>
+
+<p>For example, Flip coin 6 times, getting exactly 1 head {HTTTTT,THTTTT,TTHTTT,TTTHTT,TTTTHT,TTTTTH}, Order matters here so permuation henc 6!, but 5T are same so devide by 5!. In case of two heads, Group of two head and group of 4 tail hence, 6!/(4!2!) = 15.</p>
+
+<p><strong>Combination</strong> is related to permutation, In this the order of number layed out is not important. For ex (1,2) and (2,1) are same. That mean combination is all the permutation deviled by permutation of r. In all the permutation we need to exclude sets which has same set of numbers in any order, let say Set of r can have r! possible permutation and there number of sets so for each set like (12,21) = 2!  = 2, one has to be excluded. Let’ say Set {1,2,3} and need to pick two number.<br>
+<script type="math/tex">\require{cancel} P_2^3 = \frac{3!}{(3-2)!}= 6, \{32,31,23,21,13,12\}\\
+C_2^3 = \frac{3!}{(3-2)!(2)!}= 3, \{32,31,\cancel{23},21,\cancel{13},\cancel{12}\}\\
+C_r^n = \frac{n!}{(n-r!)r!} = \frac{P_r^n}{r!}\\
+C_r^n\subseteq P_r^n\subseteq n! \subset n^n</script></p>
+
+<p>In case there are multiple groups of same type g<sub>1</sub>,g<sub>2</sub>..g<sub>n</sub> and every we need r<sub>1</sub>,r<sub>2</sub>..r<sub>n</sub> number from each group respectively. The combination would be <script type="math/tex">C_{r_1}^{g_1}\times C_{r_2}^{g_2}\times..C_{r_n}^{g_n},</script><br>
+For example a comity 3 people of 1 man and 2 women from a group 2 men and 3 women has to formed. M1,M2 and W1,W2,W3. Picking them in any order doesn’t matter so here commutaion has to be calculate. 2C1 and 3C2 = 6.</p>
+
+<h3 id="probability">Probability</h3>
+<p>Probability is a measure of how likely an event is going to happen from given set of event. For example. {1,2,3,4,6} are equally likely outcome of a dice. Then probability of coming to in a dice roll would be 1 out of 6. Probability of dice showing number 2.
+<script type="math/tex">P(2) = \frac{1}{6},\\ P(x) = \frac{count\,of(event\,x)}{total\,count\,of\,all\,event}\\P(x+y) = \frac{count\,of\,event\,x+y}{count\,of\,all\,events}</script>.</p>
+
+<p><strong>Probability in relation to probability</strong> Lets say A is event of 1 and 4 coming on dice and B is event {1,3,4} coming on dice. Interset of A and B is {1,4}
+<script type="math/tex">P(A) = \frac{2}{6},\;P(B) = \frac{3}{6};\\
+P(AUB) = P(A)+P(B)-P(A\cap B )  = \frac{1}{3}+\frac{1}{2}-\frac{2}{6} = \frac{1}{2}</script></p>
+
+<p>If A and be are **independent ** A is dice and B is deck getting 1 on dice and an spades ace on dec is
+<script type="math/tex">P(A\cap B) = P(A).P(B) = \frac{1}{6}\cdot\frac{1}{52} = \frac{1}{312}</script></p>
+
+<p><strong>Conditional probability on Dependent event</strong> Dependent event are the one which affect the event space for next event. For example in a deck probability of getting Ace is 1/13 and then you put that Ace aside the card deck size is now 51, now the probability of getting ace is 3/51. Here A has affected the event space for B. So we can write P(A) then P(B) is,<br>
+<script type="math/tex">P(A\,and\,B) or P(A\cap B) = P(A).P(B|A)\ = P(B).P(A|B)\;or\\
+P(B|A) = \frac {P(A\,and\,B)}{P(A)}</script></p>
+
+<p>Where P(B|A) can be defined as P(B) if P(A) has already occurred. P(B and A) are calculate over two dice throw, while P(B|A) is probability of second dice throw. Extend to third variable.<br>
+<script type="math/tex">P(A|B,C)=\frac{P(A\cap B\cap C)}{P(B\cap C)}</script></p>
+
+<p><strong>Random Variable</strong> - Random variable is possible outcome of any event. Let’s say in a particular match how many goals will be made, it can be 1 or 4 or 6 or any number. This is discrete and can be counted and has some interval. Set containing 0 to 100 is discrete, but different floating values between is infinite/uncountable. Thing which can’t be counted are <strong>continuos random variable</strong> and which can be counted are discrete. Continuos value can be measure but not counted for example volume.</p>
+
+<p><strong>Probability distribution</strong> - Do not relate this with single probability ie (probability of getting 4 in dice.). Think it as sheet where first column is possible outcomes and second column is probability of that outcome. In this case the probability of each possible outcome is different. Fox ex. Let there are some event E1, E2 ..En from Sample Space S. And let X be function over combination of probabilities over multiple E. For ex. Flip coin three times and X is count H in this sample space. X will variate from 0 to 3.
+X=0 {TTT} - 1, X=1 {HTT, THT, TTH} - 3, X=2 {HHT,HTH,THH} -3, X=3 {HHH} - 1.
+<script type="math/tex">X\,be\,{x_1,x_2,x..}\; then\\P(x_1)+P(x_2)+P(x_3)+... = 1 = \sum_{i=0}^{n}p(x_i)</script></p>
+
+<p><strong>Probability Mass function</strong> - Mass function comes into picture when the values are descrete and probability weight calculate by sum, in contrast to PDF which is intergral.
+<script type="math/tex">pX(x) ≥ 0\;and\;\sum_x pX(x) = 1</script></p>
+
+<p><strong>Probability Density Function</strong> - In a set of continuos event probability normally measure between two points and the area under two defines the probability density function. The entire area is calculated as one. PDF exist only for continuos variable and the area under two interval is the probability. Let’s say x is random variable and f(x) is the probability of the x variable then.
+<script type="math/tex">P(a\leq x \leq b) = \int_a^b f(x)dx \\
+\int_{-\infty}^{+\infty} f(x)dx = 1</script></p>
+<ul>
+  <li>Probability of normally distribute function looks like bell shaped and has fixed are under two interval.</li>
+  <li>Conitnous functions are calculated by integral while discrete with summation.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" width="788" height="553" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" width="788" height="553"></noscript></amp-img>
+</li>
+</ul>
+
+<p><strong>Probability Commutative function</strong> - Probability of being equal to or less then x, F(x)=P(X≤x)</p>
+
+<p><strong>Random Variable X - μ</strong> - Average of probability random variable ie function over sample space. 
+<strong>Mean or Expected value over discrete function</strong></p>
+
+<script type="math/tex; mode=display">E(X)=\mu=\sum_{i-1}^nx_ip(x_i)\\
+\mathbf{Continous \, variable}\\
+E(X)=\mu=\int_{-\infty}^{+\infty}x_if(x)dx\\
+\mathbf{Lotus-Law\,of\,Unconscious\,Statistician}\\
+E(g(x))=\sum_{\infty}g(x)P(X=x)\\
+E(g(x))=\int_{-\infty}^{+\infty}g(x)f(x)dx\\
+\mathbf{Variance\,of\,random\,variable}\\
+Var(X)=\sigma^2=E{(X-\mu)}^2=\sum_{i-1}^n{(x_i-\mu)^2}p(x_i) = E((X-E(X))^2) = E(X^2)-(E(X))^2\\\\
+\mathbf{Standard\,deviation}
+SD(X)=\sqrt{Var(X)}=\sigma=\sqrt{\sum_{i-1}^n{(x_i-\mu)^2}p(x_i)}=\sqrt{\sum_{i-1}^nx_i^2p(x_i)}\\</script>
+
+<p><strong>Standard deviation</strong> - How far the numbers are from mean on average, think of population having lot of small numbers and then some big numbers so mean doesn’t in middle but at the one end. In this case mean and standard deviation will be far.
+<strong>Covariance</strong> - Measures tendency of x and y deviate from their mean in same or opposite direction at same time.
+<script type="math/tex">cov(x,y)=  \sum_ip(x_i,y_i)(x_i-\mu_x)(y_i-\mu_x)\\
+\mathbf comapre\,to\,actual\,covariance(not\,in\,probability\,space)\\
+\sum_ip(x_i)=\frac{1}{N-1} \sum_1^n \\
+cov(x,y)=  \frac{1}{N-1}\sum_1^n(x_i-\mu_x)(y_i-\mu_x)</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" width="749" height="231" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" width="749" height="231"></noscript></amp-img>
+<strong>Correlation</strong> - Perason’s correlation coefficient is coveriance normalized by standard deviations of variables.
+<script type="math/tex">corr(x,y)=\frac{cov(x,y)}{\sigma_x\sigma_y}</script></p>
+
+<p><strong>Mean or Expected value over continuos function</strong>
+<script type="math/tex">E(X) = \int_{x=a\to b}xp(x)</script></p>
+
+<p><strong>Bayes Theorem</strong> - Let A<sub>1</sub>, A<sub>2</sub>,A<sub>3</sub>..A<sub>n</sub> are sample set out of S where all including form S. Let B is another set from S, since it is part of S it definately form out of parts of A’s. Hence,<br>
+B = (B ∩ A<sub>1</sub>)U(B ∩ A<sub>1</sub>)..U(B ∩A<sub>n</sub>) and we can write.
+<script type="math/tex">P(A_k|B) = \frac{P(A_k\cap B)}{[P(A_1\cap B)+P(A_2\cap B)+..P(A_n\cap B)]}\\
+Using\;P( A_k \cap B ) = P( A_k )P( B | A_k )\\
+P( A_k | B ) =  	\frac{P( A_k ) P( B | A_l )}{[ P( A_1 ) P( B | A_1 ) + P( A_2 ) P( B | A_2 ) + . . . + P( A_n ) P( B | A_n ) ]}</script> 
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG" alt="" width="762" height="508" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG" alt="" width="762" height="508"></noscript></amp-img></p>
+
+<h3 id="discrete-distribution">Discrete Distribution</h3>
+<p><strong>Bernoulli Trials</strong> - Trials which answers only in two values, such yes/no, 0/1, head/tail etc. Such that <script type="math/tex">p=\frac12\;and\; q=1-p=\frac12</script>.</p>
+
+<p><strong>Bernoulli Distribution</strong> - A sheet with with column1 as possible outcomes as 0 and 1 and coloumn2 as there probability. For ex, p = 0.15 and q= 0.85.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG" alt="" width="412" height="238" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG" alt="" width="412" height="238"></noscript></amp-img>
+<script type="math/tex">E(X) = 0.q - 1.p = p\\
+V(X) = E(p^2)-E(p)^2 = p-p^2</script>.</p>
+
+<p><strong>Binomial Distribution</strong> - Here we talk about Bernoulli sample space. Let say function variable X is times we get Head and call it S and other is F. Flip 3 times (SSS,SST,STS,STT,TSS,TST,TTS,TTT). p is success probability and q is failure.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>X</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P</td>
+      <td>q<sup>3</sup>
+</td>
+      <td>3q<sup>2</sup>p</td>
+      <td>3p<sup>2</sup>q</td>
+      <td>p<sup>3</sup>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><script type="math/tex">P(S)=q^3+3q^2p+3qp^2+p^3=1\\
+\sum_{i=0}^nP(x_i) = \sum_{i=0}^nC_x^nq^{n-x}p^x=1\\
+\mu=np\;,Var(X)=npq</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG" alt="" width="593" height="240" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG" alt="" width="593" height="240"></noscript></amp-img></p>
+
+<p><strong>Hypergeometric Distribution</strong> - Binomial but sample space reduced due to last event, for ex. draw colored ball from bag starting with equal probability, but do not place the ball back which reduces the sample space.<br>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" width="634" height="284" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" width="634" height="284"></noscript></amp-img></p>
+
+<p><strong>Uniform distribution</strong> - Fair dice role has 6 possible outcome and each has probability of 1/6. Since 1 is total probaility, area = width*height = f(x)(b-a) = 1; f(x) = 1/(b-a)
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" width="491" height="197" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" width="491" height="197"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" width="508" height="184" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" width="508" height="184"></noscript></amp-img>
+<script type="math/tex">\mu= \int_a^bxf(x)dx = \int_a^bx\frac{1}{b-a}dx = \frac{a+b}{2}\\
+Var(X)=\frac{(b-a)^2}{12}</script></p>
+
+<p><strong>Poisson Distribution</strong> - Type of binomial but rate defined by λ, The distribution when you know the constant rate of event over time or space. For ex. 50 email per hours or 22 trees per kilometer etc. Second thing the event are independent. For ex, 20 call per minute, then 0.33 call per second. Every second either call can come (0.33) or not(0.66). Let λ	be probability of call per minute, divide that in n=60 interval then probability of on slice of n is p=λ/n and q=1-λ/n.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG" alt="" width="620" height="279" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG" alt="" width="620" height="279"></noscript></amp-img>
+<script type="math/tex">P(X=x) = C_x^np^xq^{n-x} =  \frac{n!}{(n-x)!x!}{\frac{\lambda}{n}}^x\left({1-\frac{\lambda}{x}}^{n-x}\right)=\frac{\lambda^xe^{-\lambda}}{x!} \\
+E(X)=\mu=\lambda,\;Var(X)=\mu=\lambda</script></p>
+
+<p><strong>Negative Binomial Distribution</strong> - Number of failure before you get specific number of success. In contrast to Binomial, how many success after x trials. this is how many failures needed to get k successes and this gives how many trials. let k be number of successes in x trial then x-k is number of failure.</p>
+
+<p><strong>Geometric Distribution</strong> - Type of negative Binomial where you are interested to get first success after r failures. Number of trial becomes x = r+1. We are looking at kth trial which is success.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG" alt="" width="462" height="206" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG" alt="" width="462" height="206"></noscript></amp-img>
+<script type="math/tex">P(X=k) = (1-p)^{k-1}p\\
+E(X)=\mu = 1/p,\;P(Failure) = \frac{(1-p)}{p}\\
+Var(X) = \frac{1-p}{p^2}</script></p>
+
+<h3 id="continuos-distribution">Continuos Distribution</h3>
+
+<p><strong>Normal Distribution</strong> - Distribution where mean, mode and median coincide. It is bell shaped, there are equal exactly half of the value on left and right side. 
+<script type="math/tex">f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\\
+E(X)=\mu,\;Var(X)=\sigma^2</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" width="679" height="224" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" width="679" height="224"></noscript></amp-img>
+Normal distribution is not related to pro</p>
+
+<p><strong>Central Limit Theorem</strong>- CLT (center, shape and spread), states even if we take an uneven distribution and take sample from it for n times, find the mean of each sample, start putting mean in buckets, the graph formed due to this filling will be more like normal distribution.<strong>Mean of sample means</strong> distribution will depict mean of populatiom.<strong>Stanadard Error</strong> of population will be standard deviation of distribution sample means.
+<script type="math/tex">SE = \frac{\sigma}{\sqrt{N}}</script></p>
+
+<p><strong>Exponential Distribution</strong> - It is mix of poisson where we have rate, like calls per minute and geometric where we are interested in wait time of next call or how many failure before next success. <strong>Weibull</strong> is counterpart of exponential, time to failure. Ex. Machine failure time when we know rate.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" width="633" height="277" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" width="633" height="277"></noscript></amp-img>
+<script type="math/tex">F(x) = \lambda e^{-\lambda x}\\
+E(X)=\mu = 1/\lambda,\\
+Var(X) = \frac{1}{\lambda^2}</script></p>
+
+<h2 id="calculus">Calculus</h2>
+<p>How function changes over times(<strong>derivatives/by differentiation</strong>), how they accumulate over time period(<strong>integral/ by integration</strong>).</p>
+
+<h3 id="derivative">Derivative</h3>
+<p>It cabe defined in two ways.</p>
+<ul>
+  <li>In geometry - slope of line at specific point ie, y=mx+b, m becomes slope.</li>
+  <li>In physics - Rate changes at instant.</li>
+</ul>
+
+<p><strong>In Geometry</strong><br>
+The slope of line defined by following formula in between any two points. 
+<script type="math/tex">Slope = m = \frac{y_1-y_2}{x_1-x_2}= \frac{f(x_1)-f(x_2)}{x_1-x_2}</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG" alt="!img" width="269" height="168" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG" alt="!img" width="269" height="168"></noscript></amp-img></p>
+
+<p>Here we talk about two point if two points are very close such that <script type="math/tex">x_1-x_2 \to 0</script>, here derivatives comes for rescue. The derivative formula.
+<script type="math/tex">\Delta x= x_1-x_2 =h\\
+\frac{d}{dx}f(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+\mathbf{Ex}\;f(x) = x^2\\
+\frac{d}{dx}f(x)=\lim_{h\to0}\frac{{(x+h)}^2-x^2}{h}=\lim_{x\to0}2x+h = 2x</script></p>
+
+<p>Derivatives are used in optimization problems of machine learning. It helps us to determine to increase or decrease weights in order to achieve maximum or minimum output in  gradient decedent.</p>
+
+<p><strong>Chain rule</strong>: <script type="math/tex">\frac{df}{dx}=\frac{dh}{dg}\frac{⋅dg}{dx}\\
+\mathbf Ex:\; f(x) = h(g(x))\, where\, g(x)=x^2\,and\,h(x)=x^3\\
+f(x) = (x^2)^3, g'(x)=2x, h'(x)=3x^2\\
+f'(x)=h'(x).g'(x)= 3(x^2)^2.2x=6x^5</script></p>
+
+<p>The reason we put double square as for h(x) was derived over g(x) where x = x<sup>2</sup>. The same goes with multiple chains.</p>
+
+<h3 id="gradient">Gradient.</h3>
+<p>Gradient is a variable which hold partial derivative multivariable function. Partial derivate of function is keeping all other variable constant and find derivative over one. 
+<script type="math/tex">f(x,y,z)=2z^3x^2y^7\\
+\nabla f(x,y,x)=\begin{bmatrix}\frac{df}{dx}\\\frac{df}{dy}\\\frac{df}{dz}\end{bmatrix}=\begin{bmatrix}4z^3xy^7\\14z^3x^2y^6\\6z^2x^2y^7\end{bmatrix}</script></p>
+
+<p><strong>Direction Derivative</strong> - While trying for minimum maximum by variating a single variable and keeping others constant we can also apply directional derivative in order tocheck what would happen if take a small nudhe to our current slope, what if in place of north go south. 
+<script type="math/tex">\vec v.\nabla f(x,y,x)=\begin{bmatrix}2\\3\\-1\end{bmatrix}.\begin{bmatrix}\frac{df}{dx}\\\frac{df}{dy}\\\frac{df}{dz}\end{bmatrix}</script></p>
+
+<ul>
+  <li>Gradient always points to the direction of greatest increasae or decrease of a function.</li>
+  <li>Gradient reaches to zero in case of maxima and minima.</li>
+</ul>
+
+<h3 id="integrals">Integrals</h3>
+<p>Integrals can be defined as how much accumulated over time, in other terms how much area is covered under a slope between two points.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG" alt="" width="277" height="326" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG" alt="" width="277" height="326"></noscript></amp-img></p>
+
+<p><script type="math/tex">F(x) = \int_a^b f(x)dx \\
+Areas(a,b) = F(b)-F(a)= \int_0^b f(x)dx-\int_0^a f(x)dx</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG" alt="" width="331" height="279" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG" alt="" width="331" height="279"></noscript></amp-img></p>
+
+<p><strong>Important Formula</strong><br>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG" alt="" width="394" height="645" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG" alt="" width="394" height="645"></noscript></amp-img></p>
+
+<p><strong>Common Usage of Integral</strong></p>
+<ul>
+  <li>Probability under PD - <script type="math/tex">\int_{-\infty}^{+\infty} p(x)dx=1</script>.</li>
+  <li>Expected Value - <script type="math/tex">\int_{-\infty}^{+\infty} xp(x)</script>.</li>
+  <li>Variance - <script type="math/tex">\sigma^2=\int_{-\infty}^{+\infty} (x-\mu)^2p(x)</script>.</li>
+</ul>
+
+<h2 id="linear-algebra">Linear Algebra</h2>
+<h3 id="vector">Vector</h3>
+<p>Vector is variable stores direction and it’s magnitude from center. In 2D, left 7 and up 2 gives direction m = -2/7 and magnitude as well. It can be stored in 1D array/matrix column or raw anything [-7 2]. It is denoted mostly by bold italic latter with arrow on top. <script type="math/tex">\vec v = (a_x,a_y)\\</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG" alt="" width="157" height="116" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG" alt="" width="157" height="116"></noscript></amp-img>
+<script type="math/tex">\mathbf{magnitude} = |v|(not\,absolute)=||v||= \sqrt{x^2+y^2}\\
+x=rcos\theta,\; y=rsin\theta\\
+r=\sqrt{x^2+y^2},\; \theta = tan^{-1}(y/x)\\ 
+\begin{bmatrix}a\\b\end{bmatrix}+\begin{bmatrix}c\\d\end{bmatrix}=\begin{bmatrix}a+c\\b+d\end{bmatrix}\\
+\begin{bmatrix}a\\b\end{bmatrix}-\begin{bmatrix}c\\d\end{bmatrix}=\begin{bmatrix}a-c\\b-d\end{bmatrix}\\
+\begin{bmatrix}a\\b\end{bmatrix}/\begin{bmatrix}c\\d\end{bmatrix}=\begin{bmatrix}a/c\\b/d\end{bmatrix}\\
+\mathbf{Hadamard\,product}\begin{bmatrix}a\\b\end{bmatrix}\odot\begin{bmatrix}c\\d\end{bmatrix}=\begin{bmatrix}a.c\\b.d\end{bmatrix}\\</script></p>
+
+<p>Vector need not to be scaler only they can be a function. Let say x,y is the point on the plane and if it is applied to a vector f(x) = x<sup>2</sup>. In this case depending on X vector value will variate.</p>
+
+<p><strong>Dot product</strong> - Multiplication
+<script type="math/tex">% <![CDATA[
+A = \begin{bmatrix}a\\b\end{bmatrix}, B = \begin{bmatrix}c&d\end{bmatrix}\\
+A.B = ac+bd\\
+\vec a.\vec b = |a||b|cos\theta,\; theta\,is\,angle\,between\,\vec a\; \vec b %]]></script></p>
+
+<p><strong>Projection</strong> - <script type="math/tex">\vec b</script> can make projectopn over <script type="math/tex">\vec a</script> it is the base of the triangle formed by a and b. 
+<script type="math/tex">proj_ab=\frac{\vec a\vec b}{|\vec a|^2}\vec a</script></p>
+
+<h3 id="matrix">Matrix</h3>
+<p>Matrix is rectangular grid to store different variable or scaler numbers. You can visualize it as 2D array. Addition and substraction on mattrix over scaller values applies to all the elements and if it is added or substracted by another matrix then each element will be added or substracted on each element of other matrix. Multiplication follows the same concept as Dot product and devision is not straight forward it is calculate by multiplying with inverse of the matrix. Division is only possible if divident determinant is non-zero and is a sqaure matrix. 
+<script type="math/tex">% <![CDATA[
+\begin{bmatrix}a&b\\c&d\end{bmatrix}\pm1=\begin{bmatrix}a\pm1&b\pm1\\c\pm1&d\pm1\end{bmatrix}\\
+\begin{bmatrix}a&b\\c&d\end{bmatrix}\times\div1=\begin{bmatrix}a\times\div1&b\times\div1\\c\times\div1&d\times\div1\end{bmatrix}\\
+\begin{bmatrix}a&b\\c&d\end{bmatrix}.\begin{bmatrix}w&x\\y&z\end{bmatrix}=\begin{bmatrix}aw+by&ax+bz\\cw+dy&cz+dz\end{bmatrix}\\
+A*A^{-1}=I\\
+AB\neq BA\\
+A/B=AB^{-1}\neq B^{-1}A\\
+(AB)^T=B^TA^T %]]></script></p>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

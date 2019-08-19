@@ -5,9 +5,45 @@
     <description>Technical blogs.</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Jun 2019 21:24:00 -0400</pubDate>
-    <lastBuildDate>Fri, 28 Jun 2019 21:24:00 -0400</lastBuildDate>
+    <pubDate>Mon, 19 Aug 2019 10:56:56 -0400</pubDate>
+    <lastBuildDate>Mon, 19 Aug 2019 10:56:56 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Machine Learning Basic Maths</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This blog covers basic mathematics required for Machine learnig. There are many terms which we need to know before we can jump into Machine learning.&lt;/p&gt; &lt;p&gt;#Statistics in Mathematics &lt;strong&gt;Data &amp;amp; Frequency&lt;/strong&gt;: &lt;strong&gt;Data&lt;/strong&gt; be anything given as input, for ex, let’s say set of alphabets, &lt;strong&gt;frequency&lt;/strong&gt; is defined as how many time each alphabets has appeared in the set. Percentage is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{frequency}{total\,items\,in\,set}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Mean or Average or Population Mean&lt;/strong&gt; - Is defined as sum of all elements divided by count of the elements. &lt;script type=&quot;math/tex&quot;&gt;\bar x = \frac{\sum X_i}{n}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Sample Mean&lt;/strong&gt; - Mean of the sample...</description>
+        <pubDate>Sat, 15 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-Basic-Maths/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Basic-Maths/</guid>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Python when you are from Java</title>
+        <description>&lt;p&gt;Let’s see some Python Basics first you can skip it as well.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Python string can be inside single quotes and double quotes and three quotes as well. Three quotes takes care of new line as well.&lt;/li&gt; &lt;li&gt;Either use 4 spaces or a tab to indent.&lt;/li&gt; &lt;li&gt;# for comment and “”” for multiline documenttaion comment&lt;/li&gt; &lt;li&gt;Naming conventions &lt;ul&gt; &lt;li&gt;Module name, variable name and function name should be all small with underscores.&lt;/li&gt; &lt;li&gt;Class name should CaptWord.&lt;/li&gt; &lt;li&gt;Constants should be ALL_CAPS with underscore.&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;type-of-methods-in-class&quot;&gt;Type of methods in class&lt;/h3&gt; &lt;p&gt;There are three type of methods in class is &lt;strong&gt;instance...</description>
+        <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Python-when-you-are-from-Java/</link>
+        <guid isPermaLink="true">https://abyte.stream/Python-when-you-are-from-Java/</guid>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning Neural Network.</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Neural network set of network with input, hidden and output neurons/nodes. Each neuron is &lt;strong&gt;activation function&lt;/strong&gt; (for ex gradient descend) and each synapse/link have some weights. Every node maintains error metric and coefficient are adjusted to lower the error metric using back propagation. &lt;strong&gt;Bias&lt;/strong&gt; are some constant values at neuron.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Ok all above is fine but why?&lt;/strong&gt;&lt;br /&gt; &lt;img src=&quot;/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG&quot; alt=&quot;&quot; /&gt; Let think of example, what number is there in below image. It is blurred not accurate but it is 2. Every human handwriting will create different image of 2 probably but human understand it is...</description>
+        <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-Neural-Network/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Neural-Network/</guid>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
     
       <item>
         <title>10 Minutes JMS.</title>
@@ -16,6 +52,20 @@
         <link>https://abyte.stream/10-minutes-JMS/</link>
         <guid isPermaLink="true">https://abyte.stream/10-minutes-JMS/</guid>
         
+        
+        <category>Spring</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning Python Libraries</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This is not a extensive detailed guide for machine learning libraries. It is a small extract of common feature of these libraries and there usage.&lt;/p&gt; &lt;p&gt;There are many Python packages used in ML, but here are some important ones.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;NumPy - Everything related to Maths, formulas, series, multidimensional arrays and operations etc.&lt;/li&gt; &lt;li&gt;SciPy - For statistical analysis, extension of Numpy&lt;/li&gt; &lt;li&gt;Pandas - Dealing with data reading/writing/manipulation from/to CSV,database,excel etc, cleaning, filtering.&lt;/li&gt; &lt;li&gt;Seaborn - For data visualization&lt;/li&gt; &lt;li&gt;Matplotlib - For data visualization, Seaborn is extension over Matplotlib.&lt;/li&gt; &lt;li&gt;Scikit-learn - Provides ready to use ML algorithms, based on...</description>
+        <pubDate>Wed, 12 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-Python-Libraries/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Python-Libraries/</guid>
+        
+        
+        <category>Machine Learning Notes</category>
         
       </item>
     
@@ -60,12 +110,26 @@
       </item>
     
       <item>
+        <title>Machine Learning with Python</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation. Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.&lt;/p&gt; &lt;p&gt;Popular machine learning techniques classification, regression, recommendation and clustering.&lt;/p&gt; &lt;p&gt;Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.&lt;/p&gt; &lt;p&gt;Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.&lt;/p&gt; &lt;p&gt;Programming which learns and improves with experience. Learning means recognizing and understanding the data...</description>
+        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-with-Python/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-with-Python/</guid>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
         <title>EJB in Java.</title>
         <description>&lt;p&gt;EJB are wrapper around any kind of component, if you need data access, directory, resources, services, JMS, RMI, SOA etc. EJB Provides a standard way to wrap these thing under common umbrella which has many features. It can be compared to POJO but with lot of advance feature which you dont need write.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Reusing the code.&lt;/li&gt; &lt;li&gt;Scalability and reliability, Do pooling, limit connection and access easily, deploy on cluster environment.&lt;/li&gt; &lt;li&gt;Concurrency management, Easily configure concurrency using small annotation over methods such @Lock(READ), @Lock(WRITE).&lt;/li&gt; &lt;li&gt;Transaction handling, You don’t need to do any changes transaction is handled easily in EJB just...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/EJB-in-Java/</link>
         <guid isPermaLink="true">https://abyte.stream/EJB-in-Java/</guid>
         
+        
+        <category>J2EE</category>
         
       </item>
     
@@ -77,6 +141,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-JUnit-Basics/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -86,6 +152,8 @@
         <link>https://abyte.stream/Spring-AOP-and-AspectJ/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-AOP-and-AspectJ/</guid>
         
+        
+        <category>Spring</category>
         
       </item>
     
@@ -97,6 +165,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-JDBC-in-Short/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -106,6 +176,8 @@
         <link>https://abyte.stream/Spring-Data-in-Short/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Data-in-Short/</guid>
         
+        
+        <category>Spring</category>
         
       </item>
     
@@ -117,6 +189,8 @@
         <guid isPermaLink="true">https://abyte.stream/Hibernate-in-Short/</guid>
         
         
+        <category>Hibernate</category>
+        
       </item>
     
       <item>
@@ -126,6 +200,8 @@
         <link>https://abyte.stream/Spring-Security-Architecture/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Security-Architecture/</guid>
         
+        
+        <category>Spring</category>
         
       </item>
     
@@ -137,6 +213,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-Security-Simple/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -147,6 +225,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-MVC-Intro/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -156,6 +236,8 @@
         <link>https://abyte.stream/Spring-Events-and-Listners/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Events-and-Listners/</guid>
         
+        
+        <category>Spring</category>
         
       </item>
     
@@ -177,6 +259,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-Java-Based-Configuration/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -186,6 +270,8 @@
         <link>https://abyte.stream/Spring-Autowire/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Autowire/</guid>
         
+        
+        <category>Spring</category>
         
       </item>
     
@@ -197,6 +283,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-Bean-life-cycle/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -207,6 +295,8 @@
         <guid isPermaLink="true">https://abyte.stream/Spring-IoC/</guid>
         
         
+        <category>Spring</category>
+        
       </item>
     
       <item>
@@ -216,6 +306,8 @@
         <link>https://abyte.stream/Spring-IoC-and-DI/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-IoC-and-DI/</guid>
         
+        
+        <category>Spring</category>
         
       </item>
     
@@ -267,78 +359,6 @@
         <pubDate>Sun, 23 Sep 2018 02:28:16 -0400</pubDate>
         <link>https://abyte.stream/understanding-java-predicate-interface/</link>
         <guid isPermaLink="true">https://abyte.stream/understanding-java-predicate-interface/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>When to use Java Optional Class</title>
-        <description>&lt;p&gt;Java 8  has provided a very strong feature to write code in a better and cleaner way. This can be used to easily replace our null but should it be used everywhere? And with this, we get a question about When to use Java Optional Class.&lt;/p&gt; &lt;h2 id=&quot;1-whatisjava-optional-class&quot;&gt;1. What is Java Optional Class?&lt;/h2&gt; &lt;p&gt;Java optional is a generic class, It is a wrapper around another classes object and provides a set of methods.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt;...</description>
-        <pubDate>Sun, 23 Sep 2018 01:29:34 -0400</pubDate>
-        <link>https://abyte.stream/when-to-use-java-optional-class/</link>
-        <guid isPermaLink="true">https://abyte.stream/when-to-use-java-optional-class/</guid>
-        
-        <category>Java</category>
-        
-        <category>Java8</category>
-        
-        
-        <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>Java lambda and functional programming - Part 1</title>
-        <description>&lt;p&gt;Seeing the history of Java we can easily say, Java had troubles adapting functional programming. Recently Oracle has made some efforts to bring functional programming pattern to Java. In this blog we are going to discuss about Java  lambda and functional programming.&lt;/p&gt; &lt;h2 id=&quot;what-is-functional-programming&quot;&gt;What is functional programming?&lt;/h2&gt; &lt;p&gt;Functional programming focused mainly on three points while function creation pure functions, avoid sharing state and immutable variables.&lt;br /&gt; In Java world methods were part of the class and they used to use instance state (object properties) and modify them. But pure function concept says method return should solely be based on method argument and it...</description>
-        <pubDate>Sat, 15 Sep 2018 23:26:33 -0400</pubDate>
-        <link>https://abyte.stream/java-lambda-procedural-programming/</link>
-        <guid isPermaLink="true">https://abyte.stream/java-lambda-procedural-programming/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Java lambda and functional programming - Part 2</title>
-        <description>&lt;h2 id=&quot;java-lambda-and-functional-programming&quot;&gt;Java lambda and functional programming&lt;/h2&gt; &lt;p&gt;Java lambda expressions are syntactical sugars, It is a way of reducing lines of coded.  In other words, trim down the code and increase readability. In this blog, we will be discussing Java lambda and functional programming.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;AddInt&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addFunc&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Lambda functions are used with functional interfaces in Java. There three important rules to write lambda.&lt;/p&gt; &lt;p&gt;The class/interface (1) should only one abstract method. The argument for the abstract method should match to lambda...</description>
-        <pubDate>Sat, 15 Sep 2018 23:18:31 -0400</pubDate>
-        <link>https://abyte.stream/java-lambda-functional-programming-part-2/</link>
-        <guid isPermaLink="true">https://abyte.stream/java-lambda-functional-programming-part-2/</guid>
-        
-        <category>Java</category>
-        
-        <category>Java8</category>
-        
-        <category>Lambda</category>
-        
-        
-        <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>Java 8 double colon operator</title>
-        <description>&lt;h2 id=&quot;lambda-for-method-reference-or-java-double-colon-operator&quot;&gt;Lambda for Method reference Or Java Double colon operator&lt;/h2&gt; &lt;p&gt;What is the Java 8 double colon operator ? You must have seen some short code like,&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;In order to understand better, you must know about functional interface. Please check blog &lt;a href=&quot;https://abyte.stream/2018/09/10/java-lambda-and-procedural-programming&quot;&gt;Java lambda and functional programming.&lt;/a&gt; Java 8  method (functional interface) are just like objects, They can be passed as parameters and can be returned from another method. So why not assign Java methods to a new another variable.  Something like javascript.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squareFunc1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span...</description>
-        <pubDate>Sat, 15 Sep 2018 22:43:51 -0400</pubDate>
-        <link>https://abyte.stream/java-8-double-colon-operator/</link>
-        <guid isPermaLink="true">https://abyte.stream/java-8-double-colon-operator/</guid>
-        
-        <category>Java</category>
-        
-        <category>Java8</category>
-        
-        <category>Lambda</category>
-        
-        
-        <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>JaCoCo Code Coverage And Reports With Sonarqube</title>
-        <description>&lt;p&gt;We have already covered how to do &lt;a href=&quot;http://abyte.stream/2018/02/22/code-quality-analysis-sonar/&quot;&gt;code quality check with Sonarqube&lt;/a&gt; in my previous blog. In this blog, we will be discussing how can we setup JaCoCo a code coverage tool and exports reports to SonarQube. Though report can be directly read but having reported at a single place is a good idea. So, let get into  ‘JaCoCo Code Coverage And Reports With Sonarqube’&lt;/p&gt; &lt;h2 id=&quot;what-this-blog-will-cover&quot;&gt;What this blog will cover.&lt;/h2&gt; &lt;p&gt;What is JaCoCo and why you need this? Setting up JaCoCo. Importing reports to SonarQube&lt;/p&gt; &lt;h2 id=&quot;what-is-jacoco-and-why-you-need-this&quot;&gt;What is JaCoCo and why you need this?&lt;/h2&gt; &lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-274...</description>
-        <pubDate>Sun, 04 Mar 2018 03:06:05 -0500</pubDate>
-        <link>https://abyte.stream/jacoco-code-coverage-reports-sonarqube/</link>
-        <guid isPermaLink="true">https://abyte.stream/jacoco-code-coverage-reports-sonarqube/</guid>
         
         
       </item>

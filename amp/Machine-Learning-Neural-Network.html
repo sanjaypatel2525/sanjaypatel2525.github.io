@@ -1,0 +1,303 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Machine Learning Neural Network.</title>
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-Neural-Network/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-13T18:57:06-05:00" class="date">13 Dec 2018 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Machine Learning Neural Network.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<p>Neural network set of network with input, hidden and output neurons/nodes. Each neuron is <strong>activation function</strong> (for ex gradient descend) and each synapse/link have some weights. Every node maintains error metric and coefficient are adjusted to lower the error metric using back propagation. <strong>Bias</strong> are some constant values at neuron.</p>
+
+<p><strong>Ok all above is fine but why?</strong><br>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG" alt="" width="218" height="195" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG" alt="" width="218" height="195"></noscript></amp-img>
+Let think of example, what number is there in below image. It is blurred not accurate but it is 2. Every human handwriting will create different image of 2 probably but human understand it is 2. How machine can know it is 2. Actually it doesn’t know it, it says the probability of this image being 2 is let say 90%. And we write the code which can take pixel of this image as input and generate possible results with probability. How much a pixel is lit can be i/p for next layer and affect how much next layer neuron are lit, in the end if algorithm is good it will lit the output neuron which is marked for 2 with some probability.</p>
+
+<p><strong>activation function</strong> - Typically have Non-linear, continuos differentiable and fixed range.</p>
+
+<p><strong>Loss or Cost Function</strong> - Defines accracy of prediction with given neural network model.</p>
+
+<p><strong>Optimization Algorithms</strong>- //TODO</p>
+<h2 id="forward-propagation">Forward propagation</h2>
+<p>Let say we have n layers and let’s pick two layer, each layer will have some activation function, Superscript number is layer number and subscript number is neuron number on that layer from top to bottom, <script type="math/tex">a_k^n</script> will n<sup>th</sup>  layer and k<sup>th</sup> node/neural at that level.</p>
+<ul>
+  <li>
+<script type="math/tex">w^L</script> is weight at level L</li>
+  <li>
+<script type="math/tex">b^L</script> is bias at level L</li>
+  <li>
+<script type="math/tex">a^{L-1}</script> is X or input for level L and output of level L-1 which is activation function applied on z<sup>L</sup>.</li>
+  <li>
+    <script type="math/tex; mode=display">z^L = w^la^{L-1}+b^L</script>
+  </li>
+  <li>C is cost function. <script type="math/tex">C_0=(a^L-y)^2</script>
+</li>
+  <li>y is expected output</li>
+  <li>
+<script type="math/tex">\sigma'</script> is derivative of activation function wrt z<sup>L</sup>
+</li>
+</ul>
+
+<p>So the formula to derive <script type="math/tex">a_k^n</script> will be</p>
+
+<script type="math/tex; mode=display">a^1=\sigma(Wa^0+b)\\
+\begin{bmatrix}a_1^n\\a_2^n\\..\\a_k^n\end{bmatrix}= \sigma\left(\begin{bmatrix}W\end{bmatrix}^{k_{n-1}\times k_{n}}\begin{bmatrix}a_1^{n-1}\\a_2^{n-1}\\..\\a_k^{n-1}\end{bmatrix}+\begin{bmatrix}B\end{bmatrix}^{{k_n}\times 1}\right)</script>
+
+<p>##Back propogation
+Goal is to adjust the weights so that each overall cost is minimized.
+Example of 1 node at each level.</p>
+
+<p><amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" width="313" height="416" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" width="313" height="416"></noscript></amp-img>
+Calculate change in C wrt to W<sub>L</sub>. <script type="math/tex">\frac{\delta C_0}{\delta w^L}=\frac{\delta z^L}{\delta w^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
+= a^{(L-1)}.\sigma'(z^L).2(a^L-y)</script>
+For k number of training examples. <script type="math/tex">C_1,C_2..C_k</script> will be the cost function and nudging L level weight w<sub>L</sub> will be <script type="math/tex">\frac{\delta C}{\delta w^L}=\frac{1}{n}\sum_{k=0}^{n-1}\frac{\delta C_k}{\delta w^L}</script>
+We saw weight now we need talk about changing b<sup>L</sup> and a<sup>L-1</sup>
+<script type="math/tex">% <![CDATA[
+\nabla C = \begin{bmatrix}\frac{\delta C}{\delta w^1}&\frac{\delta C}{\delta a^{b^1}}&\frac{\delta C}{\delta a^{L-1}}\\
+\frac{\delta C}{\delta w^2}&\frac{\delta C}{\delta a^{b^2}}&\frac{\delta C}{\delta a^{L-2}}\\
+...&...&...\\
+\frac{\delta C}{\delta w^L}&\frac{\delta C}{\delta a^{b^L}}&\frac{\delta C}{\delta a^0}
+\end{bmatrix} %]]></script>
+So C wrt to <script type="math/tex">b^L</script> and <script type="math/tex">a^{L-1}</script> is as follows.
+<script type="math/tex">\frac{\delta C_0}{\delta b^L}=\frac{\delta z^L}{\delta b^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
+= 1.\sigma'(z^L).2(a^L-y)\\\\
+\frac{\delta C_0}{\delta a^{L-1}}=\frac{\delta z^L}{\delta a^{L-1}}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
+= w^L.\sigma'(z^L).2(a^L-y)</script>
+Now let take k node at L-1 level and j nodes at L level. At this level <script type="math/tex">\nabla C</script> changes at seems complex but it is not. 
+<script type="math/tex">\Delta C =\eta \nabla C</script> Where <script type="math/tex">\nabla c</script> is negative small change, gradient descend and <script type="math/tex">\eta</script> is learning rate or step size. Keeping too small will slow down and keeping big will overshoot. Later update w and b by these small changes.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" width="1233" height="637" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" width="1233" height="637"></noscript></amp-img></p>
+
+<p>Commuatively we can say <script type="math/tex">\delta_j^L=\frac{\delta C}{\delta z^l_j}</script>. If this value big that mean changes at this z will make big impact to lower down the C rather then other lower derivative.</p>
+
+<p><strong>stochastic gradient descent</strong> - If there are large training set, the learning might take time so we take a small set.</p>
+
+<h3 id="activation-function">Activation Function</h3>
+<p>There are few substantial activation function which we use most of the times, sigmoid, tanh(scaled sigmoid), relu, leaky ReLu. 
+<strong>Step</strong> - On of off, 0 or 1, decide based on threshold. This is not analog so turning off few neuron completely will make them passive which we don’t want.</p>
+
+<p><strong>Linear</strong> - Change in proportionate to w and <script type="math/tex">a^n</script>. If the all the layer have lennar function, then logically combined function will be linear and it will be dumb.</p>
+
+<p><strong>Sigmoid</strong> - <script type="math/tex">f(x)=\frac{1}{1+e^{-2x}}</script>. It fits the a from range <script type="math/tex">[-\infty,+\infty]</script> to [0,1]. Gradient is result hungry if it is in between [-2,2] beyond this gradient is very slow and stops learning.</p>
+
+<p><strong>tanh</strong> - <script type="math/tex">tanh(x)= 2sigmoid-1</script>, scales to [-1,1] beyond it gradient is slow.</p>
+
+<p><strong>ReLu</strong> - A(x) = max(0,x). Activation value Less then 0 will be 0. Makes calculation faster but makes half network passive as they are always off.</p>
+
+<p><strong>Leaky ReLu</strong> - Less then 0 is kept very small but not 0, y = 0.0x. Makes all nodes active. Solves ReLu problem. There other variant, <strong>ELU</strong>, less then 0 will be exponential <script type="math/tex">\alpha(e^z-1)</script></p>
+
+<p>Thanks to 3Blue1Brown videos on neural network, makes visualization so easy.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=tIeHLnjs5U8" frameborder="0" allowfullscreen=""></iframe>
+
+<h3 id="increase-efficiency">Increase efficiency.</h3>
+<p><strong>Cross Entropy Function</strong> - (Not same as probability distribution cross entropy, do not get confused). In place quardratic cost function (y-a)<sup>2</sup> use cross entropy function to calculate change required for weigh and biases. Learning rate doesn’t slow down as quadratic cost function.
+<script type="math/tex">C=−1n∑x[ylna+(1−y)ln(1−a)]</script></p>
+
+<p><strong>SoftMax and loglikelyhood</strong> - In place of 0 to 1 output probability on each output layer(sigmoid activation), if we say combined output layer probability should be 1(Softmax activation). Then the data is more comparable. Here cost function used is -log a, in case of output close to 1 less change is needed and in 0 more change is required.
+ <script type="math/tex">\sum_j a_j^L=\frac{\sum_j e^{z_j^L}}{\sum_k e^{z_k^L}}\\
+ C=-log\;a_y^L</script></p>
+
+<p><strong>overfitting or overtraining</strong> - the epoch from where you dont see much learning after that.</p>
+
+<p><strong>Bias &amp; Variance Tradeoff</strong> - Bias is difference between average predicted value to true value. High bias Pays very little attention to training set and oversimplfies the model(<strong>underfitting</strong>). For ex. Model devices is lenear function while the actula need was non lenear function. Variance tells about the spread of the data. High variance over learn the training set and doesn’t generalize it (<strong>overfitting</strong>). It picks the outliers/noise and noise also in its knowledge which is overfiting of the data.  High parameter increase high variance and low parameter increase high bias, we have to trade off in selecting right parameter.
+<script type="math/tex">{\displaystyle \operatorname {E} {\Big [}{\big (}y-{\hat {f}}(x){\big )}^{2}{\Big ]}={\Big (}\operatorname {Bias} {\big [}{\hat {f}}(x){\big ]}{\Big )}^{2}+\operatorname {Var} {\big [}{\hat {f}}(x){\big ]}+\sigma ^{2}}\\
+=(f-E[\hat f])^2+Var[y]+Var[\hat y]\\
+=(f-E[\hat f])^2+E[\varepsilon^2]+E[(E[\hat f]-\hat f])^2]</script></p>
+
+<p><strong>Detect underfit and overfit</strong> - Devide training data in training and test data and use test data to get the accuracy of model. 
+<strong>Fixing underfit and overfit</strong></p>
+<ul>
+  <li>Cross-validation - Divide data in splits and train and test. For ex K-Fold, divide data in K and keep increasing the training set, keep decreasing the test set.</li>
+  <li>Train with relevant data- More data can be good, but if it noisy it is issue so train with relevant data.</li>
+  <li>Remove feature - Remove irrelevant features. Rubber duck debugging.</li>
+  <li>Early stop - More training overfits the data sometime so know when to stop.</li>
+  <li>Regularization - Make model simpler sometime, prune decision tree, dropout neural netwrok, penalty paramerter.</li>
+  <li>Ensembling - Multiple model learn separately and cobmbine them in the end to smooth it out. Bagging and boosting are example. Bagging start with complex moddle then smooths it out while boosting start with weak learner models and form a complex model.</li>
+</ul>
+
+<p><strong>Weight decay Regulazrization- L2 or Ridge Regulazrization</strong> - Add a extra term regularization term, <script type="math/tex">C=C_0+\frac{\lambda}{2n}\sum_ww^2\\
+\frac{\delta C}{\delta w} = \frac{\lambda}{n}w</script>. It helped in overcoming overfitting issue and increasing accruracy, also saved us from local minima.</p>
+
+<p><strong>Weight decay Regulazrization-L1 or Lasso Regulazrization (LAD - Least Absolute deviation)</strong> - Since</p>
+
+<p><strong>Sparsity</strong> - Defines how much element in vector or matrix are zero, more zero means more sparsity. L1 is more sparse.</p>
+
+<p><strong>Built-In feature Selection</strong> - Since L1 is sparse it brings down the wait of non used parameters which automatically bring more weighted parameters.</p>
+
+<p><strong>Dropout</strong> - We select set of hidden neuron and turn them off and repeat the machine learning for small batches, later average it out. It remove the overfitting of data as different network will pick different things and on average it will span out better.</p>
+
+<ul>
+  <li>Increase in training data increases the accuracy. We can increase training data by skewing image, rotating image etc.</li>
+  <li>Initialize weight right, Normally we use normal/gaussian distribution in that case mean is 0 and SD is 1 but since these normally distributed weights will make z 0 and any change in weight will not impact cost hence learning will be very slow. Use <script type="math/tex">\frac{1}{\sqrt n}</script>.</li>
+</ul>
+
+<p><strong>Derive Hyper parameter fast</strong></p>
+<ul>
+  <li>Work with simple output prediction, such as 0,1 yes no etc.</li>
+  <li>Start with simple network</li>
+  <li>Take small batches.</li>
+  <li>Adjust lambda in proportion to reduces batch size.</li>
+  <li>
+<script type="math/tex">\eta</script>, start with big and small see where it starts oscillating, it should not overshoot.</li>
+  <li>Keep monitoring, stop early. no-improvement-in-ten etc.</li>
+</ul>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

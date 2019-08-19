@@ -1,0 +1,553 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Python when you are from Java</title>
+    <link rel="canonical" href="https://abyte.stream/Python-when-you-are-from-Java/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-14T18:57:06-05:00" class="date">14 Dec 2018 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Python when you are from Java</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>Let’s see some Python Basics first you can skip it as well.</p>
+
+<ul>
+  <li>Python string can be inside single quotes and double quotes and three quotes as well. Three quotes takes care of new line as well.</li>
+  <li>Either use 4 spaces or a tab to indent.</li>
+  <li># for comment and “”” for multiline documenttaion comment</li>
+  <li>Naming conventions
+    <ul>
+      <li>Module name, variable name and function name should be all small with underscores.</li>
+      <li>Class name should CaptWord.</li>
+      <li>Constants should be ALL_CAPS with underscore.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="type-of-methods-in-class">Type of methods in class</h3>
+<p>There are three type of methods in class is <strong>instance methods</strong>(default, first paramerter has to be self and gets passed automatically. It requires object to call these methods, Access class with self.<strong>class</strong>), <strong>class methods</strong> (first parameter is cls and class reference gets passed automatically, directly call using classname), <strong>static methods</strong> (nothing is passed and can be accessed by classname).</p>
+
+<h3 id="underscore-usage">Underscore usage.</h3>
+<ul>
+  <li>Single prefix underscore - In wildcard import methods/variable with name starting with underscore are not imported.</li>
+  <li>Single suffix underscore - Sometime you want use reseverd keyword but they are already taken so you use suffix underscore.</li>
+  <li>Double prefix underscore - The name is mangled, when you list dir(anyobject), it shows classname appended to actual variable name. For ex.
+  self.__xyz = 1 # inside class A
+  print A().__xyz # throws error as it is not defined.
+  print A()._A__xyz # gives the __xyz value.</li>
+  <li>Leading and training double underscore - Python reserved methods and variable, don’t use this standard.</li>
+  <li>Single underscore - temporary variable from interpreter.
+  &gt;&gt;&gt; 20 + 3
+  23
+  &gt;&gt;&gt; _
+  23</li>
+</ul>
+
+<h3 id="variable">Variable</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">xyz</span> <span class="o">=</span><span class="s">"Something"</span>
+<span class="n">xyz</span> <span class="o">=</span> <span class="mi">1</span>  </code></pre></figure>
+<p>Everything in Python is object of some class and each variable is just a reference of size 8 byte (can be different in different implementation of Python). But there are some key datatypes defined by Python.</p>
+<h2 id="datatypes">DataTypes</h2>
+<p>The sizes of each datatype can be different based on different implementation of python.</p>
+<ul>
+  <li>Numbers -
+    <ul>
+      <li>int - Unlimited size</li>
+      <li>float - accurate upto 15 decimal</li>
+      <li>complex</li>
+    </ul>
+  </li>
+  <li>Sequence - collections.abc.Sequence
+    <ul>
+      <li>list</li>
+      <li>tuple</li>
+      <li>range</li>
+      <li>string</li>
+      <li>bytes</li>
+      <li>bytearray</li>
+      <li>memoryview</li>
+    </ul>
+  </li>
+  <li>Set
+    <ul>
+      <li>set - mutable</li>
+      <li>frozenset - immutable</li>
+    </ul>
+  </li>
+  <li>Mapping
+    <ul>
+      <li>dict</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="number-operations">Number Operations.</h3>
+<ul>
+  <li>x + y, x - y, x * y, x / y, x % y, x ** y or pow(x,y)</li>
+  <li>x // y - Floored quotient</li>
+  <li>abs(x)</li>
+  <li>int(x)</li>
+  <li>float(x)</li>
+  <li>round(x,y) - round upto y digits</li>
+  <li>math.floor(x), math.ceil(x)</li>
+</ul>
+
+<p><strong>Bitwise Operators</strong></p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>x</td>
+          <td>y, x &amp; y, ~x</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>x ^ y - exclusive or or x and y</li>
+  <li>x » n, x « n shift n bits</li>
+</ul>
+
+<h3 id="sequence-type-operations">Sequence type Operations.</h3>
+<ul>
+  <li>x in s, x not in s</li>
+  <li>s + t - concat</li>
+  <li>s * n or n * s - repeat itself by n times.</li>
+  <li>s[i], s[i:j], s[i:j:k] - k is steps</li>
+  <li>len(s), min(s), max(s)</li>
+  <li>s.index(x[, i[, j]]) - index of first x in i to j slice.</li>
+  <li>s.count(x)</li>
+</ul>
+
+<p><strong>Mutable sequence Operations- List</strong>
+All above are there, here are some more.</p>
+<ul>
+  <li>s[i] = x, s[i,j] = x, s[i,j,k] = x</li>
+  <li>s[i] = x, s[i,j] = x, s[i,j,k] = x</li>
+  <li>del s[i:j], del s[i:j:k]</li>
+  <li>s.append(x) - add object as it is</li>
+  <li>s.extend(x) - iterate over x and adds</li>
+  <li>s.clear(x) or del s[:], s.copy(x) or s[:] - shallow copy</li>
+  <li>s *= n -Repeat n time and update itself.</li>
+  <li>s.insert(i, x) or s[i:i]=x, s.pop([i]), s.remove(x) - remove first x</li>
+  <li>s.reverse()</li>
+</ul>
+
+<h3 id="set-operator">Set Operator</h3>
+<ul>
+  <li>len(s), copy() - shallow copy</li>
+  <li>x in s, x not in s</li>
+  <li>isdisjoint(t)</li>
+  <li>issubset(t), s &lt;= t, s &lt; t - proper subset</li>
+  <li>isuperset(t),  s &gt;= t, s &gt; t - proper superset</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>union(*t) or s</td>
+          <td>t, intersection(*t)  or s &amp; t, difference  or s - t, symmetric_difference  or s ^ t,</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p><strong>Extra immutable operators</strong></p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>update(*t) or s</td>
+          <td>=t, interset_update(*t) or s &amp;= t</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>difference_update(*t) or s -=t, symetric_difference_update(*t) or s ^= t</li>
+  <li>remove(a) - throws error if not present, discard(a)</li>
+  <li>add(a), pop(), clear()</li>
+</ul>
+
+<h3 id="dict-operator">Dict operator</h3>
+<ul>
+  <li>len(), clear(), copy(), get(k), pop(k), popitem() - removes last item</li>
+  <li>d[key], d[key] = value, del d[key]</li>
+  <li>key in d, key not in d</li>
+  <li>iter(d) or iter(d.keys())</li>
+  <li>update([other]) - overrides with other key value pair.</li>
+  <li>items(), keys(), values() -return view and gets update when dict changes.</li>
+</ul>
+
+<h3 id="python-module">Python Module</h3>
+<p>Module in python are files which can some statements, methods, variable etc. Moduels can import another modules as well. You can reload the module using <code class="highlight language-python" data-lang="python"><span class="kn">import</span> <span class="nn">importlib</span><span class="p">;</span> <span class="n">importlib</span><span class="o">.</span><span class="nb">reload</span><span class="p">(</span><span class="n">modulename</span><span class="p">)</span></code>.
+<strong>Execute Modules</strong> - »&gt;python module1.py <arguments>
+Access module parameter by, int(sys.argv[1]). Main module should have name \_\_main__.py.</arguments></p>
+
+<p><strong>Packages</strong> - Packages are folder with __init__.py files, these file can be empty but can also used to set __all__ variable. Use package with dot.</p>
+
+<h3 id="inheritance">Inheritance.</h3>
+<p>Private attribute are defined by double underscore and protected are defined by single single underscore. Private can be accesses by mangling the attribute name. Logically anything defined inside functon with self is private. For ex.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+  <span class="k">def</span> <span class="err">\</span><span class="nf">_</span>\<span class="n">_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+    <span class="bp">self</span><span class="o">.</span><span class="n">firstname</span> <span class="o">=</span> <span class="s">'xyz'</span>
+    <span class="bp">self</span><span class="o">.</span>\<span class="n">_</span>\<span class="n">_lastname</span> <span class="o">=</span> <span class="s">'abc'</span>
+  <span class="o">...</span>
+
+  <span class="n">P</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">__lastname</span><span class="p">)</span> <span class="c1"># will throw, #AttributeError: 'Person' object has no attribute '__lastname'</span></code></pre></figure>
+
+<h2 id="python-magic-methods">Python Magic methods.</h2>
+<ul>
+  <li>Constructor, intializer and destructor
+__new__(cls, […), __init__(self, […), __del__(self)</li>
+  <li>Comparison magic methods
+<em>_cmp__(self, other), __eq__, __ne__,</em>_lt__,<em>_gt__,</em>_le__,__ge__</li>
+  <li>Unary operator
+<em>_pos__,</em>_neg__,<em>_abs__,</em>_invert__,<em>_round__,</em>_floor__,<em>_ceil__,</em>_trunk__</li>
+  <li>Arithmetic Operator
+<em>_add__(self, other),</em>_sub__,<em>_mul__,</em>_div__,<em>_mod__,</em>_pow__,<em>_lshift__,</em>_and__,<em>_or__,</em>_xor__</li>
+  <li>Reflected Arithmetic Operator - Switch operator and operand position (a+b to b+a). Just add ‘r’ to all arithmetic operator.</li>
+  <li>Augmented assignment - (a+=b is a = a+b), Just add ‘i’ to all arithmetic operator.</li>
+  <li>Conversion
+<em>_int__(self),</em>_float__,long,complex,oct,hex,index,trunc</li>
+  <li>Represent your class
+__str__(self),repr,unicode,format,hash,nonzero,dir,,sizeof</li>
+  <li>Attribute acess.
+__getattr__(self, name), __setattr__(self, name, value),delattr</li>
+</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="n">def</span> <span class="nf">__setattr__</span><span class="o">(</span><span class="n">self</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">value</span><span class="o">):</span>
+    <span class="n">self</span><span class="o">.</span><span class="na">__dict__</span><span class="o">[</span><span class="n">name</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span> <span class="err">#</span><span class="n">right</span>
+    <span class="n">self</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">value</span> <span class="err">#</span> <span class="n">wrong</span><span class="o">,</span> <span class="n">will</span> <span class="n">cause</span> <span class="n">recursion</span></code></pre></figure>
+<ul>
+  <li>Custom sequence</li>
+</ul>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">FunctionalList</span><span class="p">:</span>
+    <span class="s">'''A class wrapping a list with some extra functional magic, like head,
+    tail, init, last, drop, and take.'''</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">values</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">values</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="c1"># if key is of invalid type or value, the list values will raise the error
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># get the first element
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># get all elements after the first
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># get elements up to the last
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">last</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># get last element
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="c1"># get all elements except first n
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">n</span><span class="p">:]</span>
+    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="c1"># get first n elements
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span></code></pre></figure>
+<ul>
+  <li>Copying
+<strong>copy</strong>(self),<strong>deepcopy</strong>(self, memodict={})</li>
+  <li>There some more but for advance usage.</li>
+</ul>
+
+<h3 id="inheritance-1">Inheritance.</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">BaseClassName1</span><span class="p">,</span><span class="n">BaseClassName2</span><span class="o">..</span><span class="p">):</span>
+    <span class="k">pass</span></code></pre></figure>
+
+<p><strong>isinstance and issubclass</strong> - Tells weather object belong to inhertance hierarchy and a class is subclass of something.</p>
+
+<p><strong>super()</strong> - Use this to point to super class.</p>
+
+<h3 id="exception-handling">Exception handling.</h3>
+<p>We have following keywords, try, except, else, raise,finally.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">try</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">AppError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Something went wrong"</span><span class="p">,</span><span class="n">error</span><span class="p">)</span>
+  <span class="n">error_type</span><span class="p">,</span> <span class="n">error_instance</span><span class="p">,</span> <span class="n">traceback</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Nothing went wrong"</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"The 'try except' is finished"</span><span class="p">)</span>
+<span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'A very specific bad thing happened.'</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="lambda">Lambda</h3>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="n">x</span> <span class="o">=</span> <span class="n">lambda</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span> <span class="o">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+  <span class="nf">print</span><span class="o">(</span><span class="n">x</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">))</span>
+  <span class="n">def</span> <span class="nf">myfunc</span><span class="o">(</span><span class="n">n</span><span class="o">):</span>
+    <span class="k">return</span> <span class="n">lambda</span> <span class="n">a</span> <span class="o">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">n</span> <span class="err">#</span><span class="n">returning</span> <span class="n">lambda</span> <span class="n">functions</span>
+  <span class="n">mydoubler</span> <span class="o">=</span> <span class="n">myfunc</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">mydoubler</span><span class="o">(</span><span class="mi">11</span><span class="o">))</span></code></pre></figure>
+
+<h3 id="global-and-nonlocal-variable">Global and nonlocal variable</h3>
+<p>nonlocal points to outer scope variable while global is for outermost which is global.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">def</span> <span class="nf">outer</span><span class="p">():</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+      <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+          <span class="k">nonlocal</span> <span class="n">x</span> <span class="c1"># Output 2 if it would have been global x
+</span>          <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+          <span class="k">print</span><span class="p">(</span><span class="s">"inner:"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+      <span class="n">inner</span><span class="p">()</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"outer:"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+  <span class="n">outer</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"global:"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+  <span class="c1"># inner: 2
+</span>  <span class="c1"># outer: 2
+</span>  <span class="c1"># global: 0
+</span>
+  <span class="c1"># output2
+</span>  <span class="c1"># inner: 2
+</span>  <span class="c1"># outer: 1
+</span>  <span class="c1"># global: 2</span></code></pre></figure>
+
+<h3 id="compound-statements">Compound statements.</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">if</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="k">elif</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expr1</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">conditional_expr</span><span class="o">&gt;</span> <span class="k">else</span> <span class="o">&lt;</span><span class="n">expr2</span><span class="o">&gt;</span>
+<span class="o">....</span>
+  <span class="k">while</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">additional_statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="o">....</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">....</span>
+<span class="k">class</span> <span class="nc">controlled_execution</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="nb">set</span> <span class="n">things</span> <span class="n">up</span>
+      <span class="k">return</span> <span class="n">thing</span>
+  <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+      <span class="n">tear</span> <span class="n">things</span> <span class="n">down</span>
+
+<span class="k">with</span> <span class="n">controlled_execution</span><span class="p">()</span> <span class="k">as</span> <span class="n">thing</span><span class="p">:</span>
+    <span class="n">some</span> <span class="n">code</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"x.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">data</span></code></pre></figure>
+
+<h2 id="plots">Plots</h2>
+<p>Type of plots.</p>
+
+<p><strong>Plot</strong> - Plot with lines.
+matplotlib.pyplot.plot(*args, scalex=True, scaley=True, data=None, **kwargs)
+plot([x], y, [fmt], *, data=None, **kwargs)
+plot([x], y, [fmt], [x2], y2, [fmt2], …, **kwargs)</p>
+
+<p><strong>Subplot</strong> - Plot over plot
+matplotlib.pyplot.subplot(*args, **kwargs)
+subplot(nrows, ncols, index, **kwargs)
+subplot(pos, **kwargs)
+subplot(ax)</p>
+
+<p><strong>Contour</strong>
+Three dimension in 2D with use of color
+matplotlib.pyplot.contour(*args, data=None, **kwargs)[source]
+contour([X, Y,] Z, [levels], **kwargs)</p>
+
+<p><strong>Histogram</strong> - Used for intervals.
+matplotlib.pyplot.hist(x, bins=None, range=None, density=None, weights=None, cumulative=False, bottom=None, histtype=’bar’, align=’mid’, orientation=’vertical’, rwidth=None, log=False, color=None, label=None, stacked=False, normed=None, *, data=None, **kwargs)</p>
+
+<p><strong>Bar Chart</strong> Same as historgram but is spaced out between bars.
+matplotlib.pyplot.bar(x, height, width=0.8, bottom=None, *, align=’center’, data=None, **kwargs)</p>
+
+<p><strong>Pie Chart</strong> - Something which somes to 1.
+matplotlib.pyplot.pie(x, explode=None, labels=None, colors=None, autopct=None, pctdistance=0.6, shadow=False, labeldistance=1.1, startangle=None, radius=None, counterclock=True, wedgeprops=None, textprops=None, center=(0, 0), frame=False, rotatelabels=False, *, data=None)</p>
+
+<p><strong>Scatter Plot</strong> - Plots points.
+matplotlib.pyplot.scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, *, plotnonfinite=False, data=None, **kwargs</p>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

@@ -1,11 +1,43 @@
 [
   
     {
+      "title"    : "Machine Learning Basic Maths",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-Basic-Maths/",
+      "date"     : "15 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Python when you are from Java",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Python-when-you-are-from-Java/",
+      "date"     : "14 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Machine Learning Neural Network.",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-Neural-Network/",
+      "date"     : "13 Dec 2018"
+    } ,
+  
+    {
       "title"    : "10 Minutes JMS.",
       "tags"     : "",
       "categories"     : "",
       "url"      : "/10-minutes-JMS/",
       "date"     : "13 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Machine Learning Python Libraries",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-Python-Libraries/",
+      "date"     : "12 Dec 2018"
     } ,
   
     {
@@ -37,6 +69,14 @@
       "tags"     : "",
       "categories"     : "",
       "url"      : "/REST-in-Java-world/",
+      "date"     : "11 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Machine Learning with Python",
+      "tags"     : "",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-with-Python/",
       "date"     : "11 Dec 2018"
     } ,
   

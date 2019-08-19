@@ -1,0 +1,486 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Machine Learning with Python</title>
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-with-Python/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Machine Learning with Python</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<p>Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation.
+Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.</p>
+
+<p>Popular machine learning techniques classification, regression, recommendation and clustering.</p>
+
+<p>Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.</p>
+
+<p>Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.</p>
+
+<p>Programming which learns and improves with experience.  Learning means recognizing and understanding the data and taking informed decision based on the provided data points. The algorithm are developed such that they build the knowledge from data and past experience by applying statical science, probability, logic, mathematical optimization, reinforcement learning and control theory.</p>
+
+<p>Here are few application of machine learning.</p>
+<ul>
+  <li>Vision processing</li>
+  <li>language processing</li>
+  <li>Forecasting number ex, stock market, weather</li>
+  <li>pattern recognition</li>
+  <li>games</li>
+  <li>data mining</li>
+  <li>expert system</li>
+  <li>robotics</li>
+</ul>
+
+<p>Steps in machine learning.</p>
+<ul>
+  <li>Defining problem</li>
+  <li>Preparing data</li>
+  <li>Evaluating algorithm</li>
+  <li>improving results</li>
+  <li>presenting results</li>
+</ul>
+
+<h3 id="wait-whats-the-difference-between-data-scientist-and-ml-engineer">Wait, What’s the difference between data scientist and ML Engineer.</h3>
+<ul>
+  <li>Data science guy is more of studious kid who’s job is to see data remove error, find patterns, analyzing data, creating graph etc.</li>
+  <li>ML engineer is not a data guy, he gets the data and starts applying available algorithms or create prototypes to get meaningful output from data. Normally data scientist request ML engineer to create a algorithm/program based on the prototype they have.</li>
+</ul>
+
+<p>Python libraries</p>
+<ul>
+  <li>numpy - N-dimensional array object.</li>
+  <li>pandas - dataframes manipulation</li>
+  <li>matplotlib/searborn - plotting graphs, data visualization</li>
+  <li>scikit-learn - algorithm for data analysis and data mining.</li>
+</ul>
+
+<p>Machine learning has following the common type machine learning algorithms.</p>
+<ul>
+  <li>Supervised</li>
+  <li>Unsupervised</li>
+  <li>Semi-Supervised</li>
+  <li>Reinforced learning</li>
+</ul>
+
+<h2 id="supervise-learning">Supervise learning</h2>
+<p>Ex face recognition, speech recognition, recommendation based on history, forecasting etc. These data are fed to algorithm and tuned to provide expected data points as output.</p>
+
+<p>In supervise learning the input data comes as labeled data so we know the result and we try to propose solution which takes inputs data set and tries to predict correct label, later we try to improve algorithm so that the accuracy of prediction is increased. Once the algorithm reaches satisfactory mark it can be used with real data. It is based on labeled sample and the output is know with learning data.
+There are many supervised algorithm examples: <strong>linear regression, logistic regression, support vector machine SVM, Naive bayes classifier</strong>.</p>
+
+<p><strong>Classification</strong>- Classification is dividing the data into set, categorizing it or anything related to segregating data. It is done when you have complete data, so it is done after.<br>
+<strong>Prediction/Regression</strong> is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced.</p>
+
+<h2 id="unsupervised-learning">Unsupervised learning.</h2>
+<p>It used to detect anomalies, outlier, something which is odd then normal, fraud, defective equipment, or group with similarities. In here we don’t get the labeled data. It is also called unlabeled learning, the algorithm tries to find pattern, structure, anomaly from the given data.
+Since here we do not know feature which can act as data classification points so unsupervised learning tries to group them in different groups based on data underlying patterns in optimum way. Most of the time unsupervised learning tries to find similarities and cluster them. Some examples are Kmean, random forest, hierarchal clustering etc.<br>
+<strong>Association &amp; Clustering</strong> - If you buy bread then system shows jam as well, this kind comes under association. Clustering is again grouping but without training data.</p>
+
+<h2 id="semi-supervised">Semi supervised.</h2>
+<p>Some data are labeled and some are not, unlabeled are used in unsupervised learning and labeled are used for testing and fine tuning. It saves cost when it is difficult to get full labeled data.</p>
+
+<h2 id="reinforced-learning">Reinforced learning.</h2>
+<p>Here learning is improved based on real time data feedback. System adjust itself based on learning data. Ex are self driving car, chess Alpha Go. Unlike supervised it works only on three feedback- happy, unhappy and neutral. Supervised tries to find right hyper parameters for model and updates these based on some function based on output.</p>
+
+<p>The goal of machine learning is to reduce human effort but not creating the intelligence that piece goes into artificially intelligence which is superset of machine learning. It can evolve to go beyond human perception specializing in one given task.</p>
+
+<p><amp-img src="/assets/2019-06-12-Machine-Learning-with-Python.png" alt="" title="Courtsey https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463" width="650" height="799" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python.png" alt="" title="Courtsey https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463" width="650" height="799"></noscript></amp-img>
+Or more related to.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python2.jpg" alt="" width="935" height="469" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python2.jpg" alt="" width="935" height="469"></noscript></amp-img></p>
+
+<h2 id="data-preparation-and-preprocessing">Data preparation and preprocessing</h2>
+<p>Let’s talk a bit about <strong>standardization and normalization</strong>.</p>
+<h3 id="normalization">Normalization</h3>
+<p>Data can in be sometime in big number or may be sometime in very small number, there are multiple technique to scale data to readable or to our needed limts. For example. 0&lt;x&lt;1 scaling. Any data can be scalded from 0 to 1 in this its easy to know lower limit and upper limit and we can easily perceptualize how big one data in this scale.<br>
+<strong>Min-Max Normalization</strong> - To fit the data in defined boundary, let say data has 134567 min and 136878 max and we want to see it in scale of 0 to 1, or in scale of 1000 to 10000 etc.
+<script type="math/tex">B= \frac{A-min(A)}{max(A)-min(A)}\cdot(D-C) + C</script>, it lays the data A<sub>i</sub> from set of A, from C to D.<br>
+<strong>Decimal Scaling</strong> - Divide or multiple with 10<sup>n</sup> to bring the at scale of decimal. For example
+10,30, 4000 will become 0.001, 0.03, 0.4 after deviling with 10<sup>4</sup>.<br>
+<strong>Standard Deviation</strong> - <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script></p>
+
+<p><strong>Standardization or z-score</strong> Is form of normalization where mean is kept to 0 and standard deviation to 1. In graph the start and end of data limits has to have same distance from y axis.<script type="math/tex">z = \frac{x_i-\mu}{\sigma}</script></p>
+
+<h2 id="algorithems">Algorithems.</h2>
+<h3 id="linear-regression">Linear regression</h3>
+<p>Regression tries to find the least cost continuos function based on given input such that, the aim to minimize the cost. The cost is cost of given training set combined.
+<script type="math/tex">Cost= J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=0}^m(h_\theta(x^i)-y^i)^2\\
+h_\theta(x)=y=\theta_0+\theta_1x</script>
+Where theta are independent variable and hyperparameter, m is number of training data, x is input data and y is output data, h is expected output data. Our aim is to find minimum cost for given input variables. 
+With one variable.<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python3.JPG" alt="" width="918" height="513" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python3.JPG" alt="" width="918" height="513"></noscript></amp-img>
+With two variable. <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python4.JPG" alt="" width="787" height="486" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python4.JPG" alt="" width="787" height="486"></noscript></amp-img>
+<strong>Gradient Descent</strong> Gives change in input to reach minmum cost.
+<script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta_0,\theta_1)</script>
+Where derivative of J gives the slope which is always -1 to 1 and this slope will be calculated for each variable. This slope calculates new value for variable θ. α defines the jump either to decrease or to increase this variable.</p>
+
+<h3 id="multivariate-linear-regression">Multivariate Linear regression</h3>
+<p><script type="math/tex">h_θ=θ_0+θ_1x_1+θ_2x_2..+θ_nx_n,
+x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},
+θ=\begin{bmatrix}θ_1\\θ_1\\..\\θ_n\end{bmatrix}
+h_θ(x)=θ^Tx</script><br>
+<script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^m(h_θ(x^i)-y^i)x_j^i</script></p>
+
+<p><strong>Feature Scaling</strong> - If the variable are not in same scale they tend to make gradient jump and slows down the process of reaching to minimum. So there are many feature scalling.</p>
+<ul>
+  <li>Standardization - Replace by z-score, Normally used in normally distributed set. <script type="math/tex">x'=\frac{x-\bar x}{\sigma}</script>
+</li>
+  <li>Mean Normalization - Can variate from -1 to 1, used in Principla component analysis. <script type="math/tex">x'=\frac{x-\bar x}{max(x)-min(x)}</script>
+</li>
+  <li>Min-Max Scaling - from 0 to 1. <script type="math/tex">x'=\frac{x-min(x)}{max(x)-min(x)}</script>
+</li>
+</ul>
+
+<h3 id="normal-equation-to-get-optimal-value">Normal equation to get Optimal value</h3>
+<p>Normal equation gets you the minimum value of θ directly, for example you know the curve of the cost function. Then you can solve for minimum value for θ.
+If θ is quadratic. <script type="math/tex">J(θ)=aθ^2+bθ+c = 0</script> will give you minimu value for θ. Same goes for multiple variable keep one variable constant each time. 
+m - Training examples
+n - Variables. 
+<script type="math/tex">x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},x^i=\begin{bmatrix}x_0^i\\x_1^i\\..\\x_n^i\end{bmatrix},
+X= \begin{bmatrix}[x^1]^T\\ [x^2]^T\\ [x^m]^T\end{bmatrix},
+min\,value\,of\,θ=(X^TX)^{-1}X^Ty</script>
+<strong>Advantage</strong>, you don’t need to α and it does not take lot of iteration like gradient descend while <strong>disadvantage</strong> is has complexity of  <script type="math/tex">O(n^3)</script> and difficult to work with nonconvertible equation <script type="math/tex">(X^TX)^{-1}</script>, though it can be solved by removing redundant feature, removing feature and regularization.</p>
+
+<h3 id="logistic-regression--">Logistic Regression -</h3>
+<p>Logistic function or called sigmoid function, it maps the value to in between 0 &lt; h(x) &lt; 1. Hence can be used in probability prediction. Probability of y being 1 at given value of x when θ is hyperparameter. θ changes the width of sigmoid function hence affect the y over over x. 
+<script type="math/tex">h_θ(x)=g(z)=g(θ^Tx)= \frac{1}{1+e^{θ^Tx}}=P(y=1|x:θ)</script></p>
+
+<ul>
+  <li>Logistic is some what categorized as classification algorithm but is is continuos.</li>
+</ul>
+
+<p><strong>Decision Boundary</strong>- Kind of line, curved line, plane which divides the data into sets. It is used to define the boundary of classification data. For example a line dividing area in 2D plain.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python5.JPG" alt="" width="910" height="508" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python5.JPG" alt="" width="910" height="508"></noscript></amp-img></p>
+<ul>
+  <li>Gradient decent can’t be applied on logistic regression as it is non linear (not straight line), the cost function will not be mapped as normal convex curve but it will have multiple local minima in it. So we use another cost function which give convex graph for J(θ).
+<script type="math/tex">Cost(h_θ,y)=\begin{cases}-log(h_θ(x))\text{ if y=1}\\-log(1-h_θ(x))\text{ if y=0}\end{cases}</script>
+</li>
+  <li>Ok <strong>biggest question</strong> here is how do you select fitting a cost function. If you are researcher or very good at maths you might guess a fitting graph (logistic(classification) or linear(continuos prediction)), and then you guess what cost function will be good for my model. There are lot of cost function you select any one and try if your machine is performing well or not. But some are pretty standard cost function for given fitting graph for ex mean square for linear, the one above for sigmoid etc.</li>
+</ul>
+
+<p><amp-img src="/assets/2019-06-12-Machine-Learning-with-Python6.JPG" alt="" width="855" height="350" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python6.JPG" alt="" width="855" height="350"></noscript></amp-img>
+Looks same as linear regression, but they differ by <script type="math/tex">h_θ(x)</script>.
+“Conjugate gradient”, “BFGS”, and “L-BFGS” are alternative of gradient descend and provide better optimization over cost.</p>
+
+<h3 id="multiclass-classification">Multiclass classification.</h3>
+<p>In logistic we use to have two set yes/no and each event has some probability based on that we use to say this event belong to yes or no group. That probability is derived by function <script type="math/tex">h_θ(x)</script>. Here we have many sets and each set will have its own <script type="math/tex">h_θ^i(x)</script>. We calculate y’s probability in eahc set and assign this to the set which has max probability.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python7.JPG" alt="" width="451" height="256" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python7.JPG" alt="" width="451" height="256"></noscript></amp-img></p>
+
+<h3 id="underfitting--overfitting">Underfitting &amp; overfitting.</h3>
+<p>If you increase the variable to map all the training data then there are chances the test data may not fall close to the curve. This is overfitting so to reduce this,</p>
+<ul>
+  <li>Sometime reduce the parameter</li>
+  <li>Sometime keep it but regularize. 
+Increase the λ in regularize some variables, so even small change in variable will change cost to much, to keep cost low these variable should be small. λ is regularization parameter
+<script type="math/tex">min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +1000⋅θ_3^2 ​ +1000⋅θ_4^2,
+=​min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +λ\sum_{j=1}^nθ_j^2</script>
+</li>
+</ul>
+
+<h2 id="neural-network-andrew-ng-style">Neural network (Andrew Ng style)</h2>
+<p><script type="math/tex">% <![CDATA[
+a^1=x=\begin{bmatrix}x_0=1\\x_1\\..\\x_{S_j}\end{bmatrix},
+θ^1=\begin{bmatrix}θ_{10}&θ_{11}&..&θ_{1S_j+1}\\θ_{20}&θ_{21}&..&θ_{2S_j+1}\\..\\θ_{S_j0}&θ_{S_j1}&..&θ_{S_jS_j+1}\end{bmatrix},
+h_θ(x)=a^2=g(z^2)=g(θ^{1}a^{1}) %]]></script></p>
+<ul>
+  <li>There is no <script type="math/tex">z^1</script>
+Deriving from logistic regression. But compared to logistic it has K output in multi class. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python8.JPG" alt="" width="657" height="56" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python8.JPG" alt="" width="657" height="56"></noscript></amp-img>
+</li>
+</ul>
+
+<p><strong>Backward proportion</strong> - We know when there is hight cost or more error in each K output nodes, then we need to fix each θ in previous layers. This is done throug backward propgoratipn.
+Let δ is error in Kth node of L, <script type="math/tex">δ_k^l = a_k^l-y_k</script> now calculate δ at L-1 layer. This is done through derivative of 
+<script type="math/tex">(a^{l-1})'=g'(z^{l-1})=a^{l-1}.(1-a^{l-1})</script>. 
+δ is applied at nodes we need to adjust our θ matrix. So we put another term Δ which is proportionate to δ
+<script type="math/tex">Δ^{(l)}_{i,j} := Δ^{(l)}_{i,j} + a_j^{(l)} δ_i^{(l+1)}</script>
+<script type="math/tex">D^{l}_{i,j}=\frac{1}{m}(Δ^{l}_{i,j}+λθ^l_{i,j},\,if\,j≠0,
+D^{l}_{i,j}=\frac{1}{m}Δ^{l}_{i,j}\,if\,j=0</script>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python10.JPG" alt="" width="450" height="460" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python10.JPG" alt="" width="450" height="460"></noscript></amp-img></p>
+
+<p><strong>Gradient Checking</strong> - Compare the delta changed value to the output to the the change we got from Backward propagation. Gradient Checking is time consuming that is the reason we do not use it in place of backward propogation.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python9.JPG" alt="" width="494" height="55" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python9.JPG" alt="" width="494" height="55"></noscript></amp-img>.</p>
+
+<h2 id="evaluating-hypothesis">Evaluating Hypothesis.</h2>
+<p>Multiple things we can tweak to fix our hypothesis when we start.</p>
+<ul>
+  <li>Increase training set</li>
+  <li>Increase decrease parameters</li>
+  <li>Increase decrees generalization λ.</li>
+  <li>Try polynomial equations over parameters.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python11.JPG" alt="" width="724" height="294" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python11.JPG" alt="" width="724" height="294"></noscript></amp-img>.
+Some people <strong>dividing training</strong> set in training set, validation set to pick <strong>lowest cost polynomial function</strong> and test set to check <strong>generalization variation</strong> on new data.</li>
+</ul>
+
+<h3 id="bias-and-variance">Bias and variance.</h3>
+<p>As you increase d polynomial degree the validation error will decrease at it will not be generalized and will have high variance.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python1.png" alt="" width="300" height="255" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python1.png" alt="" width="300" height="255"></noscript></amp-img></p>
+
+<p><strong>Effect of λ</strong>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python12.JPG" alt="" width="468" height="247" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python12.JPG" alt="" width="468" height="247"></noscript></amp-img></p>
+
+<p><strong>Effect of training data</strong>
+In high bias(less parameterized) model training after some time is of no use, while in high variance training will improve the learning rate and decrease the Cross Validation(CV) cost.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python13.JPG" alt="" width="566" height="177" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python13.JPG" alt="" width="566" height="177"></noscript></amp-img></p>
+
+<ul>
+  <li>Always start with small model and keep drawing learning curve and calculating CV cost. Try different approach on small model to find out if more parameter needed if more generalization needed.</li>
+</ul>
+
+<p><strong>Precision &amp; Recall evaluation</strong> - Sometime you get the training whose output is skewed, in the sense hight percentage on one class. With these kind of data algorithms can’t learn well and show low precision and low recall characteristics. Evaluating Precision and recall give idea wether the algorithm is heading in right direction or not.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python14.JPG" alt="" width="464" height="245" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python14.JPG" alt="" width="464" height="245"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python16.JPG" alt="" width="455" height="244" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python16.JPG" alt="" width="455" height="244"></noscript></amp-img>
+Higher F score mean a better algorithm it take value between 0 and 1.</p>
+
+<h2 id="support-vector-machine">Support Vector Machine</h2>
+<p>One of the famous Supervised learning. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python17.JPG" alt="" width="885" height="486" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python17.JPG" alt="" width="885" height="486"></noscript></amp-img>
+In image we get rid of <script type="math/tex">\frac{1}{m}</script> and λ. <script type="math/tex">\frac{1}{m}</script> is constant so doesn’t affect cost function in minimization and intuition is in cost function keep bigger B in order generailze any parameter, that you can do either by increaseing λ r remove lambda put C and decrease C, both are same thing.</p>
+
+<p>SVM is also called <strong>Large Margine Classifier</strong>.</p>
+
+<p>Think <script type="math/tex">\theta^T x^i</script> as vector multiplication and you can say what this multiplication gives projection of θ over x.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python18.JPG" alt="" width="631" height="241" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python18.JPG" alt="" width="631" height="241"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python19.JPG" alt="" width="919" height="488" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python19.JPG" alt="" width="919" height="488"></noscript></amp-img>
+In above example our aim is to get maximum of p so that θ can be small. With bigger p there is bigger distance of dataset from the classifier line and will have bigger margin.</p>
+
+<p><strong>Kernal</strong> Above we were discussing are devisor which was linear, in some situation the plotted points are mixed and requires nonlinear curve to divide or enclosing circle. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python20.JPG" alt="" width="673" height="283" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python20.JPG" alt="" width="673" height="283"></noscript></amp-img>
+Here we take some points and mark them as territory and calculate the closeness/similarities of each dataset from these territories/points. Mark these points as <em>l</em> and calculate closeness/similarities vector. 
+<script type="math/tex">f_i = similarity(x,l^i)</script>
+Let say closeness is defined by.
+<script type="math/tex">f^i = similarity(x,l^i) = exp(-\frac{||x-l^i||^2}{2\sigma^2})</script>.
+When σ is big the peak is distributed(more generalized) and when it is small peek is thin(more variant).
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python21.JPG" alt="" width="695" height="372" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python21.JPG" alt="" width="695" height="372"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python22.JPG" alt="" width="691" height="376" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python22.JPG" alt="" width="691" height="376"></noscript></amp-img>
+So we have two kernel linear and gaussian kernel, linear for straight line divisor an gaussian for non-linear. When m is very large compared to n then using SVN with Gaussian kernel is good. Otherwise use linear kernel.</p>
+
+<h3 id="k-mean">K-Mean</h3>
+<p>K-mean is unsupervised clustering algorithem, Here you tak randomly take k clusters and each cluster has a centroid <script type="math/tex">μ_k</script>. We calculate <script type="math/tex">c^i</script> for each <script type="math/tex">x^i</script> which states cluster for <script type="math/tex">x^i</script>, which cluster x belongs to by calculating distance with each cluster centroid.
+<script type="math/tex">c^i = min||x^i-\mu_k||^2</script>
+This c maps all the input to some cluster and later each cluster’s mean is adjusted with average of x from that cluster.
+<script type="math/tex">\mu_{c^i}=\frac{(x^a+x^b_...)}{\text{count of x in }\mu}</script></p>
+
+<p><strong>Cost Function</strong> - We keep caculating K-mean until out cost stops decreasing. Cost is calculate by squared sum of distance of x from there cluster mean.
+<script type="math/tex">J(c^1,..,c^m,\mu_1,..,\mu_K)= \frac{1}{m}\sum_{i=1}{m}||x^i-\mu_{c^i}||^2</script></p>
+
+<p><strong>Optimization</strong> - Intialize mean of each cluster to random value of inputs and calculate cost, the lowest cost is selected in the end as optimized solution.</p>
+
+<p><strong>Deciding number of Clusters K</strong> - Use elbow approach, keep increasing K from 2 to n draw the graph, the cost keeps on decreasing but at some point we can see elblow, the rate of cost decrease has reduce significatnlty. Or if there is no such elbow select whatever suites you.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python23.JPG" alt="" width="877" height="293" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python23.JPG" alt="" width="877" height="293"></noscript></amp-img></p>
+
+<h3 id="data-comperssion">Data comperssion.</h3>
+<p>Compress the data from 2D to 1D or 3D to 2D or nD to mD m&lt; n etc, to save the memory and computation overheads.
+Correlated feature can be mapped together using a function or even directly so reduce multiple feature in one.</p>
+
+<p><strong>PCA(Squared Projection/minimum distance Error)</strong> - We try to find a line, where 2D points are projected and line should have minimum projection error. It is different to linear regression as linear regression tries to find out a line which tries minimizes the distance between actual y and projected h(x).<br>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python24.JPG" alt="" width="815" height="442" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python24.JPG" alt="" width="815" height="442"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python25.JPG" alt="" width="949" height="519" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python25.JPG" alt="" width="949" height="519"></noscript></amp-img>
+In above diagram you can see how K is selected so that k variance by total variance is 99.99% retained.</p>
+<ul>
+  <li>PCS speed up, use less memory and if k=1 ,2 ,3 then easy to visualize. This does not genralize the model as it doesn not consider the y in supervised learning while generalization parameter λ does.</li>
+</ul>
+
+<h3 id="anomaly-detection-algorithm">Anomaly detection Algorithm.</h3>
+<p><amp-img src="/assets/2019-06-12-Machine-Learning-with-Python26.JPG" alt="" width="922" height="485" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python26.JPG" alt="" width="922" height="485"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python27.JPG" alt="" width="894" height="519" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python27.JPG" alt="" width="894" height="519"></noscript></amp-img>
+Using training set we try to define a gaussian curve on each feature and with new x having n feature we try to find probability of this x to be fitted to gaussian curve, if it is not a good fit it will have very low probability output.
+<strong>Choosing feature</strong></p>
+<ul>
+  <li>Create new feature if existing feature can’‘t find anamoly</li>
+  <li>Create features out of another features so that the value is either very high or very low.</li>
+  <li>Transform feature so that it falls in gaussian curve, apply log or srqrt or any other root.</li>
+</ul>
+
+<p><strong>Multivariate Gaussian Distribution</strong>
+Sometime we need Multivariate Gaussian because in previous we use to find out p(x<sub>1</sub>),p(x<sub>2</sub>) etc. and this use to ignore there coherant property, In case we need to look how the combined gaussian looks we calculate p(x).
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python28.JPG" alt="" width="833" height="693" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python28.JPG" alt="" width="833" height="693"></noscript></amp-img>
+In simple term how it is different from normal previous guassian is the previous oen can not take diagonal eclipes form while this one can. In that case covariance matrix ‘∑’ all <strong>non diagonal fields will be 0</strong>, while in this case non diagonal field will have some weight.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python29.JPG" alt="" width="941" height="490" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python29.JPG" alt="" width="941" height="490"></noscript></amp-img></p>
+
+<h3 id="content-based-recommendation">Content based recommendation</h3>
+<p>Let’ remember the linear regression again, It tries to map feature of training set features= x<sub>1</sub>,x<sub>2</sub>…x<sub>n</sub>, input data =x<sup>1</sup>,x<sup>2</sup>…x<sup>m</sup>  to the output of training set with tweaking parameters as θ
+Now take n<sub>m</sub>  as movies and n<sub>u</sub> as users. We need to fit θ for each user to movies input based moveis feature. Since there are n<sub>u</sub> users hence there will θ<sup>j</sup> one for each user.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python34.JPG" alt="" width="710" height="397" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python34.JPG" alt="" width="710" height="397"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python30.JPG" alt="" width="933" height="251" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python30.JPG" alt="" width="933" height="251"></noscript></amp-img></p>
+
+<h3 id="collabrative-filter-algorithem">Collabrative Filter Algorithem</h3>
+<p>The soul remains same θ and x,m normaly we try to find θ to fit y for given x. So that said x is defined at least. But in last example x was some features of movies and how we can find those features, so we start small. With give θ provided by users (user rates some movies and also tell there inclination romance, action etc), with this information we calculate x. This calculated x is used to predict θ  and it goes in loop x and θ  both predict each one after one. 
+But better than going one by one lets find everything togather.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python31.JPG" alt="" width="704" height="375" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python31.JPG" alt="" width="704" height="375"></noscript></amp-img></p>
+
+<h3 id="recommendation-algorithm">Recommendation Algorithm</h3>
+<p>If user is watching one movie suggest him another movies. This is normally found by distance between two movies features x<sup>1</sup> (<script type="math/tex">x_1^1,x_2^1..x_n^1</script>). The distance is caluclated by <script type="math/tex">||x^1-x^2||^2</script>.
+What if there is new user and we need to suggest him a movie. The θ<sup>i</sup> will be 0 for him as the model doesn’t have any parameter which affect θ for this new user. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python32.JPG" alt="" width="948" height="254" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python32.JPG" alt="" width="948" height="254"></noscript></amp-img></p>
+
+<h3 id="stochastic-gradient-descent">Stochastic Gradient descent</h3>
+<p>The normal  Gradient descent is called batch  Gradient descent, where we have to find mean square of all the input data on each iteration of gradient descent update. In case if m is in million then each θ update will have to calculate million records before making updates. In Stochastic Gradient descent we update θ based on last <script type="math/tex">x^i,y^i</script>.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python33.JPG" alt="" width="921" height="485" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python33.JPG" alt="" width="921" height="485"></noscript></amp-img></p>
+
+<h3 id="improving-perfomance">Improving perfomance.</h3>
+<p><strong>Artificial Synthesize</strong> the data. 
+<strong>Ceiling Analysis</strong> prepare one liner chart to see if you provide truth data to component how is the accuracy is increase and with this you can find out what needs to be fine tuned more rather then wasting time on other component.</p>
+
+<p>#Read this 
+https://www.altexsoft.com/blog/datascience/machine-learning-project-structure-stages-roles-and-tools/
+https://towardsdatascience.com/building-package-for-machine-learning-project-in-python-3fc16f541693
+https://medium.com/omarelgabrys-blog/statistics-probability-exploratory-data-analysis-714f361b43d1#48f7</p>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

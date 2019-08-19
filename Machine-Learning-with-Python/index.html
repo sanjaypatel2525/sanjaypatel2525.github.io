@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" >
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Machine Learning with Python</title>
+    <meta name="description" content="Technical blogs.">
+
+    <!-- Google Authorship Markup -->
+    <link rel="author" href="https://plus.google.com/+?rel=author">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="Machine Learning with Python">
+    <meta name="twitter:description" content="Technical blogs.">
+    
+    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:url" content="https://abyte.stream/Machine-Learning-with-Python/">
+    <meta property="og:title" content="Machine Learning with Python">
+    
+    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    
+    <meta property="og:description" content="Technical blogs.">
+    <meta property="og:site_name" content="Sanjay Patel - Blogs">
+
+    <!-- Social: Google+ / Schema.org  -->
+    <meta itemprop="name" content="Machine Learning with Python"/>
+    <meta itemprop="description" content="Technical blogs.">
+    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
+
+    <!--amp page-->
+    
+        <link rel="amphtml" href="https://abyte.stream/amp/Machine-Learning-with-Python.html">
+    
+    <!-- Windows 8 Tile Icons -->
+    <meta name="application-name" content="Sanjay Patel Blog">
+    <meta name="msapplication-TileColor" content="#0562DC">
+    <meta name="msapplication-square70x70logo" content="smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="widetile.png" />
+    <meta name="msapplication-square310x310logo" content="largetile.png" />
+    <!-- Android Lolipop Theme Color -->
+    <meta name="theme-color" content="">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-with-Python/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1067793-4');
+    </script>
+
+</head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1"><defs><symbol id="icon-menu" viewBox="0 0 1024 1024"><path class="path1" d="M128 213.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 725.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5zM128 469.333h768q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-768q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"/></symbol><symbol id="icon-search" viewBox="0 0 951 1024"><path class="path1" d="M658.286 475.429q0-105.714-75.143-180.857t-180.857-75.143-180.857 75.143-75.143 180.857 75.143 180.857 180.857 75.143 180.857-75.143 75.143-180.857zM950.857 950.857q0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286 31.714-156.286 85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429z"/></symbol><symbol id="icon-close" viewBox="0 0 805 1024"><path class="path1" d="M741.714 755.429q0 22.857-16 38.857l-77.714 77.714q-16 16-38.857 16t-38.857-16l-168-168-168 168q-16 16-38.857 16t-38.857-16l-77.714-77.714q-16-16-16-38.857t16-38.857l168-168-168-168q-16-16-16-38.857t16-38.857l77.714-77.714q16-16 38.857-16t38.857 16l168 168 168-168q16-16 38.857-16t38.857 16l77.714 77.714q16 16 16 38.857t-16 38.857l-168 168 168 168q16 16 16 38.857z"/></symbol><symbol id="icon-twitter" viewBox="0 0 951 1024"><path class="path1" d="M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z"/></symbol><symbol id="icon-facebook" viewBox="0 0 585 1024"><path class="path1" d="M548 6.857v150.857h-89.714q-49.143 0-66.286 20.571t-17.143 61.714v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571q0-106.286 59.429-164.857t158.286-58.571q84 0 130.286 6.857z"/></symbol><symbol id="icon-google-plus" viewBox="0 0 951 1024"><path class="path1" d="M420 454.857q0 20.571 18.286 40.286t44.286 38.857 51.714 42 44 59.429 18.286 81.143q0 51.429-27.429 98.857-41.143 69.714-120.571 102.571t-170.286 32.857q-75.429 0-140.857-23.714t-98-78.571q-21.143-34.286-21.143-74.857 0-46.286 25.429-85.714t67.714-65.714q74.857-46.857 230.857-57.143-18.286-24-27.143-42.286t-8.857-41.714q0-20.571 12-48.571-26.286 2.286-38.857 2.286-84.571 0-142.571-55.143t-58-139.714q0-46.857 20.571-90.857t56.571-74.857q44-37.714 104.286-56t124.286-18.286h238.857l-78.857 50.286h-74.857q42.286 36 64 76t21.714 91.429q0 41.143-14 74t-33.714 53.143-39.714 37.143-34 35.143-14 37.714zM336.571 400q21.714 0 44.571-9.429t37.714-24.857q30.286-32.571 30.286-90.857 0-33.143-9.714-71.429t-27.714-74-48.286-59.143-66.857-23.429q-24 0-47.143 11.143t-37.429 30q-26.857 33.714-26.857 91.429 0 26.286 5.714 55.714t18 58.857 29.714 52.857 42.857 38.286 55.143 14.857zM337.714 898.857q33.143 0 63.714-7.429t56.571-22.286 41.714-41.714 15.714-62.286q0-14.286-4-28t-8.286-24-15.429-23.714-16.857-20-22-19.714-20.857-16.571-23.714-17.143-20.857-14.857q-9.143-1.143-27.429-1.143-30.286 0-60 4t-61.429 14.286-55.429 26.286-39.143 42.571-15.429 60.286q0 40 20 70.571t52.286 47.429 68 25.143 72.857 8.286zM800.571 398.286h121.714v61.714h-121.714v125.143h-60v-125.143h-121.143v-61.714h121.143v-124h60v124z"/></symbol></defs></svg>
+
+        <header class="bar-header">
+    <h1 class="logo">
+        <a href="/"></a>
+    </h1>
+</header>
+<div class="search-wrapper">
+    <div class="search-form">
+        <input type="text" class="search-field" placeholder="Search...">
+        <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
+        <ul class="search-results search-list"></ul>
+    </div>
+</div>
+
+<div id="fade" class="overlay"></div>
+<a id="slide" class="slideButton fade">
+    <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+    <svg id="close" class="icon-menu"><use xlink:href="#icon-close"></use></svg>
+</a>
+<aside id="sidebar">
+<nav id="navigation">
+  <h2>MENU</h2>
+  <ul>
+    
+      <li><a href="https://abyte.stream/">Home</a></li>
+    
+      <li><a href="https://abyte.stream/series">Series</a></li>
+    
+      <li><a href="https://abyte.stream/tags">Tags</a></li>
+    
+      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+    
+      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+    
+    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+  </ul>
+</nav>
+</aside>
+<a id="search" class="dosearch">
+    <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
+</a>
+
+<header class="header-post" role="banner">
+     <div class="content">
+        
+            <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018</time>
+        
+        <h1 class="post-title" itemprop="name">Machine Learning with Python</h1>
+        <p itemprop="description" class="subtitle"></p>
+    </div>
+</header>
+        <section class="post">
+
+            <section class="share">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad Unit1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6254849299387322"
+     data-ad-slot="2070150131"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </section>
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<p>Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation.
+Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.</p>
+
+<p>Popular machine learning techniques classification, regression, recommendation and clustering.</p>
+
+<p>Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.</p>
+
+<p>Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.</p>
+
+<p>Programming which learns and improves with experience.  Learning means recognizing and understanding the data and taking informed decision based on the provided data points. The algorithm are developed such that they build the knowledge from data and past experience by applying statical science, probability, logic, mathematical optimization, reinforcement learning and control theory.</p>
+
+<p>Here are few application of machine learning.</p>
+<ul>
+  <li>Vision processing</li>
+  <li>language processing</li>
+  <li>Forecasting number ex, stock market, weather</li>
+  <li>pattern recognition</li>
+  <li>games</li>
+  <li>data mining</li>
+  <li>expert system</li>
+  <li>robotics</li>
+</ul>
+
+<p>Steps in machine learning.</p>
+<ul>
+  <li>Defining problem</li>
+  <li>Preparing data</li>
+  <li>Evaluating algorithm</li>
+  <li>improving results</li>
+  <li>presenting results</li>
+</ul>
+
+<h3 id="wait-whats-the-difference-between-data-scientist-and-ml-engineer">Wait, What’s the difference between data scientist and ML Engineer.</h3>
+<ul>
+  <li>Data science guy is more of studious kid who’s job is to see data remove error, find patterns, analyzing data, creating graph etc.</li>
+  <li>ML engineer is not a data guy, he gets the data and starts applying available algorithms or create prototypes to get meaningful output from data. Normally data scientist request ML engineer to create a algorithm/program based on the prototype they have.</li>
+</ul>
+
+<p>Python libraries</p>
+<ul>
+  <li>numpy - N-dimensional array object.</li>
+  <li>pandas - dataframes manipulation</li>
+  <li>matplotlib/searborn - plotting graphs, data visualization</li>
+  <li>scikit-learn - algorithm for data analysis and data mining.</li>
+</ul>
+
+<p>Machine learning has following the common type machine learning algorithms.</p>
+<ul>
+  <li>Supervised</li>
+  <li>Unsupervised</li>
+  <li>Semi-Supervised</li>
+  <li>Reinforced learning</li>
+</ul>
+
+<h2 id="supervise-learning">Supervise learning</h2>
+<p>Ex face recognition, speech recognition, recommendation based on history, forecasting etc. These data are fed to algorithm and tuned to provide expected data points as output.</p>
+
+<p>In supervise learning the input data comes as labeled data so we know the result and we try to propose solution which takes inputs data set and tries to predict correct label, later we try to improve algorithm so that the accuracy of prediction is increased. Once the algorithm reaches satisfactory mark it can be used with real data. It is based on labeled sample and the output is know with learning data.
+There are many supervised algorithm examples: <strong>linear regression, logistic regression, support vector machine SVM, Naive bayes classifier</strong>.</p>
+
+<p><strong>Classification</strong>- Classification is dividing the data into set, categorizing it or anything related to segregating data. It is done when you have complete data, so it is done after.<br />
+<strong>Prediction/Regression</strong> is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced.</p>
+
+<h2 id="unsupervised-learning">Unsupervised learning.</h2>
+<p>It used to detect anomalies, outlier, something which is odd then normal, fraud, defective equipment, or group with similarities. In here we don’t get the labeled data. It is also called unlabeled learning, the algorithm tries to find pattern, structure, anomaly from the given data.
+Since here we do not know feature which can act as data classification points so unsupervised learning tries to group them in different groups based on data underlying patterns in optimum way. Most of the time unsupervised learning tries to find similarities and cluster them. Some examples are Kmean, random forest, hierarchal clustering etc.<br />
+<strong>Association &amp; Clustering</strong> - If you buy bread then system shows jam as well, this kind comes under association. Clustering is again grouping but without training data.</p>
+
+<h2 id="semi-supervised">Semi supervised.</h2>
+<p>Some data are labeled and some are not, unlabeled are used in unsupervised learning and labeled are used for testing and fine tuning. It saves cost when it is difficult to get full labeled data.</p>
+
+<h2 id="reinforced-learning">Reinforced learning.</h2>
+<p>Here learning is improved based on real time data feedback. System adjust itself based on learning data. Ex are self driving car, chess Alpha Go. Unlike supervised it works only on three feedback- happy, unhappy and neutral. Supervised tries to find right hyper parameters for model and updates these based on some function based on output.</p>
+
+<p>The goal of machine learning is to reduce human effort but not creating the intelligence that piece goes into artificially intelligence which is superset of machine learning. It can evolve to go beyond human perception specializing in one given task.</p>
+
+<p><img src="/assets/2019-06-12-Machine-Learning-with-Python.png" alt="" title="Courtsey https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463" />
+Or more related to.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python2.jpg" alt="" /></p>
+
+<h2 id="data-preparation-and-preprocessing">Data preparation and preprocessing</h2>
+<p>Let’s talk a bit about <strong>standardization and normalization</strong>.</p>
+<h3 id="normalization">Normalization</h3>
+<p>Data can in be sometime in big number or may be sometime in very small number, there are multiple technique to scale data to readable or to our needed limts. For example. 0&lt;x&lt;1 scaling. Any data can be scalded from 0 to 1 in this its easy to know lower limit and upper limit and we can easily perceptualize how big one data in this scale.<br />
+<strong>Min-Max Normalization</strong> - To fit the data in defined boundary, let say data has 134567 min and 136878 max and we want to see it in scale of 0 to 1, or in scale of 1000 to 10000 etc.
+<script type="math/tex">B= \frac{A-min(A)}{max(A)-min(A)}\cdot(D-C) + C</script>, it lays the data A<sub>i</sub> from set of A, from C to D.<br />
+<strong>Decimal Scaling</strong> - Divide or multiple with 10<sup>n</sup> to bring the at scale of decimal. For example
+10,30, 4000 will become 0.001, 0.03, 0.4 after deviling with 10<sup>4</sup>.<br />
+<strong>Standard Deviation</strong> - <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script></p>
+
+<p><strong>Standardization or z-score</strong> Is form of normalization where mean is kept to 0 and standard deviation to 1. In graph the start and end of data limits has to have same distance from y axis.<script type="math/tex">z = \frac{x_i-\mu}{\sigma}</script></p>
+
+<h2 id="algorithems">Algorithems.</h2>
+<h3 id="linear-regression">Linear regression</h3>
+<p>Regression tries to find the least cost continuos function based on given input such that, the aim to minimize the cost. The cost is cost of given training set combined.
+<script type="math/tex">Cost= J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=0}^m(h_\theta(x^i)-y^i)^2\\
+h_\theta(x)=y=\theta_0+\theta_1x</script>
+Where theta are independent variable and hyperparameter, m is number of training data, x is input data and y is output data, h is expected output data. Our aim is to find minimum cost for given input variables. 
+With one variable.<img src="/assets/2019-06-12-Machine-Learning-with-Python3.JPG" alt="" />
+With two variable. <img src="/assets/2019-06-12-Machine-Learning-with-Python4.JPG" alt="" />
+<strong>Gradient Descent</strong> Gives change in input to reach minmum cost.
+<script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta_0,\theta_1)</script>
+Where derivative of J gives the slope which is always -1 to 1 and this slope will be calculated for each variable. This slope calculates new value for variable θ. α defines the jump either to decrease or to increase this variable.</p>
+
+<h3 id="multivariate-linear-regression">Multivariate Linear regression</h3>
+<p><script type="math/tex">h_θ=θ_0+θ_1x_1+θ_2x_2..+θ_nx_n,
+x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},
+θ=\begin{bmatrix}θ_1\\θ_1\\..\\θ_n\end{bmatrix}
+h_θ(x)=θ^Tx</script><br />
+<script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^m(h_θ(x^i)-y^i)x_j^i</script></p>
+
+<p><strong>Feature Scaling</strong> - If the variable are not in same scale they tend to make gradient jump and slows down the process of reaching to minimum. So there are many feature scalling.</p>
+<ul>
+  <li>Standardization - Replace by z-score, Normally used in normally distributed set. <script type="math/tex">x'=\frac{x-\bar x}{\sigma}</script></li>
+  <li>Mean Normalization - Can variate from -1 to 1, used in Principla component analysis. <script type="math/tex">x'=\frac{x-\bar x}{max(x)-min(x)}</script></li>
+  <li>Min-Max Scaling - from 0 to 1. <script type="math/tex">x'=\frac{x-min(x)}{max(x)-min(x)}</script></li>
+</ul>
+
+<h3 id="normal-equation-to-get-optimal-value">Normal equation to get Optimal value</h3>
+<p>Normal equation gets you the minimum value of θ directly, for example you know the curve of the cost function. Then you can solve for minimum value for θ.
+If θ is quadratic. <script type="math/tex">J(θ)=aθ^2+bθ+c = 0</script> will give you minimu value for θ. Same goes for multiple variable keep one variable constant each time. 
+m - Training examples
+n - Variables. 
+<script type="math/tex">x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},x^i=\begin{bmatrix}x_0^i\\x_1^i\\..\\x_n^i\end{bmatrix},
+X= \begin{bmatrix}[x^1]^T\\ [x^2]^T\\ [x^m]^T\end{bmatrix},
+min\,value\,of\,θ=(X^TX)^{-1}X^Ty</script>
+<strong>Advantage</strong>, you don’t need to α and it does not take lot of iteration like gradient descend while <strong>disadvantage</strong> is has complexity of  <script type="math/tex">O(n^3)</script> and difficult to work with nonconvertible equation <script type="math/tex">(X^TX)^{-1}</script>, though it can be solved by removing redundant feature, removing feature and regularization.</p>
+
+<h3 id="logistic-regression--">Logistic Regression -</h3>
+<p>Logistic function or called sigmoid function, it maps the value to in between 0 &lt; h(x) &lt; 1. Hence can be used in probability prediction. Probability of y being 1 at given value of x when θ is hyperparameter. θ changes the width of sigmoid function hence affect the y over over x. 
+<script type="math/tex">h_θ(x)=g(z)=g(θ^Tx)= \frac{1}{1+e^{θ^Tx}}=P(y=1|x:θ)</script></p>
+
+<ul>
+  <li>Logistic is some what categorized as classification algorithm but is is continuos.</li>
+</ul>
+
+<p><strong>Decision Boundary</strong>- Kind of line, curved line, plane which divides the data into sets. It is used to define the boundary of classification data. For example a line dividing area in 2D plain.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python5.JPG" alt="" /></p>
+<ul>
+  <li>Gradient decent can’t be applied on logistic regression as it is non linear (not straight line), the cost function will not be mapped as normal convex curve but it will have multiple local minima in it. So we use another cost function which give convex graph for J(θ).
+<script type="math/tex">Cost(h_θ,y)=\begin{cases}-log(h_θ(x))\text{ if y=1}\\-log(1-h_θ(x))\text{ if y=0}\end{cases}</script></li>
+  <li>Ok <strong>biggest question</strong> here is how do you select fitting a cost function. If you are researcher or very good at maths you might guess a fitting graph (logistic(classification) or linear(continuos prediction)), and then you guess what cost function will be good for my model. There are lot of cost function you select any one and try if your machine is performing well or not. But some are pretty standard cost function for given fitting graph for ex mean square for linear, the one above for sigmoid etc.</li>
+</ul>
+
+<p><img src="/assets/2019-06-12-Machine-Learning-with-Python6.JPG" alt="" />
+Looks same as linear regression, but they differ by <script type="math/tex">h_θ(x)</script>.
+“Conjugate gradient”, “BFGS”, and “L-BFGS” are alternative of gradient descend and provide better optimization over cost.</p>
+
+<h3 id="multiclass-classification">Multiclass classification.</h3>
+<p>In logistic we use to have two set yes/no and each event has some probability based on that we use to say this event belong to yes or no group. That probability is derived by function <script type="math/tex">h_θ(x)</script>. Here we have many sets and each set will have its own <script type="math/tex">h_θ^i(x)</script>. We calculate y’s probability in eahc set and assign this to the set which has max probability.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python7.JPG" alt="" /></p>
+
+<h3 id="underfitting--overfitting">Underfitting &amp; overfitting.</h3>
+<p>If you increase the variable to map all the training data then there are chances the test data may not fall close to the curve. This is overfitting so to reduce this,</p>
+<ul>
+  <li>Sometime reduce the parameter</li>
+  <li>Sometime keep it but regularize. 
+Increase the λ in regularize some variables, so even small change in variable will change cost to much, to keep cost low these variable should be small. λ is regularization parameter
+<script type="math/tex">min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +1000⋅θ_3^2 ​ +1000⋅θ_4^2,
+=​min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +λ\sum_{j=1}^nθ_j^2</script></li>
+</ul>
+
+<h2 id="neural-network-andrew-ng-style">Neural network (Andrew Ng style)</h2>
+<p><script type="math/tex">% <![CDATA[
+a^1=x=\begin{bmatrix}x_0=1\\x_1\\..\\x_{S_j}\end{bmatrix},
+θ^1=\begin{bmatrix}θ_{10}&θ_{11}&..&θ_{1S_j+1}\\θ_{20}&θ_{21}&..&θ_{2S_j+1}\\..\\θ_{S_j0}&θ_{S_j1}&..&θ_{S_jS_j+1}\end{bmatrix},
+h_θ(x)=a^2=g(z^2)=g(θ^{1}a^{1}) %]]></script></p>
+<ul>
+  <li>There is no <script type="math/tex">z^1</script>
+Deriving from logistic regression. But compared to logistic it has K output in multi class. 
+<img src="/assets/2019-06-12-Machine-Learning-with-Python8.JPG" alt="" /></li>
+</ul>
+
+<p><strong>Backward proportion</strong> - We know when there is hight cost or more error in each K output nodes, then we need to fix each θ in previous layers. This is done throug backward propgoratipn.
+Let δ is error in Kth node of L, <script type="math/tex">δ_k^l = a_k^l-y_k</script> now calculate δ at L-1 layer. This is done through derivative of 
+<script type="math/tex">(a^{l-1})'=g'(z^{l-1})=a^{l-1}.(1-a^{l-1})</script>. 
+δ is applied at nodes we need to adjust our θ matrix. So we put another term Δ which is proportionate to δ
+<script type="math/tex">Δ^{(l)}_{i,j} := Δ^{(l)}_{i,j} + a_j^{(l)} δ_i^{(l+1)}</script>
+<script type="math/tex">D^{l}_{i,j}=\frac{1}{m}(Δ^{l}_{i,j}+λθ^l_{i,j},\,if\,j≠0,
+D^{l}_{i,j}=\frac{1}{m}Δ^{l}_{i,j}\,if\,j=0</script>
+<img src="/assets/2019-06-12-Machine-Learning-with-Python10.JPG" alt="" /></p>
+
+<p><strong>Gradient Checking</strong> - Compare the delta changed value to the output to the the change we got from Backward propagation. Gradient Checking is time consuming that is the reason we do not use it in place of backward propogation.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python9.JPG" alt="" />.</p>
+
+<h2 id="evaluating-hypothesis">Evaluating Hypothesis.</h2>
+<p>Multiple things we can tweak to fix our hypothesis when we start.</p>
+<ul>
+  <li>Increase training set</li>
+  <li>Increase decrease parameters</li>
+  <li>Increase decrees generalization λ.</li>
+  <li>Try polynomial equations over parameters.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python11.JPG" alt="" />.
+Some people <strong>dividing training</strong> set in training set, validation set to pick <strong>lowest cost polynomial function</strong> and test set to check <strong>generalization variation</strong> on new data.</li>
+</ul>
+
+<h3 id="bias-and-variance">Bias and variance.</h3>
+<p>As you increase d polynomial degree the validation error will decrease at it will not be generalized and will have high variance.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python1.png" alt="" /></p>
+
+<p><strong>Effect of λ</strong>
+<img src="/assets/2019-06-12-Machine-Learning-with-Python12.JPG" alt="" /></p>
+
+<p><strong>Effect of training data</strong>
+In high bias(less parameterized) model training after some time is of no use, while in high variance training will improve the learning rate and decrease the Cross Validation(CV) cost.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python13.JPG" alt="" /></p>
+
+<ul>
+  <li>Always start with small model and keep drawing learning curve and calculating CV cost. Try different approach on small model to find out if more parameter needed if more generalization needed.</li>
+</ul>
+
+<p><strong>Precision &amp; Recall evaluation</strong> - Sometime you get the training whose output is skewed, in the sense hight percentage on one class. With these kind of data algorithms can’t learn well and show low precision and low recall characteristics. Evaluating Precision and recall give idea wether the algorithm is heading in right direction or not.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python14.JPG" alt="" />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python16.JPG" alt="" />
+Higher F score mean a better algorithm it take value between 0 and 1.</p>
+
+<h2 id="support-vector-machine">Support Vector Machine</h2>
+<p>One of the famous Supervised learning. 
+<img src="/assets/2019-06-12-Machine-Learning-with-Python17.JPG" alt="" />
+In image we get rid of <script type="math/tex">\frac{1}{m}</script> and λ. <script type="math/tex">\frac{1}{m}</script> is constant so doesn’t affect cost function in minimization and intuition is in cost function keep bigger B in order generailze any parameter, that you can do either by increaseing λ r remove lambda put C and decrease C, both are same thing.</p>
+
+<p>SVM is also called <strong>Large Margine Classifier</strong>.</p>
+
+<p>Think <script type="math/tex">\theta^T x^i</script> as vector multiplication and you can say what this multiplication gives projection of θ over x.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python18.JPG" alt="" />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python19.JPG" alt="" />
+In above example our aim is to get maximum of p so that θ can be small. With bigger p there is bigger distance of dataset from the classifier line and will have bigger margin.</p>
+
+<p><strong>Kernal</strong> Above we were discussing are devisor which was linear, in some situation the plotted points are mixed and requires nonlinear curve to divide or enclosing circle. 
+<img src="/assets/2019-06-12-Machine-Learning-with-Python20.JPG" alt="" />
+Here we take some points and mark them as territory and calculate the closeness/similarities of each dataset from these territories/points. Mark these points as <em>l</em> and calculate closeness/similarities vector. 
+<script type="math/tex">f_i = similarity(x,l^i)</script>
+Let say closeness is defined by.
+<script type="math/tex">f^i = similarity(x,l^i) = exp(-\frac{||x-l^i||^2}{2\sigma^2})</script>.
+When σ is big the peak is distributed(more generalized) and when it is small peek is thin(more variant).
+<img src="/assets/2019-06-12-Machine-Learning-with-Python21.JPG" alt="" />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python22.JPG" alt="" />
+So we have two kernel linear and gaussian kernel, linear for straight line divisor an gaussian for non-linear. When m is very large compared to n then using SVN with Gaussian kernel is good. Otherwise use linear kernel.</p>
+
+<h3 id="k-mean">K-Mean</h3>
+<p>K-mean is unsupervised clustering algorithem, Here you tak randomly take k clusters and each cluster has a centroid <script type="math/tex">μ_k</script>. We calculate <script type="math/tex">c^i</script> for each <script type="math/tex">x^i</script> which states cluster for <script type="math/tex">x^i</script>, which cluster x belongs to by calculating distance with each cluster centroid.
+<script type="math/tex">c^i = min||x^i-\mu_k||^2</script>
+This c maps all the input to some cluster and later each cluster’s mean is adjusted with average of x from that cluster.
+<script type="math/tex">\mu_{c^i}=\frac{(x^a+x^b_...)}{\text{count of x in }\mu}</script></p>
+
+<p><strong>Cost Function</strong> - We keep caculating K-mean until out cost stops decreasing. Cost is calculate by squared sum of distance of x from there cluster mean.
+<script type="math/tex">J(c^1,..,c^m,\mu_1,..,\mu_K)= \frac{1}{m}\sum_{i=1}{m}||x^i-\mu_{c^i}||^2</script></p>
+
+<p><strong>Optimization</strong> - Intialize mean of each cluster to random value of inputs and calculate cost, the lowest cost is selected in the end as optimized solution.</p>
+
+<p><strong>Deciding number of Clusters K</strong> - Use elbow approach, keep increasing K from 2 to n draw the graph, the cost keeps on decreasing but at some point we can see elblow, the rate of cost decrease has reduce significatnlty. Or if there is no such elbow select whatever suites you.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python23.JPG" alt="" /></p>
+
+<h3 id="data-comperssion">Data comperssion.</h3>
+<p>Compress the data from 2D to 1D or 3D to 2D or nD to mD m&lt; n etc, to save the memory and computation overheads.
+Correlated feature can be mapped together using a function or even directly so reduce multiple feature in one.</p>
+
+<p><strong>PCA(Squared Projection/minimum distance Error)</strong> - We try to find a line, where 2D points are projected and line should have minimum projection error. It is different to linear regression as linear regression tries to find out a line which tries minimizes the distance between actual y and projected h(x).<br />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python24.JPG" alt="" />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python25.JPG" alt="" />
+In above diagram you can see how K is selected so that k variance by total variance is 99.99% retained.</p>
+<ul>
+  <li>PCS speed up, use less memory and if k=1 ,2 ,3 then easy to visualize. This does not genralize the model as it doesn not consider the y in supervised learning while generalization parameter λ does.</li>
+</ul>
+
+<h3 id="anomaly-detection-algorithm">Anomaly detection Algorithm.</h3>
+<p><img src="/assets/2019-06-12-Machine-Learning-with-Python26.JPG" alt="" />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python27.JPG" alt="" />
+Using training set we try to define a gaussian curve on each feature and with new x having n feature we try to find probability of this x to be fitted to gaussian curve, if it is not a good fit it will have very low probability output.
+<strong>Choosing feature</strong></p>
+<ul>
+  <li>Create new feature if existing feature can’‘t find anamoly</li>
+  <li>Create features out of another features so that the value is either very high or very low.</li>
+  <li>Transform feature so that it falls in gaussian curve, apply log or srqrt or any other root.</li>
+</ul>
+
+<p><strong>Multivariate Gaussian Distribution</strong>
+Sometime we need Multivariate Gaussian because in previous we use to find out p(x<sub>1</sub>),p(x<sub>2</sub>) etc. and this use to ignore there coherant property, In case we need to look how the combined gaussian looks we calculate p(x).
+<img src="/assets/2019-06-12-Machine-Learning-with-Python28.JPG" alt="" />
+In simple term how it is different from normal previous guassian is the previous oen can not take diagonal eclipes form while this one can. In that case covariance matrix ‘∑’ all <strong>non diagonal fields will be 0</strong>, while in this case non diagonal field will have some weight.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python29.JPG" alt="" /></p>
+
+<h3 id="content-based-recommendation">Content based recommendation</h3>
+<p>Let’ remember the linear regression again, It tries to map feature of training set features= x<sub>1</sub>,x<sub>2</sub>…x<sub>n</sub>, input data =x<sup>1</sup>,x<sup>2</sup>…x<sup>m</sup>  to the output of training set with tweaking parameters as θ
+Now take n<sub>m</sub>  as movies and n<sub>u</sub> as users. We need to fit θ for each user to movies input based moveis feature. Since there are n<sub>u</sub> users hence there will θ<sup>j</sup> one for each user.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python34.JPG" alt="" />
+<img src="/assets/2019-06-12-Machine-Learning-with-Python30.JPG" alt="" /></p>
+
+<h3 id="collabrative-filter-algorithem">Collabrative Filter Algorithem</h3>
+<p>The soul remains same θ and x,m normaly we try to find θ to fit y for given x. So that said x is defined at least. But in last example x was some features of movies and how we can find those features, so we start small. With give θ provided by users (user rates some movies and also tell there inclination romance, action etc), with this information we calculate x. This calculated x is used to predict θ  and it goes in loop x and θ  both predict each one after one. 
+But better than going one by one lets find everything togather.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python31.JPG" alt="" /></p>
+
+<h3 id="recommendation-algorithm">Recommendation Algorithm</h3>
+<p>If user is watching one movie suggest him another movies. This is normally found by distance between two movies features x<sup>1</sup> (<script type="math/tex">x_1^1,x_2^1..x_n^1</script>). The distance is caluclated by <script type="math/tex">||x^1-x^2||^2</script>.
+What if there is new user and we need to suggest him a movie. The θ<sup>i</sup> will be 0 for him as the model doesn’t have any parameter which affect θ for this new user. 
+<img src="/assets/2019-06-12-Machine-Learning-with-Python32.JPG" alt="" /></p>
+
+<h3 id="stochastic-gradient-descent">Stochastic Gradient descent</h3>
+<p>The normal  Gradient descent is called batch  Gradient descent, where we have to find mean square of all the input data on each iteration of gradient descent update. In case if m is in million then each θ update will have to calculate million records before making updates. In Stochastic Gradient descent we update θ based on last <script type="math/tex">x^i,y^i</script>.
+<img src="/assets/2019-06-12-Machine-Learning-with-Python33.JPG" alt="" /></p>
+
+<h3 id="improving-perfomance">Improving perfomance.</h3>
+<p><strong>Artificial Synthesize</strong> the data. 
+<strong>Ceiling Analysis</strong> prepare one liner chart to see if you provide truth data to component how is the accuracy is increase and with this you can find out what needs to be fine tuned more rather then wasting time on other component.</p>
+
+<p>#Read this 
+https://www.altexsoft.com/blog/datascience/machine-learning-project-structure-stages-roles-and-tools/
+https://towardsdatascience.com/building-package-for-machine-learning-project-in-python-3fc16f541693
+https://medium.com/omarelgabrys-blog/statistics-probability-exploratory-data-analysis-714f361b43d1#48f7</p>
+
+            </article>
+
+            <section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Machine-Learning-with-Python/%20via%20&#64;&hashtags="
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Machine-Learning-with-Python/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+        <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Machine-Learning-with-Python/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+        <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
+    </a>
+</section>
+            <section class="share">
+                <div class="fb-comments" data-href="https://abyte.stream/Machine-Learning-with-Python/"></div>
+            </section>
+            <section class="author" itemprop="author">
+    <div class="details" itemscope itemtype="http://schema.org/Person">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="">
+        <p class="def">Author</p>
+        <h3 class="name">
+            <a itemprop="name" href="https://plus.google.com/+/posts">Sanjay Patel</a>
+        </h3>
+        <p class="desc">Developer at IBM</p>
+        <p><a itemprop="email" class="email" href="mailto:sanjaypatel2525@yahoo.com">sanjaypatel2525@yahoo.com</a></p>
+        <!--<p><a itemprop="github" class="github" href="https://github.com/">github.com/</a></p>-->
+    </div>
+</section>
+
+            <footer>
+    <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+<script src="/assets/js/main.js"></script>
+            <div id="fb-root"></div>
+        </section>
+    </body>
+    
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=207343132703435";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "facebook-jssdk"));</script>
+</html>
