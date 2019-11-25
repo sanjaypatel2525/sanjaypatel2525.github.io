@@ -176,11 +176,11 @@
     <span class="nt">&lt;/dependency&gt;</span>
 <span class="nt">&lt;/dependencies&gt;</span></code></pre></figure>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Component</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JerseyConfig</span> <span class="kd">extends</span> <span class="n">ResourceConfig</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JerseyConfig</span> <span class="kd">extends</span> <span class="nc">ResourceConfig</span>
 <span class="o">{</span>
     <span class="kd">public</span> <span class="nf">JerseyConfig</span><span class="o">()</span>
     <span class="o">{</span>
-        <span class="n">register</span><span class="o">(</span><span class="n">EmployeeController</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">register</span><span class="o">(</span><span class="nc">EmployeeController</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
@@ -189,26 +189,26 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeController</span> <span class="o">{</span>
     <span class="o">...</span>
     <span class="nd">@GET</span>
-    <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+    <span class="nd">@Produces</span><span class="o">(</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
     <span class="nd">@Path</span><span class="o">(</span><span class="s">"/{id}"</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@POST</span>
-    <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">saveEmployee</span><span class="o">(</span><span class="n">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nd">@Consumes</span><span class="o">(</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">saveEmployee</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">// Form custom response object, use context, use formparam.</span>
     <span class="nd">@POST</span>
-    <span class="kd">public</span> <span class="n">Response</span> <span class="nf">updateManager</span><span class="o">(</span><span class="nd">@FormParam</span><span class="o">(</span><span class="s">"managerID"</span><span class="o">)</span> <span class="n">managerID</span><span class="o">,</span> <span class="nd">@Context</span> <span class="n">UriInfo</span> <span class="n">uriInfo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">updateManager</span><span class="o">(</span><span class="nd">@FormParam</span><span class="o">(</span><span class="s">"managerID"</span><span class="o">)</span> <span class="n">managerID</span><span class="o">,</span> <span class="nd">@Context</span> <span class="nc">UriInfo</span> <span class="n">uriInfo</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">...</span>
         <span class="n">emp</span> <span class="o">=</span> <span class="n">emp</span><span class="o">.</span><span class="na">setManagerId</span><span class="o">(</span><span class="n">managerID</span><span class="o">)</span>
         <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">urlPath</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s/%s"</span><span class="o">,</span><span class="n">uriInfo</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span> <span class="c1">// printing url path just to showcase.</span>
-        <span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">status</span><span class="o">(</span><span class="n">Response</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">CREATED</span><span class="o">.</span><span class="na">getStatusCode</span><span class="o">())</span>
+        <span class="nc">String</span> <span class="n">urlPath</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s/%s"</span><span class="o">,</span><span class="n">uriInfo</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span> <span class="c1">// printing url path just to showcase.</span>
+        <span class="k">return</span> <span class="nc">Response</span><span class="o">.</span><span class="na">status</span><span class="o">(</span><span class="nc">Response</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">CREATED</span><span class="o">.</span><span class="na">getStatusCode</span><span class="o">())</span>
           <span class="o">.</span><span class="na">header</span><span class="o">(</span>
             <span class="s">"Location"</span><span class="o">,</span> 
             <span class="n">urlPath</span><span class="o">,</span> 
@@ -220,8 +220,8 @@
 <span class="nd">@SpringBootApplication</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Application</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">Application</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">Application</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -246,32 +246,32 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/employee"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeController</span> <span class="o">{</span>
     <span class="o">...</span>
-    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/{id}"</span><span class="o">,</span><span class="n">method</span> <span class="o">=</span> <span class="n">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span><span class="n">produces</span><span class="o">=</span><span class="s">"application/json"</span><span class="o">)</span>
+    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/{id}"</span><span class="o">,</span><span class="n">method</span> <span class="o">=</span> <span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span><span class="n">produces</span><span class="o">=</span><span class="s">"application/json"</span><span class="o">)</span>
     <span class="c1">// or @GetMapping</span>
     <span class="c1">// optional @ResponseStatus(HttpStatus.OK)</span>
-    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
     <span class="o">}</span>
 
-    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/{id}"</span><span class="o">,</span><span class="n">method</span> <span class="o">=</span> <span class="n">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span><span class="n">produces</span><span class="o">=</span><span class="s">"application/json"</span><span class="o">)</span>
+    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/{id}"</span><span class="o">,</span><span class="n">method</span> <span class="o">=</span> <span class="nc">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span><span class="n">produces</span><span class="o">=</span><span class="s">"application/json"</span><span class="o">)</span>
     <span class="c1">// or @PostMapping</span>
-    <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">saveEmployee</span><span class="o">(</span><span class="n">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">saveEmployee</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">// Form custom response object, header information, use requesparam.</span>
     <span class="nd">@POST</span>
-    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">updateManager</span><span class="o">(</span> <span class="nd">@RequestParam</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"managerId"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="o">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">"123"</span><span class="o">)</span>  <span class="n">managerID</span><span class="o">,</span> <span class="nd">@RequestHeader</span><span class="o">(</span><span class="s">"Accept-Encoding"</span><span class="o">)</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">,</span> <span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//in case you need request and response variables. </span>
+    <span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">updateManager</span><span class="o">(</span> <span class="nd">@RequestParam</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"managerId"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="o">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">"123"</span><span class="o">)</span>  <span class="n">managerID</span><span class="o">,</span> <span class="nd">@RequestHeader</span><span class="o">(</span><span class="s">"Accept-Encoding"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">,</span> <span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//in case you need request and response variables. </span>
         
         <span class="o">...</span>
         <span class="n">emp</span> <span class="o">=</span> <span class="n">emp</span><span class="o">.</span><span class="na">setManagerId</span><span class="o">(</span><span class="n">managerID</span><span class="o">)</span>
         <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepo</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">encoding</span><span class="o">)</span> <span class="c1">// printing encoding path just to showcase.</span>
-        <span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">encoding</span><span class="o">)</span> <span class="c1">// printing encoding path just to showcase.</span>
+        <span class="nc">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHeaders</span><span class="o">();</span>
         <span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Custom-Header"</span><span class="o">,</span> <span class="s">"foo"</span><span class="o">);</span>
             
-        <span class="k">return</span> <span class="k">new</span> <span class="n">ResponseEntity</span><span class="o">&lt;&gt;(</span>
-          <span class="n">emp</span><span class="o">,</span> <span class="n">headers</span><span class="o">,</span> <span class="n">HttpStatus</span><span class="o">.</span><span class="na">OK</span><span class="o">);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">ResponseEntity</span><span class="o">&lt;&gt;(</span>
+          <span class="n">emp</span><span class="o">,</span> <span class="n">headers</span><span class="o">,</span> <span class="nc">HttpStatus</span><span class="o">.</span><span class="na">OK</span><span class="o">);</span>
     <span class="o">}</span>
 
 <span class="o">}</span></code></pre></figure>
@@ -279,23 +279,23 @@
 <p><strong>@RestController</strong> - @ResponseBody + @Controller is @RestController, It adds filter to serialize the response.<br>
 <strong>@RequestMapping</strong> - Maps the URL path to class and methods, also specifies the content type of request and response.  Has these fields - method, header, name, value, produces, consumes.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span><span class="s">"/somePath1"</span><span class="o">,</span><span class="s">"/somePath2"</span><span class="o">},</span> 
-    <span class="n">method</span> <span class="o">=</span> <span class="o">{</span><span class="n">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span><span class="n">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">},</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="o">{</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">},</span>
     <span class="n">consumes</span> <span class="o">=</span> <span class="o">{</span><span class="s">"application/json"</span><span class="o">,</span><span class="s">"application/xml"</span><span class="o">},</span>
     <span class="n">produces</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"application/json"</span><span class="o">},</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="o">{</span><span class="s">"application/json"</span><span class="o">})</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">someMethodForTwoPaths</span><span class="o">()</span> <span class="o">{...}</span></code></pre></figure>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">someMethodForTwoPaths</span><span class="o">()</span> <span class="o">{...}</span></code></pre></figure>
 <p><strong>@RequestParam</strong> - @RequestParam maps the get post value to method argument. You can take default values as well.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/somepath"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">somepath</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="o">..</span> <span class="o">}</span></code></pre></figure>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">somepath</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span> <span class="o">..</span> <span class="o">}</span></code></pre></figure>
 <p><strong>@PathVariable</strong> - Path variable used to map URL path value to a method argument.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/employee/{id}"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
 <p><strong>@SessionAttribute</strong> - Map session values to method argument.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/getSessionValue"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">getSessionValue</span><span class="o">(</span><span class="nd">@SessionAttribute</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"sessionId"</span><span class="o">)</span> <span class="n">String</span> <span class="n">sessionId</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getSessionValue</span><span class="o">(</span><span class="nd">@SessionAttribute</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"sessionId"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">sessionId</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
 <p><strong>@CookieValue</strong> - Map cookie value to method argument.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/getCookieValue"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">getCookieValue</span><span class="o">(</span><span class="nd">@SessionAttribute</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"var1"</span><span class="o">)</span> <span class="n">String</span> <span class="n">var1</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getCookieValue</span><span class="o">(</span><span class="nd">@SessionAttribute</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"var1"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">var1</span><span class="o">)</span> <span class="o">{...}</span></code></pre></figure>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>

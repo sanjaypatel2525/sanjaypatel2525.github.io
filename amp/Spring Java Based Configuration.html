@@ -166,27 +166,27 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span> <span class="c1">//1</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppConfig</span> <span class="o">{</span>
     <span class="nd">@Bean</span>  <span class="c1">// 2</span>
-    <span class="kd">public</span> <span class="n">SomeService</span> <span class="nf">SomeService</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">SomeService</span> <span class="nf">SomeService</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">SomeServiceImpl</span><span class="o">();</span>
     <span class="o">}</span>
 
     <span class="nd">@Bean</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"bar"</span><span class="o">)</span>  <span class="c1">// 3</span>
-    <span class="kd">public</span> <span class="n">SomeService</span> <span class="nf">SomeService</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">SomeService</span> <span class="nf">SomeService</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">SomeServiceImpl</span><span class="o">();</span>
     <span class="o">}</span>
 
     <span class="nd">@Bean</span><span class="o">(</span><span class="n">initMethodName</span> <span class="o">=</span> <span class="s">"init"</span><span class="o">)</span> <span class="c1">//4</span>
-    <span class="kd">public</span> <span class="n">Foo</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Foo</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">Foo</span><span class="o">();</span>
     <span class="o">}</span>
     <span class="nd">@Bean</span><span class="o">(</span><span class="n">destroyMethodName</span><span class="o">=</span><span class="s">"cleanup"</span><span class="o">)</span> <span class="c1">//5</span>
-    <span class="kd">public</span> <span class="n">Bar</span> <span class="nf">bar</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Bar</span> <span class="nf">bar</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">Bar</span><span class="o">();</span>
     <span class="o">}</span>
 
     <span class="nd">@Bean</span>
     <span class="nd">@Scope</span><span class="o">(</span><span class="s">"prototype"</span><span class="o">)</span>  <span class="c1">//6</span>
-    <span class="kd">public</span> <span class="n">Encryptor</span> <span class="nf">encryptor</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Encryptor</span> <span class="nf">encryptor</span><span class="o">()</span> <span class="o">{</span>
         <span class="c1">// ...</span>
     <span class="o">}</span>
 

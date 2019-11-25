@@ -197,8 +197,8 @@
 <span class="kn">import</span> <span class="nn">org.springframework.beans.factory.config.BeanPostProcessor</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.core.Ordered</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomBeanPostProcessor</span> <span class="kd">implements</span> <span class="n">BeanPostProcessor</span><span class="o">,</span> <span class="n">Ordered</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">CustomBeanPostProcessor</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomBeanPostProcessor</span> <span class="kd">implements</span> <span class="nc">BeanPostProcessor</span><span class="o">,</span> <span class="nc">Ordered</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="nc">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">CustomBeanPostProcessor</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">order</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">CustomBeanPostProcessor</span><span class="o">()</span> <span class="o">{</span>
@@ -206,15 +206,15 @@
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">postProcessBeforeInitialization</span><span class="o">(</span><span class="n">Object</span> <span class="n">bean</span><span class="o">,</span> <span class="n">String</span> <span class="n">beanName</span><span class="o">)</span>
-            <span class="kd">throws</span> <span class="n">BeansException</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">postProcessBeforeInitialization</span><span class="o">(</span><span class="nc">Object</span> <span class="n">bean</span><span class="o">,</span> <span class="nc">String</span> <span class="n">beanName</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="nc">BeansException</span> <span class="o">{</span>
         <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"postProcessBeforeInitialization method invoked"</span><span class="o">);</span>
         <span class="k">return</span> <span class="n">bean</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">postProcessAfterInitialization</span><span class="o">(</span><span class="n">Object</span> <span class="n">bean</span><span class="o">,</span> <span class="n">String</span> <span class="n">beanName</span><span class="o">)</span>
-            <span class="kd">throws</span> <span class="n">BeansException</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">postProcessAfterInitialization</span><span class="o">(</span><span class="nc">Object</span> <span class="n">bean</span><span class="o">,</span> <span class="nc">String</span> <span class="n">beanName</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="nc">BeansException</span> <span class="o">{</span>
         <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"postProcessAfterInitialization method invoked"</span><span class="o">);</span>
         <span class="k">return</span> <span class="n">bean</span><span class="o">;</span>
     <span class="o">}</span>
@@ -236,21 +236,21 @@
 <p>init() and destroy()are part of Spring XML based configuration and @Bean(initMethod=”init”,destroyMethod=”destroy”)are part of Spring annotation based configuration, but they both do the same thing. Here is how to use them.
 XML Based.</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"customerService"</span> <span class="na">class=</span><span class="s">"com.somepackage.CustomerService"</span> <span class="na">init-method=</span><span class="s">"init"</span> <span class="na">destroy-method=</span><span class="s">"destroy"</span><span class="nt">&gt;</span></code></pre></figure>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Annotation</span> <span class="n">Based</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Annotation</span> <span class="nc">Based</span>
 <span class="nd">@Configuration</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppConfig</span> <span class="o">{</span>
    <span class="nd">@Bean</span><span class="o">(</span><span class="n">initMethod</span><span class="o">=</span><span class="s">"init"</span><span class="o">,</span><span class="n">destroyMethod</span><span class="o">=</span><span class="s">"destroy"</span><span class="o">)</span>
-   <span class="kd">public</span> <span class="n">MyCustomClass</span> <span class="nf">getCustomClassBean</span><span class="o">()</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="nc">MyCustomClass</span> <span class="nf">getCustomClassBean</span><span class="o">()</span> <span class="o">{</span>
       <span class="k">return</span> <span class="k">new</span> <span class="nf">MyCustomClass</span><span class="o">();</span> <span class="c1">// This bean will have init and destroy method in it.</span>
    <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
 <h2 id="spring-event-and--listeners">Spring event and  Listeners</h2>
 <p>Spring emits many application events and you register listeners to them, to do that you just need implement ApplicationListener specific type of event such as below example. Here once ContextRefreshedEvent is raised by spring this listener will be called and intern it will call contextInit method of MyBean.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContextRefreshListener</span> <span class="kd">implements</span> <span class="n">ApplicationListener</span><span class="o">&lt;</span><span class="n">ContextRefreshedEvent</span><span class="o">&gt;</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContextRefreshListener</span> <span class="kd">implements</span> <span class="nc">ApplicationListener</span><span class="o">&lt;</span><span class="nc">ContextRefreshedEvent</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onApplicationEvent</span><span class="o">(</span><span class="n">ContextRefreshedEvent</span> <span class="n">contextRefreshedEvent</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">contextRefreshedEvent</span><span class="o">.</span><span class="na">getApplicationContext</span><span class="o">().</span><span class="na">getBean</span><span class="o">(</span><span class="n">MyBean</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">contextInit</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onApplicationEvent</span><span class="o">(</span><span class="nc">ContextRefreshedEvent</span> <span class="n">contextRefreshedEvent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">contextRefreshedEvent</span><span class="o">.</span><span class="na">getApplicationContext</span><span class="o">().</span><span class="na">getBean</span><span class="o">(</span><span class="nc">MyBean</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">contextInit</span><span class="o">();</span>
 
     <span class="o">}</span>
 <span class="o">}</span>  </code></pre></figure>
@@ -261,9 +261,9 @@ XML Based.</p>
 <span class="kd">class</span> <span class="nc">Configuration</span><span class="o">{</span>
   <span class="o">...</span>
   <span class="nd">@Bean</span>
-    <span class="kd">public</span> <span class="n">CommandLineRunner</span> <span class="nf">getRunner</span><span class="o">(</span><span class="n">ApplicationContext</span> <span class="n">ctx</span><span class="o">){</span>
+    <span class="kd">public</span> <span class="nc">CommandLineRunner</span> <span class="nf">getRunner</span><span class="o">(</span><span class="nc">ApplicationContext</span> <span class="n">ctx</span><span class="o">){</span>
         <span class="k">return</span> <span class="o">(</span><span class="n">args</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
-            <span class="n">ctx</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="n">SomeClass</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">runnerInit</span><span class="o">();</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="nc">SomeClass</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">runnerInit</span><span class="o">();</span>
         <span class="o">};</span>
     <span class="o">}</span>
   <span class="o">...</span>

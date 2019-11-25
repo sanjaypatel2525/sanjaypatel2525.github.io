@@ -200,7 +200,7 @@ This required when you run you test case.
 Create a file conf.js for Protractor configurations.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">exports</span><span class="o">.</span><span class="na">config</span> <span class="o">=</span> <span class="o">{</span>
 	<span class="nl">seleniumAddress:</span> <span class="err">'</span><span class="nl">http:</span><span class="c1">//localhost:4444/wd/hub',</span>
-	<span class="nl">specs:</span> <span class="o">[</span><span class="err">'</span><span class="n">First</span><span class="o">-</span><span class="n">test</span><span class="o">.</span><span class="na">js</span><span class="err">'</span><span class="o">],</span>
+	<span class="nl">specs:</span> <span class="o">[</span><span class="err">'</span><span class="nc">First</span><span class="o">-</span><span class="n">test</span><span class="o">.</span><span class="na">js</span><span class="err">'</span><span class="o">],</span>
 	<span class="nl">allScriptsTimeout:</span> <span class="mi">30000</span><span class="o">,</span>
 
 	<span class="c1">// Options to be passed to Jasmine-node.</span>
@@ -219,13 +219,13 @@ Create a file conf.js for Protractor configurations.</p>
 
 <h3 id="create-first-testjs-in-the-same-location">Create First-test.js in the same location.</h3>
 <p>This is your actual test steps. For now, you can copy paste below code. This script will open google.com and search for ‘abyte.stream’</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">describe</span><span class="o">(</span><span class="err">'</span><span class="n">First</span> <span class="n">automated</span> <span class="n">tests</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">()</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">describe</span><span class="o">(</span><span class="err">'</span><span class="nc">First</span> <span class="n">automated</span> <span class="n">tests</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">()</span> <span class="o">{</span>
 
   <span class="n">beforeEach</span><span class="o">(</span><span class="n">function</span><span class="o">()</span> <span class="o">{</span>
       <span class="k">return</span> <span class="n">browser</span><span class="o">.</span><span class="na">ignoreSynchronization</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> <span class="c1">// Important for non angular applications</span>
     <span class="o">});</span>
 
-  <span class="n">it</span><span class="o">(</span><span class="err">'</span><span class="n">First</span> <span class="n">test</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">()</span> <span class="o">{</span>
+  <span class="n">it</span><span class="o">(</span><span class="err">'</span><span class="nc">First</span> <span class="n">test</span><span class="err">'</span><span class="o">,</span> <span class="n">function</span><span class="o">()</span> <span class="o">{</span>
 	<span class="c1">//debugger;	 enable if you want to debug the code in chrome</span>
 	<span class="n">browser</span><span class="o">.</span><span class="na">driver</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="err">'</span><span class="nl">https:</span><span class="c1">//www.google.com');</span>
 	<span class="n">browser</span><span class="o">.</span><span class="na">driver</span><span class="o">.</span><span class="na">manage</span><span class="o">().</span><span class="na">window</span><span class="o">().</span><span class="na">maximize</span><span class="o">();</span>
@@ -243,7 +243,7 @@ Create a file conf.js for Protractor configurations.</p>
 Till this point, we have successfully achieved running test on the real browser. There are places when we do not have GUI, we just have a black screen server, In this situation, we need to go headless.</p>
 
 <p>Headless browser doesn’t require a graphics driver at all, They just get commands and execute them directly in memory. To achieve this you need to specify headless in cong.js under capabilities.</p>
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w"> </span><span class="err">capabilities</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">'browserName'</span><span class="p">:</span><span class="w"> </span><span class="err">'chrome'</span><span class="p">,</span><span class="w"> </span><span class="err">'chromeOptions'</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">args</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"--headless"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--disable-gpu"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--window-size=1920x1080"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w"> </span><span class="err">capabilities:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">'browserName':</span><span class="w"> </span><span class="err">'chrome'</span><span class="p">,</span><span class="w"> </span><span class="err">'chromeOptions':</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">args:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"--headless"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--disable-gpu"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--window-size=1920x1080"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span></code></pre></figure>
 <h2 id="taking-screenshot">Taking screenshot</h2>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"lang-javascript"</span><span class="nt">&gt;</span>
 browser.takeScreenshot().then(function(png) {

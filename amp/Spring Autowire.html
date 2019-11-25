@@ -189,12 +189,12 @@
 <p>You can autowire class properties directly even if they are private, you can autowire fields by constructor parameters or setters parameter. What if you have two ApplicationUser object in container which one application object will use, In XML based you can just give object name but in Java class you will have to use  @Qualifier(“applicationUser2”) to identify which one to pick.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Autowired</span>
 <span class="nd">@Qualifier</span> <span class="o">(</span><span class="s">"applicationUser2"</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>
+<span class="kd">private</span> <span class="nc">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>
 
 <p>What if container doesn’t find the matching object? It will throw error, you can suppress this by using @Autowired (required=false)</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Autowired</span><span class="o">(</span><span class="n">required</span><span class="o">=</span><span class="kc">false</span><span class="o">)</span>
 <span class="nd">@Qualifier</span> <span class="o">(</span><span class="s">"applicationUser2"</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>
+<span class="kd">private</span> <span class="nc">ApplicationUser</span> <span class="n">applicationUser</span><span class="o">;</span></code></pre></figure>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>

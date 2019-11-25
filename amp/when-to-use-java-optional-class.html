@@ -165,14 +165,14 @@
 <p>Java optional is a generic class, It is a wrapper around another classes object and provides a set of methods.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">;</span>
 <span class="o">...</span>
-<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="o">...</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="n">T</span> <span class="n">value</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="no">T</span> <span class="n">value</span><span class="o">;</span>
     <span class="o">...</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">of</span><span class="o">(</span><span class="n">T</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">Optional</span><span class="o">&lt;&gt;(</span><span class="n">value</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">of</span><span class="o">(</span><span class="no">T</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">Optional</span><span class="o">&lt;&gt;(</span><span class="n">value</span><span class="o">);</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">T</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="no">T</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">value</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">throw</span> <span class="k">new</span> <span class="nf">NoSuchElementException</span><span class="o">(</span><span class="s">"No value present"</span><span class="o">);</span>
         <span class="o">}</span>
@@ -185,46 +185,46 @@
 <span class="o">}</span></code></pre></figure>
 <p>As you can it has variable value and later that value can be retrieved using get.  It has some other important methods which we will discuss later in this blog. Here is a basic example of how we can use Java Optional class.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Country</span><span class="o">{</span>  
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"some name"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"some name"</span><span class="o">;</span>
   <span class="o">...</span>
 <span class="o">}</span>
 <span class="c1">//Using null check -Method 1</span>
-<span class="n">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Country</span><span class="o">();</span>
+<span class="nc">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Country</span><span class="o">();</span>
     
 <span class="k">if</span><span class="o">(</span><span class="n">country</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
 <span class="o">}</span>
 
 <span class="c1">//Using optional Class -- Method 2</span>
-<span class="n">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Country</span><span class="o">();</span>		
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Country</span><span class="o">&gt;</span> <span class="n">optionalOfCountry</span><span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="n">country</span><span class="o">);</span>
+<span class="nc">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Country</span><span class="o">();</span>		
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Country</span><span class="o">&gt;</span> <span class="n">optionalOfCountry</span><span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="n">country</span><span class="o">);</span>
 <span class="k">if</span><span class="o">(</span><span class="n">optionalOfCountry</span><span class="o">.</span><span class="na">isPresent</span><span class="o">()){</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">optionalOfCountry</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">optionalOfCountry</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
 <span class="o">}</span></code></pre></figure>
 <p>So what the difference between method one and method two, Method 2 doesn’t require ‘null’ keyword but does it look like it has reduced your code and it’s better to read( Different people different opinion)? I feel it’s waste of time to use method 2 here. Then,</p>
 <h2 id="2-when-to-use-java-optional-class">2. When to use Java Optional Class?</h2>
 <p>Let’s start by example.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Country</span><span class="o">{</span>  
-  <span class="n">State</span> <span class="n">state</span><span class="o">;</span>
+  <span class="nc">State</span> <span class="n">state</span><span class="o">;</span>
         <span class="o">...</span>
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">State</span><span class="o">{</span>  
-  <span class="n">District</span> <span class="n">district</span><span class="o">;</span>
+  <span class="nc">District</span> <span class="n">district</span><span class="o">;</span>
         <span class="o">...</span>
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">District</span><span class="o">{</span>  
-  <span class="n">Village</span> <span class="n">village</span><span class="o">;</span>
+  <span class="nc">Village</span> <span class="n">village</span><span class="o">;</span>
         <span class="o">...</span>
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">Village</span><span class="o">{</span>  
-  <span class="n">String</span> <span class="n">villageName</span> <span class="o">=</span> <span class="s">"default name"</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="n">villageName</span> <span class="o">=</span> <span class="s">"default name"</span><span class="o">;</span>
         <span class="o">...</span>
 <span class="o">}</span>
 
-<span class="n">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Country</span><span class="o">();</span>
+<span class="nc">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Country</span><span class="o">();</span>
 
 
 <span class="c1">//Using null check -Method 1</span>
@@ -234,10 +234,10 @@
       <span class="k">if</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getDistrict</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
         <span class="k">if</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getDistrict</span><span class="o">().</span><span class="na">getVillage</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
           <span class="k">if</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getDistrict</span><span class="o">().</span><span class="na">getVillage</span><span class="o">().</span><span class="na">getVillageName</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getDistrict</span><span class="o">().</span><span class="na">getVillage</span><span class="o">().</span><span class="na">getVillageName</span><span class="o">());</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">country</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getDistrict</span><span class="o">().</span><span class="na">getVillage</span><span class="o">().</span><span class="na">getVillageName</span><span class="o">());</span>
           <span class="o">}</span>
           <span class="k">else</span><span class="o">{</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"No village name defined"</span><span class="o">);</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"No village name defined"</span><span class="o">);</span>
           <span class="o">}</span>
         <span class="o">}</span>
       <span class="o">}</span>
@@ -246,8 +246,8 @@
 <span class="o">}</span>
 
 <span class="c1">//Using optional Class and map function -Method 2</span>
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Country</span><span class="o">&gt;</span> <span class="n">optionalOfCountry</span><span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="n">country</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">optionalOfCountry</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">Country:</span><span class="o">:</span><span class="n">getState</span><span class="o">)</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Country</span><span class="o">&gt;</span> <span class="n">optionalOfCountry</span><span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="n">country</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">optionalOfCountry</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">Country:</span><span class="o">:</span><span class="n">getState</span><span class="o">)</span>
     <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">State:</span><span class="o">:</span><span class="n">getDistrict</span><span class="o">)</span>
     <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">District:</span><span class="o">:</span><span class="n">getVillage</span><span class="o">)</span>
     <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">Village:</span><span class="o">:</span><span class="n">getVillageName</span><span class="o">)</span>
@@ -258,49 +258,49 @@ Let discuss more on Optional class.</p>
 <h2 id="3-java-optional-class-instantiation">3. Java Optional Class Instantiation</h2>
 <h3 id="31-initiate-an-empty-optional">3.1 Initiate an empty Optional</h3>
 <p>This is used when you want to start with an empty/null value Optional wrapper.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Optional</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span></code></pre></figure>
 <h3 id="32-initiate-optional-with-an-object">3.2 Initiate Optional with an object.</h3>
 <p>This is used when you want to initialize wrapper with an object, but object can’t be null.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Optional</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span></code></pre></figure>
 <h3 id="33-initiate-optional-with-a-nullable-object">3.3 Initiate Optional with a nullable object.</h3>
 <p>This is used when you want to initialize wrapper with an object and object can be null.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">optional</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="n">T</span><span class="err"> </span><span class="n">t</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Optional</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">optional</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="nc">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="no">T</span><span class="err"> </span><span class="n">t</span><span class="o">);</span></code></pre></figure>
 <p>##3. Java Optional Class Methods</p>
 <h3 id="33-get-the-value-of-optional">3.3 Get the value of Optional.</h3>
 <p>This is used when you want to initialize wrapper with an object and object can be null.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="na">get</span><span class="o">()</span><span class="err"> </span><span class="o">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="no">T</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="na">get</span><span class="o">()</span><span class="err"> </span><span class="o">;</span></code></pre></figure>
 <h3 id="33-check-if-the-value-is-present-in-optional">3.3 Check if the value is present in Optional.</h3>
 <p>This is used when you want to initialize wrapper with an object and object can be null.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">boolean</span><span class="err"> </span><span class="n">isPresent</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="na">isPresent</span><span class="o">();</span></code></pre></figure>
 <h3 id="33-call-consumer-if-the-value-is-present">3.3 Call consumer if the value is present.</h3>
 <p>This is used for terminal operations,  what to do if the value is there probably print it. A consumer is a functional interface having only one method which accepts a value and returns nothing.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ifPresent</span><span class="o">(</span><span class="n">Consumer</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">super</span><span class="err"> </span><span class="n">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">consumer</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ifPresent</span><span class="o">(</span><span class="nc">Consumer</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">super</span><span class="err"> </span><span class="no">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">consumer</span><span class="o">);</span>
 
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">nameOptional</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"sanjay"</span><span class="o">);</span>
-<span class="n">nameOptional</span><span class="o">.</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span></code></pre></figure>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">nameOptional</span> <span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"sanjay"</span><span class="o">);</span>
+<span class="n">nameOptional</span><span class="o">.</span><span class="na">ifPresent</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span></code></pre></figure>
 <h3 id="33-conditional-check">3.3 Conditional check.</h3>
 <p>Filters are used to run some predicates on Optional value which return either true or false. Based on predicate result it returns either the same Optional value or empty Optional.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">Predicate</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">super</span><span class="err"> </span><span class="n">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">predicate</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Optional</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="nc">Predicate</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">super</span><span class="err"> </span><span class="no">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">predicate</span><span class="o">);</span>
 
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">optionalInt</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">24</span><span class="o">);</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">optionalInt</span> <span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">24</span><span class="o">);</span>
 <span class="n">optionalInt</span><span class="err"> </span><span class="o">=</span> <span class="n">optionalInt</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">);</span> <span class="c1">// the condition returns true so the end value remains same.</span>
 
 <span class="n">optionalInt</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optionalInt</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">i</span><span class="o">-</span><span class="err"> </span><span class="o">&gt;</span><span class="err"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">);</span><span class="err"> </span><span class="c1">// it return false the end result will be equal to optional.empty();</span></code></pre></figure>
 <h3 id="33-map-optional-value-to-another-optional">3.3 Map Optional value to another Optional</h3>
 <p>Map function takes a <a href="https://abyte.stream/2018/09/15/java-lambda-procedural-programming/">functional interface</a> which takes T parameter and return R another parameter.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Optional</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="err"> </span><span class="n">u</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="err"> </span><span class="n">map</span><span class="o">(</span><span class="n">Function</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">super</span><span class="err"> </span><span class="n">T</span><span class="o">,</span><span class="err"> </span><span class="o">?</span><span class="err"> </span><span class="kd">extends</span><span class="err"> </span><span class="n">U</span><span class="o">&gt;</span><span class="err"> </span><span class="n">mapper</span><span class="o">);</span><span class="err"> </span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Optional</span><span class="o">&lt;</span><span class="no">U</span><span class="o">&gt;</span><span class="err"> </span><span class="n">u</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="err"> </span><span class="n">map</span><span class="o">(</span><span class="nc">Function</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">super</span><span class="err"> </span><span class="no">T</span><span class="o">,</span><span class="err"> </span><span class="o">?</span><span class="err"> </span><span class="kd">extends</span><span class="err"> </span><span class="no">U</span><span class="o">&gt;</span><span class="err"> </span><span class="n">mapper</span><span class="o">);</span><span class="err"> </span>
 
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="err"> </span><span class="n">optString</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"sanjay"</span><span class="o">);</span>
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">Int</span><span class="o">&gt;</span><span class="err"> </span><span class="n">optInt</span> <span class="o">=</span> <span class="n">optString</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">String:</span><span class="o">:</span><span class="n">length</span><span class="o">);</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span><span class="err"> </span><span class="n">optString</span> <span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"sanjay"</span><span class="o">);</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Int</span><span class="o">&gt;</span><span class="err"> </span><span class="n">optInt</span> <span class="o">=</span> <span class="n">optString</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">String:</span><span class="o">:</span><span class="n">length</span><span class="o">);</span>
 <span class="n">optInt</span><span class="o">.</span><span class="na">get</span><span class="o">();</span> <span class="c1">// return 5</span></code></pre></figure>
 <h3 id="33-if-null-then-return-another-value">3.3 If null then return another value</h3>
 <p>This function takes a parameter and returns the passed parameter when the optional value is null.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="err"> </span><span class="n">orElse</span><span class="o">(</span><span class="n">T</span><span class="err"> </span><span class="n">other</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="no">T</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="err"> </span><span class="n">orElse</span><span class="o">(</span><span class="no">T</span><span class="err"> </span><span class="n">other</span><span class="o">);</span></code></pre></figure>
 <h3 id="33-if-null-then-return-the-value-generated-by-the-supplier">3.3 If null then return the value generated by the supplier.</h3>
 <p>This is used when you want to initialize wrapper with an object and object can be null.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="err"> </span><span class="n">orElseGet</span><span class="o">(</span><span class="n">Supplier</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">extends</span><span class="err"> </span><span class="n">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">other</span><span class="o">);</span><span class="err"> </span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="no">T</span><span class="err"> </span><span class="n">t</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="n">optional</span><span class="o">.</span><span class="err"> </span><span class="n">orElseGet</span><span class="o">(</span><span class="nc">Supplier</span><span class="o">&lt;?</span><span class="err"> </span><span class="kd">extends</span><span class="err"> </span><span class="no">T</span><span class="o">&gt;</span><span class="err"> </span><span class="n">other</span><span class="o">);</span><span class="err"> </span>
 
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">optString</span> <span class="o">=</span> <span class="n">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">optString</span> <span class="o">=</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
 <span class="kt">double</span> <span class="n">a</span> <span class="o">=</span> <span class="n">optString</span><span class="o">.</span><span class="na">orElseGet</span><span class="o">(</span><span class="nl">Maths:</span><span class="n">random</span><span class="o">);</span> <span class="c1">//return random value</span></code></pre></figure>
 <h2 id="4-conclusion">4. Conclusion</h2>
 <p>In this blog, we have discussed when to use Java Optional class and what are the important method in this class. This is it about the blog When to use Java Optional Class.</p>

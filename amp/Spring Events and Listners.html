@@ -177,53 +177,53 @@ you want to give a reply or not it’s upto you. Here you become a listener list
 <h3 id="old-way">Old way</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">SomeEventData</span><span class="o">{</span>
     <span class="o">...</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">data</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">Long</span> <span class="n">dataLength</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">data</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Long</span> <span class="n">dataLength</span><span class="o">;</span>
     <span class="o">...</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">SomeEvent</span> <span class="kd">implements</span> <span class="n">ApplicationEvent</span><span class="o">{</span>
-    <span class="kd">private</span> <span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">SomeEventData</span><span class="o">(</span><span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">){</span>
+<span class="kd">class</span> <span class="nc">SomeEvent</span> <span class="kd">implements</span> <span class="nc">ApplicationEvent</span><span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">SomeEventData</span> <span class="n">someEventData</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">SomeEventData</span><span class="o">(</span><span class="nc">SomeEventData</span> <span class="n">someEventData</span><span class="o">){</span>
         <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span> <span class="o">=</span> <span class="n">someEventData</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">SomeEventData</span> <span class="nf">getSomeEventData</span><span class="o">(){</span>
+    <span class="kd">public</span> <span class="nc">SomeEventData</span> <span class="nf">getSomeEventData</span><span class="o">(){</span>
         <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">SomeEventListner</span> <span class="kd">implements</span> <span class="n">ApplicationListner</span><span class="o">{</span>
+<span class="kd">class</span> <span class="nc">SomeEventListner</span> <span class="kd">implements</span> <span class="nc">ApplicationListner</span><span class="o">{</span>
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onApplicationEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onApplicationEvent</span><span class="o">(</span><span class="nc">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
     <span class="nd">@Autowire</span>
-    <span class="n">ApplicationEventPublisher</span> <span class="n">applicationEventPublisher</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="nc">ApplicationEventPublisher</span> <span class="n">applicationEventPublisher</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
         <span class="o">...</span>
-        <span class="n">applicationEventPublisher</span><span class="o">..</span><span class="na">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEventData</span><span class="o">()));</span>
+        <span class="n">applicationEventPublisher</span><span class="o">..</span><span class="na">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="nc">SomeEvent</span><span class="o">(</span><span class="k">new</span> <span class="nc">SomeEventData</span><span class="o">()));</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
 <h3 id="new-way">new way</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">SomeEventData</span><span class="o">{</span>
     <span class="o">...</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">data</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">Long</span> <span class="n">dataLength</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">data</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Long</span> <span class="n">dataLength</span><span class="o">;</span>
     <span class="o">...</span>
 <span class="o">}</span>
 <span class="c1">// No need to implement ApplicationEvent interface</span>
 <span class="kd">class</span> <span class="nc">SomeEvent</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">SomeEventData</span><span class="o">(</span><span class="n">SomeEventData</span> <span class="n">someEventData</span><span class="o">){</span>
+    <span class="kd">private</span> <span class="nc">SomeEventData</span> <span class="n">someEventData</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">SomeEventData</span><span class="o">(</span><span class="nc">SomeEventData</span> <span class="n">someEventData</span><span class="o">){</span>
         <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span> <span class="o">=</span> <span class="n">someEventData</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">SomeEventData</span> <span class="nf">getSomeEventData</span><span class="o">(){</span>
+    <span class="kd">public</span> <span class="nc">SomeEventData</span> <span class="nf">getSomeEventData</span><span class="o">(){</span>
         <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">someEventData</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -231,37 +231,37 @@ you want to give a reply or not it’s upto you. Here you become a listener list
 <span class="c1">// No need implement   ApplicationListner</span>
 <span class="kd">class</span> <span class="nc">SomeEventListner</span><span class="o">{</span>
     <span class="nd">@EventListener</span>   <span class="c1">//1</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="nc">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="c1">// or even publish a new event  --2</span>
     <span class="nd">@EventListener</span>
-    <span class="kd">public</span> <span class="n">SomeOtherEvent</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">SomeOtherEvent</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="nc">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
-        <span class="k">return</span> <span class="nf">SomeOtherEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeOtherEventDate</span><span class="o">());</span>
+        <span class="k">return</span> <span class="nf">SomeOtherEvent</span><span class="o">(</span><span class="k">new</span> <span class="nc">SomeOtherEventDate</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="c1">// Execute handleEvent in non blocking way  --3</span>
     <span class="nd">@Async</span> 
     <span class="nd">@EventListener</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="nc">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="c1">// Or use Spring expression language based condition  --4</span>
     <span class="nd">@EventListener</span><span class="o">(</span><span class="n">condition</span> <span class="o">=</span> <span class="s">"#someEvent.getDataLength()&gt;10"</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="n">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">handleEvent</span><span class="o">(</span><span class="nc">SomeEvent</span> <span class="n">someEvent</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">--</span><span class="n">process</span><span class="o">(</span><span class="n">someEvent</span><span class="o">.</span><span class="na">getSomeEventData</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
     <span class="nd">@Autowire</span>
-    <span class="n">ApplicationEventPublisher</span> <span class="n">applicationEventPublisher</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="nc">ApplicationEventPublisher</span> <span class="n">applicationEventPublisher</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
         <span class="o">...</span>
-        <span class="n">applicationEventPublisher</span><span class="o">..</span><span class="na">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEvent</span><span class="o">(</span><span class="k">new</span> <span class="n">SomeEventData</span><span class="o">()));</span>
+        <span class="n">applicationEventPublisher</span><span class="o">..</span><span class="na">publishEvent</span><span class="o">(</span><span class="k">new</span> <span class="nc">SomeEvent</span><span class="o">(</span><span class="k">new</span> <span class="nc">SomeEventData</span><span class="o">()));</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 

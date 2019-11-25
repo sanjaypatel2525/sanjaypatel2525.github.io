@@ -346,10 +346,6 @@
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-with-Python</loc>
-        </url>
-    
-        <url>
             <loc>https://abyte.stream/amp/REST in Java world</loc>
         </url>
     
@@ -366,15 +362,23 @@
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-Python-Libraries</loc>
-        </url>
-    
-        <url>
             <loc>https://abyte.stream/amp/10 minutes JMS </loc>
         </url>
     
         <url>
+            <loc>https://abyte.stream/amp/Machine-Learning-TensorFlow</loc>
+        </url>
+    
+        <url>
             <loc>https://abyte.stream/amp/Machine-Learning-Neural-Network</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Machine-Learning-with-Python</loc>
+        </url>
+    
+        <url>
+            <loc>https://abyte.stream/amp/Machine-Learning-Python-Libraries</loc>
         </url>
     
         <url>
@@ -385,7 +389,15 @@
             <loc>https://abyte.stream/amp/Machine-Learning-Basic-Maths</loc>
         </url>
     
+        <url>
+            <loc>https://abyte.stream/amp/Machine_Learnig_Linear Algebra</loc>
+        </url>
     
+    
+        <url>
+            <loc>https://abyte.stream/Machine_Learnig_Linear-Algebra/</loc>
+        </url>
+  
         <url>
             <loc>https://abyte.stream/Machine-Learning-Basic-Maths/</loc>
         </url>
@@ -395,15 +407,23 @@
         </url>
   
         <url>
+            <loc>https://abyte.stream/Machine-Learning-Python-Libraries/</loc>
+        </url>
+  
+        <url>
+            <loc>https://abyte.stream/Machine-Learning-with-Python/</loc>
+        </url>
+  
+        <url>
             <loc>https://abyte.stream/Machine-Learning-Neural-Network/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/10-minutes-JMS/</loc>
+            <loc>https://abyte.stream/Machine-Learning-TensorFlow/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-Python-Libraries/</loc>
+            <loc>https://abyte.stream/10-minutes-JMS/</loc>
         </url>
   
         <url>
@@ -420,10 +440,6 @@
   
         <url>
             <loc>https://abyte.stream/REST-in-Java-world/</loc>
-        </url>
-  
-        <url>
-            <loc>https://abyte.stream/Machine-Learning-with-Python/</loc>
         </url>
   
         <url>

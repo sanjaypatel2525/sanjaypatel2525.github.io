@@ -225,11 +225,11 @@ Here are JMS component.</p>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">JMSSenderConfiguratipn</span> <span class="o">{</span>
 
   <span class="nd">@Value</span><span class="o">(</span><span class="s">"${activemq.brokerUrl}"</span><span class="o">)</span>
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">brokerUrl</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">brokerUrl</span><span class="o">;</span>
 
   <span class="nd">@Bean</span>
-  <span class="kd">public</span> <span class="n">ActiveMQConnectionFactory</span> <span class="nf">createActiveMQConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span>
+  <span class="kd">public</span> <span class="nc">ActiveMQConnectionFactory</span> <span class="nf">createActiveMQConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span>
         <span class="k">new</span> <span class="nf">ActiveMQConnectionFactory</span><span class="o">();</span>
     <span class="n">factory</span><span class="o">.</span><span class="na">setBrokerURL</span><span class="o">(</span><span class="n">brokerUrl</span><span class="o">);</span>
 
@@ -237,22 +237,22 @@ Here are JMS component.</p>
   <span class="o">}</span>
 
   <span class="nd">@Bean</span>
-  <span class="kd">public</span> <span class="n">CachingConnectionFactory</span> <span class="nf">creachCachingConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">CachingConnectionFactory</span> <span class="nf">creachCachingConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">CachingConnectionFactory</span><span class="o">(</span>
         <span class="n">createActiveMQConnectionFactory</span><span class="o">());</span>
   <span class="o">}</span>
 
   <span class="nd">@Bean</span>
-  <span class="kd">public</span> <span class="n">JmsTemplate</span> <span class="nf">jmsTemplate</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">JmsTemplate</span> <span class="nf">jmsTemplate</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">JmsTemplate</span><span class="o">(</span><span class="n">creachCachingConnectionFactory</span><span class="o">());</span>
   <span class="o">}</span>
 <span class="o">}</span>
 
 <span class="c1">// Send message.</span>
 <span class="nd">@Autowired</span>
-<span class="kd">private</span> <span class="n">JmsTemplate</span> <span class="n">jmsTemplate</span><span class="o">;</span>
+<span class="kd">private</span> <span class="nc">JmsTemplate</span> <span class="n">jmsTemplate</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="n">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
   <span class="n">jmsTemplate</span><span class="o">.</span><span class="na">convertAndSend</span><span class="o">(</span><span class="s">"senderQueuename"</span><span class="o">,</span> <span class="n">msg</span><span class="o">);</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -272,11 +272,11 @@ package com.xyz.jms;</p>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">JMSRecieverConfiguratipn</span> <span class="o">{</span>
 
   <span class="nd">@Value</span><span class="o">(</span><span class="s">"${activemq.brokerUrl}"</span><span class="o">)</span>
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">brokerUrl</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">brokerUrl</span><span class="o">;</span>
 
   <span class="nd">@Bean</span>
-  <span class="kd">public</span> <span class="n">ActiveMQConnectionFactory</span> <span class="nf">createActiveMQConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span>
+  <span class="kd">public</span> <span class="nc">ActiveMQConnectionFactory</span> <span class="nf">createActiveMQConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">ActiveMQConnectionFactory</span> <span class="n">factory</span> <span class="o">=</span>
         <span class="k">new</span> <span class="nf">ActiveMQConnectionFactory</span><span class="o">();</span>
     <span class="n">factory</span><span class="o">.</span><span class="na">setBrokerURL</span><span class="o">(</span><span class="n">brokerUrl</span><span class="o">);</span>
 
@@ -284,7 +284,7 @@ package com.xyz.jms;</p>
   <span class="o">}</span>
 
   <span class="nd">@Bean</span>
-  <span class="kd">public</span> <span class="n">DefaultJmsListenerContainerFactory</span>  <span class="nf">creachCachingConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">DefaultJmsListenerContainerFactory</span>  <span class="nf">creachCachingConnectionFactory</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">DefaultJmsListenerContainerFactory</span> <span class="o">(</span>
         <span class="n">createActiveMQConnectionFactory</span><span class="o">());</span>
   <span class="o">}</span>
@@ -292,12 +292,12 @@ package com.xyz.jms;</p>
 
 <span class="c1">//receive message</span>
 <span class="nd">@JmsListener</span><span class="o">(</span><span class="n">destination</span> <span class="o">=</span> <span class="s">"recieverQueuename"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">receive</span><span class="o">(</span><span class="n">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">receive</span><span class="o">(</span><span class="nc">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
   <span class="c1">// use msg.  // It is asynchronusly invoked</span>
 <span class="o">}</span>
 <span class="c1">// Or </span>
 <span class="nd">@Autowired</span>
-<span class="kd">private</span> <span class="n">JmsTemplate</span> <span class="n">jmsTemplate</span><span class="o">;</span>
+<span class="kd">private</span> <span class="nc">JmsTemplate</span> <span class="n">jmsTemplate</span><span class="o">;</span>
 <span class="o">.....</span>
 <span class="n">jmsTemplate</span><span class="o">.</span><span class="na">receiveAndConvert</span><span class="o">(</span><span class="s">"DEV.QUEUE.1"</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span> <span class="c1">// It blocks the flow. </span></code></pre></figure>
 

@@ -1,0 +1,317 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Machine Learning with Tensor Flow.</title>
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-TensorFlow/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-13T18:57:06-05:00" class="date">13 Dec 2018 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Machine Learning with Tensor Flow.</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<p>TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit lear to one liner ML models.
+<amp-img src="/assets/2019-08-21-Machine-Learning-TensorFlow1.png" alt="" width="838" height="342" layout="responsive"><noscript><img src="/assets/2019-08-21-Machine-Learning-TensorFlow1.png" alt="" width="838" height="342"></noscript></amp-img></p>
+<h3 id="tf-estimator">TF estimator</h3>
+<p>It is library which hold all high level ML algorithm for ex.</p>
+
+<p><strong>TF Logging</strong> - It has four logging options,DEBUG,INFO ,WARNING, ERROR. tf.logging.set_verbosity(tf.logging.ERROR)</p>
+
+<p><strong>Tensors</strong> : One number, vector, matrix etc are are form of tensor. Increase in dimension results are stored in tensors. How would you store 10 matrix. You will think array of matrix, and that variable is called tensor.</p>
+
+<p>Tensor flow formally gives two packages, one to deal with Graph and another to run computation on graph (sessions).</p>
+
+<p><strong>Computational Graph</strong> - Graph is same old neural network graph each node in graph has some purpose(variable,computation,placeholder), input and output. It’s a data strucutre well defined in TF.</p>
+
+<p>Advantage of using graph- portability (Export and share), Easy to understand, parallelism,</p>
+
+<p>Following are the component of Computational Graph.
+Variable, Placeholders, contants, operation, graph, session.</p>
+
+<p>Compared to numpy array they don’t allocate memory in starting. For ex.  a = tf.zeros(int(le12),int(le12)) will just form a shape not the actual allocation of memory. It will only allocate memory when it is executed.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+  <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">session</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"a"</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"b"</span><span class="p">)</span>
+    <span class="n">prod</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"Multiply"</span><span class="p">)</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"Sum"</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">prod</span><span class="p">,</span><span class="nb">sum</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"Divide"</span><span class="p">)</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="how-the-graph-component-looks-in-code">How the Graph component looks in Code.</h3>
+<p>Here is very nice explanation from one of the blog.
+https://medium.com/@d3lm/understand-tensorflow-by-mimicking-its-api-from-scratch-faa55787170d</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">Graph</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">placeholders</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">constants</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">def</span> <span class="nf">as_default</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_default_graph</span>
+    <span class="n">_default_graph</span> <span class="o">=</span> <span class="bp">self</span>
+
+  <span class="o">......</span>
+
+  <span class="k">class</span> <span class="nc">Operation</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_nodes</span> <span class="o">=</span> <span class="n">input_nodes</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="bp">None</span>
+    
+    <span class="c1"># Append operation to the list of operations of the default graph
+</span>    <span class="n">_default_graph</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+  <span class="o">......</span>
+
+  <span class="k">class</span> <span class="nc">add</span><span class="p">(</span><span class="n">BinaryOperation</span><span class="p">):</span>
+  <span class="s">"""
+  Computes a + b, element-wise
+  """</span>
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">upstream_grad</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="nb">NotImplementedError</span>
+  <span class="c1"># and so on for other operators.
+</span>
+  <span class="k">class</span> <span class="nc">Placeholder</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">_default_graph</span><span class="o">.</span><span class="n">placeholders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+  <span class="o">.......</span>
+  <span class="c1"># constant can be inputs/labels as they do not changes
+</span>  <span class="k">class</span> <span class="nc">Constant</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="n">_default_graph</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+  <span class="o">@</span><span class="nb">property</span>
+  <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__value</span>
+
+  <span class="o">@</span><span class="n">value</span><span class="o">.</span><span class="n">setter</span>
+  <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Cannot reassign value."</span><span class="p">)</span>
+
+  <span class="o">.......</span>
+  <span class="c1"># Varibale changes in run of graph
+</span>  <span class="k">class</span> <span class="nc">Variable</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">initial_value</span>
+    <span class="n">_default_graph</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+  <span class="o">............</span>
+
+  <span class="c1"># Visit and compute graph on topolgical order DFS.
+</span>  <span class="k">def</span> <span class="nf">topology_sort</span><span class="p">(</span><span class="n">operation</span><span class="p">):</span>
+    <span class="n">ordering</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">visited_nodes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">recursive_helper</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+      <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Operation</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">input_nodes</span><span class="p">:</span>
+          <span class="k">if</span> <span class="n">input_node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited_nodes</span><span class="p">:</span>
+            <span class="n">recursive_helper</span><span class="p">(</span><span class="n">input_node</span><span class="p">)</span>
+
+      <span class="n">visited_nodes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+      <span class="n">ordering</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+    <span class="c1"># start recursive depth-first search
+</span>    <span class="n">recursive_helper</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ordering</span>
+
+  <span class="o">.................</span>
+  <span class="k">class</span> <span class="nc">Session</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">nodes_sorted</span> <span class="o">=</span> <span class="n">topology_sort</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes_sorted</span><span class="p">:</span>
+      <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Placeholder</span><span class="p">:</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">feed_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+      <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Variable</span> <span class="ow">or</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Constant</span><span class="p">:</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">value</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">input_nodes</span><span class="p">]</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">operation</span><span class="o">.</span><span class="n">output</span></code></pre></figure>
+
+<h3 id="important-function-used-in-andrews-ng-course">Important Function used in Andrews NG Course.</h3>
+<ul>
+  <li>tf.nn.conv2d(X,W, strides = [1,s,s,1], padding = ‘SAME’) – convolution layer</li>
+  <li>tf.nn.max_pool(A, ksize = [1,f,f,1], strides = [1,s,s,1], padding = ‘SAME’) - max pool layer</li>
+  <li>tf.nn.relu(Z) - element wise relu</li>
+  <li>tf.contrib.layers.flatten(P) – flattens the multidimensional into desire dimension</li>
+  <li>tf.contrib.layers.fully_connected(F, num_outputs) – Create fully connected layer from F to num_outputs</li>
+  <li>tf.nn.softmax_cross_entropy_with_logits(logits = Z, labels = Y) –Calculate cost.</li>
+  <li>tf.reduce_mean – Calculate mean of all example cost.</li>
+  <li>Valid vs same pad, same brings add extra padding in case if needed, valid doesn’t consider edge to apply filter. (https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t)</li>
+  <li>
+</ul>
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

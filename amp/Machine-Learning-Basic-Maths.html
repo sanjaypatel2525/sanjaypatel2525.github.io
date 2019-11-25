@@ -162,7 +162,7 @@
 </header>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<p>This blog covers basic mathematics required for Machine learnig. There are many terms which we need to know before we can jump into Machine learning.</p>
+<p>This blog covers basic mathematics required for Machine learning. There are many terms which we need to know before we can jump into Machine learning.</p>
 
 <p>#Statistics in Mathematics
 <strong>Data &amp; Frequency</strong>: <strong>Data</strong> be anything given as input, for ex, let’s say set of alphabets, <strong>frequency</strong> is defined as how many time each alphabets has appeared in the set. Percentage is defined as <script type="math/tex">\frac{frequency}{total\,items\,in\,set}</script></p>
@@ -170,13 +170,13 @@
 <p><strong>Mean or Average or Population Mean</strong> - Is defined as sum of all elements divided by count of the elements. 
 <script type="math/tex">\bar x = \frac{\sum X_i}{n}</script></p>
 
-<p><strong>Sample Mean</strong> - Mean of the sample from whole population. It is represeted by <script type="math/tex">\\\bar x</script>, while population mean is represented by <script type="math/tex">\\\mu</script>.  It is used for symmetric dataset.
-<strong>Median</strong> - Put all the number in ascending order and the element at half distnace is Median. Used for skewed dataset, doesn’t matter if few value are outlier. <br>
+<p><strong>Sample Mean</strong> - Mean of the sample from whole population. It is represented by <script type="math/tex">\\\bar x</script>, while population mean is represented by <script type="math/tex">\\\mu</script>.  It is used for symmetric data set.
+<strong>Median</strong> - Put all the number in ascending order and the element at half distance is Median. Used for skewed dataset, doesn’t matter if few value are outlier. <br>
 For ex:  Median or M or <script type="math/tex">\\\widetilde x</script> of 1,3,4,5,6,7,100,200 would be 5.5. Either middle or mean of middles.</p>
 
-<p><strong>Mode</strong> - Is most frequent number. For example 1,1,1,2,100,101,103,100 is 1. As the 1 has occured maximum number of times.</p>
+<p><strong>Mode</strong> - Is most frequent number. For example 1,1,1,2,100,101,103,100 is 1. As the 1 has occurred maximum number of times.</p>
 
-<p><strong>Quartile</strong> - The set is put in ascending order and devided into 4 quarter of equal width. For ex.
+<p><strong>Quartile</strong> - The set is put in ascending order and divided into 4 quarter of equal width. For ex.
 1,3,4,24,29,101,103  has first quartile as 3.5, second quartile/Median as 24 and third quartile as 115.</p>
 
 <p><strong>Variance</strong> - Measure of being different then other. THere are three variance 1)Population variance 2) Sample variance 3)Alternate formula to calculate variance</p>
@@ -198,7 +198,7 @@ For ex:  Median or M or <script type="math/tex">\\\widetilde x</script> of 1,3,4
 \mathbf{If\,p_1,p_2..p_n\,are\,of\,same\,type}\\
 P_r^n = \frac{n!}{(n-r!)p_1!p_2!..p_n!}\</script></p>
 
-<p>For example, Flip coin 6 times, getting exactly 1 head {HTTTTT,THTTTT,TTHTTT,TTTHTT,TTTTHT,TTTTTH}, Order matters here so permuation henc 6!, but 5T are same so devide by 5!. In case of two heads, Group of two head and group of 4 tail hence, 6!/(4!2!) = 15.</p>
+<p>For example, Flip coin 6 times, getting exactly 1 head {HTTTTT,THTTTT,TTHTTT,TTTHTT,TTTTHT,TTTTTH}, Order matters here so permutation hence 6!, but 5T are same so divide by 5!. In case of two heads, Group of two head and group of 4 tail hence, 6!/(4!2!) = 15.</p>
 
 <p><strong>Combination</strong> is related to permutation, In this the order of number layed out is not important. For ex (1,2) and (2,1) are same. That mean combination is all the permutation deviled by permutation of r. In all the permutation we need to exclude sets which has same set of numbers in any order, let say Set of r can have r! possible permutation and there number of sets so for each set like (12,21) = 2!  = 2, one has to be excluded. Let’ say Set {1,2,3} and need to pick two number.<br>
 <script type="math/tex">\require{cancel} P_2^3 = \frac{3!}{(3-2)!}= 6, \{32,31,23,21,13,12\}\\
@@ -207,13 +207,13 @@ C_r^n = \frac{n!}{(n-r!)r!} = \frac{P_r^n}{r!}\\
 C_r^n\subseteq P_r^n\subseteq n! \subset n^n</script></p>
 
 <p>In case there are multiple groups of same type g<sub>1</sub>,g<sub>2</sub>..g<sub>n</sub> and every we need r<sub>1</sub>,r<sub>2</sub>..r<sub>n</sub> number from each group respectively. The combination would be <script type="math/tex">C_{r_1}^{g_1}\times C_{r_2}^{g_2}\times..C_{r_n}^{g_n},</script><br>
-For example a comity 3 people of 1 man and 2 women from a group 2 men and 3 women has to formed. M1,M2 and W1,W2,W3. Picking them in any order doesn’t matter so here commutaion has to be calculate. 2C1 and 3C2 = 6.</p>
+For example a comity 3 people of 1 man and 2 women from a group 2 men and 3 women has to formed. M1,M2 and W1,W2,W3. Picking them in any order doesn’t matter so here commutation has to be calculate. 2C1 and 3C2 = 6.</p>
 
 <h3 id="probability">Probability</h3>
 <p>Probability is a measure of how likely an event is going to happen from given set of event. For example. {1,2,3,4,6} are equally likely outcome of a dice. Then probability of coming to in a dice roll would be 1 out of 6. Probability of dice showing number 2.
 <script type="math/tex">P(2) = \frac{1}{6},\\ P(x) = \frac{count\,of(event\,x)}{total\,count\,of\,all\,event}\\P(x+y) = \frac{count\,of\,event\,x+y}{count\,of\,all\,events}</script>.</p>
 
-<p><strong>Probability in relation to probability</strong> Lets say A is event of 1 and 4 coming on dice and B is event {1,3,4} coming on dice. Interset of A and B is {1,4}
+<p><strong>Probability in relation to probability</strong> Lets say A is event of 1 and 4 coming on dice and B is event {1,3,4} coming on dice. Intersect of A and B is {1,4}
 <script type="math/tex">P(A) = \frac{2}{6},\;P(B) = \frac{3}{6};\\
 P(AUB) = P(A)+P(B)-P(A\cap B )  = \frac{1}{3}+\frac{1}{2}-\frac{2}{6} = \frac{1}{2}</script></p>
 
@@ -233,7 +233,7 @@ P(B|A) = \frac {P(A\,and\,B)}{P(A)}</script></p>
 X=0 {TTT} - 1, X=1 {HTT, THT, TTH} - 3, X=2 {HHT,HTH,THH} -3, X=3 {HHH} - 1.
 <script type="math/tex">X\,be\,{x_1,x_2,x..}\; then\\P(x_1)+P(x_2)+P(x_3)+... = 1 = \sum_{i=0}^{n}p(x_i)</script></p>
 
-<p><strong>Probability Mass function</strong> - Mass function comes into picture when the values are descrete and probability weight calculate by sum, in contrast to PDF which is intergral.
+<p><strong>Probability Mass function</strong> - Mass function comes into picture when the values are discrete and probability weight calculate by sum, in contrast to PDF which is integral.
 <script type="math/tex">pX(x) ≥ 0\;and\;\sum_x pX(x) = 1</script></p>
 
 <p><strong>Probability Density Function</strong> - In a set of continuos event probability normally measure between two points and the area under two defines the probability density function. The entire area is calculated as one. PDF exist only for continuos variable and the area under two interval is the probability. Let’s say x is random variable and f(x) is the probability of the x variable then.
@@ -241,7 +241,7 @@ X=0 {TTT} - 1, X=1 {HTT, THT, TTH} - 3, X=2 {HHT,HTH,THH} -3, X=3 {HHH} - 1.
 \int_{-\infty}^{+\infty} f(x)dx = 1</script></p>
 <ul>
   <li>Probability of normally distribute function looks like bell shaped and has fixed are under two interval.</li>
-  <li>Conitnous functions are calculated by integral while discrete with summation.
+  <li>Continuos functions are calculated by integral while discrete with summation.
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" width="788" height="553" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" width="788" height="553"></noscript></amp-img>
 </li>
 </ul>
@@ -252,7 +252,7 @@ X=0 {TTT} - 1, X=1 {HTT, THT, TTH} - 3, X=2 {HHT,HTH,THH} -3, X=3 {HHH} - 1.
 <strong>Mean or Expected value over discrete function</strong></p>
 
 <script type="math/tex; mode=display">E(X)=\mu=\sum_{i-1}^nx_ip(x_i)\\
-\mathbf{Continous \, variable}\\
+\mathbf{Continuos \, variable}\\
 E(X)=\mu=\int_{-\infty}^{+\infty}x_if(x)dx\\
 \mathbf{Lotus-Law\,of\,Unconscious\,Statistician}\\
 E(g(x))=\sum_{\infty}g(x)P(X=x)\\
@@ -265,17 +265,17 @@ SD(X)=\sqrt{Var(X)}=\sigma=\sqrt{\sum_{i-1}^n{(x_i-\mu)^2}p(x_i)}=\sqrt{\sum_{i-
 <p><strong>Standard deviation</strong> - How far the numbers are from mean on average, think of population having lot of small numbers and then some big numbers so mean doesn’t in middle but at the one end. In this case mean and standard deviation will be far.
 <strong>Covariance</strong> - Measures tendency of x and y deviate from their mean in same or opposite direction at same time.
 <script type="math/tex">cov(x,y)=  \sum_ip(x_i,y_i)(x_i-\mu_x)(y_i-\mu_x)\\
-\mathbf comapre\,to\,actual\,covariance(not\,in\,probability\,space)\\
+\mathbf compare\,to\,actual\,covariance(not\,in\,probability\,space)\\
 \sum_ip(x_i)=\frac{1}{N-1} \sum_1^n \\
 cov(x,y)=  \frac{1}{N-1}\sum_1^n(x_i-\mu_x)(y_i-\mu_x)</script>
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" width="749" height="231" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" width="749" height="231"></noscript></amp-img>
-<strong>Correlation</strong> - Perason’s correlation coefficient is coveriance normalized by standard deviations of variables.
+<strong>Correlation</strong> - pearson’s correlation coefficient is covariance normalized by standard deviations of variables.
 <script type="math/tex">corr(x,y)=\frac{cov(x,y)}{\sigma_x\sigma_y}</script></p>
 
 <p><strong>Mean or Expected value over continuos function</strong>
 <script type="math/tex">E(X) = \int_{x=a\to b}xp(x)</script></p>
 
-<p><strong>Bayes Theorem</strong> - Let A<sub>1</sub>, A<sub>2</sub>,A<sub>3</sub>..A<sub>n</sub> are sample set out of S where all including form S. Let B is another set from S, since it is part of S it definately form out of parts of A’s. Hence,<br>
+<p><strong>Bayes Theorem</strong> - Let A<sub>1</sub>, A<sub>2</sub>,A<sub>3</sub>..A<sub>n</sub> are sample set out of S where all including form S. Let B is another set from S, since it is part of S it definitely form out of parts of A’s. Hence,<br>
 B = (B ∩ A<sub>1</sub>)U(B ∩ A<sub>1</sub>)..U(B ∩A<sub>n</sub>) and we can write.
 <script type="math/tex">P(A_k|B) = \frac{P(A_k\cap B)}{[P(A_1\cap B)+P(A_2\cap B)+..P(A_n\cap B)]}\\
 Using\;P( A_k \cap B ) = P( A_k )P( B | A_k )\\
@@ -323,7 +323,7 @@ V(X) = E(p^2)-E(p)^2 = p-p^2</script>.</p>
 <p><strong>Hypergeometric Distribution</strong> - Binomial but sample space reduced due to last event, for ex. draw colored ball from bag starting with equal probability, but do not place the ball back which reduces the sample space.<br>
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" width="634" height="284" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" width="634" height="284"></noscript></amp-img></p>
 
-<p><strong>Uniform distribution</strong> - Fair dice role has 6 possible outcome and each has probability of 1/6. Since 1 is total probaility, area = width*height = f(x)(b-a) = 1; f(x) = 1/(b-a)
+<p><strong>Uniform distribution</strong> - Fair dice role has 6 possible outcome and each has probability of 1/6. Since 1 is total probability, area = width*height = f(x)(b-a) = 1; f(x) = 1/(b-a)
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" width="491" height="197" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" width="491" height="197"></noscript></amp-img>
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" width="508" height="184" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" width="508" height="184"></noscript></amp-img>
 <script type="math/tex">\mu= \int_a^bxf(x)dx = \int_a^bx\frac{1}{b-a}dx = \frac{a+b}{2}\\
@@ -350,8 +350,11 @@ E(X)=\mu,\;Var(X)=\sigma^2</script>
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" width="679" height="224" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" width="679" height="224"></noscript></amp-img>
 Normal distribution is not related to pro</p>
 
-<p><strong>Central Limit Theorem</strong>- CLT (center, shape and spread), states even if we take an uneven distribution and take sample from it for n times, find the mean of each sample, start putting mean in buckets, the graph formed due to this filling will be more like normal distribution.<strong>Mean of sample means</strong> distribution will depict mean of populatiom.<strong>Stanadard Error</strong> of population will be standard deviation of distribution sample means.
+<p><strong>Central Limit Theorem</strong>- CLT (center, shape and spread), states even if we take an uneven distribution and take sample from it for n times, find the mean of each sample, start putting mean in buckets, the graph formed due to this filling will be more like normal distribution.<strong>Mean of sample means</strong> distribution will depict mean of population.<strong>Standard Error</strong> of population will be standard deviation of distribution sample means.
 <script type="math/tex">SE = \frac{\sigma}{\sqrt{N}}</script></p>
+
+<p><strong>Confidence Interval</strong> - In statistics confidence level defined by confident intervals. How confident are wo on our intervals. Let’s say population sleeps for 6-10 hours is 95% confidence.<br>
+The confidence level, tells us how confident we are, that this particular interval captures the true population mean. We never deal with full population we go by multiple samples of population and with that we define population mean by calculating distribution of samples means.</p>
 
 <p><strong>Exponential Distribution</strong> - It is mix of poisson where we have rate, like calls per minute and geometric where we are interested in wait time of next call or how many failure before next success. <strong>Weibull</strong> is counterpart of exponential, time to failure. Ex. Machine failure time when we know rate.
 <amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" width="633" height="277" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" width="633" height="277"></noscript></amp-img>
@@ -394,11 +397,11 @@ f'(x)=h'(x).g'(x)= 3(x^2)^2.2x=6x^5</script></p>
 <script type="math/tex">f(x,y,z)=2z^3x^2y^7\\
 \nabla f(x,y,x)=\begin{bmatrix}\frac{df}{dx}\\\frac{df}{dy}\\\frac{df}{dz}\end{bmatrix}=\begin{bmatrix}4z^3xy^7\\14z^3x^2y^6\\6z^2x^2y^7\end{bmatrix}</script></p>
 
-<p><strong>Direction Derivative</strong> - While trying for minimum maximum by variating a single variable and keeping others constant we can also apply directional derivative in order tocheck what would happen if take a small nudhe to our current slope, what if in place of north go south. 
+<p><strong>Direction Derivative</strong> - While trying for minimum maximum by variating a single variable and keeping others constant we can also apply directional derivative in order to check what would happen if take a small nudge to our current slope, what if in place of north go south. 
 <script type="math/tex">\vec v.\nabla f(x,y,x)=\begin{bmatrix}2\\3\\-1\end{bmatrix}.\begin{bmatrix}\frac{df}{dx}\\\frac{df}{dy}\\\frac{df}{dz}\end{bmatrix}</script></p>
 
 <ul>
-  <li>Gradient always points to the direction of greatest increasae or decrease of a function.</li>
+  <li>Gradient always points to the direction of greatest increase or decrease of a function.</li>
   <li>Gradient reaches to zero in case of maxima and minima.</li>
 </ul>
 
@@ -440,11 +443,11 @@ A = \begin{bmatrix}a\\b\end{bmatrix}, B = \begin{bmatrix}c&d\end{bmatrix}\\
 A.B = ac+bd\\
 \vec a.\vec b = |a||b|cos\theta,\; theta\,is\,angle\,between\,\vec a\; \vec b %]]></script></p>
 
-<p><strong>Projection</strong> - <script type="math/tex">\vec b</script> can make projectopn over <script type="math/tex">\vec a</script> it is the base of the triangle formed by a and b. 
+<p><strong>Projection</strong> - <script type="math/tex">\vec b</script> can make projection over <script type="math/tex">\vec a</script> it is the base of the triangle formed by a and b. 
 <script type="math/tex">proj_ab=\frac{\vec a\vec b}{|\vec a|^2}\vec a</script></p>
 
 <h3 id="matrix">Matrix</h3>
-<p>Matrix is rectangular grid to store different variable or scaler numbers. You can visualize it as 2D array. Addition and substraction on mattrix over scaller values applies to all the elements and if it is added or substracted by another matrix then each element will be added or substracted on each element of other matrix. Multiplication follows the same concept as Dot product and devision is not straight forward it is calculate by multiplying with inverse of the matrix. Division is only possible if divident determinant is non-zero and is a sqaure matrix. 
+<p>Matrix is rectangular grid to store different variable or scaler numbers. You can visualize it as 2D array. Addition and subtraction on matrix over scaler values applies to all the elements and if it is added or subtracted by another matrix then each element will be added or subtracted on each element of other matrix. Multiplication follows the same concept as Dot product and division is not straight forward it is calculate by multiplying with inverse of the matrix. Division is only possible if dividend determinant is non-zero and is a square matrix. 
 <script type="math/tex">% <![CDATA[
 \begin{bmatrix}a&b\\c&d\end{bmatrix}\pm1=\begin{bmatrix}a\pm1&b\pm1\\c\pm1&d\pm1\end{bmatrix}\\
 \begin{bmatrix}a&b\\c&d\end{bmatrix}\times\div1=\begin{bmatrix}a\times\div1&b\times\div1\\c\times\div1&d\times\div1\end{bmatrix}\\

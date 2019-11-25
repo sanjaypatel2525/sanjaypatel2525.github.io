@@ -190,13 +190,13 @@ For example, AffirmativeBased implementation run all the AccessDecisionVoter and
 <p>In case you need to access the User the logged in user object.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"> 
 <span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/foo"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">foo</span><span class="o">(</span><span class="nd">@AuthenticationPrincipal</span> <span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">foo</span><span class="o">(</span><span class="nd">@AuthenticationPrincipal</span> <span class="nc">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
   <span class="o">...</span> <span class="c1">// do stuff with user</span>
 <span class="o">}</span>
 <span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/foo"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">foo</span><span class="o">(</span><span class="n">Principal</span> <span class="n">principal</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">Authentication</span> <span class="n">authentication</span> <span class="o">=</span> <span class="o">(</span><span class="n">Authentication</span><span class="o">)</span> <span class="n">principal</span><span class="o">;</span>
-  <span class="n">User</span> <span class="o">=</span> <span class="o">(</span><span class="n">User</span><span class="o">)</span> <span class="n">authentication</span><span class="o">.</span><span class="na">getPrincipal</span><span class="o">();</span>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">foo</span><span class="o">(</span><span class="nc">Principal</span> <span class="n">principal</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">Authentication</span> <span class="n">authentication</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Authentication</span><span class="o">)</span> <span class="n">principal</span><span class="o">;</span>
+  <span class="nc">User</span> <span class="o">=</span> <span class="o">(</span><span class="nc">User</span><span class="o">)</span> <span class="n">authentication</span><span class="o">.</span><span class="na">getPrincipal</span><span class="o">();</span>
   <span class="o">...</span> <span class="c1">// do stuff with user</span>
 <span class="o">}</span></code></pre></figure>
 

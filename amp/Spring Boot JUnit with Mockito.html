@@ -187,7 +187,7 @@
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeDao</span> <span class="o">{</span>
     <span class="o">...</span>
-	<span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getEmployee</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
         <span class="o">....</span>
 	<span class="o">}</span>
 <span class="o">}</span>
@@ -197,10 +197,10 @@
 <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">xyz</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeBOImpl</span> <span class="o">{</span>
-    <span class="nd">@Autowire</span> <span class="kd">public</span> <span class="n">EmployeeDao</span> <span class="n">employeeDao</span><span class="o">;</span>
+    <span class="nd">@Autowire</span> <span class="kd">public</span> <span class="nc">EmployeeDao</span> <span class="n">employeeDao</span><span class="o">;</span>
     <span class="o">...</span>
 	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isManager</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeDao</span><span class="o">.</span><span class="na">getEmployee</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+        <span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeDao</span><span class="o">.</span><span class="na">getEmployee</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
         <span class="k">return</span> <span class="n">emp</span><span class="o">.</span><span class="na">getRole</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"MANAGER"</span><span class="o">);</span>
 	<span class="o">}</span>
 <span class="o">}</span>
@@ -208,7 +208,7 @@
 <span class="o">....</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeBOImplTest</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="n">EmployeeBOImpl</span> <span class="n">employeeBOImpl</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">EmployeeBOImpl</span> <span class="n">employeeBOImpl</span><span class="o">;</span>
 
     <span class="o">...</span>
     <span class="nd">@Before</span>
@@ -227,20 +227,20 @@
     <span class="c1">//this method will fails with null pointer exception as employeeDao is not defined for this object.</span>
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">testEmployeeBad</span><span class="o">(){</span>
-        <span class="n">employeeBOImpl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EmployeeBOImpl</span><span class="o">();</span>
+        <span class="n">employeeBOImpl</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmployeeBOImpl</span><span class="o">();</span>
         <span class="n">assertTrue</span><span class="o">(</span><span class="n">employeeBOImpl</span><span class="o">.</span><span class="na">isManager</span><span class="o">());</span> 
     <span class="o">}</span>
 
     <span class="c1">//Use mockito to mock employeeDao</span>
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">testEmployeeGood</span><span class="o">(){</span>
-        <span class="n">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Employee</span><span class="o">();</span>
+        <span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">();</span>
         <span class="n">emp</span><span class="o">.</span><span class="na">setRole</span><span class="o">(</span><span class="s">"MANAGER"</span><span class="o">);</span>
         
-        <span class="n">EmployeeDao</span> <span class="n">employeeDao</span> <span class="o">=</span> <span class="n">mock</span><span class="o">(</span><span class="n">EmployeeDao</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="nc">EmployeeDao</span> <span class="n">employeeDao</span> <span class="o">=</span> <span class="n">mock</span><span class="o">(</span><span class="nc">EmployeeDao</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 		<span class="n">when</span><span class="o">(</span><span class="n">employeeDao</span><span class="o">.</span><span class="na">getEmployee</span><span class="o">(</span><span class="n">anyInt</span><span class="o">())).</span><span class="na">thenReturn</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
 
-        <span class="n">employeeBOImpl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EmployeeBOImpl</span><span class="o">();</span>
+        <span class="n">employeeBOImpl</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmployeeBOImpl</span><span class="o">();</span>
         <span class="n">assertTrue</span><span class="o">(</span><span class="n">employeeBOImpl</span><span class="o">.</span><span class="na">isManager</span><span class="o">());</span> 
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
@@ -259,9 +259,9 @@
     <p>Mockito provide a utility a object which keeps an eye on the target object. It tracks the interactions on target object.</p>
   </li>
 </ul>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">spy</span><span class="o">(</span><span class="k">new</span> <span class="n">Employee</span><span class="o">());</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">spy</span><span class="o">(</span><span class="k">new</span> <span class="nc">Employee</span><span class="o">());</span>
 <span class="n">emp</span><span class="o">.</span><span class="na">setRole</span><span class="o">(</span><span class="s">"MANAGER"</span><span class="o">);</span>  <span class="c1">// the real setRole method is called. </span>
-<span class="n">Mockito</span><span class="o">.</span><span class="na">verify</span><span class="o">(</span><span class="n">emp</span><span class="o">).</span><span class="na">setRole</span><span class="o">(</span><span class="s">"MANAGER"</span><span class="o">)</span>  <span class="c1">// It return true, as setRole was already called on this object.</span>
+<span class="nc">Mockito</span><span class="o">.</span><span class="na">verify</span><span class="o">(</span><span class="n">emp</span><span class="o">).</span><span class="na">setRole</span><span class="o">(</span><span class="s">"MANAGER"</span><span class="o">)</span>  <span class="c1">// It return true, as setRole was already called on this object.</span>
 <span class="n">when</span><span class="o">(</span><span class="n">emp</span><span class="o">.</span><span class="na">getRole</span><span class="o">()).</span><span class="na">thenReturn</span><span class="o">(</span><span class="s">"MANAGER"</span><span class="o">);</span> <span class="c1">// real method will called here and can throw exception. so use doReturn in place.  </span></code></pre></figure>
 <h3 id="call-real-object">Call real object</h3>
 <p>In a class you can mock all the methods, but in case you want to call a real method on the class. 
@@ -276,8 +276,8 @@ EmployeeDao employeeDao = spy(new EmployeeDao()));  //creates new actual object 
 
 <h3 id="argumentmatcher">ArgumentMatcher</h3>
 <p>You might have seen <em>anyInt(), anyString()</em> passed in argument of method when using ‘when’ or doReturn feature of mockito. These are ArgumentMatcher, you don’t need to pass actual values but can match with a argument type or so. For custom class you can use <em>any(CustomClass.class)</em>. There is option to create customer matcher as well.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomMatcher</span> <span class="kd">implements</span> <span class="n">ArgumentMatcher</span><span class="o">&lt;</span><span class="n">CustomClass</span><span class="o">&gt;</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">CustomClass</span> <span class="n">customClass</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomMatcher</span> <span class="kd">implements</span> <span class="nc">ArgumentMatcher</span><span class="o">&lt;</span><span class="nc">CustomClass</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">CustomClass</span> <span class="n">customClass</span><span class="o">;</span>
     <span class="c1">// constructors</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">matches</span><span class="o">(</span><span class="n">customClass</span> <span class="n">customClass</span><span class="o">)</span> <span class="o">{</span>

@@ -186,25 +186,25 @@
    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">allMethodsInPackage</span><span class="o">(){}</span>
 
    <span class="nd">@Before</span><span class="o">(</span><span class="s">"allMethodsInPackage()"</span><span class="o">)</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeAdvice</span><span class="o">(</span><span class="n">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
-     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method called is : "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Going to setup student profile."</span><span class="o">);</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeAdvice</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method called is : "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Going to setup student profile."</span><span class="o">);</span>
    <span class="o">}</span>  
 
     <span class="nd">@AfterReturning</span><span class="o">(</span>
     <span class="n">pointcut</span> <span class="o">=</span> <span class="s">"execution(* com.xyz.bo.EmployeeBO.*(..))"</span><span class="o">,</span>
     <span class="n">returning</span><span class="o">=</span> <span class="s">"result"</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterReturningAdvice</span><span class="o">(</span><span class="n">JoinPoint</span> <span class="n">joinPoint</span><span class="o">,</span> <span class="n">Object</span> <span class="n">result</span><span class="o">){</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method called is : "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Employee id : "</span> <span class="o">+</span> <span class="o">((</span><span class="n">Employee</span><span class="o">)</span><span class="n">result</span><span class="o">.</span><span class="na">getEmployeeId</span><span class="o">());</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterReturningAdvice</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">,</span> <span class="nc">Object</span> <span class="n">result</span><span class="o">){</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method called is : "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Employee id : "</span> <span class="o">+</span> <span class="o">((</span><span class="nc">Employee</span><span class="o">)</span><span class="n">result</span><span class="o">.</span><span class="na">getEmployeeId</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="nd">@AfterThrowing</span><span class="o">(</span>
     <span class="n">pointcut</span> <span class="o">=</span> <span class="s">"execution(* com.xyz.bo.EmployeeBO.*(..))"</span><span class="o">,</span>
     <span class="n">throwing</span><span class="o">=</span> <span class="s">"error"</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterThrowingAdvice</span><span class="o">(</span><span class="n">JoinPoint</span> <span class="n">joinPoint</span><span class="o">,</span> <span class="n">Throwable</span> <span class="n">error</span><span class="o">){</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method called is : "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Erros is : "</span> <span class="o">+</span> <span class="n">error</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterThrowingAdvice</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">,</span> <span class="nc">Throwable</span> <span class="n">error</span><span class="o">){</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Method called is : "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Erros is : "</span> <span class="o">+</span> <span class="n">error</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="o">...</span>
@@ -217,16 +217,16 @@
 <h3 id="enabling-spring-aop">Enabling Spring AOP.</h3>
 <p>It usage the proxy “org.springframework.aop.framework.ProxyFactoryBean” to proxy our objects and helps to inject the custom methods.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProxyFactoryBean</span><span class="o">{</span>  
-  <span class="kd">private</span> <span class="n">Object</span> <span class="n">target</span><span class="o">;</span>  
-  <span class="kd">private</span> <span class="n">List</span> <span class="n">interceptorNames</span><span class="o">;</span>  
+  <span class="kd">private</span> <span class="nc">Object</span> <span class="n">target</span><span class="o">;</span>  
+  <span class="kd">private</span> <span class="nc">List</span> <span class="n">interceptorNames</span><span class="o">;</span>  
 <span class="o">...</span>
 <span class="o">}</span>  
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BeforeAdvisor</span> <span class="kd">implements</span> <span class="n">MethodBeforeAdvice</span><span class="o">{</span>  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BeforeAdvisor</span> <span class="kd">implements</span> <span class="nc">MethodBeforeAdvice</span><span class="o">{</span>  
     <span class="nd">@Override</span>  
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">before</span><span class="o">(</span><span class="n">Method</span> <span class="n">method</span><span class="o">,</span> <span class="n">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">,</span> <span class="n">Object</span> <span class="n">target</span><span class="o">)</span><span class="kd">throws</span> <span class="n">Throwable</span> <span class="o">{</span>  
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"method info:"</span><span class="o">+</span><span class="n">method</span><span class="o">.</span><span class="na">getName</span><span class="o">()+</span><span class="s">" "</span><span class="o">+</span><span class="n">method</span><span class="o">.</span><span class="na">getModifiers</span><span class="o">());</span>  
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"target object class name: "</span><span class="o">+</span><span class="n">target</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>  
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">before</span><span class="o">(</span><span class="nc">Method</span> <span class="n">method</span><span class="o">,</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">,</span> <span class="nc">Object</span> <span class="n">target</span><span class="o">)</span><span class="kd">throws</span> <span class="nc">Throwable</span> <span class="o">{</span>  
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"method info:"</span><span class="o">+</span><span class="n">method</span><span class="o">.</span><span class="na">getName</span><span class="o">()+</span><span class="s">" "</span><span class="o">+</span><span class="n">method</span><span class="o">.</span><span class="na">getModifiers</span><span class="o">());</span>  
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"target object class name: "</span><span class="o">+</span><span class="n">target</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>  
     <span class="o">}</span>  
     <span class="o">...</span>
 <span class="o">}</span>  </code></pre></figure>

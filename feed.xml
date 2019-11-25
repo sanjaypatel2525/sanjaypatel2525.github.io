@@ -5,16 +5,32 @@
     <description>Technical blogs.</description>
     <link>https://abyte.stream/</link>
     <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Aug 2019 15:19:03 -0400</pubDate>
-    <lastBuildDate>Mon, 19 Aug 2019 15:19:03 -0400</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Mon, 25 Nov 2019 15:15:38 -0500</pubDate>
+    <lastBuildDate>Mon, 25 Nov 2019 15:15:38 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Machine Learning Linear Algebra</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;h1 id=&quot;linear-algebra&quot;&gt;Linear Algebra&lt;/h1&gt; &lt;h2 id=&quot;vector&quot;&gt;Vector&lt;/h2&gt; &lt;p&gt;Vector is a list, but each item in list defines a different axis. For ex in 2D plain, [x,y] there are two axis x and y. Talking about living being, eyes, nose, ….legs . There are many attribute/dimension. human has 2 legs but cow has 4 in leg axis. &lt;strong&gt;Vector has magnitude and direction&lt;/strong&gt; - If we take only 1 vector a time, i. We can define magnitude by number. But the direction is always relative so the direction will only be shown when there is another vector. Such 3i+4j. 3 x...</description>
+        <pubDate>Sat, 15 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine_Learnig_Linear-Algebra/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine_Learnig_Linear-Algebra/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
     
       <item>
         <title>Machine Learning Basic Maths</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This blog covers basic mathematics required for Machine learnig. There are many terms which we need to know before we can jump into Machine learning.&lt;/p&gt; &lt;p&gt;#Statistics in Mathematics &lt;strong&gt;Data &amp;amp; Frequency&lt;/strong&gt;: &lt;strong&gt;Data&lt;/strong&gt; be anything given as input, for ex, let’s say set of alphabets, &lt;strong&gt;frequency&lt;/strong&gt; is defined as how many time each alphabets has appeared in the set. Percentage is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{frequency}{total\,items\,in\,set}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Mean or Average or Population Mean&lt;/strong&gt; - Is defined as sum of all elements divided by count of the elements. &lt;script type=&quot;math/tex&quot;&gt;\bar x = \frac{\sum X_i}{n}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Sample Mean&lt;/strong&gt; - Mean of the sample...</description>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This blog covers basic mathematics required for Machine learning. There are many terms which we need to know before we can jump into Machine learning.&lt;/p&gt; &lt;p&gt;#Statistics in Mathematics &lt;strong&gt;Data &amp;amp; Frequency&lt;/strong&gt;: &lt;strong&gt;Data&lt;/strong&gt; be anything given as input, for ex, let’s say set of alphabets, &lt;strong&gt;frequency&lt;/strong&gt; is defined as how many time each alphabets has appeared in the set. Percentage is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{frequency}{total\,items\,in\,set}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Mean or Average or Population Mean&lt;/strong&gt; - Is defined as sum of all elements divided by count of the elements. &lt;script type=&quot;math/tex&quot;&gt;\bar x = \frac{\sum X_i}{n}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Sample Mean&lt;/strong&gt; - Mean of the sample...</description>
         <pubDate>Sat, 15 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/Machine-Learning-Basic-Maths/</link>
         <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Basic-Maths/</guid>
+        
+        <category>Machine Learning</category>
         
         
         <category>Machine Learning Notes</category>
@@ -34,11 +50,55 @@
       </item>
     
       <item>
+        <title>Machine Learning Python Libraries</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This is not a extensive detailed guide for machine learning libraries. It is a small extract of common feature of these libraries and there usage.&lt;/p&gt; &lt;p&gt;There are many Python packages used in ML, but here are some important ones.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;NumPy - Everything related to Maths, formulas, series, multidimensional arrays and operations etc.&lt;/li&gt; &lt;li&gt;SciPy - For statistical analysis, extension of Numpy&lt;/li&gt; &lt;li&gt;Pandas - Dealing with data reading/writing/manipulation from/to CSV,database,excel etc, cleaning, filtering.&lt;/li&gt; &lt;li&gt;Seaborn - For data visualization&lt;/li&gt; &lt;li&gt;Matplotlib - For data visualization, Seaborn is extension over Matplotlib.&lt;/li&gt; &lt;li&gt;Scikit-learn - Provides ready to use ML algorithms, based on...</description>
+        <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-Python-Libraries/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Python-Libraries/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning with Python</title>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation. Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.&lt;/p&gt; &lt;p&gt;Popular machine learning techniques classification, regression, recommendation and clustering.&lt;/p&gt; &lt;p&gt;Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.&lt;/p&gt; &lt;p&gt;Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.&lt;/p&gt; &lt;p&gt;Programming which learns and improves with experience. Learning means recognizing and understanding the data...</description>
+        <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-with-Python/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-with-Python/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
         <title>Machine Learning Neural Network.</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Neural network set of network with input, hidden and output neurons/nodes. Each neuron is &lt;strong&gt;activation function&lt;/strong&gt; (for ex gradient descend) and each synapse/link have some weights. Every node maintains error metric and coefficient are adjusted to lower the error metric using back propagation. &lt;strong&gt;Bias&lt;/strong&gt; are some constant values at neuron.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Ok all above is fine but why?&lt;/strong&gt;&lt;br /&gt; &lt;img src=&quot;/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG&quot; alt=&quot;&quot; /&gt; Let think of example, what number is there in below image. It is blurred not accurate but it is 2. Every human handwriting will create different image of 2 probably but human understand it is...</description>
         <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/Machine-Learning-Neural-Network/</link>
         <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Neural-Network/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning with Tensor Flow.</title>
+        <description>&lt;p&gt;TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit lear to one liner ML models. &lt;img src=&quot;/assets/2019-08-21-Machine-Learning-TensorFlow1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;tf-estimator&quot;&gt;TF estimator&lt;/h3&gt; &lt;p&gt;It is library which hold all high level ML algorithm for ex.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;TF Logging&lt;/strong&gt; - It has four logging options,DEBUG,INFO ,WARNING, ERROR. tf.logging.set_verbosity(tf.logging.ERROR)&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Tensors&lt;/strong&gt; : One number, vector, matrix etc are are form of tensor. Increase in dimension results are stored in tensors. How would you store 10 matrix. You will think array of matrix, and that variable is called tensor.&lt;/p&gt; &lt;p&gt;Tensor flow formally gives two...</description>
+        <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.stream/Machine-Learning-TensorFlow/</link>
+        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-TensorFlow/</guid>
+        
+        <category>Machine Learning</category>
         
         
         <category>Machine Learning Notes</category>
@@ -54,18 +114,6 @@
         
         
         <category>Spring</category>
-        
-      </item>
-    
-      <item>
-        <title>Machine Learning Python Libraries</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This is not a extensive detailed guide for machine learning libraries. It is a small extract of common feature of these libraries and there usage.&lt;/p&gt; &lt;p&gt;There are many Python packages used in ML, but here are some important ones.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;NumPy - Everything related to Maths, formulas, series, multidimensional arrays and operations etc.&lt;/li&gt; &lt;li&gt;SciPy - For statistical analysis, extension of Numpy&lt;/li&gt; &lt;li&gt;Pandas - Dealing with data reading/writing/manipulation from/to CSV,database,excel etc, cleaning, filtering.&lt;/li&gt; &lt;li&gt;Seaborn - For data visualization&lt;/li&gt; &lt;li&gt;Matplotlib - For data visualization, Seaborn is extension over Matplotlib.&lt;/li&gt; &lt;li&gt;Scikit-learn - Provides ready to use ML algorithms, based on...</description>
-        <pubDate>Wed, 12 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-Python-Libraries/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Python-Libraries/</guid>
-        
-        
-        <category>Machine Learning Notes</category>
         
       </item>
     
@@ -106,18 +154,6 @@
         <link>https://abyte.stream/REST-in-Java-world/</link>
         <guid isPermaLink="true">https://abyte.stream/REST-in-Java-world/</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Machine Learning with Python</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation. Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.&lt;/p&gt; &lt;p&gt;Popular machine learning techniques classification, regression, recommendation and clustering.&lt;/p&gt; &lt;p&gt;Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.&lt;/p&gt; &lt;p&gt;Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.&lt;/p&gt; &lt;p&gt;Programming which learns and improves with experience. Learning means recognizing and understanding the data...</description>
-        <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-with-Python/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-with-Python/</guid>
-        
-        
-        <category>Machine Learning Notes</category>
         
       </item>
     
@@ -253,7 +289,7 @@
     
       <item>
         <title>Spring Java Based Configuration.</title>
-        <description>&lt;p&gt;Spring provides two types of configuration, XML based which came in market first and then Java based. Since we already know what are the basics behind Spring configuration, anything and everything is bean. So how does spring supports that.&lt;/p&gt; &lt;p&gt;Let’s see some code first.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeServiceImpl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span...</description>
+        <description>&lt;p&gt;Spring provides two types of configuration, XML based which came in market first and then Java based. Since we already know what are the basics behind Spring configuration, anything and everything is bean. So how does spring supports that.&lt;/p&gt; &lt;p&gt;Let’s see some code first.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeServiceImpl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/Spring-Java-Based-Configuration/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-Java-Based-Configuration/</guid>
@@ -289,7 +325,7 @@
     
       <item>
         <title>Spring Containers.</title>
-        <description>&lt;p&gt;Spring IoC container is heart of the spring framework. It is container to hold the spring objects and maintenance the spring objects lifecycle.&lt;/p&gt; &lt;p&gt;Spring provide two different type if containers.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bean Factory Container&lt;/li&gt; &lt;li&gt;ApplicationContext Container&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;beanfactory-container&quot;&gt;BeanFactory Container&lt;/h1&gt; &lt;p&gt;Here is how to create a bean and use it in java class.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;beans.xml&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeanFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XmlBeanFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span...</description>
+        <description>&lt;p&gt;Spring IoC container is heart of the spring framework. It is container to hold the spring objects and maintenance the spring objects lifecycle.&lt;/p&gt; &lt;p&gt;Spring provide two different type if containers.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bean Factory Container&lt;/li&gt; &lt;li&gt;ApplicationContext Container&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;beanfactory-container&quot;&gt;BeanFactory Container&lt;/h1&gt; &lt;p&gt;Here is how to create a bean and use it in java class.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;beans.xml&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BeanFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;XmlBeanFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.stream/Spring-IoC/</link>
         <guid isPermaLink="true">https://abyte.stream/Spring-IoC/</guid>
@@ -323,7 +359,7 @@
     
       <item>
         <title>Java Consumer and Supplier Interfaces</title>
-        <description>&lt;p&gt;In continuation of our discussion on &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;functional interfaces&lt;/a&gt;, Java 8 has provided many single method interfaces. Based on the abstract method’s signature Java has given them different names such as Consumer, Supplier, Function, BiFuction, Predicate etc. In this blog, we are going to discuss on Java Consumer and Supplier Interfaces.&lt;/p&gt; &lt;h2 id=&quot;1-consumer-functionalinterface&quot;&gt;1. Consumer functional interface.&lt;/h2&gt; &lt;p&gt;Consumer functional interface is an interface having only one abstract method that accepts a single parameter and returns nothing. Here is how the interface looks like.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;...</description>
+        <description>&lt;p&gt;In continuation of our discussion on &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;functional interfaces&lt;/a&gt;, Java 8 has provided many single method interfaces. Based on the abstract method’s signature Java has given them different names such as Consumer, Supplier, Function, BiFuction, Predicate etc. In this blog, we are going to discuss on Java Consumer and Supplier Interfaces.&lt;/p&gt; &lt;h2 id=&quot;1-consumer-functionalinterface&quot;&gt;1. Consumer functional interface.&lt;/h2&gt; &lt;p&gt;Consumer functional interface is an interface having only one abstract method that accepts a single parameter and returns nothing. Here is how the interface looks like.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;...</description>
         <pubDate>Sun, 23 Sep 2018 06:32:49 -0400</pubDate>
         <link>https://abyte.stream/java-consumer-and-supplier-interfaces/</link>
         <guid isPermaLink="true">https://abyte.stream/java-consumer-and-supplier-interfaces/</guid>
@@ -334,32 +370,6 @@
         
         
         <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>Java Function Interface is the Java Functional interface</title>
-        <description>&lt;p&gt;In this blog, we will be discussing Java functional interfaces and one specific interface Function interface. In the end, we will see, Java Function Interface is the Java Functional interface.&lt;/p&gt; &lt;h2 id=&quot;1-what-is-java-functional-interface&quot;&gt;1. What is Java functional Interface?&lt;/h2&gt; &lt;p&gt;The interface which has only one abstract method is called Java Functional interface. Why they are so important because they are small simple and moreover everywhere in Java 8 Stream API. Java functional interfaces are annotated with @FunctionalInterface. Which enforces the programmer to keep only one method for that interface and throws the compilation error.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Country&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span...</description>
-        <pubDate>Sun, 23 Sep 2018 03:35:45 -0400</pubDate>
-        <link>https://abyte.stream/java-function-interface-is-the-java-functional-interface/</link>
-        <guid isPermaLink="true">https://abyte.stream/java-function-interface-is-the-java-functional-interface/</guid>
-        
-        <category>Java</category>
-        
-        <category>Java8</category>
-        
-        
-        <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>Understanding Java Predicate Interface</title>
-        <description>&lt;p&gt;Java 8 Streams API is very robust and feature-rich API. It provides multiple ways to write beautiful and fewer lines of code. In that series, there is an interface Predicate Interface. Let’s start understanding Java Predicate Interface.&lt;/p&gt; &lt;h2 id=&quot;1-what-is-java-8-predicate-and-understanding-java-predicate-interface&quot;&gt;1. What is Java 8 Predicate and Understanding Java Predicate Interface.&lt;/h2&gt; &lt;p&gt;Java 8 Predicate Interface is a functional interface, By functional interface you know it will have only one abstract method and the programmer writes the body for that one abstract method as part of &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;Lambda expression&lt;/a&gt;. Predicate is a type of functional interface which takes a parameter and return a boolean result. Let’s look...</description>
-        <pubDate>Sun, 23 Sep 2018 02:28:16 -0400</pubDate>
-        <link>https://abyte.stream/understanding-java-predicate-interface/</link>
-        <guid isPermaLink="true">https://abyte.stream/understanding-java-predicate-interface/</guid>
-        
         
       </item>
     

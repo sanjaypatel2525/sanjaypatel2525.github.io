@@ -238,11 +238,11 @@
 <h3 id="create-configuration-class">Create configuration class.</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
 <span class="nd">@EnableWebSecurity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BasicConfiguration</span> <span class="kd">extends</span> <span class="n">WebSecurityConfigurerAdapter</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BasicConfiguration</span> <span class="kd">extends</span> <span class="nc">WebSecurityConfigurerAdapter</span> <span class="o">{</span>
  
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="n">AuthenticationManagerBuilder</span> <span class="n">auth</span><span class="o">)</span>
-      <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="nc">AuthenticationManagerBuilder</span> <span class="n">auth</span><span class="o">)</span>
+      <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
         <span class="n">auth</span>
           <span class="o">.</span><span class="na">inMemoryAuthentication</span><span class="o">()</span>
           <span class="o">.</span><span class="na">withUser</span><span class="o">(</span><span class="s">"user1"</span><span class="o">)</span>
@@ -255,7 +255,7 @@
     <span class="o">}</span>
  
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="n">HttpSecurity</span> <span class="n">http</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="nc">HttpSecurity</span> <span class="n">http</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
         <span class="n">http</span>
           <span class="o">.</span><span class="na">authorizeRequests</span><span class="o">()</span>
           <span class="o">.</span><span class="na">anyRequest</span><span class="o">()</span>
@@ -275,16 +275,16 @@
 
 <h3 id="here-is-example-of-jdbcauthentication">Here is example of jdbcAuthentication.</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebMvcConfig</span> <span class="kd">implements</span> <span class="n">WebMvcConfigurer</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebMvcConfig</span> <span class="kd">implements</span> <span class="nc">WebMvcConfigurer</span> <span class="o">{</span>
     <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">BCryptPasswordEncoder</span> <span class="n">bCryptPasswordEncoder</span><span class="o">;</span> <span class="c1">//Passwordencoder</span>
+    <span class="kd">private</span> <span class="nc">BCryptPasswordEncoder</span> <span class="n">bCryptPasswordEncoder</span><span class="o">;</span> <span class="c1">//Passwordencoder</span>
 
     <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">DataSource</span> <span class="n">dataSource</span><span class="o">;</span> <span class="c1">//Datasource you need configure using property files.</span>
+    <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span> <span class="c1">//Datasource you need configure using property files.</span>
     <span class="nd">@Override</span>
 
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="n">AuthenticationManagerBuilder</span> <span class="n">auth</span><span class="o">)</span>
-          <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="nc">AuthenticationManagerBuilder</span> <span class="n">auth</span><span class="o">)</span>
+          <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
       <span class="n">auth</span><span class="o">.</span>
               <span class="nf">jdbcAuthentication</span><span class="o">()</span>
               <span class="o">.</span><span class="na">usersByUsernameQuery</span><span class="o">(</span><span class="s">"select email, password, active from user where email=?"</span><span class="o">)</span>
@@ -297,23 +297,23 @@
 
 <h3 id="here-is-example-of-daoauthenticationprovideruserdetailservice">Here is example of DaoAuthenticationProvider/UserDetailService.</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebMvcConfig</span> <span class="kd">implements</span> <span class="n">WebMvcConfigurer</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebMvcConfig</span> <span class="kd">implements</span> <span class="nc">WebMvcConfigurer</span> <span class="o">{</span>
 
     <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">BCryptPasswordEncoder</span> <span class="n">bCryptPasswordEncoder</span><span class="o">;</span> <span class="c1">//Passwordencoder</span>
+    <span class="kd">private</span> <span class="nc">BCryptPasswordEncoder</span> <span class="n">bCryptPasswordEncoder</span><span class="o">;</span> <span class="c1">//Passwordencoder</span>
     <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">CustomUserDetailsService</span> <span class="n">userDetailsService</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">CustomUserDetailsService</span> <span class="n">userDetailsService</span><span class="o">;</span>
     
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="n">AuthenticationManagerBuilder</span> <span class="n">auth</span><span class="o">)</span>
-      <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="nc">AuthenticationManagerBuilder</span> <span class="n">auth</span><span class="o">)</span>
+      <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
         <span class="n">auth</span><span class="o">.</span><span class="na">authenticationProvider</span><span class="o">(</span><span class="n">authenticationProvider</span><span class="o">());</span>
     <span class="o">}</span>
     
     <span class="nd">@Bean</span>
-    <span class="kd">public</span> <span class="n">DaoAuthenticationProvider</span> <span class="nf">authenticationProvider</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">DaoAuthenticationProvider</span> <span class="n">authProvider</span>
-          <span class="o">=</span> <span class="k">new</span> <span class="n">DaoAuthenticationProvider</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="nc">DaoAuthenticationProvider</span> <span class="nf">authenticationProvider</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">DaoAuthenticationProvider</span> <span class="n">authProvider</span>
+          <span class="o">=</span> <span class="k">new</span> <span class="nc">DaoAuthenticationProvider</span><span class="o">();</span>
         <span class="n">authProvider</span><span class="o">.</span><span class="na">setUserDetailsService</span><span class="o">(</span><span class="n">userDetailsService</span><span class="o">);</span>
         <span class="n">authProvider</span><span class="o">.</span><span class="na">setPasswordEncoder</span><span class="o">(</span><span class="n">encoder</span><span class="o">());</span>
         <span class="k">return</span> <span class="n">authProvider</span><span class="o">;</span>
@@ -323,14 +323,14 @@
 
 <span class="o">...</span>
 <span class="nd">@Service</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomUserDetailsService</span> <span class="kd">implements</span> <span class="n">UserDetailsService</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomUserDetailsService</span> <span class="kd">implements</span> <span class="nc">UserDetailsService</span> <span class="o">{</span>
  
     <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">UserRepository</span> <span class="n">userRepository</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">UserRepository</span> <span class="n">userRepository</span><span class="o">;</span>
  
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">UserDetails</span> <span class="nf">loadUserByUsername</span><span class="o">(</span><span class="n">String</span> <span class="n">username</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">userRepository</span><span class="o">.</span><span class="na">findByUsername</span><span class="o">(</span><span class="n">username</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="nc">UserDetails</span> <span class="nf">loadUserByUsername</span><span class="o">(</span><span class="nc">String</span> <span class="n">username</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">userRepository</span><span class="o">.</span><span class="na">findByUsername</span><span class="o">(</span><span class="n">username</span><span class="o">);</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">user</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">throw</span> <span class="k">new</span> <span class="nf">UsernameNotFoundException</span><span class="o">(</span><span class="n">username</span><span class="o">);</span>
         <span class="o">}</span>
@@ -339,10 +339,10 @@
 <span class="o">}</span>
 
 <span class="o">.....</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomUserPrincipal</span> <span class="kd">implements</span> <span class="n">UserDetails</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">User</span> <span class="n">user</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomUserPrincipal</span> <span class="kd">implements</span> <span class="nc">UserDetails</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">User</span> <span class="n">user</span><span class="o">;</span>
  
-    <span class="kd">public</span> <span class="nf">CustomUserPrincipal</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">CustomUserPrincipal</span><span class="o">(</span><span class="nc">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">user</span> <span class="o">=</span> <span class="n">user</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="c1">//...</span>
@@ -355,26 +355,26 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
 
     <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
+    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"user_id"</span><span class="o">)</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
 	
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"email"</span><span class="o">)</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">email</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">email</span><span class="o">;</span>
     
 	<span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"password"</span><span class="o">)</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">password</span><span class="o">;</span>
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"name"</span><span class="o">)</span>
     
-	<span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"last_name"</span><span class="o">)</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"active"</span><span class="o">)</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">active</span><span class="o">;</span>
     
     <span class="nd">@JoinTable</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"user_role"</span><span class="o">,</span> <span class="n">joinColumns</span> <span class="o">=</span> <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"user_id"</span><span class="o">),</span> <span class="n">inverseJoinColumns</span> <span class="o">=</span> <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"role_id"</span><span class="o">))</span>
-    <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">)</span>
-	<span class="kd">private</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Role</span><span class="o">&gt;</span> <span class="n">roles</span><span class="o">;</span>
+    <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">)</span>
+	<span class="kd">private</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Role</span><span class="o">&gt;</span> <span class="n">roles</span><span class="o">;</span>
 
 <span class="o">}</span>
 
@@ -383,11 +383,11 @@
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"role"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Role</span> <span class="o">{</span>
     <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
+    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"role_id"</span><span class="o">)</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
     <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"role"</span><span class="o">)</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">role</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">role</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
 <h3 id="user-roles">User Roles</h3>
@@ -399,15 +399,15 @@
 </li>
   <li>Read it from context.</li>
 </ol>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">SecurityContext</span> <span class="n">context</span> <span class="o">=</span> <span class="n">SecurityContextHolder</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">SecurityContext</span> <span class="n">context</span> <span class="o">=</span> <span class="nc">SecurityContextHolder</span><span class="o">.</span><span class="na">getContext</span><span class="o">();</span>
   <span class="k">if</span> <span class="o">(</span><span class="n">context</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
       <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
 
-  <span class="n">Authentication</span> <span class="n">authentication</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getAuthentication</span><span class="o">();</span>
+  <span class="nc">Authentication</span> <span class="n">authentication</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getAuthentication</span><span class="o">();</span>
   <span class="k">if</span> <span class="o">(</span><span class="n">authentication</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
       <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
 
-  <span class="k">for</span> <span class="o">(</span><span class="n">GrantedAuthority</span> <span class="n">auth</span> <span class="o">:</span> <span class="n">authentication</span><span class="o">.</span><span class="na">getAuthorities</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nc">GrantedAuthority</span> <span class="n">auth</span> <span class="o">:</span> <span class="n">authentication</span><span class="o">.</span><span class="na">getAuthorities</span><span class="o">())</span> <span class="o">{</span>
       <span class="k">if</span> <span class="o">(</span><span class="n">role</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">auth</span><span class="o">.</span><span class="na">getAuthority</span><span class="o">()))</span>
           <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
@@ -417,13 +417,13 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Configuration</span>
 <span class="nd">@EnableWebSecurity</span>
 <span class="nd">@EnableGlobalMethodSecurity</span><span class="o">(</span><span class="n">prePostEnabled</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SecurityConfig</span> <span class="kd">extends</span> <span class="n">WebSecurityConfigurerAdapter</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SecurityConfig</span> <span class="kd">extends</span> <span class="nc">WebSecurityConfigurerAdapter</span> <span class="o">{</span>
     <span class="o">...</span>
 <span class="o">}</span>
 <span class="nd">@Service</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomService</span> <span class="o">{</span>
     <span class="nd">@PreAuthorize</span><span class="o">(</span><span class="s">"hasRole('ROLE_ADMIN')"</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">CustomClass</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">CustomClass</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
     <span class="o">...</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -434,12 +434,12 @@ Preauthorize is comparatively new and supports SpEL such as below.</li>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">......</span>
 <span class="c1">// usage of SpEL</span>
 <span class="nd">@PreAuthorize</span><span class="o">(</span><span class="s">"#address.id == principal.id and hasRole('ROLE_ADMIN')"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">(</span><span class="n">Address</span> <span class="n">address</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">(</span><span class="nc">Address</span> <span class="n">address</span><span class="o">)</span>
 
 <span class="o">.....</span>
 <span class="c1">// Usage of Secured annotation</span>
 <span class="nd">@Secured</span><span class="o">({</span> <span class="s">"ROLE_ADMIN"</span><span class="o">,</span> <span class="s">"ROLE_USER"</span> <span class="o">})</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">(</span><span class="n">Address</span> <span class="n">address</span><span class="o">)</span></code></pre></figure>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">(</span><span class="nc">Address</span> <span class="n">address</span><span class="o">)</span></code></pre></figure>
 <ol>
   <li>@Use RolesAllowed (This is same as secured annotation but it is as per Java standard )</li>
 </ol>

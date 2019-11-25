@@ -1,8 +1,16 @@
 [
   
     {
+      "title"    : "Machine Learning Linear Algebra",
+      "tags"     : "Machine Learning",
+      "categories"     : "",
+      "url"      : "/Machine_Learnig_Linear-Algebra/",
+      "date"     : "15 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Machine Learning Basic Maths",
-      "tags"     : "",
+      "tags"     : "Machine Learning",
       "categories"     : "",
       "url"      : "/Machine-Learning-Basic-Maths/",
       "date"     : "15 Dec 2018"
@@ -17,10 +25,34 @@
     } ,
   
     {
+      "title"    : "Machine Learning Python Libraries",
+      "tags"     : "Machine Learning",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-Python-Libraries/",
+      "date"     : "14 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Machine Learning with Python",
+      "tags"     : "Machine Learning",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-with-Python/",
+      "date"     : "14 Dec 2018"
+    } ,
+  
+    {
       "title"    : "Machine Learning Neural Network.",
-      "tags"     : "",
+      "tags"     : "Machine Learning",
       "categories"     : "",
       "url"      : "/Machine-Learning-Neural-Network/",
+      "date"     : "13 Dec 2018"
+    } ,
+  
+    {
+      "title"    : "Machine Learning with Tensor Flow.",
+      "tags"     : "Machine Learning",
+      "categories"     : "",
+      "url"      : "/Machine-Learning-TensorFlow/",
       "date"     : "13 Dec 2018"
     } ,
   
@@ -30,14 +62,6 @@
       "categories"     : "",
       "url"      : "/10-minutes-JMS/",
       "date"     : "13 Dec 2018"
-    } ,
-  
-    {
-      "title"    : "Machine Learning Python Libraries",
-      "tags"     : "",
-      "categories"     : "",
-      "url"      : "/Machine-Learning-Python-Libraries/",
-      "date"     : "12 Dec 2018"
     } ,
   
     {
@@ -69,14 +93,6 @@
       "tags"     : "",
       "categories"     : "",
       "url"      : "/REST-in-Java-world/",
-      "date"     : "11 Dec 2018"
-    } ,
-  
-    {
-      "title"    : "Machine Learning with Python",
-      "tags"     : "",
-      "categories"     : "",
-      "url"      : "/Machine-Learning-with-Python/",
       "date"     : "11 Dec 2018"
     } ,
   

@@ -154,7 +154,7 @@
 <header class="header-post" role="banner">
         <div class="content" style="transform: translateY(0px); opacity: 1;">
             
-                <time itemprop="datePublished" datetime="2018-12-11T18:57:06-05:00" class="date">11 Dec 2018 - sanjaypatel2525</time>
+                <time itemprop="datePublished" datetime="2018-12-14T18:57:06-05:00" class="date">14 Dec 2018 - sanjaypatel2525</time>
             
             <h1 class="post-title" itemprop="name">Machine Learning with Python</h1>
             <p itemprop="description" class="subtitle"></p>
@@ -223,7 +223,7 @@ Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for d
 There are many supervised algorithm examples: <strong>linear regression, logistic regression, support vector machine SVM, Naive bayes classifier</strong>.</p>
 
 <p><strong>Classification</strong>- Classification is dividing the data into set, categorizing it or anything related to segregating data. It is done when you have complete data, so it is done after.<br>
-<strong>Prediction/Regression</strong> is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced.</p>
+<strong>Prediction/Regression</strong> is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced. <strong>It works on continuos values and continuos value have order, less then number or more then number not like discrete no order only set of values</strong></p>
 
 <h2 id="unsupervised-learning">Unsupervised learning.</h2>
 <p>It used to detect anomalies, outlier, something which is odd then normal, fraud, defective equipment, or group with similarities. In here we don’t get the labeled data. It is also called unlabeled learning, the algorithm tries to find pattern, structure, anomaly from the given data.
@@ -245,7 +245,7 @@ Or more related to.
 <h2 id="data-preparation-and-preprocessing">Data preparation and preprocessing</h2>
 <p>Let’s talk a bit about <strong>standardization and normalization</strong>.</p>
 <h3 id="normalization">Normalization</h3>
-<p>Data can in be sometime in big number or may be sometime in very small number, there are multiple technique to scale data to readable or to our needed limts. For example. 0&lt;x&lt;1 scaling. Any data can be scalded from 0 to 1 in this its easy to know lower limit and upper limit and we can easily perceptualize how big one data in this scale.<br>
+<p>Data can in be sometime in big number or may be sometime in very small number, there are multiple technique to scale data to readable or to our needed limits. For example. 0&lt;x&lt;1 scaling. Any data can be scalded from 0 to 1 in this its easy to know lower limit and upper limit and we can easily perceptually how big one data in this scale.<br>
 <strong>Min-Max Normalization</strong> - To fit the data in defined boundary, let say data has 134567 min and 136878 max and we want to see it in scale of 0 to 1, or in scale of 1000 to 10000 etc.
 <script type="math/tex">B= \frac{A-min(A)}{max(A)-min(A)}\cdot(D-C) + C</script>, it lays the data A<sub>i</sub> from set of A, from C to D.<br>
 <strong>Decimal Scaling</strong> - Divide or multiple with 10<sup>n</sup> to bring the at scale of decimal. For example
@@ -254,15 +254,17 @@ Or more related to.
 
 <p><strong>Standardization or z-score</strong> Is form of normalization where mean is kept to 0 and standard deviation to 1. In graph the start and end of data limits has to have same distance from y axis.<script type="math/tex">z = \frac{x_i-\mu}{\sigma}</script></p>
 
-<h2 id="algorithems">Algorithems.</h2>
+<h2 id="algorithms">Algorithms.</h2>
 <h3 id="linear-regression">Linear regression</h3>
-<p>Regression tries to find the least cost continuos function based on given input such that, the aim to minimize the cost. The cost is cost of given training set combined.
+<p>Regression tries to find the least cost continuos function based on given input such that, the aim to minimize the cost. The cost is cost of given training set combined. Cost is also called loss. There are many loss function out which here is one <strong>mean squared error( L2 Loss function)</strong>.
+It better then sum of absolute error as sum of absolute error can have ambiguous result while squared will penalize larger distance and find exact half way.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python39.JPG" alt="" width="1005" height="487" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python39.JPG" alt="" width="1005" height="487"></noscript></amp-img>
 <script type="math/tex">Cost= J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=0}^m(h_\theta(x^i)-y^i)^2\\
 h_\theta(x)=y=\theta_0+\theta_1x</script>
 Where theta are independent variable and hyperparameter, m is number of training data, x is input data and y is output data, h is expected output data. Our aim is to find minimum cost for given input variables. 
 With one variable.<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python3.JPG" alt="" width="918" height="513" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python3.JPG" alt="" width="918" height="513"></noscript></amp-img>
 With two variable. <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python4.JPG" alt="" width="787" height="486" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python4.JPG" alt="" width="787" height="486"></noscript></amp-img>
-<strong>Gradient Descent</strong> Gives change in input to reach minmum cost.
+<strong>Gradient Descent</strong> Gives change in input to reach minimum cost.
 <script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta_0,\theta_1)</script>
 Where derivative of J gives the slope which is always -1 to 1 and this slope will be calculated for each variable. This slope calculates new value for variable θ. α defines the jump either to decrease or to increase this variable.</p>
 
@@ -273,11 +275,11 @@ x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},
 h_θ(x)=θ^Tx</script><br>
 <script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^m(h_θ(x^i)-y^i)x_j^i</script></p>
 
-<p><strong>Feature Scaling</strong> - If the variable are not in same scale they tend to make gradient jump and slows down the process of reaching to minimum. So there are many feature scalling.</p>
+<p><strong>Feature Scaling</strong> - If the variable are not in same scale they tend to make gradient jump and slows down the process of reaching to minimum. So there are many feature scaling.</p>
 <ul>
   <li>Standardization - Replace by z-score, Normally used in normally distributed set. <script type="math/tex">x'=\frac{x-\bar x}{\sigma}</script>
 </li>
-  <li>Mean Normalization - Can variate from -1 to 1, used in Principla component analysis. <script type="math/tex">x'=\frac{x-\bar x}{max(x)-min(x)}</script>
+  <li>Mean Normalization - Can variate from -1 to 1, used in Principal component analysis. <script type="math/tex">x'=\frac{x-\bar x}{max(x)-min(x)}</script>
 </li>
   <li>Min-Max Scaling - from 0 to 1. <script type="math/tex">x'=\frac{x-min(x)}{max(x)-min(x)}</script>
 </li>
@@ -285,7 +287,7 @@ h_θ(x)=θ^Tx</script><br>
 
 <h3 id="normal-equation-to-get-optimal-value">Normal equation to get Optimal value</h3>
 <p>Normal equation gets you the minimum value of θ directly, for example you know the curve of the cost function. Then you can solve for minimum value for θ.
-If θ is quadratic. <script type="math/tex">J(θ)=aθ^2+bθ+c = 0</script> will give you minimu value for θ. Same goes for multiple variable keep one variable constant each time. 
+If θ is quadratic. <script type="math/tex">J(θ)=aθ^2+bθ+c = 0</script> will give you minimum value for θ. Same goes for multiple variable keep one variable constant each time. 
 m - Training examples
 n - Variables. 
 <script type="math/tex">x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},x^i=\begin{bmatrix}x_0^i\\x_1^i\\..\\x_n^i\end{bmatrix},
@@ -314,7 +316,7 @@ min\,value\,of\,θ=(X^TX)^{-1}X^Ty</script>
 Looks same as linear regression, but they differ by <script type="math/tex">h_θ(x)</script>.
 “Conjugate gradient”, “BFGS”, and “L-BFGS” are alternative of gradient descend and provide better optimization over cost.</p>
 
-<h3 id="multiclass-classification">Multiclass classification.</h3>
+<h3 id="multi-class-classification">Multi-class classification.</h3>
 <p>In logistic we use to have two set yes/no and each event has some probability based on that we use to say this event belong to yes or no group. That probability is derived by function <script type="math/tex">h_θ(x)</script>. Here we have many sets and each set will have its own <script type="math/tex">h_θ^i(x)</script>. We calculate y’s probability in eahc set and assign this to the set which has max probability.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python7.JPG" alt="" width="451" height="256" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python7.JPG" alt="" width="451" height="256"></noscript></amp-img></p>
 
@@ -341,7 +343,7 @@ Deriving from logistic regression. But compared to logistic it has K output in m
 </li>
 </ul>
 
-<p><strong>Backward proportion</strong> - We know when there is hight cost or more error in each K output nodes, then we need to fix each θ in previous layers. This is done throug backward propgoratipn.
+<p><strong>Backward proportion</strong> - We know when there is hight cost or more error in each K output nodes, then we need to fix each θ in previous layers. This is done through backward propagation.
 Let δ is error in Kth node of L, <script type="math/tex">δ_k^l = a_k^l-y_k</script> now calculate δ at L-1 layer. This is done through derivative of 
 <script type="math/tex">(a^{l-1})'=g'(z^{l-1})=a^{l-1}.(1-a^{l-1})</script>. 
 δ is applied at nodes we need to adjust our θ matrix. So we put another term Δ which is proportionate to δ
@@ -350,7 +352,7 @@ Let δ is error in Kth node of L, <script type="math/tex">δ_k^l = a_k^l-y_k</sc
 D^{l}_{i,j}=\frac{1}{m}Δ^{l}_{i,j}\,if\,j=0</script>
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python10.JPG" alt="" width="450" height="460" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python10.JPG" alt="" width="450" height="460"></noscript></amp-img></p>
 
-<p><strong>Gradient Checking</strong> - Compare the delta changed value to the output to the the change we got from Backward propagation. Gradient Checking is time consuming that is the reason we do not use it in place of backward propogation.
+<p><strong>Gradient Checking</strong> - Compare the delta changed value to the output to the the change we got from Backward propagation. Gradient Checking is time consuming that is the reason we do not use it in place of backward propagation.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python9.JPG" alt="" width="494" height="55" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python9.JPG" alt="" width="494" height="55"></noscript></amp-img>.</p>
 
 <h2 id="evaluating-hypothesis">Evaluating Hypothesis.</h2>
@@ -387,16 +389,16 @@ Higher F score mean a better algorithm it take value between 0 and 1.</p>
 <h2 id="support-vector-machine">Support Vector Machine</h2>
 <p>One of the famous Supervised learning. 
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python17.JPG" alt="" width="885" height="486" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python17.JPG" alt="" width="885" height="486"></noscript></amp-img>
-In image we get rid of <script type="math/tex">\frac{1}{m}</script> and λ. <script type="math/tex">\frac{1}{m}</script> is constant so doesn’t affect cost function in minimization and intuition is in cost function keep bigger B in order generailze any parameter, that you can do either by increaseing λ r remove lambda put C and decrease C, both are same thing.</p>
+In image we get rid of <script type="math/tex">\frac{1}{m}</script> and λ. <script type="math/tex">\frac{1}{m}</script> is constant so doesn’t affect cost function in minimization and intuition is in cost function keep bigger B in order generalize any parameter, that you can do either by increasing λ r remove lambda put C and decrease C, both are same thing.</p>
 
-<p>SVM is also called <strong>Large Margine Classifier</strong>.</p>
+<p>SVM is also called <strong>Large Margin Classifier</strong>.</p>
 
 <p>Think <script type="math/tex">\theta^T x^i</script> as vector multiplication and you can say what this multiplication gives projection of θ over x.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python18.JPG" alt="" width="631" height="241" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python18.JPG" alt="" width="631" height="241"></noscript></amp-img>
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python19.JPG" alt="" width="919" height="488" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python19.JPG" alt="" width="919" height="488"></noscript></amp-img>
 In above example our aim is to get maximum of p so that θ can be small. With bigger p there is bigger distance of dataset from the classifier line and will have bigger margin.</p>
 
-<p><strong>Kernal</strong> Above we were discussing are devisor which was linear, in some situation the plotted points are mixed and requires nonlinear curve to divide or enclosing circle. 
+<p><strong>Kernel</strong> Above we were discussing are devisor which was linear, in some situation the plotted points are mixed and requires nonlinear curve to divide or enclosing circle. 
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python20.JPG" alt="" width="673" height="283" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python20.JPG" alt="" width="673" height="283"></noscript></amp-img>
 Here we take some points and mark them as territory and calculate the closeness/similarities of each dataset from these territories/points. Mark these points as <em>l</em> and calculate closeness/similarities vector. 
 <script type="math/tex">f_i = similarity(x,l^i)</script>
@@ -408,20 +410,20 @@ When σ is big the peak is distributed(more generalized) and when it is small pe
 So we have two kernel linear and gaussian kernel, linear for straight line divisor an gaussian for non-linear. When m is very large compared to n then using SVN with Gaussian kernel is good. Otherwise use linear kernel.</p>
 
 <h3 id="k-mean">K-Mean</h3>
-<p>K-mean is unsupervised clustering algorithem, Here you tak randomly take k clusters and each cluster has a centroid <script type="math/tex">μ_k</script>. We calculate <script type="math/tex">c^i</script> for each <script type="math/tex">x^i</script> which states cluster for <script type="math/tex">x^i</script>, which cluster x belongs to by calculating distance with each cluster centroid.
+<p>K-mean is unsupervised clustering algorithm, Here you tak randomly take k clusters and each cluster has a centroid <script type="math/tex">μ_k</script>. We calculate <script type="math/tex">c^i</script> for each <script type="math/tex">x^i</script> which states cluster for <script type="math/tex">x^i</script>, which cluster x belongs to by calculating distance with each cluster centroid.
 <script type="math/tex">c^i = min||x^i-\mu_k||^2</script>
 This c maps all the input to some cluster and later each cluster’s mean is adjusted with average of x from that cluster.
 <script type="math/tex">\mu_{c^i}=\frac{(x^a+x^b_...)}{\text{count of x in }\mu}</script></p>
 
-<p><strong>Cost Function</strong> - We keep caculating K-mean until out cost stops decreasing. Cost is calculate by squared sum of distance of x from there cluster mean.
+<p><strong>Cost Function</strong> - We keep calculating K-mean until out cost stops decreasing. Cost is calculate by squared sum of distance of x from there cluster mean.
 <script type="math/tex">J(c^1,..,c^m,\mu_1,..,\mu_K)= \frac{1}{m}\sum_{i=1}{m}||x^i-\mu_{c^i}||^2</script></p>
 
-<p><strong>Optimization</strong> - Intialize mean of each cluster to random value of inputs and calculate cost, the lowest cost is selected in the end as optimized solution.</p>
+<p><strong>Optimization</strong> - Initialize mean of each cluster to random value of inputs and calculate cost, the lowest cost is selected in the end as optimized solution.</p>
 
-<p><strong>Deciding number of Clusters K</strong> - Use elbow approach, keep increasing K from 2 to n draw the graph, the cost keeps on decreasing but at some point we can see elblow, the rate of cost decrease has reduce significatnlty. Or if there is no such elbow select whatever suites you.
+<p><strong>Deciding number of Clusters K</strong> - Use elbow approach, keep increasing K from 2 to n draw the graph, the cost keeps on decreasing but at some point we can see elbow, the rate of cost decrease has reduce significantly. Or if there is no such elbow select whatever suites you.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python23.JPG" alt="" width="877" height="293" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python23.JPG" alt="" width="877" height="293"></noscript></amp-img></p>
 
-<h3 id="data-comperssion">Data comperssion.</h3>
+<h3 id="data-compression">Data compression.</h3>
 <p>Compress the data from 2D to 1D or 3D to 2D or nD to mD m&lt; n etc, to save the memory and computation overheads.
 Correlated feature can be mapped together using a function or even directly so reduce multiple feature in one.</p>
 
@@ -430,7 +432,7 @@ Correlated feature can be mapped together using a function or even directly so r
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python25.JPG" alt="" width="949" height="519" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python25.JPG" alt="" width="949" height="519"></noscript></amp-img>
 In above diagram you can see how K is selected so that k variance by total variance is 99.99% retained.</p>
 <ul>
-  <li>PCS speed up, use less memory and if k=1 ,2 ,3 then easy to visualize. This does not genralize the model as it doesn not consider the y in supervised learning while generalization parameter λ does.</li>
+  <li>PCS speed up, use less memory and if k=1 ,2 ,3 then easy to visualize. This does not generalize the model as it doesn’t not consider the y in supervised learning while generalization parameter λ does.</li>
 </ul>
 
 <h3 id="anomaly-detection-algorithm">Anomaly detection Algorithm.</h3>
@@ -439,30 +441,30 @@ In above diagram you can see how K is selected so that k variance by total varia
 Using training set we try to define a gaussian curve on each feature and with new x having n feature we try to find probability of this x to be fitted to gaussian curve, if it is not a good fit it will have very low probability output.
 <strong>Choosing feature</strong></p>
 <ul>
-  <li>Create new feature if existing feature can’‘t find anamoly</li>
+  <li>Create new feature if existing feature can’‘t find anatole</li>
   <li>Create features out of another features so that the value is either very high or very low.</li>
   <li>Transform feature so that it falls in gaussian curve, apply log or srqrt or any other root.</li>
 </ul>
 
 <p><strong>Multivariate Gaussian Distribution</strong>
-Sometime we need Multivariate Gaussian because in previous we use to find out p(x<sub>1</sub>),p(x<sub>2</sub>) etc. and this use to ignore there coherant property, In case we need to look how the combined gaussian looks we calculate p(x).
+Sometime we need Multivariate Gaussian because in previous we use to find out p(x<sub>1</sub>),p(x<sub>2</sub>) etc. and this use to ignore there coherent property, In case we need to look how the combined gaussian looks we calculate p(x).
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python28.JPG" alt="" width="833" height="693" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python28.JPG" alt="" width="833" height="693"></noscript></amp-img>
-In simple term how it is different from normal previous guassian is the previous oen can not take diagonal eclipes form while this one can. In that case covariance matrix ‘∑’ all <strong>non diagonal fields will be 0</strong>, while in this case non diagonal field will have some weight.
+In simple term how it is different from normal previous gaussian is the previous oen can not take diagonal ellipse form while this one can. In that case covariance matrix ‘∑’ all <strong>non diagonal fields will be 0</strong>, while in this case non diagonal field will have some weight.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python29.JPG" alt="" width="941" height="490" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python29.JPG" alt="" width="941" height="490"></noscript></amp-img></p>
 
 <h3 id="content-based-recommendation">Content based recommendation</h3>
 <p>Let’ remember the linear regression again, It tries to map feature of training set features= x<sub>1</sub>,x<sub>2</sub>…x<sub>n</sub>, input data =x<sup>1</sup>,x<sup>2</sup>…x<sup>m</sup>  to the output of training set with tweaking parameters as θ
-Now take n<sub>m</sub>  as movies and n<sub>u</sub> as users. We need to fit θ for each user to movies input based moveis feature. Since there are n<sub>u</sub> users hence there will θ<sup>j</sup> one for each user.
+Now take n<sub>m</sub>  as movies and n<sub>u</sub> as users. We need to fit θ for each user to movies input based movies feature. Since there are n<sub>u</sub> users hence there will θ<sup>j</sup> one for each user.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python34.JPG" alt="" width="710" height="397" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python34.JPG" alt="" width="710" height="397"></noscript></amp-img>
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python30.JPG" alt="" width="933" height="251" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python30.JPG" alt="" width="933" height="251"></noscript></amp-img></p>
 
-<h3 id="collabrative-filter-algorithem">Collabrative Filter Algorithem</h3>
-<p>The soul remains same θ and x,m normaly we try to find θ to fit y for given x. So that said x is defined at least. But in last example x was some features of movies and how we can find those features, so we start small. With give θ provided by users (user rates some movies and also tell there inclination romance, action etc), with this information we calculate x. This calculated x is used to predict θ  and it goes in loop x and θ  both predict each one after one. 
-But better than going one by one lets find everything togather.
+<h3 id="collaborative-filter-algorithm">Collaborative Filter Algorithm</h3>
+<p>The soul remains same θ and x,m normals we try to find θ to fit y for given x. So that said x is defined at least. But in last example x was some features of movies and how we can find those features, so we start small. With give θ provided by users (user rates some movies and also tell there inclination romance, action etc), with this information we calculate x. This calculated x is used to predict θ  and it goes in loop x and θ  both predict each one after one. 
+But better than going one by one lets find everything together.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python31.JPG" alt="" width="704" height="375" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python31.JPG" alt="" width="704" height="375"></noscript></amp-img></p>
 
 <h3 id="recommendation-algorithm">Recommendation Algorithm</h3>
-<p>If user is watching one movie suggest him another movies. This is normally found by distance between two movies features x<sup>1</sup> (<script type="math/tex">x_1^1,x_2^1..x_n^1</script>). The distance is caluclated by <script type="math/tex">||x^1-x^2||^2</script>.
+<p>If user is watching one movie suggest him another movies. This is normally found by distance between two movies features x<sup>1</sup> (<script type="math/tex">x_1^1,x_2^1..x_n^1</script>). The distance is calculated by <script type="math/tex">||x^1-x^2||^2</script>.
 What if there is new user and we need to suggest him a movie. The θ<sup>i</sup> will be 0 for him as the model doesn’t have any parameter which affect θ for this new user. 
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python32.JPG" alt="" width="948" height="254" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python32.JPG" alt="" width="948" height="254"></noscript></amp-img></p>
 
@@ -470,14 +472,84 @@ What if there is new user and we need to suggest him a movie. The θ<sup>i</sup>
 <p>The normal  Gradient descent is called batch  Gradient descent, where we have to find mean square of all the input data on each iteration of gradient descent update. In case if m is in million then each θ update will have to calculate million records before making updates. In Stochastic Gradient descent we update θ based on last <script type="math/tex">x^i,y^i</script>.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python33.JPG" alt="" width="921" height="485" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python33.JPG" alt="" width="921" height="485"></noscript></amp-img></p>
 
-<h3 id="improving-perfomance">Improving perfomance.</h3>
+<h3 id="improving-performance">Improving performance.</h3>
 <p><strong>Artificial Synthesize</strong> the data. 
 <strong>Ceiling Analysis</strong> prepare one liner chart to see if you provide truth data to component how is the accuracy is increase and with this you can find out what needs to be fine tuned more rather then wasting time on other component.</p>
 
 <p>#Read this 
 https://www.altexsoft.com/blog/datascience/machine-learning-project-structure-stages-roles-and-tools/
 https://towardsdatascience.com/building-package-for-machine-learning-project-in-python-3fc16f541693
+https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4
 https://medium.com/omarelgabrys-blog/statistics-probability-exploratory-data-analysis-714f361b43d1#48f7</p>
+
+<h1 id="udacity-intro-ml">Udacity Intro ML</h1>
+
+<h3 id="bayes">Bayes.</h3>
+<p>Bayes formula tells you how to calculate P(A|B) when P(B) and P(B|A) is given. Just say you are interested to know what if I changes terms P(B|A) to P(A|B)
+Here is an example. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python35.JPG" alt="" width="972" height="530" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python35.JPG" alt="" width="972" height="530"></noscript></amp-img></p>
+<h3 id="naive-bayes">Naive Bayes</h3>
+<p>Based on all words(evidences) calculate final probability of being some label. It is classification algorithm but doesn’t consider order so that why it called naive bayes.
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python36.JPG" alt="" width="797" height="453" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python36.JPG" alt="" width="797" height="453"></noscript></amp-img></p>
+
+<h3 id="svm">SVM</h3>
+<p>SVM large margin classifier, first agenda is classify then create a large margined.
+SVC(C=1.0, kernel=’rbf’, degree=3, gamma=’auto_deprecated’, coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, class_weight=None, verbose=False, max_iter=-1, decision_function_shape=’ovr’, random_state=None)[source]</p>
+<ul>
+  <li>Gamma - defines whether a the boundary has more local points effect or it consider far points as well. Small value is nearby point,</li>
+  <li>C - Defines the regularization parameters. lower value mean more regularized.</li>
+  <li>Kernel  - Defines what type of feature relations you  are going ot use.‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a callable.</li>
+</ul>
+
+<p><strong>Compared to Naive bayes</strong> - On more feature SVM slows down also kernel overlap issue is not there in Naive Bayes. SVM works well in non linear domain as it tries to capture relation between feature(kernel or function).</p>
+
+<h3 id="decision-tree">Decision tree.</h3>
+<p>Creates a tree internally on each feature with value less then or more then, keeps on splitting till min_samples_split is reach, minimum is 2 . But when you increase it, it works as regularization parameter.
+class sklearn.tree.DecisionTreeClassifier(criterion=’gini’, splitter=’best’, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False)[source]
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python42.JPG" alt="" width="829" height="503" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python42.JPG" alt="" width="829" height="503"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python37.JPG" alt="" width="962" height="528" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python37.JPG" alt="" width="962" height="528"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python38.JPG" alt="" width="970" height="509" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python38.JPG" alt="" width="970" height="509"></noscript></amp-img>
+In above diagram, we calculate entropy of parent and entropy at its children, subtract it and we get how much this classification gained us knowledge. Entropy is maximum possible impurity(non purity), if there can be only 1 output then chance of having impurity is 0 hence 0 entropy.
+<strong>Information Gain</strong> - We find information gain on all features using above formula, it helps us determine which feature is most suitable for split to get highest information gain.
+Decision Tree works good on classifying and can create big tree, but it always prone to overfit.</p>
+
+<h2 id="nltk">NLTK</h2>
+<h3 id="stemmer">Stemmer</h3>
+<p>Consolidating the words to single meaning. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python40.JPG" alt="" width="892" height="449" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python40.JPG" alt="" width="892" height="449"></noscript></amp-img></p>
+
+<h3 id="tfidf">TFIDF</h3>
+<p>Term frequency in a sentence and inverse document in frequency in a corpora or whole document. If word occurs more in sentence will have more term frequency, But if it occurs more in document the attention to this word has to be less. 
+https://kavita-ganesan.com/tfidftransformer-tfidfvectorizer-usage-differences/#.XdLPzVdKgdU 
+tfidf_vectorizer=TfidfVectorizer(use_idf=True) 
+tfidf_vectorizer_vectors=tfidf_vectorizer.fit_transform(docs)</p>
+
+<h3 id="pca">PCA</h3>
+<p>Principal component analysis, tries to reduce the dimension by retaining most of the information. Let’s say there are two axis x(area) and y(bedroom), it is directly proportional and create a slanted line in graph of x,y so we can change our origin and slop of base axis. This forms an new dimension which is created using other two dimension.
+In algorithm we don’t try to find out one by one, we just dump all in algo, PCS tries to find most suitable by ranking and that calls it first PC line, second PC line and so on but all these PCA (new dimension) will be perpendicular to each other. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python41.JPG" alt="" width="924" height="455" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python41.JPG" alt="" width="924" height="455"></noscript></amp-img></p>
+
+<h3 id="eigenfaces-pca-of-facial-data">Eigenfaces (PCA of facial data)</h3>
+<p>Using overall training set we try to reduce facial data dimensionality to smaller dimensions.</p>
+
+<h3 id="gridsearchcv">GridSearchCV</h3>
+<p>Use sklearn GridSearchCV for let sklearn figure out best possible parameter for specific algorithm from given parameters.</p>
+
+<p><amp-img src="/assets/2019-06-12-Machine-Learning-with-Python43.JPG" alt="" width="1003" height="586" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python43.JPG" alt="" width="1003" height="586"></noscript></amp-img></p>
+
+<h3 id="helper-libraries-in-python">Helper libraries in Python</h3>
+<p>TextBlog - sentiment analysis inbuilt.
+LighFM - Mixed recommender system
+CSV - To read csv
+PIL(Pillow) - For images
+URLLib - Download files
+ZIPFiles - To unzip/zip files
+os - For os related tasks
+TPOT - BUilt over sklearn to find best algorithm and parameter</p>
+
+<h3 id="recommender-system">Recommender system.</h3>
+<p>Collaborative - What other people like
+Content based - what you like.</p>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>

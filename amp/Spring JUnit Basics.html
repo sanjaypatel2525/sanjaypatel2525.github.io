@@ -193,24 +193,24 @@
 <span class="kn">import</span> <span class="nn">com.xyz.junit5.XYZBOImpl</span><span class="o">;</span>
  
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">XYZBOImplTest</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="n">XYZBOImpl</span> <span class="n">impl</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">XYZBOImpl</span> <span class="n">impl</span><span class="o">;</span>
     <span class="nd">@BeforeAll</span>
     <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setup</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeAll will be executed only once when this XYZBOImplTest first test method is called"</span><span class="o">);</span>
-        <span class="n">XYZBOImpl</span> <span class="n">impl</span> <span class="o">=</span> <span class="n">XYZBOImpl</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeAll will be executed only once when this XYZBOImplTest first test method is called"</span><span class="o">);</span>
+        <span class="nc">XYZBOImpl</span> <span class="n">impl</span> <span class="o">=</span> <span class="nc">XYZBOImpl</span><span class="o">();</span>
     <span class="o">}</span>
      
     <span class="nd">@BeforeEach</span>
     <span class="kt">void</span> <span class="nf">callBeforEachMethod</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeEach will be executed before each test methods in XYZBOImplTest"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeEach will be executed before each test methods in XYZBOImplTest"</span><span class="o">);</span>
     <span class="o">}</span>
      
     <span class="nd">@Tag</span><span class="o">(</span><span class="s">"dev"</span><span class="o">)</span>
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">tesXYZBOImplMethod1</span><span class="o">()</span>
     <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Testing Method 1 of XYZBOImpl"</span><span class="o">);</span>
-        <span class="n">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method1</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Testing Method 1 of XYZBOImpl"</span><span class="o">);</span>
+        <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method1</span><span class="o">());</span>
     <span class="o">}</span>
      
     <span class="nd">@Tag</span><span class="o">(</span><span class="s">"prod"</span><span class="o">)</span>
@@ -218,26 +218,26 @@
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">tesXYZBOImplMethod2</span><span class="o">()</span>
     <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Testing Method 2 of XYZBOImpl"</span><span class="o">));</span>
-        <span class="n">Assertions</span><span class="o">.</span><span class="na">assertThrows</span><span class="o">(</span><span class="n">Exception</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
-            <span class="n">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method2</span><span class="o">()));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Testing Method 2 of XYZBOImpl"</span><span class="o">));</span>
+        <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertThrows</span><span class="o">(</span><span class="nc">Exception</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span> <span class="s">"some return value"</span> <span class="o">,</span> <span class="n">impl</span><span class="o">.</span><span class="na">method2</span><span class="o">()));</span>
         <span class="o">});</span>
         
     <span class="o">}</span>
      
     <span class="nd">@AfterEach</span>
     <span class="kt">void</span> <span class="nf">callAfterEachMethod</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterEach is execute after each test methods in XYZBOImplTest"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterEach is execute after each test methods in XYZBOImplTest"</span><span class="o">);</span>
     <span class="o">}</span>
      
     <span class="nd">@AfterAll</span>
     <span class="kd">static</span> <span class="kt">void</span> <span class="nf">destroy</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterAll will be executed only once when this XYZBOImplTest last test method is called"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterAll will be executed only once when this XYZBOImplTest last test method is called"</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
 <span class="c1">//Example test only selected packages</span>
-<span class="nd">@RunWith</span><span class="o">(</span><span class="n">JUnitPlatform</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@RunWith</span><span class="o">(</span><span class="nc">JUnitPlatform</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
 <span class="nd">@SelectPackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2"</span><span class="o">)</span>
 <span class="nd">@IncludePackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2.includeMe"</span><span class="o">)</span>
 <span class="nd">@ExcludePackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2.excludeMe"</span><span class="o">)</span>
@@ -247,7 +247,7 @@
 <span class="o">}</span>
 
 <span class="c1">// Example two test only selected classes.</span>
-<span class="nd">@RunWith</span><span class="o">(</span><span class="n">JUnitPlatform</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@RunWith</span><span class="o">(</span><span class="nc">JUnitPlatform</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
 <span class="nd">@SelectPackages</span><span class="o">(</span><span class="s">"com.xyz.junit5.examples2"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">JUnit5TestSuiteExample1</span>
 <span class="o">{</span>

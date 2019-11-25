@@ -181,21 +181,21 @@
   <span class="nd">@Id</span>
   <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span> <span class="c1">// Optional asit take field name</span>
   <span class="nd">@GeneratedValue</span> <span class="c1">// Automatically generated values, kind of autoincrement in table.</span>
-  <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
-  <span class="n">String</span> <span class="n">firstname</span><span class="o">;</span>
-  <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span>
+  <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="n">firstname</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
 <span class="o">}</span>
 
 <span class="o">....</span>
 <span class="nd">@Repository</span>
-<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="n">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">EmployeeRepository</span> <span class="kd">extends</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">findByLastName</span><span class="o">(</span><span class="nc">String</span> <span class="n">lastName</span><span class="o">);</span> <span class="c1">// select * from Employee where lastname=:lastname</span>
 <span class="o">}</span>
 
 <span class="o">....</span>
 <span class="c1">// Using repository.</span>
-<span class="n">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">emps</span> <span class="o">=</span> <span class="n">employeeRepository</span><span class="o">.</span><span class="na">findByLastName</span><span class="o">(</span><span class="s">"Clark"</span><span class="o">);</span>
+<span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="n">employeeRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">emps</span> <span class="o">=</span> <span class="n">employeeRepository</span><span class="o">.</span><span class="na">findByLastName</span><span class="o">(</span><span class="s">"Clark"</span><span class="o">);</span>
 <span class="n">employeeRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span></code></pre></figure>
 
 <h3 id="pros-and-cons-of-hibernate-over-plain-jdbc">Pros and Cons of Hibernate over Plain JDBC.</h3>
@@ -232,8 +232,8 @@ The query generated here will be highly optimized in most of the cases.</li>
 <h3 id="setting-up-datasource">Setting up Datasource.</h3>
 <p>If you start with starter-jpa datasource and started inmemory DB jar such as h2database etc, you don’t need to define the datasource but you can define and override the default ones. Here is Java way of defining it.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Bean</span>
-<span class="kd">public</span> <span class="n">DataSource</span> <span class="nf">dataSource</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">DriverManagerDataSource</span> <span class="n">dataSource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DriverManagerDataSource</span><span class="o">();</span>
+<span class="kd">public</span> <span class="nc">DataSource</span> <span class="nf">dataSource</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">DriverManagerDataSource</span> <span class="n">dataSource</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DriverManagerDataSource</span><span class="o">();</span>
  
     <span class="n">dataSource</span><span class="o">.</span><span class="na">setDriverClassName</span><span class="o">(</span><span class="s">"com.mysql.cj.jdbc.Driver"</span><span class="o">);</span>
     <span class="n">dataSource</span><span class="o">.</span><span class="na">setUsername</span><span class="o">(</span><span class="s">"admin"</span><span class="o">);</span>
@@ -261,8 +261,8 @@ Object detached from session. It happened when session is closed or you can manu
 
 <h3 id="session-sessionfactory-and-transaction">Session, SessionFactory and Transaction.</h3>
 <p>SessionFactory provide you the session class which can be used to attach, detach, save, query etc. Session supports transaction as well.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
-<span class="n">Transaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+<span class="nc">Transaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
 <span class="k">try</span> <span class="o">{</span>
    <span class="n">tx</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
@@ -273,7 +273,7 @@ Object detached from session. It happened when session is closed or you can manu
    <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
 <span class="o">}</span>
 
-<span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">tx</span><span class="o">!=</span><span class="kc">null</span><span class="o">)</span> <span class="n">tx</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span>
    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span> 
 <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
@@ -291,21 +291,21 @@ Object detached from session. It happened when session is closed or you can manu
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Employee_Custom_Table_Name"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
   <span class="nd">@Id</span>
   <span class="nd">@GeneratedValue</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
 
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">;</span> <span class="c1">// column name defaults to first_name</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">firstName</span><span class="o">;</span> <span class="c1">// column name defaults to first_name</span>
   
   <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"custom_last_name"</span><span class="o">)</span> <span class="c1">// column name is specified,  custom_last_name</span>
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">lastName</span><span class="o">;</span> 
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span> 
 
   <span class="nd">@Version</span>
-  <span class="kd">private</span> <span class="n">Date</span> <span class="n">lastUpdate</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Date</span> <span class="n">lastUpdate</span><span class="o">;</span>
 
   <span class="nd">@Transient</span>
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">sessionId</span><span class="o">;</span> <span class="c1">// will not be stored in db</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">sessionId</span><span class="o">;</span> <span class="c1">// will not be stored in db</span>
 <span class="o">}</span></code></pre></figure>
 
 <h2 id="mapping-tables">Mapping Tables.</h2>
@@ -313,23 +313,23 @@ Object detached from session. It happened when session is closed or you can manu
 <strong>@PrimaryKeyJoinColumn</strong> - When two table share same primary key. Such as Employee and EmployeeDetails.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
    
   <span class="nd">@Id</span>
   <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span>
   <span class="nd">@GeneratedValue</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
    
-  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">MERGE</span><span class="o">)</span>
+  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">MERGE</span><span class="o">)</span>
   <span class="nd">@PrimaryKeyJoinColumn</span>
-  <span class="kd">private</span> <span class="n">EmployeeDetail</span> <span class="n">employeeDetail</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">EmployeeDetail</span> <span class="n">employeeDetail</span><span class="o">;</span>
    
   <span class="o">...</span>
 <span class="o">}</span>
  
 <span class="nd">@Entity</span>
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_detail"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeDetail</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeDetail</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
  
   <span class="nd">@Id</span>
   <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span>
@@ -342,7 +342,7 @@ Object detached from session. It happened when session is closed or you can manu
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Entity</span>
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
  
   <span class="nd">@Id</span>
   <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">)</span>
@@ -352,22 +352,22 @@ Object detached from session. It happened when session is closed or you can manu
   <span class="nd">@OneToOne</span>
   <span class="nd">@MapsId</span>
   <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_badge_id"</span><span class="o">)</span>
-  <span class="kd">private</span> <span class="n">EmployeeBadge</span> <span class="n">employeeBadge</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">EmployeeBadge</span> <span class="n">employeeBadge</span><span class="o">;</span>
    
   <span class="o">...</span>
 <span class="o">}</span>
  
 <span class="nd">@Entity</span>
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_badge"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeBadge</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeBadge</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
  
   <span class="nd">@Id</span>
   <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"ID"</span><span class="o">)</span>
   <span class="nd">@GeneratedValue</span>
-  <span class="kd">private</span> <span class="n">Integer</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
  
-  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">,</span> <span class="n">cascade</span> <span class="o">=</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">)</span>
-  <span class="kd">private</span> <span class="n">Employee</span> <span class="n">employee</span><span class="o">;</span>
+  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">,</span> <span class="n">cascade</span> <span class="o">=</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">ALL</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="nc">Employee</span> <span class="n">employee</span><span class="o">;</span>
  
   <span class="o">....</span>
 <span class="o">}</span></code></pre></figure>
@@ -379,11 +379,11 @@ Object detached from session. It happened when session is closed or you can manu
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Project</span><span class="o">{</span>
   <span class="nd">@Id</span>
   <span class="nd">@GeneratedValue</span>
-  <span class="kd">public</span> <span class="n">Long</span> <span class="n">projectId</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">Long</span> <span class="n">projectId</span><span class="o">;</span>
 
   <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"project"</span><span class="o">)</span>
   <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"projectId"</span><span class="o">)</span>
-  <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">;</span>
+  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">;</span>
   <span class="o">....</span>
 <span class="o">}</span>
 <span class="nd">@Entity</span>
@@ -391,7 +391,7 @@ Object detached from session. It happened when session is closed or you can manu
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
   <span class="nd">@Id</span>
   <span class="nd">@GeneratedValue</span>
-  <span class="kd">public</span> <span class="n">Long</span> <span class="n">employeeId</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">Long</span> <span class="n">employeeId</span><span class="o">;</span>
   <span class="o">....</span>
 <span class="o">}</span>
 
@@ -402,7 +402,7 @@ Object detached from session. It happened when session is closed or you can manu
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Project</span><span class="o">{</span>
   <span class="nd">@Id</span>
   <span class="nd">@GeneratedValue</span>
-  <span class="kd">public</span> <span class="n">Long</span> <span class="n">projectId</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">Long</span> <span class="n">projectId</span><span class="o">;</span>
   <span class="o">....</span>
 <span class="o">}</span>
 <span class="nd">@Entity</span>
@@ -410,7 +410,7 @@ Object detached from session. It happened when session is closed or you can manu
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
   <span class="nd">@ManyToOne</span>
   <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"projectId"</span><span class="o">)</span> <span class="c1">// if this annotation not present it defaults to table relation @JoinTable(name = "project_employee")</span>
-  <span class="n">Project</span> <span class="n">project</span><span class="o">;</span>
+  <span class="nc">Project</span> <span class="n">project</span><span class="o">;</span>
   <span class="o">.....</span>
 <span class="o">}</span>
 
@@ -422,26 +422,26 @@ Object detached from session. It happened when session is closed or you can manu
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span><span class="o">{</span>
   <span class="nd">@Id</span>
   <span class="nd">@GeneratedValue</span>
-  <span class="kd">public</span> <span class="n">Long</span> <span class="n">taskId</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">Long</span> <span class="n">taskId</span><span class="o">;</span>
 
   <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"tasks"</span><span class="o">)</span>
-  <span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">employees</span>
+  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span>
   <span class="o">....</span>
 <span class="o">}</span>
 <span class="nd">@Entity</span>
 <span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span><span class="o">{</span>
-  <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="o">{</span> <span class="n">CascadeType</span><span class="o">.</span><span class="na">ALL</span> <span class="o">})</span>
+  <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="o">{</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">ALL</span> <span class="o">})</span>
   <span class="nd">@JoinTable</span><span class="o">(</span>
       <span class="n">name</span> <span class="o">=</span> <span class="s">"Employee_Project"</span><span class="o">,</span> 
       <span class="n">joinColumns</span> <span class="o">=</span> <span class="o">{</span> <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"employee_id"</span><span class="o">)</span> <span class="o">},</span> 
       <span class="n">inverseJoinColumns</span> <span class="o">=</span> <span class="o">{</span> <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"task_id"</span><span class="o">)</span> <span class="o">}</span>
   <span class="o">)</span>
-  <span class="n">List</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span> <span class="n">tasks</span><span class="o">;</span>
+  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Task</span><span class="o">&gt;</span> <span class="n">tasks</span><span class="o">;</span>
 
   <span class="nd">@Id</span>
   <span class="nd">@GeneratedValue</span>
-  <span class="kd">public</span> <span class="n">Long</span> <span class="n">employeeId</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">Long</span> <span class="n">employeeId</span><span class="o">;</span>
   <span class="o">.....</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -456,20 +456,20 @@ Object detached from session. It happened when session is closed or you can manu
   <li>public Query setParameter(String name, Object value)</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">hql</span> <span class="o">=</span> <span class="s">"FROM Employee E WHERE E.id = :employee_id"</span><span class="o">;</span>
-<span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="n">hql</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">hql</span> <span class="o">=</span> <span class="s">"FROM Employee E WHERE E.id = :employee_id"</span><span class="o">;</span>
+<span class="nc">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="n">hql</span><span class="o">);</span>
 <span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"employee_id"</span><span class="o">,</span><span class="mi">1000</span><span class="o">);</span>
-<span class="n">List</span> <span class="n">results</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">list</span><span class="o">();</span>
+<span class="nc">List</span> <span class="n">results</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">list</span><span class="o">();</span>
 
 <span class="o">....</span>
 
-<span class="n">String</span> <span class="n">hql</span> <span class="o">=</span> <span class="s">"UPDATE Employee set age = :age "</span>  <span class="o">+</span> 
+<span class="nc">String</span> <span class="n">hql</span> <span class="o">=</span> <span class="s">"UPDATE Employee set age = :age "</span>  <span class="o">+</span> 
              <span class="s">"WHERE id = :empId"</span><span class="o">;</span>
-<span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="n">hql</span><span class="o">);</span>
+<span class="nc">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="n">hql</span><span class="o">);</span>
 <span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"age"</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
 <span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"empId"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Rows affected: "</span> <span class="o">+</span> <span class="n">count</span><span class="o">);</span></code></pre></figure>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Rows affected: "</span> <span class="o">+</span> <span class="n">count</span><span class="o">);</span></code></pre></figure>
 
 <h3 id="criteria-api">Criteria API.</h3>
 <p>Criteria api helps you to omit sqls or HQL where you have to pass the query as string. Criteria API provides you set of classes and utilities with which you can form queries. You can create Criteria object form session.</p>
@@ -479,26 +479,26 @@ List<employee> results = ct.list();</employee></p>
 
 <p><strong>Using Restriction</strong> - Restriction class with and, or, eq, ne, gt, lt, ge, le, like,ilike, between, in, conjunction, disjunction, isNull, isNotNull, sqlRestriction(String sql, Object value, Type type) etc.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Restrictions</span><span class="o">.</span><span class="na">lt</span><span class="o">(</span><span class="s">"age"</span><span class="o">,</span><span class="mi">20</span><span class="o">));</span>
-<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Restrictions</span><span class="o">.</span><span class="na">sqlRestriction</span><span class="o">(</span><span class="s">"{alias}.firstname like 'San%'"</span><span class="o">));</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="nc">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Restrictions</span><span class="o">.</span><span class="na">lt</span><span class="o">(</span><span class="s">"age"</span><span class="o">,</span><span class="mi">20</span><span class="o">));</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Restrictions</span><span class="o">.</span><span class="na">sqlRestriction</span><span class="o">(</span><span class="s">"{alias}.firstname like 'San%'"</span><span class="o">));</span>
 <span class="n">ct</span><span class="o">.</span><span class="na">setFirstResult</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
 <span class="n">ct</span><span class="o">.</span><span class="na">setMaxResults</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
-<span class="n">ct</span><span class="o">.</span><span class="na">addOrder</span><span class="o">(</span><span class="n">Order</span><span class="o">.</span><span class="na">desc</span><span class="o">(</span><span class="s">"age"</span><span class="o">));</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">()</span></code></pre></figure>
+<span class="n">ct</span><span class="o">.</span><span class="na">addOrder</span><span class="o">(</span><span class="nc">Order</span><span class="o">.</span><span class="na">desc</span><span class="o">(</span><span class="s">"age"</span><span class="o">));</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">()</span></code></pre></figure>
 
 <p><strong>Using Projection to get selecte Columns</strong></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-<span class="n">ProjectionList</span> <span class="n">projList</span> <span class="o">=</span> <span class="n">Projections</span><span class="o">.</span><span class="na">projectionList</span><span class="o">();</span>
-<span class="n">projList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Projections</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">));</span>
-<span class="n">projList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Projections</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">"lastName"</span><span class="o">));</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="nc">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="nc">ProjectionList</span> <span class="n">projList</span> <span class="o">=</span> <span class="nc">Projections</span><span class="o">.</span><span class="na">projectionList</span><span class="o">();</span>
+<span class="n">projList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Projections</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">"firstName"</span><span class="o">));</span>
+<span class="n">projList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Projections</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">"lastName"</span><span class="o">));</span>
 <span class="n">ct</span><span class="o">.</span><span class="na">setProjection</span><span class="o">(</span><span class="n">projList</span><span class="o">);</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">[]&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">[]&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span>
 
-<span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-<span class="n">ct</span><span class="o">.</span><span class="na">setProjection</span><span class="o">(</span><span class="n">Projections</span><span class="o">.</span><span class="na">rowCount</span><span class="o">());</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
+<span class="nc">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="nc">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">setProjection</span><span class="o">(</span><span class="nc">Projections</span><span class="o">.</span><span class="na">rowCount</span><span class="o">());</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
 
 <ul>
   <li>avg(String propertyName)</li>
@@ -511,19 +511,19 @@ List<employee> results = ct.list();</employee></p>
 
 <p><strong>Using query by example</strong>
 Query by example usage a filter object. Let’s say you want filter a employee based on salary and age. Create a filter object with salary and age set.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Employee</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Employee</span><span class="o">();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Employee</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">();</span>
 <span class="n">e</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
 <span class="n">e</span><span class="o">.</span><span class="na">setSalary</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>
-<span class="n">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">Example</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
+<span class="nc">Criteria</span> <span class="n">ct</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createCriteria</span><span class="o">(</span><span class="nc">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ct</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Example</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
 
 <h3 id="native-queries">Native queries.</h3>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT * FROM EMPLOYEE WHERE id = :employee_id"</span><span class="o">;</span>
-<span class="n">SQLQuery</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createSQLQuery</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
-<span class="n">query</span><span class="o">.</span><span class="na">addEntity</span><span class="o">(</span><span class="n">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT * FROM EMPLOYEE WHERE id = :employee_id"</span><span class="o">;</span>
+<span class="nc">SQLQuery</span> <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createSQLQuery</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+<span class="n">query</span><span class="o">.</span><span class="na">addEntity</span><span class="o">(</span><span class="nc">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 <span class="n">query</span><span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"employee_id"</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">list</span><span class="o">();</span></code></pre></figure>
 
 <h2 id="caching-in-hibernate">Caching in Hibernate.</h2>
 <p>Hibernates has two level level of cache. First level is by default there and maintained by session container. You can’t change first level cache. Second level cache is left for developer where he can defined his own caching strategies at each class level. Such as Employee class secondary cache can use any of the below strategies.<br>

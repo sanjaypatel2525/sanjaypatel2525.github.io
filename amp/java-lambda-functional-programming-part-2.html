@@ -162,7 +162,7 @@
 </header>
 <h2 id="java-lambda-and-functional-programming">Java lambda and functional programming</h2>
 <p>Java lambda expressions are syntactical sugars, It is a way of reducing lines of coded.  In other words, trim down the code and increase readability. In this blog, we will be discussing Java lambda and functional programming.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">AddInt</span><span class="err"> </span><span class="n">addFunc</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span><span class="err"> </span><span class="o">-&gt;</span><span class="err"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">AddInt</span><span class="err"> </span><span class="n">addFunc</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span><span class="err"> </span><span class="o">-&gt;</span><span class="err"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
 <span class="mi">1</span>                  <span class="mi">2</span>       <span class="mi">3</span></code></pre></figure>
 <p>Lambda functions are used with functional interfaces in Java. There three important rules to write lambda.</p>
 
@@ -178,7 +178,7 @@ The return type(3) should match to abstract method return type.</p>
     <span class="kt">int</span> <span class="nf">random</span><span class="o">();</span>
 <span class="o">}</span>
 
-<span class="n">FindRandom</span> <span class="n">randomFunc</span> <span class="o">=</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="n">Maths</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>
+<span class="nc">FindRandom</span> <span class="n">randomFunc</span> <span class="o">=</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="nc">Maths</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>
 
 <span class="n">randomFunc</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="c1">// return a random number</span></code></pre></figure>
 
@@ -188,7 +188,7 @@ The return type(3) should match to abstract method return type.</p>
     <span class="kt">int</span> <span class="nf">square</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="n">PrintSquare</span> <span class="n">squareFunc</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">;</span>
+<span class="nc">PrintSquare</span> <span class="n">squareFunc</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">;</span>
 
 <span class="n">squareFunc</span><span class="o">.</span><span class="na">square</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>  <span class="c1">// return 9</span></code></pre></figure>
 
@@ -199,7 +199,7 @@ ToIntBiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction</p>
     <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="n">AddInt</span> <span class="n">add</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
+<span class="nc">AddInt</span> <span class="n">add</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
 
 <span class="n">add</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span> <span class="c1">// return 9</span></code></pre></figure>
 
@@ -209,7 +209,7 @@ ToIntBiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction</p>
     <span class="kt">int</span> <span class="nf">squareAdd</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="n">SquareAndAdd</span> <span class="n">func</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+<span class="nc">SquareAndAdd</span> <span class="n">func</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">;</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">;</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
@@ -236,21 +236,21 @@ ToIntBiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction</p>
 <span class="o">}</span>
 
 <span class="kd">interface</span> <span class="nc">AddIntThenSquare</span><span class="o">{</span> 
-  <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">,</span> <span class="n">DoSquare</span> <span class="n">doSqaure</span><span class="o">);</span>
+  <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">,</span> <span class="nc">DoSquare</span> <span class="n">doSqaure</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="n">DoSquare</span> <span class="n">squareFunc</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">;</span>
-<span class="n">AddIntThenSquare</span> <span class="n">addFunc</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+<span class="nc">DoSquare</span> <span class="n">squareFunc</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">;</span>
+<span class="nc">AddIntThenSquare</span> <span class="n">addFunc</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
     <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="na">square</span><span class="o">(</span><span class="n">k</span><span class="o">);</span> 
 <span class="o">};</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">addFunc</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">squareFunc</span><span class="o">));</span> <span class="c1">//Prints 25</span></code></pre></figure>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">addFunc</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">squareFunc</span><span class="o">));</span> <span class="c1">//Prints 25</span></code></pre></figure>
 
 <h3 id="returnlambda-function-from-the-function">Return Lambda function from the function</h3>
 <p>In the below example, we have a function which takes a string parameter and returns a method(functional interface).</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Calculator</span><span class="o">{</span>  
-  <span class="n">OperationWrapper</span> <span class="nf">getOperationWrapper</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">);</span>
+  <span class="nc">OperationWrapper</span> <span class="nf">getOperationWrapper</span><span class="o">(</span><span class="nc">String</span> <span class="n">type</span><span class="o">);</span>
 <span class="o">}</span>
 
 <span class="kd">interface</span> <span class="nc">OperationWrapper</span><span class="o">{</span>
@@ -258,7 +258,7 @@ ToIntBiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction</p>
 <span class="o">}</span>
 
 
-<span class="n">Calculator</span> <span class="n">c</span> <span class="o">=</span> <span class="n">type</span> <span class="o">-&gt;</span> <span class="o">{</span>
+<span class="nc">Calculator</span> <span class="n">c</span> <span class="o">=</span> <span class="n">type</span> <span class="o">-&gt;</span> <span class="o">{</span>
   <span class="k">switch</span><span class="o">(</span><span class="n">type</span><span class="o">){</span>
     <span class="k">case</span> <span class="s">"add"</span><span class="o">:</span> 
       <span class="k">return</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span>
@@ -271,10 +271,10 @@ ToIntBiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction</p>
   <span class="o">}</span>
 <span class="o">};</span>
     
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"add"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">));</span> <span class="c1">//prints 3</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"substract"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="err"> </span><span class="mi">2</span><span class="o">));</span><span class="err"> </span><span class="c1">//prints -1</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"mulitply"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="err"> </span><span class="mi">2</span><span class="o">));</span><span class="err"> </span><span class="c1">//prints 2</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"devide"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="err"> </span><span class="mi">2</span><span class="o">));</span><span class="err"> </span><span class="c1">//prints 0</span></code></pre></figure>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"add"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">));</span> <span class="c1">//prints 3</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"substract"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="err"> </span><span class="mi">2</span><span class="o">));</span><span class="err"> </span><span class="c1">//prints -1</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"mulitply"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="err"> </span><span class="mi">2</span><span class="o">));</span><span class="err"> </span><span class="c1">//prints 2</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getOperationWrapper</span><span class="o">(</span><span class="s">"devide"</span><span class="o">).</span><span class="na">operate</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="err"> </span><span class="mi">2</span><span class="o">));</span><span class="err"> </span><span class="c1">//prints 0</span></code></pre></figure>
 <p>There is a little more to lambda functions, Double colon operator. It looks something like this.</p>
 
 <p>It might look a little bit confusing but it fairly simple and easy to understand. This is it on our Java lambda and functional programming - Part 2. Please check out next blog in this series <a href="https://abyte.stream/2018/09/15/java-8-double-colon-operator/">Java 8 double colon operator.</a></p>

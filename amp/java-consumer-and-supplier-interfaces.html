@@ -164,17 +164,17 @@
 <h2 id="1-consumer-functionalinterface">1. Consumer functional interface.</h2>
 <p>Consumer functional interface is an interface having only one abstract method that accepts a single parameter and returns nothing. Here is how the interface looks like.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@FunctionalInterface</span>
-<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Consumer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
-    <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">);</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Consumer</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span>
     <span class="o">...</span>
 <span class="o">}</span></code></pre></figure>
 <p>Here is an example of how Consumer interface can be used.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span><span class="err"> </span> 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span><span class="err"> </span> 
 <span class="n">c</span><span class="o">.</span><span class="na">accept</span><span class="o">(</span><span class="s">"TestinG"</span><span class="o">);</span> <span class="c1">//Prints testing</span></code></pre></figure>
 <h3 id="11-consumer-functionalinterface-chaining">1.1 Consumer functional interface chaining</h3>
 <p>One value can be passed to multiple consumers one after one. Here is an example.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">c1</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">());</span>
-<span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">c2</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">c1</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">());</span>
+<span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">c2</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
 
 <span class="n">c1</span><span class="o">.</span><span class="na">andThen</span><span class="o">(</span><span class="n">c2</span><span class="o">).</span><span class="na">accept</span><span class="o">(</span><span class="s">"testing"</span><span class="o">);</span> <span class="c1">// prints "TESTING" and then "7"</span></code></pre></figure>
 <h3 id="12-primitive-consumer-types">1.2 Primitive consumer types</h3>
@@ -187,12 +187,12 @@
 <h2 id="3-supplier-functionalinterface">3. Supplier functional interface.</h2>
 <p>Supplier functional interface is an interface having only one abstract method doesn’t take any parameter but returns one value. This interface is used mainly to generate indefinite values in Java and also can be used in place of the factory patterns.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@FunctionalInterface</span>
-<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Supplier</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
-    <span class="n">T</span> <span class="nf">get</span><span class="o">();</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Supplier</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="no">T</span> <span class="nf">get</span><span class="o">();</span>
 <span class="o">}</span></code></pre></figure>
 <p> 
 Here is an example of how Consumer interface can be used.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">random</span> <span class="o">=</span> <span class="nl">Math:</span><span class="o">:</span><span class="n">random</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Supplier</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;</span> <span class="n">random</span> <span class="o">=</span> <span class="nl">Math:</span><span class="o">:</span><span class="n">random</span><span class="o">;</span>
 <span class="n">random</span><span class="o">.</span><span class="na">get</span><span class="o">();</span> <span class="c1">//Prints a random number</span></code></pre></figure>
 <h3 id="31-primitive-supplier-types">3.1 Primitive supplier types</h3>
 <p>Here are some primitive supplier types.</p>

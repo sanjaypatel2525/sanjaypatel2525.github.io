@@ -182,10 +182,14 @@
 <ul>
   <li>Single prefix underscore - In wildcard import methods/variable with name starting with underscore are not imported.</li>
   <li>Single suffix underscore - Sometime you want use reseverd keyword but they are already taken so you use suffix underscore.</li>
-  <li>Double prefix underscore - The name is mangled, when you list dir(anyobject), it shows classname appended to actual variable name. For ex.
-  self.__xyz = 1 # inside class A
-  print A().__xyz # throws error as it is not defined.
-  print A()._A__xyz # gives the __xyz value.</li>
+  <li>Double prefix underscore - The name is mangled, when you list dir(anyobject), it shows classname appended to actual variable name. For ex.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="bp">self</span><span class="o">.</span><span class="n">__xyz</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># inside class A
+</span>  <span class="k">print</span> <span class="n">A</span><span class="p">()</span><span class="o">.</span><span class="n">__xyz</span> <span class="c1"># throws error as it is not defined.
+</span>  <span class="k">print</span> <span class="n">A</span><span class="p">()</span><span class="o">.</span><span class="n">_A__xyz</span> <span class="c1"># gives the __xyz value.
+</span>  </code></pre></figure>
+<ul>
   <li>Leading and training double underscore - Python reserved methods and variable, don’t use this standard.</li>
   <li>Single underscore - temporary variable from interpreter.
   &gt;&gt;&gt; 20 + 3
@@ -428,7 +432,47 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
   <li>There some more but for advance usage.</li>
 </ul>
 
-<h3 id="inheritance-1">Inheritance.</h3>
+<h2 id="python-specials">Python specials</h2>
+<h3 id="sorting-classes">Sorting classes.</h3>
+<ul>
+  <li>By implementing <strong>lt</strong>
+</li>
+  <li>By sort and key</li>
+</ul>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">attrgetter</span><span class="p">(</span><span class="s">'score'</span><span class="p">))</span></code></pre></figure>
+
+<h3 id="iterator">Iterator</h3>
+<p>Taken from stackoverflow, For example</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">high</span> <span class="o">=</span> <span class="n">high</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># Python 2: def next(self)
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span>
+        <span class="k">raise</span> <span class="nb">StopIteration</span>
+
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="generator">Generator</h3>
+<p>There is other type of iterator as well, this doesn need a full fledged class.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">counter</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="n">low</span>
+    <span class="k">while</span> <span class="n">current</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">current</span>
+        <span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">counter</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
+
+<h2 id="inheritance-1">Inheritance.</h2>
 <figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">BaseClassName1</span><span class="p">,</span><span class="n">BaseClassName2</span><span class="o">..</span><span class="p">):</span>
     <span class="k">pass</span></code></pre></figure>
 

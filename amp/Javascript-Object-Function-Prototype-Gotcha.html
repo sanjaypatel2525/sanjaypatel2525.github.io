@@ -174,13 +174,13 @@
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
 
     <span class="c1">//private variable or closure</span>
-    <span class="kd">var</span> <span class="nx">fullname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">' W'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">fullname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> W</span><span class="dl">'</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="nx">Cat</span><span class="p">(</span><span class="s2">"Carol"</span><span class="p">);</span>  <span class="c1">//probably wrong way to call but still works and 'this' is passed as window. </span>
+<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">"</span><span class="s2">Carol</span><span class="dl">"</span><span class="p">);</span>  <span class="c1">//probably wrong way to call but still works and 'this' is passed as window. </span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// print carol</span>
 
-<span class="kd">var</span> <span class="nx">c2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="s2">"Karen"</span><span class="p">);</span> <span class="c1">// Here new object is created with Cat prototype. So a new 'this' is passed and set the values and assigns back to c2.</span>
+<span class="kd">var</span> <span class="nx">c2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">"</span><span class="s2">Karen</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// Here new object is created with Cat prototype. So a new 'this' is passed and set the values and assigns back to c2.</span>
 
 <span class="nx">Cat</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">===</span> <span class="nx">c1</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">;</span> <span class="c1">// prints true, they are same thing</span>
 <span class="k">typeof</span> <span class="nx">Cat</span><span class="p">;</span> <span class="c1">//give "function", We created Cat as a function</span>

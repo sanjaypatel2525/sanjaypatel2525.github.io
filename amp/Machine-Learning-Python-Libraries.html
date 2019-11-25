@@ -154,7 +154,7 @@
 <header class="header-post" role="banner">
         <div class="content" style="transform: translateY(0px); opacity: 1;">
             
-                <time itemprop="datePublished" datetime="2018-12-12T18:57:06-05:00" class="date">12 Dec 2018 - sanjaypatel2525</time>
+                <time itemprop="datePublished" datetime="2018-12-14T18:57:06-05:00" class="date">14 Dec 2018 - sanjaypatel2525</time>
             
             <h1 class="post-title" itemprop="name">Machine Learning Python Libraries</h1>
             <p itemprop="description" class="subtitle"></p>
@@ -186,7 +186,7 @@
 </span>  <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>    <span class="c1"># Create a rank 2 array
 </span>  <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># Prints "(2, 3)"
 </span>
-  <span class="c1"># intialize with zeros, ones, any other number by np.full((2,2), 7)
+  <span class="c1"># initialize with zeros, ones, any other number by np.full((2,2), 7)
 </span>  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [[ 0.  0.][ 0.  0.]]
 </span>  <span class="c1"># eye for diagonal filled with given number and others zero.
 </span>  <span class="n">a</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># [[ 1.  0.] [ 0.  1.]]
@@ -197,9 +197,9 @@
 </span>  <span class="c1"># a[[0, 0], [1, 1]] is equivalent to [a[0, 1], [0, 1]]
 </span>  <span class="c1"># a[[0, 1, 2], [0, 1, 0]] is equivalent to [a[0, 0], a[1, 1], a[2, 0]])
 </span>
-  <span class="c1"># Evalulate condition
+  <span class="c1"># Evaluate condition
 </span>  <span class="n">bool_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># prints true or false based on condition[[False False][ True  True][ True  True]]
-</span>  <span class="c1"># a[bool_idx] and  a[a &gt; 2] will print 1D array of all value mathing the criteria.
+</span>  <span class="c1"># a[bool_idx] and  a[a &gt; 2] will print 1D array of all value matching the criteria.
 </span>
   <span class="c1"># array maths
 </span>  <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
@@ -248,7 +248,7 @@
   </li>
   <li>
     <p>A closure look to array.
-<code class="highlight language-java" data-lang="java"><span class="n">numpy</span><span class="o">.</span><span class="na">array</span><span class="o">(</span><span class="n">object</span><span class="o">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">None</span><span class="o">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="n">True</span><span class="o">,</span> <span class="n">order</span> <span class="o">=</span> <span class="n">None</span><span class="o">,</span> <span class="n">subok</span> <span class="o">=</span> <span class="n">False</span><span class="o">,</span> <span class="n">ndmin</span> <span class="o">=</span> <span class="mi">0</span><span class="o">)</span>
+<code class="highlight language-java" data-lang="java"><span class="n">numpy</span><span class="o">.</span><span class="na">array</span><span class="o">(</span><span class="n">object</span><span class="o">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nc">None</span><span class="o">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="nc">True</span><span class="o">,</span> <span class="n">order</span> <span class="o">=</span> <span class="nc">None</span><span class="o">,</span> <span class="n">subok</span> <span class="o">=</span> <span class="nc">False</span><span class="o">,</span> <span class="n">ndmin</span> <span class="o">=</span> <span class="mi">0</span><span class="o">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="na">array</span><span class="o">([</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">],</span> <span class="n">ndmin</span><span class="o">=</span><span class="mi">2</span><span class="o">,</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">complex</span><span class="o">)</span> 
 <span class="err">#</span> <span class="o">[</span> <span class="mi">1</span><span class="o">.+</span><span class="mi">0</span><span class="o">.</span><span class="na">j</span><span class="o">,</span>  <span class="mi">2</span><span class="o">.+</span><span class="mi">0</span><span class="o">.</span><span class="na">j</span><span class="o">,</span>  <span class="mi">3</span><span class="o">.+</span><span class="mi">0</span><span class="o">.</span><span class="na">j</span><span class="o">]</span></code></p>
   </li>
@@ -379,7 +379,7 @@
 </span><span class="s"># Joins. By default panda find join key to join by matching name if not you have to specify separately. Also, you can choose join strategy inner, outer,left, right. Let'</span><span class="n">s</span> <span class="n">say</span> <span class="n">zoo</span> <span class="n">has</span> <span class="n">animals</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">columns</span> <span class="ow">and</span> <span class="n">zoo_eats</span> <span class="n">has</span> <span class="n">animal</span> <span class="ow">and</span> <span class="n">what</span> <span class="n">animal</span> <span class="n">eats</span><span class="o">.</span>
 <span class="n">zoo</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">zoo_eats</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s">'left'</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">)</span>
 
-<span class="c1"># fill missings
+<span class="c1"># fill missing
 </span><span class="n">xyz</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">'unknown'</span><span class="p">)</span>
 
 <span class="c1"># Sorting.

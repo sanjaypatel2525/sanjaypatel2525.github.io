@@ -186,7 +186,7 @@ For example</p>
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="n">Utilty</span> <span class="n">utilty</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Utilty</span><span class="o">();</span>
+<span class="nc">Utilty</span> <span class="n">utilty</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Utilty</span><span class="o">();</span>
 <span class="n">utilty</span><span class="o">.</span><span class="na">addInt</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span></code></pre></figure>
 <p>Here just to add two integers we had to create a class and to access methods you need to create class object and access. But as you can see this function is a pure function, it doesn’t use object state and return the values based on input variables. For this Java 8 introduced function interfaces.</p>
 <h2 id="java-8-lambda-and-functional-programming">Java 8 lambda and functional programming</h2>
@@ -194,11 +194,11 @@ For example</p>
     <span class="kt">int</span> <span class="nf">addInt</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="n">AddInt</span> <span class="n">addFunc</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span> <span class="o">}</span> <span class="c1">//Line 2</span>
+<span class="nc">AddInt</span> <span class="n">addFunc</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span> <span class="o">}</span> <span class="c1">//Line 2</span>
 <span class="c1">//or</span>
-<span class="n">AddInt</span><span class="err"> </span><span class="n">addFunc</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span><span class="err"> </span><span class="o">-&gt;</span><span class="err"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span> <span class="c1">//Line 2</span>
+<span class="nc">AddInt</span><span class="err"> </span><span class="n">addFunc</span><span class="err"> </span><span class="o">=</span><span class="err"> </span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span><span class="err"> </span><span class="o">-&gt;</span><span class="err"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">;</span> <span class="c1">//Line 2</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">addFunc</span><span class="o">.</span><span class="na">addInt</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">));</span> <span class="c1">// prints 3</span></code></pre></figure>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">addFunc</span><span class="o">.</span><span class="na">addInt</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">));</span> <span class="c1">// prints 3</span></code></pre></figure>
 <p>Let’s forget about the interface, what just happened with line 2. You must have seen in Javascript something like this.</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//Javascript</span>
 <span class="kt">var</span> <span class="n">addFunc</span> <span class="o">=</span> <span class="n">function</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">){</span>
