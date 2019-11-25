@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Machine Learning Python Libraries
-date: 2018-12-12 18:57:06.000000000 -05:00
+date: 2018-12-14 18:57:06.000000000 -05:00
 type: post
 parent_id: '0'
 published: true
 password: ''
 status: publish
 categories: [Machine Learning Notes]
-tags: []
+tags: [Machine Learning]
 randomImage: '31'
 meta:
   _edit_last: '1'
@@ -44,7 +44,7 @@ There are many Python packages used in ML, but here are some important ones.
   b = np.array([[1,2,3],[4,5,6]])    # Create a rank 2 array
   print(b.shape) # Prints "(2, 3)"
 
-  # intialize with zeros, ones, any other number by np.full((2,2), 7)
+  # initialize with zeros, ones, any other number by np.full((2,2), 7)
   a = np.zeros((2,2)) # [[ 0.  0.][ 0.  0.]]
   # eye for diagonal filled with given number and others zero.
   a =  np.eye(2)  # [[ 1.  0.] [ 0.  1.]]
@@ -55,9 +55,9 @@ There are many Python packages used in ML, but here are some important ones.
   # a[[0, 0], [1, 1]] is equivalent to [a[0, 1], [0, 1]]
   # a[[0, 1, 2], [0, 1, 0]] is equivalent to [a[0, 0], a[1, 1], a[2, 0]])
 
-  # Evalulate condition
+  # Evaluate condition
   bool_idx = (a > 2) # prints true or false based on condition[[False False][ True  True][ True  True]]
-  # a[bool_idx] and  a[a > 2] will print 1D array of all value mathing the criteria.
+  # a[bool_idx] and  a[a > 2] will print 1D array of all value matching the criteria.
 
   # array maths
   print(x + y)
@@ -93,12 +93,12 @@ There are many Python packages used in ML, but here are some important ones.
   #Generate 3 random integers b/w 1 and 10
   print(np.random.randint(0,11,3))
 
-  # get random from noraml distribution
+  # get random from normal distribution
   print(np.random.normal(1.0,2.0,3))
 
 {% endhighlight  %}
 
-* Numpy gives a class which helps to create homogeneous strutcutre, you can say numpy defined datatypes. Here is signature, need not to remember.
+* Numpy gives a class which helps to create homogeneous structure, you can say numpy defined datatypes. Here is signature, need not to remember.
 {% ihighlight PYTHON %}
   numpy.dtype(object, align, copy)
   dt = np.dtype([('age',np.int8)]) 
@@ -250,7 +250,7 @@ xyz.groupby('animal').mean()
 # Joins. By default panda find join key to join by matching name if not you have to specify separately. Also, you can choose join strategy inner, outer,left, right. Let's say zoo has animals and other columns and zoo_eats has animal and what animal eats.
 zoo.merge(zoo_eats, how = 'left', left_on = 'animal', right_on = 'animal')
 
-# fill missings
+# fill missing
 xyz.fillna('unknown')
 
 # Sorting.

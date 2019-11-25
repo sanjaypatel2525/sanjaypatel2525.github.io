@@ -36,9 +36,12 @@ There are three type of methods in class is **instance methods**(default, first 
   * Single prefix underscore - In wildcard import methods/variable with name starting with underscore are not imported.
   * Single suffix underscore - Sometime you want use reseverd keyword but they are already taken so you use suffix underscore.
   * Double prefix underscore - The name is mangled, when you list dir(anyobject), it shows classname appended to actual variable name. For ex.
+  
+  {% highlight Python %}
   self.__xyz = 1 # inside class A
   print A().__xyz # throws error as it is not defined.
   print A()._A__xyz # gives the __xyz value.
+  {% endhighlight %}
   * Leading and training double underscore - Python reserved methods and variable, don't use this standard.
   * Single underscore - temporary variable from interpreter.
   \>>> 20 + 3
@@ -229,7 +232,48 @@ _\_getattr__(self, name), _\_setattr__(self, name, value),delattr
 __copy__(self),__deepcopy__(self, memodict={})
 * There some more but for advance usage.
 
-### Inheritance.
+## Python specials
+### Sorting classes.
+* By implementing __lt__
+* By sort and key 
+{% highlight PYTHON%}x.sort(key=operator.attrgetter('score')){% endhighlight  %}
+
+### Iterator
+Taken from stackoverflow, For example 
+{% highlight PYTHON%}
+class Counter:
+    def __init__(self, low, high):
+        self.current = low - 1
+        self.high = high
+
+    def __iter__(self):
+        return self
+
+    def __next__(self): # Python 2: def next(self)
+        self.current += 1
+        if self.current < self.high:
+            return self.current
+        raise StopIteration
+
+
+for c in Counter(3, 9):
+    print(c)
+{% endhighlight %}
+
+### Generator
+There is other type of iterator as well, this doesn need a full fledged class. 
+{% highlight PYTHON%}
+def counter(low, high):
+    current = low
+    while current < high:
+        yield current
+        current += 1
+
+for c in counter(3, 9):
+    print(c)
+{% endhighlight %}
+
+## Inheritance.
 {% highlight Python %}
   class DerivedClassName(BaseClassName1,BaseClassName2..):
     pass

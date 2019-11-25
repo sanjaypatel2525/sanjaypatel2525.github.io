@@ -42,7 +42,7 @@ author:
   first_name: ''
   last_name: ''
 ---
-Many us moight have faced issue with cached static content - cache buster, Every deployment whenever there is change in static files it becomes a painful job to ask your end customer to clear the cache. In order to get rid of this problem, here are few ideas for cache buster.
+Many us might have faced issue with cached static content - cache buster, Every deployment whenever there is change in static files it becomes a painful job to ask your end customer to clear the cache. In order to get rid of this problem, here are few ideas for cache buster.
 
 Append version number in front of changed files references ( /path/file.js?v=1.1)
 Reduce cache expiry header
@@ -79,7 +79,7 @@ It is bit complex and depending how complex is your project structure it can tak
 Pros:
 
 Unlike first one it doesn't require any changes to other files on each deployment
-Can be used to minfy and compress files as well
+Can be used to minify and compress files as well
 
 Cons:
 * One time setup requires some time and depending on how complex is you project structuring it might require lot of changes.
