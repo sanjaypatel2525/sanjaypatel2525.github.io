@@ -64,6 +64,7 @@
     <link rel="canonical" href="https://abyte.stream/Spring-Bean-life-cycle/">
     <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -157,10 +158,10 @@
 
 <p>Here is rough idea behind method that will be called.</p>
 <h2 id="bean-initialize">Bean Initialize</h2>
-<p><img src="/assets/2019-05-12-Spring Bean life cycle-1.JPG" alt="smiley" /></p>
+<p><img src="/assets/2019-05-12-Spring Bean life cycle-1.JPG" alt="smiley" class="lazyload" /></p>
 
 <h2 id="bean-destroy">Bean Destroy</h2>
-<p><img src="/assets/2019-05-12-Spring Bean life cycle-2.JPG" alt="smiley" /></p>
+<p><img src="/assets/2019-05-12-Spring Bean life cycle-2.JPG" alt="smiley" class="lazyload" /></p>
 
 <h2 id="java-supported-postconstruct-and-predestroy">Java supported @PostConstruct and @PreDestroy</h2>
 <p>This is the very simple one, you just need to annotate any method inside you Bean class with these annotations and spring will take care of calling it. @PostConstruct is called once bean is intialized an ready for use. @PreDestroy is called once conatiner tries to remove the bean.</p>

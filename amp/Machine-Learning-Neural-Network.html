@@ -165,7 +165,7 @@
 <p>Neural network set of network with input, hidden and output neurons/nodes. Each neuron is <strong>activation function</strong> (for ex gradient descend) and each synapse/link have some weights. Every node maintains error metric and coefficient are adjusted to lower the error metric using back propagation. <strong>Bias</strong> are some constant values at neuron.</p>
 
 <p><strong>Ok all above is fine but why?</strong><br>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG" alt="" width="218" height="195" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG" alt="" width="218" height="195"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG" alt="" class="lazyload" width="218" height="195" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG" alt="" class="lazyload" width="218" height="195"></noscript></amp-img>
 Let think of example, what number is there in below image. It is blurred not accurate but it is 2. Every human handwriting will create different image of 2 probably but human understand it is 2. How machine can know it is 2. Actually it doesn’t know it, it says the probability of this image being 2 is let say 90%. And we write the code which can take pixel of this image as input and generate possible results with probability. How much a pixel is lit can be i/p for next layer and affect how much next layer neuron are lit, in the end if algorithm is good it will lit the output neuron which is marked for 2 with some probability.</p>
 
 <p><strong>activation function</strong> - Typically have Non-linear, continuos differentiable and fixed range.</p>
@@ -202,7 +202,7 @@ Let think of example, what number is there in below image. It is blurred not acc
 <p>Goal is to adjust the weights so that each overall cost is minimized.
 Example of 1 node at each level.</p>
 
-<p><amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" width="313" height="416" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" width="313" height="416"></noscript></amp-img>
+<p><amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" class="lazyload" width="313" height="416" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" class="lazyload" width="313" height="416"></noscript></amp-img>
 Calculate change in C wrt to W<sub>L</sub>. <script type="math/tex">\frac{\delta C_0}{\delta w^L}=\frac{\delta z^L}{\delta w^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
 = a^{(L-1)}.\sigma'(z^L).2(a^L-y)</script>
 For k number of training examples. <script type="math/tex">C_1,C_2..C_k</script> will be the cost function and nudging L level weight w<sub>L</sub> will be <script type="math/tex">\frac{\delta C}{\delta w^L}=\frac{1}{n}\sum_{k=0}^{n-1}\frac{\delta C_k}{\delta w^L}</script>
@@ -220,7 +220,7 @@ So C wrt to <script type="math/tex">b^L</script> and <script type="math/tex">a^{
 = w^L.\sigma'(z^L).2(a^L-y)</script>
 Now let take k node at L-1 level and j nodes at L level. At this level <script type="math/tex">\nabla C</script> changes at seems complex but it is not. 
 <script type="math/tex">\Delta C =\eta \nabla C</script> Where <script type="math/tex">\nabla c</script> is negative small change, gradient descend and <script type="math/tex">\eta</script> is learning rate or step size. Keeping too small will slow down and keeping big will overshoot. Later update w and b by these small changes.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" width="1233" height="637" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" width="1233" height="637"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" class="lazyload" width="1233" height="637" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" class="lazyload" width="1233" height="637"></noscript></amp-img></p>
 
 <p>Commutatively we can say <script type="math/tex">\delta_j^L=\frac{\delta C}{\delta z^l_j}</script>. If this value big that mean changes at this z will make big impact to lower down the C rather then other lower derivative.</p>
 
@@ -297,23 +297,23 @@ Now let take k node at L-1 level and j nodes at L level. At this level <script t
 </ul>
 
 <h1 id="neural-network-andrews-ng-way">Neural Network Andrews Ng way</h1>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network1.JPG" alt="" width="672" height="342" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network1.JPG" alt="" width="672" height="342"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network2.JPG" alt="" width="890" height="415" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network2.JPG" alt="" width="890" height="415"></noscript></amp-img>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network1.JPG" alt="" class="lazyload" width="672" height="342" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network1.JPG" alt="" class="lazyload" width="672" height="342"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network2.JPG" alt="" class="lazyload" width="890" height="415" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network2.JPG" alt="" class="lazyload" width="890" height="415"></noscript></amp-img>
 Vectorization takes advantage of SIMD (Single instruction Multiple data)</p>
 <h3 id="gradient-descend-vectorization">Gradient Descend vectorization</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network9.JPG" alt="" width="698" height="365" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network9.JPG" alt="" width="698" height="365"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network3.JPG" alt="" width="916" height="476" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network3.JPG" alt="" width="916" height="476"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network4.JPG" alt="" width="904" height="483" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network4.JPG" alt="" width="904" height="483"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG" alt="" width="913" height="475" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG" alt="" width="913" height="475"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network9.JPG" alt="" class="lazyload" width="698" height="365" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network9.JPG" alt="" class="lazyload" width="698" height="365"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network3.JPG" alt="" class="lazyload" width="916" height="476" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network3.JPG" alt="" class="lazyload" width="916" height="476"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network4.JPG" alt="" class="lazyload" width="904" height="483" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network4.JPG" alt="" class="lazyload" width="904" height="483"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG" alt="" class="lazyload" width="913" height="475" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG" alt="" class="lazyload" width="913" height="475"></noscript></amp-img></p>
 
 <ul>
   <li>In NN input layer is not counted as layer, so we start from <script type="math/tex">a^[0]</script> which is input layer. If you see 3 layers including input and output, it will be called 2 layer NN.</li>
 </ul>
 
 <p><strong>Multilayer neural network vectorized form</strong>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network6.JPG" alt="" width="649" height="332" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network6.JPG" alt="" width="649" height="332"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network7.JPG" alt="" width="689" height="379" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network7.JPG" alt="" width="689" height="379"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG" alt="" width="698" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG" alt="" width="698" height="384"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network6.JPG" alt="" class="lazyload" width="649" height="332" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network6.JPG" alt="" class="lazyload" width="649" height="332"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network7.JPG" alt="" class="lazyload" width="689" height="379" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network7.JPG" alt="" class="lazyload" width="689" height="379"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG" alt="" class="lazyload" width="698" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG" alt="" class="lazyload" width="698" height="384"></noscript></amp-img></p>
 
 <p><strong>Derivative of activation function</strong>
 <script type="math/tex">% <![CDATA[
@@ -322,16 +322,16 @@ tanh = g(z)=tanh(z) = a \;then\;g'(z) = 1-a^2\\
 relu = g(z)=max(0,z) = a \;then\;g'(z) = \begin{cases} 0\;when\;z<0\\1\;when\;z>0\end{cases}\\
 leaky relu = g(z)=max(0.01z,z) = a \;then\;g'(z) = \begin{cases} 0.01\;when\;z<0\\1\;when\;z>0\end{cases} %]]></script></p>
 
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG" alt="" width="1073" height="583" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG" alt="" width="1073" height="583"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG" alt="" class="lazyload" width="1073" height="583" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG" alt="" class="lazyload" width="1073" height="583"></noscript></amp-img></p>
 
 <p><strong>Keep track of dimensions</strong>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network11.JPG" alt="" width="456" height="503" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network11.JPG" alt="" width="456" height="503"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network11.JPG" alt="" class="lazyload" width="456" height="503" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network11.JPG" alt="" class="lazyload" width="456" height="503"></noscript></amp-img></p>
 
 <p><strong>Deep network calculations</strong>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network12.JPG" alt="" width="453" height="503" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network12.JPG" alt="" width="453" height="503"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network12.JPG" alt="" class="lazyload" width="453" height="503" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network12.JPG" alt="" class="lazyload" width="453" height="503"></noscript></amp-img></p>
 
 <p><strong>Backward and forward propagation formulas</strong>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network13.JPG" alt="" width="460" height="506" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network13.JPG" alt="" width="460" height="506"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network13.JPG" alt="" class="lazyload" width="460" height="506" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network13.JPG" alt="" class="lazyload" width="460" height="506"></noscript></amp-img></p>
 
 <h2 id="fine-tune-nn">Fine-tune NN</h2>
 <p>Earlier ML used to have 70, 30 ratio to train and test set. Now a day due to big data the data set has increase so train set goes around 99% remaining is dev and test set. Dev test cross validation data for developer to find out right ML algorithm. Dev and test set should be from same distribution set, if not dev and test wouldn’t be same.</p>
@@ -344,21 +344,21 @@ Fix variance: More data or Regularize, or better NN architecture.</p>
 <h3 id="regularization">Regularization</h3>
 <p>L1 - Absolute value of weights
 L2(weight decay) - Squared value of weights
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network14.JPG" alt="" width="1070" height="332" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network14.JPG" alt="" width="1070" height="332"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network14.JPG" alt="" class="lazyload" width="1070" height="332" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network14.JPG" alt="" class="lazyload" width="1070" height="332"></noscript></amp-img></p>
 
 <h3 id="dropout">Dropout</h3>
 <p>Dropout, on off different nodes at different inputs tends to generalize the network. This is also one of the regularization technique.
 <strong>Inverted Dropout</strong>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network15.JPG" alt="" width="690" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network15.JPG" alt="" width="690" height="388"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network15.JPG" alt="" class="lazyload" width="690" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network15.JPG" alt="" class="lazyload" width="690" height="388"></noscript></amp-img></p>
 
 <h3 id="vanishing-and-exploding-gradient-descend">Vanishing and exploding Gradient descend.</h3>
 <p>Many times gradient becomes to big or too small which just diverges the cost function. To overcome this issue there are multiple solution.
 <strong>Random Weights initialization based on Activation function</strong>
 Based on number of input node distribute weight to sum up to 1, which make each weight 1/n. Relu works better with 2 in place of 1.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network16.JPG" alt="" width="694" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network16.JPG" alt="" width="694" height="386"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network16.JPG" alt="" class="lazyload" width="694" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network16.JPG" alt="" class="lazyload" width="694" height="386"></noscript></amp-img></p>
 
 <p><strong>Gradient Checking</strong> - Sometime while coding we would want to know weather our gradients calculation are correct in code. To do so we merge all W’s, b’s,dW’s and db’s to single dimension array call θ and dθ. Later calculate approx dθ by nudging ε a bit. In the end compare the difference between these approx and model’s calculated derivatives.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network17.JPG" alt="" width="693" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network17.JPG" alt="" width="693" height="384"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network17.JPG" alt="" class="lazyload" width="693" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network17.JPG" alt="" class="lazyload" width="693" height="384"></noscript></amp-img></p>
 
 <p><strong>Grad check Do’s and Don’ts</strong></p>
 <ul>
@@ -378,17 +378,17 @@ Based on number of input node distribute weight to sum up to 1, which make each 
 <p><strong>Fit mini batch to CPU GPU memory to run faster</strong>, such 64, 128, 246,512, beyond this is rare for now.</p>
 
 <p><strong>Exponential weighted Avg</strong> - Averaging current with previous values with some proportion to previous values.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network18.JPG" alt="" width="693" height="399" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network18.JPG" alt="" width="693" height="399"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG" alt="" width="704" height="268" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG" alt="" width="704" height="268"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network18.JPG" alt="" class="lazyload" width="693" height="399" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network18.JPG" alt="" class="lazyload" width="693" height="399"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG" alt="" class="lazyload" width="704" height="268" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG" alt="" class="lazyload" width="704" height="268"></noscript></amp-img></p>
 
 <p><strong>Bias Correction</strong> - In Exponential weighted average, initial average is biased as it starts from zero, to fix we use a different formula. 
 <script type="math/tex">v_{t+1} = \frac{v_t}{1-\beta^t}</script></p>
 
 <p><strong>Apply EWA to Gradient Descend</strong> - This somewhat resolves issue of noise due small batch size, also helps with the issue of overshooting with higher learning rate. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG" alt="" width="533" height="182" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG" alt="" width="533" height="182"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG" alt="" class="lazyload" width="533" height="182" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG" alt="" class="lazyload" width="533" height="182"></noscript></amp-img></p>
 
 <p><strong>RMS prop</strong> - Root mean square, same as momentum dampening.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG" alt="" width="700" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG" alt="" width="700" height="383"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG" alt="" class="lazyload" width="700" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG" alt="" class="lazyload" width="700" height="383"></noscript></amp-img></p>
 
 <p><strong>Adam Optimization</strong> - It is combination of both RMS and EWA.</p>
 
@@ -401,9 +401,9 @@ Based on number of input node distribute weight to sum up to 1, which make each 
 <h3 id="batch-norm">Batch Norm</h3>
 <p>Sometime it is good to normalize z’s or a’z of each layer.
 We calculate tilda z, as normalized form of z, and rescale it with β and γ
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network23.JPG" alt="" width="698" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network23.JPG" alt="" width="698" height="388"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network23.JPG" alt="" class="lazyload" width="698" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network23.JPG" alt="" class="lazyload" width="698" height="388"></noscript></amp-img>
 β is constant and can be eliminated as we already have rescaled the z.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network24.JPG" alt="" width="699" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network24.JPG" alt="" width="699" height="383"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network24.JPG" alt="" class="lazyload" width="699" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network24.JPG" alt="" class="lazyload" width="699" height="383"></noscript></amp-img>
 Batch norm intuition is about, hidden layer don’t need to bother about changing inputs due to earlier layer learning, with z and  a norm hidden layer will learn based on a standard input, doesn’t whatever initial layers have. It make hidden layers independent of initial layers.</p>
 <ul>
   <li>At test time, we use trained EWA of μ and σ value.</li>
@@ -411,28 +411,28 @@ Batch norm intuition is about, hidden layer don’t need to bother about changin
 
 <h2 id="softmax-classification">Softmax Classification.</h2>
 <p>When the output of NN has predefined classes, it becomes a problem of softmax where we calculate probability of classes. Hardmax just says 1 for one class and others as 0.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network25.JPG" alt="" width="694" height="387" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network25.JPG" alt="" width="694" height="387"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network25.JPG" alt="" class="lazyload" width="694" height="387" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network25.JPG" alt="" class="lazyload" width="694" height="387"></noscript></amp-img></p>
 
 <h3 id="single-number-evaluation-matrix-for-model">Single Number Evaluation matrix for Model.</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG" alt="" width="656" height="359" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG" alt="" width="656" height="359"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG" alt="" class="lazyload" width="656" height="359" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG" alt="" class="lazyload" width="656" height="359"></noscript></amp-img></p>
 
 <p><strong>F1 score</strong> is harmonic mean(reduces effect of outlier average), <strong>precision</strong>(% of actual cats out of model recognized cats) and <strong>recall</strong>(% of correctly recognized cat out of actual cats)</p>
 
 <h3 id="satisfying-and-optimizing-metric">Satisfying and optimizing metric</h3>
 <p>Sometime there is good precision of model but take a lot time, some has low precision but takes less time. Create  Satisfying criteria, what is max time be bare to run and with that find model which has highest precision.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG" alt="" width="663" height="370" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG" alt="" width="663" height="370"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG" alt="" class="lazyload" width="663" height="370" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG" alt="" class="lazyload" width="663" height="370"></noscript></amp-img></p>
 
 <ul>
   <li>Dev and test set should be from same distribution.</li>
   <li>We can omit test set but not advised.</li>
   <li>For really unwanted predicted result, penalize those result to increase the error percentage.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network28.JPG" alt="" width="660" height="372" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network28.JPG" alt="" width="660" height="372"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network28.JPG" alt="" class="lazyload" width="660" height="372" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network28.JPG" alt="" class="lazyload" width="660" height="372"></noscript></amp-img>
 </li>
 </ul>
 
 <h2 id="bayess-error">Bayes’s Error</h2>
 <p>It’s a upper limit defined by us before starting on any problem, We can’t make machine more accurate they Bayes’s error. For ex, faded image, even human give answer only 80% times right then machine can’t have 100% accuracy so we define an upper limit for machine learning and it is Baye’s error. Sometime It is same as human error but always above then human error.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network29.JPG" alt="" width="859" height="534" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network29.JPG" alt="" width="859" height="534"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network29.JPG" alt="" class="lazyload" width="859" height="534" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network29.JPG" alt="" class="lazyload" width="859" height="534"></noscript></amp-img></p>
 
 <p>Avoidable Bias is gap between human error and training error.</p>
 
@@ -442,50 +442,50 @@ Batch norm intuition is about, hidden layer don’t need to bother about changin
 </ul>
 
 <h3 id="tuning-model-using">Tuning Model using.</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network30.JPG" alt="" width="645" height="364" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network30.JPG" alt="" width="645" height="364"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network30.JPG" alt="" class="lazyload" width="645" height="364" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network30.JPG" alt="" class="lazyload" width="645" height="364"></noscript></amp-img></p>
 
 <h3 id="transfer-learning">Transfer learning</h3>
 <p>Sometime you can use existing model with different problem such as cat detection to radiology or speech recognition to wake work. In this you just add remove last layer and append one or more extra layer.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network31.JPG" alt="" width="658" height="366" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network31.JPG" alt="" width="658" height="366"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network31.JPG" alt="" class="lazyload" width="658" height="366" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network31.JPG" alt="" class="lazyload" width="658" height="366"></noscript></amp-img></p>
 
 <h3 id="multitask-learning">Multitask learning</h3>
 <p>Autonomous driving one image can have multiple thing, signs, lights, pedestrian etc. All can stacked up in Y matrix and use bigger network to learn all thing together rather then one by one. It always works better then training individual neural network.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network32.JPG" alt="" width="611" height="341" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network32.JPG" alt="" width="611" height="341"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network32.JPG" alt="" class="lazyload" width="611" height="341" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network32.JPG" alt="" class="lazyload" width="611" height="341"></noscript></amp-img></p>
 
 <h3 id="end-to-end-deep-learning">End to end deep learning</h3>
 <p>Big enough neural network with huge train data would suffice the for any complex x to y mapping. Some time when we less x to y mapping train data and we have more of intermediate data then we use component wise neural network model and here it works best, if you have huge data then end to end works best.
 For ex, image to text detection, text to phrase detection, phrase to intent detection. This can be split into multiple small models or can be created in single big neural network, based on train set we decide which one to choose. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network33.JPG" alt="" width="769" height="429" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network33.JPG" alt="" width="769" height="429"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network33.JPG" alt="" class="lazyload" width="769" height="429" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network33.JPG" alt="" class="lazyload" width="769" height="429"></noscript></amp-img></p>
 
 <h1 id="convolution-network">Convolution network.</h1>
 <p>For images, you have million pixels in your images these, that mean million feature, implementing this in normal neural network will be very inefficient, so we convolute(complex) neural net.</p>
 
 <h3 id="edge-detection">Edge detection.</h3>
 <p>Use 3X3 filter(Kernel) to find edges.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network34.JPG" alt="" width="693" height="382" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network34.JPG" alt="" width="693" height="382"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network35.JPG" alt="" width="692" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network35.JPG" alt="" width="692" height="383"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network36.JPG" alt="" width="736" height="610" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network36.JPG" alt="" width="736" height="610"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network34.JPG" alt="" class="lazyload" width="693" height="382" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network34.JPG" alt="" class="lazyload" width="693" height="382"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network35.JPG" alt="" class="lazyload" width="692" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network35.JPG" alt="" class="lazyload" width="692" height="383"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network36.JPG" alt="" class="lazyload" width="736" height="610" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network36.JPG" alt="" class="lazyload" width="736" height="610"></noscript></amp-img></p>
 <ul>
   <li>In above diagram you white to black is comes as white edge and black to white comes as dark edge, later you 30 and 10 that is because the edge has converted from white edge to back edge. If you transpose the filter matrix it becomes horizontal filter. Later image you see there are other filter which has some other properties, some are oriented filter(not vertical or horizontal but rotated to some degrees). Neural net learns to find best possible filter matrix.</li>
 </ul>
 
 <h3 id="padding">Padding</h3>
 <p>Since output becomes smaller then input we pad input pixel with 0 so that output becomes same size of input. Filter are normally of odd sized so padding should be full number. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network37.JPG" alt="" width="750" height="392" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network37.JPG" alt="" width="750" height="392"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network37.JPG" alt="" class="lazyload" width="750" height="392" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network37.JPG" alt="" class="lazyload" width="750" height="392"></noscript></amp-img></p>
 
 <h3 id="strided-convolution">Strided Convolution.</h3>
 <p>Jump more then 1 step in applying filter. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network38.JPG" alt="" width="596" height="391" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network38.JPG" alt="" width="596" height="391"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network38.JPG" alt="" class="lazyload" width="596" height="391" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network38.JPG" alt="" class="lazyload" width="596" height="391"></noscript></amp-img></p>
 
 <p><strong>Maths, Cross-Correlation vs Convolution</strong> - In maths all above work which we have done is cross-correlation, convolution involves one more step of filliping filter before applying.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network39.JPG" alt="" width="156" height="206" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network39.JPG" alt="" width="156" height="206"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network39.JPG" alt="" class="lazyload" width="156" height="206" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network39.JPG" alt="" class="lazyload" width="156" height="206"></noscript></amp-img></p>
 
 <h3 id="multiple-channelsthird-dimension-ex-rgb-and-multiple-filters-combinesex-horizontal-with-vertical-etc">Multiple channels(Third dimension ex RGB) and Multiple filters combines(ex Horizontal with vertical etc)</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network40.JPG" alt="" width="492" height="550" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network40.JPG" alt="" width="492" height="550"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network40.JPG" alt="" class="lazyload" width="492" height="550" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network40.JPG" alt="" class="lazyload" width="492" height="550"></noscript></amp-img></p>
 
 <h3 id="notations-for-one-layer-cnn">Notations for One layer CNN</h3>
 <p>Here we discuss about only one layer, consider different filters operation produces a different output nodes, in single filter you have 3 dimension data which is actually a flattened weight on 3<em>3</em>3 size vector.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network41.JPG" alt="" width="481" height="546" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network41.JPG" alt="" width="481" height="546"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network41.JPG" alt="" class="lazyload" width="481" height="546" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network41.JPG" alt="" class="lazyload" width="481" height="546"></noscript></amp-img></p>
 
 <h3 id="type-of-cnn-layers">Type of CNN layers</h3>
 <ul>
@@ -496,65 +496,65 @@ For ex, image to text detection, text to phrase detection, phrase to intent dete
 
 <h3 id="pooling-layer">Pooling layer</h3>
 <p>These layer are the reducers, they reduce the size of each dimension by either max pooling (get max out of 1 block) or average (rarely used). It doesn’t have any hyperparameter hence no learning of variables here. This is said to be used to pick one particular feature from block(Max) or average of block feature.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network42.JPG" alt="" width="690" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network42.JPG" alt="" width="690" height="386"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network42.JPG" alt="" class="lazyload" width="690" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network42.JPG" alt="" class="lazyload" width="690" height="386"></noscript></amp-img></p>
 
 <h3 id="simple-cn-ex-lenet-5">Simple CN (Ex Lenet-5)</h3>
 <ul>
   <li>Normally the pattern is CL and PL few more CL and PL then some FC layers.</li>
   <li>H and W decreases while C(third dimension) increases</li>
   <li>PL has 0 parameter to lean, CL has less parameters, FCL has most parameters to learn.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network43.JPG" alt="" width="482" height="540" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network43.JPG" alt="" width="482" height="540"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network43.JPG" alt="" class="lazyload" width="482" height="540" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network43.JPG" alt="" class="lazyload" width="482" height="540"></noscript></amp-img>
 </li>
 </ul>
 
 <h3 id="why-convolution">Why convolution?</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network44.JPG" alt="" width="692" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network44.JPG" alt="" width="692" height="384"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network44.JPG" alt="" class="lazyload" width="692" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network44.JPG" alt="" class="lazyload" width="692" height="384"></noscript></amp-img></p>
 
 <h3 id="case-study">Case study.</h3>
 <p>Here we have three different CNN papers.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network45.JPG" alt="" width="575" height="681" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network45.JPG" alt="" width="575" height="681"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network45.JPG" alt="" class="lazyload" width="575" height="681" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network45.JPG" alt="" class="lazyload" width="575" height="681"></noscript></amp-img></p>
 
 <h3 id="res-net-">Res Net .</h3>
 <p>Residue net, it keeps the residue of previous layer by giving shortcut input to higher layers.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network46.JPG" alt="" width="694" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network46.JPG" alt="" width="694" height="383"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network46.JPG" alt="" class="lazyload" width="694" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network46.JPG" alt="" class="lazyload" width="694" height="383"></noscript></amp-img></p>
 
 <p><strong>Why ResNets work,</strong> It fights back to diminishing issue due to Weight Decay L2 regularization. If Weight diminishes in next layer, the input from previous layer are already mapped to third layer.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network47.JPG" alt="" width="691" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network47.JPG" alt="" width="691" height="383"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network47.JPG" alt="" class="lazyload" width="691" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network47.JPG" alt="" class="lazyload" width="691" height="383"></noscript></amp-img></p>
 
 <p>Resnet has two type of blocks. First when the shortcut doesn’t match the output dimension(convolution block) and when it matches (identity block)
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network87.JPG" alt="" width="652" height="334" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network87.JPG" alt="" width="652" height="334"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network87.JPG" alt="" class="lazyload" width="652" height="334" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network87.JPG" alt="" class="lazyload" width="652" height="334"></noscript></amp-img></p>
 
 <h3 id="1-by-1-network">1 by 1 network</h3>
 <p>Polling can be used to reduce height and width, how about depth or channels, it is decrease by 1 by 1 filter.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network48.JPG" alt="" width="455" height="290" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network48.JPG" alt="" width="455" height="290"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network48.JPG" alt="" class="lazyload" width="455" height="290" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network48.JPG" alt="" class="lazyload" width="455" height="290"></noscript></amp-img></p>
 
 <h3 id="inception-layer">Inception Layer</h3>
 <p>It usage 1 by 1 network concept to reduce the computation cost. Here is the comparison.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network50.JPG" alt="" width="558" height="446" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network50.JPG" alt="" width="558" height="446"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network50.JPG" alt="" class="lazyload" width="558" height="446" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network50.JPG" alt="" class="lazyload" width="558" height="446"></noscript></amp-img>
 Inception layer have multiple layer together and stacked up later. Combining multiple inception layer can work better also adding fully connected layer</p>
 
 <h3 id="transfer-learning-1">Transfer learning</h3>
 <p>Take related model from github and replace last softmax layer with your classification softmax layer when you have very less data to train, in this case you will freeze calculation of previous layers and use pre calculated values , if you have more data to train, take github data start with that model and train whole model.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network51.JPG" alt="" width="701" height="298" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network51.JPG" alt="" width="701" height="298"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network51.JPG" alt="" class="lazyload" width="701" height="298" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network51.JPG" alt="" class="lazyload" width="701" height="298"></noscript></amp-img></p>
 
 <h2 id="object-detection">Object detection</h2>
 <p>Object detection is finding out object inside a picture, it more advance then the detecting what image is out or image classification.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network52.JPG" alt="" width="691" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network52.JPG" alt="" width="691" height="385"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network52.JPG" alt="" class="lazyload" width="691" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network52.JPG" alt="" class="lazyload" width="691" height="385"></noscript></amp-img></p>
 
 <h3 id="notation-and-loss-calculation-for-object-detection">Notation and Loss calculation for object detection.</h3>
 <p>bx, by are center for object, c1, c2,c3 will either have 0 or 1 which class it belong to, and Px is probability(mostly 1) of that object.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network53.JPG" alt="" width="697" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network53.JPG" alt="" width="697" height="388"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network53.JPG" alt="" class="lazyload" width="697" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network53.JPG" alt="" class="lazyload" width="697" height="388"></noscript></amp-img></p>
 
 <h3 id="landmark-detection-multiple-points-or-shapes">LandMark detection (Multiple points or shapes)</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network54.JPG" alt="" width="696" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network54.JPG" alt="" width="696" height="388"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network54.JPG" alt="" class="lazyload" width="696" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network54.JPG" alt="" class="lazyload" width="696" height="388"></noscript></amp-img></p>
 
 <h3 id="sliding-window-with-convolution">Sliding window with Convolution.</h3>
 <p>Sliding window you will have to crop many pictures, but convolution NN automatically does that with step as stride numbers.So all cropped images has run simultaneously and shared the computations
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network55.JPG" alt="" width="698" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network55.JPG" alt="" width="698" height="385"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network55.JPG" alt="" class="lazyload" width="698" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network55.JPG" alt="" class="lazyload" width="698" height="385"></noscript></amp-img></p>
 
 <h3 id="yolo-algorithm">YOLO Algorithm</h3>
 <p>It runs very fast, it divides the image in grid and learn on weather the object is falls in box or not and it height/width with respect to box size. With these input data, YOLO starts to learn picking things.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network56.JPG" alt="" width="698" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network56.JPG" alt="" width="698" height="383"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network56.JPG" alt="" class="lazyload" width="698" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network56.JPG" alt="" class="lazyload" width="698" height="383"></noscript></amp-img>
 <strong>What you should remember:</strong></p>
 <ul>
   <li>YOLO is a state-of-the-art object detection model that is fast and accurate</li>
@@ -570,16 +570,16 @@ Because training a YOLO model from randomly initialized weights is non-trivial a
 </ul>
 
 <h3 id="iou">IoU</h3>
-<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network57.JPG" alt="" width="692" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network57.JPG" alt="" width="692" height="383"></noscript></amp-img></p>
+<p><amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network57.JPG" alt="" class="lazyload" width="692" height="383" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network57.JPG" alt="" class="lazyload" width="692" height="383"></noscript></amp-img></p>
 
 <h3 id="non-max-suppression">Non Max suppression.</h3>
 <p>Model tend to detect multiple boxes for same object, then non max suppression picks one with highest probability and with this box find IoU with other boxes, if IoU of highest Px box and other box is grater then 0.5, then we discard box.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network58.JPG" alt="" width="694" height="380" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network58.JPG" alt="" width="694" height="380"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network58.JPG" alt="" class="lazyload" width="694" height="380" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network58.JPG" alt="" class="lazyload" width="694" height="380"></noscript></amp-img></p>
 
 <h3 id="multiple-object-over-lap">Multiple object over lap.</h3>
 <p>Create anchor boxes and increase y vector by maximum overlapping object that model should detect. Lets say y was 8 and we changed it to 8*2=16, it can detect two shape anchor boxes. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network59.JPG" alt="" width="694" height="397" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network59.JPG" alt="" width="694" height="397"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network60.JPG" alt="" width="694" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network60.JPG" alt="" width="694" height="384"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network59.JPG" alt="" class="lazyload" width="694" height="397" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network59.JPG" alt="" class="lazyload" width="694" height="397"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network60.JPG" alt="" class="lazyload" width="694" height="384" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network60.JPG" alt="" class="lazyload" width="694" height="384"></noscript></amp-img></p>
 
 <h2 id="face-recognition">Face Recognition</h2>
 <p>Face verification is comparing image with another image, while recognition is finding out which person is this among thousands person.
@@ -587,33 +587,33 @@ Because training a YOLO model from randomly initialized weights is non-trivial a
 α is margin, how much different can be accepted as same image. 
 <strong>Hard triplet</strong> - For image distance learning, if you provide image subject(A), positive image(P) and negative (N), A and N are different people, then the distance will be definitely high and it will not help machine to learn. N should be of different person but should be little bit similar to A it make it hard to learn, which improves model learning. 
 <strong>Triplet Loss</strong> - Loss function to learn on triplets of image A,P,N. Later used in gradient descend to learn the NN model.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network61.JPG" alt="" width="823" height="464" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network61.JPG" alt="" width="823" height="464"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network61.JPG" alt="" class="lazyload" width="823" height="464" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network61.JPG" alt="" class="lazyload" width="823" height="464"></noscript></amp-img></p>
 
 <h3 id="face-verification-and-binary-classification">Face verification and Binary classification</h3>
 <p>Above approach was good but we can have alternative as, above model is tweaked little bit and used to identify person by comparing the saved feature vectors(calculated and save in DB) against new image feature vector to identify if new user is from database or not. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network62.JPG" alt="" width="702" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network62.JPG" alt="" width="702" height="385"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network62.JPG" alt="" class="lazyload" width="702" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network62.JPG" alt="" class="lazyload" width="702" height="385"></noscript></amp-img></p>
 
 <h3 id="neural-style-transfer">Neural Style Transfer.</h3>
 <p>Use style of another image(S) to subject image(C) to create new image G. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network63.JPG" alt="" width="701" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network63.JPG" alt="" width="701" height="385"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network64.JPG" alt="" width="838" height="549" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network64.JPG" alt="" width="838" height="549"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network63.JPG" alt="" class="lazyload" width="701" height="385" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network63.JPG" alt="" class="lazyload" width="701" height="385"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network64.JPG" alt="" class="lazyload" width="838" height="549" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network64.JPG" alt="" class="lazyload" width="838" height="549"></noscript></amp-img></p>
 
 <h2 id="sequence-model">Sequence Model</h2>
 <p>It is used when you have sequence of data, such as language translation, NLP, Music creation etc, Video filtration. Here the output can word to word match(Tx = Ty, length of input equal length of output) or even sometime it can’t be equal also. Moreover, to predict next block output you might need input data of previous block as well(such NLP sentence meaning is formed when you consider previous word also). Here we use RNN.</p>
 
 <h3 id="recurring-neural-network">Recurring Neural Network</h3>
 <p>Previous block A is fed to next block NN calculation.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network65.JPG" alt="" width="817" height="429" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network65.JPG" alt="" width="817" height="429"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network65.JPG" alt="" class="lazyload" width="817" height="429" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network65.JPG" alt="" class="lazyload" width="817" height="429"></noscript></amp-img></p>
 
 <p>Here, W<sub>aa</sub> and W<sub>ax</sub> is written side by side in one matrix and marked as W<sub>a</sub>, same with a and x. In backprop you try to reduce sum of loss at each output.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network66.JPG" alt="" width="1056" height="629" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network66.JPG" alt="" width="1056" height="629"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network66.JPG" alt="" class="lazyload" width="1056" height="629" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network66.JPG" alt="" class="lazyload" width="1056" height="629"></noscript></amp-img></p>
 
 <p><strong>Types on RNN</strong>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network67.JPG" alt="" width="819" height="226" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network67.JPG" alt="" width="819" height="226"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network67.JPG" alt="" class="lazyload" width="819" height="226" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network67.JPG" alt="" class="lazyload" width="819" height="226"></noscript></amp-img></p>
 
 <p><strong>Language Modeling and sequence generation</strong>
 When model is trained on some test sentences, it start to make prediction on next words based on previous words.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network68.JPG" alt="" width="691" height="390" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network68.JPG" alt="" width="691" height="390"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network68.JPG" alt="" class="lazyload" width="691" height="390" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network68.JPG" alt="" class="lazyload" width="691" height="390"></noscript></amp-img></p>
 <ul>
   <li>
     <p>In character level model the charters are passed in place of words and vocab is formed from character. This model doesn’t work better then word model also it take more computation time and power.</p>
@@ -630,79 +630,79 @@ When model is trained on some test sentences, it start to make prediction on nex
 
 <h3 id="gru---gated-recurrent-unit">GRU - Gated recurrent Unit</h3>
 <p>Add another weight W<sub>u</sub> with existing W<sub>a</sub>(represented here as W<sub>c</sub>)
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network69.JPG" alt="" width="577" height="511" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network69.JPG" alt="" width="577" height="511"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network69.JPG" alt="" class="lazyload" width="577" height="511" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network69.JPG" alt="" class="lazyload" width="577" height="511"></noscript></amp-img></p>
 
 <h3 id="lstm---better-then-gru">LSTM - Better then GRU</h3>
 <p>It has few more gates to learn. Update, forget and output gates.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network70.JPG" alt="" width="570" height="609" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network70.JPG" alt="" width="570" height="609"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network70.JPG" alt="" class="lazyload" width="570" height="609" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network70.JPG" alt="" class="lazyload" width="570" height="609"></noscript></amp-img></p>
 
 <h3 id="brnn---bidirectional-rnn">BRNN - Bidirectional RNN</h3>
 <p>Once model learning is complete, BRNN requires full sentence to predict the words between with it’s probabibility. It is not much used as it requires full sentence, there much more complex models in place to which work on realtime data.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network71.JPG" alt="" width="518" height="577" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network71.JPG" alt="" width="518" height="577"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network71.JPG" alt="" class="lazyload" width="518" height="577" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network71.JPG" alt="" class="lazyload" width="518" height="577"></noscript></amp-img></p>
 <h3 id="deep-rnn">Deep RNN.</h3>
 <p>RNN with multiple RNN layer is deep RNN.</p>
 
 <h3 id="word-embedding">Word embedding,</h3>
 <p>We use feature matrix in place of word vector, so the dimension is reduced from 10k to 300 in our example, if 10k were words and 300 are feature in vector. Feature vector helps us to relate two different words by analogy like gender, royalty and it can derive similarity as man, women then king will have queen , country capital etc.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network72.JPG" alt="" width="708" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network72.JPG" alt="" width="708" height="386"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network72.JPG" alt="" class="lazyload" width="708" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network72.JPG" alt="" class="lazyload" width="708" height="386"></noscript></amp-img></p>
 
 <h3 id="cosine-similarity-vs-squared-difference">Cosine similarity vs Squared difference.</h3>
 <p>Cosine between two vector tells about how similar they are, big value is they are more similar, cos(0)=1 and small value they are not at all similar cos(90)=1, while squared difference tell different they are, big value they are different small value they are similar. Check the image above. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network73.JPG" alt="" width="1005" height="678" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network73.JPG" alt="" width="1005" height="678"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network73.JPG" alt="" class="lazyload" width="1005" height="678" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network73.JPG" alt="" class="lazyload" width="1005" height="678"></noscript></amp-img></p>
 
 <h3 id="derive-word-embeding">Derive Word embeding.</h3>
 <p>THere is matrices E, formed formed of 300 feature for 10k word. If you multiple one hot vector of word to E you will get e (word embedding), also you can stack 10k e(word embedding) vector to form E.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network74.JPG" alt="" width="703" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network74.JPG" alt="" width="703" height="386"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network74.JPG" alt="" class="lazyload" width="703" height="386" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network74.JPG" alt="" class="lazyload" width="703" height="386"></noscript></amp-img></p>
 
 <h3 id="finding-target-based-on-context-word">Finding target based on Context word.</h3>
 <p><strong>Skip Gram Model</strong>
 Context and target word are picked randomly from sentence.
 Here we have E(Combined embed vector) and θ(Softmax) to learn
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network75.JPG" alt="" width="687" height="604" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network75.JPG" alt="" width="687" height="604"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network75.JPG" alt="" class="lazyload" width="687" height="604" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network75.JPG" alt="" class="lazyload" width="687" height="604"></noscript></amp-img></p>
 
 <h3 id="negative-sampling">Negative sampling</h3>
 <p>Rather then iterating over 10k words to predict using softmax and update 10K e (E) and θ, lets take only k sample for ex 5 negative and 1 positive and update E based on only these training set. How to select negative sample is, either pick randomly (issue common word will show up more) or pick using word’s frequency weight. P(w) and f(w).
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network76.JPG" alt="" width="689" height="463" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network76.JPG" alt="" width="689" height="463"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network76.JPG" alt="" class="lazyload" width="689" height="463" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network76.JPG" alt="" class="lazyload" width="689" height="463"></noscript></amp-img></p>
 
 <h3 id="sentiment-classification">Sentiment Classification.</h3>
 <p>Tune E which gets e(feature) value and average it up to find out sentiment of sentence, but sometimes one negative word in starting changes the complete meaning of sentence, in this case average doesn’t work. RNN is good model to remember outcomes from previous words as well.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network77.JPG" alt="" width="699" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network77.JPG" alt="" width="699" height="388"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network77.JPG" alt="" class="lazyload" width="699" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network77.JPG" alt="" class="lazyload" width="699" height="388"></noscript></amp-img></p>
 
 <h3 id="biased-learning-issue">Biased learning issue.</h3>
 <p>Sometime due to more data, such as babysitter are female, nurses are female creates biased learning for NN. But this is not actually the case in real world man can be female and nurses to remove these biases, we pass learned NN to neutralization algorithm which neutralize feature vector for nurse and baby sitter in gender direction. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network78.JPG" alt="" width="523" height="471" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network78.JPG" alt="" width="523" height="471"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network86.JPG" alt="" width="995" height="623" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network86.JPG" alt="" width="995" height="623"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network78.JPG" alt="" class="lazyload" width="523" height="471" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network78.JPG" alt="" class="lazyload" width="523" height="471"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network86.JPG" alt="" class="lazyload" width="995" height="623" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network86.JPG" alt="" class="lazyload" width="995" height="623"></noscript></amp-img></p>
 
 <h2 id="sequnece-to-sequence-generation">Sequnece to Sequence generation</h2>
 <p>When we have stream and we want to generate stream, such as machine translation, image captioning etc.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network79.JPG" alt="" width="569" height="539" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network79.JPG" alt="" width="569" height="539"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network79.JPG" alt="" class="lazyload" width="569" height="539" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network79.JPG" alt="" class="lazyload" width="569" height="539"></noscript></amp-img></p>
 
 <h3 id="conditional-language-model">Conditional language model.</h3>
 <p>Language generation model(generate sequence of word based on one input) look similar to sequence to sequence generation model. But S2S model give a feature vector output of given input and passed to language generation model which looks more conditional. We have two option at each word generation pick highest probability output word (greedy) or average out all generated word probability(more optimal).
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network80.JPG" alt="" width="821" height="516" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network80.JPG" alt="" width="821" height="516"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network80.JPG" alt="" class="lazyload" width="821" height="516" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network80.JPG" alt="" class="lazyload" width="821" height="516"></noscript></amp-img></p>
 
 <h3 id="beam-search">Beam Search</h3>
 <p>Here we store top B probability words at each output, and based on conditional probability we keep making prediction of next words, in case of B=3, first word will have 3 possible outcome among 10k, next will have 3*10K and only three will be selected and rest discarded. At reaching EOF, the sentence having max probability will be the result. 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network81.JPG" alt="" width="713" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network81.JPG" alt="" width="713" height="388"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network81.JPG" alt="" class="lazyload" width="713" height="388" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network81.JPG" alt="" class="lazyload" width="713" height="388"></noscript></amp-img></p>
 
 <h3 id="refinement-to-beam-search">Refinement to Beam Search</h3>
 <p>Normalization- Since conditional probabilities can be very small and cause undeflow errors, in place of product of probability we use sum of log probability, sum of log probability can be big then we normalize by dividing with count of vocabulary words we have or some percentage of that α
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG" alt="" width="491" height="469" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG" alt="" width="491" height="469"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG" alt="" class="lazyload" width="491" height="469" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG" alt="" class="lazyload" width="491" height="469"></noscript></amp-img></p>
 
 <h3 id="error-analysis">Error analysis</h3>
 <p>Who is at fault RNN or Beam window, you can find this out by comparing probability of p(y*) vs p(<script type="math/tex">\hat y</script>). 
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG" alt="" width="690" height="382" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG" alt="" width="690" height="382"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG" alt="" class="lazyload" width="690" height="382" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG" alt="" class="lazyload" width="690" height="382"></noscript></amp-img></p>
 
 <h3 id="attention-model">Attention Model.</h3>
 <p><strong>Bleu Score</strong>- Bilingual evaluation understudy. 1 value to validate good translation is working. In this we compare the machine generated sentence with human given reference sentence and see how same they by checking the common word occupance. 
 If the sentence is too large Blue score will drop, to maintain it we want to keep translating rather than waiting for EOF. Just like human we read some word and translate, it is call giving attention to few nearby words.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network84.JPG" alt="" width="590" height="637" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network84.JPG" alt="" width="590" height="637"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network84.JPG" alt="" class="lazyload" width="590" height="637" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network84.JPG" alt="" class="lazyload" width="590" height="637"></noscript></amp-img></p>
 
 <p>Spectrogram</p>
 <h3 id="speech-recognition--trigger-word-detection">Speech recognition &amp; Trigger word Detection.</h3>
 <p>For both we use the same above attention model, but rather than having text as input we have speech which is frequency sliced basis of time, let’s say 10 second audio sliced to 10k times and fed in machine to print the sentence. 
 Trigger word are trained to give 1 only when the trigger word occurred.
-<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network85.JPG" alt="" width="855" height="520" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network85.JPG" alt="" width="855" height="520"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network85.JPG" alt="" class="lazyload" width="855" height="520" layout="responsive"><noscript><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network85.JPG" alt="" class="lazyload" width="855" height="520"></noscript></amp-img></p>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>

@@ -242,7 +242,7 @@ X=0 {TTT} - 1, X=1 {HTT, THT, TTH} - 3, X=2 {HHT,HTH,THH} -3, X=3 {HHH} - 1.
 <ul>
   <li>Probability of normally distribute function looks like bell shaped and has fixed are under two interval.</li>
   <li>Continuos functions are calculated by integral while discrete with summation.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" width="788" height="553" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" width="788" height="553"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" class="lazyload" width="788" height="553" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG" alt="" class="lazyload" width="788" height="553"></noscript></amp-img>
 </li>
 </ul>
 
@@ -268,7 +268,7 @@ SD(X)=\sqrt{Var(X)}=\sigma=\sqrt{\sum_{i-1}^n{(x_i-\mu)^2}p(x_i)}=\sqrt{\sum_{i-
 \mathbf compare\,to\,actual\,covariance(not\,in\,probability\,space)\\
 \sum_ip(x_i)=\frac{1}{N-1} \sum_1^n \\
 cov(x,y)=  \frac{1}{N-1}\sum_1^n(x_i-\mu_x)(y_i-\mu_x)</script>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" width="749" height="231" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" width="749" height="231"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" class="lazyload" width="749" height="231" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG" alt="" class="lazyload" width="749" height="231"></noscript></amp-img>
 <strong>Correlation</strong> - pearson’s correlation coefficient is covariance normalized by standard deviations of variables.
 <script type="math/tex">corr(x,y)=\frac{cov(x,y)}{\sigma_x\sigma_y}</script></p>
 
@@ -280,13 +280,13 @@ B = (B ∩ A<sub>1</sub>)U(B ∩ A<sub>1</sub>)..U(B ∩A<sub>n</sub>) and we ca
 <script type="math/tex">P(A_k|B) = \frac{P(A_k\cap B)}{[P(A_1\cap B)+P(A_2\cap B)+..P(A_n\cap B)]}\\
 Using\;P( A_k \cap B ) = P( A_k )P( B | A_k )\\
 P( A_k | B ) =  	\frac{P( A_k ) P( B | A_l )}{[ P( A_1 ) P( B | A_1 ) + P( A_2 ) P( B | A_2 ) + . . . + P( A_n ) P( B | A_n ) ]}</script> 
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG" alt="" width="762" height="508" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG" alt="" width="762" height="508"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG" alt="" class="lazyload" width="762" height="508" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG" alt="" class="lazyload" width="762" height="508"></noscript></amp-img></p>
 
 <h3 id="discrete-distribution">Discrete Distribution</h3>
 <p><strong>Bernoulli Trials</strong> - Trials which answers only in two values, such yes/no, 0/1, head/tail etc. Such that <script type="math/tex">p=\frac12\;and\; q=1-p=\frac12</script>.</p>
 
 <p><strong>Bernoulli Distribution</strong> - A sheet with with column1 as possible outcomes as 0 and 1 and coloumn2 as there probability. For ex, p = 0.15 and q= 0.85.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG" alt="" width="412" height="238" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG" alt="" width="412" height="238"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG" alt="" class="lazyload" width="412" height="238" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG" alt="" class="lazyload" width="412" height="238"></noscript></amp-img>
 <script type="math/tex">E(X) = 0.q - 1.p = p\\
 V(X) = E(p^2)-E(p)^2 = p-p^2</script>.</p>
 
@@ -318,26 +318,26 @@ V(X) = E(p^2)-E(p)^2 = p-p^2</script>.</p>
 <p><script type="math/tex">P(S)=q^3+3q^2p+3qp^2+p^3=1\\
 \sum_{i=0}^nP(x_i) = \sum_{i=0}^nC_x^nq^{n-x}p^x=1\\
 \mu=np\;,Var(X)=npq</script>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG" alt="" width="593" height="240" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG" alt="" width="593" height="240"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG" alt="" class="lazyload" width="593" height="240" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG" alt="" class="lazyload" width="593" height="240"></noscript></amp-img></p>
 
 <p><strong>Hypergeometric Distribution</strong> - Binomial but sample space reduced due to last event, for ex. draw colored ball from bag starting with equal probability, but do not place the ball back which reduces the sample space.<br>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" width="634" height="284" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" width="634" height="284"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" class="lazyload" width="634" height="284" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG" alt="" class="lazyload" width="634" height="284"></noscript></amp-img></p>
 
 <p><strong>Uniform distribution</strong> - Fair dice role has 6 possible outcome and each has probability of 1/6. Since 1 is total probability, area = width*height = f(x)(b-a) = 1; f(x) = 1/(b-a)
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" width="491" height="197" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" width="491" height="197"></noscript></amp-img>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" width="508" height="184" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" width="508" height="184"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" class="lazyload" width="491" height="197" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG" alt="" class="lazyload" width="491" height="197"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" class="lazyload" width="508" height="184" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG" alt="" class="lazyload" width="508" height="184"></noscript></amp-img>
 <script type="math/tex">\mu= \int_a^bxf(x)dx = \int_a^bx\frac{1}{b-a}dx = \frac{a+b}{2}\\
 Var(X)=\frac{(b-a)^2}{12}</script></p>
 
 <p><strong>Poisson Distribution</strong> - Type of binomial but rate defined by λ, The distribution when you know the constant rate of event over time or space. For ex. 50 email per hours or 22 trees per kilometer etc. Second thing the event are independent. For ex, 20 call per minute, then 0.33 call per second. Every second either call can come (0.33) or not(0.66). Let λ	be probability of call per minute, divide that in n=60 interval then probability of on slice of n is p=λ/n and q=1-λ/n.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG" alt="" width="620" height="279" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG" alt="" width="620" height="279"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG" alt="" class="lazyload" width="620" height="279" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG" alt="" class="lazyload" width="620" height="279"></noscript></amp-img>
 <script type="math/tex">P(X=x) = C_x^np^xq^{n-x} =  \frac{n!}{(n-x)!x!}{\frac{\lambda}{n}}^x\left({1-\frac{\lambda}{x}}^{n-x}\right)=\frac{\lambda^xe^{-\lambda}}{x!} \\
 E(X)=\mu=\lambda,\;Var(X)=\mu=\lambda</script></p>
 
 <p><strong>Negative Binomial Distribution</strong> - Number of failure before you get specific number of success. In contrast to Binomial, how many success after x trials. this is how many failures needed to get k successes and this gives how many trials. let k be number of successes in x trial then x-k is number of failure.</p>
 
 <p><strong>Geometric Distribution</strong> - Type of negative Binomial where you are interested to get first success after r failures. Number of trial becomes x = r+1. We are looking at kth trial which is success.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG" alt="" width="462" height="206" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG" alt="" width="462" height="206"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG" alt="" class="lazyload" width="462" height="206" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG" alt="" class="lazyload" width="462" height="206"></noscript></amp-img>
 <script type="math/tex">P(X=k) = (1-p)^{k-1}p\\
 E(X)=\mu = 1/p,\;P(Failure) = \frac{(1-p)}{p}\\
 Var(X) = \frac{1-p}{p^2}</script></p>
@@ -347,7 +347,7 @@ Var(X) = \frac{1-p}{p^2}</script></p>
 <p><strong>Normal Distribution</strong> - Distribution where mean, mode and median coincide. It is bell shaped, there are equal exactly half of the value on left and right side. 
 <script type="math/tex">f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\\
 E(X)=\mu,\;Var(X)=\sigma^2</script>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" width="679" height="224" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" width="679" height="224"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" class="lazyload" width="679" height="224" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG" alt="" class="lazyload" width="679" height="224"></noscript></amp-img>
 Normal distribution is not related to pro</p>
 
 <p><strong>Central Limit Theorem</strong>- CLT (center, shape and spread), states even if we take an uneven distribution and take sample from it for n times, find the mean of each sample, start putting mean in buckets, the graph formed due to this filling will be more like normal distribution.<strong>Mean of sample means</strong> distribution will depict mean of population.<strong>Standard Error</strong> of population will be standard deviation of distribution sample means.
@@ -357,7 +357,7 @@ Normal distribution is not related to pro</p>
 The confidence level, tells us how confident we are, that this particular interval captures the true population mean. We never deal with full population we go by multiple samples of population and with that we define population mean by calculating distribution of samples means.</p>
 
 <p><strong>Exponential Distribution</strong> - It is mix of poisson where we have rate, like calls per minute and geometric where we are interested in wait time of next call or how many failure before next success. <strong>Weibull</strong> is counterpart of exponential, time to failure. Ex. Machine failure time when we know rate.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" width="633" height="277" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" width="633" height="277"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" class="lazyload" width="633" height="277" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG" alt="" class="lazyload" width="633" height="277"></noscript></amp-img>
 <script type="math/tex">F(x) = \lambda e^{-\lambda x}\\
 E(X)=\mu = 1/\lambda,\\
 Var(X) = \frac{1}{\lambda^2}</script></p>
@@ -375,7 +375,7 @@ Var(X) = \frac{1}{\lambda^2}</script></p>
 <p><strong>In Geometry</strong><br>
 The slope of line defined by following formula in between any two points. 
 <script type="math/tex">Slope = m = \frac{y_1-y_2}{x_1-x_2}= \frac{f(x_1)-f(x_2)}{x_1-x_2}</script>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG" alt="!img" width="269" height="168" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG" alt="!img" width="269" height="168"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG" alt="!img" class="lazyload" width="269" height="168" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG" alt="!img" class="lazyload" width="269" height="168"></noscript></amp-img></p>
 
 <p>Here we talk about two point if two points are very close such that <script type="math/tex">x_1-x_2 \to 0</script>, here derivatives comes for rescue. The derivative formula.
 <script type="math/tex">\Delta x= x_1-x_2 =h\\
@@ -407,14 +407,14 @@ f'(x)=h'(x).g'(x)= 3(x^2)^2.2x=6x^5</script></p>
 
 <h3 id="integrals">Integrals</h3>
 <p>Integrals can be defined as how much accumulated over time, in other terms how much area is covered under a slope between two points.
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG" alt="" width="277" height="326" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG" alt="" width="277" height="326"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG" alt="" class="lazyload" width="277" height="326" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG" alt="" class="lazyload" width="277" height="326"></noscript></amp-img></p>
 
 <p><script type="math/tex">F(x) = \int_a^b f(x)dx \\
 Areas(a,b) = F(b)-F(a)= \int_0^b f(x)dx-\int_0^a f(x)dx</script>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG" alt="" width="331" height="279" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG" alt="" width="331" height="279"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG" alt="" class="lazyload" width="331" height="279" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG" alt="" class="lazyload" width="331" height="279"></noscript></amp-img></p>
 
 <p><strong>Important Formula</strong><br>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG" alt="" width="394" height="645" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG" alt="" width="394" height="645"></noscript></amp-img></p>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG" alt="" class="lazyload" width="394" height="645" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG" alt="" class="lazyload" width="394" height="645"></noscript></amp-img></p>
 
 <p><strong>Common Usage of Integral</strong></p>
 <ul>
@@ -426,7 +426,7 @@ Areas(a,b) = F(b)-F(a)= \int_0^b f(x)dx-\int_0^a f(x)dx</script>
 <h2 id="linear-algebra">Linear Algebra</h2>
 <h3 id="vector">Vector</h3>
 <p>Vector is variable stores direction and it’s magnitude from center. In 2D, left 7 and up 2 gives direction m = -2/7 and magnitude as well. It can be stored in 1D array/matrix column or raw anything [-7 2]. It is denoted mostly by bold italic latter with arrow on top. <script type="math/tex">\vec v = (a_x,a_y)\\</script>
-<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG" alt="" width="157" height="116" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG" alt="" width="157" height="116"></noscript></amp-img>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG" alt="" class="lazyload" width="157" height="116" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG" alt="" class="lazyload" width="157" height="116"></noscript></amp-img>
 <script type="math/tex">\mathbf{magnitude} = |v|(not\,absolute)=||v||= \sqrt{x^2+y^2}\\
 x=rcos\theta,\; y=rsin\theta\\
 r=\sqrt{x^2+y^2},\; \theta = tan^{-1}(y/x)\\ 

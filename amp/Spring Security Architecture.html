@@ -163,7 +163,7 @@
 <p>In case you are looking for basic spring security understating refer to the previous blog of this series <a href="/Spring-MVC-Intro/" title="Spring Security basic">Spring Security basic</a>.</p>
 
 <p>The blog we will discussing briefly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. 
-<amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" width="691" height="329" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" width="691" height="329"></noscript></amp-img><br>
+<amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" class="lazyload" width="691" height="329" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-1.png" alt="gras" class="lazyload" width="691" height="329"></noscript></amp-img><br>
 Here are few pointer from above images.</p>
 <ul>
   <li>AuthenticationManager is an interface with only one method authenticate.</li>
@@ -171,7 +171,7 @@ Here are few pointer from above images.</p>
   <li>ProviderManager can have multiple AuthenticationProvider, You can configure different AuthenticationProvider for different authentication mechanism. Each of them will be called in chain.</li>
 </ul>
 
-<p><amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-2.png" alt="gras" width="1190" height="839" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-2.png" alt="gras" width="1190" height="839"></noscript></amp-img>
+<p><amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-2.png" alt="gras" class="lazyload" width="1190" height="839" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-2.png" alt="gras" class="lazyload" width="1190" height="839"></noscript></amp-img>
 Source: https://spring.io/guides/topicals/spring-security-architecture<br>
 Here are few pointer from above images</p>
 <ul>
@@ -183,7 +183,7 @@ Here are few pointer from above images</p>
 
 <h2 id="authorizationaccess-control">Authorization/Access control</h2>
 <p>There are two important class AccessDecisionManager and AccessDecisionVoter same as ProviderManager and AuthenticationProvider pattern. AccessDecisionManager has three implementation(AffirmativeBased, ConsensusBased,UnanimousBased) and each contains list of AccessDecisionVoter.
-<amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" width="757" height="267" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" width="757" height="267"></noscript></amp-img><br>
+<amp-img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" class="lazyload" width="757" height="267" layout="responsive"><noscript><img src="/assets/2019-05-31-Spring%20Security%20Architecture-3.png" alt="gras" class="lazyload" width="757" height="267"></noscript></amp-img><br>
 For example, AffirmativeBased implementation run all the AccessDecisionVoter and if any of them throws exception it denies the access otherwise access is granted.</p>
 
 <h3 id="access-user-object">Access User object.</h3>

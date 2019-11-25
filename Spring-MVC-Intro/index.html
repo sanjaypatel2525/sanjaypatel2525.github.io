@@ -64,6 +64,7 @@
     <link rel="canonical" href="https://abyte.stream/Spring-MVC-Intro/">
     <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -149,7 +150,7 @@ There have many different versions of Spring MVC. We are going to discuss about 
 
 <h2 id="what-is-mvc">What is MVC.</h2>
 <p>MVS stands for model, view and controller. It is a design pattern mainly for web based projects. 
-<img src="/assets/2019-05-17-Spring MVC Intro-1.JPG" alt="smiley" /></p>
+<img src="/assets/2019-05-17-Spring MVC Intro-1.JPG" alt="smiley" class="lazyload" /></p>
 <ul>
   <li>Model stands for data (java data objects/ beans)</li>
   <li>View is display to the user (It usage model to show dynamic data)</li>
@@ -157,7 +158,7 @@ There have many different versions of Spring MVC. We are going to discuss about 
 </ul>
 
 <p>Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request mapping to controller and resolving the view. Controller and it’s method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the view name and resolved the JSP or equivalent markup language to render the data. 
-<img src="/assets/2019-05-17-Spring MVC Intro-2.JPG" alt="smiley" /></p>
+<img src="/assets/2019-05-17-Spring MVC Intro-2.JPG" alt="smiley" class="lazyload" /></p>
 
 <h2 id="configuring-disaptcher-serverl-in-webxml">Configuring Disaptcher serverl in Web.xml</h2>
 <p>This is not required when you are using spring boot with embeded web server.</p>
