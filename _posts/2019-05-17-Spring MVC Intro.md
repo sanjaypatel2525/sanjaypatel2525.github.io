@@ -24,13 +24,13 @@ There have many different versions of Spring MVC. We are going to discuss about 
 
 ## What is MVC. 
 MVS stands for model, view and controller. It is a design pattern mainly for web based projects. 
-![smiley](/assets/2019-05-17-Spring MVC Intro-1.JPG)
+![smiley](/assets/2019-05-17-Spring MVC Intro-1.JPG){: .lazyload}
 * Model stands for data (java data objects/ beans)
 * View is display to the user (It usage model to show dynamic data)
 * Controller takes request and update data/model and redirects to view.
 
 Spring MVC entry points is a Dispatcher servlet which can be configured in web.xml. Dispatcher Servlet is responsible for all request mapping to controller and resolving the view. Controller and it's method are mapped to specific URLs these mapping are maintained in dispatcher servlet. Spring automatically does it by scanning @controller classes and @RequestMapping annotations. Later it finds out the view name and resolved the JSP or equivalent markup language to render the data. 
-![smiley](/assets/2019-05-17-Spring MVC Intro-2.JPG)
+![smiley](/assets/2019-05-17-Spring MVC Intro-2.JPG){: .lazyload}
 
 ## Configuring Disaptcher serverl in Web.xml 
 This is not required when you are using spring boot with embeded web server. 

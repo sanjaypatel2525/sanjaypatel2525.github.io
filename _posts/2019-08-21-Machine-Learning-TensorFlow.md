@@ -20,7 +20,7 @@ author:
   last_name: ''
 ---
 TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit lear to one liner ML models.
-![](/assets/2019-08-21-Machine-Learning-TensorFlow1.png)
+![](/assets/2019-08-21-Machine-Learning-TensorFlow1.png){: .lazyload}
 ### TF estimator
 It is library which hold all high level ML algorithm for ex.
 

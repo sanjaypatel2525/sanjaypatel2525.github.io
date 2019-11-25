@@ -30,10 +30,10 @@ As we discussed Spring has a full fledged container which manages the beans. It 
 
 Here is rough idea behind method that will be called.
 ## Bean Initialize
-![smiley](/assets/2019-05-12-Spring Bean life cycle-1.JPG)
+![smiley](/assets/2019-05-12-Spring Bean life cycle-1.JPG){: .lazyload}
 
 ## Bean Destroy
-![smiley](/assets/2019-05-12-Spring Bean life cycle-2.JPG)
+![smiley](/assets/2019-05-12-Spring Bean life cycle-2.JPG){: .lazyload}
 
 
 ## Java supported @PostConstruct and @PreDestroy

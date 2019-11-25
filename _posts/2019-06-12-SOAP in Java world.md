@@ -122,7 +122,7 @@ public interface EmployeeServiceImpl implements  EmployeeService{
 {% endhighlight %}
 ### Eclipse Web service generator . 
 Even eclipse provide support to create the classes automatically based on WSDL. 
-![eclipse](/assets/2019-06-12-SOAP in Java world_1.jpg)
+![eclipse](/assets/2019-06-12-SOAP in Java world_1.jpg){: .lazyload}
 
 ## Bottom up Approach
 In bottom up we create a class with some methods and then create service out of it.
@@ -133,7 +133,7 @@ Use @WebService, @WebMethod and @WebResult annotation to annotate the class and 
 
 ### Eclipse approach. 
 Create a simple bean with methods which needs to be expose. Then in eclipse select bottom up approach and select the bean. It will create helper classes and WSDL automatically. 
-![eclipse](/assets/2019-06-12-SOAP in Java world_1.jpg)
+![eclipse](/assets/2019-06-12-SOAP in Java world_1.jpg){: .lazyload}
 
 ## Creating client. 
 **Eclipse tool** - In both the top down and bottom up approach you have option to create client as well. It creats separate project and creates client classes.

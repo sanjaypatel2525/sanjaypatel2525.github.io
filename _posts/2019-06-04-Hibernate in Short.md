@@ -27,7 +27,7 @@ Hibernate, hibernate-jpa, Spring ORM, Spring data JPA and many more. All this se
 </dependency> 
 {% endhighlight %}
 Basically, Spring boot gives a starter project for your data access layer which is based on ORM concept and by default usage hibernate as persistent api. This blog we are not going to discuss about how spring encapsulated hibernate under it but we are going to discuss about Hibernate basics and there Spring alternative way of writing code. 
-![gras](/assets/2019-06-04-Hibernate in Short.png)
+![gras](/assets/2019-06-04-Hibernate in Short.png){: .lazyload}
 ### Hibernate in action with JPA.
 * Create Entity class
 * Create Repository interface

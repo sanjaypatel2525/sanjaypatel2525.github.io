@@ -101,7 +101,7 @@ P(a\leq x \leq b) = \int_a^b f(x)dx \\
 $${% endraw %}
 * Probability of normally distribute function looks like bell shaped and has fixed are under two interval.
 * Continuos functions are calculated by integral while discrete with summation.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths5.JPG){: .lazyload}
 
 **Probability Commutative function** - Probability of being equal to or less then x, F(x)=P(X≤x)
 
@@ -127,7 +127,7 @@ $$cov(x,y)=  \sum_ip(x_i,y_i)(x_i-\mu_x)(y_i-\mu_x)\\
 \sum_ip(x_i)=\frac{1}{N-1} \sum_1^n \\
 cov(x,y)=  \frac{1}{N-1}\sum_1^n(x_i-\mu_x)(y_i-\mu_x)
 $$
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths6.JPG){: .lazyload}
 **Correlation** - pearson's correlation coefficient is covariance normalized by standard deviations of variables.
 $$corr(x,y)=\frac{cov(x,y)}{\sigma_x\sigma_y}$$ 
 
@@ -139,13 +139,13 @@ B = (B &#8745; A<sub>1</sub>)U(B &#8745; A<sub>1</sub>)..U(B &#8745;A<sub>n</sub
 $$P(A_k|B) = \frac{P(A_k\cap B)}{[P(A_1\cap B)+P(A_2\cap B)+..P(A_n\cap B)]}\\
 Using\;P( A_k \cap B ) = P( A_k )P( B | A_k )\\
 P( A_k | B ) =  	\frac{P( A_k ) P( B | A_l )}{[ P( A_1 ) P( B | A_1 ) + P( A_2 ) P( B | A_2 ) + . . . + P( A_n ) P( B | A_n ) ]}$$ 
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths7.JPG){: .lazyload}
 
 ### Discrete Distribution
 **Bernoulli Trials** - Trials which answers only in two values, such yes/no, 0/1, head/tail etc. Such that $$p=\frac12\;and\; q=1-p=\frac12$$.
 
 **Bernoulli Distribution** - A sheet with with column1 as possible outcomes as 0 and 1 and coloumn2 as there probability. For ex, p = 0.15 and q= 0.85.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths9.JPG){: .lazyload}
 $$E(X) = 0.q - 1.p = p\\
 V(X) = E(p^2)-E(p)^2 = p-p^2$$.
 
@@ -159,26 +159,26 @@ V(X) = E(p^2)-E(p)^2 = p-p^2$$.
 $$P(S)=q^3+3q^2p+3qp^2+p^3=1\\
 \sum_{i=0}^nP(x_i) = \sum_{i=0}^nC_x^nq^{n-x}p^x=1\\
 \mu=np\;,Var(X)=npq$$
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths11.JPG){: .lazyload}
 
 **Hypergeometric Distribution** - Binomial but sample space reduced due to last event, for ex. draw colored ball from bag starting with equal probability, but do not place the ball back which reduces the sample space.  
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths12.JPG){: .lazyload}
 
 **Uniform distribution** - Fair dice role has 6 possible outcome and each has probability of 1/6. Since 1 is total probability, area = width*height = f(x)(b-a) = 1; f(x) = 1/(b-a)
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG)
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths13.JPG){: .lazyload}
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths10.JPG){: .lazyload}
 $$\mu= \int_a^bxf(x)dx = \int_a^bx\frac{1}{b-a}dx = \frac{a+b}{2}\\
 Var(X)=\frac{(b-a)^2}{12} $$
 
 **Poisson Distribution** - Type of binomial but rate defined by &lambda;, The distribution when you know the constant rate of event over time or space. For ex. 50 email per hours or 22 trees per kilometer etc. Second thing the event are independent. For ex, 20 call per minute, then 0.33 call per second. Every second either call can come (0.33) or not(0.66). Let &lambda;	be probability of call per minute, divide that in n=60 interval then probability of on slice of n is p=&lambda;/n and q=1-&lambda;/n.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths14.JPG){: .lazyload}
 $$P(X=x) = C_x^np^xq^{n-x} =  \frac{n!}{(n-x)!x!}{\frac{\lambda}{n}}^x\left({1-\frac{\lambda}{x}}^{n-x}\right)=\frac{\lambda^xe^{-\lambda}}{x!} \\
 E(X)=\mu=\lambda,\;Var(X)=\mu=\lambda$$ 
 
 **Negative Binomial Distribution** - Number of failure before you get specific number of success. In contrast to Binomial, how many success after x trials. this is how many failures needed to get k successes and this gives how many trials. let k be number of successes in x trial then x-k is number of failure.  
 
 **Geometric Distribution** - Type of negative Binomial where you are interested to get first success after r failures. Number of trial becomes x = r+1. We are looking at kth trial which is success.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths15.JPG){: .lazyload}
 $$P(X=k) = (1-p)^{k-1}p\\
 E(X)=\mu = 1/p,\;P(Failure) = \frac{(1-p)}{p}\\
 Var(X) = \frac{1-p}{p^2}$$
@@ -188,7 +188,7 @@ Var(X) = \frac{1-p}{p^2}$$
 **Normal Distribution** - Distribution where mean, mode and median coincide. It is bell shaped, there are equal exactly half of the value on left and right side. 
 $$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\\
 E(X)=\mu,\;Var(X)=\sigma^2$$
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths16.JPG){: .lazyload}
 Normal distribution is not related to pro
 
 **Central Limit Theorem**- CLT (center, shape and spread), states even if we take an uneven distribution and take sample from it for n times, find the mean of each sample, start putting mean in buckets, the graph formed due to this filling will be more like normal distribution.**Mean of sample means** distribution will depict mean of population.**Standard Error** of population will be standard deviation of distribution sample means.
@@ -199,7 +199,7 @@ The confidence level, tells us how confident we are, that this particular interv
 
 
 **Exponential Distribution** - It is mix of poisson where we have rate, like calls per minute and geometric where we are interested in wait time of next call or how many failure before next success. **Weibull** is counterpart of exponential, time to failure. Ex. Machine failure time when we know rate.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths17.JPG){: .lazyload}
 $$F(x) = \lambda e^{-\lambda x}\\
 E(X)=\mu = 1/\lambda,\\
 Var(X) = \frac{1}{\lambda^2}$$
@@ -215,7 +215,7 @@ It cabe defined in two ways.
 **In Geometry**  
 The slope of line defined by following formula in between any two points. 
 $$Slope = m = \frac{y_1-y_2}{x_1-x_2}= \frac{f(x_1)-f(x_2)}{x_1-x_2}$$
-![!img](/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG) 
+![!img](/assets/2019-06-12-Machine-Learning-Basic-Maths1.JPG){: .lazyload} 
 
 Here we talk about two point if two points are very close such that $$x_1-x_2 \to 0$$, here derivatives comes for rescue. The derivative formula.
 {% raw %}$$\Delta x= x_1-x_2 =h\\
@@ -247,14 +247,14 @@ $$\vec v.\nabla f(x,y,x)=\begin{bmatrix}2\\3\\-1\end{bmatrix}.\begin{bmatrix}\fr
 
 ### Integrals
 Integrals can be defined as how much accumulated over time, in other terms how much area is covered under a slope between two points.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths2.JPG){: .lazyload}
 
 $$F(x) = \int_a^b f(x)dx \\
 Areas(a,b) = F(b)-F(a)= \int_0^b f(x)dx-\int_0^a f(x)dx$$
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths3.JPG){: .lazyload}
 
 **Important Formula**  
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths4.JPG){: .lazyload}
 
 **Common Usage of Integral**
 * Probability under PD - $$\int_{-\infty}^{+\infty} p(x)dx=1$$.
@@ -264,7 +264,7 @@ Areas(a,b) = F(b)-F(a)= \int_0^b f(x)dx-\int_0^a f(x)dx$$
 ## Linear Algebra
 ### Vector
 Vector is variable stores direction and it's magnitude from center. In 2D, left 7 and up 2 gives direction m = -2/7 and magnitude as well. It can be stored in 1D array/matrix column or raw anything [-7 2]. It is denoted mostly by bold italic latter with arrow on top. $$\vec v = (a_x,a_y)\\$$
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths8.JPG){: .lazyload}
 $$\mathbf{magnitude} = |v|(not\,absolute)=||v||= \sqrt{x^2+y^2}\\
 x=rcos\theta,\; y=rsin\theta\\
 r=\sqrt{x^2+y^2},\; \theta = tan^{-1}(y/x)\\ 

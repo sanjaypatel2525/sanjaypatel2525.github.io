@@ -24,7 +24,7 @@ author:
 Neural network set of network with input, hidden and output neurons/nodes. Each neuron is **activation function** (for ex gradient descend) and each synapse/link have some weights. Every node maintains error metric and coefficient are adjusted to lower the error metric using back propagation. **Bias** are some constant values at neuron.
 
 **Ok all above is fine but why?**  
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG){: .lazyload}
 Let think of example, what number is there in below image. It is blurred not accurate but it is 2. Every human handwriting will create different image of 2 probably but human understand it is 2. How machine can know it is 2. Actually it doesn't know it, it says the probability of this image being 2 is let say 90%. And we write the code which can take pixel of this image as input and generate possible results with probability. How much a pixel is lit can be i/p for next layer and affect how much next layer neuron are lit, in the end if algorithm is good it will lit the output neuron which is marked for 2 with some probability.
 
 
@@ -52,7 +52,7 @@ $$a^1=\sigma(Wa^0+b)\\
 Goal is to adjust the weights so that each overall cost is minimized.
 Example of 1 node at each level. 
 
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG){: .lazyload}
 Calculate change in C wrt to W<sub>L</sub>. $$\frac{\delta C_0}{\delta w^L}=\frac{\delta z^L}{\delta w^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
 = a^{(L-1)}.\sigma'(z^L).2(a^L-y)$$
 For k number of training examples. $$C_1,C_2..C_k$$ will be the cost function and nudging L level weight w<sub>L</sub> will be $$\frac{\delta C}{\delta w^L}=\frac{1}{n}\sum_{k=0}^{n-1}\frac{\delta C_k}{\delta w^L}$$
@@ -69,7 +69,7 @@ $$\frac{\delta C_0}{\delta b^L}=\frac{\delta z^L}{\delta b^L}\frac{\delta a_L}{\
 = w^L.\sigma'(z^L).2(a^L-y)$$
 Now let take k node at L-1 level and j nodes at L level. At this level $$\nabla C$$ changes at seems complex but it is not. 
 $$\Delta C =\eta \nabla C$$ Where $$\nabla c$$ is negative small change, gradient descend and $$\eta$$ is learning rate or step size. Keeping too small will slow down and keeping big will overshoot. Later update w and b by these small changes.
-![](/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG)
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG){: .lazyload}
 
 
 Commutatively we can say $$\delta_j^L=\frac{\delta C}{\delta z^l_j}$$. If this value big that mean changes at this z will make big impact to lower down the C rather then other lower derivative.
@@ -143,21 +143,21 @@ $${\displaystyle \operatorname {E} {\Big [}{\big (}y-{\hat {f}}(x){\big )}^{2}{\
 
 
 # Neural Network Andrews Ng way
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network1.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network2.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network1.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network2.JPG){: .lazyload}
 Vectorization takes advantage of SIMD (Single instruction Multiple data)
 ### Gradient Descend vectorization
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network9.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network3.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network4.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network9.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network3.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network4.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG){: .lazyload}
 
 * In NN input layer is not counted as layer, so we start from $$a^[0]$$ which is input layer. If you see 3 layers including input and output, it will be called 2 layer NN.
 
 **Multilayer neural network vectorized form**
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network6.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network7.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network6.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network7.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG){: .lazyload}
 
 **Derivative of activation function**
 $$sigmoid = g(z) = a \;then\; g'(z)= 1-a \\
@@ -165,16 +165,16 @@ tanh = g(z)=tanh(z) = a \;then\;g'(z) = 1-a^2\\
 relu = g(z)=max(0,z) = a \;then\;g'(z) = \begin{cases} 0\;when\;z<0\\1\;when\;z>0\end{cases}\\
 leaky relu = g(z)=max(0.01z,z) = a \;then\;g'(z) = \begin{cases} 0.01\;when\;z<0\\1\;when\;z>0\end{cases}$$
 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG){: .lazyload}
 
 **Keep track of dimensions**
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network11.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network11.JPG){: .lazyload}
 
 **Deep network calculations**
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network12.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network12.JPG){: .lazyload}
 
 **Backward and forward propagation formulas**
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network13.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network13.JPG){: .lazyload}
 
 ## Fine-tune NN
 Earlier ML used to have 70, 30 ratio to train and test set. Now a day due to big data the data set has increase so train set goes around 99% remaining is dev and test set. Dev test cross validation data for developer to find out right ML algorithm. Dev and test set should be from same distribution set, if not dev and test wouldn't be same.
@@ -187,22 +187,22 @@ Fix variance: More data or Regularize, or better NN architecture.
 ### Regularization 
 L1 - Absolute value of weights
 L2(weight decay) - Squared value of weights
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network14.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network14.JPG){: .lazyload}
 
 
 ### Dropout
 Dropout, on off different nodes at different inputs tends to generalize the network. This is also one of the regularization technique.
 **Inverted Dropout**
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network15.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network15.JPG){: .lazyload}
 
 ### Vanishing and exploding Gradient descend.
 Many times gradient becomes to big or too small which just diverges the cost function. To overcome this issue there are multiple solution.
 **Random Weights initialization based on Activation function**
 Based on number of input node distribute weight to sum up to 1, which make each weight 1/n. Relu works better with 2 in place of 1.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network16.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network16.JPG){: .lazyload}
 
 **Gradient Checking** - Sometime while coding we would want to know weather our gradients calculation are correct in code. To do so we merge all W's, b's,dW's and db's to single dimension array call &theta; and d&theta;. Later calculate approx d&theta; by nudging &#949; a bit. In the end compare the difference between these approx and model's calculated derivatives.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network17.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network17.JPG){: .lazyload}
 
 **Grad check Do's and Don'ts**
 * Do it only once, do not do it each training iterations.
@@ -219,18 +219,18 @@ Based on number of input node distribute weight to sum up to 1, which make each 
 **Fit mini batch to CPU GPU memory to run faster**, such 64, 128, 246,512, beyond this is rare for now. 
 
 **Exponential weighted Avg** - Averaging current with previous values with some proportion to previous values.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network18.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network18.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG){: .lazyload}
 
 
 **Bias Correction** - In Exponential weighted average, initial average is biased as it starts from zero, to fix we use a different formula. 
 $$v_{t+1} = \frac{v_t}{1-\beta^t}$$
 
 **Apply EWA to Gradient Descend** - This somewhat resolves issue of noise due small batch size, also helps with the issue of overshooting with higher learning rate. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG){: .lazyload}
 
 **RMS prop** - Root mean square, same as momentum dampening.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG){: .lazyload}
 
 **Adam Optimization** - It is combination of both RMS and EWA. 
 
@@ -243,33 +243,33 @@ Multidimensional space local optima is normally not a problem as dimension incre
 ### Batch Norm
 Sometime it is good to normalize z's or a'z of each layer.
 We calculate tilda z, as normalized form of z, and rescale it with &beta; and &gamma;
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network23.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network23.JPG){: .lazyload}
 &beta; is constant and can be eliminated as we already have rescaled the z.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network24.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network24.JPG){: .lazyload}
 Batch norm intuition is about, hidden layer don't need to bother about changing inputs due to earlier layer learning, with z and  a norm hidden layer will learn based on a standard input, doesn't whatever initial layers have. It make hidden layers independent of initial layers.
 * At test time, we use trained EWA of &mu; and &sigma; value.
 
 ## Softmax Classification.
 When the output of NN has predefined classes, it becomes a problem of softmax where we calculate probability of classes. Hardmax just says 1 for one class and others as 0.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network25.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network25.JPG){: .lazyload}
 
 ### Single Number Evaluation matrix for Model.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG){: .lazyload}
 
 **F1 score** is harmonic mean(reduces effect of outlier average), **precision**(% of actual cats out of model recognized cats) and **recall**(% of correctly recognized cat out of actual cats) 
 
 ### Satisfying and optimizing metric
 Sometime there is good precision of model but take a lot time, some has low precision but takes less time. Create  Satisfying criteria, what is max time be bare to run and with that find model which has highest precision.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG){: .lazyload}
 
 * Dev and test set should be from same distribution.
 * We can omit test set but not advised.
 * For really unwanted predicted result, penalize those result to increase the error percentage.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network28.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network28.JPG){: .lazyload}
 
 ## Bayes's Error
 It's a upper limit defined by us before starting on any problem, We can't make machine more accurate they Bayes's error. For ex, faded image, even human give answer only 80% times right then machine can't have 100% accuracy so we define an upper limit for machine learning and it is Baye's error. Sometime It is same as human error but always above then human error.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network29.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network29.JPG){: .lazyload}
 
 Avoidable Bias is gap between human error and training error.
 
@@ -277,21 +277,21 @@ Avoidable Bias is gap between human error and training error.
 * Random errors in training set is fine, but if it is systematic machine will learn on that error and create issues.
 
 ### Tuning Model using.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network30.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network30.JPG){: .lazyload}
 
 ### Transfer learning
 Sometime you can use existing model with different problem such as cat detection to radiology or speech recognition to wake work. In this you just add remove last layer and append one or more extra layer.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network31.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network31.JPG){: .lazyload}
 
 ### Multitask learning
 Autonomous driving one image can have multiple thing, signs, lights, pedestrian etc. All can stacked up in Y matrix and use bigger network to learn all thing together rather then one by one. It always works better then training individual neural network.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network32.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network32.JPG){: .lazyload}
 
 
 ### End to end deep learning
 Big enough neural network with huge train data would suffice the for any complex x to y mapping. Some time when we less x to y mapping train data and we have more of intermediate data then we use component wise neural network model and here it works best, if you have huge data then end to end works best.
 For ex, image to text detection, text to phrase detection, phrase to intent detection. This can be split into multiple small models or can be created in single big neural network, based on train set we decide which one to choose. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network33.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network33.JPG){: .lazyload}
 
 
 # Convolution network.
@@ -299,28 +299,28 @@ For images, you have million pixels in your images these, that mean million feat
 
 ### Edge detection.
 Use 3X3 filter(Kernel) to find edges.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network34.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network35.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network36.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network34.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network35.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network36.JPG){: .lazyload}
 * In above diagram you white to black is comes as white edge and black to white comes as dark edge, later you 30 and 10 that is because the edge has converted from white edge to back edge. If you transpose the filter matrix it becomes horizontal filter. Later image you see there are other filter which has some other properties, some are oriented filter(not vertical or horizontal but rotated to some degrees). Neural net learns to find best possible filter matrix.
 
 ### Padding
 Since output becomes smaller then input we pad input pixel with 0 so that output becomes same size of input. Filter are normally of odd sized so padding should be full number. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network37.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network37.JPG){: .lazyload}
 
 ### Strided Convolution.
 Jump more then 1 step in applying filter. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network38.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network38.JPG){: .lazyload}
 
 **Maths, Cross-Correlation vs Convolution** - In maths all above work which we have done is cross-correlation, convolution involves one more step of filliping filter before applying.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network39.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network39.JPG){: .lazyload}
 
 ### Multiple channels(Third dimension ex RGB) and Multiple filters combines(ex Horizontal with vertical etc)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network40.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network40.JPG){: .lazyload}
 
 ### Notations for One layer CNN
 Here we discuss about only one layer, consider different filters operation produces a different output nodes, in single filter you have 3 dimension data which is actually a flattened weight on 3*3*3 size vector.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network41.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network41.JPG){: .lazyload}
 
 ### Type of CNN layers
 * Convolution Layer - Which we saw above
@@ -329,63 +329,63 @@ Here we discuss about only one layer, consider different filters operation produ
 
 ### Pooling layer
 These layer are the reducers, they reduce the size of each dimension by either max pooling (get max out of 1 block) or average (rarely used). It doesn't have any hyperparameter hence no learning of variables here. This is said to be used to pick one particular feature from block(Max) or average of block feature.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network42.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network42.JPG){: .lazyload}
 
 
 ### Simple CN (Ex Lenet-5)
 * Normally the pattern is CL and PL few more CL and PL then some FC layers.
 * H and W decreases while C(third dimension) increases
 * PL has 0 parameter to lean, CL has less parameters, FCL has most parameters to learn.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network43.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network43.JPG){: .lazyload}
 
 ### Why convolution?
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network44.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network44.JPG){: .lazyload}
 
 ### Case study.
 Here we have three different CNN papers.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network45.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network45.JPG){: .lazyload}
 
 ### Res Net .
 Residue net, it keeps the residue of previous layer by giving shortcut input to higher layers.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network46.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network46.JPG){: .lazyload}
 
 **Why ResNets work,** It fights back to diminishing issue due to Weight Decay L2 regularization. If Weight diminishes in next layer, the input from previous layer are already mapped to third layer.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network47.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network47.JPG){: .lazyload}
 
 Resnet has two type of blocks. First when the shortcut doesn't match the output dimension(convolution block) and when it matches (identity block)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network87.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network87.JPG){: .lazyload}
 
 ### 1 by 1 network
 Polling can be used to reduce height and width, how about depth or channels, it is decrease by 1 by 1 filter.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network48.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network48.JPG){: .lazyload}
 
 ### Inception Layer
 It usage 1 by 1 network concept to reduce the computation cost. Here is the comparison.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network50.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network50.JPG){: .lazyload}
 Inception layer have multiple layer together and stacked up later. Combining multiple inception layer can work better also adding fully connected layer 
 
 ### Transfer learning
 Take related model from github and replace last softmax layer with your classification softmax layer when you have very less data to train, in this case you will freeze calculation of previous layers and use pre calculated values , if you have more data to train, take github data start with that model and train whole model.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network51.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network51.JPG){: .lazyload}
 
 ## Object detection
 Object detection is finding out object inside a picture, it more advance then the detecting what image is out or image classification.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network52.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network52.JPG){: .lazyload}
 
 ### Notation and Loss calculation for object detection.
 bx, by are center for object, c1, c2,c3 will either have 0 or 1 which class it belong to, and Px is probability(mostly 1) of that object.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network53.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network53.JPG){: .lazyload}
 
 ### LandMark detection (Multiple points or shapes)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network54.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network54.JPG){: .lazyload}
 
 ### Sliding window with Convolution.
 Sliding window you will have to crop many pictures, but convolution NN automatically does that with step as stride numbers.So all cropped images has run simultaneously and shared the computations
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network55.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network55.JPG){: .lazyload}
 
 ### YOLO Algorithm
 It runs very fast, it divides the image in grid and learn on weather the object is falls in box or not and it height/width with respect to box size. With these input data, YOLO starts to learn picking things.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network56.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network56.JPG){: .lazyload}
 **What you should remember:**
 * YOLO is a state-of-the-art object detection model that is fast and accurate
 * It runs an input image through a CNN which outputs a 19x19x5x85 dimensional volume.
@@ -396,16 +396,16 @@ It runs very fast, it divides the image in grid and learn on weather the object 
 Because training a YOLO model from randomly initialized weights is non-trivial and requires a large dataset as well as lot of computation, we used previously trained model parameters in this exercise. If you wish, you can also try fine-tuning the YOLO model with your own dataset, though this would be a fairly non-trivial exercise.
 
 ### IoU
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network57.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network57.JPG){: .lazyload}
 
 ### Non Max suppression.
 Model tend to detect multiple boxes for same object, then non max suppression picks one with highest probability and with this box find IoU with other boxes, if IoU of highest Px box and other box is grater then 0.5, then we discard box.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network58.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network58.JPG){: .lazyload}
 
 ### Multiple object over lap.
 Create anchor boxes and increase y vector by maximum overlapping object that model should detect. Lets say y was 8 and we changed it to 8*2=16, it can detect two shape anchor boxes. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network59.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network60.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network59.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network60.JPG){: .lazyload}
 
 
 ## Face Recognition
@@ -414,33 +414,33 @@ Face verification is comparing image with another image, while recognition is fi
 &alpha; is margin, how much different can be accepted as same image. 
 **Hard triplet** - For image distance learning, if you provide image subject(A), positive image(P) and negative (N), A and N are different people, then the distance will be definitely high and it will not help machine to learn. N should be of different person but should be little bit similar to A it make it hard to learn, which improves model learning. 
 **Triplet Loss** - Loss function to learn on triplets of image A,P,N. Later used in gradient descend to learn the NN model.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network61.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network61.JPG){: .lazyload}
 
 ### Face verification and Binary classification
 Above approach was good but we can have alternative as, above model is tweaked little bit and used to identify person by comparing the saved feature vectors(calculated and save in DB) against new image feature vector to identify if new user is from database or not. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network62.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network62.JPG){: .lazyload}
 
 ### Neural Style Transfer. 
 Use style of another image(S) to subject image(C) to create new image G. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network63.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network64.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network63.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network64.JPG){: .lazyload}
 
 ## Sequence Model
 It is used when you have sequence of data, such as language translation, NLP, Music creation etc, Video filtration. Here the output can word to word match(Tx = Ty, length of input equal length of output) or even sometime it can't be equal also. Moreover, to predict next block output you might need input data of previous block as well(such NLP sentence meaning is formed when you consider previous word also). Here we use RNN.
 
 ### Recurring Neural Network
 Previous block A is fed to next block NN calculation.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network65.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network65.JPG){: .lazyload}
 
 Here, W<sub>aa</sub> and W<sub>ax</sub> is written side by side in one matrix and marked as W<sub>a</sub>, same with a and x. In backprop you try to reduce sum of loss at each output.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network66.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network66.JPG){: .lazyload}
 
 **Types on RNN**
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network67.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network67.JPG){: .lazyload}
 
 **Language Modeling and sequence generation**
 When model is trained on some test sentences, it start to make prediction on next words based on previous words.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network68.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network68.JPG){: .lazyload}
 * In character level model the charters are passed in place of words and vocab is formed from character. This model doesn't work better then word model also it take more computation time and power.
 
 * Vanishing gradient problem, In deep NN initial layer impact is very less on last layer.
@@ -452,77 +452,77 @@ To remember old words and overcome vanishing gradient descend, we have following
 
 ### GRU - Gated recurrent Unit
 Add another weight W<sub>u</sub> with existing W<sub>a</sub>(represented here as W<sub>c</sub>)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network69.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network69.JPG){: .lazyload}
 
 ### LSTM - Better then GRU
 It has few more gates to learn. Update, forget and output gates.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network70.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network70.JPG){: .lazyload}
 
 ### BRNN - Bidirectional RNN
 Once model learning is complete, BRNN requires full sentence to predict the words between with it's probabibility. It is not much used as it requires full sentence, there much more complex models in place to which work on realtime data.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network71.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network71.JPG){: .lazyload}
 ### Deep RNN.
 RNN with multiple RNN layer is deep RNN. 
 
 ### Word embedding, 
 We use feature matrix in place of word vector, so the dimension is reduced from 10k to 300 in our example, if 10k were words and 300 are feature in vector. Feature vector helps us to relate two different words by analogy like gender, royalty and it can derive similarity as man, women then king will have queen , country capital etc.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network72.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network72.JPG){: .lazyload}
 
 
 ### Cosine similarity vs Squared difference. 
 Cosine between two vector tells about how similar they are, big value is they are more similar, cos(0)=1 and small value they are not at all similar cos(90)=1, while squared difference tell different they are, big value they are different small value they are similar. Check the image above. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network73.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network73.JPG){: .lazyload}
 
 ### Derive Word embeding. 
 THere is matrices E, formed formed of 300 feature for 10k word. If you multiple one hot vector of word to E you will get e (word embedding), also you can stack 10k e(word embedding) vector to form E.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network74.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network74.JPG){: .lazyload}
 
 ### Finding target based on Context word.
 **Skip Gram Model**
 Context and target word are picked randomly from sentence.
 Here we have E(Combined embed vector) and &theta;(Softmax) to learn
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network75.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network75.JPG){: .lazyload}
 
 ### Negative sampling
 Rather then iterating over 10k words to predict using softmax and update 10K e (E) and &theta;, lets take only k sample for ex 5 negative and 1 positive and update E based on only these training set. How to select negative sample is, either pick randomly (issue common word will show up more) or pick using word's frequency weight. P(w) and f(w).
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network76.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network76.JPG){: .lazyload}
 
 ### Sentiment Classification.
 Tune E which gets e(feature) value and average it up to find out sentiment of sentence, but sometimes one negative word in starting changes the complete meaning of sentence, in this case average doesn't work. RNN is good model to remember outcomes from previous words as well.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network77.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network77.JPG){: .lazyload}
 
 ### Biased learning issue.
 Sometime due to more data, such as babysitter are female, nurses are female creates biased learning for NN. But this is not actually the case in real world man can be female and nurses to remove these biases, we pass learned NN to neutralization algorithm which neutralize feature vector for nurse and baby sitter in gender direction. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network78.JPG)
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network86.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network78.JPG){: .lazyload}
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network86.JPG){: .lazyload}
 
 ## Sequnece to Sequence generation
 When we have stream and we want to generate stream, such as machine translation, image captioning etc.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network79.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network79.JPG){: .lazyload}
 
 ### Conditional language model.
 Language generation model(generate sequence of word based on one input) look similar to sequence to sequence generation model. But S2S model give a feature vector output of given input and passed to language generation model which looks more conditional. We have two option at each word generation pick highest probability output word (greedy) or average out all generated word probability(more optimal).
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network80.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network80.JPG){: .lazyload}
 
 ### Beam Search
 Here we store top B probability words at each output, and based on conditional probability we keep making prediction of next words, in case of B=3, first word will have 3 possible outcome among 10k, next will have 3*10K and only three will be selected and rest discarded. At reaching EOF, the sentence having max probability will be the result. 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network81.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network81.JPG){: .lazyload}
 
 ### Refinement to Beam Search
 Normalization- Since conditional probabilities can be very small and cause undeflow errors, in place of product of probability we use sum of log probability, sum of log probability can be big then we normalize by dividing with count of vocabulary words we have or some percentage of that &alpha;
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG){: .lazyload}
 
 ### Error analysis
 Who is at fault RNN or Beam window, you can find this out by comparing probability of p(y*) vs p($$\hat y$$). 
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG){: .lazyload}
 
 ### Attention Model.
 **Bleu Score**- Bilingual evaluation understudy. 1 value to validate good translation is working. In this we compare the machine generated sentence with human given reference sentence and see how same they by checking the common word occupance. 
 If the sentence is too large Blue score will drop, to maintain it we want to keep translating rather than waiting for EOF. Just like human we read some word and translate, it is call giving attention to few nearby words.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network84.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network84.JPG){: .lazyload}
 
 Spectrogram
 ### Speech recognition & Trigger word Detection.
 For both we use the same above attention model, but rather than having text as input we have speech which is frequency sliced basis of time, let's say 10 second audio sliced to 10k times and fed in machine to print the sentence. 
 Trigger word are trained to give 1 only when the trigger word occurred.
-![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network85.JPG)
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network85.JPG){: .lazyload}
