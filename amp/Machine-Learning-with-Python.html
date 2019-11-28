@@ -223,7 +223,7 @@ Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for d
 There are many supervised algorithm examples: <strong>linear regression, logistic regression, support vector machine SVM, Naive bayes classifier</strong>.</p>
 
 <p><strong>Classification</strong>- Classification is dividing the data into set, categorizing it or anything related to segregating data. It is done when you have complete data, so it is done after.<br>
-<strong>Prediction/Regression</strong> is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced. <strong>It works on continuos values and continuos value have order, less then number or more then number not like discrete no order only set of values</strong></p>
+<strong>Prediction/Regression</strong> is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced. <strong>It works on continuos values and continuos value have order, less than a number or more than a number, not like discrete, no order, only set of values</strong></p>
 
 <h2 id="unsupervised-learning">Unsupervised learning.</h2>
 <p>It used to detect anomalies, outlier, something which is odd then normal, fraud, defective equipment, or group with similarities. In here we don’t get the labeled data. It is also called unlabeled learning, the algorithm tries to find pattern, structure, anomaly from the given data.
@@ -299,6 +299,9 @@ min\,value\,of\,θ=(X^TX)^{-1}X^Ty</script>
 <p>Logistic function or called sigmoid function, it maps the value to in between 0 &lt; h(x) &lt; 1. Hence can be used in probability prediction. Probability of y being 1 at given value of x when θ is hyperparameter. θ changes the width of sigmoid function hence affect the y over over x. 
 <script type="math/tex">h_θ(x)=g(z)=g(θ^Tx)= \frac{1}{1+e^{θ^Tx}}=P(y=1|x:θ)</script></p>
 
+<p>A good explanation here. https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
+https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc</p>
+
 <ul>
   <li>Logistic is some what categorized as classification algorithm but is is continuos.</li>
 </ul>
@@ -363,7 +366,7 @@ D^{l}_{i,j}=\frac{1}{m}Δ^{l}_{i,j}\,if\,j=0</script>
   <li>Increase decrees generalization λ.</li>
   <li>Try polynomial equations over parameters.
 <amp-img src="/assets/2019-06-12-Machine-Learning-with-Python11.JPG" alt="" class="lazyload" width="724" height="294" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python11.JPG" alt="" class="lazyload" width="724" height="294"></noscript></amp-img>.
-Some people <strong>dividing training</strong> set in training set, validation set to pick <strong>lowest cost polynomial function</strong> and test set to check <strong>generalization variation</strong> on new data.</li>
+Some people <strong>divide training</strong> set in training set, validation set to pick <strong>lowest cost polynomial function</strong> and test set to check <strong>generalization variation</strong> on new data.</li>
 </ul>
 
 <h3 id="bias-and-variance">Bias and variance.</h3>
