@@ -3,18 +3,18 @@
   <channel>
     <title>Sanjay Patel - Blogs</title>
     <description>Technical blogs.</description>
-    <link>https://abyte.stream/</link>
-    <atom:link href="https://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Nov 2019 12:16:45 -0500</pubDate>
-    <lastBuildDate>Thu, 28 Nov 2019 12:16:45 -0500</lastBuildDate>
+    <link>https://abyte.streamhttps://abyte.stream/</link>
+    <atom:link href="https://abyte.streamhttps://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 28 Nov 2019 12:20:21 -0500</pubDate>
+    <lastBuildDate>Thu, 28 Nov 2019 12:20:21 -0500</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>Machine Learning Linear Algebra</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;h1 id=&quot;linear-algebra&quot;&gt;Linear Algebra&lt;/h1&gt; &lt;h2 id=&quot;vector&quot;&gt;Vector&lt;/h2&gt; &lt;p&gt;Vector is a list, but each item in list defines a different axis. For ex in 2D plain, [x,y] there are two axis x and y. Talking about living being, eyes, nose, ….legs . There are many attribute/dimension. human has 2 legs but cow has 4 in leg axis. &lt;strong&gt;Vector has magnitude and direction&lt;/strong&gt; - If we take only 1 vector a time, i. We can define magnitude by number. But the direction is always relative so the direction will only be shown when there is another vector. Such 3i+4j. 3 x...</description>
         <pubDate>Sat, 15 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine_Learnig_Linear-Algebra/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine_Learnig_Linear-Algebra/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Machine_Learnig_Linear-Algebra/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine_Learnig_Linear-Algebra/</guid>
         
         <category>Machine Learning</category>
         
@@ -27,8 +27,8 @@
         <title>Machine Learning Basic Maths</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This blog covers basic mathematics required for Machine learning. There are many terms which we need to know before we can jump into Machine learning.&lt;/p&gt; &lt;p&gt;#Statistics in Mathematics &lt;strong&gt;Data &amp;amp; Frequency&lt;/strong&gt;: &lt;strong&gt;Data&lt;/strong&gt; be anything given as input, for ex, let’s say set of alphabets, &lt;strong&gt;frequency&lt;/strong&gt; is defined as how many time each alphabets has appeared in the set. Percentage is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{frequency}{total\,items\,in\,set}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Mean or Average or Population Mean&lt;/strong&gt; - Is defined as sum of all elements divided by count of the elements. &lt;script type=&quot;math/tex&quot;&gt;\bar x = \frac{\sum X_i}{n}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Sample Mean&lt;/strong&gt; - Mean of the sample...</description>
         <pubDate>Sat, 15 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-Basic-Maths/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Basic-Maths/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-Basic-Maths/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-Basic-Maths/</guid>
         
         <category>Machine Learning</category>
         
@@ -41,8 +41,8 @@
         <title>Python when you are from Java</title>
         <description>&lt;p&gt;Let’s see some Python Basics first you can skip it as well.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Python string can be inside single quotes and double quotes and three quotes as well. Three quotes takes care of new line as well.&lt;/li&gt; &lt;li&gt;Either use 4 spaces or a tab to indent.&lt;/li&gt; &lt;li&gt;# for comment and “”” for multiline documenttaion comment&lt;/li&gt; &lt;li&gt;Naming conventions &lt;ul&gt; &lt;li&gt;Module name, variable name and function name should be all small with underscores.&lt;/li&gt; &lt;li&gt;Class name should CaptWord.&lt;/li&gt; &lt;li&gt;Constants should be ALL_CAPS with underscore.&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;type-of-methods-in-class&quot;&gt;Type of methods in class&lt;/h3&gt; &lt;p&gt;There are three type of methods in class is &lt;strong&gt;instance...</description>
         <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Python-when-you-are-from-Java/</link>
-        <guid isPermaLink="true">https://abyte.stream/Python-when-you-are-from-Java/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Python-when-you-are-from-Java/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Python-when-you-are-from-Java/</guid>
         
         
         <category>Machine Learning Notes</category>
@@ -53,8 +53,8 @@
         <title>Machine Learning Python Libraries</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This is not a extensive detailed guide for machine learning libraries. It is a small extract of common feature of these libraries and there usage.&lt;/p&gt; &lt;p&gt;There are many Python packages used in ML, but here are some important ones.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;NumPy - Everything related to Maths, formulas, series, multidimensional arrays and operations etc.&lt;/li&gt; &lt;li&gt;SciPy - For statistical analysis, extension of Numpy&lt;/li&gt; &lt;li&gt;Pandas - Dealing with data reading/writing/manipulation from/to CSV,database,excel etc, cleaning, filtering.&lt;/li&gt; &lt;li&gt;Seaborn - For data visualization&lt;/li&gt; &lt;li&gt;Matplotlib - For data visualization, Seaborn is extension over Matplotlib.&lt;/li&gt; &lt;li&gt;Scikit-learn - Provides ready to use ML algorithms, based on...</description>
         <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-Python-Libraries/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Python-Libraries/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-Python-Libraries/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-Python-Libraries/</guid>
         
         <category>Machine Learning</category>
         
@@ -67,8 +67,8 @@
         <title>Machine Learning with Python</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation. Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.&lt;/p&gt; &lt;p&gt;Popular machine learning techniques classification, regression, recommendation and clustering.&lt;/p&gt; &lt;p&gt;Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.&lt;/p&gt; &lt;p&gt;Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.&lt;/p&gt; &lt;p&gt;Programming which learns and improves with experience. Learning means recognizing and understanding the data...</description>
         <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-with-Python/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-with-Python/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-with-Python/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-with-Python/</guid>
         
         <category>Machine Learning</category>
         
@@ -81,8 +81,8 @@
         <title>Machine Learning Neural Network.</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Neural network set of network with input, hidden and output neurons/nodes. Each neuron is &lt;strong&gt;activation function&lt;/strong&gt; (for ex gradient descend) and each synapse/link have some weights. Every node maintains error metric and coefficient are adjusted to lower the error metric using back propagation. &lt;strong&gt;Bias&lt;/strong&gt; are some constant values at neuron.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Ok all above is fine but why?&lt;/strong&gt;&lt;br /&gt; &lt;img src=&quot;/assets/2019-06-12-Machine-Learning-Basic-Maths22.JPG&quot; alt=&quot;&quot; class=&quot;lazyload&quot; /&gt; Let think of example, what number is there in below image. It is blurred not accurate but it is 2. Every human handwriting will create different image of 2 probably but human understand it...</description>
         <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-Neural-Network/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-Neural-Network/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-Neural-Network/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-Neural-Network/</guid>
         
         <category>Machine Learning</category>
         
@@ -95,8 +95,8 @@
         <title>Machine Learning with Tensor Flow.</title>
         <description>&lt;p&gt;TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit lear to one liner ML models. &lt;img src=&quot;/assets/2019-08-21-Machine-Learning-TensorFlow1.png&quot; alt=&quot;&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;tf-estimator&quot;&gt;TF estimator&lt;/h3&gt; &lt;p&gt;It is library which hold all high level ML algorithm for ex.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;TF Logging&lt;/strong&gt; - It has four logging options,DEBUG,INFO ,WARNING, ERROR. tf.logging.set_verbosity(tf.logging.ERROR)&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Tensors&lt;/strong&gt; : One number, vector, matrix etc are are form of tensor. Increase in dimension results are stored in tensors. How would you store 10 matrix. You will think array of matrix, and that variable is called tensor.&lt;/p&gt; &lt;p&gt;Tensor flow formally gives...</description>
         <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Machine-Learning-TensorFlow/</link>
-        <guid isPermaLink="true">https://abyte.stream/Machine-Learning-TensorFlow/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-TensorFlow/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-TensorFlow/</guid>
         
         <category>Machine Learning</category>
         
@@ -109,8 +109,8 @@
         <title>10 Minutes JMS.</title>
         <description>&lt;p&gt;JMS (Java messaging Service) is a standard defined in Java EE to address the producer consumer problem. It standardizes the way of message exchange between two or more system. JMS can be vaguely related to Webservice as they both do the same tasks sending and receiving message. But the main difference lies is Webservice are Synchronous and JMS is asynchronous. Also, we can relate JMS and messaging queues provided different vendor such as WebSphere MQ, ActiveMQ, RabbitMQ etc. AMQP and Microsoft messaging queue does not implement JMS. You can bind &lt;strong&gt;JMS inside a EJB&lt;/strong&gt; same as other locale remote network...</description>
         <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/10-minutes-JMS/</link>
-        <guid isPermaLink="true">https://abyte.stream/10-minutes-JMS/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/10-minutes-JMS/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/10-minutes-JMS/</guid>
         
         
         <category>Spring</category>
@@ -121,8 +121,8 @@
         <title>Web Services in Java world.</title>
         <description>&lt;p&gt;The journey of communication in Java has many stops. RPC, RMI, CORBA, WebServices (SOAP, RESTful), EJB Standards, ORM and JPA, JDBC etc. Let’s understand all in one liner statement.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;RPC&lt;/strong&gt; - Calling a remote method of a server directly is done via RPC standards. No language barrier.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;RMI&lt;/strong&gt; - RMI is mapping remote object to proxied local object and call method via proxied object. It is part of Java and deals with object.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Webservice&lt;/strong&gt; - Webservice is comparable to RPC but it has more sophisticated structure of communicating message. There are two type of Webservice SOAP(Defines and works on...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Web-Service-in-Java-world/</link>
-        <guid isPermaLink="true">https://abyte.stream/Web-Service-in-Java-world/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Web-Service-in-Java-world/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Web-Service-in-Java-world/</guid>
         
         
       </item>
@@ -131,8 +131,8 @@
         <title>Spring Boot JUnit with Mockito.</title>
         <description>&lt;p&gt;There are cases when you want to write test cases for your method, but the method itself usage some other method or service, in these scenarios we try to skip the inner methods call or service by mocking it up.&lt;/p&gt; &lt;p&gt;Mockito is very famous mocking api. With this you can mock any object and just focus on testing of your method only.&lt;/p&gt; &lt;p&gt;Let’s quickly jump into Spring boot JUnit configuration. Add following lines in pom.xml&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt; &lt;span...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Boot-JUnit-with-Mockito/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Boot-JUnit-with-Mockito/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Boot-JUnit-with-Mockito/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Boot-JUnit-with-Mockito/</guid>
         
         
       </item>
@@ -141,8 +141,8 @@
         <title>SOAP Services in Java world.</title>
         <description>&lt;p&gt;SOAP(Simple Object Access Protocol) is one of the popular way of inter application communication, application can be on different system or same system using network, can on different languages. SOAP can work with many protocol such http, SMTP etc. SOAP has two flavour RPC Style and Document based. SOAP has strict contract defined in form of WSDL. You can start creating Java class and later define WSDL based on class(bottom up approach) or define WSDL and generate Java class(top down approach). Defining WSDL can be tedious sometime for complex services so top down can be tedious compared bottom up approach.&lt;/p&gt;...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/SOAP-in-Java-world/</link>
-        <guid isPermaLink="true">https://abyte.stream/SOAP-in-Java-world/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/SOAP-in-Java-world/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/SOAP-in-Java-world/</guid>
         
         
       </item>
@@ -151,8 +151,8 @@
         <title>REST Services in Java world.</title>
         <description>&lt;p&gt;JAX-RS define specification for REST webservice. REST principal goes very well with HTTP protocol that’s the reason people normally interpret REST as REST over HTTP service. There are many libraries are there in market which helps in creating REST services Spring Rest, JAX-RS Jersey, Apache CXF, RestEasy. All are quite a bit same and have matching syntax. In this we will discuss mainly about JAX-RS standard and Jersey implementation of JAX-RS, later little bit on Spring REST.&lt;/p&gt; &lt;h2 id=&quot;spring-with-jersey&quot;&gt;Spring with Jersey&lt;/h2&gt; &lt;p&gt;Spring has it’s own rest framework and with different annotations but let’s look at JAX-RS standard J2EE JAX-RS annotation...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/REST-in-Java-world/</link>
-        <guid isPermaLink="true">https://abyte.stream/REST-in-Java-world/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/REST-in-Java-world/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/REST-in-Java-world/</guid>
         
         
       </item>
@@ -161,8 +161,8 @@
         <title>EJB in Java.</title>
         <description>&lt;p&gt;EJB are wrapper around any kind of component, if you need data access, directory, resources, services, JMS, RMI, SOA etc. EJB Provides a standard way to wrap these thing under common umbrella which has many features. It can be compared to POJO but with lot of advance feature which you dont need write.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Reusing the code.&lt;/li&gt; &lt;li&gt;Scalability and reliability, Do pooling, limit connection and access easily, deploy on cluster environment.&lt;/li&gt; &lt;li&gt;Concurrency management, Easily configure concurrency using small annotation over methods such @Lock(READ), @Lock(WRITE).&lt;/li&gt; &lt;li&gt;Transaction handling, You don’t need to do any changes transaction is handled easily in EJB just...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/EJB-in-Java/</link>
-        <guid isPermaLink="true">https://abyte.stream/EJB-in-Java/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/EJB-in-Java/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/EJB-in-Java/</guid>
         
         
         <category>J2EE</category>
@@ -173,8 +173,8 @@
         <title>JUnit Basics with JUnit 5.</title>
         <description>&lt;p&gt;First of all, what is JUnit? JUnit is Java provided library to automate your unit tests cases. A project can have million lines of code and probably thousand methods, Just to make sure that the methods are behaving same as what they suppose to be, we write unit test cases for those methods. This keeps your project bug safe with future edits on method.&lt;/p&gt; &lt;p&gt;Let’s quickly jump into JUnit configuration. Add following lines in pom.xml&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.junit.jupiter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;junit-jupiter-engine&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;${junit.jupiter.version}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;h2 id=&quot;basics-of-junit&quot;&gt;Basics of JUnit.&lt;/h2&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-JUnit-Basics/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-JUnit-Basics/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-JUnit-Basics/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-JUnit-Basics/</guid>
         
         
         <category>Spring</category>
@@ -185,8 +185,8 @@
         <title>Spring AOP and AspectJ.</title>
         <description>&lt;p&gt;Aspect-oriented programming AOP is programming paradigm with which you get flexibility of adding additional code (such as logging, security etc), without modifying your existing. This increase the modularity and the injectable code can be reused in many other places. AOP concept has few important terms.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Aspect - Aspect is modularization of the code which defines the concerns of class, in simpler term it contains pointcuts(rule identifies places in class) and advice (the code which will be executed on joinpoint).&lt;/li&gt; &lt;li&gt;PointCuts - It defines rule which determines joinpoints(places in class) where advice will be executed. Such as “execution(* com.xyz.bo.&lt;em&gt;BO.&lt;/em&gt;(..))”, defines...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-AOP-and-AspectJ/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-AOP-and-AspectJ/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-AOP-and-AspectJ/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-AOP-and-AspectJ/</guid>
         
         
         <category>Spring</category>
@@ -197,8 +197,8 @@
         <title>Spring JDBC in Short</title>
         <description>&lt;p&gt;First of what all flavours you have from Spring to connect and query DB,&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Spring JDBC&lt;/li&gt; &lt;li&gt;Spring Data JDBC&lt;/li&gt; &lt;li&gt;Spring Data JPA&lt;br /&gt; Spring Data JDBC use Spring JDBC and Spring Data JPA(Relational DB) use Spring Data JDBC internally. They all different libraries provided by Spring. &lt;strong&gt;Spring JDBC&lt;/strong&gt; provides you helper classes and utilities to query database and transform it to java object or other way around. &lt;strong&gt;Spring Data JDBC&lt;/strong&gt; is another abstraction over Spring JDBC but with CrudRepostiroy facility, with this you don’t need to write crud query for your entities. &lt;strong&gt;Spring Data JPA&lt;/strong&gt; is another abstraction over...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-JDBC-in-Short/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-JDBC-in-Short/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-JDBC-in-Short/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-JDBC-in-Short/</guid>
         
         
         <category>Spring</category>
@@ -209,8 +209,8 @@
         <title>Spring Data in Short</title>
         <description>&lt;p&gt;There are many different data storage system in the market currently and in order to connect and query different system you might have to use different query syntax. Spring Data is one of the advance module and has many sub-module to support different DBs, but in the end the main Spring Data defines common abstraction layer. This abstraction defines a common standard for different system and helps to reuse the same code at different places.&lt;/p&gt; &lt;p&gt;For example if you have to query for Employee object present in MongoDB and MySQL. You will have to use following two queries respectively. &lt;br...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Data-in-Short/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Data-in-Short/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Data-in-Short/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Data-in-Short/</guid>
         
         
         <category>Spring</category>
@@ -221,8 +221,8 @@
         <title>Hibernate in Short</title>
         <description>&lt;p&gt;Hibernate, hibernate-jpa, Spring ORM, Spring data JPA and many more. All this seems to be confusing but they all are just jars which are automatically added when you add the below line you pom.xml.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-jpa&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Basically, Spring boot gives a starter project for your data access layer which is based on ORM concept and by default usage hibernate as persistent api. This blog we are not going to discuss about how spring encapsulated hibernate under it but we are going to discuss about Hibernate basics and there...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Hibernate-in-Short/</link>
-        <guid isPermaLink="true">https://abyte.stream/Hibernate-in-Short/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Hibernate-in-Short/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Hibernate-in-Short/</guid>
         
         
         <category>Hibernate</category>
@@ -233,8 +233,8 @@
         <title>Spring Security Architecture.</title>
         <description>&lt;p&gt;In case you are looking for basic spring security understating refer to the previous blog of this series &lt;a href=&quot;/Spring-MVC-Intro/&quot; title=&quot;Spring Security basic&quot;&gt;Spring Security basic&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;The blog we will discussing briefly on spring security architecure, in the end you will know where all you can plugin your code and improve your project security. Spring security basically provides two feature authentication based on credentials and authorization/access control based on roles. First of all let’s look into below diagrams and then we will have detailed discussion on this. &lt;img src=&quot;/assets/2019-05-31-Spring Security Architecture-1.png&quot; alt=&quot;gras&quot; class=&quot;lazyload&quot; /&gt;&lt;br /&gt; Here are few pointer from above...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Security-Architecture/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Security-Architecture/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Security-Architecture/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Security-Architecture/</guid>
         
         
         <category>Spring</category>
@@ -245,8 +245,8 @@
         <title>Spring Security Simple.</title>
         <description>&lt;p&gt;This blog we are going to discuss a easiest approach to implement spring security, Spring Security Details is will more into customization points wrt to standard spring architecture.&lt;/p&gt; &lt;p&gt;Spring Security focuses on two main points.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Authentication : Verify/Identify the requesters/user’s identity.&lt;/li&gt; &lt;li&gt;Authorization: Allow/block resource access based on requester/user’s access level.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There are many authentication/authorization models supported in Spring such, LDAP, oauth, oauth2, OpenId, HTTP Basic etc. Also, Spring security has many feature Single such as sign-on, LDAP. Remember me etc.&lt;/p&gt; &lt;h2 id=&quot;spring-xml-based-configuration&quot;&gt;Spring XML based Configuration.&lt;/h2&gt; &lt;h3 id=&quot;pom-needs-following-dependencies&quot;&gt;POM needs following dependencies.&lt;/h3&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Security-Simple/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Security-Simple/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Security-Simple/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Security-Simple/</guid>
         
         
         <category>Spring</category>
@@ -257,8 +257,8 @@
         <title>Spring MVC Intro.</title>
         <description>&lt;p&gt;Spring has many modules to make cut short project development lifecycle. One of the most commonalty used module is Spring MVC. There have many different versions of Spring MVC. We are going to discuss about the most recent ones.&lt;/p&gt; &lt;h2 id=&quot;what-is-mvc&quot;&gt;What is MVC.&lt;/h2&gt; &lt;p&gt;MVS stands for model, view and controller. It is a design pattern mainly for web based projects. &lt;img src=&quot;/assets/2019-05-17-Spring MVC Intro-1.JPG&quot; alt=&quot;smiley&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Model stands for data (java data objects/ beans)&lt;/li&gt; &lt;li&gt;View is display to the user (It usage model to show dynamic data)&lt;/li&gt; &lt;li&gt;Controller takes request and update data/model and redirects to view.&lt;/li&gt; &lt;/ul&gt;...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-MVC-Intro/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-MVC-Intro/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-MVC-Intro/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-MVC-Intro/</guid>
         
         
         <category>Spring</category>
@@ -269,8 +269,8 @@
         <title>Spring Events and Listners.</title>
         <description>&lt;p&gt;Spring has inbuilt support for publishing and listing events. In layman term if you want to understand what is event and listener is then, you can think as somebody shouts your name and said hi and you listener to it and you want to give a reply or not it’s upto you. Here you become a listener listening on your name event.&lt;/p&gt; &lt;p&gt;Spring provides following interfaces and equivalent annotations which you can implement to make event and listener classes.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;ApplicationEvent or //simply nothing any object can be published from Spring 4.2+&lt;/li&gt; &lt;li&gt;ApplicationEventPublisher&lt;/li&gt; &lt;li&gt;ApplicationListner or @EventListener&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There three parties...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Events-and-Listners/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Events-and-Listners/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Events-and-Listners/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Events-and-Listners/</guid>
         
         
         <category>Spring</category>
@@ -281,8 +281,8 @@
         <title>Javascript Object Oriented Function Prototype  Gotcha</title>
         <description>&lt;p&gt;Ok, when you come from a Object Oriented based background you will always have curiosity about Javascript. Here are few points which I want to lay down before we see some code.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Javascript has two main concepts function and object which are derived directly from Function and Object prototype.&lt;/li&gt; &lt;li&gt;‘Function’ and ‘Object’ are prototype defined in Javascript same as above.&lt;/li&gt; &lt;li&gt;The objects are first class citizen in Javascript, there are no classes.&lt;/li&gt; &lt;li&gt;The functions themselves are objects but they are callable, they are made from ‘Function’ Prototype.&lt;/li&gt; &lt;li&gt;The function will have both the properties &lt;strong&gt;proto&lt;/strong&gt; and Prototype, while object...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</link>
-        <guid isPermaLink="true">https://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</guid>
         
         
       </item>
@@ -291,8 +291,8 @@
         <title>Spring Java Based Configuration.</title>
         <description>&lt;p&gt;Spring provides two types of configuration, XML based which came in market first and then Java based. Since we already know what are the basics behind Spring configuration, anything and everything is bean. So how does spring supports that.&lt;/p&gt; &lt;p&gt;Let’s see some code first.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeServiceImpl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeService&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SomeService&lt;/span&gt;&lt;span...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Java-Based-Configuration/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Java-Based-Configuration/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Java-Based-Configuration/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Java-Based-Configuration/</guid>
         
         
         <category>Spring</category>
@@ -303,8 +303,8 @@
         <title>Spring Autowire.</title>
         <description>&lt;p&gt;Spring container has capability of automatically injecting dependencies while initiating bean. There are 5 different modes.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;No Autowire - XML Based Default&lt;/li&gt; &lt;li&gt;Autowire by Type - Java Based Default&lt;/li&gt; &lt;li&gt;Autowire by Name&lt;/li&gt; &lt;li&gt;Autowire by Constructor&lt;/li&gt; &lt;li&gt;Autodetect - Deprecated&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can turn on autowire feature by using following code in your XML. With this you can start using @Autowire annotation in your Java file.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;context:annotation-config&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Or --&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.websystique.spring.domain.Application&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autowire=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;byName&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Application class has...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Autowire/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Autowire/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Autowire/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Autowire/</guid>
         
         
         <category>Spring</category>
@@ -315,8 +315,8 @@
         <title>Spring Bean lifecycle.</title>
         <description>&lt;p&gt;As we discussed Spring has a full fledged container which manages the beans. It provide many code plugin points in bean initialization process through different ways .&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Java supported @PostConstruct and @PreDestroy annotations.&lt;/li&gt; &lt;li&gt;Implement BeanPostProcessor.&lt;/li&gt; &lt;li&gt;Multiple different interfaces and overriding there methods.&lt;/li&gt; &lt;li&gt;init() and destroy() Or @Bean(initMethod=”init”,destroyMethod=”destroy”)&lt;/li&gt; &lt;li&gt;Spring event and listeners&lt;/li&gt; &lt;li&gt;Spring Boot Runners&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Here is rough idea behind method that will be called.&lt;/p&gt; &lt;h2 id=&quot;bean-initialize&quot;&gt;Bean Initialize&lt;/h2&gt; &lt;p&gt;&lt;img src=&quot;/assets/2019-05-12-Spring Bean life cycle-1.JPG&quot; alt=&quot;smiley&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;bean-destroy&quot;&gt;Bean Destroy&lt;/h2&gt; &lt;p&gt;&lt;img src=&quot;/assets/2019-05-12-Spring Bean life cycle-2.JPG&quot; alt=&quot;smiley&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;java-supported-postconstruct-and-predestroy&quot;&gt;Java supported @PostConstruct and @PreDestroy&lt;/h2&gt; &lt;p&gt;This is the very simple one,...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-Bean-life-cycle/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-Bean-life-cycle/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-Bean-life-cycle/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-Bean-life-cycle/</guid>
         
         
         <category>Spring</category>
@@ -327,8 +327,8 @@
         <title>Spring Containers.</title>
         <description>&lt;p&gt;Spring IoC container is heart of the spring framework. It is container to hold the spring objects and maintenance the spring objects lifecycle.&lt;/p&gt; &lt;p&gt;Spring provide two different type if containers.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bean Factory Container&lt;/li&gt; &lt;li&gt;ApplicationContext Container&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;beanfactory-container&quot;&gt;BeanFactory Container&lt;/h1&gt; &lt;p&gt;Here is how to create a bean and use it in java class.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;beans.xml&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BeanFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;XmlBeanFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-IoC/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-IoC/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-IoC/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-IoC/</guid>
         
         
         <category>Spring</category>
@@ -339,8 +339,8 @@
         <title>Spring IoC and DI.</title>
         <description>&lt;p&gt;Normally objects are initialized and bound in code itself. Inversion of control is a approach to bind object at runtime using a binder program.&lt;/p&gt; &lt;p&gt;IoC is design patter to give control to components, while it usage Dependency Injection DI to achieve that. DI is helps us giving framework to bind the object at runtime. Example of IoC are,&lt;/p&gt; &lt;ul&gt; &lt;li&gt;DI&lt;/li&gt; &lt;li&gt;Factory pattern&lt;/li&gt; &lt;li&gt;Service locator framework&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;bean-creation-in-spring-xml&quot;&gt;Bean creation in Spring XML&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Constuctor&lt;/li&gt; &lt;/ul&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;someBean&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;ul&gt; &lt;li&gt;Static Factory method&lt;/li&gt; &lt;/ul&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;someBean&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;factory-method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;getSingeltonObject&quot;&lt;/span&gt;&lt;span...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/Spring-IoC-and-DI/</link>
-        <guid isPermaLink="true">https://abyte.stream/Spring-IoC-and-DI/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/Spring-IoC-and-DI/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Spring-IoC-and-DI/</guid>
         
         
         <category>Spring</category>
@@ -351,8 +351,8 @@
         <title>Migrating from CVS to Git.</title>
         <description>&lt;p&gt;In good old days, CVS used to be one of the most used SCM (source control management) tool. With the growing technology and the need of distributed systems, Git was born and with this CVS started rusting out. This is much of history for now. There are cases when we have a requirement to move our codebase from CVS to Git without losing commit histories. If we don’t In this blog, we are going to discuss the same.&lt;/p&gt; &lt;h3 id=&quot;basic-requirement&quot;&gt;Basic requirement.&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Need Python installed.&lt;/li&gt; &lt;li&gt;Access to CVS server for getting the full code base.&lt;/li&gt; &lt;li&gt;CVSNT server setup. (This is not required...</description>
         <pubDate>Tue, 11 Dec 2018 18:57:06 -0500</pubDate>
-        <link>https://abyte.stream/migrating-from-cvs-to-git/</link>
-        <guid isPermaLink="true">https://abyte.stream/migrating-from-cvs-to-git/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/migrating-from-cvs-to-git/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/migrating-from-cvs-to-git/</guid>
         
         
       </item>
@@ -361,8 +361,8 @@
         <title>Java Consumer and Supplier Interfaces</title>
         <description>&lt;p&gt;In continuation of our discussion on &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;functional interfaces&lt;/a&gt;, Java 8 has provided many single method interfaces. Based on the abstract method’s signature Java has given them different names such as Consumer, Supplier, Function, BiFuction, Predicate etc. In this blog, we are going to discuss on Java Consumer and Supplier Interfaces.&lt;/p&gt; &lt;h2 id=&quot;1-consumer-functionalinterface&quot;&gt;1. Consumer functional interface.&lt;/h2&gt; &lt;p&gt;Consumer functional interface is an interface having only one abstract method that accepts a single parameter and returns nothing. Here is how the interface looks like.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;...</description>
         <pubDate>Sun, 23 Sep 2018 06:32:49 -0400</pubDate>
-        <link>https://abyte.stream/java-consumer-and-supplier-interfaces/</link>
-        <guid isPermaLink="true">https://abyte.stream/java-consumer-and-supplier-interfaces/</guid>
+        <link>https://abyte.streamhttps://abyte.stream/java-consumer-and-supplier-interfaces/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/java-consumer-and-supplier-interfaces/</guid>
         
         <category>Java</category>
         

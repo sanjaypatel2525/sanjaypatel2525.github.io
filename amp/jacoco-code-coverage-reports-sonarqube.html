@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>JaCoCo Code Coverage And Reports With Sonarqube</title>
-    <link rel="canonical" href="https://abyte.stream/jacoco-code-coverage-reports-sonarqube/" />
+    <link rel="canonical" href="https://abyte.streamhttps://abyte.stream/jacoco-code-coverage-reports-sonarqube/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -168,7 +168,7 @@ Setting up JaCoCo.
 Importing reports to SonarQube</p>
 
 <h2 id="what-is-jacoco-and-why-you-need-this">What is JaCoCo and why you need this?</h2>
-<p><amp-img class="alignnone size-full wp-image-274 " src="/assets/img_5a9b6290e8d26.png" alt="" width="455" height="309" layout="responsive"><noscript><img class="alignnone size-full wp-image-274 " src="/assets/img_5a9b6290e8d26.png" alt="" width="455" height="309"></noscript></amp-img>
+<p><amp-img class="alignnone size-full wp-image-274 " src="https://abyte.stream/assets/img_5a9b6290e8d26.png" alt="" width="455" height="309" layout="responsive"><noscript><img class="alignnone size-full wp-image-274 " src="https://abyte.stream/assets/img_5a9b6290e8d26.png" alt="" width="455" height="309"></noscript></amp-img>
 JaCoCo is an abbreviation for Java Code Coverage.  It’s free to open source library developed by EclEmma. This tool helps us in finding out the piece of code which is not used at all while running the system, It can be manual or by some sort automatic test. When we are working in the team and we have many minds handling the same project there can cases somebody has written a code which doesn’t execute at all in runtime or worst is not covered by unit test. Attaching JaCoCo to your unit test make sure you haven’t missed out any unwanted untested code. It gives you how many times your code got executed.</p>
 <h2 id="setting-up-jacoco">Setting up JaCoCo.</h2>
 <p>There are multiple ways of running JaCoCo for your project, You can pick any of them depending on your need. Don’t worry, in the end, all will generate same data which we can use in Sonarqube.  We are going to export the generated data in *.exec format. There are other formats as well like HTML, zip XML and CSV.</p>
@@ -185,18 +185,18 @@ Steps to install it on eclipse.</p>
 
 <h3 id="click-or-drag-below-link-in-your-eclipse">Click or drag below link in your eclipse.</h3>
 <p><a title="Drag to your running Eclipse workspace to install EclEmma Java Code Coverage" href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=264">
-<amp-img style="vertical-align: text-bottom; border: 0px solid black;" src="/assets/btn-install.png" alt="Drag to your running Eclipse workspace to install EclEmma Java Code Coverage" width="87" height="34" layout="responsive"><noscript><img style="vertical-align: text-bottom; border: 0px solid black;" src="/assets/btn-install.png" alt="Drag to your running Eclipse workspace to install EclEmma Java Code Coverage" width="87" height="34"></noscript></amp-img>
+<amp-img style="vertical-align: text-bottom; border: 0px solid black;" src="https://abyte.stream/assets/btn-install.png" alt="Drag to your running Eclipse workspace to install EclEmma Java Code Coverage" width="87" height="34" layout="responsive"><noscript><img style="vertical-align: text-bottom; border: 0px solid black;" src="https://abyte.stream/assets/btn-install.png" alt="Drag to your running Eclipse workspace to install EclEmma Java Code Coverage" width="87" height="34"></noscript></amp-img>
 </a></p>
 
 <h3 id="install-from-update-sites">Install from update sites.</h3>
 <p>Go to Help-&gt; Install new software and put in below URL.
-http://update.eclemma.org<amp-img class="alignnone size-full wp-image-269" src="/assets/img_5a9b149e3295e.png" alt="" width="545" height="502" layout="responsive"><noscript><img class="alignnone size-full wp-image-269" src="/assets/img_5a9b149e3295e.png" alt="" width="545" height="502"></noscript></amp-img></p>
+http://update.eclemma.org<amp-img class="alignnone size-full wp-image-269" src="https://abyte.stream/assets/img_5a9b149e3295e.png" alt="" width="545" height="502" layout="responsive"><noscript><img class="alignnone size-full wp-image-269" src="https://abyte.stream/assets/img_5a9b149e3295e.png" alt="" width="545" height="502"></noscript></amp-img></p>
 
 <h3 id="download-plugin-zip-and-install-manually">Download plugin zip and install manually.</h3>
 <p><a href="http://www.eclemma.org/download.html" rel="nofollow">http://www.eclemma.org/download.html</a></p>
 
 <h2 id="install-using-maven">Install using maven.</h2>
-<p><amp-img class="alignnone size-full wp-image-273 " src="/assets/img_5a9b625756041.png" alt="" width="992" height="262" layout="responsive"><noscript><img class="alignnone size-full wp-image-273 " src="/assets/img_5a9b625756041.png" alt="" width="992" height="262"></noscript></amp-img>
+<p><amp-img class="alignnone size-full wp-image-273 " src="https://abyte.stream/assets/img_5a9b625756041.png" alt="" width="992" height="262" layout="responsive"><noscript><img class="alignnone size-full wp-image-273 " src="https://abyte.stream/assets/img_5a9b625756041.png" alt="" width="992" height="262"></noscript></amp-img>
 If you are already using maven with your project and want to generate reports using simple maven commands then you can go with this installation.
 Steps to install JaCoCo and run reports.</p>
 
@@ -248,7 +248,7 @@ output=&lt;cpserver&gt;,address=*,<em>port=&lt;some port 6300&gt;</em></p>
 <span class="py">sonar.jacoco.reportPath</span><span class="p">=</span><span class="s">D:/jacocoreport/jacoco.exec</span>
 <span class="py">sonar.dynamicAnalysis</span><span class="p">=</span><span class="s">reuseReports</span>
 <span class="py">sonar.jacoco.reportMissing.force.zero</span><span class="p">=</span><span class="s">true</span></code></pre></figure>
-<p>I ran it on one of my old projects. It looks something like this and it looks like this. For further detail, you can click on coverage percentage.<amp-img class="alignnone size-full wp-image-270" src="/assets/img_5a9b5a7882daa.png" alt="" width="1295" height="779" layout="responsive"><noscript><img class="alignnone size-full wp-image-270" src="/assets/img_5a9b5a7882daa.png" alt="" width="1295" height="779"></noscript></amp-img></p>
+<p>I ran it on one of my old projects. It looks something like this and it looks like this. For further detail, you can click on coverage percentage.<amp-img class="alignnone size-full wp-image-270" src="https://abyte.stream/assets/img_5a9b5a7882daa.png" alt="" width="1295" height="779" layout="responsive"><noscript><img class="alignnone size-full wp-image-270" src="https://abyte.stream/assets/img_5a9b5a7882daa.png" alt="" width="1295" height="779"></noscript></amp-img></p>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
