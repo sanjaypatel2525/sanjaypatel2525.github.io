@@ -2,7 +2,8 @@
 # Site settings  
 title: Sanjay Patel - Blogs
 description: Technical blogs.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://abyte.stream" # the subpath of your site, e.g. /blog
+# baseurl: "" 
 url: "https://abyte.stream" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings

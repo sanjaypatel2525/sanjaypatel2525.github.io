@@ -73,7 +73,7 @@ In supervise learning the input data comes as labeled data so we know the result
 There are many supervised algorithm examples: **linear regression, logistic regression, support vector machine SVM, Naive bayes classifier**.
 
 **Classification**- Classification is dividing the data into set, categorizing it or anything related to segregating data. It is done when you have complete data, so it is done after.  
-**Prediction/Regression** is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced. **It works on continuos values and continuos value have order, less then number or more then number not like discrete no order only set of values**
+**Prediction/Regression** is about guessing/predicting about the input data. In this you work on training example and train the model and later use the model to predict on new data. This is further division in specific type of machine leaning such as supervised, unsupervised, reinforced. **It works on continuos values and continuos value have order, less than a number or more than a number, not like discrete, no order, only set of values**
 
 ## Unsupervised learning.
 It used to detect anomalies, outlier, something which is odd then normal, fraud, defective equipment, or group with similarities. In here we don't get the labeled data. It is also called unlabeled learning, the algorithm tries to find pattern, structure, anomaly from the given data.
@@ -145,6 +145,9 @@ min\,value\,of\,θ=(X^TX)^{-1}X^Ty$$
 Logistic function or called sigmoid function, it maps the value to in between 0 < h(x) < 1. Hence can be used in probability prediction. Probability of y being 1 at given value of x when θ is hyperparameter. θ changes the width of sigmoid function hence affect the y over over x. 
 $$h_θ(x)=g(z)=g(θ^Tx)= \frac{1}{1+e^{θ^Tx}}=P(y=1|x:θ)$$
 
+A good explanation here. https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
+https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
+
 * Logistic is some what categorized as classification algorithm but is is continuos. 
 
 **Decision Boundary**- Kind of line, curved line, plane which divides the data into sets. It is used to define the boundary of classification data. For example a line dividing area in 2D plain.
@@ -196,7 +199,7 @@ Multiple things we can tweak to fix our hypothesis when we start.
 * Increase decrees generalization λ.
 * Try polynomial equations over parameters.
 ![](/assets/2019-06-12-Machine-Learning-with-Python11.JPG){: .lazyload}.
-Some people **dividing training** set in training set, validation set to pick **lowest cost polynomial function** and test set to check **generalization variation** on new data. 
+Some people **divide training** set in training set, validation set to pick **lowest cost polynomial function** and test set to check **generalization variation** on new data. 
 
 ### Bias and variance.
 As you increase d polynomial degree the validation error will decrease at it will not be generalized and will have high variance.
