@@ -251,13 +251,19 @@ Now let take k node at L-1 level and j nodes at L level. At this level <script t
 <p><strong>Weight decay Regularization- L2 or Ridge Regularization</strong> - Add a extra term regularization term, <script type="math/tex">C=C_0+\frac{\lambda}{2n}\sum_ww^2\\
 \frac{\delta C}{\delta w} = \frac{\lambda}{n}w</script>. It helped in overcoming overfitting issue and increasing accuracy, also saved us from local minima.</p>
 
-<p><strong>Weight decay Regularization-L1 or Lasso Regularization (LAD - Least Absolute deviation)</strong> - Since</p>
+<p><strong>Weight decay Regularization-L1 or Lasso Regularization (LAD - Least Absolute deviation)</strong> -</p>
 
-<p><strong>Sparsity</strong> - Defines how much element in vector or matrix are zero, more zero means more sparsity. L1 is more sparse.</p>
-
-<p><strong>Built-In feature Selection</strong> - Since L1 is sparse it brings down the wait of non used parameters which automatically bring more weighted parameters.</p>
-
-<p><strong>Dropout</strong> - We select set of hidden neuron and turn them off and repeat the machine learning for small batches, later average it out. It remove the overfitting of data as different network will pick different things and on average it will span out better.</p>
+<ol>
+  <li>
+    <p><strong>Sparsity</strong> - Defines how much element in vector or matrix are zero, more zero means more sparsity. L1 is more sparse.</p>
+  </li>
+  <li>
+    <p><strong>Built-In feature Selection</strong> - Since L1 is sparse it brings down the wait of non used parameters which automatically bring more weighted parameters.</p>
+  </li>
+  <li>
+    <p><strong>Dropout</strong> - We select set of hidden neuron and turn them off and repeat the machine learning for small batches, later average it out. It remove the overfitting of data as different network will pick different things and on average it will span out better.</p>
+  </li>
+</ol>
 
 <ul>
   <li>Increase in training data increases the accuracy. We can increase training data by skewing image, rotating image etc.</li>
@@ -365,9 +371,16 @@ Based on number of input node distribute weight to sum up to 1, which make each 
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG" alt="" class="lazyload" /></p>
 
 <p><strong>RMS prop</strong> - Root mean square, same as momentum dampening.
+learning rate alpha 
+beta from momentum (usually 0.9) 
+beta2 from RMSprop (usually 0.999) 
+epsilon (usually 1e-8) 
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG" alt="" class="lazyload" /></p>
 
 <p><strong>Adam Optimization</strong> - It is combination of both RMS and EWA.</p>
+<ul>
+  <li>There are other as well such, Nestrov accelerated gradient, Adagard, Adadelta</li>
+</ul>
 
 <p><strong>Learning rate decay</strong> - Once model start reaching to minimum vale the learning rate can be reduced so that it converges well. There are multiple formula’s to decay learning rate based on epoch. For ex. 
 <script type="math/tex">\alpha=\frac{1}{1+decay\_rate*epcoh\_num}</script></p>
@@ -394,6 +407,14 @@ Batch norm intuition is about, hidden layer don’t need to bother about changin
 <p><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network26.JPG" alt="" class="lazyload" /></p>
 
 <p><strong>F1 score</strong> is harmonic mean(reduces effect of outlier average), <strong>precision</strong>(% of actual cats out of model recognized cats) and <strong>recall</strong>(% of correctly recognized cat out of actual cats)</p>
+
+<ul>
+  <li>Precision is TPAP (TP/AP), recall is TPPP(TP/PP).</li>
+  <li>Accuracy is how good model is predicting correct values.</li>
+  <li>F1 harmonic mean of TP and FN, it is better model as accuracy requires same number of sample on postivie and negative, while F1 can work well with imbalance data also.</li>
+  <li>ROC (Receiver Operating Characteristics) - Area under curve is AUC(Area Under The Curve). 
+<img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network88.JPG" alt="" class="lazyload" /></li>
+</ul>
 
 <h3 id="satisfying-and-optimizing-metric">Satisfying and optimizing metric</h3>
 <p>Sometime there is good precision of model but take a lot time, some has low precision but takes less time. Create  Satisfying criteria, what is max time be bare to run and with that find model which has highest precision.
@@ -594,13 +615,14 @@ When model is trained on some test sentences, it start to make prediction on nex
     <p>In character level model the charters are passed in place of words and vocab is formed from character. This model doesn’t work better then word model also it take more computation time and power.</p>
   </li>
   <li>Vanishing gradient problem, In deep NN initial layer impact is very less on last layer.</li>
-  <li>Exploding gradient, In calculation if weights starts increasing exponentially we use gradient clipping to limit the exploding weights.</li>
+  <li>Exploding gradient, In calculation if weights starts increasing exponentially we use gradient clipping to limit the exploding weights. Use of proper weights also fixed the issue.</li>
 </ul>
 
 <p>To remember old words and overcome vanishing gradient descend, we have following options.</p>
 <ul>
   <li>GRU</li>
   <li>LSTM</li>
+  <li>Switch to Relu from sigmoid function.</li>
 </ul>
 
 <h3 id="gru---gated-recurrent-unit">GRU - Gated recurrent Unit</h3>

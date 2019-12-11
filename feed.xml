@@ -5,8 +5,8 @@
     <description>Technical blogs.</description>
     <link>https://abyte.streamhttps://abyte.stream/</link>
     <atom:link href="https://abyte.streamhttps://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Nov 2019 12:28:14 -0500</pubDate>
-    <lastBuildDate>Thu, 28 Nov 2019 12:28:14 -0500</lastBuildDate>
+    <pubDate>Wed, 11 Dec 2019 14:39:14 -0500</pubDate>
+    <lastBuildDate>Wed, 11 Dec 2019 14:39:14 -0500</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -25,7 +25,7 @@
     
       <item>
         <title>Machine Learning Basic Maths</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This blog covers basic mathematics required for Machine learning. There are many terms which we need to know before we can jump into Machine learning.&lt;/p&gt; &lt;p&gt;#Statistics in Mathematics &lt;strong&gt;Data &amp;amp; Frequency&lt;/strong&gt;: &lt;strong&gt;Data&lt;/strong&gt; be anything given as input, for ex, let’s say set of alphabets, &lt;strong&gt;frequency&lt;/strong&gt; is defined as how many time each alphabets has appeared in the set. Percentage is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{frequency}{total\,items\,in\,set}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Mean or Average or Population Mean&lt;/strong&gt; - Is defined as sum of all elements divided by count of the elements. &lt;script type=&quot;math/tex&quot;&gt;\bar x = \frac{\sum X_i}{n}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Sample Mean&lt;/strong&gt; - Mean of the sample...</description>
+        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;This blog covers basic mathematics required for Machine learning. There are many terms which we need to know before we can jump into Machine learning.&lt;/p&gt; &lt;p&gt;#Statistics in Mathematics &lt;strong&gt;Data &amp;amp; Frequency&lt;/strong&gt;: &lt;strong&gt;Data&lt;/strong&gt; be anything given as input, for ex, let’s say set of alphabets, &lt;strong&gt;frequency&lt;/strong&gt; is defined as how many time each alphabets has appeared in the set. Percentage is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{frequency}{total\,items\,in\,set}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Mean or Average or Population Mean&lt;/strong&gt; - Is defined as sum of all elements divided by count of the elements. &lt;script type=&quot;math/tex&quot;&gt;\bar x = \frac{\sum X_i}{n}&lt;/script&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Expected Value&lt;/strong&gt; - It is mean but...</description>
         <pubDate>Sat, 15 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-Basic-Maths/</link>
         <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-Basic-Maths/</guid>

@@ -554,6 +554,77 @@ TPOT - BUilt over sklearn to find best algorithm and parameter</p>
 <p>Collaborative - What other people like
 Content based - what you like.</p>
 
+<ul>
+  <li>Word2Vec - It generates embedding vector of given corpus.</li>
+  <li>Sampled Sofmax - If you vocabulary then predicting a specific word with regular softmax is quite hard so we use sample vocabulary to calculate loss, this sampled softmax loss.</li>
+  <li>Smoothing gradient by adding momentum, this is a type of optimization.</li>
+  <li>Tom Mitchell’s definition: - T -Task, P - performance measurement, E experience gained. A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.</li>
+  <li>Describe Machine learning: Machine Learning is the training of a model from data that generalizes a decision against a performance measure.</li>
+  <li>Affine vs Linear function : Affine function is ax+b, ax is linear it just transforms vector space but doesn’t move the origin by b, while affine function moves origin as well.</li>
+  <li>Train, test or generalization error, train error is error on training and test or generalization is error on test and real world set.</li>
+  <li>Capacity of Model - How many complex relations it can capture out of the data, directly proportion to parameter.</li>
+  <li>VC Dimension - The VC dimension of a classifier is defined by Vapnik and Chervonenkis to be the cardinality (size) of the largest set of points that the classification algorithm can shatter.</li>
+  <li>Representational Learning: Sometime it difficult to represent the feature, such as car feature is wheel, how you define wheel by number or by pixel. This can automatically learned in representation learning such example is autoencode and there is decoder to decode representation to feature.</li>
+  <li>PCA Whitening - It normalization of projected vectors considering all projected vector. Kind of noramlization of feature, it is normalization of PCA. 
+<script type="math/tex">X_{\text{rotated}} = U \cdot X</script><br>
+<script type="math/tex">X_{\text{whitened}} = \frac{X_{\text{rotated}}}{\sqrt(S + \epsilon)}</script>
+</li>
+  <li>Bagging -Bagging is technique of increase the sample from existing sample, so that we have training example and we can decrease variance.</li>
+  <li>One vs All - In multiclass softmax logistic regression rather going all at once, device set in n classes with 1 vs rest and select ith having maximum likelyhood.</li>
+  <li>Parametric vs Non-Parametric -Parametric model which reqiures parameters to be fixed before hand so that have limitation on expanding parameter and sometime doesn’t fit well for the problem example are as below. These are fast, simple require less data, but poor fit,constrained.
+    <ul>
+      <li>Logistic Regression</li>
+      <li>Linear Discriminant Analysis</li>
+      <li>Perceptron</li>
+      <li>Naive Bayes</li>
+      <li>Simple Neural Networks<br>
+While non-parametric do not have fixed parameters they learn by there own, but these are slow, require more data,can be overfitting, but good fit,gives better results.</li>
+      <li>k-Nearest Neighbors</li>
+      <li>Decision Trees like CART and C4.5</li>
+      <li>Support Vector Machines</li>
+    </ul>
+  </li>
+  <li>Testing: Sometime we have lot of data, we select train data to train, validate data to quickly validate multiple models, test data to test the selected model. But in case of less data we want to use all the data for training and testing, so we move to cross validation. It create number of set of whole data and use some part for test and some to train, but run it multiple time by changing the set.  Here are type of cross validation.
+    <ul>
+      <li>LOOCV -Leave one out cross-validation, take one data out for test, iterate through all data and to do mean square error (MSE). It is expensive and if test data selected is outlier it affects very badly.</li>
+      <li>K Fold. Create multiple set, and do the same thing.</li>
+      <li>Stratified cross-validation - Same as K fold but each set has to have equal representation of all class to remove bias.</li>
+      <li>Time series cross-validation</li>
+    </ul>
+  </li>
+  <li>Maximum likelihood estimation -Helps finding normal distribution parameter, MLE can be defined as a method for estimating population parameters (such as the mean and variance for Normal, rate (lambda) for Poisson, etc.) from sample data such that the probability (likelihood) of obtaining the observed data is maximized.<br>
+Maximize product i to n (<script type="math/tex">% <![CDATA[
+\begin{align}
+f(x) &= \dfrac{1}{\sigma \sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}} \end{align} %]]></script>) where exponential component x is y<sup>i</sup> and μ is h(x<sup>i</sup>, β).</li>
+  <li>Bayesian  vs frequentist Approach - These two approaches are common approaches in inferential statistics, finding patterns in samples and estimating the new event.  frequentist takes more of statistical explanation with sample and its population estimation while bayes thinks more probabilities more specifically considering past probabilities.<br>
+<amp-img src="/assets/2019-06-12-Machine-Learning-with-Python44.JPG" alt="" class="lazyload" width="592" height="328" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-with-Python44.JPG" alt="" class="lazyload" width="592" height="328"></noscript></amp-img>
+</li>
+  <li>Feature selection - Due to following reasons.
+    <ul>
+      <li>Curse of Dimensionality - As the number feature increases, number of configuration and increases exponentially and we may not be having that big data to support hypothesis.</li>
+      <li>Model has to be simple and explainable.</li>
+      <li>Garbage in garbage out, poor feature will result poor output.</li>
+      <li>Selection of feature
+        <ul>
+          <li>Filter based - Correlation/che squared/Pearson Correlation between features.
+            <ul>
+              <li>Che squared - From all data m, it take each feature 1 by 1 and check how good it gives the result of classification. Kind how directly proportion is the feature to target value. Feature with good value are kept and remaining are removed.  <script type="math/tex">\[\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}\]</script>
+</li>
+            </ul>
+          </li>
+          <li>Recursive feature elimination - start with one/all set of feature find coefficient and see there importance and add/remove the features. It has two trpes.
+            <ul>
+              <li>Forward - start with one feature</li>
+              <li>Backword - start with all</li>
+            </ul>
+          </li>
+          <li>Embedded - Feature selection is embedded in algorithm, Lasso ror L1 regularization bring the feature to zero in multiple iteration which automatically eliminates the features.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 </footer>

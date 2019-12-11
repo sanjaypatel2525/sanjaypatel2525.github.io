@@ -170,6 +170,9 @@
 <p><strong>Mean or Average or Population Mean</strong> - Is defined as sum of all elements divided by count of the elements. 
 <script type="math/tex">\bar x = \frac{\sum X_i}{n}</script></p>
 
+<p><strong>Expected Value</strong> - It is mean but while calculating mean consider there part in mean, it can be biased as well. Here you do not divide by count, but you do sum of numbers*their probability. In mean their probability is same as divide by count.
+E[ f(X) ] = S f(x)P(X = x)</p>
+
 <p><strong>Sample Mean</strong> - Mean of the sample from whole population. It is represented by <script type="math/tex">\\\bar x</script>, while population mean is represented by <script type="math/tex">\\\mu</script>.  It is used for symmetric data set.
 <strong>Median</strong> - Put all the number in ascending order and the element at half distance is Median. Used for skewed dataset, doesn’t matter if few value are outlier. <br>
 For ex:  Median or M or <script type="math/tex">\\\widetilde x</script> of 1,3,4,5,6,7,100,200 would be 5.5. Either middle or mean of middles.</p>
@@ -179,7 +182,12 @@ For ex:  Median or M or <script type="math/tex">\\\widetilde x</script> of 1,3,4
 <p><strong>Quartile</strong> - The set is put in ascending order and divided into 4 quarter of equal width. For ex.
 1,3,4,24,29,101,103  has first quartile as 3.5, second quartile/Median as 24 and third quartile as 115.</p>
 
-<p><strong>Variance</strong> - Measure of being different then other. THere are three variance 1)Population variance 2) Sample variance 3)Alternate formula to calculate variance</p>
+<p><strong>Variance</strong> - Measure of deviation from mean, Measure of being different than other. There are three variance 1)Population variance 2) Sample variance 3)Alternate formula to calculate variance.
+Var(X) = E[ (X – m)<sup>2</sup> ]
+Var(X) = E(X<sup>2</sup>) – m<sup>2</sup></p>
+
+<p><strong>Covarinace</strong> - Measure of two variable being different from each other, calculate by.
+<script type="math/tex">cov(x,y)=  \sum_ip(x_i,y_i)(x_i-\mu_x)(y_i-\mu_x)</script></p>
 
 <p><strong>Population variance or just variance</strong> - Is formulated as average  of the square distance from mean. <script type="math/tex">\sigma ^2 = \frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script>.</p>
 
@@ -220,12 +228,22 @@ P(AUB) = P(A)+P(B)-P(A\cap B )  = \frac{1}{3}+\frac{1}{2}-\frac{2}{6} = \frac{1}
 <p>If A and be are **independent ** A is dice and B is deck getting 1 on dice and an spades ace on dec is
 <script type="math/tex">P(A\cap B) = P(A).P(B) = \frac{1}{6}\cdot\frac{1}{52} = \frac{1}{312}</script></p>
 
+<p><strong>Marginal probability</strong> - It can be though as plain probability of one variable X, but twist is there is a random variable Y, both and X and Y random variable can be biased in this case you create a chart of X and Y and calculate sum over Y and take average.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths23.JPG" alt="" class="lazyload" width="352" height="145" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths23.JPG" alt="" class="lazyload" width="352" height="145"></noscript></amp-img></p>
+
+<p><strong>Joint probability</strong> - Joint event is simple enough as name suggest, two independent event space is been joined together, this increase sample space. ANy probability will be calculated over this.</p>
+
 <p><strong>Conditional probability on Dependent event</strong> Dependent event are the one which affect the event space for next event. For example in a deck probability of getting Ace is 1/13 and then you put that Ace aside the card deck size is now 51, now the probability of getting ace is 3/51. Here A has affected the event space for B. So we can write P(A) then P(B) is,<br>
 <script type="math/tex">P(A\,and\,B) or P(A\cap B) = P(A).P(B|A)\ = P(B).P(A|B)\;or\\
 P(B|A) = \frac {P(A\,and\,B)}{P(A)}</script></p>
 
 <p>Where P(B|A) can be defined as P(B) if P(A) has already occurred. P(B and A) are calculate over two dice throw, while P(B|A) is probability of second dice throw. Extend to third variable.<br>
 <script type="math/tex">P(A|B,C)=\frac{P(A\cap B\cap C)}{P(B\cap C)}</script></p>
+
+<p>Conditional probability joins two sample space of same, but when first occurred second sample gets affected by first.</p>
+
+<p><strong>Chain Rule of conditional Probability</strong><br>
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths24.JPG" alt="" class="lazyload" width="1146" height="324" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths24.JPG" alt="" class="lazyload" width="1146" height="324"></noscript></amp-img></p>
 
 <p><strong>Random Variable</strong> - Random variable is possible outcome of any event. Let’s say in a particular match how many goals will be made, it can be 1 or 4 or 6 or any number. This is discrete and can be counted and has some interval. Set containing 0 to 100 is discrete, but different floating values between is infinite/uncountable. Thing which can’t be counted are <strong>continuos random variable</strong> and which can be counted are discrete. Continuos value can be measure but not counted for example volume.</p>
 
