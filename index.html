@@ -4,8 +4,18 @@ layout: default
 
 <main class="home" id="post" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     <div id="grid" class="row flex-grid">
+    {% assign num = 0 %}
     {% for post in site.posts %}
-        
+        {% assign num = num | plus: 1 %}
+        {% assign mod = num | modulo: 4 %}
+        {% if mod == 0 %}
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-6k+dg-3a-7v+t1"
+            data-ad-client="ca-pub-6254849299387322"
+            data-ad-slot="4615474578"></ins>
+        {% endif %}
 
         <article class="box-item post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
             <a style="display:block" href="{{ post.url | prepend: site.baseurl }}">
@@ -39,4 +49,8 @@ layout: default
         </article>
     {% endfor %}
     </div>
+    
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </main>
