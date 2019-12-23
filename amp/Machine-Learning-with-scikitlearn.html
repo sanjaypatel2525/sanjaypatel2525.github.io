@@ -1,0 +1,289 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Machine Learning with Python</title>
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-with-scikitlearn/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        .header-post {
+        background-color: rgb(0, 95, 151);
+        min-height: 23.25rem;
+        width: 100%;
+        }
+        .header-post .content {
+        width: 95%;
+        text-align: center;
+        padding-top: 8.75rem;
+        padding-right: 0px;
+        padding-bottom: 4.125rem;
+        padding-left: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        max-width: 50rem;
+        }
+        .header-post .date {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+        }
+        .header-post h1, .header-post .subtitle, .header-post .date {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        }
+        h1 {
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-right: 0px;
+        margin-bottom: 0.67em;
+        margin-left: 0px;
+        }
+        h1, h2, h3, h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+        .header-post h1 {
+        font-size: 1.875rem;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-shadow: rgb(0, 76, 121) 3px 3px;
+        }
+        .header-post .subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+        }
+        .header-post a, .header-post p {
+        color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.125rem;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+        display: block;
+        }
+        figure {
+        margin-top: 1em;
+        margin-right: 40px;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        }
+        .highlight {
+        margin-top: 1.25rem;
+        margin-right: 0px;
+        margin-bottom: 1.25rem;
+        margin-left: 0px;
+        }
+        pre {
+        overflow-x: auto;
+        overflow-y: auto;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(34, 34, 34);
+        width: 100%;
+        padding-top: 1.25rem;
+        padding-right: 0px;
+        padding-bottom: 1.25rem;
+        padding-left: 0px;
+        color: rgb(255, 255, 255);
+        margin-top: 1.875rem;
+        margin-right: 0px;
+        margin-bottom: 1.875rem;
+        margin-left: 0px;
+        font-size: 0.875rem;
+        }
+        code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        }
+        pre code {
+        width: auto;
+        max-width: 50rem;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0px;
+        padding-right: 1.25rem;
+        padding-bottom: 0px;
+        padding-left: 1.25rem;
+        }
+        pre code::after {
+        clear: both;
+        }
+        pre span {
+        line-height: 1.5rem;
+        font-family: Monaco, Consolas, Menlo, monospace;
+        }
+        .highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+        color: rgb(117, 113, 94);
+        }
+        .highlight .m, .highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
+        color: rgb(164, 208, 67);
+        }
+        .highlight .o, .highlight .p {
+        color: rgb(247, 247, 242);
+        }
+        .highlight .ld, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+        color: rgb(230, 219, 116);
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+<header class="header-post" role="banner">
+        <div class="content" style="transform: translateY(0px); opacity: 1;">
+            
+                <time itemprop="datePublished" datetime="2018-12-14T18:57:06-05:00" class="date">14 Dec 2018 - sanjaypatel2525</time>
+            
+            <h1 class="post-title" itemprop="name">Machine Learning with Python</h1>
+            <p itemprop="description" class="subtitle"></p>
+        </div>
+</header>
+<h3 id="loading-dataset">Loading dataset.</h3>
+<p>Digits</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span><span class="p">,</span> <span class="n">load_iris</span><span class="p">,</span><span class="n">load_diabetes</span><span class="p">,</span><span class="n">load_boston</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span> 
+<span class="n">digits</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></figure>
+<ul>
+  <li>If fit is called again it will scrap the old classifier and refit.</li>
+</ul>
+
+<h3 id="models">Models</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">Lasso</span><span class="p">()</span> <span class="c1"># Sparse or L1 
+</span><span class="n">Ridge</span><span class="p">()</span> <span class="c1"># L2
+</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s">'l2'</span><span class="p">,</span><span class="n">C</span><span class="o">=</span><span class="mf">1e5</span><span class="p">)</span> <span class="p">,</span> <span class="n">large</span> <span class="n">C</span> <span class="n">less</span> <span class="n">regulazrization</span><span class="o">.</span>
+<span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s">'linear'</span><span class="p">)</span> <span class="c1"># Support vector classification
+</span><span class="n">svm</span><span class="o">.</span><span class="n">SVR</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s">'linear'</span><span class="p">)</span>  <span class="c1"># Support vector regression</span></code></pre></figure>
+
+<h3 id="scores">Scores</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">)</span> 
+<span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">()</span> <span class="c1"># gives score on classifier directly
+</span>
+<span class="n">k_fold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">score_array</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">svc</span><span class="p">,</span> <span class="n">X_digits</span><span class="p">,</span> <span class="n">y_digits</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">k_fold</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="s">'precision_macro'</span><span class="p">)</span>
+<span class="n">avg_score</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">score_array</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_validate</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">linearClassifier</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># same cross_val_score,default to 5
+</span><span class="n">result</span><span class="p">[</span><span class="s">'test_score'</span><span class="p">]</span>
+
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">svc</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="n">Cs</span><span class="p">),</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># njob is number of processor, -1 is all
+</span><span class="n">clf</span><span class="o">.</span><span class="n">best_score_</span>  
+<span class="n">clf</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">C</span> </code></pre></figure>
+
+<h3 id="grouping">Grouping</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">k_means</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">k_means</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_iris</span><span class="p">)</span>
+<span class="n">k_means</span><span class="o">.</span><span class="n">labels_</span> <span class="c1"># it is predicted label array of trained data.
+</span>
+<span class="n">agglo</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">FeatureAgglomeration</span><span class="p">(</span><span class="n">connectivity</span><span class="o">=</span><span class="n">connectivity</span><span class="p">,</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">agglo</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_reduced</span> <span class="o">=</span> <span class="n">agglo</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># PCA
+</span><span class="n">pca</span> <span class="o">=</span> <span class="n">decomposition</span><span class="o">.</span><span class="n">PCA</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_</span><span class="p">)</span>  
+<span class="p">[</span>  <span class="mf">2.18565811e+00</span>   <span class="mf">1.19346747e+00</span>   <span class="mf">8.43026679e-32</span><span class="p">]</span>
+<span class="c1"># As we can see, only the 2 first components are useful
+</span><span class="n">pca</span><span class="o">.</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">X_reduced</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_reduced</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">n_components</span><span class="p">,</span> <span class="n">svd_solver</span><span class="o">=</span><span class="s">'randomized'</span><span class="p">,</span>
+          <span class="n">whiten</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_train_pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1">#pipeline
+</span><span class="n">pipe</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s">'pca'</span><span class="p">,</span> <span class="n">pca</span><span class="p">),</span> <span class="p">(</span><span class="s">'logistic'</span><span class="p">,</span> <span class="n">logistic</span><span class="p">)])</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'pca__n_components'</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>  <span class="c1"># here use the name given in pipeline 'pca' or 'logistic'
+</span>    <span class="s">'logistic__C'</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+<span class="p">}</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipe</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span>  <span class="c1">#another form of pipe with automatic names
+</span><span class="n">pipe</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">StandardScaler</span><span class="p">(),</span>
+    <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">csr</span><span class="o">.</span><span class="n">csr_matrix</span> <span class="c1">#is used in place of numpy for sparse matrix</span></code></pre></figure>
+
+<p><strong>vector quantization</strong> - Once kmean is run, the seleceted points can be used as infomrational points which in the sense compresses the data to those points. 
+<strong>Agglomerative or feature agglomeration.</strong> -Compress feature to smaller dimensions using clustering algorithems.</p>
+
+<h3 id="text-addons">Text Addons</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span><span class="p">,</span><span class="n">TfidfTransformer</span>
+<span class="n">count_vect</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>  <span class="c1"># creates bag of word and counts the occurance of word.
+</span><span class="n">X_train_counts</span> <span class="o">=</span> <span class="n">count_vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">twenty_train</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="n">count_vect</span><span class="o">.</span><span class="n">vocabulary_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">u'algorithm'</span><span class="p">)</span> <span class="c1">#4690
+</span>
+<span class="n">tf_transformer</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_counts</span><span class="p">)</span> <span class="c1"># TF- means within single document, each word count is divide by total word count, so total remains 1. IDF - means common word in all document are given less attention.
+</span><span class="n">X_train_tf</span> <span class="o">=</span> <span class="n">tf_transformer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train_counts</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="p">,</span> <span class="n">twenty_train</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+<span class="n">docs_new</span> <span class="o">=</span> <span class="p">[</span><span class="s">'God is love'</span><span class="p">,</span> <span class="s">'OpenGL on the GPU is fast'</span><span class="p">]</span>
+<span class="n">X_new_counts</span> <span class="o">=</span> <span class="n">count_vect</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">docs_new</span><span class="p">)</span>
+<span class="n">X_new_tfidf</span> <span class="o">=</span> <span class="n">tfidf_transformer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_new_counts</span><span class="p">)</span> <span class="c1">#it's not fit again, as already fit in training.
+</span><span class="n">predicted</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_new_tfidf</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="transformer">Transformer</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># Remove missing value
+</span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span> <span class="n">OneHotEncoder</span> <span class="c1"># used for encoding categorical data
+</span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span> <span class="c1"># used for feature scaling
+</span>
+<span class="c1">#First set unwanted value to np.NaN
+</span><span class="n">X</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mf">999.0</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">MissingIndicator</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">NaN</span><span class="p">)</span>
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">indicator</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">indicator</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'m1'</span><span class="p">,</span> <span class="s">'m3'</span><span class="p">])</span>
+
+<span class="c1"># Impute or fill missing values
+</span><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s">'mean'</span><span class="p">)</span> <span class="c1">#mean, most_frequent, median and constant 
+</span><span class="n">imp</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="c1">#Or in Pandas just
+</span><span class="n">X</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">missing_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s">'mean'</span><span class="p">)</span> <span class="n">imputer</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:])</span>
+<span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:])</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="c1">#Encoder
+#Onehotencoder(required integer data,2d array), labelBinarizer(doesn't required integer data, 2d array), labelEncoder(encode data to integer, 1d array)
+</span><span class="n">labelencoder_Y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">labelencoder_Y</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span></code></pre></figure>
+
+
+<footer>
+  <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+</footer>
+</body>
+</html>

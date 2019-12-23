@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Machine Learning with Tensor Flow.</title>
-    <link rel="canonical" href="https://abyte.streamhttps://abyte.stream/Machine-Learning-TensorFlow/" />
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-TensorFlow/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -160,10 +160,141 @@
             <p itemprop="description" class="subtitle"></p>
         </div>
 </header>
-<p>TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit lear to one liner ML models.
+<p>TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit learn to one liner ML models.
 <amp-img src="/assets/2019-08-21-Machine-Learning-TensorFlow1.png" alt="" class="lazyload" width="838" height="342" layout="responsive"><noscript><img src="/assets/2019-08-21-Machine-Learning-TensorFlow1.png" alt="" class="lazyload" width="838" height="342"></noscript></amp-img></p>
+
+<h3 id="tf-1-vs-2">TF 1 vs 2</h3>
+<ul>
+  <li>Session and placeholder is removed by tf.function</li>
+</ul>
+
 <h3 id="tf-estimator">TF estimator</h3>
-<p>It is library which hold all high level ML algorithm for ex.</p>
+<p>It is library which hold all high level ML algorithm for ex. You can create your own estimator by extending <strong>tf.estimator.Estimator</strong> or just use predefined estimator, such as 
+<strong>tf.estimator.DNNClassifier</strong> for deep models that perform multi-class classification.
+<strong>tf.estimator.DNNLinearCombinedClassifier</strong> for wide &amp; deep models.
+<strong>tf.estimator.LinearClassifier</strong> for classifiers based on linear models.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">classifier</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">DNNClassifier</span><span class="p">(</span>
+    <span class="n">feature_columns</span><span class="o">=</span><span class="n">my_feature_columns</span><span class="p">,</span><span class="c1"># Two hidden layers of 30 and 10 nodes respectively.
+</span>    <span class="n">hidden_units</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span><span class="c1"># The model must choose between 3 classes.
+</span>    <span class="n">n_classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">classifier</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">input_fn</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+    <span class="n">steps</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">eval_result</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span>
+    <span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">input_fn</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">input_fn</span><span class="p">(</span><span class="n">predict_x</span><span class="p">))</span></code></pre></figure>
+
+<h3 id="tf-keras">TF Keras</h3>
+<p>Keras is a high level set of estimators, ready to use. 
+It requires</p>
+<ul>
+  <li>Model - tf.keras.Sequential()</li>
+  <li>Type of layers, layers.Dense(64, activation=’relu’), it takes
+    <ul>
+      <li>activation</li>
+      <li>kernel_regularizer, tf.keras.regularizers.l1(0.01)</li>
+      <li>bias_regularizer</li>
+    </ul>
+  </li>
+  <li>tf.keras.Model.compile , it takes
+    <ul>
+      <li>optimizer</li>
+      <li>loss</li>
+      <li>metrics</li>
+    </ul>
+  </li>
+  <li>Fit data - model.fit()
+    <ul>
+      <li>epochs</li>
+      <li>batch_size</li>
+      <li>validation_data</li>
+    </ul>
+  </li>
+  <li>Evaluate - model.evaluate(dataset)</li>
+  <li>Predict - model.predict(data, batch_size=32)</li>
+</ul>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">))</span>
+<span class="ow">or</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">activations</span><span class="o">.</span><span class="n">relu</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span>
+              <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">categorical_crossentropy</span><span class="p">,</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">Accuracy</span><span class="p">])</span>
+
+<span class="c1">### Fit and run validation
+</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">val_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">val_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+          <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">val_data</span><span class="p">,</span> <span class="n">val_labels</span><span class="p">))</span>
+
+<span class="c1">### or just batch up before putting in fit.
+</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
+
+<span class="c1">### Evaluate and predict
+# With Numpy arrays
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+<span class="c1"># With a Dataset
+</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="declarative-approach-take-tensor-return-tensor">Declarative approach, take tensor, return tensor.</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,))</span>  <span class="c1"># Returns an input placeholder
+# A layer instance is callable on a tensor, and returns a tensor.
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">inputs</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">predictions</span><span class="p">)</span>
+<span class="c1"># The compile step specifies the training configuration.
+</span><span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="mf">0.001</span><span class="p">),</span>
+              <span class="n">loss</span><span class="o">=</span><span class="s">'categorical_crossentropy'</span><span class="p">,</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
+<span class="c1"># Trains for 5 epochs
+</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="callbacks-in-running">Callbacks in running</h3>
+<p>tf.keras.callbacks.ModelCheckpoint: Save checkpoints of your model at regular intervals.
+tf.keras.callbacks.LearningRateScheduler: Dynamically change the learning rate.
+tf.keras.callbacks.EarlyStopping: Interrupt training when validation performance has stopped improving.
+tf.keras.callbacks.TensorBoard: Monitor the model’s behavior using TensorBoard.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="c1"># Interrupt training if `val_loss` stops improving for over 2 epochs
+</span>  <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s">'val_loss'</span><span class="p">),</span>
+  <span class="c1"># Write TensorBoard logs to `./logs` directory
+</span>  <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="s">'./logs'</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">,</span>
+          <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">val_data</span><span class="p">,</span> <span class="n">val_labels</span><span class="p">))</span></code></pre></figure>
+
+<h3 id="save--reload">Save &amp; Reload</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># Recreate the exact same model, including weights and optimizer.
+</span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>
+
+<span class="c1"># Save only model to json or yaml
+</span><span class="n">json_string</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+<span class="n">fresh_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">model_from_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+<span class="n">yaml_string</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">()</span>
+<span class="n">fresh_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">model_from_yaml</span><span class="p">(</span><span class="n">yaml_string</span><span class="p">)</span>
+
+<span class="c1"># Save weights 
+</span><span class="n">model</span><span class="o">.</span><span class="n">save_weights</span><span class="p">(</span><span class="s">'./weights/my_model'</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s">'./weights/my_model'</span><span class="p">)</span>
+
+<span class="c1"># Distributed startegy
+</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">distribute</span><span class="o">.</span><span class="n">MirroredStrategy</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">strategy</span><span class="o">.</span><span class="n">scope</span><span class="p">():</span>
+  <span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">'binary_crossentropy'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span></code></pre></figure>
+
+<h3 id="data-preprocess">Data preprocess.</h3>
 
 <p><strong>TF Logging</strong> - It has four logging options,DEBUG,INFO ,WARNING, ERROR. tf.logging.set_verbosity(tf.logging.ERROR)</p>
 
@@ -307,8 +438,13 @@ https://medium.com/@d3lm/understand-tensorflow-by-mimicking-its-api-from-scratch
   <li>tf.nn.softmax_cross_entropy_with_logits(logits = Z, labels = Y) –Calculate cost.</li>
   <li>tf.reduce_mean – Calculate mean of all example cost.</li>
   <li>Valid vs same pad, same brings add extra padding in case if needed, valid doesn’t consider edge to apply filter. (https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t)</li>
-  <li>
 </ul>
+
+<h3 id="learning-on-mnist">Learning on MNIST</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">mnist</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mnist</span>
+
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">=</span> <span class="n">x_train</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">/</span> <span class="mf">255.0</span></code></pre></figure>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>

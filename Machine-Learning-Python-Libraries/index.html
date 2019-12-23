@@ -61,7 +61,7 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="https://abyte.stream/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.streamhttps://abyte.stream/Machine-Learning-Python-Libraries/">
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-Python-Libraries/">
     <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.streamhttps://abyte.stream/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
@@ -320,53 +320,54 @@
 </span><span class="s">xyz.random(5)</span><span class="err">
 
 </span><span class="s"># Get the data</span><span class="err">
-</span><span class="s">xyz.iloc([0], [0]) or xyz.iat([0], [0]) # get row=0,column=0 value</span><span class="err">
-</span><span class="s">xyz.loc([0],  ['</span><span class="n">Country</span><span class="s">']) # by label</span><span class="err">
-</span><span class="s">xyz[</span><span class="err">\</span><span class="s">['</span><span class="n">firstname</span><span class="s">','</span><span class="n">lastname</span><span class="s">']] # it will return dataframe</span><span class="err">
-</span><span class="s">xyz['</span><span class="n">firstname</span><span class="s">'] or xyz.firstname # will return series</span><span class="err">
+</span><span class="s"># there are three ways, [] - can get only columns then rows by using again[], assigning value to it doesn'</span><span class="n">t</span> <span class="n">work</span> <span class="n">well</span> <span class="k">as</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">copied</span> <span class="n">data</span><span class="p">,</span> <span class="o">.</span><span class="n">loc</span> <span class="o">-</span> <span class="n">gets</span> <span class="n">by</span> <span class="n">label</span> <span class="n">of</span> <span class="n">header</span> <span class="ow">and</span> <span class="n">rows</span><span class="p">,</span> <span class="o">.</span><span class="n">iloc</span> <span class="o">-</span> <span class="n">get</span> <span class="n">by</span> <span class="n">index</span> <span class="n">of</span> <span class="n">row</span> <span class="ow">and</span> <span class="n">columns</span><span class="p">,</span><span class="o">.</span><span class="n">ix</span> <span class="o">-</span> <span class="n">deperecatd</span> <span class="n">can</span> <span class="n">do</span> <span class="n">both</span> <span class="o">.</span><span class="n">loc</span> <span class="ow">and</span> <span class="o">.</span><span class="n">iloc</span>
+<span class="n">xyz</span><span class="o">.</span><span class="n">iloc</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">iat</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># get row=0,column=0 value
+</span><span class="n">xyz</span><span class="o">.</span><span class="n">loc</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span>  <span class="p">[</span><span class="s">'Country'</span><span class="p">])</span> <span class="c1"># by label
+</span><span class="n">xyz</span><span class="p">[</span>\<span class="p">[</span><span class="s">'firstname'</span><span class="p">,</span><span class="s">'lastname'</span><span class="p">]]</span> <span class="c1"># it will return dataframe
+</span><span class="n">xyz</span><span class="p">[</span><span class="s">'firstname'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">firstname</span> <span class="c1"># will return series
+</span>
+
+<span class="c1"># filter data
+</span><span class="n">xyz</span><span class="p">[</span><span class="s">'firstname'</span><span class="o">=</span><span class="s">'abc'</span><span class="p">]</span>
+<span class="n">xyz</span><span class="p">[</span><span class="n">xyz</span><span class="p">[</span><span class="s">'col1'</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10</span> <span class="o">&amp;</span> <span class="n">xyz</span><span class="p">[</span><span class="s">'col2'</span><span class="p">]</span><span class="o">=</span><span class="s">'san'</span><span class="p">]</span>
+<span class="c1"># or with some condition ie starts with.
+</span><span class="n">condition</span> <span class="o">=</span>  <span class="n">xyz</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">xyz</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
+
+<span class="c1"># Remove data.
+</span><span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">])</span> <span class="o">//</span> <span class="k">if</span> <span class="n">indexes</span> <span class="n">has</span> <span class="n">name</span><span class="p">,</span> <span class="n">drop</span> <span class="n">based</span> <span class="n">on</span> <span class="n">indexes</span><span class="o">.</span>
+<span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">xyz</span><span class="o">.</span><span class="n">index</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]))</span> <span class="o">//</span> <span class="n">drop</span> <span class="n">row</span> <span class="k">with</span> <span class="n">index</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">from</span> <span class="n">the</span> <span class="n">last</span><span class="o">.</span>
+<span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">remove</span> <span class="n">columns</span> <span class="k">from</span> <span class="n">dataframe</span>
+<span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">col1</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">//</span><span class="n">find</span> <span class="ow">and</span> <span class="n">drop</span> <span class="n">by</span> <span class="n">index</span><span class="o">.</span>
 
 
-</span><span class="s"># filter data</span><span class="err">
-</span><span class="s">xyz['</span><span class="n">firstname</span><span class="s">'='</span><span class="n">abc</span><span class="s">']</span><span class="err">
-</span><span class="s">xyz[xyz['</span><span class="n">col1</span><span class="s">']&gt;10 &amp; xyz['</span><span class="n">col2</span><span class="s">']='</span><span class="n">san</span><span class="s">']</span><span class="err">
-</span><span class="s"># or with some condition ie starts with.</span><span class="err">
-</span><span class="s">condition =  xyz.firstname.startswith('</span><span class="n">a</span><span class="s">', na=False)</span><span class="err">
-</span><span class="s">xyz = xyz[condition]</span><span class="err">
-
-</span><span class="s"># Remove data.</span><span class="err">
-</span><span class="s">xyz.drop([val1,val2]) // if indexes has name, drop based on indexes.</span><span class="err">
-</span><span class="s">xyz.drop(xyz.index([2,-3])) // drop row with index 2 and 3 from the last.</span><span class="err">
-</span><span class="s">xyz.drop([col1,col2],axis=1) // remove columns from dataframe</span><span class="err">
-</span><span class="s">xyz.drop(xyz[df.col1 &lt; 50].index) //find and drop by index.</span><span class="err">
+<span class="c1">#Handle null or na
+</span><span class="n">xyz</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">@</span> <span class="n">dropping</span> <span class="n">the</span> <span class="n">row</span> <span class="ow">or</span> <span class="n">column</span> <span class="n">who</span> <span class="n">have</span> <span class="n">null</span> <span class="n">values</span><span class="o">.</span>
+<span class="n">xyz</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span> <span class="c1"># get count of null records.
+</span><span class="n">xyz</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">meanofxyz</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 
-</span><span class="s">#Handle null or na</span><span class="err">
-</span><span class="s">xyz.dropna() or xyz.dropna(axis=1) @ dropping the row or column who have null values.</span><span class="err">
-</span><span class="s">xyz.isnull().sum() # get count of null records.</span><span class="err">
-</span><span class="s">xyz.fillna(meanofxyz, inplace=True)</span><span class="err">
+<span class="c1"># Aggregate
+</span><span class="n">xyz</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="c1"># will print count of non na of each column
+</span><span class="n">xyz</span><span class="o">.</span><span class="nb">sum</span><span class="p">(),</span> <span class="nb">max</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span>
+<span class="n">xyz</span><span class="p">[</span><span class="n">col1</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="c1"># does group by on col1 and counts the frequency
+</span>
+<span class="c1"># custom function commulative over column
+</span><span class="n">somfunction</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="nb">min</span><span class="p">()</span>
+<span class="n">xyz</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="n">somfunction</span><span class="p">)</span>
 
+<span class="c1"># Series map function -same as applymap
+</span><span class="n">xyz</span><span class="p">[</span><span class="s">'col1'</span><span class="p">]</span><span class="o">.</span><span class="nb">map</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
 
-</span><span class="s"># Aggregate</span><span class="err">
-</span><span class="s">xyz.count() # will print count of non na of each column</span><span class="err">
-</span><span class="s">xyz.sum(), max, min, mean, median</span><span class="err">
-</span><span class="s">xyz[col1].value_counts() # does group by on col1 and counts the frequency</span><span class="err">
+<span class="c1"># custom function applied on each element such change format of data
+</span><span class="nb">format</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">'</span><span class="si">%.2</span><span class="s">f'</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">xyz</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
 
-</span><span class="s"># custom function commulative over column</span><span class="err">
-</span><span class="s">somfunction = lambda x: x.max()-x.min()</span><span class="err">
-</span><span class="s">xyz.applymap(somfunction)</span><span class="err">
+<span class="c1">#Group By - Group on some column and aggregate on others
+</span><span class="n">xyz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'animal'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
-</span><span class="s"># Series map function -same as applymap</span><span class="err">
-</span><span class="s">xyz['</span><span class="n">col1</span><span class="s">'].map(format)</span><span class="err">
-
-</span><span class="s"># custom function applied on each element such change format of data</span><span class="err">
-</span><span class="s">format = lambda x: '</span><span class="o">%</span><span class="mf">.2</span><span class="n">f</span><span class="s">' </span><span class="si">% </span><span class="s">x</span><span class="err">
-</span><span class="s">xyz.apply(format)</span><span class="err">
-
-</span><span class="s">#Group By - Group on some column and aggregate on others</span><span class="err">
-</span><span class="s">xyz.groupby('</span><span class="n">animal</span><span class="s">').mean()</span><span class="err">
-
-</span><span class="s"># Joins. By default panda find join key to join by matching name if not you have to specify separately. Also, you can choose join strategy inner, outer,left, right. Let'</span><span class="n">s</span> <span class="n">say</span> <span class="n">zoo</span> <span class="n">has</span> <span class="n">animals</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">columns</span> <span class="ow">and</span> <span class="n">zoo_eats</span> <span class="n">has</span> <span class="n">animal</span> <span class="ow">and</span> <span class="n">what</span> <span class="n">animal</span> <span class="n">eats</span><span class="o">.</span>
-<span class="n">zoo</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">zoo_eats</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s">'left'</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">)</span>
+<span class="c1"># Joins. By default panda find join key to join by matching name if not you have to specify separately. Also, you can choose join strategy inner, outer,left, right. Let's say zoo has animals and other columns and zoo_eats has animal and what animal eats.
+</span><span class="n">zoo</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">zoo_eats</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s">'left'</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">)</span>
 
 <span class="c1"># fill missing
 </span><span class="n">xyz</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">'unknown'</span><span class="p">)</span>

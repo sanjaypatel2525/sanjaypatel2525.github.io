@@ -61,7 +61,7 @@
     <meta name="theme-color" content="">
 
     <link rel="stylesheet" href="https://abyte.stream/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.streamhttps://abyte.stream/Machine-Learning-with-Python/">
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-with-Python/">
     <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.streamhttps://abyte.stream/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
@@ -547,7 +547,9 @@ Content based - what you like.</p>
   <li>PCA Whitening - It normalization of projected vectors considering all projected vector. Kind of noramlization of feature, it is normalization of PCA. 
 <script type="math/tex">X_{\text{rotated}} = U \cdot X</script><br />
 <script type="math/tex">X_{\text{whitened}} = \frac{X_{\text{rotated}}}{\sqrt(S + \epsilon)}</script></li>
-  <li>Bagging -Bagging is technique of increase the sample from existing sample, so that we have training example and we can decrease variance.</li>
+  <li>Bagging - Bagging is ensembling technique of breaking down the train data and build train n models on these data, all models predict something and highest voted class is the final result. For example decision tree to random forest. It is technique to  reduces variance, not bias.</li>
+  <li>Random Forest - Random forest , training data is split into n numbers and n decision tree are built and then al tree are used to predict classes, whichever class is predicted most is taken into consideration. It is type of bagging.</li>
+  <li>Boosting - Boosting is again ensembling technique but little different then bagging, here new models are built to build to fit misclassified data. So to boos the performance on misclassified data only. One example is OCR&gt;</li>
   <li>One vs All - In multiclass softmax logistic regression rather going all at once, device set in n classes with 1 vs rest and select ith having maximum likelyhood.</li>
   <li>Parametric vs Non-Parametric -Parametric model which reqiures parameters to be fixed before hand so that have limitation on expanding parameter and sometime doesn’t fit well for the problem example are as below. These are fast, simple require less data, but poor fit,constrained.
     <ul>
@@ -557,7 +559,7 @@ Content based - what you like.</p>
       <li>Naive Bayes</li>
       <li>Simple Neural Networks<br />
 While non-parametric do not have fixed parameters they learn by there own, but these are slow, require more data,can be overfitting, but good fit,gives better results.</li>
-      <li>k-Nearest Neighbors</li>
+      <li>k-Nearest Neighbors - Model is not trained in this, prediction is made by finding nearest points to specific test data and then max classified nearest points are predicted.</li>
       <li>Decision Trees like CART and C4.5</li>
       <li>Support Vector Machines</li>
     </ul>
@@ -599,7 +601,22 @@ f(x) &= \dfrac{1}{\sigma \sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}} \end{al
       </li>
     </ul>
   </li>
+  <li>Numerical Optimization
+    <ul>
+      <li>Softmax and log softmax underflow and overflow fix is by shifting the input vector by z=x-max(x).</li>
+      <li>Poor conditioning - Rapid change of output wrt to small change of input. We need to select the metrics carefully so this issue doesn’t happen.</li>
+      <li>Condition Number - Ratio of largest to smallest value of SVD of a matrix.</li>
+    </ul>
+  </li>
 </ul>
+
+<p><strong>Gradient Divergence and Curl</strong>
+Gradient is derivative diferent dimensions, Div or divergence is multiplication with vector field, curl is cross product.</p>
+
+<p><strong>Critical or Stationary Point</strong> - Is the point where gradient is zero, it is like maximum or minimum point where there is no slope.</p>
+
+<p><strong>Line search</strong> - it is the process of finding the direction or gradient and then the step to get to minimum.
+<strong>Hill climbing</strong> - It is typical mathematical optimization problem, it start with one point  attempts to find a better solution.</p>
 
             </article>
 

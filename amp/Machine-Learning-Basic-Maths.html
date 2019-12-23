@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Machine Learning Basic Maths</title>
-    <link rel="canonical" href="https://abyte.streamhttps://abyte.stream/Machine-Learning-Basic-Maths/" />
+    <link rel="canonical" href="https://abyte.stream/Machine-Learning-Basic-Maths/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -188,10 +188,16 @@ Var(X) = E(X<sup>2</sup>) – m<sup>2</sup></p>
 
 <p><strong>Covarinace</strong> - Measure of two variable being different from each other, calculate by.
 <script type="math/tex">cov(x,y)=  \sum_ip(x_i,y_i)(x_i-\mu_x)(y_i-\mu_x)</script></p>
+<ul>
+  <li>Independent variable will have covariance 0.</li>
+  <li>Covariance variable can be dependent or can be</li>
+</ul>
 
 <p><strong>Population variance or just variance</strong> - Is formulated as average  of the square distance from mean. <script type="math/tex">\sigma ^2 = \frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script>.</p>
 
-<p><strong>Standard deviation</strong> - Root of population variance is standard deviation. It gives normalized result against dataset. <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script></p>
+<p><strong>Pupulation SD or Standard deviation</strong> - Root of population variance is standard deviation. It gives normalized result against dataset. <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script></p>
+
+<p><strong>Sample Standard Deviation</strong> - Here we have Bessel’s correction, divide by n-1, as sample can be smaller deviation then population deviation so to give it a nudge we divide by n-1. <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N-1}</script></p>
 
 <h3 id="permutation--combination">Permutation &amp; Combination</h3>
 <p>Permutation is the count of number of ways which one particular Set can be arranged. The count should <strong>consider the order</strong>. For ex. S = {1,2,3} ca be arranged as {321,312,231,213,132,123}. So total number can be arranged as <script type="math/tex">3\times2\times 1\\n\times (n-1)\times(n-2)...\\n!</script></p>
@@ -360,6 +366,9 @@ E(X)=\mu=\lambda,\;Var(X)=\mu=\lambda</script></p>
 E(X)=\mu = 1/p,\;P(Failure) = \frac{(1-p)}{p}\\
 Var(X) = \frac{1-p}{p^2}</script></p>
 
+<p><strong>Empirical Distribution</strong> - It is proportion of sample less then by total observations.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths26.JPG" alt="" class="lazyload" width="1056" height="597" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths26.JPG" alt="" class="lazyload" width="1056" height="597"></noscript></amp-img></p>
+
 <h3 id="continuos-distribution">Continuos Distribution</h3>
 
 <p><strong>Normal Distribution</strong> - Distribution where mean, mode and median coincide. It is bell shaped, there are equal exactly half of the value on left and right side. 
@@ -379,6 +388,14 @@ The confidence level, tells us how confident we are, that this particular interv
 <script type="math/tex">F(x) = \lambda e^{-\lambda x}\\
 E(X)=\mu = 1/\lambda,\\
 Var(X) = \frac{1}{\lambda^2}</script></p>
+
+<p><strong>Laplace distribution</strong> - It is double exponential distribution function, compared to normal distribution function which is squared of mean, it is absolute of mean difference. 
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths25.JPG" alt="" class="lazyload" width="318" height="178" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths25.JPG" alt="" class="lazyload" width="318" height="178"></noscript></amp-img></p>
+
+<p><strong>Mixture Distribution</strong> - Mixture of two or more PDT, these PDT can be univariate or multivariate.
+Here is example for gaussian mixture distribution, made up of multiple normal distribution with different mean.
+<amp-img src="/assets/2019-06-12-Machine-Learning-Basic-Maths27.JPG" alt="" class="lazyload" width="620" height="387" layout="responsive"><noscript><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths27.JPG" alt="" class="lazyload" width="620" height="387"></noscript></amp-img>
+Gaussian mixture is sometime called as Universal Approximator of Densities.</p>
 
 <h2 id="calculus">Calculus</h2>
 <p>How function changes over times(<strong>derivatives/by differentiation</strong>), how they accumulate over time period(<strong>integral/ by integration</strong>).</p>

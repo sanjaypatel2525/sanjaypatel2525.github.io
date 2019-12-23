@@ -5,8 +5,8 @@
     <description>Technical blogs.</description>
     <link>https://abyte.streamhttps://abyte.stream/</link>
     <atom:link href="https://abyte.streamhttps://abyte.stream/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 11 Dec 2019 14:39:14 -0500</pubDate>
-    <lastBuildDate>Wed, 11 Dec 2019 14:39:14 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Dec 2019 16:13:27 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Dec 2019 16:13:27 -0500</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -65,6 +65,20 @@
     
       <item>
         <title>Machine Learning with Python</title>
+        <description>&lt;h3 id=&quot;loading-dataset&quot;&gt;Loading dataset.&lt;/h3&gt; &lt;p&gt;Digits&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.datasets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_digits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_iris&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_diabetes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_boston&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_digits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gray_r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;ul&gt; &lt;li&gt;If fit is called again it will scrap the old classifier and refit.&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;models&quot;&gt;Models&lt;/h3&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;linear_model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LinearRegression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Lasso&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Sparse or L1 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ridge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# L2 &lt;/span&gt;&lt;span...</description>
+        <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
+        <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-with-scikitlearn/</link>
+        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-with-scikitlearn/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+        <category>Machine Learning Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning with Python</title>
         <description>&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt; &lt;p&gt;Exploratory data analysis, data visualization, and clustering, classification, regression and model performance evaluation. Python has various libraries such as, Numpy, matplotlib, scipy, sckitlearn for data science and data analysis.&lt;/p&gt; &lt;p&gt;Popular machine learning techniques classification, regression, recommendation and clustering.&lt;/p&gt; &lt;p&gt;Python has many data mining algorithm implementation such as linear regression, logistic regression, naive bayes, k-mean, k nearest neighbor and random forest.&lt;/p&gt; &lt;p&gt;Data science, machine learning and artificial intelligence are few trending topic these. Data mining and Bayesian analysis has increased demand of machine learning.&lt;/p&gt; &lt;p&gt;Programming which learns and improves with experience. Learning means recognizing and understanding the data...</description>
         <pubDate>Fri, 14 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-with-Python/</link>
@@ -93,7 +107,7 @@
     
       <item>
         <title>Machine Learning with Tensor Flow.</title>
-        <description>&lt;p&gt;TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit lear to one liner ML models. &lt;img src=&quot;/assets/2019-08-21-Machine-Learning-TensorFlow1.png&quot; alt=&quot;&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;tf-estimator&quot;&gt;TF estimator&lt;/h3&gt; &lt;p&gt;It is library which hold all high level ML algorithm for ex.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;TF Logging&lt;/strong&gt; - It has four logging options,DEBUG,INFO ,WARNING, ERROR. tf.logging.set_verbosity(tf.logging.ERROR)&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Tensors&lt;/strong&gt; : One number, vector, matrix etc are are form of tensor. Increase in dimension results are stored in tensors. How would you store 10 matrix. You will think array of matrix, and that variable is called tensor.&lt;/p&gt; &lt;p&gt;Tensor flow formally gives...</description>
+        <description>&lt;p&gt;TensorFlow API is built by google and mainly deals with neural network but support other APIs as well such as scikit learn to one liner ML models. &lt;img src=&quot;/assets/2019-08-21-Machine-Learning-TensorFlow1.png&quot; alt=&quot;&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;tf-1-vs-2&quot;&gt;TF 1 vs 2&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Session and placeholder is removed by tf.function&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;tf-estimator&quot;&gt;TF estimator&lt;/h3&gt; &lt;p&gt;It is library which hold all high level ML algorithm for ex. You can create your own estimator by extending &lt;strong&gt;tf.estimator.Estimator&lt;/strong&gt; or just use predefined estimator, such as &lt;strong&gt;tf.estimator.DNNClassifier&lt;/strong&gt; for deep models that perform multi-class classification. &lt;strong&gt;tf.estimator.DNNLinearCombinedClassifier&lt;/strong&gt; for wide &amp;amp; deep models. &lt;strong&gt;tf.estimator.LinearClassifier&lt;/strong&gt; for classifiers based on linear models.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code...</description>
         <pubDate>Thu, 13 Dec 2018 18:57:06 -0500</pubDate>
         <link>https://abyte.streamhttps://abyte.stream/Machine-Learning-TensorFlow/</link>
         <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/Machine-Learning-TensorFlow/</guid>
@@ -354,22 +368,6 @@
         <link>https://abyte.streamhttps://abyte.stream/migrating-from-cvs-to-git/</link>
         <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/migrating-from-cvs-to-git/</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Java Consumer and Supplier Interfaces</title>
-        <description>&lt;p&gt;In continuation of our discussion on &lt;a href=&quot;https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/&quot;&gt;functional interfaces&lt;/a&gt;, Java 8 has provided many single method interfaces. Based on the abstract method’s signature Java has given them different names such as Consumer, Supplier, Function, BiFuction, Predicate etc. In this blog, we are going to discuss on Java Consumer and Supplier Interfaces.&lt;/p&gt; &lt;h2 id=&quot;1-consumer-functionalinterface&quot;&gt;1. Consumer functional interface.&lt;/h2&gt; &lt;p&gt;Consumer functional interface is an interface having only one abstract method that accepts a single parameter and returns nothing. Here is how the interface looks like.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@FunctionalInterface&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;...</description>
-        <pubDate>Sun, 23 Sep 2018 06:32:49 -0400</pubDate>
-        <link>https://abyte.streamhttps://abyte.stream/java-consumer-and-supplier-interfaces/</link>
-        <guid isPermaLink="true">https://abyte.streamhttps://abyte.stream/java-consumer-and-supplier-interfaces/</guid>
-        
-        <category>Java</category>
-        
-        <category>Java8</category>
-        
-        
-        <category>Java</category>
         
       </item>
     
