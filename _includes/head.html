@@ -14,18 +14,18 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% if page.image %}
-    <meta property="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}{{page.image }}">
+    <meta property="twitter:image:src" content="{{ site.baseurl }}{{page.image }}">
     {% else %}
-    <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl }}">
     {% endif %}
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{page.image }}">
+    <meta property="og:image" content="{{ site.baseurl }}{{page.image }}">
     {% else %}
-    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl }}">
     {% endif %}
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
@@ -33,7 +33,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta itemprop="image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta itemprop="image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl  }}"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{site.baseurl}}/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -50,7 +50,7 @@
 
     <!--amp page-->
     {% if page.path contains '_posts' %}
-        <link rel="amphtml" href="{{ page.id | prepend: site.ampdir | prepend: site.baseurl | prepend: site.url | append: '.html' }}">
+        <link rel="amphtml" href="{{ page.id | prepend: site.ampdir | prepend: site.baseurl | append: '.html' }}">
     {% endif %}
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="{{site.username}} Blog">
@@ -64,7 +64,7 @@
 
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl}}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>

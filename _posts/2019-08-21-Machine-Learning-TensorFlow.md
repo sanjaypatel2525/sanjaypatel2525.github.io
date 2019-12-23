@@ -152,6 +152,8 @@ with strategy.scope():
   model.compile(loss='binary_crossentropy', optimizer=optimizer)
 model.summary()
 
+# Display plot model
+keras.utils.plot_model(model, 'multi_input_and_output_model.png', show_shapes=True)
 
 {% endhighlight  %}
 
