@@ -16,10 +16,20 @@ description: "Some description about Lorem Ipsum..."
             <article role="article" id="post" class="post-content" itemprop="articleBody">
               <div class="center-content addframe">
                 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.xml(jQuery('#contentBox').val()));">Pretty XML</button> 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.json(jQuery('#contentBox').val(),4));">Pretty JSON</button> 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.css(jQuery('#contentBox').val(),' '));">Pretty CSS</button> 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.sql(jQuery('#contentBox').val(),' '));">Pretty SQL</button> 
+                <button onclick="document.getElementById('contentBox').select();document.execCommand('copy');">Copy</button></p>
+                <button onclick="jQuery('#contentBox').val(vkbeautify.xmlmin(jQuery('#contentBox').val()));">Minify XML</button> 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.jsonmin(jQuery('#contentBox').val()));">Minify JSON</button> 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.cssmin(jQuery('#contentBox').val()));">Minify CSS</button> 
+                <button onclick="jQuery('#contentBox').val(vkbeautify.sqlmin(jQuery('#contentBox').val()));">Minify SQL</button><br/>
+                <textarea id="contentBox" rows="20" spellcheck="false" style="width: 100%;max-width: 800px;line-height: 24px; font-size: 16px; transition: none 0s ease 0s; background: transparent !important;"></textarea><br />
+                
                 <section class="share">
                   {% include advertisements.html %}
-                </section>
-                <textarea id="contentBox" rows="20" spellcheck="false" style="width: 100%;max-width: 800px;line-height: 24px; font-size: 16px; transition: none 0s ease 0s; background: transparent !important;"></textarea><br />
+                </section><br/>
                 <button onclick="jQuery('#contentBox').val(vkbeautify.xml(jQuery('#contentBox').val()));">Pretty XML</button> 
                 <button onclick="jQuery('#contentBox').val(vkbeautify.json(jQuery('#contentBox').val(),4));">Pretty JSON</button> 
                 <button onclick="jQuery('#contentBox').val(vkbeautify.css(jQuery('#contentBox').val(),' '));">Pretty CSS</button> 
@@ -29,7 +39,8 @@ description: "Some description about Lorem Ipsum..."
                 <button onclick="jQuery('#contentBox').val(vkbeautify.jsonmin(jQuery('#contentBox').val()));">Minify JSON</button> 
                 <button onclick="jQuery('#contentBox').val(vkbeautify.cssmin(jQuery('#contentBox').val()));">Minify CSS</button> 
                 <button onclick="jQuery('#contentBox').val(vkbeautify.sqlmin(jQuery('#contentBox').val()));">Minify SQL</button>
-              </div>
+                {% include advertisements.html %}
+                </div>
             </article>
 
             {% include share.html %}

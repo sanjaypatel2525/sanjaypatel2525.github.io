@@ -28,6 +28,9 @@ This blog covers basic mathematics required for Machine learning. There are many
 **Mean or Average or Population Mean** - Is defined as sum of all elements divided by count of the elements. 
 {% raw %}$$\bar x = \frac{\sum X_i}{n}$${% endraw %}
 
+**Expected Value** - It is mean but while calculating mean consider there part in mean, it can be biased as well. Here you do not divide by count, but you do sum of numbers*their probability. In mean their probability is same as divide by count.
+E[ f(X) ] = S f(x)P(X = x)
+
 **Sample Mean** - Mean of the sample from whole population. It is represented by $$\\\bar x$$, while population mean is represented by $$\\\mu $$.  It is used for symmetric data set.
 **Median** - Put all the number in ascending order and the element at half distance is Median. Used for skewed dataset, doesn't matter if few value are outlier.   
 For ex:  Median or M or $$\\\widetilde x$$ of 1,3,4,5,6,7,100,200 would be 5.5. Either middle or mean of middles.
@@ -37,11 +40,20 @@ For ex:  Median or M or $$\\\widetilde x$$ of 1,3,4,5,6,7,100,200 would be 5.5. 
 **Quartile** - The set is put in ascending order and divided into 4 quarter of equal width. For ex.
 1,3,4,24,29,101,103  has first quartile as 3.5, second quartile/Median as 24 and third quartile as 115.
 
-**Variance** - Measure of being different then other. THere are three variance 1)Population variance 2) Sample variance 3)Alternate formula to calculate variance
+**Variance** - Measure of deviation from mean, Measure of being different than other. There are three variance 1)Population variance 2) Sample variance 3)Alternate formula to calculate variance.
+Var(X) = E[ (X – m)<sup>2</sup> ]
+Var(X) = E(X<sup>2</sup>) – m<sup>2</sup>
+
+**Covarinace** - Measure of two variable being different from each other, calculate by.
+$$cov(x,y)=  \sum_ip(x_i,y_i)(x_i-\mu_x)(y_i-\mu_x)$$
+* Independent variable will have covariance 0.
+* Covariance variable can be dependent or can be 
 
 **Population variance or just variance** - Is formulated as average  of the square distance from mean. {% raw %}$$\sigma ^2 = \frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}$${% endraw %}. 
 
-**Standard deviation** - Root of population variance is standard deviation. It gives normalized result against dataset. {% raw %}$$\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}$${% endraw %}
+**Pupulation SD or Standard deviation** - Root of population variance is standard deviation. It gives normalized result against dataset. {% raw %}$$\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}$${% endraw %}  
+
+**Sample Standard Deviation** - Here we have Bessel's correction, divide by n-1, as sample can be smaller deviation then population deviation so to give it a nudge we divide by n-1. {% raw %}$$\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N-1}$${% endraw %} 
 
 ### Permutation & Combination
 Permutation is the count of number of ways which one particular Set can be arranged. The count should **consider the order**. For ex. S = {1,2,3} ca be arranged as {321,312,231,213,132,123}. So total number can be arranged as $$3\times2\times 1\\n\times (n-1)\times(n-2)...\\n!$$
@@ -78,12 +90,23 @@ P(AUB) = P(A)+P(B)-P(A\cap B )  = \frac{1}{3}+\frac{1}{2}-\frac{2}{6} = \frac{1}
 If A and be are **independent ** A is dice and B is deck getting 1 on dice and an spades ace on dec is
 $$P(A\cap B) = P(A).P(B) = \frac{1}{6}\cdot\frac{1}{52} = \frac{1}{312}$$ 
 
+**Marginal probability** - It can be though as plain probability of one variable X, but twist is there is a random variable Y, both and X and Y random variable can be biased in this case you create a chart of X and Y and calculate sum over Y and take average.
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths23.JPG){: .lazyload}
+
+
+**Joint probability** - Joint event is simple enough as name suggest, two independent event space is been joined together, this increase sample space. ANy probability will be calculated over this.
+
 **Conditional probability on Dependent event** Dependent event are the one which affect the event space for next event. For example in a deck probability of getting Ace is 1/13 and then you put that Ace aside the card deck size is now 51, now the probability of getting ace is 3/51. Here A has affected the event space for B. So we can write P(A) then P(B) is,  
 {% raw %}$$P(A\,and\,B) or P(A\cap B) = P(A).P(B|A)\ = P(B).P(A|B)\;or\\
 P(B|A) = \frac {P(A\,and\,B)}{P(A)}$$  {% endraw %}
 
 Where P(B\|A) can be defined as P(B) if P(A) has already occurred. P(B and A) are calculate over two dice throw, while P(B\|A) is probability of second dice throw. Extend to third variable.  
 {% raw %}$$P(A|B,C)=\frac{P(A\cap B\cap C)}{P(B\cap C)}$${% endraw %}
+
+Conditional probability joins two sample space of same, but when first occurred second sample gets affected by first.
+
+**Chain Rule of conditional Probability**  
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths24.JPG){: .lazyload}
 
 **Random Variable** - Random variable is possible outcome of any event. Let's say in a particular match how many goals will be made, it can be 1 or 4 or 6 or any number. This is discrete and can be counted and has some interval. Set containing 0 to 100 is discrete, but different floating values between is infinite/uncountable. Thing which can't be counted are **continuos random variable** and which can be counted are discrete. Continuos value can be measure but not counted for example volume.
 
@@ -183,6 +206,11 @@ $$P(X=k) = (1-p)^{k-1}p\\
 E(X)=\mu = 1/p,\;P(Failure) = \frac{(1-p)}{p}\\
 Var(X) = \frac{1-p}{p^2}$$
 
+
+**Empirical Distribution** - It is proportion of sample less then by total observations.
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths26.JPG){: .lazyload}
+
+
 ### Continuos Distribution
 
 **Normal Distribution** - Distribution where mean, mode and median coincide. It is bell shaped, there are equal exactly half of the value on left and right side. 
@@ -203,6 +231,14 @@ The confidence level, tells us how confident we are, that this particular interv
 $$F(x) = \lambda e^{-\lambda x}\\
 E(X)=\mu = 1/\lambda,\\
 Var(X) = \frac{1}{\lambda^2}$$
+
+**Laplace distribution** - It is double exponential distribution function, compared to normal distribution function which is squared of mean, it is absolute of mean difference. 
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths25.JPG){: .lazyload}
+
+**Mixture Distribution** - Mixture of two or more PDT, these PDT can be univariate or multivariate.
+Here is example for gaussian mixture distribution, made up of multiple normal distribution with different mean.
+![](/assets/2019-06-12-Machine-Learning-Basic-Maths27.JPG){: .lazyload}
+Gaussian mixture is sometime called as Universal Approximator of Densities.
 
 ## Calculus
 How function changes over times(**derivatives/by differentiation**), how they accumulate over time period(**integral/ by integration**).

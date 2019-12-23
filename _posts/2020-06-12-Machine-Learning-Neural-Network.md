@@ -121,13 +121,13 @@ $${\displaystyle \operatorname {E} {\Big [}{\big (}y-{\hat {f}}(x){\big )}^{2}{\
 \frac{\delta C}{\delta w} = \frac{\lambda}{n}w$$. It helped in overcoming overfitting issue and increasing accuracy, also saved us from local minima.
 
 
-**Weight decay Regularization-L1 or Lasso Regularization (LAD - Least Absolute deviation)** - Since 
+**Weight decay Regularization-L1 or Lasso Regularization (LAD - Least Absolute deviation)** -  
 
-**Sparsity** - Defines how much element in vector or matrix are zero, more zero means more sparsity. L1 is more sparse.
+1. **Sparsity** - Defines how much element in vector or matrix are zero, more zero means more sparsity. L1 is more sparse.
 
-**Built-In feature Selection** - Since L1 is sparse it brings down the wait of non used parameters which automatically bring more weighted parameters.
+2. **Built-In feature Selection** - Since L1 is sparse it brings down the wait of non used parameters which automatically bring more weighted parameters.
 
-**Dropout** - We select set of hidden neuron and turn them off and repeat the machine learning for small batches, later average it out. It remove the overfitting of data as different network will pick different things and on average it will span out better. 
+3. **Dropout** - We select set of hidden neuron and turn them off and repeat the machine learning for small batches, later average it out. It remove the overfitting of data as different network will pick different things and on average it will span out better. 
 
 * Increase in training data increases the accuracy. We can increase training data by skewing image, rotating image etc. 
 * Initialize weight right, Normally we use normal/gaussian distribution in that case mean is 0 and SD is 1 but since these normally distributed weights will make z 0 and any change in weight will not impact cost hence learning will be very slow. Use $$\frac{1}{\sqrt n}$$.
@@ -230,9 +230,14 @@ $$v_{t+1} = \frac{v_t}{1-\beta^t}$$
 ![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG){: .lazyload}
 
 **RMS prop** - Root mean square, same as momentum dampening.
+learning rate alpha 
+beta from momentum (usually 0.9) 
+beta2 from RMSprop (usually 0.999) 
+epsilon (usually 1e-8) 
 ![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network22.JPG){: .lazyload}
 
 **Adam Optimization** - It is combination of both RMS and EWA. 
+* There are other as well such, Nestrov accelerated gradient, Adagard, Adadelta 
 
 **Learning rate decay** - Once model start reaching to minimum vale the learning rate can be reduced so that it converges well. There are multiple formula's to decay learning rate based on epoch. For ex. 
 $$\alpha=\frac{1}{1+decay\_rate*epcoh\_num}$$
@@ -258,6 +263,12 @@ When the output of NN has predefined classes, it becomes a problem of softmax wh
 
 **F1 score** is harmonic mean(reduces effect of outlier average), **precision**(% of actual cats out of model recognized cats) and **recall**(% of correctly recognized cat out of actual cats) 
 
+* Precision is TPAP (TP/AP), recall is TPPP(TP/PP).
+* Accuracy is how good model is predicting correct values.
+* F1 harmonic mean of TP and FN, it is better model as accuracy requires same number of sample on postivie and negative, while F1 can work well with imbalance data also.
+* ROC (Receiver Operating Characteristics) - Area under curve is AUC(Area Under The Curve). 
+![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network88.JPG){: .lazyload}
+  
 ### Satisfying and optimizing metric
 Sometime there is good precision of model but take a lot time, some has low precision but takes less time. Create  Satisfying criteria, what is max time be bare to run and with that find model which has highest precision.
 ![](/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network27.JPG){: .lazyload}
@@ -444,11 +455,12 @@ When model is trained on some test sentences, it start to make prediction on nex
 * In character level model the charters are passed in place of words and vocab is formed from character. This model doesn't work better then word model also it take more computation time and power.
 
 * Vanishing gradient problem, In deep NN initial layer impact is very less on last layer.
-* Exploding gradient, In calculation if weights starts increasing exponentially we use gradient clipping to limit the exploding weights.
+* Exploding gradient, In calculation if weights starts increasing exponentially we use gradient clipping to limit the exploding weights. Use of proper weights also fixed the issue.
 
-To remember old words and overcome vanishing gradient descend, we have following options.
+To remember old words and overcome vanishing gradient descend, we have following options. 
 * GRU
 * LSTM
+* Switch to Relu from sigmoid function.
 
 ### GRU - Gated recurrent Unit
 Add another weight W<sub>u</sub> with existing W<sub>a</sub>(represented here as W<sub>c</sub>)

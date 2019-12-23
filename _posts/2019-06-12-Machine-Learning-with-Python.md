@@ -379,3 +379,64 @@ TPOT - BUilt over sklearn to find best algorithm and parameter
 ### Recommender system.
 Collaborative - What other people like
 Content based - what you like.
+
+* Word2Vec - It generates embedding vector of given corpus.
+* Sampled Sofmax - If you vocabulary then predicting a specific word with regular softmax is quite hard so we use sample vocabulary to calculate loss, this sampled softmax loss.
+* Smoothing gradient by adding momentum, this is a type of optimization.
+* Tom Mitchell’s definition: - T -Task, P - performance measurement, E experience gained. A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.
+* Describe Machine learning: Machine Learning is the training of a model from data that generalizes a decision against a performance measure.
+* Affine vs Linear function : Affine function is ax+b, ax is linear it just transforms vector space but doesn't move the origin by b, while affine function moves origin as well.
+* Train, test or generalization error, train error is error on training and test or generalization is error on test and real world set. 
+* Capacity of Model - How many complex relations it can capture out of the data, directly proportion to parameter.
+* VC Dimension - The VC dimension of a classifier is defined by Vapnik and Chervonenkis to be the cardinality (size) of the largest set of points that the classification algorithm can shatter.
+* Representational Learning: Sometime it difficult to represent the feature, such as car feature is wheel, how you define wheel by number or by pixel. This can automatically learned in representation learning such example is autoencode and there is decoder to decode representation to feature.
+* PCA Whitening - It normalization of projected vectors considering all projected vector. Kind of noramlization of feature, it is normalization of PCA. 
+  $$X_{\text{rotated}} = U \cdot X$$  
+  $$X_{\text{whitened}} = \frac{X_{\text{rotated}}}{\sqrt(S + \epsilon)}$$
+* Bagging - Bagging is ensembling technique of breaking down the train data and build train n models on these data, all models predict something and highest voted class is the final result. For example decision tree to random forest. It is technique to  reduces variance, not bias.
+* Random Forest - Random forest , training data is split into n numbers and n decision tree are built and then al tree are used to predict classes, whichever class is predicted most is taken into consideration. It is type of bagging.
+* Boosting - Boosting is again ensembling technique but little different then bagging, here new models are built to build to fit misclassified data. So to boos the performance on misclassified data only. One example is OCR>
+* One vs All - In multiclass softmax logistic regression rather going all at once, device set in n classes with 1 vs rest and select ith having maximum likelyhood. 
+* Parametric vs Non-Parametric -Parametric model which reqiures parameters to be fixed before hand so that have limitation on expanding parameter and sometime doesn't fit well for the problem example are as below. These are fast, simple require less data, but poor fit,constrained.
+  * Logistic Regression
+  * Linear Discriminant Analysis
+  * Perceptron
+  * Naive Bayes
+  * Simple Neural Networks  
+  While non-parametric do not have fixed parameters they learn by there own, but these are slow, require more data,can be overfitting, but good fit,gives better results.
+  * k-Nearest Neighbors - Model is not trained in this, prediction is made by finding nearest points to specific test data and then max classified nearest points are predicted.  
+  * Decision Trees like CART and C4.5
+  * Support Vector Machines
+* Testing: Sometime we have lot of data, we select train data to train, validate data to quickly validate multiple models, test data to test the selected model. But in case of less data we want to use all the data for training and testing, so we move to cross validation. It create number of set of whole data and use some part for test and some to train, but run it multiple time by changing the set.  Here are type of cross validation. 
+  * LOOCV -Leave one out cross-validation, take one data out for test, iterate through all data and to do mean square error (MSE). It is expensive and if test data selected is outlier it affects very badly.
+  * K Fold. Create multiple set, and do the same thing.
+  * Stratified cross-validation - Same as K fold but each set has to have equal representation of all class to remove bias.
+  * Time series cross-validation
+* Maximum likelihood estimation -Helps finding normal distribution parameter, MLE can be defined as a method for estimating population parameters (such as the mean and variance for Normal, rate (lambda) for Poisson, etc.) from sample data such that the probability (likelihood) of obtaining the observed data is maximized.  
+  Maximize product i to n ($$\begin{align}
+  f(x) &= \dfrac{1}{\sigma \sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}} \end{align}$$) where exponential component x is y<sup>i</sup> and &mu; is h(x<sup>i</sup>, &beta;).
+* Bayesian  vs frequentist Approach - These two approaches are common approaches in inferential statistics, finding patterns in samples and estimating the new event.  frequentist takes more of statistical explanation with sample and its population estimation while bayes thinks more probabilities more specifically considering past probabilities.  
+![](/assets/2019-06-12-Machine-Learning-with-Python44.JPG){: .lazyload}
+* Feature selection - Due to following reasons.
+  * Curse of Dimensionality - As the number feature increases, number of configuration and increases exponentially and we may not be having that big data to support hypothesis.
+  * Model has to be simple and explainable.
+  * Garbage in garbage out, poor feature will result poor output.
+  * Selection of feature
+    * Filter based - Correlation/che squared/Pearson Correlation between features.
+      * Che squared - From all data m, it take each feature 1 by 1 and check how good it gives the result of classification. Kind how directly proportion is the feature to target value. Feature with good value are kept and remaining are removed.  $$\[\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}\]$$
+    * Recursive feature elimination - start with one/all set of feature find coefficient and see there importance and add/remove the features. It has two trpes.
+      * Forward - start with one feature
+      * Backword - start with all
+    * Embedded - Feature selection is embedded in algorithm, Lasso ror L1 regularization bring the feature to zero in multiple iteration which automatically eliminates the features.
+* Numerical Optimization
+  * Softmax and log softmax underflow and overflow fix is by shifting the input vector by z=x-max(x).
+  * Poor conditioning - Rapid change of output wrt to small change of input. We need to select the metrics carefully so this issue doesn't happen.
+  * Condition Number - Ratio of largest to smallest value of SVD of a matrix. 
+
+**Gradient Divergence and Curl**
+Gradient is derivative diferent dimensions, Div or divergence is multiplication with vector field, curl is cross product.
+
+**Critical or Stationary Point** - Is the point where gradient is zero, it is like maximum or minimum point where there is no slope. 
+
+**Line search** - it is the process of finding the direction or gradient and then the step to get to minimum.
+**Hill climbing** - It is typical mathematical optimization problem, it start with one point  attempts to find a better solution.

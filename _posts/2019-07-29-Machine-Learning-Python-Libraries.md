@@ -202,6 +202,7 @@ xyz.tail()
 xyz.random(5)
 
 # Get the data
+# there are three ways, [] - can get only columns then rows by using again[], assigning value to it doesn't work well as it returns copied data, .loc - gets by label of header and rows, .iloc - get by index of row and columns,.ix - deperecatd can do both .loc and .iloc
 xyz.iloc([0], [0]) or xyz.iat([0], [0]) # get row=0,column=0 value
 xyz.loc([0],  ['Country']) # by label
 xyz[\['firstname','lastname']] # it will return dataframe
