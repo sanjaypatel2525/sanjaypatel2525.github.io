@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Machine Learning with Tensor Flow.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.streamhttps://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.streamhttps://abyte.stream/Machine-Learning-TensorFlow/">
+    <meta property="og:url" content="https://abyte.stream/Machine-Learning-TensorFlow/">
     <meta property="og:title" content="Machine Learning with Tensor Flow.">
     
-    <meta property="og:image" content="https://abyte.streamhttps://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,7 +31,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Machine Learning with Tensor Flow."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.streamhttps://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://abyte.stream/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.streamhttps://abyte.stream/amp/Machine-Learning-TensorFlow.html">
+        <link rel="amphtml" href="https://abyte.stream/amp/Machine-Learning-TensorFlow.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -62,7 +62,7 @@
 
     <link rel="stylesheet" href="https://abyte.stream/assets/css/main.css">
     <link rel="canonical" href="https://abyte.stream/Machine-Learning-TensorFlow/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.streamhttps://abyte.stream/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
@@ -282,7 +282,10 @@ tf.keras.callbacks.TensorBoard: Monitor the model’s behavior using TensorBoard
 </span><span class="n">strategy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">distribute</span><span class="o">.</span><span class="n">MirroredStrategy</span><span class="p">()</span>
 <span class="k">with</span> <span class="n">strategy</span><span class="o">.</span><span class="n">scope</span><span class="p">():</span>
   <span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">'binary_crossentropy'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span></code></pre></figure>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1"># Display plot model
+</span><span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s">'multi_input_and_output_model.png'</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="data-preprocess">Data preprocess.</h3>
 
