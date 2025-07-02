@@ -2,584 +2,584 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://abyte.stream/pages/2018-02-10-home-page/</loc>
+            <loc>/pages/2018-02-10-home-page/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/pages/2018-02-10-sample-page/</loc>
+            <loc>/pages/2018-02-10-sample-page/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/pretty-print/index.html</loc>
+            <loc>/pretty-print/index.html</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/sort-distinct/index.html</loc>
+            <loc>/sort-distinct/index.html</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/about/index.html</loc>
+            <loc>/about/index.html</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/css/</loc>
+            <loc>/category/css/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/dev/</loc>
+            <loc>/category/dev/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/feed.xml</loc>
+            <loc>/feed.xml</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/html/</loc>
+            <loc>/category/html/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/</loc>
+            <loc>/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/jekyll/</loc>
+            <loc>/category/jekyll/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/js/</loc>
+            <loc>/category/js/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/misc/</loc>
+            <loc>/category/misc/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/search.json</loc>
+            <loc>/search.json</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/series/index.html</loc>
+            <loc>/series/index.html</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/sitemap.xml</loc>
+            <loc>/sitemap.xml</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/category/svg/</loc>
+            <loc>/category/svg/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/tags/index.html</loc>
+            <loc>/tags/index.html</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/</loc>
+            <loc>/2018/12/11/websphere-commerce-build-with-git/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
+            <loc>/2018/12/11/websphere-commerce-build-with-git/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/10/issue-with-cached-static-content/</loc>
+            <loc>/2018/02/10/issue-with-cached-static-content/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/10/issue-with-cached-static-content/amp/</loc>
+            <loc>/2018/02/10/issue-with-cached-static-content/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/16/setup-wordpress-blogging-google-cloud/</loc>
+            <loc>/2018/02/16/setup-wordpress-blogging-google-cloud/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/16/setup-wordpress-blogging-google-cloud/amp/</loc>
+            <loc>/2018/02/16/setup-wordpress-blogging-google-cloud/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
+            <loc>/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/amp/</loc>
+            <loc>/2018/02/17/setting-domain-name-wordpress-site-cloudflare-dns-provider/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/17/fine-tune-wordpress-google-f1-micro/</loc>
+            <loc>/2018/02/17/fine-tune-wordpress-google-f1-micro/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/17/fine-tune-wordpress-google-f1-micro/amp/</loc>
+            <loc>/2018/02/17/fine-tune-wordpress-google-f1-micro/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/22/code-quality-analysis-sonar/</loc>
+            <loc>/2018/02/22/code-quality-analysis-sonar/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/22/code-quality-analysis-sonar/amp/</loc>
+            <loc>/2018/02/22/code-quality-analysis-sonar/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/28/setup-write-selenium-scripts/</loc>
+            <loc>/2018/02/28/setup-write-selenium-scripts/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/02/28/setup-write-selenium-scripts/amp/</loc>
+            <loc>/2018/02/28/setup-write-selenium-scripts/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
+            <loc>/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/amp/</loc>
+            <loc>/2018/03/02/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/03/04/jacoco-code-coverage-reports-sonarqube/</loc>
+            <loc>/2018/03/04/jacoco-code-coverage-reports-sonarqube/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/03/04/jacoco-code-coverage-reports-sonarqube/amp/</loc>
+            <loc>/2018/03/04/jacoco-code-coverage-reports-sonarqube/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-8-double-colon-operator/</loc>
+            <loc>/2018/09/15/java-8-double-colon-operator/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-8-double-colon-operator/amp/</loc>
+            <loc>/2018/09/15/java-8-double-colon-operator/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/</loc>
+            <loc>/2018/09/15/java-lambda-functional-programming-part-2/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
+            <loc>/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-lambda-procedural-programming/</loc>
+            <loc>/2018/09/15/java-lambda-procedural-programming/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-lambda-procedural-programming/amp/</loc>
+            <loc>/2018/09/15/java-lambda-procedural-programming/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/23/when-to-use-java-optional-class/</loc>
+            <loc>/2018/09/23/when-to-use-java-optional-class/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/23/when-to-use-java-optional-class/amp/</loc>
+            <loc>/2018/09/23/when-to-use-java-optional-class/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/23/understanding-java-predicate-interface/</loc>
+            <loc>/2018/09/23/understanding-java-predicate-interface/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/23/understanding-java-predicate-interface/amp/</loc>
+            <loc>/2018/09/23/understanding-java-predicate-interface/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/</loc>
+            <loc>/2018/09/15/java-lambda-functional-programming-part-2/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
+            <loc>/2018/09/15/java-lambda-functional-programming-part-2/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/23/java-consumer-and-supplier-interfaces/</loc>
+            <loc>/2018/09/23/java-consumer-and-supplier-interfaces/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/09/23/java-consumer-and-supplier-interfaces/amp/</loc>
+            <loc>/2018/09/23/java-consumer-and-supplier-interfaces/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/12/11/migrating-from-cvs-to-git/</loc>
+            <loc>/2018/12/11/migrating-from-cvs-to-git/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/2018/12/11/migrating-from-cvs-to-git/amp/</loc>
+            <loc>/2018/12/11/migrating-from-cvs-to-git/amp/</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/redirects.json</loc>
+            <loc>/redirects.json</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/websphere-commerce-build-with-git</loc>
+            <loc>/amp/websphere-commerce-build-with-git</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/issue-with-cached-static-content</loc>
+            <loc>/amp/issue-with-cached-static-content</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/setup-wordpress-blogging-google-cloud</loc>
+            <loc>/amp/setup-wordpress-blogging-google-cloud</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/setting-domain-name-wordpress-site-cloudflare-dns-provider</loc>
+            <loc>/amp/setting-domain-name-wordpress-site-cloudflare-dns-provider</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/fine-tune-wordpress-google-f1-micro</loc>
+            <loc>/amp/fine-tune-wordpress-google-f1-micro</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/code-quality-analysis-sonar</loc>
+            <loc>/amp/code-quality-analysis-sonar</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/setup-write-selenium-scripts</loc>
+            <loc>/amp/setup-write-selenium-scripts</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular</loc>
+            <loc>/amp/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/jacoco-code-coverage-reports-sonarqube</loc>
+            <loc>/amp/jacoco-code-coverage-reports-sonarqube</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/java-8-double-colon-operator</loc>
+            <loc>/amp/java-8-double-colon-operator</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/java-lambda-functional-programming-part-2</loc>
+            <loc>/amp/java-lambda-functional-programming-part-2</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/java-lambda-procedural-programming</loc>
+            <loc>/amp/java-lambda-procedural-programming</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/when-to-use-java-optional-class</loc>
+            <loc>/amp/when-to-use-java-optional-class</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/understanding-java-predicate-interface</loc>
+            <loc>/amp/understanding-java-predicate-interface</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/java-function-interface-is-the-java-functional-interface</loc>
+            <loc>/amp/java-function-interface-is-the-java-functional-interface</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/java-consumer-and-supplier-interfaces</loc>
+            <loc>/amp/java-consumer-and-supplier-interfaces</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/migrating-from-cvs-to-git</loc>
+            <loc>/amp/migrating-from-cvs-to-git</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring IoC and DI</loc>
+            <loc>/amp/Spring IoC and DI</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring IoC</loc>
+            <loc>/amp/Spring IoC</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Bean life cycle</loc>
+            <loc>/amp/Spring Bean life cycle</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Autowire</loc>
+            <loc>/amp/Spring Autowire</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Java Based Configuration</loc>
+            <loc>/amp/Spring Java Based Configuration</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Javascript-Object-Function-Prototype-Gotcha</loc>
+            <loc>/amp/Javascript-Object-Function-Prototype-Gotcha</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Events and Listners</loc>
+            <loc>/amp/Spring Events and Listners</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring MVC Intro</loc>
+            <loc>/amp/Spring MVC Intro</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Security Simple</loc>
+            <loc>/amp/Spring Security Simple</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Security Architecture</loc>
+            <loc>/amp/Spring Security Architecture</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Hibernate in Short</loc>
+            <loc>/amp/Hibernate in Short</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Data in Short</loc>
+            <loc>/amp/Spring Data in Short</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring JDBC in Short</loc>
+            <loc>/amp/Spring JDBC in Short</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring AOP and AspectJ</loc>
+            <loc>/amp/Spring AOP and AspectJ</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring JUnit Basics</loc>
+            <loc>/amp/Spring JUnit Basics</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/EJB in Java</loc>
+            <loc>/amp/EJB in Java</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/REST in Java world</loc>
+            <loc>/amp/REST in Java world</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/SOAP in Java world</loc>
+            <loc>/amp/SOAP in Java world</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Spring Boot JUnit with Mockito</loc>
+            <loc>/amp/Spring Boot JUnit with Mockito</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Web Service in Java world</loc>
+            <loc>/amp/Web Service in Java world</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/10 minutes JMS </loc>
+            <loc>/amp/10 minutes JMS </loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-TensorFlow</loc>
+            <loc>/amp/Machine-Learning-TensorFlow</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-Neural-Network</loc>
+            <loc>/amp/Machine-Learning-Neural-Network</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-with-Python</loc>
+            <loc>/amp/Machine-Learning-with-Python</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-with-scikitlearn</loc>
+            <loc>/amp/Machine-Learning-with-scikitlearn</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-Python-Libraries</loc>
+            <loc>/amp/Machine-Learning-Python-Libraries</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Python-when-you-are-from-Java</loc>
+            <loc>/amp/Python-when-you-are-from-Java</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine-Learning-Basic-Maths</loc>
+            <loc>/amp/Machine-Learning-Basic-Maths</loc>
         </url>
     
         <url>
-            <loc>https://abyte.stream/amp/Machine_Learnig_Linear Algebra</loc>
+            <loc>/amp/Machine_Learnig_Linear Algebra</loc>
         </url>
     
     
         <url>
-            <loc>https://abyte.stream/Machine_Learnig_Linear-Algebra/</loc>
+            <loc>/Machine_Learnig_Linear-Algebra/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-Basic-Maths/</loc>
+            <loc>/Machine-Learning-Basic-Maths/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Python-when-you-are-from-Java/</loc>
+            <loc>/Python-when-you-are-from-Java/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-Python-Libraries/</loc>
+            <loc>/Machine-Learning-Python-Libraries/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-with-scikitlearn/</loc>
+            <loc>/Machine-Learning-with-scikitlearn/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-with-Python/</loc>
+            <loc>/Machine-Learning-with-Python/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-Neural-Network/</loc>
+            <loc>/Machine-Learning-Neural-Network/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Machine-Learning-TensorFlow/</loc>
+            <loc>/Machine-Learning-TensorFlow/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/10-minutes-JMS/</loc>
+            <loc>/10-minutes-JMS/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Web-Service-in-Java-world/</loc>
+            <loc>/Web-Service-in-Java-world/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Boot-JUnit-with-Mockito/</loc>
+            <loc>/Spring-Boot-JUnit-with-Mockito/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/SOAP-in-Java-world/</loc>
+            <loc>/SOAP-in-Java-world/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/REST-in-Java-world/</loc>
+            <loc>/REST-in-Java-world/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/EJB-in-Java/</loc>
+            <loc>/EJB-in-Java/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-JUnit-Basics/</loc>
+            <loc>/Spring-JUnit-Basics/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-AOP-and-AspectJ/</loc>
+            <loc>/Spring-AOP-and-AspectJ/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-JDBC-in-Short/</loc>
+            <loc>/Spring-JDBC-in-Short/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Data-in-Short/</loc>
+            <loc>/Spring-Data-in-Short/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Hibernate-in-Short/</loc>
+            <loc>/Hibernate-in-Short/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Security-Architecture/</loc>
+            <loc>/Spring-Security-Architecture/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Security-Simple/</loc>
+            <loc>/Spring-Security-Simple/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-MVC-Intro/</loc>
+            <loc>/Spring-MVC-Intro/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Events-and-Listners/</loc>
+            <loc>/Spring-Events-and-Listners/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/</loc>
+            <loc>/Javascript-Object-Function-Prototype-Gotcha/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Java-Based-Configuration/</loc>
+            <loc>/Spring-Java-Based-Configuration/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Autowire/</loc>
+            <loc>/Spring-Autowire/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-Bean-life-cycle/</loc>
+            <loc>/Spring-Bean-life-cycle/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-IoC/</loc>
+            <loc>/Spring-IoC/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/Spring-IoC-and-DI/</loc>
+            <loc>/Spring-IoC-and-DI/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/migrating-from-cvs-to-git/</loc>
+            <loc>/migrating-from-cvs-to-git/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/java-consumer-and-supplier-interfaces/</loc>
+            <loc>/java-consumer-and-supplier-interfaces/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/java-function-interface-is-the-java-functional-interface/</loc>
+            <loc>/java-function-interface-is-the-java-functional-interface/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/understanding-java-predicate-interface/</loc>
+            <loc>/understanding-java-predicate-interface/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/when-to-use-java-optional-class/</loc>
+            <loc>/when-to-use-java-optional-class/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/java-lambda-procedural-programming/</loc>
+            <loc>/java-lambda-procedural-programming/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/java-lambda-functional-programming-part-2/</loc>
+            <loc>/java-lambda-functional-programming-part-2/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/java-8-double-colon-operator/</loc>
+            <loc>/java-8-double-colon-operator/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/jacoco-code-coverage-reports-sonarqube/</loc>
+            <loc>/jacoco-code-coverage-reports-sonarqube/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
+            <loc>/end-to-end-e2e-browser-testing-with-protractor-angular-and-non-angular/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/setup-write-selenium-scripts/</loc>
+            <loc>/setup-write-selenium-scripts/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/code-quality-analysis-sonar/</loc>
+            <loc>/code-quality-analysis-sonar/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/fine-tune-wordpress-google-f1-micro/</loc>
+            <loc>/fine-tune-wordpress-google-f1-micro/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
+            <loc>/setting-domain-name-wordpress-site-cloudflare-dns-provider/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/setup-wordpress-blogging-google-cloud/</loc>
+            <loc>/setup-wordpress-blogging-google-cloud/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/issue-with-cached-static-content/</loc>
+            <loc>/issue-with-cached-static-content/</loc>
         </url>
   
         <url>
-            <loc>https://abyte.stream/websphere-commerce-build-with-git/</loc>
+            <loc>/websphere-commerce-build-with-git/</loc>
         </url>
   
 </urlset>

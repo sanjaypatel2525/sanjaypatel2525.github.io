@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Python when you are from Java</title>
-    <link rel="canonical" href="https://abyte.stream/Python-when-you-are-from-Java/" />
+    <link rel="canonical" href="/Python-when-you-are-from-Java/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -194,9 +194,9 @@
   <li>Double prefix underscore - The name is mangled, when you list dir(anyobject), it shows classname appended to actual variable name. For ex.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="bp">self</span><span class="o">.</span><span class="n">__xyz</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># inside class A
-</span>  <span class="k">print</span> <span class="n">A</span><span class="p">()</span><span class="o">.</span><span class="n">__xyz</span> <span class="c1"># throws error as it is not defined.
-</span>  <span class="k">print</span> <span class="n">A</span><span class="p">()</span><span class="o">.</span><span class="n">_A__xyz</span> <span class="c1"># gives the __xyz value.
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="n">self</span><span class="p">.</span><span class="n">__xyz</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># inside class A
+</span>  <span class="k">print</span> <span class="nc">A</span><span class="p">().</span><span class="n">__xyz</span> <span class="c1"># throws error as it is not defined.
+</span>  <span class="k">print</span> <span class="nc">A</span><span class="p">().</span><span class="n">_A__xyz</span> <span class="c1"># gives the __xyz value.
 </span>  </code></pre></figure>
 <ul>
   <li>Leading and training double underscore - Python reserved methods and variable, don’t use this standard.</li>
@@ -208,7 +208,7 @@
 </ul>
 
 <h3 id="variable">Variable</h3>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">xyz</span> <span class="o">=</span><span class="s">"Something"</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">xyz</span> <span class="o">=</span><span class="sh">"</span><span class="s">Something</span><span class="sh">"</span>
 <span class="n">xyz</span> <span class="o">=</span> <span class="mi">1</span>  </code></pre></figure>
 <p>Everything in Python is object of some class and each variable is just a reference of size 8 byte (can be different in different implementation of Python). But there are some key datatypes defined by Python.</p>
 <h2 id="datatypes">DataTypes</h2>
@@ -344,7 +344,7 @@ All above are there, here are some more.</p>
 </ul>
 
 <h3 id="python-module">Python Module</h3>
-<p>Module in python are files which can some statements, methods, variable etc. Moduels can import another modules as well. You can reload the module using <code class="highlight language-python" data-lang="python"><span class="kn">import</span> <span class="nn">importlib</span><span class="p">;</span> <span class="n">importlib</span><span class="o">.</span><span class="nb">reload</span><span class="p">(</span><span class="n">modulename</span><span class="p">)</span></code>.
+<p>Module in python are files which can some statements, methods, variable etc. Moduels can import another modules as well. You can reload the module using <code class="highlight language-python" data-lang="python"><span class="kn">import</span> <span class="n">importlib</span><span class="p">;</span> <span class="n">importlib</span><span class="p">.</span><span class="nf">reload</span><span class="p">(</span><span class="n">modulename</span><span class="p">)</span></code>.
 <strong>Execute Modules</strong> - »&gt;python module1.py <arguments>
 Access module parameter by, int(sys.argv[1]). Main module should have name \_\_main__.py.</arguments></p>
 
@@ -353,13 +353,13 @@ Access module parameter by, int(sys.argv[1]). Main module should have name \_\_m
 <h3 id="inheritance">Inheritance.</h3>
 <p>Private attribute are defined by double underscore and protected are defined by single single underscore. Private can be accesses by mangling the attribute name. Logically anything defined inside functon with self is private. For ex.</p>
 <figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-  <span class="k">def</span> <span class="err">\</span><span class="nf">_</span>\<span class="n">_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-    <span class="bp">self</span><span class="o">.</span><span class="n">firstname</span> <span class="o">=</span> <span class="s">'xyz'</span>
-    <span class="bp">self</span><span class="o">.</span>\<span class="n">_</span>\<span class="n">_lastname</span> <span class="o">=</span> <span class="s">'abc'</span>
-  <span class="o">...</span>
+  <span class="k">def</span> <span class="err">\</span><span class="nf">_</span>\<span class="nf">_init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span> 
+    <span class="n">self</span><span class="p">.</span><span class="n">firstname</span> <span class="o">=</span> <span class="sh">'</span><span class="s">xyz</span><span class="sh">'</span>
+    <span class="n">self</span><span class="p">.</span>\<span class="n">_</span>\<span class="n">_lastname</span> <span class="o">=</span> <span class="sh">'</span><span class="s">abc</span><span class="sh">'</span>
+  <span class="bp">...</span>
 
-  <span class="n">P</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">__lastname</span><span class="p">)</span> <span class="c1"># will throw, #AttributeError: 'Person' object has no attribute '__lastname'</span></code></pre></figure>
+  <span class="n">P</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">()</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">P</span><span class="p">.</span><span class="n">__lastname</span><span class="p">)</span> <span class="c1"># will throw, #AttributeError: 'Person' object has no attribute '__lastname'</span></code></pre></figure>
 
 <h2 id="python-magic-methods">Python Magic methods.</h2>
 <ul>
@@ -387,54 +387,54 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
   <li>Custom sequence</li>
 </ul>
 <figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">FunctionalList</span><span class="p">:</span>
-    <span class="s">'''A class wrapping a list with some extra functional magic, like head,
-    tail, init, last, drop, and take.'''</span>
+    <span class="sh">'''</span><span class="s">A class wrapping a list with some extra functional magic, like head,
+    tail, init, last, drop, and take.</span><span class="sh">'''</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">values</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">values</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">values</span>
 
-    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="c1"># if key is of invalid type or value, the list values will raise the error
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
 
-    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">del</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nf">iter</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__reversed__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nf">reversed</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="c1"># get the first element
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="c1"># get all elements after the first
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="c1"># get elements up to the last
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">def</span> <span class="nf">last</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">last</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="c1"># get last element
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
         <span class="c1"># get all elements except first n
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">n</span><span class="p">:]</span>
-    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">n</span><span class="p">:]</span>
+    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
         <span class="c1"># get first n elements
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span></code></pre></figure>
+</span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">values</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span></code></pre></figure>
 <ul>
   <li>Copying
 <strong>copy</strong>(self),<strong>deepcopy</strong>(self, memodict={})</li>
@@ -448,27 +448,27 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
 </li>
   <li>By sort and key</li>
 </ul>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">attrgetter</span><span class="p">(</span><span class="s">'score'</span><span class="p">))</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span><span class="p">.</span><span class="nf">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="nf">attrgetter</span><span class="p">(</span><span class="sh">'</span><span class="s">score</span><span class="sh">'</span><span class="p">))</span></code></pre></figure>
 
 <h3 id="iterator">Iterator</h3>
 <p>Taken from stackoverflow, For example</p>
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">high</span> <span class="o">=</span> <span class="n">high</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">high</span> <span class="o">=</span> <span class="n">high</span>
 
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span>
 
-    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># Python 2: def next(self)
-</span>        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span>
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span> <span class="c1"># Python 2: def next(self)
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">current</span> <span class="o">&lt;</span> <span class="n">self</span><span class="p">.</span><span class="n">high</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">current</span>
         <span class="k">raise</span> <span class="nb">StopIteration</span>
 
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nc">Counter</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="generator">Generator</h3>
 <p>There is other type of iterator as well, this doesn need a full fledged class.</p>
@@ -478,11 +478,11 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
         <span class="k">yield</span> <span class="n">current</span>
         <span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">counter</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nf">counter</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
 
 <h2 id="inheritance-1">Inheritance.</h2>
-<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">BaseClassName1</span><span class="p">,</span><span class="n">BaseClassName2</span><span class="o">..</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">BaseClassName1</span><span class="p">,</span><span class="n">BaseClassName2</span><span class="p">..):</span>
     <span class="k">pass</span></code></pre></figure>
 
 <p><strong>isinstance and issubclass</strong> - Tells weather object belong to inhertance hierarchy and a class is subclass of something.</p>
@@ -492,15 +492,15 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
 <h3 id="exception-handling">Exception handling.</h3>
 <p>We have following keywords, try, except, else, raise,finally.</p>
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">try</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello</span><span class="sh">"</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">AppError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"Something went wrong"</span><span class="p">,</span><span class="n">error</span><span class="p">)</span>
-  <span class="n">error_type</span><span class="p">,</span> <span class="n">error_instance</span><span class="p">,</span> <span class="n">traceback</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Something went wrong</span><span class="sh">"</span><span class="p">,</span><span class="n">error</span><span class="p">)</span>
+  <span class="n">error_type</span><span class="p">,</span> <span class="n">error_instance</span><span class="p">,</span> <span class="n">traceback</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="nf">exc_info</span><span class="p">()</span>
 <span class="k">else</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"Nothing went wrong"</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Nothing went wrong</span><span class="sh">"</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"The 'try except' is finished"</span><span class="p">)</span>
-<span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'A very specific bad thing happened.'</span><span class="p">)</span></code></pre></figure>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">The </span><span class="sh">'</span><span class="s">try except</span><span class="sh">'</span><span class="s"> is finished</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sh">'</span><span class="s">A very specific bad thing happened.</span><span class="sh">'</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="lambda">Lambda</h3>
 <figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="n">x</span> <span class="o">=</span> <span class="n">lambda</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span> <span class="o">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
@@ -518,13 +518,13 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
       <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
           <span class="k">nonlocal</span> <span class="n">x</span> <span class="c1"># Output 2 if it would have been global x
 </span>          <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-          <span class="k">print</span><span class="p">(</span><span class="s">"inner:"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+          <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">inner:</span><span class="sh">"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
-      <span class="n">inner</span><span class="p">()</span>
-      <span class="k">print</span><span class="p">(</span><span class="s">"outer:"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+      <span class="nf">inner</span><span class="p">()</span>
+      <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">outer:</span><span class="sh">"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
-  <span class="n">outer</span><span class="p">()</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"global:"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+  <span class="nf">outer</span><span class="p">()</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">global:</span><span class="sh">"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
   <span class="c1"># inner: 2
 </span>  <span class="c1"># outer: 2
@@ -537,35 +537,35 @@ __getattr__(self, name), __setattr__(self, name, value),delattr</li>
 
 <h3 id="compound-statements">Compound statements.</h3>
 <figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">if</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
-    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nf">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
   <span class="k">elif</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
-    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nf">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
   <span class="k">else</span><span class="p">:</span>
-    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nf">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="n">expr1</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">conditional_expr</span><span class="o">&gt;</span> <span class="k">else</span> <span class="o">&lt;</span><span class="n">expr2</span><span class="o">&gt;</span>
-<span class="o">....</span>
+<span class="p">.</span><span class="bp">...</span>
   <span class="k">while</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
-    <span class="o">&lt;</span><span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nf">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
   <span class="k">else</span><span class="p">:</span>
-    <span class="o">&lt;</span><span class="n">additional_statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">....</span>
+    <span class="o">&lt;</span><span class="nf">additional_statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="p">.</span><span class="bp">...</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="o">....</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">.</span><span class="bp">...</span>
 <span class="k">class</span> <span class="nc">controlled_execution</span><span class="p">:</span>
-  <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
       <span class="nb">set</span> <span class="n">things</span> <span class="n">up</span>
       <span class="k">return</span> <span class="n">thing</span>
-  <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
       <span class="n">tear</span> <span class="n">things</span> <span class="n">down</span>
 
-<span class="k">with</span> <span class="n">controlled_execution</span><span class="p">()</span> <span class="k">as</span> <span class="n">thing</span><span class="p">:</span>
+<span class="k">with</span> <span class="nf">controlled_execution</span><span class="p">()</span> <span class="k">as</span> <span class="n">thing</span><span class="p">:</span>
     <span class="n">some</span> <span class="n">code</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"x.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">x.txt</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
     <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">data</span></code></pre></figure>
 
 <h2 id="plots">Plots</h2>

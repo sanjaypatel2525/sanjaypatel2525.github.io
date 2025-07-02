@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Machine Learning with Tensor Flow.</title>
-    <link rel="canonical" href="https://abyte.stream/Machine-Learning-TensorFlow/" />
+    <link rel="canonical" href="/Machine-Learning-TensorFlow/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -182,16 +182,16 @@
 <strong>tf.estimator.DNNClassifier</strong> for deep models that perform multi-class classification.
 <strong>tf.estimator.DNNLinearCombinedClassifier</strong> for wide &amp; deep models.
 <strong>tf.estimator.LinearClassifier</strong> for classifiers based on linear models.</p>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">classifier</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">DNNClassifier</span><span class="p">(</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">classifier</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">estimator</span><span class="p">.</span><span class="nc">DNNClassifier</span><span class="p">(</span>
     <span class="n">feature_columns</span><span class="o">=</span><span class="n">my_feature_columns</span><span class="p">,</span><span class="c1"># Two hidden layers of 30 and 10 nodes respectively.
 </span>    <span class="n">hidden_units</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span><span class="c1"># The model must choose between 3 classes.
 </span>    <span class="n">n_classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">classifier</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">input_fn</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+<span class="n">classifier</span><span class="p">.</span><span class="nf">train</span><span class="p">(</span><span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nf">input_fn</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
     <span class="n">steps</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
-<span class="n">eval_result</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span>
-    <span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">input_fn</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
-<span class="n">predictions</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-    <span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">input_fn</span><span class="p">(</span><span class="n">predict_x</span><span class="p">))</span></code></pre></figure>
+<span class="n">eval_result</span> <span class="o">=</span> <span class="n">classifier</span><span class="p">.</span><span class="nf">evaluate</span><span class="p">(</span>
+    <span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nf">input_fn</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">classifier</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span>
+    <span class="n">input_fn</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nf">input_fn</span><span class="p">(</span><span class="n">predict_x</span><span class="p">))</span></code></pre></figure>
 
 <h3 id="tf-keras">TF Keras</h3>
 <p>Keras is a high level set of estimators, ready to use. 
@@ -222,51 +222,51 @@ It requires</p>
   <li>Evaluate - model.evaluate(dataset)</li>
   <li>Predict - model.predict(data, batch_size=32)</li>
 </ul>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">))</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="nc">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">layers</span><span class="p">.</span><span class="nc">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">relu</span><span class="sh">'</span><span class="p">))</span>
 <span class="ow">or</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">activations</span><span class="o">.</span><span class="n">relu</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span>
-              <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">categorical_crossentropy</span><span class="p">,</span>
-              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">Accuracy</span><span class="p">])</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">layers</span><span class="p">.</span><span class="nc">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">activations</span><span class="p">.</span><span class="n">relu</span><span class="p">))</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="nc">Adam</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span>
+              <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">losses</span><span class="p">.</span><span class="n">categorical_crossentropy</span><span class="p">,</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">metrics</span><span class="p">.</span><span class="n">Accuracy</span><span class="p">])</span>
 
 <span class="c1">### Fit and run validation
-</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">val_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
-<span class="n">val_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+</span><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">val_data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">val_labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
           <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">val_data</span><span class="p">,</span> <span class="n">val_labels</span><span class="p">))</span>
 
 <span class="c1">### or just batch up before putting in fit.
-</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
+</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="nf">batch</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
 
 <span class="c1">### Evaluate and predict
 # With Numpy arrays
-</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">evaluate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
 <span class="c1"># With a Dataset
-</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span></code></pre></figure>
+</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="nf">batch</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">evaluate</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="declarative-approach-take-tensor-return-tensor">Declarative approach, take tensor, return tensor.</h3>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,))</span>  <span class="c1"># Returns an input placeholder
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="nc">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,))</span>  <span class="c1"># Returns an input placeholder
 # A layer instance is callable on a tensor, and returns a tensor.
-</span><span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">inputs</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">predictions</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">predictions</span><span class="p">)</span>
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="p">.</span><span class="nc">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">relu</span><span class="sh">'</span><span class="p">)(</span><span class="n">inputs</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="p">.</span><span class="nc">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">relu</span><span class="sh">'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">layers</span><span class="p">.</span><span class="nc">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">softmax</span><span class="sh">'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="nc">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">predictions</span><span class="p">)</span>
 <span class="c1"># The compile step specifies the training configuration.
-</span><span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="mf">0.001</span><span class="p">),</span>
-              <span class="n">loss</span><span class="o">=</span><span class="s">'categorical_crossentropy'</span><span class="p">,</span>
-              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
+</span><span class="n">model</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="nc">RMSprop</span><span class="p">(</span><span class="mf">0.001</span><span class="p">),</span>
+              <span class="n">loss</span><span class="o">=</span><span class="sh">'</span><span class="s">categorical_crossentropy</span><span class="sh">'</span><span class="p">,</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">accuracy</span><span class="sh">'</span><span class="p">])</span>
 <span class="c1"># Trains for 5 epochs
-</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code></pre></figure>
+</span><span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="callbacks-in-running">Callbacks in running</h3>
 <p>tf.keras.callbacks.ModelCheckpoint: Save checkpoints of your model at regular intervals.
@@ -275,36 +275,36 @@ tf.keras.callbacks.EarlyStopping: Interrupt training when validation performance
 tf.keras.callbacks.TensorBoard: Monitor the model’s behavior using TensorBoard.</p>
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span>
   <span class="c1"># Interrupt training if `val_loss` stops improving for over 2 epochs
-</span>  <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s">'val_loss'</span><span class="p">),</span>
+</span>  <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="sh">'</span><span class="s">val_loss</span><span class="sh">'</span><span class="p">),</span>
   <span class="c1"># Write TensorBoard logs to `./logs` directory
-</span>  <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="s">'./logs'</span><span class="p">)</span>
+</span>  <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="sh">'</span><span class="s">./logs</span><span class="sh">'</span><span class="p">)</span>
 <span class="p">]</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">,</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">,</span>
           <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">val_data</span><span class="p">,</span> <span class="n">val_labels</span><span class="p">))</span></code></pre></figure>
 
 <h3 id="save--reload">Save &amp; Reload</h3>
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># Recreate the exact same model, including weights and optimizer.
-</span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>
+</span><span class="n">model</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="sh">'</span><span class="s">my_model.h5</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="nf">load_model</span><span class="p">(</span><span class="sh">'</span><span class="s">my_model.h5</span><span class="sh">'</span><span class="p">)</span>
 
 <span class="c1"># Save only model to json or yaml
-</span><span class="n">json_string</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
-<span class="n">fresh_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">model_from_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
-<span class="n">yaml_string</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">()</span>
-<span class="n">fresh_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">model_from_yaml</span><span class="p">(</span><span class="n">yaml_string</span><span class="p">)</span>
+</span><span class="n">json_string</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">to_json</span><span class="p">()</span>
+<span class="n">fresh_model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="nf">model_from_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+<span class="n">yaml_string</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">to_yaml</span><span class="p">()</span>
+<span class="n">fresh_model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="nf">model_from_yaml</span><span class="p">(</span><span class="n">yaml_string</span><span class="p">)</span>
 
 <span class="c1"># Save weights 
-</span><span class="n">model</span><span class="o">.</span><span class="n">save_weights</span><span class="p">(</span><span class="s">'./weights/my_model'</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s">'./weights/my_model'</span><span class="p">)</span>
+</span><span class="n">model</span><span class="p">.</span><span class="nf">save_weights</span><span class="p">(</span><span class="sh">'</span><span class="s">./weights/my_model</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">load_weights</span><span class="p">(</span><span class="sh">'</span><span class="s">./weights/my_model</span><span class="sh">'</span><span class="p">)</span>
 
 <span class="c1"># Distributed startegy
-</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">distribute</span><span class="o">.</span><span class="n">MirroredStrategy</span><span class="p">()</span>
-<span class="k">with</span> <span class="n">strategy</span><span class="o">.</span><span class="n">scope</span><span class="p">():</span>
-  <span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">'binary_crossentropy'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">distribute</span><span class="p">.</span><span class="nc">MirroredStrategy</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">strategy</span><span class="p">.</span><span class="nf">scope</span><span class="p">():</span>
+  <span class="n">model</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="sh">'</span><span class="s">binary_crossentropy</span><span class="sh">'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">summary</span><span class="p">()</span>
 
 <span class="c1"># Display plot model
-</span><span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s">'multi_input_and_output_model.png'</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
+</span><span class="n">keras</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="nf">plot_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="sh">'</span><span class="s">multi_input_and_output_model.png</span><span class="sh">'</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="data-preprocess">Data preprocess.</h3>
 
@@ -323,122 +323,122 @@ Variable, Placeholders, contants, operation, graph, session.</p>
 
 <p>Compared to numpy array they don’t allocate memory in starting. For ex.  a = tf.zeros(int(le12),int(le12)) will just form a shape not the actual allocation of memory. It will only allocate memory when it is executed.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
-  <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">session</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"a"</span><span class="p">)</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"b"</span><span class="p">)</span>
-    <span class="n">prod</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"Multiply"</span><span class="p">)</span>
-    <span class="nb">sum</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"Sum"</span><span class="p">)</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">prod</span><span class="p">,</span><span class="nb">sum</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"Divide"</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+  <span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">session</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">b</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">prod</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">Multiply</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">Sum</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">divide</span><span class="p">(</span><span class="n">prod</span><span class="p">,</span><span class="nb">sum</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">Divide</span><span class="sh">"</span><span class="p">)</span>
 
-    <span class="n">out</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span></code></pre></figure>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="how-the-graph-component-looks-in-code">How the Graph component looks in Code.</h3>
 <p>Here is very nice explanation from one of the blog.
 https://medium.com/@d3lm/understand-tensorflow-by-mimicking-its-api-from-scratch-faa55787170d</p>
 <figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">Graph</span><span class="p">():</span>
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">placeholders</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">constants</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">operations</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">placeholders</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">variables</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">constants</span> <span class="o">=</span> <span class="p">[]</span>
 
-  <span class="k">def</span> <span class="nf">as_default</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">as_default</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">_default_graph</span>
-    <span class="n">_default_graph</span> <span class="o">=</span> <span class="bp">self</span>
+    <span class="n">_default_graph</span> <span class="o">=</span> <span class="n">self</span>
 
-  <span class="o">......</span>
+  <span class="p">...</span><span class="bp">...</span>
 
   <span class="k">class</span> <span class="nc">Operation</span><span class="p">():</span>
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">input_nodes</span> <span class="o">=</span> <span class="n">input_nodes</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="bp">None</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">input_nodes</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">input_nodes</span> <span class="o">=</span> <span class="n">input_nodes</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">output</span> <span class="o">=</span> <span class="bp">None</span>
     
     <span class="c1"># Append operation to the list of operations of the default graph
-</span>    <span class="n">_default_graph</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span>    <span class="n">_default_graph</span><span class="p">.</span><span class="n">operations</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
 
-  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
     <span class="k">pass</span>
 
-  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
     <span class="k">pass</span>
 
-  <span class="o">......</span>
+  <span class="p">...</span><span class="bp">...</span>
 
   <span class="k">class</span> <span class="nc">add</span><span class="p">(</span><span class="n">BinaryOperation</span><span class="p">):</span>
-  <span class="s">"""
+  <span class="sh">"""</span><span class="s">
   Computes a + b, element-wise
-  """</span>
-  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+  </span><span class="sh">"""</span>
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
-  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">upstream_grad</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">upstream_grad</span><span class="p">):</span>
     <span class="k">raise</span> <span class="nb">NotImplementedError</span>
   <span class="c1"># and so on for other operators.
 </span>
   <span class="k">class</span> <span class="nc">Placeholder</span><span class="p">():</span>
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">_default_graph</span><span class="o">.</span><span class="n">placeholders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">_default_graph</span><span class="p">.</span><span class="n">placeholders</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
 
-  <span class="o">.......</span>
+  <span class="p">....</span><span class="bp">...</span>
   <span class="c1"># constant can be inputs/labels as they do not changes
 </span>  <span class="k">class</span> <span class="nc">Constant</span><span class="p">():</span>
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="n">value</span>
-    <span class="n">_default_graph</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">__value</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="n">_default_graph</span><span class="p">.</span><span class="n">constants</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
 
-  <span class="o">@</span><span class="nb">property</span>
-  <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__value</span>
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">__value</span>
 
-  <span class="o">@</span><span class="n">value</span><span class="o">.</span><span class="n">setter</span>
-  <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Cannot reassign value."</span><span class="p">)</span>
+  <span class="nd">@value.setter</span>
+  <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sh">"</span><span class="s">Cannot reassign value.</span><span class="sh">"</span><span class="p">)</span>
 
-  <span class="o">.......</span>
+  <span class="p">....</span><span class="bp">...</span>
   <span class="c1"># Varibale changes in run of graph
 </span>  <span class="k">class</span> <span class="nc">Variable</span><span class="p">():</span>
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">initial_value</span>
-    <span class="n">_default_graph</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-  <span class="o">............</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">initial_value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">initial_value</span>
+    <span class="n">_default_graph</span><span class="p">.</span><span class="n">variables</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
+  <span class="p">.........</span><span class="bp">...</span>
 
   <span class="c1"># Visit and compute graph on topolgical order DFS.
 </span>  <span class="k">def</span> <span class="nf">topology_sort</span><span class="p">(</span><span class="n">operation</span><span class="p">):</span>
     <span class="n">ordering</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">visited_nodes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">visited_nodes</span> <span class="o">=</span> <span class="nf">set</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">recursive_helper</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
-      <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Operation</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">input_nodes</span><span class="p">:</span>
+      <span class="k">if</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Operation</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">node</span><span class="p">.</span><span class="n">input_nodes</span><span class="p">:</span>
           <span class="k">if</span> <span class="n">input_node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited_nodes</span><span class="p">:</span>
-            <span class="n">recursive_helper</span><span class="p">(</span><span class="n">input_node</span><span class="p">)</span>
+            <span class="nf">recursive_helper</span><span class="p">(</span><span class="n">input_node</span><span class="p">)</span>
 
-      <span class="n">visited_nodes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-      <span class="n">ordering</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+      <span class="n">visited_nodes</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+      <span class="n">ordering</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
     <span class="c1"># start recursive depth-first search
-</span>    <span class="n">recursive_helper</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+</span>    <span class="nf">recursive_helper</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ordering</span>
 
-  <span class="o">.................</span>
+  <span class="p">..............</span><span class="bp">...</span>
   <span class="k">class</span> <span class="nc">Session</span><span class="p">():</span>
-  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{}):</span>
-    <span class="n">nodes_sorted</span> <span class="o">=</span> <span class="n">topology_sort</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">nodes_sorted</span> <span class="o">=</span> <span class="nf">topology_sort</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes_sorted</span><span class="p">:</span>
-      <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Placeholder</span><span class="p">:</span>
-        <span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">feed_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
-      <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Variable</span> <span class="ow">or</span> <span class="nb">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Constant</span><span class="p">:</span>
-        <span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">value</span>
+      <span class="k">if</span> <span class="nf">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Placeholder</span><span class="p">:</span>
+        <span class="n">node</span><span class="p">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">feed_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+      <span class="k">elif</span> <span class="nf">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Variable</span> <span class="ow">or</span> <span class="nf">type</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="n">Constant</span><span class="p">:</span>
+        <span class="n">node</span><span class="p">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="n">value</span>
       <span class="k">else</span><span class="p">:</span>
-        <span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">input_nodes</span><span class="p">]</span>
-        <span class="n">node</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">.</span><span class="n">output</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">node</span><span class="p">.</span><span class="n">input_nodes</span><span class="p">]</span>
+        <span class="n">node</span><span class="p">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">operation</span><span class="o">.</span><span class="n">output</span></code></pre></figure>
+    <span class="k">return</span> <span class="n">operation</span><span class="p">.</span><span class="n">output</span></code></pre></figure>
 
 <h3 id="important-function-used-in-andrews-ng-course">Important Function used in Andrews NG Course.</h3>
 <ul>
@@ -453,9 +453,9 @@ https://medium.com/@d3lm/understand-tensorflow-by-mimicking-its-api-from-scratch
 </ul>
 
 <h3 id="learning-on-mnist">Learning on MNIST</h3>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">mnist</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mnist</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">mnist</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">mnist</span>
 
-<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="p">.</span><span class="nf">load_data</span><span class="p">()</span>
 <span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">=</span> <span class="n">x_train</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">/</span> <span class="mf">255.0</span></code></pre></figure>
 
 <footer>

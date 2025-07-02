@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Machine Learning Python Libraries">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Machine-Learning-Python-Libraries/">
+    <meta property="og:url" content="/Machine-Learning-Python-Libraries/">
     <meta property="og:title" content="Machine Learning Python Libraries">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,10 +31,10 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Machine Learning Python Libraries"/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://abyte.stream/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
     <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Machine-Learning-Python-Libraries.html">
+        <link rel="amphtml" href="/amp/Machine-Learning-Python-Libraries.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -60,9 +60,9 @@
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="">
 
-    <link rel="stylesheet" href="https://abyte.stream/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Machine-Learning-Python-Libraries/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="/Machine-Learning-Python-Libraries/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
@@ -83,7 +83,7 @@
 
         <header class="bar-header">
     <h2 class="logo">
-        <a href="https://abyte.stream/"></a>
+        <a href="/"></a>
     </h2>
 </header>
 <div class="search-wrapper">
@@ -104,17 +104,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -163,20 +163,20 @@
 <h1 id="numpy">Numpy</h1>
 <h2 id="numpy-array">Numpy array</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
   <span class="c1"># a = np.array([1, 2], dtype=np.int64) define datatype manually
-</span>  <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># Prints "&lt;class 'numpy.ndarray'&gt;"
-</span>  <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># Prints "(3,)"
+</span>  <span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># Prints "&lt;class 'numpy.ndarray'&gt;"
+</span>  <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># Prints "(3,)"
 </span>  <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Change an element of the array
-</span>  <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># Prints "[5, 2, 3]"
-</span>  <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>    <span class="c1"># Create a rank 2 array
-</span>  <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># Prints "(2, 3)"
+</span>  <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># Prints "[5, 2, 3]"
+</span>  <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>    <span class="c1"># Create a rank 2 array
+</span>  <span class="nf">print</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># Prints "(2, 3)"
 </span>
   <span class="c1"># initialize with zeros, ones, any other number by np.full((2,2), 7)
-</span>  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [[ 0.  0.][ 0.  0.]]
+</span>  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [[ 0.  0.][ 0.  0.]]
 </span>  <span class="c1"># eye for diagonal filled with given number and others zero.
-</span>  <span class="n">a</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># [[ 1.  0.] [ 0.  1.]]
+</span>  <span class="n">a</span> <span class="o">=</span>  <span class="n">np</span><span class="p">.</span><span class="nf">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># [[ 1.  0.] [ 0.  1.]]
 </span>
   <span class="c1"># Slicing
 </span>  <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="c1"># second row and all column. It will be 1 D, rank 1
@@ -189,49 +189,49 @@
 </span>  <span class="c1"># a[bool_idx] and  a[a &gt; 2] will print 1D array of all value matching the criteria.
 </span>
   <span class="c1"># array maths
-</span>  <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>  <span class="c1"># same as above, all other operator are like this.
+</span>  <span class="nf">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>  <span class="c1"># same as above, all other operator are like this.
 </span>
   <span class="c1"># matrix multiplication
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span>  <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 
   <span class="c1"># Generate array
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># will start form 10 upto 20 step by 2.
+</span>  <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># will start form 10 upto 20 step by 2.
 </span>
   <span class="c1"># reshape array
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</span>  <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">).</span><span class="nf">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 
   <span class="c1"># Flat, flatten, ravel
-</span>  <span class="n">a</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span> <span class="o">=</span> <span class="s">'F'</span><span class="p">)</span>
+</span>  <span class="n">a</span><span class="p">.</span><span class="nf">flatten</span><span class="p">(</span><span class="n">order</span> <span class="o">=</span> <span class="sh">'</span><span class="s">F</span><span class="sh">'</span><span class="p">)</span>
 
   <span class="c1"># Sum
-</span>  <span class="n">a</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span> <span class="c1"># sums up all element
-</span>  <span class="n">a</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="o">..</span><span class="p">)))</span> <span class="c1"># sum over i j .. axis
+</span>  <span class="n">a</span><span class="p">.</span><span class="nf">sum</span><span class="p">()</span> <span class="c1"># sums up all element
+</span>  <span class="n">a</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,..)))</span> <span class="c1"># sum over i j .. axis
 </span>
 
   <span class="c1"># get Diagonal
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
-  <span class="n">np</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span>  <span class="n">np</span><span class="p">.</span><span class="nf">diagonal</span><span class="p">()</span>
+  <span class="n">np</span><span class="p">.</span><span class="nf">diagonal</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
   
   <span class="c1"># Sum over principal diagonal or trace
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span>
+</span>  <span class="n">np</span><span class="p">.</span><span class="nf">trace</span><span class="p">()</span>
 
   <span class="c1"># using random
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span>  <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
   
   <span class="c1">#Generate 3 random integers b/w 1 and 10
-</span>  <span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</span>  <span class="nf">print</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 
   <span class="c1"># get random from normal distribution
-</span>  <span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span></code></pre></figure>
+</span>  <span class="nf">print</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">normal</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span></code></pre></figure>
 
 <ul>
   <li>
     <p>Numpy gives a class which helps to create homogeneous structure, you can say numpy defined datatypes. Here is signature, need not to remember.
-<code class="highlight language-python" data-lang="python"><span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">align</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s">'age'</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">10</span><span class="p">,),(</span><span class="mi">20</span><span class="p">,),(</span><span class="mi">30</span><span class="p">,)],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">dt</span><span class="p">)</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s">'age'</span><span class="p">)</span> <span class="c1"># can sort by custom defined objects</span></code></p>
+<code class="highlight language-python" data-lang="python"><span class="n">numpy</span><span class="p">.</span><span class="nf">dtype</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">align</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">dtype</span><span class="p">([(</span><span class="sh">'</span><span class="s">age</span><span class="sh">'</span><span class="p">,</span><span class="n">np</span><span class="p">.</span><span class="n">int8</span><span class="p">)])</span> 
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([(</span><span class="mi">10</span><span class="p">,),(</span><span class="mi">20</span><span class="p">,),(</span><span class="mi">30</span><span class="p">,)],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">dt</span><span class="p">)</span> 
+<span class="n">np</span><span class="p">.</span><span class="nf">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="sh">'</span><span class="s">age</span><span class="sh">'</span><span class="p">)</span> <span class="c1"># can sort by custom defined objects</span></code></p>
   </li>
   <li>
     <p>A closure look to array.
@@ -244,37 +244,37 @@
   </li>
   <li>
     <p>Iterate ove array
-<code class="highlight language-python" data-lang="python"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s">'F'</span><span class="p">,</span><span class="n">op_flags</span> <span class="o">=</span> <span class="p">[</span><span class="s">'readwrite'</span><span class="p">]):</span>  <span class="c1"># default order is C, OP flags defaults to read.
+<code class="highlight language-python" data-lang="python"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="nf">nditer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="sh">'</span><span class="s">F</span><span class="sh">'</span><span class="p">,</span><span class="n">op_flags</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">readwrite</span><span class="sh">'</span><span class="p">]):</span>  <span class="c1"># default order is C, OP flags defaults to read.
 </span>   <span class="k">print</span> <span class="n">x</span><span class="p">,</span></code></p>
   </li>
 </ul>
 
 <p><span class="c1"># broadcasted iteration of vector and matrix
-</span><span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">]):</span> <span class="c1"># x(3,4) and y is(1,3) or y(3)
-</span>   <span class="k">print</span> <span class="s">”</span><span class="si">%</span><span class="s">d:</span><span class="si">%</span><span class="s">d”</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span>&lt;/code&gt;</p>
+</span><span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">np</span><span class="p">.</span><span class="nf">nditer</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">]):</span> <span class="c1"># x(3,4) and y is(1,3) or y(3)
+</span>   <span class="k">print</span> <span class="sh">”</span><span class="s">%d:%d</span><span class="sh">”</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span>&lt;/code&gt;</p>
 
 <h2 id="numpy-linear-algebra">Numpy linear algebra</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-  <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> 
-  <span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">result</span><span class="p">)</span> <span class="c1"># matrix multiplication
-</span>  <span class="n">vdot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1">#element vise
-</span>  <span class="n">inner</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># u&lt;sup&gt;T&lt;/sup&gt;
-</span>  <span class="n">outer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># uv&lt;sup&gt;T&lt;/sup&gt;
-</span>  <span class="n">pinv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># psudo inverse
-</span>  <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># true inverse
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">#eign value
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="nb">ord</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">])</span> <span class="c1"># 1,2,p,infinity
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_rank</span><span class="p">(</span><span class="n">M</span><span class="p">[,</span> <span class="n">tol</span><span class="p">,</span> <span class="n">hermitian</span><span class="p">])</span>
-  <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># solve for x where ax=b
-</span>  <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">tensorsolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># solve for x where ax=b, in n dimension</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">).</span><span class="nf">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">).</span><span class="nf">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> 
+  <span class="nf">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">result</span><span class="p">)</span> <span class="c1"># matrix multiplication
+</span>  <span class="nf">vdot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1">#element vise
+</span>  <span class="nf">inner</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># u&lt;sup&gt;T&lt;/sup&gt;
+</span>  <span class="nf">outer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># uv&lt;sup&gt;T&lt;/sup&gt;
+</span>  <span class="nf">pinv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># psudo inverse
+</span>  <span class="nf">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># true inverse
+</span>  <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="nf">eig</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">#eign value
+</span>  <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="nf">norm</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="nb">ord</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">])</span> <span class="c1"># 1,2,p,infinity
+</span>  <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="nf">matrix_rank</span><span class="p">(</span><span class="n">M</span><span class="p">[,</span> <span class="n">tol</span><span class="p">,</span> <span class="n">hermitian</span><span class="p">])</span>
+  <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="nf">solve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># solve for x where ax=b
+</span>  <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="nf">tensorsolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># solve for x where ax=b, in n dimension</span></code></pre></figure>
 
 <p><strong>Eign vector and value</strong> of Matrix is arbitrary λ and v for a matrix A. which specifies ratio of vector dimensions and a magnitude respectively.  Eign vector ratio sum need not to be 1 but just to give better picture they are scaled to sum 1.</p>
 
 <p><strong>Pseduo inverse</strong> - Sometime A<sup>-1</sup> is not defined as |A| is 0. So we calculate X which is very close to A<sup>-1</sup>.
-<script type="math/tex">A^{-1}=I, AA^{-1}-I = 0, AX-I \text{ is close to 0}</script></p>
+\(A^{-1}=I, AA^{-1}-I = 0, AX-I \text{ is close to 0}\)</p>
 
-<p><strong>Harmition Matrix</strong> - <script type="math/tex">A_{ij} = \bar A_{ij}</script>. Conjugate matrix of complex number and transposed.</p>
+<p><strong>Harmition Matrix</strong> - \(A_{ij} = \bar A_{ij}\). Conjugate matrix of complex number and transposed.</p>
 
 <p><strong>Echelon Matrix</strong> - Matrix starts with 1 and every new row start 1 column after.</p>
 
@@ -292,114 +292,114 @@
 
 <h2 id="pandas">Pandas</h2>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 
 <span class="c1"># Types series and dataframe.
-</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
-<span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">600</span><span class="p">]],</span><span class="n">columns</span><span class="o">=</span><span class="p">[],</span><span class="n">index</span><span class="o">=</span><span class="p">[])</span>
+</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">([[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">600</span><span class="p">]],</span><span class="n">columns</span><span class="o">=</span><span class="p">[],</span><span class="n">index</span><span class="o">=</span><span class="p">[])</span>
 
 <span class="c1"># Read Data from file.
-</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'xyz.csv'</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s">';'</span><span class="p">)</span> <span class="c1"># read csv
-</span><span class="n">xlsx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="s">'file.xls'</span><span class="p">)</span> <span class="c1"># read all sheets in excel
-</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">xlsx</span><span class="p">,</span>  <span class="s">'Sheet1'</span><span class="p">)</span> <span class="c1"># read sheet in excel
+</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">'</span><span class="s">xyz.csv</span><span class="sh">'</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="sh">'</span><span class="s">;</span><span class="sh">'</span><span class="p">)</span> <span class="c1"># read csv
+</span><span class="n">xlsx</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">ExcelFile</span><span class="p">(</span><span class="sh">'</span><span class="s">file.xls</span><span class="sh">'</span><span class="p">)</span> <span class="c1"># read all sheets in excel
+</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_excel</span><span class="p">(</span><span class="n">xlsx</span><span class="p">,</span>  <span class="sh">'</span><span class="s">Sheet1</span><span class="sh">'</span><span class="p">)</span> <span class="c1"># read sheet in excel
 </span>
 <span class="c1"># Read from SQL
-</span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
-<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s">'sqlite:///:memory:'</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">my_table</span><span class="p">;,</span> <span class="n">engine</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql_table</span><span class="p">(</span><span class="s">'my_table'</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">my_table</span><span class="p">;</span><span class="s">', engine)</span><span class="err">
-</span><span class="s">xyz.to_sql('</span><span class="n">myDf</span><span class="s">', engine)</span><span class="err">
+</span><span class="kn">from</span> <span class="n">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="nf">create_engine</span><span class="p">(</span><span class="sh">'</span><span class="s">sqlite:///:memory:</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">pd</span><span class="p">.</span><span class="nf">read_sql</span><span class="p">(</span><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">my_table</span><span class="p">;,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">pd</span><span class="p">.</span><span class="nf">read_sql_table</span><span class="p">(</span><span class="sh">'</span><span class="s">my_table</span><span class="sh">'</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">pd</span><span class="p">.</span><span class="nf">read_sql_query</span><span class="p">(</span><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">my_table</span><span class="p">;</span><span class="sh">'</span><span class="s">, engine)
+xyz.to_sql(</span><span class="sh">'</span><span class="n">myDf</span><span class="sh">'</span><span class="s">, engine)
 
-</span><span class="s"># provide customer headers and index name</span><span class="err">
-</span><span class="s">xyz  = pd.read_csv('</span><span class="n">xyz</span><span class="o">.</span><span class="n">csv</span><span class="s">', delimiter='</span><span class="p">;</span><span class="s">', names = ['</span><span class="n">firstname</span><span class="s">', '</span><span class="n">lastname</span><span class="s">', '</span><span class="n">country</span><span class="s">', '</span><span class="n">user_id</span><span class="s">', '</span><span class="n">source</span><span class="s">', '</span><span class="n">topic</span><span class="s">'])</span><span class="err">
+# provide customer headers and index name
+xyz  = pd.read_csv(</span><span class="sh">'</span><span class="n">xyz</span><span class="p">.</span><span class="n">csv</span><span class="sh">'</span><span class="s">, delimiter=</span><span class="sh">'</span><span class="p">;</span><span class="sh">'</span><span class="s">, names = [</span><span class="sh">'</span><span class="n">firstname</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="n">lastname</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="n">country</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="n">user_id</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="n">source</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="n">topic</span><span class="sh">'</span><span class="s">])
 
-</span><span class="s"># head, tail, random</span><span class="err">
-</span><span class="s">xyz.head()</span><span class="err">
-</span><span class="s">xyz.tail()</span><span class="err">
-</span><span class="s">xyz.random(5)</span><span class="err">
+# head, tail, random
+xyz.head()
+xyz.tail()
+xyz.random(5)
 
-</span><span class="s"># Get the data</span><span class="err">
-</span><span class="s"># there are three ways, [] - can get only columns then rows by using again[], assigning value to it doesn'</span><span class="n">t</span> <span class="n">work</span> <span class="n">well</span> <span class="k">as</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">copied</span> <span class="n">data</span><span class="p">,</span> <span class="o">.</span><span class="n">loc</span> <span class="o">-</span> <span class="n">gets</span> <span class="n">by</span> <span class="n">label</span> <span class="n">of</span> <span class="n">header</span> <span class="ow">and</span> <span class="n">rows</span><span class="p">,</span> <span class="o">.</span><span class="n">iloc</span> <span class="o">-</span> <span class="n">get</span> <span class="n">by</span> <span class="n">index</span> <span class="n">of</span> <span class="n">row</span> <span class="ow">and</span> <span class="n">columns</span><span class="p">,</span><span class="o">.</span><span class="n">ix</span> <span class="o">-</span> <span class="n">deperecatd</span> <span class="n">can</span> <span class="n">do</span> <span class="n">both</span> <span class="o">.</span><span class="n">loc</span> <span class="ow">and</span> <span class="o">.</span><span class="n">iloc</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">iloc</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">iat</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># get row=0,column=0 value
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">loc</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span>  <span class="p">[</span><span class="s">'Country'</span><span class="p">])</span> <span class="c1"># by label
-</span><span class="n">xyz</span><span class="p">[</span>\<span class="p">[</span><span class="s">'firstname'</span><span class="p">,</span><span class="s">'lastname'</span><span class="p">]]</span> <span class="c1"># it will return dataframe
-</span><span class="n">xyz</span><span class="p">[</span><span class="s">'firstname'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">firstname</span> <span class="c1"># will return series
+# Get the data
+# there are three ways, [] - can get only columns then rows by using again[], assigning value to it doesn</span><span class="sh">'</span><span class="n">t</span> <span class="n">work</span> <span class="n">well</span> <span class="k">as</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">copied</span> <span class="n">data</span><span class="p">,</span> <span class="p">.</span><span class="n">loc</span> <span class="o">-</span> <span class="n">gets</span> <span class="n">by</span> <span class="n">label</span> <span class="n">of</span> <span class="n">header</span> <span class="ow">and</span> <span class="n">rows</span><span class="p">,</span> <span class="p">.</span><span class="n">iloc</span> <span class="o">-</span> <span class="n">get</span> <span class="n">by</span> <span class="n">index</span> <span class="n">of</span> <span class="n">row</span> <span class="ow">and</span> <span class="n">columns</span><span class="p">,.</span><span class="n">ix</span> <span class="o">-</span> <span class="n">deperecatd</span> <span class="n">can</span> <span class="n">do</span> <span class="n">both</span> <span class="p">.</span><span class="n">loc</span> <span class="ow">and</span> <span class="p">.</span><span class="n">iloc</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">iloc</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="n">xyz</span><span class="p">.</span><span class="nf">iat</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># get row=0,column=0 value
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">loc</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span>  <span class="p">[</span><span class="sh">'</span><span class="s">Country</span><span class="sh">'</span><span class="p">])</span> <span class="c1"># by label
+</span><span class="n">xyz</span><span class="p">[</span>\<span class="p">[</span><span class="sh">'</span><span class="s">firstname</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">lastname</span><span class="sh">'</span><span class="p">]]</span> <span class="c1"># it will return dataframe
+</span><span class="n">xyz</span><span class="p">[</span><span class="sh">'</span><span class="s">firstname</span><span class="sh">'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">xyz</span><span class="p">.</span><span class="n">firstname</span> <span class="c1"># will return series
 </span>
 
 <span class="c1"># filter data
-</span><span class="n">xyz</span><span class="p">[</span><span class="s">'firstname'</span><span class="o">=</span><span class="s">'abc'</span><span class="p">]</span>
-<span class="n">xyz</span><span class="p">[</span><span class="n">xyz</span><span class="p">[</span><span class="s">'col1'</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10</span> <span class="o">&amp;</span> <span class="n">xyz</span><span class="p">[</span><span class="s">'col2'</span><span class="p">]</span><span class="o">=</span><span class="s">'san'</span><span class="p">]</span>
+</span><span class="n">xyz</span><span class="p">[</span><span class="sh">'</span><span class="s">firstname</span><span class="sh">'</span><span class="o">=</span><span class="sh">'</span><span class="s">abc</span><span class="sh">'</span><span class="p">]</span>
+<span class="n">xyz</span><span class="p">[</span><span class="n">xyz</span><span class="p">[</span><span class="sh">'</span><span class="s">col1</span><span class="sh">'</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10</span> <span class="o">&amp;</span> <span class="n">xyz</span><span class="p">[</span><span class="sh">'</span><span class="s">col2</span><span class="sh">'</span><span class="p">]</span><span class="o">=</span><span class="sh">'</span><span class="s">san</span><span class="sh">'</span><span class="p">]</span>
 <span class="c1"># or with some condition ie starts with.
-</span><span class="n">condition</span> <span class="o">=</span>  <span class="n">xyz</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</span><span class="n">condition</span> <span class="o">=</span>  <span class="n">xyz</span><span class="p">.</span><span class="n">firstname</span><span class="p">.</span><span class="nf">startswith</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">xyz</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
 
 <span class="c1"># Remove data.
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">])</span> <span class="o">//</span> <span class="k">if</span> <span class="n">indexes</span> <span class="n">has</span> <span class="n">name</span><span class="p">,</span> <span class="n">drop</span> <span class="n">based</span> <span class="n">on</span> <span class="n">indexes</span><span class="o">.</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">xyz</span><span class="o">.</span><span class="n">index</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]))</span> <span class="o">//</span> <span class="n">drop</span> <span class="n">row</span> <span class="k">with</span> <span class="n">index</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">from</span> <span class="n">the</span> <span class="n">last</span><span class="o">.</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">remove</span> <span class="n">columns</span> <span class="k">from</span> <span class="n">dataframe</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">col1</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">//</span><span class="n">find</span> <span class="ow">and</span> <span class="n">drop</span> <span class="n">by</span> <span class="n">index</span><span class="o">.</span>
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">drop</span><span class="p">([</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">])</span> <span class="o">//</span> <span class="k">if</span> <span class="n">indexes</span> <span class="n">has</span> <span class="n">name</span><span class="p">,</span> <span class="n">drop</span> <span class="n">based</span> <span class="n">on</span> <span class="n">indexes</span><span class="p">.</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="n">xyz</span><span class="p">.</span><span class="nf">index</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]))</span> <span class="o">//</span> <span class="n">drop</span> <span class="n">row</span> <span class="k">with</span> <span class="n">index</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">from</span> <span class="n">the</span> <span class="n">last</span><span class="p">.</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">drop</span><span class="p">([</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">remove</span> <span class="n">columns</span> <span class="k">from</span> <span class="n">dataframe</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="n">col1</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">].</span><span class="n">index</span><span class="p">)</span> <span class="o">//</span><span class="n">find</span> <span class="ow">and</span> <span class="n">drop</span> <span class="n">by</span> <span class="n">index</span><span class="p">.</span>
 
 
 <span class="c1">#Handle null or na
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">@</span> <span class="n">dropping</span> <span class="n">the</span> <span class="n">row</span> <span class="ow">or</span> <span class="n">column</span> <span class="n">who</span> <span class="n">have</span> <span class="n">null</span> <span class="n">values</span><span class="o">.</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span> <span class="c1"># get count of null records.
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">meanofxyz</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">dropna</span><span class="p">()</span> <span class="ow">or</span> <span class="n">xyz</span><span class="p">.</span><span class="nf">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">@</span> <span class="n">dropping</span> <span class="n">the</span> <span class="n">row</span> <span class="ow">or</span> <span class="n">column</span> <span class="n">who</span> <span class="n">have</span> <span class="n">null</span> <span class="n">values</span><span class="p">.</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">isnull</span><span class="p">().</span><span class="nf">sum</span><span class="p">()</span> <span class="c1"># get count of null records.
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">fillna</span><span class="p">(</span><span class="n">meanofxyz</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 
 <span class="c1"># Aggregate
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="c1"># will print count of non na of each column
-</span><span class="n">xyz</span><span class="o">.</span><span class="nb">sum</span><span class="p">(),</span> <span class="nb">max</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span>
-<span class="n">xyz</span><span class="p">[</span><span class="n">col1</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="c1"># does group by on col1 and counts the frequency
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">count</span><span class="p">()</span> <span class="c1"># will print count of non na of each column
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">sum</span><span class="p">(),</span> <span class="nb">max</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">median</span>
+<span class="n">xyz</span><span class="p">[</span><span class="n">col1</span><span class="p">].</span><span class="nf">value_counts</span><span class="p">()</span> <span class="c1"># does group by on col1 and counts the frequency
 </span>
 <span class="c1"># custom function commulative over column
-</span><span class="n">somfunction</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="nb">min</span><span class="p">()</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="n">somfunction</span><span class="p">)</span>
+</span><span class="n">somfunction</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="nf">max</span><span class="p">()</span><span class="o">-</span><span class="n">x</span><span class="p">.</span><span class="nf">min</span><span class="p">()</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">applymap</span><span class="p">(</span><span class="n">somfunction</span><span class="p">)</span>
 
 <span class="c1"># Series map function -same as applymap
-</span><span class="n">xyz</span><span class="p">[</span><span class="s">'col1'</span><span class="p">]</span><span class="o">.</span><span class="nb">map</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+</span><span class="n">xyz</span><span class="p">[</span><span class="sh">'</span><span class="s">col1</span><span class="sh">'</span><span class="p">].</span><span class="nf">map</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
 
 <span class="c1"># custom function applied on each element such change format of data
-</span><span class="nb">format</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">'</span><span class="si">%.2</span><span class="s">f'</span> <span class="o">%</span> <span class="n">x</span>
-<span class="n">xyz</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+</span><span class="nb">format</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sh">'</span><span class="s">%.2f</span><span class="sh">'</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">apply</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
 
 <span class="c1">#Group By - Group on some column and aggregate on others
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'animal'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">groupby</span><span class="p">(</span><span class="sh">'</span><span class="s">animal</span><span class="sh">'</span><span class="p">).</span><span class="nf">mean</span><span class="p">()</span>
 
 <span class="c1"># Joins. By default panda find join key to join by matching name if not you have to specify separately. Also, you can choose join strategy inner, outer,left, right. Let's say zoo has animals and other columns and zoo_eats has animal and what animal eats.
-</span><span class="n">zoo</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">zoo_eats</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s">'left'</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s">'animal'</span><span class="p">)</span>
+</span><span class="n">zoo</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">zoo_eats</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="sh">'</span><span class="s">left</span><span class="sh">'</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="sh">'</span><span class="s">animal</span><span class="sh">'</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="sh">'</span><span class="s">animal</span><span class="sh">'</span><span class="p">)</span>
 
 <span class="c1"># fill missing
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">'unknown'</span><span class="p">)</span>
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">fillna</span><span class="p">(</span><span class="sh">'</span><span class="s">unknown</span><span class="sh">'</span><span class="p">)</span>
 
 <span class="c1"># Sorting.
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">col1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">xyz</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s">'col1'</span><span class="p">,</span> <span class="s">'col2'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">sort_values</span><span class="p">(</span><span class="n">col1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">xyz</span><span class="p">.</span><span class="nf">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">col1</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">col2</span><span class="sh">'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
 
 <span class="c1">#reset index after sort sequence is changed.
-</span><span class="n">xyz</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">xyz</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span> <span class="c1"># remove old index column.</span></code></pre></figure>
+</span><span class="n">xyz</span><span class="p">.</span><span class="nf">reset_index</span><span class="p">()</span>
+<span class="n">xyz</span><span class="p">.</span><span class="nf">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span> <span class="c1"># remove old index column.</span></code></pre></figure>
 
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Machine-Learning-Python-Libraries/%20via%20&#64;&hashtags=Machine Learning,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Machine-Learning-Python-Libraries/%20via%20&#64;&hashtags=Machine Learning,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Machine-Learning-Python-Libraries/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Machine-Learning-Python-Libraries/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Machine-Learning-Python-Libraries/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Machine-Learning-Python-Libraries/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Machine-Learning-Python-Libraries/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Machine-Learning-Python-Libraries/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">
@@ -417,7 +417,7 @@
             <footer>
     <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 </footer>
-<script src="https://abyte.stream/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
             <div id="fb-root"></div>
         </section>
     </body>

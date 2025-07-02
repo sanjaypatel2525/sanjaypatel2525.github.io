@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Machine Learning Neural Network.">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Machine-Learning-Neural-Network/">
+    <meta property="og:url" content="/Machine-Learning-Neural-Network/">
     <meta property="og:title" content="Machine Learning Neural Network.">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,10 +31,10 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Machine Learning Neural Network."/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://abyte.stream/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
     <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Machine-Learning-Neural-Network.html">
+        <link rel="amphtml" href="/amp/Machine-Learning-Neural-Network.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -60,9 +60,9 @@
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="">
 
-    <link rel="stylesheet" href="https://abyte.stream/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Machine-Learning-Neural-Network/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="/Machine-Learning-Neural-Network/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
@@ -83,7 +83,7 @@
 
         <header class="bar-header">
     <h2 class="logo">
-        <a href="https://abyte.stream/"></a>
+        <a href="/"></a>
     </h2>
 </header>
 <div class="search-wrapper">
@@ -104,17 +104,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -160,49 +160,48 @@ Let think of example, what number is there in below image. It is blurred not acc
 
 <p><strong>Optimization Algorithms</strong>- //TODO</p>
 <h2 id="forward-propagation">Forward propagation</h2>
-<p>Let say we have n layers and let’s pick two layer, each layer will have some activation function, Superscript number is layer number and subscript number is neuron number on that layer from top to bottom, <script type="math/tex">a_k^n</script> will n<sup>th</sup>  layer and k<sup>th</sup> node/neural at that level.</p>
+<p>Let say we have n layers and let’s pick two layer, each layer will have some activation function, Superscript number is layer number and subscript number is neuron number on that layer from top to bottom, \(a_k^n\) will n<sup>th</sup>  layer and k<sup>th</sup> node/neural at that level.</p>
 <ul>
-  <li><script type="math/tex">w^L</script> is weight at level L</li>
-  <li><script type="math/tex">b^L</script> is bias at level L</li>
-  <li><script type="math/tex">a^{L-1}</script> is X or input for level L and output of level L-1 which is activation function applied on z<sup>L</sup>.</li>
+  <li>\(w^L\) is weight at level L</li>
+  <li>\(b^L\) is bias at level L</li>
+  <li>\(a^{L-1}\) is X or input for level L and output of level L-1 which is activation function applied on z<sup>L</sup>.</li>
   <li>
-    <script type="math/tex; mode=display">z^L = w^la^{L-1}+b^L</script>
+\[z^L = w^la^{L-1}+b^L\]
   </li>
-  <li>C is cost function. <script type="math/tex">C_0=(a^L-y)^2</script></li>
+  <li>C is cost function. \(C_0=(a^L-y)^2\)</li>
   <li>y is expected output</li>
-  <li><script type="math/tex">\sigma'</script> is derivative of activation function wrt z<sup>L</sup></li>
+  <li>\(\sigma'\) is derivative of activation function wrt z<sup>L</sup></li>
 </ul>
 
-<p>So the formula to derive <script type="math/tex">a_k^n</script> will be</p>
+<p>So the formula to derive \(a_k^n\) will be</p>
 
-<script type="math/tex; mode=display">a^1=\sigma(Wa^0+b)\\
-\begin{bmatrix}a_1^n\\a_2^n\\..\\a_k^n\end{bmatrix}= \sigma\left(\begin{bmatrix}W\end{bmatrix}^{k_{n-1}\times k_{n}}\begin{bmatrix}a_1^{n-1}\\a_2^{n-1}\\..\\a_k^{n-1}\end{bmatrix}+\begin{bmatrix}B\end{bmatrix}^{{k_n}\times 1}\right)</script>
+\[a^1=\sigma(Wa^0+b)\\
+\begin{bmatrix}a_1^n\\a_2^n\\..\\a_k^n\end{bmatrix}= \sigma\left(\begin{bmatrix}W\end{bmatrix}^{k_{n-1}\times k_{n}}\begin{bmatrix}a_1^{n-1}\\a_2^{n-1}\\..\\a_k^{n-1}\end{bmatrix}+\begin{bmatrix}B\end{bmatrix}^{{k_n}\times 1}\right)\]
 
 <h2 id="back-propagation">Back propagation</h2>
 <p>Goal is to adjust the weights so that each overall cost is minimized.
 Example of 1 node at each level.</p>
 
 <p><img src="/assets/2019-06-12-Machine-Learning-Basic-Maths20.JPG" alt="" class="lazyload" />
-Calculate change in C wrt to W<sub>L</sub>. <script type="math/tex">\frac{\delta C_0}{\delta w^L}=\frac{\delta z^L}{\delta w^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
-= a^{(L-1)}.\sigma'(z^L).2(a^L-y)</script>
-For k number of training examples. <script type="math/tex">C_1,C_2..C_k</script> will be the cost function and nudging L level weight w<sub>L</sub> will be <script type="math/tex">\frac{\delta C}{\delta w^L}=\frac{1}{n}\sum_{k=0}^{n-1}\frac{\delta C_k}{\delta w^L}</script>
+Calculate change in C wrt to W<sub>L</sub>. \(\frac{\delta C_0}{\delta w^L}=\frac{\delta z^L}{\delta w^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
+= a^{(L-1)}.\sigma'(z^L).2(a^L-y)\)
+For k number of training examples. \(C_1,C_2..C_k\) will be the cost function and nudging L level weight w<sub>L</sub> will be \(\frac{\delta C}{\delta w^L}=\frac{1}{n}\sum_{k=0}^{n-1}\frac{\delta C_k}{\delta w^L}\)
 We saw weight now we need talk about changing b<sup>L</sup> and a<sup>L-1</sup>
-<script type="math/tex">% <![CDATA[
-\nabla C = \begin{bmatrix}\frac{\delta C}{\delta w^1}&\frac{\delta C}{\delta a^{b^1}}&\frac{\delta C}{\delta a^{L-1}}\\
-\frac{\delta C}{\delta w^2}&\frac{\delta C}{\delta a^{b^2}}&\frac{\delta C}{\delta a^{L-2}}\\
-...&...&...\\
-\frac{\delta C}{\delta w^L}&\frac{\delta C}{\delta a^{b^L}}&\frac{\delta C}{\delta a^0}
-\end{bmatrix} %]]></script>
-So C wrt to <script type="math/tex">b^L</script> and <script type="math/tex">a^{L-1}</script> is as follows.
-<script type="math/tex">\frac{\delta C_0}{\delta b^L}=\frac{\delta z^L}{\delta b^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
+\(\nabla C = \begin{bmatrix}\frac{\delta C}{\delta w^1}&amp;\frac{\delta C}{\delta a^{b^1}}&amp;\frac{\delta C}{\delta a^{L-1}}\\
+\frac{\delta C}{\delta w^2}&amp;\frac{\delta C}{\delta a^{b^2}}&amp;\frac{\delta C}{\delta a^{L-2}}\\
+...&amp;...&amp;...\\
+\frac{\delta C}{\delta w^L}&amp;\frac{\delta C}{\delta a^{b^L}}&amp;\frac{\delta C}{\delta a^0}
+\end{bmatrix}\)
+So C wrt to \(b^L\) and \(a^{L-1}\) is as follows.
+\(\frac{\delta C_0}{\delta b^L}=\frac{\delta z^L}{\delta b^L}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
 = 1.\sigma'(z^L).2(a^L-y)\\\\
 \frac{\delta C_0}{\delta a^{L-1}}=\frac{\delta z^L}{\delta a^{L-1}}\frac{\delta a_L}{\delta z^L}\frac{\delta C_0}{\delta a^L}\\
-= w^L.\sigma'(z^L).2(a^L-y)</script>
-Now let take k node at L-1 level and j nodes at L level. At this level <script type="math/tex">\nabla C</script> changes at seems complex but it is not. 
-<script type="math/tex">\Delta C =\eta \nabla C</script> Where <script type="math/tex">\nabla c</script> is negative small change, gradient descend and <script type="math/tex">\eta</script> is learning rate or step size. Keeping too small will slow down and keeping big will overshoot. Later update w and b by these small changes.
+= w^L.\sigma'(z^L).2(a^L-y)\)
+Now let take k node at L-1 level and j nodes at L level. At this level \(\nabla C\) changes at seems complex but it is not. 
+\(\Delta C =\eta \nabla C\) Where \(\nabla c\) is negative small change, gradient descend and \(\eta\) is learning rate or step size. Keeping too small will slow down and keeping big will overshoot. Later update w and b by these small changes.
 <img src="/assets/2019-06-12-Machine-Learning-Basic-Maths21.JPG" alt="" class="lazyload" /></p>
 
-<p>Commutatively we can say <script type="math/tex">\delta_j^L=\frac{\delta C}{\delta z^l_j}</script>. If this value big that mean changes at this z will make big impact to lower down the C rather then other lower derivative.</p>
+<p>Commutatively we can say \(\delta_j^L=\frac{\delta C}{\delta z^l_j}\). If this value big that mean changes at this z will make big impact to lower down the C rather then other lower derivative.</p>
 
 <p><strong>stochastic gradient descent</strong> - If there are large training set, the learning might take time so we take a small set.</p>
 
@@ -210,33 +209,33 @@ Now let take k node at L-1 level and j nodes at L level. At this level <script t
 <p>There are few substantial activation function which we use most of the times, sigmoid, tanh(scaled sigmoid), relu, leaky ReLu. 
 <strong>Step</strong> - On of off, 0 or 1, decide based on threshold. This is not analog so turning off few neuron completely will make them passive which we don’t want.</p>
 
-<p><strong>Linear</strong> - Change in proportionate to w and <script type="math/tex">a^n</script>. If the all the layer have lennar function, then logically combined function will be linear and it will be dumb.</p>
+<p><strong>Linear</strong> - Change in proportionate to w and \(a^n\). If the all the layer have lennar function, then logically combined function will be linear and it will be dumb.</p>
 
-<p><strong>Sigmoid</strong> - <script type="math/tex">f(x)=\frac{1}{1+e^{-2x}}</script>. It fits the a from range <script type="math/tex">[-\infty,+\infty]</script> to [0,1]. Gradient is result hungry if it is in between [-2,2] beyond this gradient is very slow and stops learning.</p>
+<p><strong>Sigmoid</strong> - \(f(x)=\frac{1}{1+e^{-2x}}\). It fits the a from range \([-\infty,+\infty]\) to [0,1]. Gradient is result hungry if it is in between [-2,2] beyond this gradient is very slow and stops learning.</p>
 
-<p><strong>tanh</strong> - <script type="math/tex">tanh(x)= 2sigmoid-1</script>, scales to [-1,1] beyond it gradient is slow.</p>
+<p><strong>tanh</strong> - \(tanh(x)= 2sigmoid-1\), scales to [-1,1] beyond it gradient is slow.</p>
 
 <p><strong>ReLu</strong> - A(x) = max(0,x). Activation value Less then 0 will be 0. Makes calculation faster but makes half network passive as they are always off.</p>
 
-<p><strong>Leaky ReLu</strong> - Less then 0 is kept very small but not 0, y = 0.0x. Makes all nodes active. Solves ReLu problem. There other variant, <strong>ELU</strong>, less then 0 will be exponential <script type="math/tex">\alpha(e^z-1)</script></p>
+<p><strong>Leaky ReLu</strong> - Less then 0 is kept very small but not 0, y = 0.0x. Makes all nodes active. Solves ReLu problem. There other variant, <strong>ELU</strong>, less then 0 will be exponential \(\alpha(e^z-1)\)</p>
 
 <p>Thanks to 3Blue1Brown videos on neural network, makes visualization so easy.</p>
 <iframe width="420" height="315" src="https://www.youtube.com/watch?v=tIeHLnjs5U8" frameborder="0" allowfullscreen=""></iframe>
 
 <h3 id="increase-efficiency">Increase efficiency.</h3>
 <p><strong>Cross Entropy Function</strong> - (Not same as probability distribution cross entropy, do not get confused). In place quadratic cost function (y-a)<sup>2</sup> use cross entropy function to calculate change required for weigh and biases. Learning rate doesn’t slow down as quadratic cost function.
-<script type="math/tex">C=−1n∑x[ylna+(1−y)ln(1−a)]</script></p>
+\(C=−1n∑x[ylna+(1−y)ln(1−a)]\)</p>
 
 <p><strong>SoftMax and loglikelyhood</strong> - In place of 0 to 1 output probability on each output layer(sigmoid activation), if we say combined output layer probability should be 1(Softmax activation). Then the data is more comparable. Here cost function used is -log a, in case of output close to 1 less change is needed and in 0 more change is required.
- <script type="math/tex">\sum_j a_j^L=\frac{\sum_j e^{z_j^L}}{\sum_k e^{z_k^L}}\\
- C=-log\;a_y^L</script></p>
+ \(\sum_j a_j^L=\frac{\sum_j e^{z_j^L}}{\sum_k e^{z_k^L}}\\
+ C=-log\;a_y^L\)</p>
 
 <p><strong>overfitting or overtraining</strong> - the epoch from where you dont see much learning after that.</p>
 
 <p><strong>Bias &amp; Variance Tradeoff</strong> - Bias is difference between average predicted value to true value. High bias Pays very little attention to training set and over simplifies the model(<strong>underfitting</strong>). For ex. Model devices is linear function while the actual need was non linear function. Variance tells about the spread of the data. High variance over learn the training set and doesn’t generalize it (<strong>overfitting</strong>). It picks the outliers/noise and noise also in its knowledge which is overfiting of the data.  High parameter increase high variance and low parameter increase high bias, we have to trade off in selecting right parameter.
-<script type="math/tex">{\displaystyle \operatorname {E} {\Big [}{\big (}y-{\hat {f}}(x){\big )}^{2}{\Big ]}={\Big (}\operatorname {Bias} {\big [}{\hat {f}}(x){\big ]}{\Big )}^{2}+\operatorname {Var} {\big [}{\hat {f}}(x){\big ]}+\sigma ^{2}}\\
+\({\displaystyle \operatorname {E} {\Big [}{\big (}y-{\hat {f}}(x){\big )}^{2}{\Big ]}={\Big (}\operatorname {Bias} {\big [}{\hat {f}}(x){\big ]}{\Big )}^{2}+\operatorname {Var} {\big [}{\hat {f}}(x){\big ]}+\sigma ^{2}}\\
 =(f-E[\hat f])^2+Var[y]+Var[\hat y]\\
-=(f-E[\hat f])^2+E[\varepsilon^2]+E[(E[\hat f]-\hat f])^2]</script></p>
+=(f-E[\hat f])^2+E[\varepsilon^2]+E[(E[\hat f]-\hat f])^2]\)</p>
 
 <p><strong>Detect underfit and overfit</strong> - Divide training data in training and test data and use test data to get the accuracy of model. 
 <strong>Fixing underfit and overfit</strong></p>
@@ -249,8 +248,8 @@ Now let take k node at L-1 level and j nodes at L level. At this level <script t
   <li>Ensembling - Multiple model learn separately and combine them in the end to smooth it out. Bagging and boosting are example. Bagging start with complex model then smooths it out while boosting start with weak learner models and form a complex model.</li>
 </ul>
 
-<p><strong>Weight decay Regularization- L2 or Ridge Regularization</strong> - Add a extra term regularization term, <script type="math/tex">C=C_0+\frac{\lambda}{2n}\sum_ww^2\\
-\frac{\delta C}{\delta w} = \frac{\lambda}{n}w</script>. It helped in overcoming overfitting issue and increasing accuracy, also saved us from local minima.</p>
+<p><strong>Weight decay Regularization- L2 or Ridge Regularization</strong> - Add a extra term regularization term, \(C=C_0+\frac{\lambda}{2n}\sum_ww^2\\
+\frac{\delta C}{\delta w} = \frac{\lambda}{n}w\). It helped in overcoming overfitting issue and increasing accuracy, also saved us from local minima.</p>
 
 <p><strong>Weight decay Regularization-L1 or Lasso Regularization (LAD - Least Absolute deviation)</strong> -</p>
 
@@ -268,7 +267,7 @@ Now let take k node at L-1 level and j nodes at L level. At this level <script t
 
 <ul>
   <li>Increase in training data increases the accuracy. We can increase training data by skewing image, rotating image etc.</li>
-  <li>Initialize weight right, Normally we use normal/gaussian distribution in that case mean is 0 and SD is 1 but since these normally distributed weights will make z 0 and any change in weight will not impact cost hence learning will be very slow. Use <script type="math/tex">\frac{1}{\sqrt n}</script>.</li>
+  <li>Initialize weight right, Normally we use normal/gaussian distribution in that case mean is 0 and SD is 1 but since these normally distributed weights will make z 0 and any change in weight will not impact cost hence learning will be very slow. Use \(\frac{1}{\sqrt n}\).</li>
 </ul>
 
 <p><strong>Derive Hyper parameter fast</strong></p>
@@ -277,7 +276,7 @@ Now let take k node at L-1 level and j nodes at L level. At this level <script t
   <li>Start with simple network</li>
   <li>Take small batches.</li>
   <li>Adjust lambda in proportion to reduces batch size.</li>
-  <li><script type="math/tex">\eta</script>, start with big and small see where it starts oscillating, it should not overshoot.</li>
+  <li>\(\eta\), start with big and small see where it starts oscillating, it should not overshoot.</li>
   <li>Keep monitoring, stop early. no-improvement-in-ten etc.</li>
 </ul>
 
@@ -292,7 +291,7 @@ Vectorization takes advantage of SIMD (Single instruction Multiple data)</p>
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network5.JPG" alt="" class="lazyload" /></p>
 
 <ul>
-  <li>In NN input layer is not counted as layer, so we start from <script type="math/tex">a^[0]</script> which is input layer. If you see 3 layers including input and output, it will be called 2 layer NN.</li>
+  <li>In NN input layer is not counted as layer, so we start from \(a^[0]\) which is input layer. If you see 3 layers including input and output, it will be called 2 layer NN.</li>
 </ul>
 
 <p><strong>Multilayer neural network vectorized form</strong>
@@ -301,11 +300,10 @@ Vectorization takes advantage of SIMD (Single instruction Multiple data)</p>
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network8.JPG" alt="" class="lazyload" /></p>
 
 <p><strong>Derivative of activation function</strong>
-<script type="math/tex">% <![CDATA[
-sigmoid = g(z) = a \;then\; g'(z)= 1-a \\
+\(sigmoid = g(z) = a \;then\; g'(z)= 1-a \\
 tanh = g(z)=tanh(z) = a \;then\;g'(z) = 1-a^2\\
-relu = g(z)=max(0,z) = a \;then\;g'(z) = \begin{cases} 0\;when\;z<0\\1\;when\;z>0\end{cases}\\
-leaky relu = g(z)=max(0.01z,z) = a \;then\;g'(z) = \begin{cases} 0.01\;when\;z<0\\1\;when\;z>0\end{cases} %]]></script></p>
+relu = g(z)=max(0,z) = a \;then\;g'(z) = \begin{cases} 0\;when\;z&lt;0\\1\;when\;z&gt;0\end{cases}\\
+leaky relu = g(z)=max(0.01z,z) = a \;then\;g'(z) = \begin{cases} 0.01\;when\;z&lt;0\\1\;when\;z&gt;0\end{cases}\)</p>
 
 <p><img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network10.JPG" alt="" class="lazyload" /></p>
 
@@ -348,7 +346,7 @@ Based on number of input node distribute weight to sum up to 1, which make each 
 <p><strong>Grad check Do’s and Don’ts</strong></p>
 <ul>
   <li>Do it only once, do not do it each training iterations.</li>
-  <li>In case difference is big compare component wise, for ex <script type="math/tex">dW_L[i,j]</script> to  <script type="math/tex">dW_L[i,j]_{aprox}</script></li>
+  <li>In case difference is big compare component wise, for ex \(dW_L[i,j]\) to  \(dW_L[i,j]_{aprox}\)</li>
   <li>Doesn’t work with dropout.</li>
 </ul>
 
@@ -366,7 +364,7 @@ Based on number of input node distribute weight to sum up to 1, which make each 
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network19.JPG" alt="" class="lazyload" /></p>
 
 <p><strong>Bias Correction</strong> - In Exponential weighted average, initial average is biased as it starts from zero, to fix we use a different formula. 
-<script type="math/tex">v_{t+1} = \frac{v_t}{1-\beta^t}</script></p>
+\(v_{t+1} = \frac{v_t}{1-\beta^t}\)</p>
 
 <p><strong>Apply EWA to Gradient Descend</strong> - This somewhat resolves issue of noise due small batch size, also helps with the issue of overshooting with higher learning rate. 
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network20.JPG" alt="" class="lazyload" /></p>
@@ -384,7 +382,7 @@ epsilon (usually 1e-8)
 </ul>
 
 <p><strong>Learning rate decay</strong> - Once model start reaching to minimum vale the learning rate can be reduced so that it converges well. There are multiple formula’s to decay learning rate based on epoch. For ex. 
-<script type="math/tex">\alpha=\frac{1}{1+decay\_rate*epcoh\_num}</script></p>
+\(\alpha=\frac{1}{1+decay\_rate*epcoh\_num}\)</p>
 
 <h3 id="local-optima-problem">Local optima problem.</h3>
 <p>Multidimensional space local optima is normally not a problem as dimension increase the chances of reaching local minima are very low. For ex 20000 feature will have probability 1/20000. So it is actually a plateaus, the thing put back on horse to sit on. It will always have other directions which can still minimize.</p>
@@ -688,7 +686,7 @@ Here we have E(Combined embed vector) and θ(Softmax) to learn
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network82.JPG" alt="" class="lazyload" /></p>
 
 <h3 id="error-analysis">Error analysis</h3>
-<p>Who is at fault RNN or Beam window, you can find this out by comparing probability of p(y*) vs p(<script type="math/tex">\hat y</script>). 
+<p>Who is at fault RNN or Beam window, you can find this out by comparing probability of p(y*) vs p(\(\hat y\)). 
 <img src="/assets/2019-06-12-2020-06-12-Machine-Learning-Neural-Network83.JPG" alt="" class="lazyload" /></p>
 
 <h3 id="attention-model">Attention Model.</h3>
@@ -706,21 +704,21 @@ Trigger word are trained to give 1 only when the trigger word occurred.
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Machine-Learning-Neural-Network/%20via%20&#64;&hashtags=Machine Learning,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Machine-Learning-Neural-Network/%20via%20&#64;&hashtags=Machine Learning,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Machine-Learning-Neural-Network/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Machine-Learning-Neural-Network/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Machine-Learning-Neural-Network/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Machine-Learning-Neural-Network/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Machine-Learning-Neural-Network/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Machine-Learning-Neural-Network/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">
@@ -738,7 +736,7 @@ Trigger word are trained to give 1 only when the trigger word occurred.
             <footer>
     <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 </footer>
-<script src="https://abyte.stream/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
             <div id="fb-root"></div>
         </section>
     </body>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Javascript Object Oriented Function Prototype  Gotcha</title>
-    <link rel="canonical" href="https://abyte.stream/Javascript-Object-Function-Prototype-Gotcha/" />
+    <link rel="canonical" href="/Javascript-Object-Function-Prototype-Gotcha/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -186,10 +186,10 @@
     <span class="kd">var</span> <span class="nx">fullname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> W</span><span class="dl">'</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">"</span><span class="s2">Carol</span><span class="dl">"</span><span class="p">);</span>  <span class="c1">//probably wrong way to call but still works and 'this' is passed as window. </span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// print carol</span>
+<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="nc">Cat</span><span class="p">(</span><span class="dl">"</span><span class="s2">Carol</span><span class="dl">"</span><span class="p">);</span>  <span class="c1">//probably wrong way to call but still works and 'this' is passed as window. </span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// print carol</span>
 
-<span class="kd">var</span> <span class="nx">c2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">"</span><span class="s2">Karen</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// Here new object is created with Cat prototype. So a new 'this' is passed and set the values and assigns back to c2.</span>
+<span class="kd">var</span> <span class="nx">c2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Cat</span><span class="p">(</span><span class="dl">"</span><span class="s2">Karen</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// Here new object is created with Cat prototype. So a new 'this' is passed and set the values and assigns back to c2.</span>
 
 <span class="nx">Cat</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">===</span> <span class="nx">c1</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">;</span> <span class="c1">// prints true, they are same thing</span>
 <span class="k">typeof</span> <span class="nx">Cat</span><span class="p">;</span> <span class="c1">//give "function", We created Cat as a function</span>
@@ -206,20 +206,20 @@
 </ul>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// example - 5</span>
-<span class="kd">function</span> <span class="nx">Class</span> <span class="p">()</span> <span class="p">{}</span>
-<span class="nx">Class</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">calc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">Class</span> <span class="p">()</span> <span class="p">{}</span>
+<span class="nx">Class</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">calc</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">c</span> <span class="o">+</span> <span class="nx">d</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Class</span><span class="p">();</span>
-<span class="nx">c1</span><span class="p">.</span><span class="nx">calc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// prints 3</span>
+<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Class</span><span class="p">();</span>
+<span class="nx">c1</span><span class="p">.</span><span class="nf">calc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// prints 3</span>
 
 <span class="c1">// Using constructor approach</span>
-<span class="kd">function</span> <span class="nx">Class</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">calc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">Class</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">calc</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">c</span> <span class="o">+</span> <span class="nx">d</span><span class="p">;</span>
 <span class="p">}</span> 
-<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Class</span><span class="p">();</span>
-<span class="nx">c1</span><span class="p">.</span><span class="nx">calc</span><span class="p">();</span> <span class="c1">// prints 3, no changes at all but internally constructor approach consumes more compute, while prototype changes all places at once. Constructor use this variable which gets execute for all the instances of Class but prototype updates the blueprint itself and it is shared by all.</span></code></pre></figure>
+<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Class</span><span class="p">();</span>
+<span class="nx">c1</span><span class="p">.</span><span class="nf">calc</span><span class="p">();</span> <span class="c1">// prints 3, no changes at all but internally constructor approach consumes more compute, while prototype changes all places at once. Constructor use this variable which gets execute for all the instances of Class but prototype updates the blueprint itself and it is shared by all.</span></code></pre></figure>
 
 <h3 id="null-and-undefined---dont-remember-no-issue">Null and Undefined - Don’t remember no issue.</h3>
 <ul>
@@ -251,46 +251,46 @@
 <h2 id="making-thing-private">Making thing private.</h2>
 <p>Use closure to make thing private, they will not be visible to outside world and accessed normally using public method. Closure extends the scrope of object/variables even thought there parent reference no more exists. Here, The RetainExample call was over at the line 6, ‘a’ might have created and destroyed, not true since a function returned from outer function, the inner function lives forever with outer functions inner soul(variable/object - lexical scope).</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">RetainExample</span><span class="p">(){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nf">RetainExample</span><span class="p">(){</span>
   <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-  <span class="kd">function</span> <span class="nx">getA</span><span class="p">(){</span> <span class="k">return</span> <span class="nx">a</span><span class="p">;}</span>
+  <span class="kd">function</span> <span class="nf">getA</span><span class="p">(){</span> <span class="k">return</span> <span class="nx">a</span><span class="p">;}</span>
   <span class="k">return</span> <span class="nx">getA</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">var</span> <span class="nx">retainedValue</span> <span class="o">=</span> <span class="nx">RetainExample</span><span class="p">();</span> <span class="c1">// line - 6</span>
-<span class="nx">retainedValue</span><span class="p">();</span> <span class="c1">// print 10.  </span>
+<span class="kd">var</span> <span class="nx">retainedValue</span> <span class="o">=</span> <span class="nc">RetainExample</span><span class="p">();</span> <span class="c1">// line - 6</span>
+<span class="nf">retainedValue</span><span class="p">();</span> <span class="c1">// print 10.  </span>
 
 <span class="c1">// Closure in action for making variable private.</span>
 <span class="kd">var</span> <span class="nx">Class</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span>
 
-  <span class="k">this</span><span class="p">.</span><span class="nx">printA</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nf">printA</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Class</span><span class="p">();</span>
-<span class="nx">c1</span><span class="p">.</span><span class="nx">printA</span><span class="p">();</span> <span class="c1">// prints 10;</span>
+<span class="kd">var</span> <span class="nx">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Class</span><span class="p">();</span>
+<span class="nx">c1</span><span class="p">.</span><span class="nf">printA</span><span class="p">();</span> <span class="c1">// prints 10;</span>
 <span class="nx">c1</span><span class="p">.</span><span class="nx">a</span> <span class="p">;</span> <span class="c1">//errors out with variable not defined.</span></code></pre></figure>
 
 <h3 id="inheritance">Inheritance</h3>
 <p>There are mainly two ways you can inherit property of other function.<br>
 <strong>Using Constructor Call.</strong></p>
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">A</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nf">A</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="kd">function</span> <span class="nx">B</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">){</span>
-  <span class="nx">A</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">x</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">B</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">){</span>
+  <span class="nx">A</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">x</span><span class="p">);</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">B</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">B</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
 <span class="nx">b</span><span class="p">.</span><span class="nx">x</span> <span class="p">;</span> <span class="c1">// 2</span>
 <span class="nx">b</span><span class="p">.</span><span class="nx">y</span> <span class="p">;</span> <span class="c1">// 1</span></code></pre></figure>
 
 <p><strong>Using Object.create() Method</strong><br>
 You can copy the object using create, it can copy prototype as well as in the end prototype property is an object.</p>
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">B</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span> <span class="c1">// It's faster as it works on prototype.</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">B</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span> <span class="c1">// It's faster as it works on prototype.</span></code></pre></figure>
 
 <footer>
   <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>

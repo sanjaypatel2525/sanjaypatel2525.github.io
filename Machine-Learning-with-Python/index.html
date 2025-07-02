@@ -16,14 +16,14 @@
     <meta name="twitter:title" content="Machine Learning with Python">
     <meta name="twitter:description" content="Technical blogs.">
     
-    <meta property="twitter:image:src" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="twitter:image:src" content="/assets/img/blog-image.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://abyte.stream/Machine-Learning-with-Python/">
+    <meta property="og:url" content="/Machine-Learning-with-Python/">
     <meta property="og:title" content="Machine Learning with Python">
     
-    <meta property="og:image" content="https://abyte.stream/assets/img/blog-image.png">
+    <meta property="og:image" content="/assets/img/blog-image.png">
     
     <meta property="og:description" content="Technical blogs.">
     <meta property="og:site_name" content="Sanjay Patel - Blogs">
@@ -31,10 +31,10 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Machine Learning with Python"/>
     <meta itemprop="description" content="Technical blogs.">
-    <meta itemprop="image" content="https://abyte.stream/assets/img/blog-image.png"/>
+    <meta itemprop="image" content="/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://abyte.stream/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
     <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
@@ -48,7 +48,7 @@
 
     <!--amp page-->
     
-        <link rel="amphtml" href="https://abyte.stream/amp/Machine-Learning-with-Python.html">
+        <link rel="amphtml" href="/amp/Machine-Learning-with-Python.html">
     
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="Sanjay Patel Blog">
@@ -60,9 +60,9 @@
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="">
 
-    <link rel="stylesheet" href="https://abyte.stream/assets/css/main.css">
-    <link rel="canonical" href="https://abyte.stream/Machine-Learning-with-Python/">
-    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="https://abyte.stream/feed.xml" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="/Machine-Learning-with-Python/">
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Patel - Blogs" href="/feed.xml" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="/assets/js/lazysizes.min.js" async=""></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1067793-4"></script>
@@ -83,7 +83,7 @@
 
         <header class="bar-header">
     <h2 class="logo">
-        <a href="https://abyte.stream/"></a>
+        <a href="/"></a>
     </h2>
 </header>
 <div class="search-wrapper">
@@ -104,17 +104,17 @@
   <h2>MENU</h2>
   <ul>
     
-      <li><a href="https://abyte.stream/">Home</a></li>
+      <li><a href="/">Home</a></li>
     
-      <li><a href="https://abyte.stream/series">Series</a></li>
+      <li><a href="/series">Series</a></li>
     
-      <li><a href="https://abyte.stream/tags">Tags</a></li>
+      <li><a href="/tags">Tags</a></li>
     
-      <li><a href="https://abyte.stream/pretty-print/">Pretty Print</a></li>
+      <li><a href="/pretty-print/">Pretty Print</a></li>
     
-      <li><a href="https://abyte.stream/sort-distinct/">Sort & Distinct</a></li>
+      <li><a href="/sort-distinct/">Sort & Distinct</a></li>
     
-    <li><a class="feed" href="https://abyte.stream/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li><a class="feed" href="/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>
@@ -233,54 +233,54 @@ Or more related to.
 <h3 id="normalization">Normalization</h3>
 <p>Data can in be sometime in big number or may be sometime in very small number, there are multiple technique to scale data to readable or to our needed limits. For example. 0&lt;x&lt;1 scaling. Any data can be scalded from 0 to 1 in this its easy to know lower limit and upper limit and we can easily perceptually how big one data in this scale.<br />
 <strong>Min-Max Normalization</strong> - To fit the data in defined boundary, let say data has 134567 min and 136878 max and we want to see it in scale of 0 to 1, or in scale of 1000 to 10000 etc.
-<script type="math/tex">B= \frac{A-min(A)}{max(A)-min(A)}\cdot(D-C) + C</script>, it lays the data A<sub>i</sub> from set of A, from C to D.<br />
+\(B= \frac{A-min(A)}{max(A)-min(A)}\cdot(D-C) + C\), it lays the data A<sub>i</sub> from set of A, from C to D.<br />
 <strong>Decimal Scaling</strong> - Divide or multiple with 10<sup>n</sup> to bring the at scale of decimal. For example
 10,30, 4000 will become 0.001, 0.03, 0.4 after deviling with 10<sup>4</sup>.<br />
-<strong>Standard Deviation</strong> - <script type="math/tex">\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}</script></p>
+<strong>Standard Deviation</strong> - \(\sigma = \sqrt\frac{\sum _{i=1}^{N}(x_i-\mu)^2}{N}\)</p>
 
-<p><strong>Standardization or z-score</strong> Is form of normalization where mean is kept to 0 and standard deviation to 1. In graph the start and end of data limits has to have same distance from y axis.<script type="math/tex">z = \frac{x_i-\mu}{\sigma}</script></p>
+<p><strong>Standardization or z-score</strong> Is form of normalization where mean is kept to 0 and standard deviation to 1. In graph the start and end of data limits has to have same distance from y axis.\(z = \frac{x_i-\mu}{\sigma}\)</p>
 
 <h2 id="algorithms">Algorithms.</h2>
 <h3 id="linear-regression">Linear regression</h3>
 <p>Regression tries to find the least cost continuos function based on given input such that, the aim to minimize the cost. The cost is cost of given training set combined. Cost is also called loss. There are many loss function out which here is one <strong>mean squared error( L2 Loss function)</strong>.
 It better then sum of absolute error as sum of absolute error can have ambiguous result while squared will penalize larger distance and find exact half way.
 <img src="/assets/2019-06-12-Machine-Learning-with-Python39.JPG" alt="" class="lazyload" />
-<script type="math/tex">Cost= J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=0}^m(h_\theta(x^i)-y^i)^2\\
-h_\theta(x)=y=\theta_0+\theta_1x</script>
+\(Cost= J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=0}^m(h_\theta(x^i)-y^i)^2\\
+h_\theta(x)=y=\theta_0+\theta_1x\)
 Where theta are independent variable and hyperparameter, m is number of training data, x is input data and y is output data, h is expected output data. Our aim is to find minimum cost for given input variables. 
 With one variable.<img src="/assets/2019-06-12-Machine-Learning-with-Python3.JPG" alt="" class="lazyload" />
 With two variable. <img src="/assets/2019-06-12-Machine-Learning-with-Python4.JPG" alt="" class="lazyload" />
 <strong>Gradient Descent</strong> Gives change in input to reach minimum cost.
-<script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta_0,\theta_1)</script>
+\(\theta _{jnew}=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta_0,\theta_1)\)
 Where derivative of J gives the slope which is always -1 to 1 and this slope will be calculated for each variable. This slope calculates new value for variable θ. α defines the jump either to decrease or to increase this variable.</p>
 
 <h3 id="multivariate-linear-regression">Multivariate Linear regression</h3>
-<p><script type="math/tex">h_θ=θ_0+θ_1x_1+θ_2x_2..+θ_nx_n,
+<p>\(h_θ=θ_0+θ_1x_1+θ_2x_2..+θ_nx_n,
 x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},
 θ=\begin{bmatrix}θ_1\\θ_1\\..\\θ_n\end{bmatrix}
-h_θ(x)=θ^Tx</script><br />
-<script type="math/tex">\theta _{jnew}=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^m(h_θ(x^i)-y^i)x_j^i</script></p>
+h_θ(x)=θ^Tx\)<br />
+\(\theta _{jnew}=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^m(h_θ(x^i)-y^i)x_j^i\)</p>
 
 <p><strong>Feature Scaling</strong> - If the variable are not in same scale they tend to make gradient jump and slows down the process of reaching to minimum. So there are many feature scaling.</p>
 <ul>
-  <li>Standardization - Replace by z-score, Normally used in normally distributed set. <script type="math/tex">x'=\frac{x-\bar x}{\sigma}</script></li>
-  <li>Mean Normalization - Can variate from -1 to 1, used in Principal component analysis. <script type="math/tex">x'=\frac{x-\bar x}{max(x)-min(x)}</script></li>
-  <li>Min-Max Scaling - from 0 to 1. <script type="math/tex">x'=\frac{x-min(x)}{max(x)-min(x)}</script></li>
+  <li>Standardization - Replace by z-score, Normally used in normally distributed set. \(x'=\frac{x-\bar x}{\sigma}\)</li>
+  <li>Mean Normalization - Can variate from -1 to 1, used in Principal component analysis. \(x'=\frac{x-\bar x}{max(x)-min(x)}\)</li>
+  <li>Min-Max Scaling - from 0 to 1. \(x'=\frac{x-min(x)}{max(x)-min(x)}\)</li>
 </ul>
 
 <h3 id="normal-equation-to-get-optimal-value">Normal equation to get Optimal value</h3>
 <p>Normal equation gets you the minimum value of θ directly, for example you know the curve of the cost function. Then you can solve for minimum value for θ.
-If θ is quadratic. <script type="math/tex">J(θ)=aθ^2+bθ+c = 0</script> will give you minimum value for θ. Same goes for multiple variable keep one variable constant each time. 
+If θ is quadratic. \(J(θ)=aθ^2+bθ+c = 0\) will give you minimum value for θ. Same goes for multiple variable keep one variable constant each time. 
 m - Training examples
 n - Variables. 
-<script type="math/tex">x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},x^i=\begin{bmatrix}x_0^i\\x_1^i\\..\\x_n^i\end{bmatrix},
+\(x=\begin{bmatrix}x_0\\x_1\\..\\x_n\end{bmatrix},x^i=\begin{bmatrix}x_0^i\\x_1^i\\..\\x_n^i\end{bmatrix},
 X= \begin{bmatrix}[x^1]^T\\ [x^2]^T\\ [x^m]^T\end{bmatrix},
-min\,value\,of\,θ=(X^TX)^{-1}X^Ty</script>
-<strong>Advantage</strong>, you don’t need to α and it does not take lot of iteration like gradient descend while <strong>disadvantage</strong> is has complexity of  <script type="math/tex">O(n^3)</script> and difficult to work with nonconvertible equation <script type="math/tex">(X^TX)^{-1}</script>, though it can be solved by removing redundant feature, removing feature and regularization.</p>
+min\,value\,of\,θ=(X^TX)^{-1}X^Ty\)
+<strong>Advantage</strong>, you don’t need to α and it does not take lot of iteration like gradient descend while <strong>disadvantage</strong> is has complexity of  \(O(n^3)\) and difficult to work with nonconvertible equation \((X^TX)^{-1}\), though it can be solved by removing redundant feature, removing feature and regularization.</p>
 
 <h3 id="logistic-regression--">Logistic Regression -</h3>
 <p>Logistic function or called sigmoid function, it maps the value to in between 0 &lt; h(x) &lt; 1. Hence can be used in probability prediction. Probability of y being 1 at given value of x when θ is hyperparameter. θ changes the width of sigmoid function hence affect the y over over x. 
-<script type="math/tex">h_θ(x)=g(z)=g(θ^Tx)= \frac{1}{1+e^{θ^Tx}}=P(y=1|x:θ)</script></p>
+\(h_θ(x)=g(z)=g(θ^Tx)= \frac{1}{1+e^{θ^Tx}}=P(y=1|x:θ)\)</p>
 
 <p>A good explanation here. https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
 https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc</p>
@@ -293,16 +293,16 @@ https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303b
 <img src="/assets/2019-06-12-Machine-Learning-with-Python5.JPG" alt="" class="lazyload" /></p>
 <ul>
   <li>Gradient decent can’t be applied on logistic regression as it is non linear (not straight line), the cost function will not be mapped as normal convex curve but it will have multiple local minima in it. So we use another cost function which give convex graph for J(θ).
-<script type="math/tex">Cost(h_θ,y)=\begin{cases}-log(h_θ(x))\text{ if y=1}\\-log(1-h_θ(x))\text{ if y=0}\end{cases}</script></li>
+\(Cost(h_θ,y)=\begin{cases}-log(h_θ(x))\text{ if y=1}\\-log(1-h_θ(x))\text{ if y=0}\end{cases}\)</li>
   <li>Ok <strong>biggest question</strong> here is how do you select fitting a cost function. If you are researcher or very good at maths you might guess a fitting graph (logistic(classification) or linear(continuos prediction)), and then you guess what cost function will be good for my model. There are lot of cost function you select any one and try if your machine is performing well or not. But some are pretty standard cost function for given fitting graph for ex mean square for linear, the one above for sigmoid etc.</li>
 </ul>
 
 <p><img src="/assets/2019-06-12-Machine-Learning-with-Python6.JPG" alt="" class="lazyload" />
-Looks same as linear regression, but they differ by <script type="math/tex">h_θ(x)</script>.
+Looks same as linear regression, but they differ by \(h_θ(x)\).
 “Conjugate gradient”, “BFGS”, and “L-BFGS” are alternative of gradient descend and provide better optimization over cost.</p>
 
 <h3 id="multi-class-classification">Multi-class classification.</h3>
-<p>In logistic we use to have two set yes/no and each event has some probability based on that we use to say this event belong to yes or no group. That probability is derived by function <script type="math/tex">h_θ(x)</script>. Here we have many sets and each set will have its own <script type="math/tex">h_θ^i(x)</script>. We calculate y’s probability in eahc set and assign this to the set which has max probability.
+<p>In logistic we use to have two set yes/no and each event has some probability based on that we use to say this event belong to yes or no group. That probability is derived by function \(h_θ(x)\). Here we have many sets and each set will have its own \(h_θ^i(x)\). We calculate y’s probability in eahc set and assign this to the set which has max probability.
 <img src="/assets/2019-06-12-Machine-Learning-with-Python7.JPG" alt="" class="lazyload" /></p>
 
 <h3 id="underfitting--overfitting">Underfitting &amp; overfitting.</h3>
@@ -311,28 +311,27 @@ Looks same as linear regression, but they differ by <script type="math/tex">h_θ
   <li>Sometime reduce the parameter</li>
   <li>Sometime keep it but regularize. 
 Increase the λ in regularize some variables, so even small change in variable will change cost to much, to keep cost low these variable should be small. λ is regularization parameter
-<script type="math/tex">min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +1000⋅θ_3^2 ​ +1000⋅θ_4^2,
-=​min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +λ\sum_{j=1}^nθ_j^2</script></li>
+\(min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +1000⋅θ_3^2 ​ +1000⋅θ_4^2,
+=​min_θ\frac{1}{2m}∑_{i=1}^m(h_θ(x^{(i)})−y^{(i)})^2 +λ\sum_{j=1}^nθ_j^2\)</li>
 </ul>
 
 <h2 id="neural-network-andrew-ng-style">Neural network (Andrew Ng style)</h2>
-<p><script type="math/tex">% <![CDATA[
-a^1=x=\begin{bmatrix}x_0=1\\x_1\\..\\x_{S_j}\end{bmatrix},
-θ^1=\begin{bmatrix}θ_{10}&θ_{11}&..&θ_{1S_j+1}\\θ_{20}&θ_{21}&..&θ_{2S_j+1}\\..\\θ_{S_j0}&θ_{S_j1}&..&θ_{S_jS_j+1}\end{bmatrix},
-h_θ(x)=a^2=g(z^2)=g(θ^{1}a^{1}) %]]></script></p>
+<p>\(a^1=x=\begin{bmatrix}x_0=1\\x_1\\..\\x_{S_j}\end{bmatrix},
+θ^1=\begin{bmatrix}θ_{10}&amp;θ_{11}&amp;..&amp;θ_{1S_j+1}\\θ_{20}&amp;θ_{21}&amp;..&amp;θ_{2S_j+1}\\..\\θ_{S_j0}&amp;θ_{S_j1}&amp;..&amp;θ_{S_jS_j+1}\end{bmatrix},
+h_θ(x)=a^2=g(z^2)=g(θ^{1}a^{1})\)</p>
 <ul>
-  <li>There is no <script type="math/tex">z^1</script>
+  <li>There is no \(z^1\)
 Deriving from logistic regression. But compared to logistic it has K output in multi class. 
 <img src="/assets/2019-06-12-Machine-Learning-with-Python8.JPG" alt="" class="lazyload" /></li>
 </ul>
 
 <p><strong>Backward proportion</strong> - We know when there is hight cost or more error in each K output nodes, then we need to fix each θ in previous layers. This is done through backward propagation.
-Let δ is error in Kth node of L, <script type="math/tex">δ_k^l = a_k^l-y_k</script> now calculate δ at L-1 layer. This is done through derivative of 
-<script type="math/tex">(a^{l-1})'=g'(z^{l-1})=a^{l-1}.(1-a^{l-1})</script>. 
+Let δ is error in Kth node of L, \(δ_k^l = a_k^l-y_k\) now calculate δ at L-1 layer. This is done through derivative of 
+\((a^{l-1})'=g'(z^{l-1})=a^{l-1}.(1-a^{l-1})\). 
 δ is applied at nodes we need to adjust our θ matrix. So we put another term Δ which is proportionate to δ
-<script type="math/tex">Δ^{(l)}_{i,j} := Δ^{(l)}_{i,j} + a_j^{(l)} δ_i^{(l+1)}</script>
-<script type="math/tex">D^{l}_{i,j}=\frac{1}{m}(Δ^{l}_{i,j}+λθ^l_{i,j},\,if\,j≠0,
-D^{l}_{i,j}=\frac{1}{m}Δ^{l}_{i,j}\,if\,j=0</script>
+\(Δ^{(l)}_{i,j} := Δ^{(l)}_{i,j} + a_j^{(l)} δ_i^{(l+1)}\)
+\(D^{l}_{i,j}=\frac{1}{m}(Δ^{l}_{i,j}+λθ^l_{i,j},\,if\,j≠0,
+D^{l}_{i,j}=\frac{1}{m}Δ^{l}_{i,j}\,if\,j=0\)
 <img src="/assets/2019-06-12-Machine-Learning-with-Python10.JPG" alt="" class="lazyload" /></p>
 
 <p><strong>Gradient Checking</strong> - Compare the delta changed value to the output to the the change we got from Backward propagation. Gradient Checking is time consuming that is the reason we do not use it in place of backward propagation.
@@ -372,11 +371,11 @@ Higher F score mean a better algorithm it take value between 0 and 1.</p>
 <h2 id="support-vector-machine">Support Vector Machine</h2>
 <p>One of the famous Supervised learning. 
 <img src="/assets/2019-06-12-Machine-Learning-with-Python17.JPG" alt="" class="lazyload" />
-In image we get rid of <script type="math/tex">\frac{1}{m}</script> and λ. <script type="math/tex">\frac{1}{m}</script> is constant so doesn’t affect cost function in minimization and intuition is in cost function keep bigger B in order generalize any parameter, that you can do either by increasing λ r remove lambda put C and decrease C, both are same thing.</p>
+In image we get rid of \(\frac{1}{m}\) and λ. \(\frac{1}{m}\) is constant so doesn’t affect cost function in minimization and intuition is in cost function keep bigger B in order generalize any parameter, that you can do either by increasing λ r remove lambda put C and decrease C, both are same thing.</p>
 
 <p>SVM is also called <strong>Large Margin Classifier</strong>.</p>
 
-<p>Think <script type="math/tex">\theta^T x^i</script> as vector multiplication and you can say what this multiplication gives projection of θ over x.
+<p>Think \(\theta^T x^i\) as vector multiplication and you can say what this multiplication gives projection of θ over x.
 <img src="/assets/2019-06-12-Machine-Learning-with-Python18.JPG" alt="" class="lazyload" />
 <img src="/assets/2019-06-12-Machine-Learning-with-Python19.JPG" alt="" class="lazyload" />
 In above example our aim is to get maximum of p so that θ can be small. With bigger p there is bigger distance of dataset from the classifier line and will have bigger margin.</p>
@@ -384,22 +383,22 @@ In above example our aim is to get maximum of p so that θ can be small. With bi
 <p><strong>Kernel</strong> Above we were discussing are devisor which was linear, in some situation the plotted points are mixed and requires nonlinear curve to divide or enclosing circle. 
 <img src="/assets/2019-06-12-Machine-Learning-with-Python20.JPG" alt="" class="lazyload" />
 Here we take some points and mark them as territory and calculate the closeness/similarities of each dataset from these territories/points. Mark these points as <em>l</em> and calculate closeness/similarities vector. 
-<script type="math/tex">f_i = similarity(x,l^i)</script>
+\(f_i = similarity(x,l^i)\)
 Let say closeness is defined by.
-<script type="math/tex">f^i = similarity(x,l^i) = exp(-\frac{||x-l^i||^2}{2\sigma^2})</script>.
+\(f^i = similarity(x,l^i) = exp(-\frac{||x-l^i||^2}{2\sigma^2})\).
 When σ is big the peak is distributed(more generalized) and when it is small peek is thin(more variant).
 <img src="/assets/2019-06-12-Machine-Learning-with-Python21.JPG" alt="" class="lazyload" />
 <img src="/assets/2019-06-12-Machine-Learning-with-Python22.JPG" alt="" class="lazyload" />
 So we have two kernel linear and gaussian kernel, linear for straight line divisor an gaussian for non-linear. When m is very large compared to n then using SVN with Gaussian kernel is good. Otherwise use linear kernel.</p>
 
 <h3 id="k-mean">K-Mean</h3>
-<p>K-mean is unsupervised clustering algorithm, Here you tak randomly take k clusters and each cluster has a centroid <script type="math/tex">μ_k</script>. We calculate <script type="math/tex">c^i</script> for each <script type="math/tex">x^i</script> which states cluster for <script type="math/tex">x^i</script>, which cluster x belongs to by calculating distance with each cluster centroid.
-<script type="math/tex">c^i = min||x^i-\mu_k||^2</script>
+<p>K-mean is unsupervised clustering algorithm, Here you tak randomly take k clusters and each cluster has a centroid \(μ_k\). We calculate \(c^i\) for each \(x^i\) which states cluster for \(x^i\), which cluster x belongs to by calculating distance with each cluster centroid.
+\(c^i = min||x^i-\mu_k||^2\)
 This c maps all the input to some cluster and later each cluster’s mean is adjusted with average of x from that cluster.
-<script type="math/tex">\mu_{c^i}=\frac{(x^a+x^b_...)}{\text{count of x in }\mu}</script></p>
+\(\mu_{c^i}=\frac{(x^a+x^b_...)}{\text{count of x in }\mu}\)</p>
 
 <p><strong>Cost Function</strong> - We keep calculating K-mean until out cost stops decreasing. Cost is calculate by squared sum of distance of x from there cluster mean.
-<script type="math/tex">J(c^1,..,c^m,\mu_1,..,\mu_K)= \frac{1}{m}\sum_{i=1}{m}||x^i-\mu_{c^i}||^2</script></p>
+\(J(c^1,..,c^m,\mu_1,..,\mu_K)= \frac{1}{m}\sum_{i=1}{m}||x^i-\mu_{c^i}||^2\)</p>
 
 <p><strong>Optimization</strong> - Initialize mean of each cluster to random value of inputs and calculate cost, the lowest cost is selected in the end as optimized solution.</p>
 
@@ -447,12 +446,12 @@ But better than going one by one lets find everything together.
 <img src="/assets/2019-06-12-Machine-Learning-with-Python31.JPG" alt="" class="lazyload" /></p>
 
 <h3 id="recommendation-algorithm">Recommendation Algorithm</h3>
-<p>If user is watching one movie suggest him another movies. This is normally found by distance between two movies features x<sup>1</sup> (<script type="math/tex">x_1^1,x_2^1..x_n^1</script>). The distance is calculated by <script type="math/tex">||x^1-x^2||^2</script>.
+<p>If user is watching one movie suggest him another movies. This is normally found by distance between two movies features x<sup>1</sup> (\(x_1^1,x_2^1..x_n^1\)). The distance is calculated by \(||x^1-x^2||^2\).
 What if there is new user and we need to suggest him a movie. The θ<sup>i</sup> will be 0 for him as the model doesn’t have any parameter which affect θ for this new user. 
 <img src="/assets/2019-06-12-Machine-Learning-with-Python32.JPG" alt="" class="lazyload" /></p>
 
 <h3 id="stochastic-gradient-descent">Stochastic Gradient descent</h3>
-<p>The normal  Gradient descent is called batch  Gradient descent, where we have to find mean square of all the input data on each iteration of gradient descent update. In case if m is in million then each θ update will have to calculate million records before making updates. In Stochastic Gradient descent we update θ based on last <script type="math/tex">x^i,y^i</script>.
+<p>The normal  Gradient descent is called batch  Gradient descent, where we have to find mean square of all the input data on each iteration of gradient descent update. In case if m is in million then each θ update will have to calculate million records before making updates. In Stochastic Gradient descent we update θ based on last \(x^i,y^i\).
 <img src="/assets/2019-06-12-Machine-Learning-with-Python33.JPG" alt="" class="lazyload" /></p>
 
 <h3 id="improving-performance">Improving performance.</h3>
@@ -546,8 +545,8 @@ Content based - what you like.</p>
   <li>VC Dimension - The VC dimension of a classifier is defined by Vapnik and Chervonenkis to be the cardinality (size) of the largest set of points that the classification algorithm can shatter.</li>
   <li>Representational Learning: Sometime it difficult to represent the feature, such as car feature is wheel, how you define wheel by number or by pixel. This can automatically learned in representation learning such example is autoencode and there is decoder to decode representation to feature.</li>
   <li>PCA Whitening - It normalization of projected vectors considering all projected vector. Kind of noramlization of feature, it is normalization of PCA. 
-<script type="math/tex">X_{\text{rotated}} = U \cdot X</script><br />
-<script type="math/tex">X_{\text{whitened}} = \frac{X_{\text{rotated}}}{\sqrt(S + \epsilon)}</script></li>
+\(X_{\text{rotated}} = U \cdot X\)<br />
+\(X_{\text{whitened}} = \frac{X_{\text{rotated}}}{\sqrt(S + \epsilon)}\)</li>
   <li>Bagging - Bagging is ensembling technique of breaking down the train data and build train n models on these data, all models predict something and highest voted class is the final result. For example decision tree to random forest. It is technique to  reduces variance, not bias.</li>
   <li>Random Forest - Random forest , training data is split into n numbers and n decision tree are built and then al tree are used to predict classes, whichever class is predicted most is taken into consideration. It is type of bagging.</li>
   <li>Boosting - Boosting is again ensembling technique but little different then bagging, here new models are built to build to fit misclassified data. So to boos the performance on misclassified data only. One example is OCR&gt;</li>
@@ -574,9 +573,8 @@ While non-parametric do not have fixed parameters they learn by there own, but t
     </ul>
   </li>
   <li>Maximum likelihood estimation -Helps finding normal distribution parameter, MLE can be defined as a method for estimating population parameters (such as the mean and variance for Normal, rate (lambda) for Poisson, etc.) from sample data such that the probability (likelihood) of obtaining the observed data is maximized.<br />
-Maximize product i to n (<script type="math/tex">% <![CDATA[
-\begin{align}
-f(x) &= \dfrac{1}{\sigma \sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}} \end{align} %]]></script>) where exponential component x is y<sup>i</sup> and μ is h(x<sup>i</sup>, β).</li>
+Maximize product i to n (\(\begin{align}
+f(x) &amp;= \dfrac{1}{\sigma \sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}} \end{align}\)) where exponential component x is y<sup>i</sup> and μ is h(x<sup>i</sup>, β).</li>
   <li>Bayesian  vs frequentist Approach - These two approaches are common approaches in inferential statistics, finding patterns in samples and estimating the new event.  frequentist takes more of statistical explanation with sample and its population estimation while bayes thinks more probabilities more specifically considering past probabilities.<br />
 <img src="/assets/2019-06-12-Machine-Learning-with-Python44.JPG" alt="" class="lazyload" /></li>
   <li>Feature selection - Due to following reasons.
@@ -588,7 +586,7 @@ f(x) &= \dfrac{1}{\sigma \sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}} \end{al
         <ul>
           <li>Filter based - Correlation/che squared/Pearson Correlation between features.
             <ul>
-              <li>Che squared - From all data m, it take each feature 1 by 1 and check how good it gives the result of classification. Kind how directly proportion is the feature to target value. Feature with good value are kept and remaining are removed.  <script type="math/tex">\[\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}\]</script></li>
+              <li>Che squared - From all data m, it take each feature 1 by 1 and check how good it gives the result of classification. Kind how directly proportion is the feature to target value. Feature with good value are kept and remaining are removed.  \(\[\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}\]\)</li>
             </ul>
           </li>
           <li>Recursive feature elimination - start with one/all set of feature find coefficient and see there importance and add/remove the features. It has two trpes.
@@ -623,21 +621,21 @@ Gradient is derivative diferent dimensions, Div or divergence is multiplication 
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://abyte.stream/Machine-Learning-with-Python/%20via%20&#64;&hashtags=Machine Learning,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/Machine-Learning-with-Python/%20via%20&#64;&hashtags=Machine Learning,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://abyte.stream/Machine-Learning-with-Python/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/Machine-Learning-with-Python/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://abyte.stream/Machine-Learning-with-Python/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000/Machine-Learning-with-Python/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
 </section>
             <section class="share">
-                <div class="fb-comments" data-href="https://abyte.stream/Machine-Learning-with-Python/"></div>
+                <div class="fb-comments" data-href="http://localhost:4000/Machine-Learning-with-Python/"></div>
             </section>
             <section class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">
@@ -655,7 +653,7 @@ Gradient is derivative diferent dimensions, Div or divergence is multiplication 
             <footer>
     <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 </footer>
-<script src="https://abyte.stream/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
             <div id="fb-root"></div>
         </section>
     </body>

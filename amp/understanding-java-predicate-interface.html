@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Understanding Java Predicate Interface</title>
-    <link rel="canonical" href="https://abyte.stream/understanding-java-predicate-interface/" />
+    <link rel="canonical" href="/understanding-java-predicate-interface/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -173,7 +173,7 @@
 <h2 id="1-what-is-java-8-predicate-and-understanding-java-predicate-interface">1. What is Java 8 Predicate and Understanding Java Predicate Interface.</h2>
 <p>Java 8 Predicate Interface is a functional interface, By functional interface you know it will have only one abstract method and the programmer writes the body for that one abstract method as part of <a href="https://abyte.stream/2018/09/15/java-lambda-functional-programming-part-2/">Lambda expression</a>.
 Predicate is a type of functional interface which takes a parameter and return a boolean result. Let’s look at the Predicate Interface.</p>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">function</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">java.util.function</span><span class="o">;</span>
 <span class="nd">@FunctionalInterface</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Predicate</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kt">boolean</span> <span class="nf">test</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span>

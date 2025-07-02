@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>EJB in Java.</title>
-    <link rel="canonical" href="https://abyte.stream/EJB-in-Java/" />
+    <link rel="canonical" href="/EJB-in-Java/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -215,7 +215,7 @@
   <li>@PreDestroy
 Example of Stateful using JNDI.</li>
 </ul>
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.javatpoint</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.ejb.Remote</span><span class="o">;</span>  
   
 <span class="nd">@Remote</span>  
@@ -223,7 +223,7 @@ Example of Stateful using JNDI.</li>
 <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span><span class="kt">int</span> <span class="n">b</span><span class="o">);</span>  
 <span class="o">}</span>  
 
-<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">package</span> <span class="nn">com.javatpoint</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.ejb.Stateless</span><span class="o">;</span>  
   
 <span class="nd">@Stateless</span><span class="o">(</span><span class="n">mappedName</span><span class="o">=</span><span class="s">"st1"</span><span class="o">)</span>  
@@ -233,7 +233,7 @@ Example of Stateful using JNDI.</li>
   <span class="o">}</span>  
 <span class="o">}</span>  
 
-<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">package</span> <span class="nn">com.javatpoint</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.naming.Context</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.naming.InitialContext</span><span class="o">;</span>  
   
@@ -255,7 +255,7 @@ Example of Stateful using JNDI.</li>
   <li>@PostActivate</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.javatpoint</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.ejb.Remote</span><span class="o">;</span>  
 <span class="nd">@Remote</span>  
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">BankRemote</span> <span class="o">{</span>  
@@ -264,7 +264,7 @@ Example of Stateful using JNDI.</li>
     <span class="kt">int</span> <span class="nf">getBalance</span><span class="o">();</span>  
 <span class="o">}</span>  
 
-<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">package</span> <span class="nn">com.javatpoint</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.ejb.Stateful</span><span class="o">;</span>  
 <span class="nd">@Stateful</span><span class="o">(</span><span class="n">mappedName</span> <span class="o">=</span> <span class="s">"stateful123"</span><span class="o">)</span>  
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bank</span> <span class="kd">implements</span> <span class="nc">BankRemote</span> <span class="o">{</span>  
@@ -285,7 +285,7 @@ Example of Stateful using JNDI.</li>
     <span class="o">}</span>  
 <span class="o">}</span>  
 
-<span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">javatpoint</span><span class="o">;</span>  
+<span class="kn">package</span> <span class="nn">com.javatpoint</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.ejb.EJB</span><span class="o">;</span>  
 <span class="kn">import</span> <span class="nn">javax.naming.InitialContext</span><span class="o">;</span>  

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Issue With Cached Static Content - Cache Buster</title>
-    <link rel="canonical" href="https://abyte.stream/issue-with-cached-static-content/" />
+    <link rel="canonical" href="/issue-with-cached-static-content/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-custom>
         .header-post {
@@ -180,7 +180,7 @@ Use grunt scripts to handle cache issue.</p>
 Let’s dive into details.</p>
 <h3 id="1-appending-version-number-approach">1. Appending version number approach</h3>
 <p>This is the easiest approach to resolve the static content cache issue, But required extra efforts each time you change file. Let’s say I have project, something shown as below.
-<amp-img class="size-medium wp-image-6 aligncenter" src="https://abyte.stream/assets/exmple2-278x300.jpg" alt="" width="278" height="300" layout="responsive"><noscript><img class="size-medium wp-image-6 aligncenter" src="https://abyte.stream/assets/exmple2-278x300.jpg" alt="" width="278" height="300"></noscript></amp-img>
+<amp-img class="size-medium wp-image-6 aligncenter" src="/assets/exmple2-278x300.jpg" alt="" width="278" height="300" layout="responsive"><noscript><img class="size-medium wp-image-6 aligncenter" src="/assets/exmple2-278x300.jpg" alt="" width="278" height="300"></noscript></amp-img>
 In case you have some changes in 1.js, then the references for 1.js has to be update in each files where it is used with ‘/1.js?v=&lt;new version&gt;’, in this both the JSPs.
 Pros:</p>
 <ul>
@@ -196,7 +196,7 @@ Pros:</p>
 
 <h3 id="2-reduce-cache-expiry">2. Reduce cache expiry</h3>
 <p>Cache expiry headers tells browser when to fetch new version of the file.
-<amp-img class="alignnone size-full wp-image-8 " src="https://abyte.stream/assets/img_5a7f228a2f838-768x182.png" alt="" width="768" height="182" layout="responsive"><noscript><img class="alignnone size-full wp-image-8 " src="https://abyte.stream/assets/img_5a7f228a2f838-768x182.png" alt="" width="768" height="182"></noscript></amp-img>
+<amp-img class="alignnone size-full wp-image-8 " src="/assets/img_5a7f228a2f838-768x182.png" alt="" width="768" height="182" layout="responsive"><noscript><img class="alignnone size-full wp-image-8 " src="/assets/img_5a7f228a2f838-768x182.png" alt="" width="768" height="182"></noscript></amp-img>
 Setting this value to 24hrs will fetch new files everyday but since browser will call this file everyday it will increase your page load time also will put some extra load on your servers. This parameter can be configured on both web and app servers.
 Pros:</p>
 <ul>
